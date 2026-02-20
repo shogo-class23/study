@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来学習ポータル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="home-btn" style="cursor: pointer;">未来学習ポータル</h1>
+            <nav id="breadcrumb">ホーム</nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ホーム画面: 教科選択 -->
+        <section id="home-view" class="view">
+            <h2 class="section-title">学習する教科を選ぼう</h2>
+            <div class="subject-grid">
+                <div class="subject-card japanese" data-subject="japanese">
+                    <div class="icon">📖</div>
+                    <h3>国語</h3>
+                </div>
+                <div class="subject-card math" data-subject="math">
+                    <div class="icon">📐</div>
+                    <h3>数学</h3>
+                </div>
+                <div class="subject-card science" data-subject="science">
+                    <div class="icon">🧪</div>
+                    <h3>理科</h3>
+                </div>
+                <div class="subject-card social" data-subject="social">
+                    <div class="icon">🌍</div>
+                    <h3>社会</h3>
+                </div>
+                <div class="subject-card english" data-subject="english">
+                    <div class="icon">🔤</div>
+                    <h3>英語</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- 教材一覧画面 -->
+        <section id="list-view" class="view hidden">
+            <h2 id="selected-subject-name" class="section-title">教科名</h2>
+            <div id="material-list" class="material-list">
+                <!-- JSで動的に生成 -->
+            </div>
+            <button class="back-btn">教科選択に戻る</button>
+        </section>
+
+        <!-- 解説画面 -->
+        <section id="content-view" class="view hidden">
+            <article class="content-card">
+                <h2 id="content-title">単元名</h2>
+                <div id="content-body" class="content-body">
+                    <!-- JSで動的に生成 -->
+                </div>
+            </article>
+            <button id="back-to-list-btn" class="back-btn">教材一覧に戻る</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 未来学習ポータル</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+:root {
+    --primary-color: #3498db;
+    --japanese-color: #e74c3c;
+    --math-color: #3498db;
+    --science-color: #2ecc71;
+    --social-color: #f1c40f;
+    --english-color: #9b59b6;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#breadcrumb {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Main Layout */
+main {
+    padding: 40px 0;
+}
+
+.view {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    display: none;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #444;
+}
+
+/* Subject Grid */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.subject-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.subject-card .icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.subject-card.japanese { border-top: 5px solid var(--japanese-color); }
+.subject-card.math { border-top: 5px solid var(--math-color); }
+.subject-card.science { border-top: 5px solid var(--science-color); }
+.subject-card.social { border-top: 5px solid var(--social-color); }
+.subject-card.english { border-top: 5px solid var(--english-color); }
+
+/* Material List */
+.material-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.material-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.material-item:hover {
+    background-color: #f1f7fd;
+}
+
+/* Content View */
+.content-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.content-card h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.content-body {
+    font-size: 18px;
+}
+
+.content-body h4 {
+    margin: 20px 0 10px;
+    color: #444;
+}
+
+.point-box {
+    background-color: #eef7ff;
+    border-left: 5px solid var(--primary-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Buttons */
+.back-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #95a5a6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #7f8c8d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .subject-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .content-card {
+        padding: 20px;
+    }
+}
