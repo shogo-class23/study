@@ -46,6 +46,28 @@ header h1 {
 #breadcrumb {
     font-size: 14px;
     opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.breadcrumb-link {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: #ffd700; /* ゴールド色でホバーを強調 */
+    opacity: 1;
+}
+
+.breadcrumb-separator {
+    opacity: 0.6;
+    margin: 0 2px;
 }
 
 /* Main Layout */
@@ -419,6 +441,236 @@ main {
 
 .arrow {
     font-size: 24px;
+}
+
+/* Measurement Demos */
+.measure-demo {
+    background: #fdfdfd;
+    border: 2px dashed #ddd;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.pencil-compare {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    position: relative;
+    height: 120px;
+}
+
+.pencil {
+    font-size: 60px;
+    background: #fff;
+    padding: 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+.pencil.p1 { height: 100px; }
+.pencil.p2 { height: 80px; }
+
+.desk-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: #8b4513;
+    border-radius: 2px;
+}
+
+.tape-measure {
+    padding: 10px;
+}
+
+.tape {
+    background: #fff8e1;
+    border: 1px solid #ffecb3;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffa000;
+}
+
+.unit-measure, .cup-measure {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.area-compare {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 120px;
+}
+
+.hanky {
+    font-size: 80px;
+    border: 1px solid #eee;
+}
+
+.hanky.h2 {
+    margin-left: -40px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.tile-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tiles {
+    font-size: 24px;
+    line-height: 1.2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.box-in-box {
+    font-size: 40px;
+}
+
+/* Clock Demos */
+.clock-demo-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.simple-clock {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #333;
+    border-radius: 50%;
+    position: relative;
+    background: #fff;
+}
+
+.simple-clock::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* 8時から9時までの範囲を色付け */
+.territory-8 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        transparent 0deg 240deg,
+        rgba(255, 77, 79, 0.1) 240deg 270deg,
+        transparent 270deg 360deg
+    );
+    border-radius: 50%;
+}
+
+.num {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+}
+
+/* 30度ずつ回転させて位置を決め、中の数字は逆回転させて正対させる */
+.n12 { transform: translate(-50%, -50%) rotate(0deg) translateY(-60px) rotate(0deg); }
+.n1  { transform: translate(-50%, -50%) rotate(30deg) translateY(-60px) rotate(-30deg); }
+.n2  { transform: translate(-50%, -50%) rotate(60deg) translateY(-60px) rotate(-60deg); }
+.n3  { transform: translate(-50%, -50%) rotate(90deg) translateY(-60px) rotate(-90deg); }
+.n4  { transform: translate(-50%, -50%) rotate(120deg) translateY(-60px) rotate(-120deg); }
+.n5  { transform: translate(-50%, -50%) rotate(150deg) translateY(-60px) rotate(-150deg); }
+.n6  { transform: translate(-50%, -50%) rotate(180deg) translateY(-60px) rotate(-180deg); }
+.n7  { transform: translate(-50%, -50%) rotate(210deg) translateY(-60px) rotate(-210deg); }
+.n8  { transform: translate(-50%, -50%) rotate(240deg) translateY(-60px) rotate(-240deg); }
+.n9  { transform: translate(-50%, -50%) rotate(270deg) translateY(-60px) rotate(-270deg); }
+.n10 { transform: translate(-50%, -50%) rotate(300deg) translateY(-60px) rotate(-300deg); }
+.n11 { transform: translate(-50%, -50%) rotate(330deg) translateY(-60px) rotate(-330deg); }
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+.hand.short {
+    width: 6px;
+    height: 40px;
+    background: #ff4d4f; /* 短針は赤 */
+    transform: translateX(-50%) rotate(0deg); /* 12時 */
+}
+
+.hand.long {
+    width: 4px;
+    height: 60px;
+    background: #1890ff; /* 長針は青 */
+    transform: translateX(-50%) rotate(0deg); /* 0分 */
+}
+
+.hand.short-move {
+    width: 6px;
+    height: 40px;
+    background: #ff4d4f;
+    transform: translateX(-50%) rotate(255deg); /* 8時と9時の間 */
+}
+
+.hand.long-half {
+    width: 4px;
+    height: 60px;
+    background: #1890ff;
+    transform: translateX(-50%) rotate(180deg); /* 30分 */
+}
+
+.clock-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.clock-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.life-clock {
+    background: #f0f5ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.life-clock div {
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* Buttons */
