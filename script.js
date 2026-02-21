@@ -540,8 +540,75 @@ const studyData = {
                             }
                         ] 
                     },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "グラフをつくろう", subUnits: [{ title: "果物のグラフ", content: "好きな果物を数えよう。" }] }] }
-                ]
+                    { 
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", 
+                        units: [
+                            { 
+                                title: "1. <ruby>並<rt>なら</rt></ruby>べて くらべよう", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) <ruby>並<rt>なら</rt></ruby>べかたの くふう", 
+                                        content: `
+                                            <h4>どの ボールが <ruby>一番<rt>いちばん</rt></ruby> <ruby>多<rt>おお</rt></ruby>いかな？</h4>
+                                            <p>バラバラの <ruby>大<rt>おお</rt></ruby>きさの ボールを、 <ruby>縦<rt>たて</rt></ruby>に 並（なら）べてみました。</p>
+                                            <div class="data-demo">
+                                                <div class="vertical-graph unaligned-size">
+                                                    <div class="graph-col">
+                                                        <div class="cells large-balls">🔵<br>🔵</div>
+                                                        <div class="label">🔵 (大)</div>
+                                                    </div>
+                                                    <div class="graph-col">
+                                                        <div class="cells small-balls">🔘<br>🔘<br>🔘<br>🔘<br>🔘</div>
+                                                        <div class="label">🔘 (小)</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>バランスボール（🔵）のほうが <ruby>高<rt>たか</rt></ruby>く 見（み）えますが、 数（かず）を 数（かぞ）えると スーパーボール（🔘）のほうが <ruby>多<rt>おお</rt></ruby>いですね。</p>
+                                            <div class='point-box'><ruby>大<rt>おお</rt></ruby>きさが ちがうと、 見（み）た目（め）だけでは 正確（せいかく）に くらべられません。</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) <ruby>グラフ<rt>ぐらふ</rt></ruby>に してみよう", 
+                                        content: `
+                                            <h4>マークを <ruby>下<rt>した</rt></ruby>から <ruby>積<rt>つ</rt></ruby>みあげる</h4>
+                                            <p>ボールの <ruby>大<rt>おお</rt></ruby>きさを 同じに して、<ruby>下<rt>した</rt></ruby>から じゅんばんに 並（なら）べてみました。</p>
+                                            <div class="data-demo">
+                                                <div class="vertical-graph">
+                                                    <div class="graph-col">
+                                                        <div class="cells">〇<br>〇</div>
+                                                        <div class="label">🔵</div>
+                                                    </div>
+                                                    <div class="graph-col">
+                                                        <div class="cells">〇<br>〇<br>〇<br>〇<br>〇</div>
+                                                        <div class="label">🔘</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p>これで、スーパーボール（🔘）のほうが <ruby>高<rt>たか</rt></ruby>くまで 積（つ）まれていて、 <ruby>多<rt>おお</rt></ruby>いことが はっきり 分かりましたね！</p>
+                                            <div class='point-box'><ruby>下<rt>した</rt></ruby>の <b><ruby>高<rt>たか</rt></ruby>さを そろえて</b> 並（なら）べると、 どちらが <ruby>多<rt>おお</rt></ruby>いか すぐに 分かるよ。</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(3) みんなの すきなもの", 
+                                        content: `
+                                            <h4><ruby>表<rt>ひょう</rt></ruby>に まとめてみよう</h4>
+                                            <p>クラスの みんなに 「すきな くだもの」を <ruby>聞<rt>き</rt></ruby>いてみました。</p>
+                                            <div class="data-demo">
+                                                <table class="data-table">
+                                                    <tr><th>くだもの</th><th>人数（にんずう）</th></tr>
+                                                    <tr><td>🍎 りんご</td><td>〇〇〇〇 (4)</td></tr>
+                                                    <tr><td>🍌 バナナ</td><td>〇〇 (2)</td></tr>
+                                                    <tr><td>🍓 いちご</td><td>〇〇〇〇〇 (5)</td></tr>
+                                                </table>
+                                            </div>
+                                            <p><ruby>一番<rt>いちばん</rt></ruby> 人気（にんき）が あるのは 🍓いちご だね！</p>
+                                            <div class='point-box'>みんなの <ruby>好<rt>す</rt></ruby>きなものを <ruby>聞<rt>き</rt></ruby>いて、それぞれ 何個（なんこ）だったか <ruby>書<rt>か</rt></ruby>きあらわしてみよう。</div>
+                                        ` 
+                                    }
+                                ]
+                            }
+                        ] 
+                    },                ]
             }
         }
     }
