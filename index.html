@@ -42,24 +42,59 @@
             </div>
         </section>
 
-        <!-- 教材一覧画面 -->
-        <section id="list-view" class="view hidden">
-            <h2 id="selected-subject-name" class="section-title">教科名</h2>
-            <div id="material-list" class="material-list">
+        <!-- 学年選択画面 -->
+        <section id="grade-view" class="view hidden">
+            <h2 class="section-title"><ruby>学年<rt>がくねん</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぼう</h2>
+            <div class="grade-grid">
+                <div class="grade-card" data-grade="e1"><ruby>小<rt>しょう</rt></ruby>1</div>
+                <div class="grade-card" data-grade="e2"><ruby>小<rt>しょう</rt></ruby>2</div>
+                <div class="grade-card" data-grade="e3"><ruby>小<rt>しょう</rt></ruby>3</div>
+                <div class="grade-card" data-grade="e4"><ruby>小<rt>しょう</rt></ruby>4</div>
+                <div class="grade-card" data-grade="e5"><ruby>小<rt>しょう</rt></ruby>5</div>
+                <div class="grade-card" data-grade="e6"><ruby>小<rt>しょう</rt></ruby>6</div>
+                <div class="grade-card" data-grade="j1"><ruby>中<rt>ちゅう</rt></ruby>1</div>
+                <div class="grade-card" data-grade="j2"><ruby>中<rt>ちゅう</rt></ruby>2</div>
+                <div class="grade-card" data-grade="j3"><ruby>中<rt>ちゅう</rt></ruby>3</div>
+            </div>
+            <button id="back-to-home-btn" class="back-btn"><ruby>教科選択<rt>きょうかせんたく</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る</button>
+        </section>
+
+        <!-- カテゴリ（領域）選択画面 -->
+        <section id="category-view" class="view hidden">
+            <h2 id="selected-grade-name" class="section-title">学年名</h2>
+            <div id="category-list" class="material-list">
                 <!-- JSで動的に生成 -->
             </div>
-            <button class="back-btn">教科選択に戻る</button>
+            <button id="back-to-grade-btn" class="back-btn"><ruby>学年選択<rt>がくねんせんたく</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る</button>
+        </section>
+
+        <!-- 単元選択画面 -->
+        <section id="unit-view" class="view hidden">
+            <h2 id="selected-category-name" class="section-title">カテゴリ名</h2>
+            <div id="unit-list" class="material-list">
+                <!-- JSで動的に生成 -->
+            </div>
+            <button id="back-to-category-btn" class="back-btn"><ruby>領域選択<rt>りょういきせんたく</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る</button>
+        </section>
+
+        <!-- 項目選択画面 -->
+        <section id="sub-unit-view" class="view hidden">
+            <h2 id="selected-unit-name" class="section-title">単元名</h2>
+            <div id="sub-unit-list" class="material-list">
+                <!-- JSで動的に生成 -->
+            </div>
+            <button id="back-to-unit-btn" class="back-btn"><ruby>単元選択<rt>たんげんせんたく</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る</button>
         </section>
 
         <!-- 解説画面 -->
         <section id="content-view" class="view hidden">
             <article class="content-card">
-                <h2 id="content-title">単元名</h2>
+                <h2 id="content-title">項目名</h2>
                 <div id="content-body" class="content-body">
                     <!-- JSで動的に生成 -->
                 </div>
             </article>
-            <button id="back-to-list-btn" class="back-btn">教材一覧に戻る</button>
+            <button id="back-to-sub-unit-btn" class="back-btn"><ruby>項目一覧<rt>こうもくいちらん</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>る</button>
         </section>
     </main>
 

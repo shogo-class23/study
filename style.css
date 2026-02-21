@@ -107,6 +107,32 @@ main {
     box-shadow: 0 10px 15px rgba(0,0,0,0.2);
     filter: brightness(1.05);
 }
+/* Grade Grid */
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.grade-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.grade-card:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 .material-list {
     display: flex;
     flex-direction: column;
