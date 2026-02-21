@@ -637,6 +637,32 @@ main {
     background-color: rgba(52, 152, 219, 0.3);
 }
 
+.frac-text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.frac-text hr {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #333;
+    margin: 2px 0;
+}
+
+.numerator {
+    font-size: 18px;
+    color: var(--japanese-color);
+}
+
+.denominator {
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
 /* Data Demos */
 .data-demo {
     background: #fdfdfd;
@@ -951,6 +977,12 @@ main {
     background: rgba(52, 152, 219, 0.1);
     border: 2px solid var(--primary-color);
     transform: skewY(-45deg);
+}
+
+.highlight-num {
+    color: var(--japanese-color);
+    font-size: 24px;
+    text-decoration: underline;
 }
 
 .shape-list {
