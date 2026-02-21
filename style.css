@@ -541,6 +541,102 @@ main {
     font-size: 40px;
 }
 
+.sofa-problem {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Vertical Calculation (Hissan) */
+.hissan {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.hissan table {
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace;
+    font-size: 32px;
+}
+
+.hissan td {
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hissan tr.line td {
+    border-top: 3px solid #333;
+}
+
+/* Fraction Demo */
+.fraction-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.rect {
+    width: 120px;
+    height: 60px;
+    border: 2px solid #333;
+    display: flex;
+}
+
+.rect.split-2 div {
+    width: 50%;
+    height: 100%;
+    border-right: 1px dashed #333;
+}
+
+.rect.split-4 div {
+    width: 25%;
+    height: 100%;
+    border-right: 1px dashed #333;
+}
+
+.rect.split-8 div {
+    width: 12.5%;
+    height: 100%;
+    border-right: 1px dashed #333;
+}
+
+.rect.split-3 div {
+    width: 33.33%;
+    height: 100%;
+    border-right: 1px dashed #333;
+}
+
+.rect.split-5 div {
+    width: 20%;
+    height: 100%;
+    border-right: 1px dashed #333;
+}
+
+.rect.split-2 div:last-child,
+.rect.split-3 div:last-child,
+.rect.split-4 div:last-child,
+.rect.split-5 div:last-child,
+.rect.split-8 div:last-child {
+    border-right: none;
+}
+
+.split-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rect .fill {
+    background-color: rgba(52, 152, 219, 0.3);
+}
+
 /* Data Demos */
 .data-demo {
     background: #fdfdfd;
