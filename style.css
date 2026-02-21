@@ -91,23 +91,22 @@ main {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.subject-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-}
-
 .subject-card .icon {
     font-size: 50px;
     margin-bottom: 15px;
 }
 
-.subject-card.japanese { border-top: 5px solid var(--japanese-color); }
-.subject-card.math { border-top: 5px solid var(--math-color); }
-.subject-card.science { border-top: 5px solid var(--science-color); }
-.subject-card.social { border-top: 5px solid var(--social-color); }
-.subject-card.english { border-top: 5px solid var(--english-color); }
+.subject-card.japanese { background-color: var(--japanese-color); color: var(--white); }
+.subject-card.math { background-color: var(--math-color); color: var(--white); }
+.subject-card.science { background-color: var(--science-color); color: var(--white); }
+.subject-card.social { background-color: var(--social-color); color: #333; }
+.subject-card.english { background-color: var(--english-color); color: var(--white); }
 
-/* Material List */
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    filter: brightness(1.05);
+}
 .material-list {
     display: flex;
     flex-direction: column;
