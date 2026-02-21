@@ -530,7 +530,7 @@ const studyData = {
                                                 </div>
                                             </div>
                                             <p>同じ コップで 何杯（なんぱい） 入るか 数えてみましょう。</p>
-                                            <div class='point-box'>長さ、広さ、かさ. どれも <b>「いくつ分か」</b> を 数えると 正確（せいかく）に くらべられるよ！</div>
+                                            <div class='point-box'>長さ、広さ、かさ。 どれも <b>「いくつ分か」</b> を 数えると 正確（せいかく）に くらべられるよ！</div>
                                         ` 
                                     }
                                 ]
@@ -736,267 +736,605 @@ const studyData = {
                                     }
                                 ]
                             },
-                                                                                    {
-                                                                                        title: "2. たし算",
-                                                                                        subUnits: [
-                                                                                            {
-                                                                                                title: "(1) 2けたの けいさんと ひっ算",
-                                                                                                content: `
-                                                                                                    <h4>2けた ＋ 2けた</h4>
-                                                                                                    <div class="hissan">
-                                                                                                      <table>
-                                                                                                        <tr><td></td><td>2</td><td>5</td></tr>
-                                                                                                        <tr><td>＋</td><td>1</td><td>4</td></tr>
-                                                                                                        <tr class="line"><td></td><td>3</td><td>9</td></tr>
-                                                                                                      </table>
-                                                                                                    </div>
-                                                                                                    <p><ruby>位<rt>くらい</rt></ruby>を そろえて、一の<ruby>位<rt>くらい</rt></ruby>から じゅんばんに けいさん しよう。</p>
-                                                                                                `
-                                                                                            },
-                                                                                                                                {
-                                                                                                                                    title: "(2) 3けたの けいさん",
-                                                                                                                                    content: `
-                                                                                                                                        <h4>百（ひゃく）の くらいの 計算</h4>
-                                                                                                                                        <div class="calc-demo">
-                                                                                                                                            120 ＋ 230 ＝ 350<br>
-                                                                                                                                            500 ＋ 400 ＝ 900<br>
-                                                                                                                                            500 ＋ 500 ＝ 1000
-                                                                                                                                        </div>
-                                                                                                                                        <p>100の まとまりが いくつ あるか かんがえると、 大きな 数（かず）の 計算も かんたんだね。</p>
-                                                                                                                                    `
-                                                                                                                                },
-                                                                                                                                {
-                                                                                                                                    title: "(3) 3けた と 2けたの 計算",
-                                                                                                                                    content: `
-                                                                                                                                        <h4>1万（いちまん）までの たしざん</h4>
-                                                                                                                                        <div class="calc-demo">
-                                                                                                                                            120 ＋ 30 ＝ 150<br>
-                                                                                                                                            990 ＋ 10 ＝ 1000<br>
-                                                                                                                                            9900 ＋ 100 ＝ 10000
-                                                                                                                                        </div>
-                                                                                                                                        <div class='point-box'>1000が 10こで <b>1万（いちまん）</b> になるよ。</div>
-                                                                                                                                    `
-                                                                                                                                }
-                                                                                                                            ]
-                                                                                                                        },
-                                                                                                                        {
-                                                                                                                            title: "3. 引き算",
-                                                                                                                            subUnits: [
-                                                                                                                                {
-                                                                                                                                    title: "(1) 2けたの けいさんと ひっ算",
-                                                                                                                                    content: `
-                                                                                                                                        <h4>2けた － 2けた</h4>
-                                                                                                                                        <div class="hissan">
-                                                                                                                                          <table>
-                                                                                                                                            <tr><td></td><td>4</td><td>8</td></tr>
-                                                                                                                                            <tr><td>－</td><td>1</td><td>5</td></tr>
-                                                                                                                                            <tr class="line"><td></td><td>3</td><td>3</td></tr>
-                                                                                                                                          </table>
-                                                                                                                                        </div>
-                                                                                                                                        <p>ひっ算を つかうと、大きな 数（かず）の 引き算（ひきざん）も かんたんだね。</p>
-                                                                                                                                    `
-                                                                                                                                },
-                                                                                                                                {
-                                                                                                                                    title: "(2) 3けたの けいさん",
-                                                                                                                                    content: `
-                                                                                                                                        <h4>百（ひゃく）の くらいの 引き算</h4>
-                                                                                                                                        <div class="calc-demo">
-                                                                                                                                            350 － 120 ＝ 230<br>
-                                                                                                                                            900 － 400 ＝ 500<br>
-                                                                                                                                            1000 － 500 ＝ 500
-                                                                                                                                        </div>
-                                                                                                                                        <p>100の まとまりを 意識（いしき）して ひいてみよう。</p>
-                                                                                                                                    `
-                                                                                                                                },
-                                                                                                                                {
-                                                                                                                                    title: "(3) 3けた と 2けたの 引き算",
-                                                                                                                                    content: `
-                                                                                                                                        <h4>大きな 数（かず）の 引き算</h4>
-                                                                                                                                        <div class="calc-demo">
-                                                                                                                                            150 － 30 ＝ 120<br>
-                                                                                                                                            1000 － 10 ＝ 990<br>
-                                                                                                                                            10000 － 1000 ＝ 9000
-                                                                                                                                        </div>
-                                                                                                                                        <div class='point-box'>1万（いちまん）から ひく 計算（けいさん）も、まとまりで かんがえると わかりやすいね。</div>
-                                                                                                                                    `
-                                                                                                                                }
-                                                                                                                            ]
-                                                                                                                        },
-                                                                                                                                                    {
-                                                            title: "4. たし算と 引き算の かんけい",
-                                                            subUnits: [
-                                                                {
-                                                                    title: "(1) ＋ と － の なかよし",
-                                                                    content: `
-                                                                        <h4>ぎゃくの 計算</h4>
-                                                                        <p><b>3 ＋ 5 ＝ 8</b> のとき、つぎのことも わかります。</p>
-                                                                        <div class="calc-demo">
-                                                                            5 ＋ 3 ＝ 8<br>
-                                                                            8 － 3 ＝ 5<br>
-                                                                            8 － 5 ＝ 3
-                                                                        </div>
-                                                                        <div class='point-box'>たし算の 答えから 片方（かたほう）を 引くと、もう 片方（かたほう）に なるんだね。</div>
-                                                                    `
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            title: "5. かけ算（九九）",
-                                                            subUnits: [
-                                                                {
-                                                                    title: "(1) かけ算（かけざん）とは？",
-                                                                    content: `
-                                                                        <h4>たし算との ちがい</h4>
-                                                                        <p>「5こ 入（い）りのが 4さら」あるとき：</p>
-                                                                        <p>たし算：5 ＋ 5 ＋ 5 ＋ 5 ＝ 20</p>
-                                                                        <p>かけ算：<b>5 × 4 ＝ 20</b></p>
-                                                                        <p>おなじ 数を 何回（なんかい）も たすときは、かけ算が べんり！</p>
-                                                                    `
-                                                                },
-                                                                {
-                                                                    title: "(2) じゅんばんが 大事（だいじ）！",
-                                                                    content: `
-                                                                        <h4>「1つ分」 × 「いくつ分」</h4>
-                                                                        <p>プリンが 3こ ずつ 入（はい）った パックが 5つ あります。</p>
-                                                                        <p>しき： <b>3（1つ分） × 5（いくつ分） ＝ 15</b></p>
-                                                                        <div class='point-box'>「5 × 3」 と かくと、「5こ ずつ 3パック」 という いみに なるので、 じゅんばんに 気をつけよう。</div>
-                                                                    `
-                                                                },
-                                                                {
-                                                                    title: "(3) 九九（くく）の ルール",
-                                                                    content: `
-                                                                        <h4>かけ算の ふしぎ</h4>
-                                                                        <ul class="pos-list">
-                                                                            <li><b>いれかえても おなじ</b>： 3×5 と 5×3 は どちらも 15。</li>
-                                                                            <li><b>答えの ふえかた</b>： 3×5 の つぎの 3×6 は、 答えが 3ふえる。</li>
-                                                                            <li><b>3のだん ＋ 4のだん</b>： 答えを たすと 7のだんに なるよ！</li>
-                                                                        </ul>
-                                                                    `
-                                                                },
-                                                                                                                                        {
-                                                                                                                                            title: "(4) 「0」の かけ算",
-                                                                                                                                            content: `
-                                                                                                                                                <h4>なにを かけても 0？</h4>
-                                                                                                                                                <div class="calc-demo">
-                                                                                                                                                    5 × 0 ＝ 0<br>
-                                                                                                                                                    0 × 3 ＝ 0
-                                                                                                                                                </div>
-                                                                                                                                                <div class='point-box'>0 を かけたり、 0 に かけたり すると、 答えは ぜんぶ <b>0</b> になるよ。</div>
-                                                                                                                                            `
-                                                                                                                                        },
-                                                                                                                                        {
-                                                                                                                                            title: "(5) 10の かけ算",
-                                                                                                                                            content: `
-                                                                                                                                                <h4>10を かけると どうなる？</h4>
-                                                                                                                                                <div class="calc-table">
-                                                                                                                                                    10 × 1 ＝ 10<br>
-                                                                                                                                                    10 × 2 ＝ 20<br>
-                                                                                                                                                    10 × 5 ＝ 50<br>
-                                                                                                                                                    10 × 9 ＝ 90
-                                                                                                                                                </div>
-                                                                                                                                                <div class='point-box'>もとの 数の 後（うし）ろに <b>「0」を つけるだけ</b> で 答えに なるよ！</div>
-                                                                                                                                            `
-                                                                                                                                        },
-                                                                                                                                        {
-                                                                                                                                            title: "(6) 11の段、12の段",
-                                                                                                                                            content: `
-                                                                                                                                                <h4>九九の さきの 計算</h4>
-                                                                                                                                                <p>11や 12のだんは、 <b>わけて</b> かんがえると かんたんです。</p>
-                                                                                                                                                <div class="calc-demo">
-                                                                                                                                                    <b>12 × 3 ＝ ？</b><br>
-                                                                                                                                                    ・10 × 3 ＝ 30<br>
-                                                                                                                                                    ・ 2 × 3 ＝ 6<br>
-                                                                                                                                                    ・30 ＋ 6 ＝ <b>36</b>
-                                                                                                                                                </div>
-                                                                                                                                                <div class='point-box'>「10の まとまり」と 「のこり」に わけて たせば いいんだね。</div>
-                                                                                                                                            `
-                                                                                                                                        },
-                                                                                                                                        {
-                                                                                                                                            title: "(7) おなじ 数を かける",
-                                                                                                                                            content: `
-                                                                                                                                                <h4>九九の 達人（たつじん）への 道！</h4>
-                                                                                                                                                <p>おなじ 数を 2回（かい） かける 計算です。 おぼえると かっこいいよ！</p>
-                                                                                                                                                <div class="calc-table">
-                                                                                                                                                    13 × 13 ＝ 169<br>
-                                                                                                                                                    14 × 14 ＝ 196<br>
-                                                                                                                                                    15 × 15 ＝ 225<br>
-                                                                                                                                                    16 × 16 ＝ 256<br>
-                                                                                                                                                    17 × 17 ＝ 289<br>
-                                                                                                                                                    18 × 18 ＝ 324<br>
-                                                                                                                                                    19 × 19 ＝ 361
-                                                                                                                                                </div>
-                                                                                                                                                <div class='point-box'>20 × 20 ＝ 400 まで いけたら 完（かん）ぺきだね！</div>
-                                                                                                                                            `
-                                                                                                                                        }
-                                                                                                                                    ]
-                                                                                                                                },
-                                                                                                                                {
-                                                                                                                                    title: "6. 分数（ぶんすう）",
-                                                                                                                                    subUnits: [
-                                                                                                                                                                            {
-                                                                                                                                                                                title: "(1) 半分（はんぶん）の 半分（はんぶん）...",
-                                                                                                                                                                                content: `
-                                                                                                                                                                                    <h4>どんどん わけてみよう</h4>
-                                                                                                                                                                                    <p>ぴったり 2つに わけると <b>1/2（二分の一）</b>。 それを さらに 半分に すると...</p>
-                                                                                                                                                                                    <div class="fraction-demo">
-                                                                                                                                                                                        <div class="split-row">
-                                                                                                                                                                                            <div class="rect split-2"><div class="fill"></div><div></div></div>
-                                                                                                                                                                                            <span>1/2</span>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                        <div class="arrow">⬇️ さらに 半分</div>
-                                                                                                                                                                                        <div class="split-row">
-                                                                                                                                                                                            <div class="rect split-4"><div class="fill"></div><div></div><div></div><div></div></div>
-                                                                                                                                                                                            <span>1/4 （半分の 半分）</span>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                        <div class="arrow">⬇️ さらに 半分</div>
-                                                                                                                                                                                        <div class="split-row">
-                                                                                                                                                                                            <div class="rect split-8"><div class="fill"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-                                                                                                                                                                                            <span>1/8 （半分の 半分の 半分）</span>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                    <div class='point-box'>わければ わけるほど、 ひとつ分の 大きさは 小さくなっていくね。</div>
-                                                                                                                                                                                `
-                                                                                                                                                                            },
-                                                                                                                                                                            {
-                                                                                                                                                                                title: "(2) いろいろな 分け方",
-                                                                                                                                                                                content: `
-                                                                                                                                                                                    <h4>3つや 5つに わけると？</h4>
-                                                                                                                                                                                    <p>半分（2つ）以外にも、いろいろな 分け方が あります。</p>
-                                                                                                                                                                                    <div class="fraction-demo">
-                                                                                                                                                                                        <div class="split-row">
-                                                                                                                                                                                            <div class="rect split-3"><div class="fill"></div><div></div><div></div></div>
-                                                                                                                                                                                            <span><b>1/3</b> （三分の一）</span>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                        <div class="split-row">
-                                                                                                                                                                                            <div class="rect split-5"><div class="fill"></div><div></div><div></div><div></div><div></div></div>
-                                                                                                                                                                                            <span><b>1/5</b> （五分の一）</span>
-                                                                                                                                                                                        </div>
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                    <p>下の 数（かず）は、<b>「いくつに わけるか」</b> を あらわして います。</p>
-                                                                                                                                                                                    <div class='point-box'>3つに わければ 「三分の〜」、 10個に わければ 「十分の〜」 と よぶよ。</div>
-                                                                                                                                                                                `
-                                                                                                                                                                            },
-                                                                                                                                                                            {
-                                                                                                                                                                                title: "(3) ○倍（ばい）と 分数（ぶんすう）",
-                                                                                                                                        
-                                                                                                                                            content: `
-                                                                                                                                                <h4>見方（みかた）を かえてみよう</h4>
-                                                                                                                                                <p>12この おはじき：</p>
-                                                                                                                                                <ul class="pos-list">
-                                                                                                                                                    <li>6この <b>2倍（ばい）</b> は 12こ</li>
-                                                                                                                                                    <li>12この <b>1/2（半分）</b> は 6こ</li>
-                                                                                                                                                </ul>
-                                                                                                                                                <div class='point-box'>「何倍かな？」と かんがえるのが わり算の はじまりだよ。</div>
-                                                                                                                                            `
-                                                                                                                                        }
-                                                                                                                                    ]
-                                                                                                                                }
-                                                                                                    
-                                                                                        ]
+                            {
+                                title: "2. たし算",
+                                subUnits: [
+                                    {
+                                        title: "(1) 2けたの けいさんと ひっ算",
+                                        content: `
+                                            <h4>2けた ＋ 2けた</h4>
+                                            <div class="hissan">
+                                              <table>
+                                                <tr><td></td><td>2</td><td>5</td></tr>
+                                                <tr><td>＋</td><td>1</td><td>4</td></tr>
+                                                <tr class="line"><td></td><td>3</td><td>9</td></tr>
+                                              </table>
+                                            </div>
+                                            <p><ruby>位<rt>くらい</rt></ruby>を そろえて、一の<ruby>位<rt>くらい</rt></ruby>から じゅんばんに けいさん しよう。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 3けたの けいさん",
+                                        content: `
+                                            <h4>百（ひゃく）の くらいの 計算</h4>
+                                            <div class="calc-demo">
+                                                120 ＋ 230 ＝ 350<br>
+                                                500 ＋ 400 ＝ 900<br>
+                                                500 ＋ 500 ＝ 1000
+                                            </div>
+                                            <p>100の まとまりが いくつ あるか かんがえると、 大きな 数（かず）の 計算も かんたんだね。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) 3けた と 2けたの 計算",
+                                        content: `
+                                            <h4>1万（いちまん）までの たしざん</h4>
+                                            <div class="calc-demo">
+                                                120 ＋ 30 ＝ 150<br>
+                                                990 ＋ 10 ＝ 1000<br>
+                                                9900 ＋ 100 ＝ 10000
+                                            </div>
+                                            <div class='point-box'>1000が 10こで <b>1万（いちまん）</b> になるよ。</div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 引き算",
+                                subUnits: [
+                                    {
+                                        title: "(1) 2けたの けいさんと ひっ算",
+                                        content: `
+                                            <h4>2けた － 2けた</h4>
+                                            <div class="hissan">
+                                              <table>
+                                                <tr><td></td><td>4</td><td>8</td></tr>
+                                                <tr><td>－</td><td>1</td><td>5</td></tr>
+                                                <tr class="line"><td></td><td>3</td><td>3</td></tr>
+                                              </table>
+                                            </div>
+                                            <p>ひっ算を つかうと、大きな 数（かず）の 引き算（ひきざん）も かんたんだね。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 3けたの けいさん",
+                                        content: `
+                                            <h4>百（ひゃく）の くらいの 引き算</h4>
+                                            <div class="calc-demo">
+                                                350 － 120 ＝ 230<br>
+                                                900 － 400 ＝ 500<br>
+                                                1000 － 500 ＝ 500
+                                            </div>
+                                            <p>100の まとまりを 意識（いしき）して ひいてみよう。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) 3けた と 2けたの 引き算",
+                                        content: `
+                                            <h4>大きな 数（かず）の 引き算</h4>
+                                            <div class="calc-demo">
+                                                150 － 30 ＝ 120<br>
+                                                1000 － 10 ＝ 990<br>
+                                                10000 － 1000 ＝ 9000
+                                            </div>
+                                            <div class='point-box'>1万（いちまん）から ひく 計算（けいさん）も、まとまりで かんがえると わかりやすいね。</div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. たし算と 引き算の かんけい",
+                                subUnits: [
+                                    {
+                                        title: "(1) ＋ と － の なかよし",
+                                        content: `
+                                            <h4>ぎゃくの 計算</h4>
+                                            <p><b>3 ＋ 5 ＝ 8</b> のとき、つぎのことも わかります。</p>
+                                            <div class="calc-demo">
+                                                5 ＋ 3 ＝ 8<br>
+                                                8 － 3 ＝ 5<br>
+                                                8 － 5 ＝ 3
+                                            </div>
+                                            <div class='point-box'>たし算の 答えから 片方（かたほう）を 引くと、もう 片方（かたほう）に なるんだね。</div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "5. かけ算",
+                                subUnits: [
+                                    {
+                                        title: "(1) かけ算（かけざん）とは？",
+                                        content: `
+                                            <h4>たし算との ちがい</h4>
+                                            <p>「5こ 入（い）りのが 4さら」あるとき：</p>
+                                            <p>たし算：5 ＋ 5 ＋ 5 ＋ 5 ＝ 20</p>
+                                            <p>かけ算：<b>5 × 4 ＝ 20</b></p>
+                                            <p>おなじ 数を 何回（なんかい）も たすときは、かけ算が べんり！</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) じゅんばんが 大事（だいじ）！",
+                                        content: `
+                                            <h4>「1つ分」 × 「いくつ分」</h4>
+                                            <p>プリンが 3こ ずつ 入（はい）った パックが 5つ あります。</p>
+                                            <p>しき： <b>3（1つ分） × 5（いくつ分） ＝ 15</b></p>
+                                            <div class='point-box'>「5 × 3」 と かくと、「5こ ずつ 3パック」 という いみに なるので、 じゅんばんに 気をつけよう。</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) 九九（くく）の 表（ひょう）",
+                                        content: `
+                                            <h4>1から 9までの 九九（くく）</h4>
+                                            <div class="kuku-table-container">
+                                                <table class="kuku-table">
+                                                    <tr><th>×</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr>
+                                                    <tr><th>1</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+                                                    <tr><th>2</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td></tr>
+                                                    <tr><th>3</th><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td><td>18</td><td>21</td><td>24</td><td>27</td></tr>
+                                                    <tr><th>4</th><td>4</td><td>8</td><td>12</td><td>16</td><td>20</td><td>24</td><td>28</td><td>32</td><td>36</td></tr>
+                                                    <tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td><td>30</td><td>35</td><td>40</td><td>45</td></tr>
+                                                    <tr><th>6</th><td>6</td><td>12</td><td>18</td><td>24</td><td>30</td><td>36</td><td>42</td><td>48</td><td>54</td></tr>
+                                                    <tr><th>7</th><td>7</td><td>14</td><td>21</td><td>28</td><td>35</td><td>42</td><td>49</td><td>56</td><td>63</td></tr>
+                                                    <tr><th>8</th><td>8</td><td>16</td><td>24</td><td>32</td><td>40</td><td>48</td><td>56</td><td>64</td><td>72</td></tr>
+                                                    <tr><th>9</th><td>9</td><td>18</td><td>27</td><td>36</td><td>45</td><td>54</td><td>63</td><td>72</td><td>81</td></tr>
+                                                </table>
+                                            </div>
+                                            <div class='point-box'>ななめに 見（み）ると、 「1, 4, 9, 16...」 と おなじ 数（かず）を かけた 答えが 並（なら）んでいるよ！</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(4) 九九（くく）の ルール",
+                                        content: `
+                                            <h4>かけ算の ふしぎ</h4>
+                                            <ul class="pos-list">
+                                                <li><b>いれかえても おなじ</b>： 3×5 と 5×3 は どちらも 15。</li>
+                                                <li><b>答えの ふえかた</b>： 3×5 の つぎの 3×6 は、 答えが 3ふえる。</li>
+                                                <li><b>3のだん ＋ 4のだん</b>： 答えを たすと 7のだんに なるよ！</li>
+                                            </ul>
+                                        `
+                                    },
+                                    {
+                                        title: "(5) 「0」の かけ算",
+                                        content: `
+                                            <h4>0の 計算と 大きな かけ算</h4>
+                                            <div class="calc-demo">
+                                                5 × 0 ＝ 0<br>
+                                                0 × 3 ＝ 0<br>
+                                                12 × 12 ＝ 144<br>
+                                                20 × 20 ＝ 400
+                                            </div>
+                                            <div class='point-box'>0を かけると ぜんぶ 0に なるよ。 20×20 まで おぼえると かっこいい！</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(6) 10の かけ算",
+                                        content: `
+                                            <h4>10を かけると どうなる？</h4>
+                                            <div class="calc-table">
+                                                10 × 1 ＝ 10<br>
+                                                10 × 2 ＝ 20<br>
+                                                10 × 5 ＝ 50<br>
+                                                10 × 9 ＝ 90
+                                            </div>
+                                            <div class='point-box'>もとの 数の 後（うし）ろに <b>「0」を つけるだけ</b> で 答えに なるよ！</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(7) 11の段、12の段",
+                                        content: `
+                                            <h4>九九の さきの 計算</h4>
+                                            <p>11や 12のだんは、 <b>わけて</b> かんがえると かんたんです。</p>
+                                            <div class="calc-demo">
+                                                <b>12 × 3 ＝ ？</b><br>
+                                                ・10 × 3 ＝ 30<br>
+                                                ・ 2 × 3 ＝ 6<br>
+                                                ・30 ＋ 6 ＝ <b>36</b>
+                                            </div>
+                                            <div class='point-box'>「10の まとまり」と 「のこり」に わけて たせば いいんだね。</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(8) おなじ 数を かける",
+                                        content: `
+                                            <h4>九九の 達人（たつじん）への 道！</h4>
+                                            <p>おなじ 数を 2回（かい） かける 計算です。 おぼえると かっこいいよ！</p>
+                                            <div class="calc-table">
+                                                13 × 13 ＝ 169<br>
+                                                14 × 14 ＝ 196<br>
+                                                15 × 15 ＝ 225<br>
+                                                16 × 16 ＝ 256<br>
+                                                17 × 17 ＝ 289<br>
+                                                18 × 18 ＝ 324<br>
+                                                19 × 19 ＝ 361
+                                            </div>
+                                            <div class='point-box'>20 × 20 ＝ 400 まで いけたら 完（かん）ぺきだね！</div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. 分数（ぶんすう）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 半分（はんぶん）の 半分（はんぶん）...",
+                                        content: `
+                                            <h4>どんどん わけてみよう</h4>
+                                            <p>ぴったり 2つに わけると <b>1/2（二分の一）</b>。 それを さらに 半分に すると...</p>
+                                            <div class="fraction-demo">
+                                                <div class="split-row">
+                                                    <div class="rect split-2"><div class="fill"></div><div></div></div>
+                                                    <span>1/2</span>
+                                                </div>
+                                                <div class="arrow">⬇️ さらに 半分</div>
+                                                <div class="split-row">
+                                                    <div class="rect split-4"><div class="fill"></div><div></div><div></div><div></div></div>
+                                                    <span>1/4 （半分の 半分）</span>
+                                                </div>
+                                                <div class="arrow">⬇️ さらに 半分</div>
+                                                <div class="split-row">
+                                                    <div class="rect split-8"><div class="fill"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                                                    <span>1/8 （半分の 半分の 半分）</span>
+                                                </div>
+                                            </div>
+                                            <div class='point-box'>わければ わけるほど、 ひとつ分の 大きさは 小さくなっていくね。</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) いろいろな 分け方",
+                                        content: `
+                                            <h4>3つや 5つに わけると？</h4>
+                                            <p>半分（2つ）以外にも、いろいろな 分け方が あります。</p>
+                                            <div class="fraction-demo">
+                                                <div class="split-row">
+                                                    <div class="rect split-3"><div class="fill"></div><div></div><div></div></div>
+                                                    <span><b>1/3</b> （三分の一）</span>
+                                                </div>
+                                                <div class="split-row">
+                                                    <div class="rect split-5"><div class="fill"></div><div></div><div></div><div></div><div></div></div>
+                                                    <span><b>1/5</b> （五分の一）</span>
+                                                </div>
+                                            </div>
+                                            <p>下の 数（かず）は、<b>「いくつに わけるか」</b> を あらわして います。</p>
+                                            <div class='point-box'>3つに わければ 「三分の〜」、 10個に わければ 「十分の〜」 と よぶよ。</div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) ○倍（ばい）と 分数（ぶんすう）",
+                                        content: `
+                                            <h4>見方（みかた）を かえてみよう</h4>
+                                            <p>12この おはじき：</p>
+                                            <ul class="pos-list">
+                                                <li>6この <b>2倍（ばい）</b> は 12こ</li>
+                                                <li>12この <b>1/2（半分）</b> は 6こ</li>
+                                            </ul>
+                                            <div class='point-box'>「何倍かな？」と かんがえるのが わり算の はじまりだよ。</div>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
                     },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
+                    { 
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>", 
+                        units: [
+                            { 
+                                title: "1. 三角形（さんかくけい）", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) 三角形って なに？", 
+                                        content: `
+                                            <h4>3本の 直線（ちょくせん）で かこまれた 形</h4>
+                                            <div class="shape-demo-box">
+                                                <div class="demo-shape tri-basic"></div>
+                                            </div>
+                                            <p>まわりが 3本の 直線で ぴったり かこまれている 形を <b>三角形</b> と いいます。</p>
+                                            <ul class="shape-list">
+                                                <li>まわりの 直線 ➔ <b>辺（へん）</b> が 3本</li>
+                                                <li>かどっこの 点 ➔ <b>頂点（ちょうてん）</b> が 3こ</li>
+                                            </ul>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "2. 四角形（しかくけい）", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) 四角形って なに？", 
+                                        content: `
+                                            <h4>4本の 直線（ちょくせん）で かこまれた 形</h4>
+                                            <div class="shape-demo-box">
+                                                <div class="demo-shape quad-basic"></div>
+                                            </div>
+                                            <p>まわりが 4本の 直線で ぴったり かこまれている 形を <b>四角形</b> と いいます。</p>
+                                            <ul class="shape-list">
+                                                <li>まわりの 直線 ➔ <b>辺（へん）</b> が 4本</li>
+                                                <li>かどっこの 点 ➔ <b>頂点（ちょうてん）</b> が 4こ</li>
+                                            </ul>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) 直角（ちょっかく）", 
+                                        content: `
+                                            <h4>かどを おって つくる形</h4>
+                                            <p>かみを おって つくった「まっすぐな 角」を <b>「直角（ちょっかく）」</b> と いいます。</p>
+                                            <div class="shape-demo">
+                                                <div class="paper-fold">📄 ➔ 📐</div>
+                                                <p>身のまわりから 直角を さがしてみよう！</p>
+                                            </div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(3) 長方形と 正方形", 
+                                        content: `
+                                            <h4>とくべつな 四角形</h4>
+                                            <ul class="shape-list">
+                                                <li><b>長方形（ちょうほうけい）</b>：4つの 角が ぜんぶ <b>直角</b> の四角形。</li>
+                                                <li><b>正方形（せいほうけい）</b>：4つの 角が <b>直角</b> で、4つの <b>辺の長さが おなじ</b> 四角形。</li>
+                                            </ul>
+                                            <div class="shape-demo-box">
+                                                <div class="demo-shape rectangle-box">長方形</div>
+                                                <div class="demo-shape square-box">正方形</div>
+                                            </div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(4) 直角三角形（ちょっかくさんかくけい）", 
+                                        content: `
+                                            <h4>直角のある 三角形</h4>
+                                            <p>長方形や 正方形を ななめに 切（き）ると、<b>直角三角形</b> が できます。</p>
+                                            <div class="shape-demo">
+                                                <div class="split-rect">
+                                                    <div class="tri-half"></div>
+                                                </div>
+                                            </div>
+                                            <div class='point-box'>きれいな もよう（しきつめ）を つくるのに べんりな 形だね！</div>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "3. 箱（はこ）", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) 箱の 仕組み（しくみ）", 
+                                        content: `
+                                            <h4>面（めん）・辺（へん）・頂点（ちょうてん）</h4>
+                                            <p>箱は、長方形や 正方形の <b>「面」</b> で できています。</p>
+                                            <div class="box-demo-container">
+                                                <div class="box-3d"></div>
+                                            </div>
+                                            <ul class="clock-list">
+                                                <li>平（たい）らな ところ ➔ <b>面（めん）</b> が 6まい</li>
+                                                <li>面と 面の あいだ ➔ <b>辺（へん）</b> が 12ほん</li>
+                                                <li>かどっこ ➔ <b>頂点（ちょうてん）</b> が 8こ</li>
+                                            </ul>
+                                            <div class='point-box'>ひご（辺）や かみ（面）を つかって、箱を くみたてて みよう！</div>
+                                        ` 
+                                    }
+                                ]
+                            }
+                        ] 
+                    },
+                    { 
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", 
+                        units: [
+                            { 
+                                title: "1. 長さの たんい", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) ミリメートル(mm) と センチメートル(cm)", 
+                                        content: `
+                                            <h4>小さな 長さを はかろう</h4>
+                                            <p>1cmを 10こに 分けた 一つ分を <b>1mm（ミリメートル）</b> と いいます。</p>
+                                            <div class="measure-demo">
+                                                <div class="ruler-small">
+                                                    <div class="scale-mm"></div>
+                                                    <div class="pointer-mm">⬇️ 1mm</div>
+                                                </div>
+                                            </div>
+                                            <div class='point-box'><b>1cm ＝ 10mm</b> だよ。 消しゴムや 鉛筆（えんぴつ）の 先（さき）を はかるときに つかおう！</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) メートル(m)", 
+                                        content: `
+                                            <h4>大きな 長さを はかろう</h4>
+                                            <p>100cmを まとめて <b>1m（メートル）</b> と いいます。</p>
+                                            <div class="measure-demo">
+                                                <div class="m-visual">📏 100cm ➔ 1m</div>
+                                            </div>
+                                            <p>両手を 広げたくらいの 長さが、だいたい 1mだよ。</p>
+                                            <div class='point-box'><b>1m ＝ 100cm</b> だよ。 教室（きょうしつ）の はばや、廊下（ろうか）の 長さを はかるときに べんりだね。</div>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "2. かさの たんい", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) L, dL, mL の 関係", 
+                                        content: `
+                                            <h4>水の かさを はかろう</h4>
+                                            <p>入れ物に 入る 水の量を <b>「かさ」</b> と いいます。</p>
+                                            <ul class="clock-list">
+                                                <li><b>L（リットル）</b>：大きな 牛乳（ぎゅうにゅう）パックくらい。</li>
+                                                <li><b>dL（デシリットル）</b>：1Lを 10こに 分けた 一つ分。</li>
+                                                <li><b>mL（ミリリットル）</b>：とても 小さな 量（りょう）。</li>
+                                            </ul>
+                                            <div class="measure-demo">
+                                                <div class="cup-visual">1L ＝ 10dL ＝ 1000mL</div>
+                                            </div>
+                                            <div class='point-box'>1Lますの 目盛りを よく 見て、どれくらい 入っているか 確かめよう。</div>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "3. どちらの たんいを つかう？", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) ぴったりの たんいを 選（えら）ぼう", 
+                                        content: `
+                                            <h4>はかる ものに あわせて</h4>
+                                            <p>はかる ものによって、 単位（たんい）を 使い分けます。</p>
+                                            <div class="unit-choice">
+                                                <div>🍎 ノートの はば ➔ <b>cm</b></div>
+                                                <div>🏫 教科書（きょうかしょ）の 厚（あつ）み ➔ <b>mm</b></div>
+                                                <div>🏟️ 運動場（うんどうじょう）の 長さ ➔ <b>m</b></div>
+                                            </div>
+                                            <h4>見当（けんとう）を つけよう</h4>
+                                            <p>「つくえの 横は だいたい 60cmくらいかな？」と 予想（よそう）してから はかると、 単位の センスが よく なるよ！</p>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "4. 単位（たんい）の へんかん", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) 長さの 書きかえ", 
+                                        content: `
+                                            <h4>ちがう 単位（たんい）に なおそう</h4>
+                                            <div class="calc-demo">
+                                                1cm ➔ <b>10mm</b><br>
+                                                1m ➔ <b>100cm</b>
+                                            </div>
+                                            <h4>まざった 長さ</h4>
+                                            <div class="calc-demo">
+                                                1cm 5mm ➔ <b>15mm</b><br>
+                                                2m 30cm ➔ <b>230cm</b>
+                                            </div>
+                                            <div class='point-box'>10mm あつまると 1cm に なることを おぼえておこう！</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) かさの 書きかえ", 
+                                        content: `
+                                            <h4>水の 量（りょう）を なおそう</h4>
+                                            <div class="calc-demo">
+                                                1L ➔ <b>10dL</b><br>
+                                                1dL ➔ <b>100mL</b><br>
+                                                1L ➔ <b>1000mL</b>
+                                            </div>
+                                            <div class="calc-demo">
+                                                1L 2dL ➔ <b>12dL</b><br>
+                                                1dL 5mL ➔ <b>105mL</b>
+                                            </div>
+                                            <div class='point-box'>L（リットル）は とっても 大きな 単位なんだね。</div>
+                                        ` 
+                                    }
+                                ]
+                            },
+                            { 
+                                title: "5. 時間（じかん）の たんい", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) 秒（びょう）・分（ふん）・時間（じかん）・日（にち）", 
+                                        content: `
+                                            <h4>時間の 長さを しろう</h4>
+                                            <div class="calc-demo">
+                                                1分 ＝ <b>60秒</b><br>
+                                                1時間 ＝ <b>60分</b><br>
+                                                1日 ＝ <b>24時間</b>
+                                            </div>
+                                            <p>1から 60まで 数えると、 つぎの 単位に うつるよ。 これを <b>「60進法（ろくじゅっしんほう）」</b> と いいます。</p>
+                                            <p>1日は、 12時間ずつの 「午前」と 「午後」を あわせた 長さだね。</p>
+                                            <div class='point-box'>時計の 短い針（はり）が <b>ぐるっと 2まわり</b> すると ぴったり 1日だよ。</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) 午前（ごぜん）と 午後（ごご）", 
+                                        content: `
+                                            <h4>12時間（じゅうにじかん）ずつ</h4>
+                                            <p>24時間を 半分（はんぶん）ずつに わけて よびます。</p>
+                                            <ul class="pos-list">
+                                                <li><b>午前</b>：よる中の 0時から、 お昼の 12時まで</li>
+                                                <li><b>午後</b>：お昼の 12時から、 よる中の 12時（24時）まで</li>
+                                            </ul>
+                                            <h4>24時間（じかん）で いうと？</h4>
+                                            <p>午後の 時間は、 12を たして いうことが あります。</p>
+                                            <div class="unit-choice">
+                                                <div>☀️ 午後 1時 ➔ <b>13時</b> (12+1)</div>
+                                                <div>🌙 午後 8時 ➔ <b>20時</b> (12+8)</div>
+                                                <div>🕛 よるの 12時 ➔ <b>24時</b> (12+12)</div>
+                                            </div>
+                                            <div class='point-box'>お昼の 12時は <b>「正午（しょうご）」</b>。 よる中の 12時は <b>「0時」</b> や <b>「24時」</b> と よぶよ。</div>
+                                        ` 
+                                    }
+                                ]
+                            }
+                        ] 
+                    },
+                    { 
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", 
+                        units: [
+                            { 
+                                title: "1. 分（わ）けよう", 
+                                subUnits: [
+                                    { 
+                                        title: "(1) どうぶつを あつめて 観察（かんさつ）しよう", 
+                                        content: `
+                                            <h4>みんなで どうぶつを 書（か）こう</h4>
+                                            <p>周（まわ）りの 人（ひと）に どうぶつの 絵（え）を 書（か）いて もらいましょう。 <b>自分（じぶん）</b> でも 書（か）いて、 たくさん あつめます。</p>
+                                            <div class="data-demo">
+                                                <div class="animal-grid">
+                                                    🐘 🦒 🦅 🐳 🐕 🐈 🐧 🐜 🦋 🦈
+                                                </div>
+                                            </div>
+                                            <p>あつまった どうぶつたちを、 じっくり 見（み）てみましょう。 似（に）ている ところや、 ちがう ところは どこかな？</p>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(2) 分（わ）け方を かんがえてみよう！", 
+                                        content: `
+                                            <h4>どんな ルールなら 分（わ）けられる？</h4>
+                                            <p>「どういう 風（ふう）に 分（わ）けたら わかりやすいかな？」と、 <b>分（わ）け方の ルール</b> を 自分（じぶん）たちで かんがえてみましょう。</p>
+                                            
+                                            <div class="thinking-box">
+                                                <p>💡 <b>たとえば こんな ルールは どうかな？</b></p>
+                                                <ul>
+                                                    <li>住（す）んでいる 場所（ばしょ）で 分（わ）ける？ （海・空・陸 など）</li>
+                                                    <li>からだの 大きさで 分（わ）ける？ （大・中・小 など）</li>
+                                                    <li>足（あし）の 数（かず）で 分（わ）ける？</li>
+                                                    <li>食べ物（たべもの）で 分（わ）ける？</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <p>同（おな）じ どうぶつたちでも、 ルールを かえると 分（わ）け方も かわるよ。 <b>「自分（じぶん）だけの 分（わ）け方」</b> を みつけてみよう！</p>
+                                            <div class='point-box'>きみなら、 どんな <b>「わけかたの ルール」</b> を みつけるかな？ ほかに おもしろい わけかたが あったら おしえてね！</div>
+                                        ` 
+                                    },
+                                    { 
+                                        title: "(3) 大きさで 分（わ）けてみよう", 
+                                        content: `
+                                            <h4>サイズで 分（わ）ける</h4>
+                                            <p>こんどは、 「からだの 大きさ」で なかま分けを してみましょう。</p>
+                                            <div class="data-demo">
+                                                <div class="size-sort">
+                                                    <div class="size-group">
+                                                        <span class="label">大（だい）</span>
+                                                        <span class="items">🐘 🐳 🦒</span>
+                                                    </div>
+                                                    <div class="size-group">
+                                                        <span class="label">中（ちゅう）</span>
+                                                        <span class="items">🐕 🐈 🦅 🐧</span>
+                                                    </div>
+                                                    <div class="size-group">
+                                                        <span class="label">小（しょう）</span>
+                                                        <span class="items">🐜 🦋</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='point-box'>分（わ）け方は 一つじゃありません。 自分で 決（き）めた ルールで 整理（せいり）して みよう！</div>
+                                        ` 
+                                    }
+                                ]
+                            }
+                        ] 
+                    }
                 ]
             }
         }
