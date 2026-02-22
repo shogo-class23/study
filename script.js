@@ -857,12 +857,100 @@ const studyData = {
                         name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
                         units: [
                             {
-                                title: "1. 面積（めんせき）",
+                                title: "1. 変わり方（三角形の ならび）",
                                 subUnits: [
                                     {
-                                        title: "(1) 面積のいみ（1cm2）",
-                                        content: `<h4>広さを 数であらわそう</h4>
-                                        <p>1辺が 1cmの 正方形の 広さを <b>1cm<sup>2</sup></b> といいます。</p>
+                                        title: "(1) 三角形の数と 周りの長さ",
+                                        content: `<h4>ならべて 規則（きそく）をみつけよう</h4>
+                                        <p>1辺が 1cmの 正三角形を 横に ならべていきます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="240" height="60" viewBox="0 0 240 60">
+                                                <!-- 1 tri -->
+                                                <polygon points="10,50 25,15 40,50" fill="none" stroke="#333" stroke-width="1.5"/>
+                                                <text x="20" y="58" font-size="10">1こ</text>
+                                                <!-- 2 tri -->
+                                                <polygon points="60,50 75,15 90,50 75,15 60,50" fill="none" stroke="#333" stroke-width="1.5"/>
+                                                <polygon points="75,15 90,50 105,15" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="2"/>
+                                                <text x="75" y="58" font-size="10">2こ</text>
+                                                <!-- Arrow -->
+                                                <text x="120" y="35" font-size="15">➔</text>
+                                                <text x="140" y="35" font-size="12">規則性があるよ！</text>
+                                            </svg>
+                                        </div>
+                                        <table class="data-table">
+                                            <tr><th>三角形の数</th><td>1</td><td>2</td><td>3</td><td>4</td><td>...</td></tr>
+                                            <tr><th>周りの長さ</th><td>3</td><td>4</td><td>5</td><td>6</td><td>...</td></tr>
+                                        </table>
+                                        <div class="point-box">
+                                            <b>きまりの 式</b><br>
+                                            （三角形の数） ＋ 2 ＝ （周りの長さ）
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 割合（わりあい）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 何倍（なんばい）になったかな？",
+                                        content: `<h4>ちがいを 比べる 方法</h4>
+                                        <p>「もとの大きさ」を 1 としたとき、もう一方が どれくらいかを <b>割合</b> といいます。</p>
+                                        <div class="thinking-box">
+                                            <b>どっちが よく 値上がりした？</b><br>
+                                            ・トマト：100円 ➔ 200円（<b>2倍</b>）<br>
+                                            ・ミニトマト：50円 ➔ 150円（<b>3倍</b>）<br>
+                                            ➔ ミニトマトのほうが よく値上がりしたといえるね！
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) ゴムの のびかた",
+                                        content: `<h4>長さが ちがっても 比べられる</h4>
+                                        <div class="point-box">
+                                            ・ゴムA：50cm ➔ 150cm（150 ÷ 50 ＝ <b>3倍</b>）<br>
+                                            ・ゴムB：100cm ➔ 200cm（200 ÷ 100 ＝ <b>2倍</b>）
+                                        </div>
+                                        <p>差（ひき算）ではなく、<b>倍（わり算）</b> で考えると、どちらが よくのびるか 正しく比べられます。</p>`
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
+                        units: []
+                    },
+                    {
+                        name: "5 <ruby>平面図形<rt>へいめんずけい</rt></ruby>と<ruby>面積<rt>めんせき</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 平面図形と言葉",
+                                subUnits: [
+                                    {
+                                        title: "(1) たて・よこ・高さ",
+                                        content: `<h4>長さの なまえ</h4>
+                                        <p>図形や 立体の 長さを あらわすときに 使います。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="100" viewBox="0 0 120 100">
+                                                <rect x="20" y="30" width="70" height="50" fill="none" stroke="#333" stroke-width="2"/>
+                                                <text x="95" y="60" font-size="12" fill="#e74c3c">たて</text>
+                                                <text x="45" y="95" font-size="12" fill="#3498db">よこ</text>
+                                                <line x1="90" y1="30" x2="110" y2="10" stroke="#2ecc71" stroke-width="2"/>
+                                                <text x="100" y="30" font-size="12" fill="#2ecc71">高さ</text>
+                                            </svg>
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 正方形と 長方形の 面積",
+                                subUnits: [
+                                    {
+                                        title: "(1) 面積の 公式と 単位",
+                                        content: `<h4>面積（広さ）の もとめかた</h4>
+                                        <div class="point-box">
+                                            ・<b>長方形</b> ＝ たて × よこ<br>
+                                            ・<b>正方形</b> ＝ 一辺 × 一辺
+                                        </div>
                                         <div class="shape-demo">
                                             <svg width="120" height="80" viewBox="0 0 120 80">
                                                 <rect x="10" y="10" width="60" height="40" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
@@ -870,51 +958,33 @@ const studyData = {
                                                 <line x1="50" y1="10" x2="50" y2="50" stroke="#ccc"/>
                                                 <line x1="10" y1="30" x2="70" y2="30" stroke="#ccc"/>
                                                 <rect x="10" y="10" width="60" height="40" fill="none" stroke="#333" stroke-width="2"/>
-                                                <text x="75" y="35" font-size="12">たて 2cm</text>
-                                                <text x="25" y="65" font-size="12">よこ 3cm</text>
+                                                <text x="75" y="35" font-size="12">2cm</text>
+                                                <text x="35" y="65" font-size="12">3cm</text>
                                             </svg>
-                                            <p>1cm<sup>2</sup> が <b>6こ分</b> あるので 6cm<sup>2</sup> だね！</p>
+                                            <p>1cm<sup>2</sup> が 6こ分で <b>6cm<sup>2</sup></b> ！</p>
                                         </div>`
-                                    },
-                                    {
-                                        title: "(2) 長方形・正方形の 面積",
-                                        content: `<h4>面積の 公式</h4>
-                                        <div class="calc-demo">
-                                            ・長方形 ＝ <b>たて × よこ</b><br>
-                                            ・正方形 ＝ <b>一辺 × 一辺</b>
-                                        </div>
-                                        <p>※箱の場合は、<b>たて・よこ・高さ</b> の 3つを つかって 広さや かさを 考えます。</p>`
                                     }
                                 ]
                             },
                             {
-                                title: "2. 面積の 単位と 工夫",
+                                title: "3. 複雑な 形の 面積",
                                 subUnits: [
                                     {
-                                        title: "(1) 大きな 面積の 単位",
-                                        content: `<h4>a, ha, km2</h4>
-                                        <div class="point-box">
-                                            ・<b>a</b>（アール）：100m<sup>2</sup><br>
-                                            ・<b>ha</b>（ヘクタール）：10000m<sup>2</sup><br>
-                                            ・<b>km<sup>2</sup></b>：1km × 1km の 広さ
-                                        </div>`
-                                    },
-                                    {
-                                        title: "(2) 複雑な 形の 面積",
-                                        content: `<h4>図形を 分けて 計算しよう</h4>
+                                        title: "(1) 四角形に 分けて 計算しよう",
+                                        content: `<h4>分ける くふう</h4>
+                                        <p>L字型などは、補助線（ほじょせん）を ひいて 2つの 四角形に 分けて 計算します。</p>
                                         <div class="shape-demo">
                                             <svg width="100" height="80">
                                                 <path d="M10,10 H40 V40 H70 V70 H10 Z" fill="#eee" stroke="#333" stroke-width="2"/>
-                                                <line x1="40" y1="40" x2="40" y2="70" stroke="#e74c3c" stroke-dasharray="2"/>
+                                                <line x1="40" y1="40" x2="40" y2="70" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3"/>
                                             </svg>
-                                        </div>
-                                        <p>長方形に 分けて 足したり、全体から 引いたりして もとめよう！</p>`
+                                            <p>赤い線で 分けて 合計を だそう！</p>
+                                        </div>`
                                     }
                                 ]
                             }
                         ]
-                    },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
+                    }
                 ]
             },
             e5: { name: "小5", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
