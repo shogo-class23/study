@@ -301,7 +301,178 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
+                    {
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>長<rt>なが</rt></ruby>さ（km）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 1km（キロメートル）の 長さ",
+                                        content: `
+                                            <h4>1km ＝ 1000m</h4>
+                                            <p>100mを 10こ あつめた 長さです。</p>
+                                            <div class="point-box">
+                                                学校（がっこう）から 1kmの ところは どこかな？ 通学路（つうがくろ）などで 考えてみよう。<br>
+                                                運動場（うんどうじょう）の <b>200mトラックを 5しゅう</b> すると 1kmだよ！
+                                            </div>
+                                            <div class="shape-demo">
+                                                <svg width="240" height="60" viewBox="0 0 240 60">
+                                                    <rect x="10" y="25" width="220" height="10" fill="#eee" rx="5"/>
+                                                    <rect x="10" y="25" width="44" height="10" fill="#3498db" rx="5"/>
+                                                    <text x="15" y="20" font-size="10">100m</text>
+                                                    <line x1="10" y1="45" x2="230" y2="45" stroke="#333" stroke-width="2" marker-start="url(#arr)" marker-end="url(#arr)"/>
+                                                    <text x="100" y="55" font-size="12">1km (1000m)</text>
+                                                    <defs>
+                                                        <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+                                                        </marker>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>重<rt>おも</rt></ruby>さ（g, kg, t）",
+                                subUnits: [
+                                    {
+                                        title: "(1) グラム(g)と キログラム(kg)",
+                                        content: `
+                                            <h4>重さの 単位</h4>
+                                            <p>・1円玉 1この 重さが 約<b>1g</b> です。<br>・1000g ＝ <b>1kg</b> です。</p>
+                                            <div class="point-box">
+                                                <b>はかりの つかいかた</b><br>
+                                                ・めもりを 正面（しょうめん）から 見る。<br>
+                                                ・はじめに 針（はり）が 「0」に あっているか たしかめる。
+                                            </div>
+                                            <h4>「正味（しょうみ）」の 重さ</h4>
+                                            <p>「正味」とは、<b>中身（なかみ）だけ</b>の 重さのことです。</p>
+                                            <div class="point-box">
+                                                たとえば、クッキーの 缶（かん）づめなら、<b>クッキーだけの 重さ</b> が 「正味」だよ。<br>
+                                                中身を知りたいときは、全体の重さから 容器（かん）の重さを ひけばいいね！
+                                            </div>
+                                            <div class="calc-demo">
+                                                正味の重さ ＝ 全体の重さ － 容器の重さ
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) トン(t)",
+                                        content: `
+                                            <h4>大きな 重さを あらわす 単位</h4>
+                                            <p>トラックや ゾウの 重さなどには <b>t（トン）</b> をつかいます。</p>
+                                            <div class="point-box">
+                                                1t ＝ <b>1000kg</b>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>単位<rt>たんい</rt></ruby>の しくみ",
+                                subUnits: [
+                                    {
+                                        title: "(1) 接頭語（キロ・ミリ・センチ）",
+                                        content: `
+                                            <h4>単位の 前につく しるし</h4>
+                                            <p>「キロ」や「ミリ」には、決まった いみが あります。</p>
+                                            <table class="data-table">
+                                                <tr><th>しるし</th><th>なまえ</th><th>いみ</th></tr>
+                                                <tr><td><b>k</b></td><td>キロ</td><td><b>1000倍</b></td></tr>
+                                                <tr><td><b>m</b></td><td>ミリ</td><td><b>1/1000</b> (1000分の1)</td></tr>
+                                                <tr><td><b>c</b></td><td>センチ</td><td><b>1/100</b> (100分の1)</td></tr>
+                                            </table>
+                                            <div class="point-box">
+                                                <b>1000倍の なかまたち</b><br>
+                                                ・1<b>k</b>m ＝ 1000m<br>
+                                                ・1<b>k</b>g ＝ 1000g<br><br>
+                                                <b>1000分の1（あつまると1）の なかまたち</b><br>
+                                                ・1000<b>m</b>m ＝ 1m<br>
+                                                ・1000<b>m</b>L ＝ 1L
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. <ruby>時刻<rt>じこく</rt></ruby>と <ruby>時間<rt>じかん</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 1秒（びょう）",
+                                        content: `
+                                            <h4>短い 時間の 単位</h4>
+                                            <p>1分よりも 短い時間を <b>秒（びょう）</b> で あらわします。</p>
+                                            <div class="point-box">
+                                                1分 ＝ <b>60秒</b>
+                                            </div>
+                                            <div class="shape-demo">
+                                                <div class="simple-clock">
+                                                    <!-- Numbers -->
+                                                    <div class="num n12">12</div>
+                                                    <div class="num n1">1</div>
+                                                    <div class="num n2">2</div>
+                                                    <div class="num n3">3</div>
+                                                    <div class="num n4">4</div>
+                                                    <div class="num n5">5</div>
+                                                    <div class="num n6">6</div>
+                                                    <div class="num n7">7</div>
+                                                    <div class="num n8">8</div>
+                                                    <div class="num n9">9</div>
+                                                    <div class="num n10">10</div>
+                                                    <div class="num n11">11</div>
+                                                    
+                                                    <!-- Hands -->
+                                                    <div class="hand long" style="transform: translateX(-50%) rotate(30deg); background: #ccc;"></div>
+                                                    <div class="hand short" style="transform: translateX(-50%) rotate(0deg);"></div>
+                                                    <div class="hand" style="width:2px; height:65px; background: #e74c3c; transform: translateX(-50%) rotate(180deg); bottom: 50%; left: 50%; position: absolute; transform-origin: bottom center;"></div>
+                                                </div>
+                                                <p>いちばん はやく 動く 針（はり）が 秒針（びょうしん）だよ！</p>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 何時 何分 何秒",
+                                        content: `
+                                            <h4>時刻（じこく）の よみかた</h4>
+                                            <p>秒針の さしている めもりを よみます。</p>
+                                            <div class="point-box">
+                                                ストップウォッチで はかってみよう。<br>
+                                                1秒は 「ト・ン」 くらいの 短い 時間だね。
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) かかる 時間（数直線）",
+                                        content: `
+                                            <h4>数直線（すうちょくせん）で 考えよう</h4>
+                                            <p>「9時40分から 10時15分まで」は 何分間かな？</p>
+                                            <div class="shape-demo">
+                                                <svg width="240" height="80" viewBox="0 0 240 80">
+                                                    <line x1="20" y1="40" x2="220" y2="40" stroke="#333" stroke-width="2"/>
+                                                    <!-- Tick marks -->
+                                                    <line x1="20" y1="35" x2="20" y2="45" stroke="#333" stroke-width="2"/>
+                                                    <line x1="100" y1="35" x2="100" y2="45" stroke="#333" stroke-width="2"/>
+                                                    <line x1="200" y1="35" x2="200" y2="45" stroke="#333" stroke-width="2"/>
+                                                    <text x="5" y="60" font-size="10">9:40</text>
+                                                    <text x="85" y="60" font-size="10">10:00</text>
+                                                    <text x="185" y="60" font-size="10">10:15</text>
+                                                    
+                                                    <!-- Arcs -->
+                                                    <path d="M 20 30 Q 60 10 100 30" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                    <text x="50" y="20" font-size="10" fill="#e74c3c">20分</text>
+                                                    <path d="M 100 30 Q 150 10 200 30" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                    <text x="140" y="20" font-size="10" fill="#e74c3c">15分</text>
+                                                </svg>
+                                                <p>20分 ＋ 15分 ＝ <b>35分間</b> だね！</p>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
                 ]
             },
