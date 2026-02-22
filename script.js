@@ -850,6 +850,110 @@ const studyData = {
                                         </div>`
                                     }
                                 ]
+                            },
+                            {
+                                title: "5. 平面図形と 面積",
+                                subUnits: [
+                                    {
+                                        title: "(1) たて・よこ・高さ",
+                                        content: `<h4>長さの よびかた</h4>
+                                        <div class="shape-demo">
+                                            <div style="display:flex; gap:30px; align-items:flex-end; justify-content:center;">
+                                                <div style="text-align:center;">
+                                                    <svg width="100" height="80">
+                                                        <rect x="15" y="15" width="60" height="40" fill="none" stroke="#333" stroke-width="2"/>
+                                                        <line x1="10" y1="15" x2="10" y2="55" stroke="#e74c3c" stroke-width="2"/>
+                                                        <text x="0" y="40" font-size="10" fill="#e74c3c" style="writing-mode: tb;">たて</text>
+                                                        <line x1="15" y1="65" x2="75" y2="65" stroke="#3498db" stroke-width="2"/>
+                                                        <text x="35" y="78" font-size="10" fill="#3498db">よこ</text>
+                                                    </svg>
+                                                    <p style="font-size:10px; margin-top:5px;">平面（長方形）</p>
+                                                </div>
+                                                <div style="text-align:center;">
+                                                    <svg width="100" height="90">
+                                                        <!-- Box edges -->
+                                                        <path d="M15,40 L55,40 L75,25 L35,25 Z" fill="none" stroke="#333"/>
+                                                        <path d="M15,40 L15,70 L55,70 L55,40" fill="none" stroke="#333"/>
+                                                        <path d="M55,70 L75,55 L75,25" fill="none" stroke="#333"/>
+                                                        <!-- Labels -->
+                                                        <text x="25" y="82" font-size="10" fill="#3498db">よこ</text>
+                                                        <text x="65" y="70" font-size="10" fill="#e74c3c">たて</text>
+                                                        <text x="80" y="45" font-size="10" fill="#2ecc71">高さ</text>
+                                                        <!-- Arrows/Lines for labels -->
+                                                        <line x1="15" y1="75" x2="55" y2="75" stroke="#3498db" stroke-width="1"/>
+                                                        <line x1="58" y1="72" x2="78" y2="57" stroke="#e74c3c" stroke-width="1"/>
+                                                        <line x1="80" y1="25" x2="80" y2="55" stroke="#2ecc71" stroke-width="1"/>
+                                                    </svg>
+                                                    <p style="font-size:10px; margin-top:5px;">立体（箱）</p>
+                                                </div>
+                                            </div>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 正方形と 長方形の 面積",
+                                        content: `<h4>面積の 公式と 単位</h4>
+                                        <div class="point-box">
+                                            ・<b>長方形</b> ＝ たて × よこ<br>
+                                            ・<b>正方形</b> ＝ 一辺 × 一辺
+                                        </div>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="80" viewBox="0 0 120 80">
+                                                <rect x="10" y="10" width="60" height="40" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+                                                <line x1="30" y1="10" x2="30" y2="50" stroke="#ccc"/>
+                                                <line x1="50" y1="10" x2="50" y2="50" stroke="#ccc"/>
+                                                <line x1="10" y1="30" x2="70" y2="30" stroke="#ccc"/>
+                                                <rect x="10" y="10" width="60" height="40" fill="none" stroke="#333" stroke-width="2"/>
+                                                <text x="75" y="35" font-size="12">2cm</text>
+                                                <text x="35" y="65" font-size="12">3cm</text>
+                                            </svg>
+                                            <p>1cm<sup>2</sup> が 6こ分で <b>6cm<sup>2</sup></b> ！</p>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(3) 複雑な 形の 面積",
+                                        content: `<h4>面積を もとめる 3つのくふう</h4>
+                                        <div class="shape-demo">
+                                            <div style="display:flex; flex-direction:column; gap:25px; align-items:center;">
+                                                <div style="display:flex; gap:30px;">
+                                                    <div style="text-align:center;">
+                                                        <svg width="80" height="80">
+                                                            <path d="M10,10 H35 V35 H65 V65 H10 Z" fill="#eee" stroke="#333"/>
+                                                            <line x1="35" y1="35" x2="35" y2="65" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3"/>
+                                                        </svg>
+                                                        <p style="font-size:10px; color:#e74c3c;">①たてに 分ける</p>
+                                                    </div>
+                                                    <div style="text-align:center;">
+                                                        <svg width="80" height="80">
+                                                            <path d="M10,10 H35 V35 H65 V65 H10 Z" fill="#eee" stroke="#333"/>
+                                                            <line x1="10" y1="35" x2="35" y2="35" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3"/>
+                                                        </svg>
+                                                        <p style="font-size:10px; color:#e74c3c;">②よこに 分ける</p>
+                                                    </div>
+                                                </div>
+                                                <div style="text-align:center;">
+                                                    <svg width="220" height="80" viewBox="0 0 220 80">
+                                                        <!-- Complete Large Rectangle -->
+                                                        <rect x="5" y="15" width="55" height="55" fill="#eee" stroke="#333" stroke-width="1"/>
+                                                        <rect x="30" y="15" width="30" height="25" fill="none" stroke="#e74c3c" stroke-dasharray="2"/>
+                                                        
+                                                        <text x="65" y="45" font-size="16" fill="#333">➔</text>
+                                                        
+                                                        <!-- Large Rect - Small Rect -->
+                                                        <rect x="90" y="15" width="55" height="55" fill="#eee" stroke="#333" stroke-width="1.5"/>
+                                                        <text x="150" y="45" font-size="16" fill="#e74c3c">－</text>
+                                                        <rect x="175" y="15" width="30" height="25" fill="#fff" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="2"/>
+                                                        <text x="185" y="33" font-size="12" fill="#e74c3c">×</text>
+                                                    </svg>
+                                                    <p style="font-size:10px; color:#e74c3c;">③全体から ひく（大きな四角 － 小さな四角）</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="point-box">
+                                            どの方法を使っても、答えは 同じになるよ！<br>
+                                            自分が 計算しやすい 方法を えらぼう。
+                                        </div>`
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -927,7 +1031,7 @@ const studyData = {
                                         <p>たとえば「けがをした場所」と「しゅるい」のように、2つの 観点（かんてん）を 組み合わせて 表にします。</p>
                                         <div class="point-box">
                                             <b>数え間違いを なくすコツ</b><br>
-                                            ・落ち（わすれ）や 重なり（だぶり）がないように、数えたものに <b>印や 色</b> をつけましょう。<br>
+                                            ・落ち（わわすれ）や 重なり（だぶり）がないように、数えたものに <b>印や 色</b> をつけましょう。<br>
                                             ・横の 合計と 縦の 合計が、全体の数と 同じになるか たしかめよう。
                                         </div>`
                                     }
@@ -968,72 +1072,6 @@ const studyData = {
                                             <b>考えてみよう</b><br>
                                             「図書室で 怖い話が 人気なのは なぜ？」<br>
                                             データから 結論（けろん）を 出すときは、男女の ちがいや 時期など、いろいろな 理由を 考えてみることが 大切だよ。
-                                        </div>`
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        name: "5 <ruby>平面図形<rt>へいめんずけい</rt></ruby>と<ruby>面積<rt>めんせき</rt></ruby>",
-                        units: [
-                            {
-                                title: "1. 平面図形と言葉",
-                                subUnits: [
-                                    {
-                                        title: "(1) たて・よこ・高さ",
-                                        content: `<h4>長さの なまえ</h4>
-                                        <p>図形や 立体の 長さを あらわすときに 使います。</p>
-                                        <div class="shape-demo">
-                                            <svg width="120" height="100" viewBox="0 0 120 100">
-                                                <rect x="20" y="30" width="70" height="50" fill="none" stroke="#333" stroke-width="2"/>
-                                                <text x="95" y="60" font-size="12" fill="#e74c3c">たて</text>
-                                                <text x="45" y="95" font-size="12" fill="#3498db">よこ</text>
-                                                <line x1="90" y1="30" x2="110" y2="10" stroke="#2ecc71" stroke-width="2"/>
-                                                <text x="100" y="30" font-size="12" fill="#2ecc71">高さ</text>
-                                            </svg>
-                                        </div>`
-                                    }
-                                ]
-                            },
-                            {
-                                title: "2. 正方形と 長方形の 面積",
-                                subUnits: [
-                                    {
-                                        title: "(1) 面積の 公式と 単位",
-                                        content: `<h4>面積（広さ）の もとめかた</h4>
-                                        <div class="point-box">
-                                            ・<b>長方形</b> ＝ たて × よこ<br>
-                                            ・<b>正方形</b> ＝ 一辺 × 一辺
-                                        </div>
-                                        <div class="shape-demo">
-                                            <svg width="120" height="80" viewBox="0 0 120 80">
-                                                <rect x="10" y="10" width="60" height="40" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
-                                                <line x1="30" y1="10" x2="30" y2="50" stroke="#ccc"/>
-                                                <line x1="50" y1="10" x2="50" y2="50" stroke="#ccc"/>
-                                                <line x1="10" y1="30" x2="70" y2="30" stroke="#ccc"/>
-                                                <rect x="10" y="10" width="60" height="40" fill="none" stroke="#333" stroke-width="2"/>
-                                                <text x="75" y="35" font-size="12">2cm</text>
-                                                <text x="35" y="65" font-size="12">3cm</text>
-                                            </svg>
-                                            <p>1cm<sup>2</sup> が 6こ分で <b>6cm<sup>2</sup></b> ！</p>
-                                        </div>`
-                                    }
-                                ]
-                            },
-                            {
-                                title: "3. 複雑な 形の 面積",
-                                subUnits: [
-                                    {
-                                        title: "(1) 四角形に 分けて 計算しよう",
-                                        content: `<h4>分ける くふう</h4>
-                                        <p>L字型などは、補助線（ほじょせん）を ひいて 2つの 四角形に 分けて 計算します。</p>
-                                        <div class="shape-demo">
-                                            <svg width="100" height="80">
-                                                <path d="M10,10 H40 V40 H70 V70 H10 Z" fill="#eee" stroke="#333" stroke-width="2"/>
-                                                <line x1="40" y1="40" x2="40" y2="70" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3"/>
-                                            </svg>
-                                            <p>赤い線で 分けて 合計を だそう！</p>
                                         </div>`
                                     }
                                 ]
