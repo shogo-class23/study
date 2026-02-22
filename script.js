@@ -917,7 +917,62 @@ const studyData = {
                     },
                     {
                         name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
-                        units: []
+                        units: [
+                            {
+                                title: "1. 二つの かんてんで 整理する",
+                                subUnits: [
+                                    {
+                                        title: "(1) 二次元（にじげん）の 表",
+                                        content: `<h4>組み合わせて 分類しよう</h4>
+                                        <p>たとえば「けがをした場所」と「しゅるい」のように、2つの 観点（かんてん）を 組み合わせて 表にします。</p>
+                                        <div class="point-box">
+                                            <b>数え間違いを なくすコツ</b><br>
+                                            ・落ち（わすれ）や 重なり（だぶり）がないように、数えたものに <b>印や 色</b> をつけましょう。<br>
+                                            ・横の 合計と 縦の 合計が、全体の数と 同じになるか たしかめよう。
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 折（お）れ線（せん）グラフ",
+                                subUnits: [
+                                    {
+                                        title: "(1) 変化の ようすが わかる",
+                                        content: `<h4>折れ線グラフの 特徴</h4>
+                                        <p>気温の変化のように、時間が たつにつれて <b>どのように 変わったか</b> を 見るのに 適しています。</p>
+                                        <div class="shape-demo">
+                                            <svg width="240" height="150" viewBox="0 0 240 150">
+                                                <!-- Grid lines -->
+                                                <line x1="40" y1="120" x2="200" y2="120" stroke="#333" stroke-width="2"/>
+                                                <line x1="40" y1="120" x2="40" y2="20" stroke="#333" stroke-width="2"/>
+                                                <!-- Line graph -->
+                                                <polyline points="60,100 90,70 120,40 150,50 180,30" fill="none" stroke="#e74c3c" stroke-width="2" marker-start="url(#dot)" marker-mid="url(#dot)" marker-end="url(#dot)"/>
+                                                <defs>
+                                                    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+                                                        <circle cx="5" cy="5" r="5" fill="#e74c3c" />
+                                                    </marker>
+                                                </defs>
+                                                <text x="60" y="135" font-size="10">4月</text>
+                                                <text x="180" y="135" font-size="10">8月</text>
+                                            </svg>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) グラフを えらぼう",
+                                        content: `<h4>棒グラフと 折れ線グラフの 使い分け</h4>
+                                        <ul>
+                                            <li><b>棒グラフ</b>：大きさの ちがいを くらべるとき。（例：好きな本）</li>
+                                            <li><b>折れ線グラフ</b>：変わり方の ようすを みるとき。（例：身長ののび）</li>
+                                        </ul>
+                                        <div class="thinking-box">
+                                            <b>考えてみよう</b><br>
+                                            「図書室で 怖い話が 人気なのは なぜ？」<br>
+                                            データから 結論（けろん）を 出すときは、男女の ちがいや 時期など、いろいろな 理由を 考えてみることが 大切だよ。
+                                        </div>`
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "5 <ruby>平面図形<rt>へいめんずけい</rt></ruby>と<ruby>面積<rt>めんせき</rt></ruby>",
