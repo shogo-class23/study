@@ -576,7 +576,7 @@ const studyData = {
                                 ]
                             }
                         ]
-                    },
+                    }
                 ]
             },
             e4: {
@@ -644,7 +644,7 @@ const studyData = {
                             {
                                 title: "9. 分数（ぶんすう）",
                                 subUnits: [
-                                    { title: "(1) 真分数・仮分数・帯分数", content: "<h4>分数の なかま</h4><ul><li><b>真分数</b>：分子が 小さい</li><li><b>仮分数</b>：分子が 大きい</li><li><b>帯分数</b>：整数がついている</li></ul>" },
+                                    { title: "(1) 真分数・仮分数・帯分数", content: "<h4>分数の ななかま</h4><ul><li><b>真分数</b>：分子が 小さい</li><li><b>仮分数</b>：分子が 大きい</li><li><b>帯分数</b>：整数がついている</li></ul>" },
                                     { title: "(2) 大きさの 等しい 分数", content: "<h4>同じ 大きさ</h4><p>1/2 ＝ 2/4 ＝ 4/8</p>" }
                                 ]
                             },
@@ -681,8 +681,239 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
+                    {
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 垂直（すいちょく）と 平行（へいこう）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 直角と 垂直",
+                                        content: `<h4>直角に 交わる</h4><p>2本の 直線が 交わってできる 角が 直角のとき、その2つの 直線は <b>垂直</b> であるといいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                                <line x1="10" y1="50" x2="90" y2="50" stroke="#333" stroke-width="2"/>
+                                                <line x1="50" y1="10" x2="50" y2="90" stroke="#333" stroke-width="2"/>
+                                                <!-- Right angle mark -->
+                                                <polyline points="50,40 60,40 60,50" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                                            </svg>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 平行な 直線",
+                                        content: `<h4>どこまでいっても 交わらない</h4><p>1本の 直線に 垂直な 2本の 直線は <b>平行</b> であるといいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="100" viewBox="0 0 120 100">
+                                                <line x1="10" y1="30" x2="110" y2="30" stroke="#3498db" stroke-width="3"/>
+                                                <line x1="10" y1="70" x2="110" y2="70" stroke="#3498db" stroke-width="3"/>
+                                                <!-- Parallel marks (arrows) -->
+                                                <path d="M 55 25 L 65 30 L 55 35" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                <path d="M 55 65 L 65 70 L 55 75" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                <text x="40" y="55" font-size="10" fill="#999">はばが同じ</text>
+                                            </svg>
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 四角形（しかくけい）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 台形（だいけい）",
+                                        content: `<h4>1組の 辺が 平行</h4><p>向かい合った <b>一組（ひとくみ）の 辺が 平行</b> な 四角形を 台形といいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="80" viewBox="0 0 120 80">
+                                                <polygon points="30,20 90,20 110,60 10,60" fill="none" stroke="#3498db" stroke-width="2"/>
+                                                <!-- Parallel marks -->
+                                                <path d="M 55 15 L 65 20 L 55 25" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                <path d="M 55 55 L 65 60 L 55 65" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                            </svg>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 平行四辺形（へいこうしへんけい）",
+                                        content: `<h4>2組の 辺が 平行</h4><p>向かい合った <b>二組（ふたくみ）の 辺が 平行</b> な 四角形を 平行四辺形といいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="80" viewBox="0 0 120 80">
+                                                <polygon points="40,20 110,20 80,60 10,60" fill="none" stroke="#2ecc71" stroke-width="2"/>
+                                                <!-- Parallel marks (set 1) -->
+                                                <path d="M 70 15 L 80 20 L 70 25" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                <path d="M 40 55 L 50 60 L 40 65" fill="none" stroke="#e74c3c" stroke-width="2"/>
+                                                <!-- Parallel marks (set 2 - double arrow) -->
+                                                <path d="M 20 35 L 30 40 L 20 45 M 25 35 L 35 40 L 25 45" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                                                <path d="M 90 35 L 100 40 L 90 45 M 95 35 L 105 40 L 95 45" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                                            </svg>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(3) ひし形",
+                                        content: `<h4>4つの 辺が 等しい</h4><p><b>四つの 辺の 長さが すべて 等しい</b> 四角形を ひし形といいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="100" viewBox="0 0 120 100">
+                                                <polygon points="60,10 100,50 60,90 20,50" fill="none" stroke="#9b59b6" stroke-width="2"/>
+                                                <!-- Diagonal lines -->
+                                                <line x1="60" y1="10" x2="60" y2="90" stroke="#ccc" stroke-width="1" stroke-dasharray="2"/>
+                                                <line x1="20" y1="50" x2="100" y2="50" stroke="#ccc" stroke-width="1" stroke-dasharray="2"/>
+                                                <!-- Right angle at center -->
+                                                <polyline points="60,40 70,40 70,50" fill="none" stroke="#e74c3c" stroke-width="1"/>
+                                            </svg>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(4) 台形の しきつめと 合体",
+                                        content: `<h4>図形を あわせる</h4>
+                                        <div class="shape-demo">
+                                            <svg width="200" height="80" viewBox="0 0 200 80">
+                                                <!-- Two trapezoids making a parallelogram -->
+                                                <polygon points="10,50 40,20 80,20 100,50" fill="#3498db" opacity="0.5" stroke="#333"/>
+                                                <polygon points="100,50 120,80 160,80 190,50" fill="#3498db" opacity="0.3" stroke="#333" stroke-dasharray="2" transform="rotate(180 145 50) translate(0 -30)"/>
+                                                <text x="45" y="75" font-size="12">台形を2つあわせると...</text>
+                                            </svg>
+                                            <p>同じ 台形を 2つ 逆向きに あわせると、<br><b>平行四辺形</b> になるよ！</p>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(5) 角（かく）の 大きさの 発見",
+                                        content: `<h4>直角（90度）を 基準にしよう</h4>
+                                        <div class="shape-demo">
+                                            <svg width="240" height="120" viewBox="0 0 240 120">
+                                                <!-- 90 deg -->
+                                                <path d="M 30 40 L 60 40 L 60 10" fill="none" stroke="#333" stroke-width="2"/>
+                                                <rect x="50" y="30" width="10" height="10" fill="none" stroke="#e74c3c"/>
+                                                <text x="35" y="55" font-size="10">90度</text>
+                                                <!-- 180 deg -->
+                                                <line x1="80" y1="40" x2="140" y2="40" stroke="#333" stroke-width="2"/>
+                                                <path d="M 120 40 A 10 10 0 0 0 100 40" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                                                <text x="95" y="55" font-size="10">180度</text>
+                                                <!-- 360 deg -->
+                                                <line x1="170" y1="40" x2="200" y2="40" stroke="#333" stroke-width="2"/>
+                                                <circle cx="185" cy="40" r="10" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+                                                <text x="175" y="65" font-size="10">360度</text>
+                                            </svg>
+                                            <p>90度 ➔ 180度 ➔ 270度 ➔ 360度 と、<br>直角が ふえるごとに 角が 大きくなるね。</p>
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 立体（りったい）「箱のかたち」",
+                                subUnits: [
+                                    {
+                                        title: "(1) 直方体と 立方体",
+                                        content: `<h4>箱の 形</h4>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="100" viewBox="0 0 120 100">
+                                                <path d="M20,40 L70,40 L90,20 L40,20 Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                                                <path d="M20,40 L20,80 L70,80 L70,40" fill="none" stroke="#333" stroke-width="1.5"/>
+                                                <path d="M70,80 L90,60 L90,20" fill="none" stroke="#333" stroke-width="1.5"/>
+                                                <!-- Hidden lines -->
+                                                <path d="M20,80 L40,60 L90,60 M40,60 L40,20" fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="2"/>
+                                            </svg>
+                                            <p>直方体の 見取り図（みとりず）</p>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 展開図（てんかいず）",
+                                        content: `<h4>切り開いた 図</h4>
+                                        <div class="shape-demo">
+                                            <svg width="150" height="120" viewBox="0 0 150 120">
+                                                <!-- Standard T-shape net for a cube -->
+                                                <rect x="50" y="10" width="25" height="25" fill="none" stroke="#333"/>
+                                                <rect x="50" y="35" width="25" height="25" fill="none" stroke="#333"/>
+                                                <rect x="50" y="60" width="25" height="25" fill="none" stroke="#333"/>
+                                                <rect x="50" y="85" width="25" height="25" fill="none" stroke="#333"/>
+                                                <rect x="25" y="35" width="25" height="25" fill="none" stroke="#333"/>
+                                                <rect x="75" y="35" width="25" height="25" fill="none" stroke="#333"/>
+                                            </svg>
+                                            <p>立方体の 展開図のれい</p>
+                                        </div>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. 三角形の まとめ",
+                                subUnits: [
+                                    {
+                                        title: "(1) 二等辺三角形と 正三角形",
+                                        content: `<h4>三角形の しゅるい</h4>
+                                        <div class="shape-demo">
+                                            <div style="display:flex; gap:30px; align-items:flex-end;">
+                                                <div style="text-align:center;">
+                                                    <svg width="60" height="80"><polygon points="30,10 5,70 55,70" fill="none" stroke="#e74c3c" stroke-width="2"/></svg>
+                                                    <p style="font-size:10px;">二等辺三角形</p>
+                                                </div>
+                                                <div style="text-align:center;">
+                                                    <svg width="60" height="60"><polygon points="30,5 5,55 55,55" fill="none" stroke="#2ecc71" stroke-width="2"/></svg>
+                                                    <p style="font-size:10px;">正三角形</p>
+                                                </div>
+                                            </div>
+                                        </div>`
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 面積（めんせき）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 面積のいみ（1cm2）",
+                                        content: `<h4>広さを 数であらわそう</h4>
+                                        <p>1辺が 1cmの 正方形の 広さを <b>1cm<sup>2</sup></b> といいます。</p>
+                                        <div class="shape-demo">
+                                            <svg width="120" height="80" viewBox="0 0 120 80">
+                                                <rect x="10" y="10" width="60" height="40" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+                                                <line x1="30" y1="10" x2="30" y2="50" stroke="#ccc"/>
+                                                <line x1="50" y1="10" x2="50" y2="50" stroke="#ccc"/>
+                                                <line x1="10" y1="30" x2="70" y2="30" stroke="#ccc"/>
+                                                <rect x="10" y="10" width="60" height="40" fill="none" stroke="#333" stroke-width="2"/>
+                                                <text x="75" y="35" font-size="12">たて 2cm</text>
+                                                <text x="25" y="65" font-size="12">よこ 3cm</text>
+                                            </svg>
+                                            <p>1cm<sup>2</sup> が <b>6こ分</b> あるので 6cm<sup>2</sup> だね！</p>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 長方形・正方形の 面積",
+                                        content: `<h4>面積の 公式</h4>
+                                        <div class="calc-demo">
+                                            ・長方形 ＝ <b>たて × よこ</b><br>
+                                            ・正方形 ＝ <b>一辺 × 一辺</b>
+                                        </div>
+                                        <p>※箱の場合は、<b>たて・よこ・高さ</b> の 3つを つかって 広さや かさを 考えます。</p>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 面積の 単位と 工夫",
+                                subUnits: [
+                                    {
+                                        title: "(1) 大きな 面積の 単位",
+                                        content: `<h4>a, ha, km2</h4>
+                                        <div class="point-box">
+                                            ・<b>a</b>（アール）：100m<sup>2</sup><br>
+                                            ・<b>ha</b>（ヘクタール）：10000m<sup>2</sup><br>
+                                            ・<b>km<sup>2</sup></b>：1km × 1km の 広さ
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 複雑な 形の 面積",
+                                        content: `<h4>図形を 分けて 計算しよう</h4>
+                                        <div class="shape-demo">
+                                            <svg width="100" height="80">
+                                                <path d="M10,10 H40 V40 H70 V70 H10 Z" fill="#eee" stroke="#333" stroke-width="2"/>
+                                                <line x1="40" y1="40" x2="40" y2="70" stroke="#e74c3c" stroke-dasharray="2"/>
+                                            </svg>
+                                        </div>
+                                        <p>長方形に 分けて 足したり、全体から 引いたりして もとめよう！</p>`
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
                 ]
             },
