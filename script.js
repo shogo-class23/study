@@ -344,8 +344,10 @@ const studyData = {
                                             <p>・1円玉 1この 重さが 約<b>1g</b> です。<br>・1000g ＝ <b>1kg</b> です。</p>
                                             <div class="point-box">
                                                 <b>はかりの つかいかた</b><br>
-                                                ・めもりを 正面（しょうめん）から 見る。<br>
-                                                ・はじめに 針（はり）が 「0」に あっているか たしかめる。
+                                                <ul>
+                                                    <li>はじめに 針（はり）が 「0」に あっているか たしかめる。</li>
+                                                    <li>めもりを <b>正面（しょうめん）</b> から 見る（ななめから見ると 正しくよめないよ）。</li>
+                                                </ul>
                                             </div>
                                             <h4>「正味（しょうみ）」の 重さ</h4>
                                             <p>「正味」とは、<b>中身（なかみ）だけ</b>の 重さのことです。</p>
@@ -359,7 +361,38 @@ const studyData = {
                                         `
                                     },
                                     {
-                                        title: "(2) トン(t)",
+                                        title: "(2) はかりの 目もり",
+                                        content: `
+                                            <h4>目もりの よみかた</h4>
+                                            <p>はかりを つかうときは、まず <b>1めもりが 何gか</b> を たしかめましょう。</p>
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li><b>秤量（ひょうりょう）</b>：その はかりで はかれる いちばん 大きな 重さ。</li>
+                                                    <li><b>最小目盛り（感量）</b>：いちばん 小さい 1めもりが あらわす 重さ。</li>
+                                                </ul>
+                                            </div>
+                                            <div class="shape-demo">
+                                                <svg width="150" height="100" viewBox="0 0 150 100">
+                                                    <!-- 目盛り板のイメージ -->
+                                                    <path d="M 20 80 A 60 60 0 0 1 130 80" fill="none" stroke="#333" stroke-width="2"/>
+                                                    <line x1="25" y1="75" x2="35" y2="70" stroke="#333" stroke-width="2"/>
+                                                    <text x="15" y="95" font-size="10">0g</text>
+                                                    <line x1="125" y1="75" x2="115" y2="70" stroke="#333" stroke-width="2"/>
+                                                    <text x="115" y="95" font-size="10">1kg</text>
+                                                    <!-- 針 -->
+                                                    <line x1="75" y1="80" x2="100" y2="40" stroke="#e74c3c" stroke-width="3" marker-end="url(#tip)"/>
+                                                    <defs>
+                                                        <marker id="tip" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+                                                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#e74c3c" />
+                                                        </marker>
+                                                    </defs>
+                                                </svg>
+                                                <p>このはかりは 1kgまで はかれて、<br>1めもりは 10gだね！</p>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) トン(t)",
                                         content: `
                                             <h4>大きな 重さを あらわす 単位</h4>
                                             <p>トラックや ゾウの 重さなどには <b>t（トン）</b> をつかいます。</p>
@@ -473,7 +506,77 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
+                    {
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 表（ひょう）に せいりする",
+                                subUnits: [
+                                    {
+                                        title: "(1) 分類（ぶんるい）の かんてん",
+                                        content: `
+                                            <h4>整理（せいり）の しかた</h4>
+                                            <p>資料（しりょう）を 分類するときは、つぎのような 観点（かんてん）で 分けましょう。</p>
+                                            <ul class="pos-list">
+                                                <li>・日時（いつ）</li>
+                                                <li>・場所（どこで）</li>
+                                                <li>・しゅるい</li>
+                                            </ul>
+                                            <div class="point-box">
+                                                <b>「正（せい）」の 字を つかおう</b><br>
+                                                ・数えもれや、かさなりが ないように、しるしを つけながら 数えます。<br>
+                                                ・さいごに、ぜんぶを たした <b>合計（ごうけい）</b> が、もとの資料の数と おなじか たしかめよう。
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 棒（ぼう）グラフ",
+                                subUnits: [
+                                    {
+                                        title: "(1) 棒グラフの 特徴（とくちょう）",
+                                        content: `
+                                            <h4>一目で 大きさが わかる</h4>
+                                            <p>数量（すうりょう）の 大きさや ちがいを くらべるとき、棒（ぼう）の ながさで あらわすと わかりやすくなります。</p>
+                                            <div class="shape-demo">
+                                                <svg width="240" height="150" viewBox="0 0 240 150">
+                                                    <!-- Axis -->
+                                                    <line x1="40" y1="120" x2="200" y2="120" stroke="#333" stroke-width="2"/>
+                                                    <line x1="40" y1="120" x2="40" y2="20" stroke="#333" stroke-width="2"/>
+                                                    <!-- Bars -->
+                                                    <rect x="60" y="40" width="20" height="80" fill="#3498db"/>
+                                                    <rect x="100" y="70" width="20" height="50" fill="#2ecc71"/>
+                                                    <rect x="140" y="30" width="20" height="90" fill="#e74c3c"/>
+                                                    <text x="60" y="135" font-size="10">リンゴ</text>
+                                                    <text x="100" y="135" font-size="10">バナナ</text>
+                                                    <text x="140" y="135" font-size="10">イチゴ</text>
+                                                    <text x="15" y="115" font-size="10">0</text>
+                                                    <text x="15" y="45" font-size="10">10</text>
+                                                </svg>
+                                                <p>いちばん 多いのが イチゴ、少ないのが バナナだと すぐに わかるね！</p>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 目（め）もりの 工夫（くふう）",
+                                        content: `
+                                            <h4>最小目盛り（さいしょうめもり）の きめかた</h4>
+                                            <p>あらわす 数によって、1めもりを 何に するか 選びます。</p>
+                                            <ul class="pos-list">
+                                                <li>・1めもり ＝ <b>1</b> (ちいさな 数)</li>
+                                                <li>・1めもり ＝ <b>2</b> や <b>5</b></li>
+                                                <li>・1めもり ＝ <b>10</b> や <b>100</b> (大きな 数)</li>
+                                            </ul>
+                                            <div class="point-box">
+                                                グラフを かくときは、表題（タイトル）や 単位（たんい）を かくのを わすれないように しよう！
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                 ]
             },
             e4: { name: "小4", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
