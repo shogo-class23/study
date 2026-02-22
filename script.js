@@ -132,7 +132,175 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [] },
+                    {
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>三角形<rt>さんかくけい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 二等辺三角形と 正三角形",
+                                        content: `
+                                            <h4>二等辺三角形（にとうへんさんかくけい）</h4>
+                                            <p>2つの 辺の 長さが 等しい 三角形です。</p>
+                                            <div class="shape-demo">
+                                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                                    <polygon points="50,10 20,90 80,90" fill="none" stroke="#3498db" stroke-width="3"/>
+                                                    <!-- 左辺のしるし (中心 35,50, 垂直になるよう約20度回転) -->
+                                                    <line x1="30" y1="50" x2="40" y2="50" stroke="#e74c3c" stroke-width="2" transform="rotate(20.5 35 50)"/>
+                                                    <!-- 右辺のしるし (中心 65,50, 垂直になるよう約-20度回転) -->
+                                                    <line x1="60" y1="50" x2="70" y2="50" stroke="#e74c3c" stroke-width="2" transform="rotate(-20.5 65 50)"/>
+                                                </svg>
+                                                <p>赤いしるしの 辺の長さが 同じだよ！</p>
+                                            </div>
+                                            <h4>正三角形（せいさんかくけい）</h4>
+                                            <p>3つの 辺の 長さが すべて 等しい 三角形です。</p>
+                                            <div class="shape-demo">
+                                                <svg width="100" height="100" viewBox="0 0 100 100">
+                                                    <polygon points="50,15 10,85 90,85" fill="none" stroke="#2ecc71" stroke-width="3"/>
+                                                    <!-- 左辺 (中心 30,50, 約30度回転) -->
+                                                    <line x1="25" y1="50" x2="35" y2="50" stroke="#e74c3c" stroke-width="2" transform="rotate(30 30 50)"/>
+                                                    <!-- 右辺 (中心 70,50, 約-30度回転) -->
+                                                    <line x1="65" y1="50" x2="75" y2="50" stroke="#e74c3c" stroke-width="2" transform="rotate(-30 70 50)"/>
+                                                    <!-- 底辺 (中心 50,85, 90度回転で垂直に) -->
+                                                    <line x1="45" y1="85" x2="55" y2="85" stroke="#e74c3c" stroke-width="2" transform="rotate(90 50 85)"/>
+                                                </svg>
+                                                <p>ぜんぶの 辺の長さが 同じだね！</p>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) コンパスとは",
+                                        content: `
+                                            <h4>コンパスの つかいかた</h4>
+                                            <p>コンパスは、<b>円を かいたり</b>、<b>長さを はかったり</b> するための どうぐです。</p>
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li>中心（ちゅうしん）を しっかり おさえる</li>
+                                                    <li>上の つまみを もって、くるっと まわす</li>
+                                                    <li>半径（はんけい）の 長さを かえないように 気をつける</li>
+                                                </ul>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) 三角形の 作図（さくず）",
+                                        content: `
+                                            <h4>コンパスを つかった かきかた</h4>
+                                            <h5>① 底辺（ていへん）を 利用する方法</h5>
+                                            <p>線分イウがあるとき、点イを中心としてコンパスで弧（こ）をかき、同じ半径で点ウから弧をかいて、交わった点アと結びます。</p>
+                                            <div class="shape-demo">
+                                                <svg width="200" height="120" viewBox="0 0 200 120">
+                                                    <line x1="50" y1="100" x2="150" y2="100" stroke="#333" stroke-width="2"/>
+                                                    <path d="M 120 20 A 80 80 0 0 0 40 80" fill="none" stroke="#3498db" stroke-dasharray="4"/>
+                                                    <path d="M 80 20 A 80 80 0 0 1 160 80" fill="none" stroke="#e74c3c" stroke-dasharray="4"/>
+                                                    <circle cx="100" cy="30.7" r="3" fill="#333"/>
+                                                    <text x="95" y="25" font-size="12">ア</text>
+                                                    <text x="40" y="115" font-size="12">イ</text>
+                                                    <text x="150" y="115" font-size="12">ウ</text>
+                                                </svg>
+                                            </div>
+                                            <h5>② 円を 利用する方法</h5>
+                                            <p>円の半径は どこでも 等しい という 性質をつかいます。円の 中心と 円のまわりの 2点を むすぶと 二等辺三角形になります。</p>
+                                            <div class="point-box">
+                                                二等辺三角形の 底辺も 他の2辺と 同じ長さにすると、<b>正三角形</b>に なるよ！
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(4) しきつめ模様（もよう）",
+                                        content: `
+                                            <h4>三角形を ならべてみよう</h4>
+                                            <p>同じ かたちの 三角形を すきまなく ならべると、きれいな もようが できるよ。</p>
+                                            <div class="shape-demo">
+                                                <svg width="200" height="100" viewBox="0 0 200 100">
+                                                    <polygon points="20,80 50,20 80,80" fill="#3498db" stroke="white" stroke-width="1"/>
+                                                    <polygon points="50,20 80,80 110,20" fill="#3498db" stroke="white" stroke-width="1"/>
+                                                    <polygon points="80,80 110,20 140,80" fill="#3498db" stroke="white" stroke-width="1"/>
+                                                    <polygon points="110,20 140,80 170,20" fill="#3498db" stroke="white" stroke-width="1"/>
+                                                </svg>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(5) 角（かく）の 大きさ",
+                                        content: `
+                                            <h4>かどを かさねてみよう</h4>
+                                            <p>二等辺三角形や 正三角形の 角を 切り取って かさねてみると、ぴったり 重なる 角があるよ。</p>
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li><b>二等辺三角形</b>：下の 2つの角が 同じ大きさ。</li>
+                                                    <li><b>正三角形</b>：3つの角が ぜんぶ 同じ大きさ。</li>
+                                                </ul>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>円<rt>えん</rt></ruby>と<ruby>球<rt>きゅう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 円の 中心・半径・直径",
+                                        content: `
+                                            <h4>円の 各部の なまえ</h4>
+                                            <p>円の まんなかの点を <b>中心（ちゅうしん）</b> といいます。</p>
+                                            <p>中心から 円のまわりまで ひいた 直線を <b>半径（はんけい）</b> といいます。</p>
+                                            <p>中心を とおって、円の まわりから まわりまで ひいた 直線を <b>直径（ちょっけい）</b> といいます。</p>
+                                            <div class="shape-demo">
+                                                <svg width="150" height="150" viewBox="0 0 150 150">
+                                                    <circle cx="75" cy="75" r="60" fill="none" stroke="#333" stroke-width="2"/>
+                                                    <circle cx="75" cy="75" r="3" fill="#e74c3c"/>
+                                                    <line x1="75" y1="75" x2="135" y2="75" stroke="#3498db" stroke-width="2"/>
+                                                    <line x1="15" y1="75" x2="135" y2="75" stroke="#2ecc71" stroke-width="2" stroke-dasharray="4"/>
+                                                    <text x="70" y="70" font-size="10" fill="#e74c3c">中心</text>
+                                                    <text x="90" y="90" font-size="10" fill="#3498db">半径</text>
+                                                    <text x="40" y="70" font-size="10" fill="#2ecc71">直径</text>
+                                                </svg>
+                                            </div>
+                                            <div class="point-box">
+                                                直径は、半径の <b>2倍</b> の 長さだよ！
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 球（きゅう）の せいしつ",
+                                        content: `
+                                            <h4>どこから 見ても 円に見える形</h4>
+                                            <p>ボールのような 形を <b>球（きゅう）</b> といいます。</p>
+                                            <p>球を まっすぐな 平面（へいめん）で 切ると、切り口は 必ず <b>円</b> になります。</p>
+                                            <div class="point-box">
+                                                球を ちょうど まんなかで 切ると、切り口の円が いちばん 大きくなります。
+                                            </div>
+                                            <h4>半球（はんきゅう）</h4>
+                                            <p>球を まんなかで 半分に 切った 形を <b>半球</b> といいます。</p>
+                                            <h4>ボールの 直径（ちょっけい）</h4>
+                                            <p>ボールの 直径を はかるには、2つの はこなどで はさんで、その あいだの 長さを はかります。</p>
+                                            <div class="shape-demo">
+                                                <svg width="200" height="100" viewBox="0 0 200 100">
+                                                    <!-- Box 1 -->
+                                                    <rect x="30" y="20" width="30" height="70" fill="#f1c40f" stroke="#333" stroke-width="2"/>
+                                                    <!-- Ball -->
+                                                    <circle cx="100" cy="55" r="35" fill="#3498db" opacity="0.8"/>
+                                                    <circle cx="100" cy="55" r="35" fill="none" stroke="#2980b9" stroke-width="2"/>
+                                                    <!-- Box 2 -->
+                                                    <rect x="140" y="20" width="30" height="70" fill="#f1c40f" stroke="#333" stroke-width="2"/>
+                                                    <!-- Dimension line -->
+                                                    <line x1="60" y1="90" x2="140" y2="90" stroke="#e74c3c" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+                                                    <text x="85" y="85" font-size="12" fill="#e74c3c">直径</text>
+                                                    <defs>
+                                                        <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#e74c3c" />
+                                                        </marker>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [] }
                 ]
