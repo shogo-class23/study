@@ -2232,9 +2232,135 @@ const studyData = {
                     }
                                                 ]
                                             },
-                                j1: { name: "中1",
+                                            j1: {
+                                                name: "<ruby>中<rt>ちゅう</rt></ruby>1",
+                                                categories: [
+                                                    {
+                                                        name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>",
+                                                        units: [
+                                                            {
+                                                                title: "1. <ruby>正<rt>せい</rt></ruby>の<ruby>数<rt>すう</rt></ruby>・<ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>小学生<rt>しょうがくせい</rt></ruby>の<ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>り",
+                                                                        content: "<h4>なぜ 3 － 5 はできなかったの？</h4><p><ruby>小学生<rt>しょうがくせい</rt></ruby>までは、<ruby>持<rt>も</rt></ruby>っているものよりたくさん<ruby>引<rt>ひ</rt></ruby>くことはできませんでした。でも、0より<ruby>小<rt>ちい</rt></ruby>さい<ruby>数<rt>かず</rt></ruby>（<ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>）を<ruby>使<rt>つか</rt></ruby>えば、すべての<ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>ができるようになります。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(2) <ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>正<rt>せい</rt></ruby>の<ruby>方向<rt>ほうこう</rt></ruby>へ<ruby>進<rt>すす</rt></ruby>む</h4><p>(－2) ＋ (＋5) ＝ 3</p><p><ruby>数直線<rt>すうちょくせん</rt></ruby>で、マイナスの<ruby>場所<rt>ばしょ</rt></ruby>からプラスの<ruby>方向<rt>ほうこう</rt></ruby>へ<ruby>動<rt>うご</rt></ruby>くイメージだよ。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(3) <ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4>「ひく」は「<ruby>逆<rt>ぎゃく</rt></ruby>をたす」</h4><p>(＋3) － (－5) ＝ 3 ＋ 5 ＝ 8</p><p>マイナスを<ruby>引<rt>ひ</rt></ruby>くことは、プラスを<ruby>足<rt>た</rt></ruby>すことと<ruby>同<rt>おな</rt></ruby>じになるんだね。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(4) <ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いたかけ<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>符号<rt>ふごう</rt></ruby>のルール</h4><p>(－3) × (＋4) ＝ －12</p><p>(－3) × (－4) ＝ ＋12</p><p>マイナスどうしをかけるとプラスになるよ！</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(5) <ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>割<rt>わ</rt></ruby>り<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4>かけ<ruby>算<rt>ざん</rt></ruby>と<ruby>同<rt>おな</rt></ruby>じ</h4><p>(－12) ÷ (＋3) ＝ －4</p><p>(－12) ÷ (－3) ＝ ＋4</p><p><ruby>符号<rt>ふごう</rt></ruby>の<ruby>決<rt>き</rt></ruby>め<ruby>方<rt>かた</rt></ruby>はかけ<ruby>算<rt>ざん</rt></ruby>と<ruby>同<rt>おな</rt></ruby>じだよ。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(6) <ruby>負<rt>ふ</rt></ruby>の<ruby>数<rt>すう</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>四則演算<rt>しそくえんざん</rt></ruby>とまとめ",
+                                                                        content: `
+                                                                            <h4><ruby>混乱<rt>こんらん</rt></ruby>しやすいポイント！</h4>
+                                                                            <div class="point-box">
+                                                                                <h5>1. <ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>・<ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>（<ruby>綱引<rt>つなひ</rt></ruby>きルール）</h5>
+                                                                                <p>「チーム・プラス」と「チーム・マイナス」の<b><ruby>強<rt>つよ</rt></ruby>さ（<ruby>絶対値<rt>ぜったいち</rt></ruby>）</b>で<ruby>決<rt>き</rt></ruby>まるよ！</p>
+                                                                                <ul>
+                                                                                    <li>(－5) ＋ (＋2) ➔ <b>－3</b> (マイナスチームの<ruby>勝<rt>か</rt></ruby>ち)</li>
+                                                                                    <li>(－3) ＋ (＋8) ➔ <b>＋5</b> (プラスチームの<ruby>勝<rt>か</rt></ruby>ち)</li>
+                                                                                </ul>
+                                                                            </div>
+
+                                                                            <div class="point-box">
+                                                                                <h5>2. かっこ( ) のはずし<ruby>方<rt>かた</rt></ruby>（コンビルール）</h5>
+                                                                                <p>かっこの<ruby>前<rt>まえ</rt></ruby>の＋や－と、<ruby>中<rt>なか</rt></ruby>の<ruby>符号<rt>ふごう</rt></ruby>をコンビで<ruby>見<rt>み</rt></ruby>よう！</p>
+                                                                                <ul>
+                                                                                    <li>＋( ＋5 ) ➔ <b>＋5</b> （<ruby>同<rt>おな</rt></ruby>じならプラス）</li>
+                                                                                    <li>－( －5 ) ➔ <b>＋5</b> （<ruby>同<rt>おな</rt></ruby>じならプラス）</li>
+                                                                                    <li>＋( －5 ) ➔ <b>－5</b> （ちがうならマイナス）</li>
+                                                                                    <li>－( ＋5 ) ➔ <b>－5</b> （ちがうならマイナス）</li>
+                                                                                </ul>
+                                                                                <p><b>－( －5 ) ＝ ＋5</b> は「マイナスを<ruby>引<rt>ひ</rt></ruby>く＝プラスを<ruby>足<rt>た</rt></ruby>す」ことなんだね！</p>
+                                                                            </div>
+
+                                                                            <div class="point-box">
+                                                                                <h5>3. かけ<ruby>算<rt>ざん</rt></ruby>・わり<ruby>算<rt>ざん</rt></ruby>（<ruby>符号<rt>ふごう</rt></ruby>ルール）</h5>
+                                                                                <p>こちらは<ruby>強<rt>つよ</rt></ruby>さは<ruby>関係<rt>かんけい</rt></ruby>なく、コンビの<ruby>種類<rt>しゅるい</rt></ruby>で<ruby>決<rt>き</rt></ruby>まるよ！</p>
+                                                                                <ul>
+                                                                                    <li>(＋) × (＋) ➔ <b>プラス</b></li>
+                                                                                    <li>(－) × (－) ➔ <b>プラス</b></li>
+                                                                                    <li>(＋) × (－) ➔ <b>マイナス</b></li>
+                                                                                </ul>
+                                                                            </div>
+
+                                                                            <div class="thinking-box">
+                                                                                <h5><ruby>計算<rt>けいさん</rt></ruby>の<ruby>優先順位<rt>ゆうせんじゅんい</rt></ruby>：</h5>
+                                                                                <ol>
+                                                                                    <li><b>かっこ( ) の<ruby>中<rt>なか</rt></ruby></b> を<ruby>一番最初<rt>いちばんさいしょ</rt></ruby>に！</li>
+                                                                                    <li><ruby>累乗<rt>るいじょう</rt></ruby> (2² など)</li>
+                                                                                    <li>かけ<ruby>算<rt>ざん</rt></ruby>・わり<ruby>算<rt>ざん</rt></ruby></li>
+                                                                                    <li><ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>・<ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby></li>
+                                                                                </ol>
+                                                                            </div>
+                                                                        `
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "2. <ruby>素数<rt>そすう</rt></ruby>",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>素数<rt>そすう</rt></ruby>とは",
+                                                                        content: "<h4><ruby>数<rt>かず</rt></ruby>の<ruby>基本<rt>きほん</rt></ruby></h4><p>1とその<ruby>数<rt>かず</rt></ruby><ruby>自身<rt>じしん</rt></ruby>でしかわりきれない、1より<ruby>大<rt>おお</rt></ruby>きい<ruby>自然数<rt>しぜんすう</rt></ruby>を<b><ruby>素数<rt>そすう</rt></ruby></b>といいます。 (2, 3, 5, 7, 11...)</p>"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "3. <ruby>文字<rt>もじ</rt></ruby>を<ruby>使<rt>つか</rt></ruby>った<ruby>式<rt>しき</rt></ruby>",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>文字<rt>もじ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>式<rt>しき</rt></ruby>の<ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>り",
+                                                                        content: "<h4><ruby>文字<rt>もじ</rt></ruby>のルールのまとめ</h4><p>・×はかくす。<br>・<ruby>数字<rt>すうじ</rt></ruby>は<ruby>前<rt>まえ</rt></ruby>。<br>・1ははぶく(1x ➔ x)。<br>・÷は<ruby>分数<rt>ぶんすう</rt></ruby>。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(2) <ruby>文字<rt>もじ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いたかけ<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>係数<rt>けいすう</rt></ruby>どうしをかける</h4><p>2x × 3 ＝ 6x</p><p>5a × (－2) ＝ －10a</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(3) <ruby>文字<rt>もじ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いたわり<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>分数<rt>ぶんすう</rt></ruby>の<ruby>形<rt>かたち</rt></ruby>へ</h4><p>6x ÷ 2 ＝ 3x</p><p>a ÷ 5 ＝ a/5</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(4) <ruby>文字<rt>もじ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>同類項<rt>どうるいこう</rt></ruby>をまとめる</h4><p>3x ＋ 2x ＝ 5x</p><p><ruby>文字<rt>もじ</rt></ruby>がちがうとき（x ＋ y）は、これ<ruby>以上<rt>いじょう</rt></ruby>まとめられないよ。</p>"
+                                                                    },
+                                                                    {
+                                                                        title: "(5) <ruby>文字<rt>もじ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いた<ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>",
+                                                                        content: "<h4><ruby>係数<rt>けいすう</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>く</h4><p>5a － 3a ＝ 2a</p><p>4x － x ＝ 3x (1がかくれているね！)</p>"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "4. <ruby>方程式<rt>ほうていしき</rt></ruby>",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) 1<ruby>元<rt>げん</rt></ruby>1<ruby>次方程式<rt>じほうていしき</rt></ruby>",
+                                                                        content: "<h4>x を<ruby>求<rt>もと</rt></ruby>めよう</h4><p>3x ＋ 5 ＝ 11<br>3x ＝ 6<br>x ＝ 2</p><p><ruby>移項<rt>いこう</rt></ruby>して、x ＝ □ の<ruby>形<rt>かたち</rt></ruby>にしよう！</p>"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    { name: "2 図形", units: [] },
+                                                    { name: "3 測定と関数", units: [] },
+                                                    { name: "4 データの活用", units: [] }
+                                                ]
+                                            },
+                                            j2: { name: "中2",
                                  categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
-            j2: { name: "中2", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
             j3: { name: "中3", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] }
         }
     },
