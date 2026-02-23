@@ -1820,9 +1820,420 @@ const studyData = {
                                         }
                                     ]
                                 },
-                                e6: { name: "小6",
-                     categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
-            j1: { name: "中1", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
+                                            e6: {
+                                                name: "小6",
+                                                categories: [
+                                                    {
+                                                        name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>",
+                                                        units: [
+                                                            {
+                                                                title: "1. <ruby>分数<rt>ぶんすう</rt></ruby>の かけ算",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>分数<rt>ぶんすう</rt></ruby> × <ruby>分数<rt>ぶんすう</rt></ruby>",
+                                                                        content: `
+                                                                            <h4>計算のしかた</h4>
+                                                                            <p>分数の かけ算は、<b>「分母（ぶんぼ）どうし」</b>、<b>「分子（ぶんし）どうし」</b>を それぞれ かけます。</p>
+                                                                            
+                                                                            <div class="calc-demo">
+                                                                                <b>分子 × 分子<br>────────<br>分母 × 分母</b>
+                                                                            </div>
+                                
+                                                                            <div class="point-box">
+                                                                                <b>計算のコツ：</b><br>
+                                                                                ・計算の とちゅうで <b>約分（やくぶん）</b> ができるときは、先にしておくと 計算が らくになるよ！
+                                                                            </div>
+                                                                        `
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "2. <ruby>分数<rt>ぶんすう</rt></ruby>の わり算",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>逆数<rt>ぎゃくすう</rt></ruby>を つかった 計算",
+                                                                        content: `
+                                                                            <h4>「さかさま」にして かける</h4>
+                                                                            <p>分数の わり算は、わる数の <b>逆数（ぎゃくすう）</b> を かけます。</p>
+                                                                            
+                                                                            <div class="calc-demo">
+                                                                                <b>（分数） ÷ （分数） ＝ （分数） × （逆数）</b>
+                                                                            </div>
+                                
+                                                                            <div class="point-box">
+                                                                                <b>逆数（ぎゃくすう）とは？</b><br>
+                                                                                ・分母と 分子を <b>いれかえた数</b> のことです。<br>
+                                                                                ・2/3 の 逆数は 3/2 です。
+                                                                            </div>
+                                                                        `
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "3. <ruby>分数<rt>ぶんすう</rt></ruby>の <ruby>計算<rt>けいさん</rt></ruby>の きまり",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) <ruby>性質<rt>せいしつ</rt></ruby>は <ruby>分数<rt>ぶんすう</rt></ruby>でも なりたつ",
+                                                                        content: `
+                                                                            <h4>整数のときと 同じルール</h4>
+                                                                            <p>これまで 学習してきた 計算の きまりは、分数でも そのまま 使えます。</p>
+                                                                            
+                                                                            <div class="point-box">
+                                                                                <ul>
+                                                                                    <li><b>交換法則：</b> a × b ＝ b × a</li>
+                                                                                    <li><b>結合法則：</b> (a × b) × c ＝ a × (b × c)</li>
+                                                                                    <li><b>分配法則：</b> (a ＋ b) × c ＝ a × c ＋ b × c</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <p>計算の じゅんばんを くふうして、計算ミスを なくそう！</p>
+                                                                        `
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "4. <ruby>文字<rt>もじ</rt></ruby>を つかった <ruby>式<rt>しき</rt></ruby>",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) x, y, z を つかおう",
+                                                                        content: `
+                                                                            <h4>□ や ○ から 卒業（そつぎょう）しよう</h4>
+                                                                            <p>わからない数や、いろいろな値が入る数を表すとき、これまでは □ や ○ を使ってきましたが、これからは <b>x（エックス）</b> や <b>y（ワイ）</b> などの文字を使います。</p>
+                                                                            
+                                                                            <div class="thinking-box">
+                                                                                <h5>例：100円のノートを x 冊買ったときの代金 y 円</h5>
+                                                                                <p style="font-size:24px; text-align:center;"><b>100 × x ＝ y</b></p>
+                                                                            </div>
+                                
+                                                                            <div class="point-box">
+                                                                                文字を使うと、たくさんの数量の関係を、短くスッキリ表すことができるんだね。
+                                                                            </div>
+                                                                        `
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>拡大図<rt>かくだいず</rt></ruby>と <ruby>縮図<rt>しゅくず</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>形<rt>かたち</rt></ruby>はそのまま、<ruby>大<rt>おお</rt></ruby>きさをかえる",
+                                        content: `
+                                            <h4>日常にある拡大・縮小</h4>
+                                            <p>コピー機、地図、設計図、顕微鏡（けんびきょう）、写真、映画など、私たちの周りでは拡大や縮小がいろいろなところで使われています。</p>
+                                            
+                                            <div class="point-box">
+                                                <b>拡大図・縮図の特徴：</b>
+                                                <ul>
+                                                    <li>対応する <b>角の大きさ</b> はすべて同じ。</li>
+                                                    <li>対応する <b>辺の長さの比</b> はすべて一定。</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="thinking-box">
+                                                <h5>地図の縮尺（しゅくしゃく）と木の問題</h5>
+                                                <p>・<b>地図：</b> 実際の距離を 1/25000 などに縮めて表したものが縮図です。</p>
+                                                <p>・<b>木の問題：</b> 木の高さを直接測れなくても、地面にできる影の長さや、縮図を使って計算で求めることができます。</p>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>対称<rt>たいしょう</rt></ruby>な <ruby>図形<rt>ずけい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>線対称<rt>せんたいしょう</rt></ruby>と <ruby>点対称<rt>てんたいしょう</rt></ruby>",
+                                        content: `
+                                            <h4>対応（たいおう）に着目しよう</h4>
+                                            <p>図形を折ったり回したりしたときに重なる点、辺、角を調べることが大切です。</p>
+                                            
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li><b>線対称（せんたいしょう）：</b> 1本の直線を軸に折ると、両側がぴったり重なる形。<br>➔ 二等辺三角形、正三角形など。</li>
+                                                    <li><b>点対称（てんたいしょう）：</b> 1つの点を中心に180度回すと、もとの形と重なる形。対応する点、辺、角がすべて同じになります。<br>➔ 平行四辺形、ひし形、長方形、正方形など。</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="thinking-box">
+                                                <h5>図形のなかま分け（対称性）</h5>
+                                                <table class="data-table">
+                                                    <tr><th>図形</th><th>線対称</th><th>点対称</th></tr>
+                                                    <tr><td>二等辺三角形</td><td>○</td><td>×</td></tr>
+                                                    <tr><td>平行四辺形</td><td>×</td><td>○</td></tr>
+                                                    <tr><td>ひし形</td><td>○</td><td>○</td></tr>
+                                                    <tr><td>正方形</td><td>○</td><td>○</td></tr>
+                                                </table>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>円<rt>えん</rt></ruby>の <ruby>面積<rt>めんせき</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>面積<rt>めんせき</rt></ruby>の <ruby>公式<rt>こうしき</rt></ruby>",
+                                        content: `
+                                            <h4>なぜこの公式になるの？</h4>
+                                            <p>円をケーキのように細かく切って並びかえると、<b>長方形（ちょうほうけい）</b>に近い形になります。</p>
+                                            
+                                            <div class="thinking-box">
+                                                <h5>長方形として考えてみよう：</h5>
+                                                <ul>
+                                                    <li><b>たての長さ：</b> 円の <b>半径</b> と同じ。</li>
+                                                    <li><b>よこの長さ：</b> <b>円周の半分</b> と同じ。<br>➔ (直径 × 3.14) ÷ 2 ＝ <b>半径 × 3.14</b></li>
+                                                </ul>
+                                                <p style="margin-top:10px; border-top:1px dashed #ccc; padding-top:10px;">
+                                                    長方形の面積 ＝ たて × よこ<br>
+                                                    <b>円の面積 ＝ 半径 × (半径 × 3.14)</b>
+                                                </p>
+                                            </div>
+
+                                            <div class="calc-demo">
+                                                <b>（円の面積） ＝ 半径 × 半径 × 3.14</b>
+                                            </div>
+
+                                            <div class="shape-demo">
+                                                <svg width="240" height="120" viewBox="0 0 240 120">
+                                                    <!-- Circle cut -->
+                                                    <circle cx="50" cy="60" r="40" fill="none" stroke="#333" stroke-dasharray="2"/>
+                                                    <path d="M 50 60 L 90 60 A 40 40 0 0 0 84.6 31.7 Z" fill="#3498db" opacity="0.5"/>
+                                                    <path d="M 50 60 L 84.6 31.7 A 40 40 0 0 0 50 20 Z" fill="#2ecc71" opacity="0.5"/>
+                                                    
+                                                    <text x="100" y="65" font-size="20">➔</text>
+                                                    
+                                                    <!-- Rearranged shape -->
+                                                    <g transform="translate(130,40)">
+                                                        <rect x="0" y="0" width="80" height="40" fill="none" stroke="#333" stroke-dasharray="4"/>
+                                                        <path d="M 0 40 L 10 0 L 20 40 L 30 0 L 40 40 L 50 0 L 60 40 L 70 0 L 80 40" fill="none" stroke="#3498db" stroke-width="2"/>
+                                                        <text x="-35" y="25" font-size="10" fill="#e74c3c">半径</text>
+                                                        <text x="10" y="55" font-size="10" fill="#3498db">円周の半分</text>
+                                                    </g>
+                                                </svg>
+                                                <p>細かく切るほど、きれいな長方形になっていくんだね！</p>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. <ruby>角柱<rt>かくちゅう</rt></ruby>と <ruby>円柱<rt>えんちゅう</rt></ruby>の <ruby>体積<rt>たいせき</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>体積<rt>たいせき</rt></ruby>の <ruby>公式<rt>こうしき</rt></ruby>",
+                                        content: `
+                                            <h4>底面積（ていめんせき）に着目</h4>
+                                            <p>どんな形の柱でも、「底面の広さ」が「高さの分だけ積み重なっている」と考えます。</p>
+                                            
+                                            <div class="calc-demo">
+                                                <b>（体積） ＝ 底面積 × 高さ</b>
+                                            </div>
+
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li><b>角柱：</b> 底面が多角形の柱。</li>
+                                                    <li><b>円柱：</b> 底面が円の柱。➔ （半径×半径×3.14）× 高さ</li>
+                                                </ul>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                                                    {
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>比<rt>ひ</rt></ruby>とその<ruby>利用<rt>りよう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>比<rt>ひ</rt></ruby>の<ruby>表<rt>あらわ</rt></ruby>し方と <ruby>等<rt>ひと</rt></ruby>しい比",
+                                        content: `
+                                            <h4>「：」を使って大きさを比べる</h4>
+                                            <p>2つの数量の割合を、<b>「a ： b」</b> の形で表したものを <b>比（ひ）</b> といいます。</p>
+                                            
+                                            <div class="point-box">
+                                                <b>比の性質：</b><br>
+                                                比のどちらの数にも <b>同じ数をかけたり、同じ数でわったり</b> しても、比の大きさは変わりません。
+                                                <ul style="margin-top:10px;">
+                                                    <li>3 ： 4 ＝ (3×2) ： (4×2) ＝ <b>6 ： 8</b></li>
+                                                    <li>12 ： 18 ＝ (12÷6) ： (18÷6) ＝ <b>2 ： 3</b></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="calc-demo">
+                                                <b>比をかんたんにしよう：</b><br>
+                                                できるだけ小さな整数の比に直すことを「比をかんたんにする」といいます。
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>比例<rt>ひれい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>比例<rt>ひれい</rt></ruby>の<ruby>性質<rt>せいしつ</rt></ruby>",
+                                        content: `
+                                            <h4>決まった数を見つけよう</h4>
+                                            <p>x が 2倍, 3倍... になると、y も 2倍, 3倍... になるとき、<b>y は x に比例する</b> といいます。</p>
+                                            
+                                            <div class="calc-demo">
+                                                <b>y ＝ 決まった数 × x</b>
+                                            </div>
+
+                                            <div class="thinking-box">
+                                                <h5>比例の関係にありそうなもの：</h5>
+                                                <ul>
+                                                    <li><b>買い物：</b> 個数 と 代金（1つの値段が決まっているとき）</li>
+                                                    <li><b>道のり：</b> 時間 と 道のり（速さが一定のとき）</li>
+                                                    <li><b>積み重ね：</b> 段数 と 全体の高さ</li>
+                                                    <li><b>お風呂：</b> 水を入れる時間 と 水の深さ</li>
+                                                </ul>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>反比例<rt>はんぴれい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>反比例<rt>はんぴれい</rt></ruby>の<ruby>性質<rt>せいしつ</rt></ruby>",
+                                        content: `
+                                            <h4>一方が増えると、もう一方は減る？</h4>
+                                            <p>x が 2倍, 3倍... になると、y が <b>1/2倍, 1/3倍...</b> になるとき、<b>y は x に反比例する</b> といいます。</p>
+                                            
+                                            <div class="calc-demo">
+                                                <b>x × y ＝ 決まった数</b><br>
+                                                （または y ＝ 決まった数 ÷ x）
+                                            </div>
+
+                                            <div class="thinking-box">
+                                                <h5>反比例の具体例：</h5>
+                                                <p>・<b>長方形：</b> 面積が決まっているときの、<b>たて</b> と <b>よこ</b> の長さ。</p>
+                                                <p>・<b>速さ：</b> 道のりが決まっているときの、<b>速さ</b> と <b>時間</b>。</p>
+                                            </div>
+
+                                            <table class="data-table">
+                                                <tr><th>x (速さ)</th><td>2</td><td>4</td><td>8</td></tr>
+                                                <tr><th>y (時間)</th><td>12</td><td>6</td><td>3</td></tr>
+                                            </table>
+                                            <p>x が 2倍になると、y は 半分（1/2）になっているね！</p>
+                                        `
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                                                    {
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>代表値<rt>だいひょうち</rt></ruby>とデータの<ruby>特徴<rt>とくちょう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>中央値<rt>ちゅうおうち</rt></ruby>・<ruby>最頻値<rt>さいひんち</rt></ruby>",
+                                        content: `
+                                            <h4>データの真ん中や、一番多いのは？</h4>
+                                            <p>データ全体の特徴を一つの数で表したものを <b>代表値（だいひょうち）</b> といいます。</p>
+                                            
+                                            <div class="point-box">
+                                                <ul>
+                                                    <li><b>平均値（へいきんち）：</b> 全部をたして、数でわったもの。</li>
+                                                    <li><b>中央値（メジアン）：</b> 大きさ順に並べたとき、真ん中にくる値。</li>
+                                                    <li><b>最頻値（モード）：</b> データの中で一番多く出てくる値。</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="thinking-box">
+                                                <h5>代表値の使い分けに注意！</h5>
+                                                <p>一つの数（代表値）にまとめると比較しやすくなりますが、<b>「分布の形」などの大切な情報が消えてしまう</b> という弱点もあります。</p>
+                                                <p>特に <b>平均値</b> は、極端に大きすぎる（または小さすぎる）数字が一つあるだけで、データが集中しているところからズレてしまうことがあるんだね。</p>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>度数分布表<rt>どすうぶんぷひょう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) データのちらばりを整理する",
+                                        content: `
+                                            <h4>「区切り」ごとに数える</h4>
+                                            <p>データをある区間（階級）ごとに整理した表を <b>度数分布表（どすうぶんぷひょう）</b> といいます。</p>
+                                            
+                                            <table class="data-table">
+                                                <tr><th>記録（秒）</th><th>人数（人）</th></tr>
+                                                <tr><td>8.0 〜 8.5</td><td>2</td></tr>
+                                                <tr><td>8.5 〜 9.0</td><td>5</td></tr>
+                                                <tr><td>9.0 〜 9.5</td><td>3</td></tr>
+                                            </table>
+                                            <p>表にすることで、どこにデータが集中しているか一目でわかるようになるよ。</p>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>場合<rt>ばあい</rt></ruby>の<ruby>数<rt>かず</rt></ruby>と <ruby>確率<rt>かくりつ</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>落<rt>お</rt></ruby>ちなく、重ならず数える",
+                                        content: `
+                                            <h4>樹形図（じゅけいず）とトーナメント</h4>
+                                            <p>全部で何通りのことが起こりうるかを調べるときは、図をかくと正確に数えられます。</p>
+                                            
+                                            <div class="thinking-box">
+                                                <h5>① 樹形図（じゅけいず）：</h5>
+                                                <p>枝分かれするようにかいていく図。コインを2回投げたときなど。</p>
+                                                <pre style="font-family:monospace; background:#fff; padding:10px;">
+表 ─┬─ 表
+   └─ 裏
+裏 ─┬─ 表
+   └─ 裏</pre>
+                                                <p>➔ 全部で <b>4通り</b> だね！</p>
+                                            </div>
+
+                                                                                         <div class="thinking-box">
+                                                                                             <h5>② トーナメント表：</h5>
+                                                                                             <p>試合の組み合わせなどを表す図。4チームで優勝を決めるには何試合必要かな？</p>
+                                                                                             <div style="text-align:center;">
+                                                                                                 <svg width="120" height="80" viewBox="0 0 120 80">
+                                                                                                     <path d="M20,60 V40 H100 V60 M60,40 V20" fill="none" stroke="#333" stroke-width="2"/>
+                                                                                                     <path d="M20,60 V50 M40,60 V50 M80,60 V50 M100,60 V50" fill="none" stroke="#333" stroke-width="1"/>
+                                                                                                     <text x="55" y="15" font-size="10">優勝</text>
+                                                                                                 </svg>
+                                                                                             </div>
+                                                                                         </div>
+                                            
+                                                                                         <div class="thinking-box">
+                                                                                             <h5>③ 総当たり（リーグ戦）：</h5>
+                                                                                             <p>すべてのチームと1回ずつ試合をする方法です。重なりがないように「表」で考えると分かりやすいよ！</p>
+                                                                                             <table class="data-table" style="font-size:14px; width:auto; margin:10px auto;">
+                                                                                                 <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+                                                                                                 <tr><th>A</th><td style="background:#eee;">-</td><td>○</td><td>○</td></tr>
+                                                                                                 <tr><th>B</th><td style="background:#eee;">-</td><td style="background:#eee;">-</td><td>○</td></tr>
+                                                                                                 <tr><th>C</th><td style="background:#eee;">-</td><td style="background:#eee;">-</td><td style="background:#eee;">-</td></tr>
+                                                                                             </table>
+                                                                                             <p>➔ A-B, A-C, B-C の <b>3通り</b> だね。自分どうしや、同じ組み合わせを2回数えないように気をつけよう。</p>
+                                                                                         </div>
+                                                                                     `
+                                            
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                                                ]
+                                            },
+                                j1: { name: "中1",
+                                 categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
             j2: { name: "中2", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] },
             j3: { name: "中3", categories: [{ name: "1 数と式", units: [] }, { name: "2 図形", units: [] }, { name: "3 測定と関数", units: [] }, { name: "4 データの活用", units: [] }] }
         }
