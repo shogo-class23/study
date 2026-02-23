@@ -1288,7 +1288,46 @@ const studyData = {
                                 subUnits: [
                                     {
                                         title: "(1) 多角形・正多角形の性質",
-                                        content: "<h4>図形の 規則性</h4><p>辺の長さや角の大きさに着目して、多角形や正多角形の性質を詳しく調べます。</p>"
+                                        content: `
+                                            <h4>多角形（たかくけい）とは？</h4>
+                                            <p>多角形とは、<b>三つ以上の直線で囲まれた図形</b>である。例えば、6本の直線で囲まれた図形を、<b>六角形</b>という。</p>
+                                            
+                                            <h4>図形の性質（せいしつ）</h4>
+                                            <p>ある図形について、いつでも成り立つような事柄がある。そうしたものを<b>図形の性質</b>という。</p>
+                                            
+                                            <div class="point-box">
+                                                <b>三角形の性質</b><br>
+                                                どんな三角形でも、三つの角の大きさを加えると <b>180度</b> になる。これは、三角形のもつ性質である。
+                                            </div>
+                                            
+                                            <div class="thinking-box">
+                                                <h4>四角形や五角形の性質を調べよう</h4>
+                                                <p>四角形については、どんな四角形でも、四つの角の大きさを加えると <b>360度</b> になる。これは、四角形を対角線で分けると、<b>三角形が2つ</b>できることから説明できるよ。</p>
+                                                <div class="shape-demo">
+                                                    <svg width="120" height="80" viewBox="0 0 120 80">
+                                                        <polygon points="10,60 40,10 110,20 90,70" fill="#eee" stroke="#333" stroke-width="2"/>
+                                                        <line x1="10" y1="60" x2="110" y2="20" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4"/>
+                                                        <text x="25" y="35" font-size="10" fill="#e74c3c">180°</text>
+                                                        <text x="70" y="55" font-size="10" fill="#e74c3c">180°</text>
+                                                    </svg>
+                                                    <p>180度 × 2 ＝ 360度</p>
+                                                </div>
+                                                
+                                                <p>さらに、五角形についても、三角形のこの性質を用いると、<b>五つの角の大きさを加えると 540度</b> になることが分かる。</p>
+                                                <div class="shape-demo">
+                                                    <svg width="120" height="100" viewBox="0 0 120 100">
+                                                        <polygon points="60,10 110,40 90,90 30,90 10,40" fill="#eee" stroke="#333" stroke-width="2"/>
+                                                        <line x1="60" y1="10" x2="90" y2="90" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3"/>
+                                                        <line x1="60" y1="10" x2="30" y2="90" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3"/>
+                                                        <text x="35" y="60" font-size="9" fill="#e74c3c">180°</text>
+                                                        <text x="60" y="70" font-size="9" fill="#e74c3c">180°</text>
+                                                        <text x="85" y="60" font-size="9" fill="#e74c3c">180°</text>
+                                                    </svg>
+                                                    <p>180度 × 3 ＝ 540度</p>
+                                                </div>
+                                            </div>
+                                            <p>このように、三角形の「180度」という性質を使うと、いろいろな多角形の角の大きさを計算することができるんだね。</p>
+                                        `
                                     }
                                 ]
                             },
@@ -1307,8 +1346,9 @@ const studyData = {
                                                 ➔ 円周は、<b>直径の 3倍より長く、4倍より短い</b> ことがわかります。
                                             </div>
                                             <div class="point-box">
-                                                <b>円周率 ＝ 3.14</b><br>
-                                                実際に測定して帰納的に考えることにより、どんな大きさの円についても、円周の長さの直径に対する割合が一定であることを理解します。この割合を <b>円周率</b> といい、計算には 3.14 を用います。
+                                                <b>円周率 ≒ 約 3.14</b><br>
+                                                円周率は、<b>3.14159... と どこまでも続く わりきれない数</b> です。
+                                                どんな大きさの円についても、円周の長さの直径に対する割合が一定であることを理解します。この割合を <b>円周率</b> といい、小学校の計算では <b>3.14</b> を使います。
                                             </div>
                                         `
                                     }
@@ -1331,6 +1371,165 @@ const studyData = {
                                         `
                                     }
                                 ]
+                            },
+                            {
+                                title: "5. <ruby>平面図形<rt>へいめんずけい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "1 <ruby>新<rt>あたら</rt></ruby>しい<ruby>図形<rt>ずけい</rt></ruby>の<ruby>面積<rt>めんせき</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>える",
+                                        content: `
+                                            <h4>どの 長さを つかえばいいかな？</h4>
+                                            <p>面積を求めるとき、図面にはたくさんの数値が書かれていることがありますが、公式に使う「底辺」や「高さ」を正しく選ぶ力が必要です。</p>
+                                            
+                                            <div class="challenge-box">
+                                                <h5>チャレンジ：必要な数値を選ぼう！</h5>
+                                                <p>下の平行四辺形の面積を出すために必要な<b>「底辺」</b>と<b>「高さ」</b>を2つ選んでね。</p>
+                                                <div class="quiz-diagram" id="quiz-1">
+                                                    <svg width="240" height="150" viewBox="0 0 240 150">
+                                                        <polygon points="60,30 200,30 180,110 40,110" fill="none" stroke="#333" stroke-width="2"/>
+                                                        <line x1="35" y1="35" x2="15" y2="105" stroke="#ccc" stroke-dasharray="2"/>
+                                                        <line x1="60" y1="30" x2="60" y2="110" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4"/>
+                                                        <rect x="60" y="100" width="10" height="10" fill="none" stroke="#e74c3c"/>
+                                                    </svg>
+                                                    <div class="meas-num" style="top:20px; left:120px;" data-type="base">14cm</div>
+                                                    <div class="meas-num" style="top:70px; left:20px;" data-type="slant">9cm</div>
+                                                    <div class="meas-num" style="top:70px; left:65px;" data-type="height">8cm</div>
+                                                    <div class="meas-num" style="bottom:20px; left:100px;" data-type="base">14cm</div>
+                                                </div>
+                                                <div id="quiz-result" style="font-weight:bold; height:24px; color:var(--japanese-color); text-align:center;"></div>
+                                            </div>
+
+                                            <div class="point-box">
+                                                <h4>面積を求める3つの手法</h4>
+                                                <ol>
+                                                    <li><b>① 等積変形（形を変える）</b>： 図形の一部を切り取って移動させ、長方形などの面積が求めやすい形に作り変える。</li>
+                                                    <li><b>② 倍・半分（面積の比較）</b>：
+                                                        <ul>
+                                                            <li>三角形：平行四辺形の半分として捉える。</li>
+                                                            <li>ひし形：周囲を囲む長方形の半分として捉える。</li>
+                                                            <li>台形：同じものを2つくっつけて平行四辺形にすると、底辺が「上底＋底辺」になる。</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><b>③ 分割（分ける）</b>： 台形を対角線で切り、2つの三角形に分けてそれぞれの面積を合計する。</li>
+                                                </ol>
+                                            </div>
+
+                                            <div class="calc-demo">
+                                                <h4><ruby>平面図形<rt>へいめんずけい</rt></ruby>の<ruby>公式<rt>こうしき</rt></ruby>まとめ</h4>
+                                                <ul style="list-style:none; text-align:left; font-size:20px; display:inline-block;">
+                                                    <li>🔷 <ruby>平行四辺形<rt>へいこうしへんけい</rt></ruby> ＝ <ruby>底辺<rt>ていへん</rt></ruby> × <ruby>高<rt>たか</rt></ruby>さ</li>
+                                                    <li>🔺 <ruby>三角形<rt>さんかくけい</rt></ruby> ＝ <ruby>底辺<rt>ていへん</rt></ruby> × <ruby>高<rt>たか</rt></ruby>さ ÷ 2</li>
+                                                    <li>🔶 <ruby>台形<rt>だいけい</rt></ruby> ＝ (<ruby>上底<rt>じょうてい</rt></ruby> ＋ <ruby>下底<rt>かてい</rt></ruby>) × <ruby>高<rt>たか</rt></ruby>さ ÷ 2</li>
+                                                    <li>💎 <ruby>ひし形<rt>がた</rt></ruby> ＝ <ruby>対角線<rt>たいかくせん</rt></ruby> × <ruby>対角線<rt>たいかくせん</rt></ruby> ÷ 2</li>
+                                                </ul>
+                                            </div>
+
+                                            <h5>① 等積変形（形を変える）のデモ</h5>
+                                            <div class="interactive-container">
+                                                <div class="anim-box" id="anim-transform">
+                                                    <svg width="300" height="200" viewBox="0 0 300 200">
+                                                        <polygon points="100,50 220,50 220,150 100,150" fill="#3498db" opacity="0.6"/>
+                                                        <polygon id="moving-tri" points="100,50 60,150 100,150" fill="#3498db" opacity="0.8">
+                                                            <animate id="to-rect" attributeName="points" dur="1s" fill="freeze" begin="indefinite" from="100,50 60,150 100,150" to="220,50 260,150 220,150" />
+                                                            <animate id="to-para" attributeName="points" dur="1s" fill="freeze" begin="indefinite" from="220,50 260,150 220,150" to="100,50 60,150 100,150" />
+                                                        </polygon>
+                                                    </svg>
+                                                </div>
+                                                <button class="action-btn" onclick="document.getElementById('to-rect').beginElement()">形を変える（長方形へ）</button>
+                                                <button class="action-btn" onclick="document.getElementById('to-para').beginElement()">元に戻す</button>
+                                            </div>
+                                        `
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. <ruby>立体図形<rt>りったいずけい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "1 <ruby>体積<rt>たいせき</rt></ruby>の<ruby>求<rt>もと</rt></ruby>め<ruby>方<rt>かた</rt></ruby>を<ruby>公式<rt>こうしき</rt></ruby>にしよう",
+                                        content: `
+                                            <h4>単位体積（1cm³）の積み重ね</h4>
+                                            <p>1辺が1cmの立方体の個数を数えることで、体積を求めます。</p>
+                                            
+                                            <div class="point-box">
+                                                <b>考えるプロセス：</b>
+                                                <ol>
+                                                    <li>1段にいくつ並んでいるかな？（縦 × 横）</li>
+                                                    <li>それが何段あるかな？（高さ）</li>
+                                                </ol>
+                                                <p>バラバラに数えるより、<b>かけ算（乗法）</b>を使うと手際よく求められるね！</p>
+                                            </div>
+
+                                            <div class="box-demo-container">
+                                                <svg width="240" height="180" viewBox="0 0 240 180">
+                                                    <!-- Layered cubes representation -->
+                                                    <g transform="translate(40,40)">
+                                                        <!-- Bottom Layer -->
+                                                        <rect x="0" y="80" width="40" height="40" fill="#fff" stroke="#3498db" stroke-width="1"/>
+                                                        <rect x="40" y="80" width="40" height="40" fill="#fff" stroke="#3498db" stroke-width="1"/>
+                                                        <rect x="0" y="40" width="40" height="40" fill="#fff" stroke="#3498db" stroke-width="1"/>
+                                                        <rect x="40" y="40" width="40" height="40" fill="#fff" stroke="#3498db" stroke-width="1"/>
+                                                        
+                                                        <!-- Top Layer -->
+                                                        <rect x="10" y="70" width="40" height="40" fill="#3498db" opacity="0.3" stroke="#3498db"/>
+                                                        <rect x="50" y="70" width="40" height="40" fill="#3498db" opacity="0.3" stroke="#3498db"/>
+                                                        <rect x="10" y="30" width="40" height="40" fill="#3498db" opacity="0.3" stroke="#3498db"/>
+                                                        <rect x="50" y="30" width="40" height="40" fill="#3498db" opacity="0.3" stroke="#3498db"/>
+                                                        
+                                                        <!-- Labels -->
+                                                        <text x="20" y="135" font-size="12" fill="#333">横に 2こ</text>
+                                                        <text x="100" y="100" font-size="12" fill="#333" style="writing-mode: vertical-rl;">縦に 2こ</text>
+                                                        <text x="-30" y="60" font-size="12" fill="#e74c3c">高さ 2だん</text>
+                                                    </g>
+                                                </svg>
+                                            </div>
+
+                                            <div class="calc-demo">
+                                                <b>（直方体の体積） ＝ （縦） × （横） × （高さ）</b>
+                                            </div>
+                                            <p>この公式を使うと、どんなに大きな箱でも簡単に体積が計算できるよ。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "2 <ruby>単位<rt>たんい</rt></ruby>の<ruby>関係<rt>かんけい</rt></ruby>をまとめよう",
+                                        content: `
+                                            <h4>長さ・面積・体積のくらべっこ</h4>
+                                            <p>これまで学習した単位を整理して、つながり（統合）を理解しましょう。</p>
+
+                                            <table class="data-table">
+                                                <tr>
+                                                    <th>図形</th>
+                                                    <th>単位</th>
+                                                    <th>意味（1単位）</th>
+                                                    <th>次元</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>長さ</b></td>
+                                                    <td>cm</td>
+                                                    <td>1cm の 線</td>
+                                                    <td>1次元</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>面積</b></td>
+                                                    <td>cm²</td>
+                                                    <td>1辺1cm の 正方形</td>
+                                                    <td>2次元<br>(縦×横)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>体積</b></td>
+                                                    <td>cm³</td>
+                                                    <td>1辺1cm の 立方体</td>
+                                                    <td>3次元<br>(縦×横×高)</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="thinking-box">
+                                                <b>量のかんかくを養おう</b>
+                                                <p>長さは「線」、面積は「広さ」、体積は「かさ（大きさ）」を表しているんだね。単位につく右上の数字（2や3）は、いくつ長さをかけたかを表していると考えると分かりやすいよ！</p>
+                                            </div>
+                                        `
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -1338,53 +1537,158 @@ const studyData = {
                         name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
                         units: [
                             {
-                                title: "1. 平面図形の 面積",
+                                title: "1. <ruby>平面図形<rt>へいめんずけい</rt></ruby>の 面積",
                                 subUnits: [
                                     {
-                                        title: "(1) 公式の 理解を 深める",
+                                        title: "(1) 必要な情報を 選び出す",
                                         content: `
-                                            <h4>必要な 長さを 選び出す</h4>
-                                            <p>求積のために どの部分の長さを測る必要があるかを考えることで、公式の理解を深め、活用できるようにします。</p>
-                                            <div class="thinking-box">
-                                                <b>数学的な 見方・考え方（3つの考え）</b><br>
-                                                ① <b>等積変形</b>： 図形の一部を移動して、長方形など 計算可能な図形に変える（平行四辺形 ➔ 長方形）。<br>
-                                                ② <b>半分の面積</b>： 既習の図形の 半分であるとみる（三角形 ➔ 平行四辺形の半分、ひし形 ➔ 長方形の半分）。<br>
-                                                ③ <b>分割</b>： 既習の図形に 分ける（台形 ➔ 二つの三角形）。
+                                            <h4>どの 長さを つかえばいいかな？</h4>
+                                            <p>面積を求めるとき、図面にはたくさんの数値が書かれていることがありますが、公式に使う「底辺」や「高さ」を正しく選ぶ力が必要です。</p>
+                                            
+                                            <div class="challenge-box">
+                                                <h5>チャレンジ：必要な数値を選ぼう！</h5>
+                                                <p>下の平行四辺形の面積を出すために必要な<b>「底辺」</b>と<b>「高さ」</b>を2つ選んでね。</p>
+                                                <div class="quiz-diagram" id="quiz-1">
+                                                    <svg width="240" height="150" viewBox="0 0 240 150">
+                                                        <polygon points="60,30 200,30 180,110 40,110" fill="none" stroke="#333" stroke-width="2"/>
+                                                        <!-- Slant side measurement line -->
+                                                        <line x1="35" y1="35" x2="15" y2="105" stroke="#ccc" stroke-dasharray="2"/>
+                                                        <!-- Height line -->
+                                                        <line x1="60" y1="30" x2="60" y2="110" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4"/>
+                                                        <rect x="60" y="100" width="10" height="10" fill="none" stroke="#e74c3c"/>
+                                                    </svg>
+                                                    <div class="meas-num" style="top:20px; left:120px;" data-type="base">14cm</div>
+                                                    <div class="meas-num" style="top:70px; left:20px;" data-type="slant">9cm</div>
+                                                    <div class="meas-num" style="top:70px; left:65px;" data-type="height">8cm</div>
+                                                    <div class="meas-num" style="bottom:20px; left:100px;" data-type="base">14cm</div>
+                                                </div>
+                                                <div id="quiz-result" style="font-weight:bold; height:24px; color:var(--japanese-color); text-align:center;"></div>
                                             </div>
                                         `
                                     },
                                     {
-                                        title: "(2) 台形の 面積の 多角的な 説明",
+                                        title: "(2) 面積を もとめる 3つの手法",
                                         content: `
-                                            <h4>いろいろな 考えかた</h4>
-                                            <p>台形の面積は、次のような多様な考え方で説明できます：</p>
+                                            <h4>数学的な 見方・考え方</h4>
+                                            <p>新しい図形の面積を考えるときは、以下の3つの手法を使いこなそう！</p>
+                                            
                                             <div class="point-box">
-                                                <ul>
-                                                    <li><b>対角線で 三角形二つに 分割</b>： それぞれの面積を求めて計算する。</li>
-                                                    <li><b>二つ 組み合わせて 平行四辺形</b>： 合同な台形をもう一つ持ってくると、底辺が <b>（上底）＋（下底）</b> の平行四辺形になる。</li>
-                                                    <li><b>一部を 移動</b>： 台形の一部を移動（等積変形）して、既習の図形にする。</li>
-                                                </ul>
+                                                <ol>
+                                                    <li><b>① 等積変形（形を変える）</b>： 図形の一部を切り取って移動させ、長方形などの面積が求めやすい形に作り変える。</li>
+                                                    <li><b>② 倍・半分（面積の比較）</b>： 2つ組み合わせて平行四辺形にしたり（倍）、周囲を囲む図形の半分として捉える（半分）。</li>
+                                                    <li><b>③ 分割（分ける）</b>： 図形を対角線などで切り、既習の図形（三角形など）に分けてそれぞれの合計を出す。</li>
+                                                </ol>
                                             </div>
-                                            <p>特に「三角形の高さを二等分して等積変形し、平行四辺形にする」という考え方は、特殊な三角形や台形でも活用できる 汎用的な考え方です。</p>
+
+                                            <h5>① 等積変形（形を変える）</h5>
+                                            <div class="interactive-container">
+                                                <div class="anim-box" id="anim-transform">
+                                                    <!-- Parallelogram to Rectangle -->
+                                                    <svg width="300" height="200" viewBox="0 0 300 200">
+                                                        <g id="main-shape">
+                                                            <!-- Fixed part -->
+                                                            <polygon points="100,50 220,50 220,150 100,150" fill="#3498db" opacity="0.6"/>
+                                                            <!-- Moving triangle -->
+                                                            <polygon id="moving-tri" points="100,50 60,150 100,150" fill="#3498db" opacity="0.8">
+                                                                <animate id="to-rect" attributeName="points" dur="1s" fill="freeze" begin="indefinite" from="100,50 60,150 100,150" to="220,50 260,150 220,150" />
+                                                                <animate id="to-para" attributeName="points" dur="1s" fill="freeze" begin="indefinite" from="220,50 260,150 220,150" to="100,50 60,150 100,150" />
+                                                            </polygon>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <button class="action-btn" onclick="document.getElementById('to-rect').beginElement()">形を変える（長方形へ）</button>
+                                                <button class="action-btn" onclick="document.getElementById('to-para').beginElement()">元に戻す</button>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(3) 倍・半分（面積の比較）",
+                                        content: `
+                                            <h4>公式の成り立ちを知ろう</h4>
+                                            
+                                            <h5>三角形：平行四辺形の半分</h5>
+                                            <div class="interactive-container">
+                                                <div class="anim-box">
+                                                    <svg width="300" height="200" viewBox="0 0 300 200">
+                                                        <polygon points="80,50 220,50 150,150" fill="#2ecc71" opacity="0.6"/>
+                                                        <polygon id="tri-copy" points="80,50 220,50 150,150" fill="#2ecc71" opacity="0.3" stroke="#27ae60" stroke-dasharray="4">
+                                                            <animate id="tri-double" attributeName="points" dur="1s" fill="freeze" begin="indefinite" to="150,150 290,150 220,50" />
+                                                            <animate id="tri-single" attributeName="points" dur="1s" fill="freeze" begin="indefinite" to="80,50 220,50 150,150" />
+                                                        </polygon>
+                                                    </svg>
+                                                </div>
+                                                <button class="action-btn" onclick="document.getElementById('tri-double').beginElement()">2つくっつける</button>
+                                                <button class="action-btn" onclick="document.getElementById('tri-single').beginElement()">1つに戻す</button>
+                                            </div>
+
+                                            <h5>ひし形：囲む長方形の半分</h5>
+                                            <div class="shape-demo">
+                                                <svg width="200" height="150" viewBox="0 0 200 150">
+                                                    <rect x="40" y="25" width="120" height="100" fill="none" stroke="#ccc" stroke-dasharray="2"/>
+                                                    <polygon points="100,25 160,75 100,125 40,75" fill="#9b59b6" opacity="0.6" stroke="#8e44ad" stroke-width="2"/>
+                                                    <text x="85" y="20" font-size="12">長方形の半分</text>
+                                                </svg>
+                                                <p>周りを囲む長方形の面積を出し、それを「半分」にすればひし形の面積が出ます。</p>
+                                            </div>
+
+                                            <h5>台形：2つくっつけて平行四辺形</h5>
+                                            <div class="interactive-container">
+                                                <div class="anim-box">
+                                                    <svg width="300" height="200" viewBox="0 0 300 200">
+                                                        <polygon points="80,60 160,60 200,140 40,140" fill="#f1c40f" opacity="0.6" stroke="#f39c12"/>
+                                                        <g id="trap-copy-group">
+                                                            <polygon id="trap-copy" points="80,60 160,60 200,140 40,140" fill="#f1c40f" opacity="0.3" stroke="#f39c12" stroke-dasharray="4">
+                                                                <animateTransform id="trap-double" attributeName="transform" type="rotate" from="0 180 100" to="180 180 100" dur="1s" fill="freeze" begin="indefinite" />
+                                                                <animateTransform id="trap-single" attributeName="transform" type="rotate" from="180 180 100" to="0 180 100" dur="1s" fill="freeze" begin="indefinite" />
+                                                            </polygon>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <button class="action-btn" onclick="document.getElementById('trap-double').beginElement()">2つくっつける</button>
+                                                <button class="action-btn" onclick="document.getElementById('trap-single').beginElement()">1つに戻す</button>
+                                                <p style="margin-top:10px;">底辺が<b>「上底 ＋ 下底」</b>の平行四辺形になるよ！</p>
+                                            </div>
+                                        `
+                                    },
+                                    {
+                                        title: "(4) 分割（分ける）",
+                                        content: `
+                                            <h4>図形を分けて考えよう</h4>
+                                            <p>台形を対角線で切り、2つの三角形に分けることで、それぞれの面積の合計として求めることができます。</p>
+                                            <div class="shape-demo">
+                                                <svg width="240" height="150" viewBox="0 0 240 150">
+                                                    <polygon points="60,40 180,40 210,120 30,120" fill="#eee" stroke="#333" stroke-width="2"/>
+                                                    <line id="split-line" x1="60" y1="40" x2="210" y2="120" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5"/>
+                                                    <text x="70" y="80" font-size="14" fill="#e74c3c">三角形①</text>
+                                                    <text x="140" y="100" font-size="14" fill="#3498db">三角形②</text>
+                                                </svg>
+                                                <p>高さが同じ2つの三角形に分かれるんだね！</p>
+                                            </div>
                                         `
                                     }
                                 ]
                             },
                             {
-                                title: "2. <ruby>立体図形<rt>りったいずけい</rt></ruby>の 体積",
+                                title: "6. 立体図形の 体積",
                                 subUnits: [
                                     {
                                         title: "(1) 体積の 単位と 公式",
                                         content: `
-                                            <h4>乗法（かけ算）を 用いる よさ</h4>
-                                            <p>体積を求める際、単位体積の立方体を一つずつ積み重ねるのではなく、規則正しく並んでいることに着目して、かけ算を用いて手際よく求めます。</p>
+                                            <h4>数えるから 乗法（かけ算）へ</h4>
+                                            <p>単位体積となる立方体を一つずつ積み重ねるのではなく、規則正しく並んでいることに着目して、かけ算を用いて手際よく求めます。</p>
                                             <div class="point-box">
-                                                <b>直方体の体積 ＝ 縦 × 横 × 高さ</b>
+                                                <b>（直方体の体積） ＝ （縦） × （横） × （高さ）</b>
                                             </div>
-                                            <p>これにより、これまでに学習した乗法の理解を深め、既習を基に統合的・発展的に考察する態度を養います。</p>
+                                            <p>この公式を見いだすことで、これまでに学習してきた乗法の一層の理解を深め、既習を基に統合的・発展的に考察する態度を養います。</p>
+                                        `
+                                    },
+                                    {
+                                        title: "(2) 単位の関係と 感覚",
+                                        content: `
+                                            <h4>単位間の 関係を 考察する</h4>
+                                            <p>長さ、面積などの単位間の関係と、体積の単位間の関係を比較し、総合的に考察することで、理解を深めます。</p>
                                             <div class="thinking-box">
-                                                <b>単位間の 関係を 考察する</b><br>
-                                                長さ（1次元）、面積（2次元）、体積（3次元）の単位間の関係を比較し、総合的に考察することで、単位間の関係について理解を深め、体積の大きさについての感覚を培います。
+                                                既習の知識と結びつけて考えることで、体積の大きさについての感覚を培うことが大切です。
                                             </div>
                                         `
                                     }
@@ -1530,6 +1834,48 @@ function showContent(sub) {
     const subjectData = studyData[currentSubject];
     updateBreadcrumb([{ label: rubyHome, action: showHome }, { label: subjectData.name, action: showGrades }, { label: subjectData.grades[currentGrade].name, action: showCategories }, { label: subjectData.grades[currentGrade].categories[currentCategoryIndex].name, action: () => showUnits(currentCategoryIndex) }, { label: subjectData.grades[currentGrade].categories[currentCategoryIndex].units[currentUnitIndex].title, action: () => showSubUnits(currentUnitIndex) }, { label: sub.title }]);
     showView('content-view');
+    
+    // クイズの初期化
+    initQuiz();
+}
+
+function initQuiz() {
+    const quizBox = document.getElementById('quiz-1');
+    if (!quizBox) return;
+
+    const nums = quizBox.querySelectorAll('.meas-num');
+    const result = document.getElementById('quiz-result');
+
+    nums.forEach(num => {
+        num.onclick = () => {
+            const type = num.dataset.type;
+            if (type === 'slant') {
+                num.classList.add('wrong');
+                result.innerText = 'おっと！ななめの長さは面積には使わないよ。';
+                setTimeout(() => num.classList.remove('wrong'), 500);
+                return;
+            }
+            
+            num.classList.toggle('selected');
+            
+            // 現在の選択状態を確認
+            const selectedTypes = Array.from(quizBox.querySelectorAll('.meas-num.selected'))
+                                    .map(n => n.dataset.type);
+            
+            const hasBase = selectedTypes.includes('base');
+            const hasHeight = selectedTypes.includes('height');
+
+            if (hasBase && hasHeight) {
+                result.innerHTML = '正解！🎉 面積は 14 × 8 ＝ 112cm² だね！';
+                result.style.color = '#2ecc71';
+            } else if (hasBase || hasHeight) {
+                result.innerHTML = 'あと1つ！「底辺」と「高さ」をそろえよう。';
+                result.style.color = 'var(--primary-color)';
+            } else {
+                result.innerText = '';
+            }
+        };
+    });
 }
 
 function showView(viewId) {
