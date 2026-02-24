@@ -1955,7 +1955,7 @@ const studyData = {
                                             ・線が まがっている
                                         </div>`,
                                         quizzes: [
-                                            { question: "三角形の 「辺」は 何本かな？", display: "📐", answer: 3 }
+
                                         ]
                                     },
                                     {
@@ -1969,10 +1969,7 @@ const studyData = {
                                             <p>・<b>辺（へん）</b>：4本<br>
                                             ・<b>頂点（ちょうてん）</b>：4こ</p>
                                         </div>`,
-                                        quizzes: [
-                                            { question: "四角形の 「辺」は 何本かな？", display: "🟦", answer: 4 },
-                                            { question: "四角形の 「頂点」は 何こかな？", display: "🟦", answer: 4 }
-                                        ]
+                                        quizzes: []
                                     },
                                     {
                                         title: "(3) 辺（へん）と 頂点（ちょうてん）",
@@ -1996,10 +1993,7 @@ const studyData = {
                                             <p><b>■ 正方形（せいほうけい）</b><br>
                                             4つの 辺の 長さが ぜんぶ <b>おなじ</b> で、かどが ぜんぶ <b>直角</b> の 四角形。</p>
                                         </div>`,
-                                        quizzes: [
-                                            { question: "長方形の かどは、ぜんぶ 何かな？", display: "① 直角<br>② まるい", answer: 1, options: [1, 2] },
-                                            { question: "4つの 辺の 長さが ぜんぶ おなじ 直角の 四角形は？", display: "① 長方形<br>② 正方形", answer: 2, options: [1, 2] }
-                                        ]
+                                        quizzes: []
                                     }
                                 ]
                             },
