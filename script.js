@@ -392,7 +392,104 @@ const studyData = {
                                 ]
                             },
                             {
-                                title: "3. <ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>",
+                                title: "3. <ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>（2）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 10と ◯の 足し算",
+                                        content: `<h4>10と あわせると？</h4>
+                                        <div class="point-box">
+                                            10の まとまりに バラを あわせると、11から 19に なるよ.
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>10 ＋ 3 ＝ 13</b></p>
+                                            <p>(10) ＋ 🍎🍎🍎</p>
+                                        </div>
+                                        <p>10のお部屋に 1、1のお部屋に 3を かくだけだね！</p>`,
+                                        quizzes: [
+                                            { question: "10 ＋ 5 は いくつかな？", display: "10 ＋ 5", answer: 15 },
+                                            { question: "10 ＋ 8 は いくつかな？", display: "10 ＋ 8", answer: 18 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 10より 大きい 答えの 計算",
+                                        content: `<h4>1の お部屋だけで 計算しよう</h4>
+                                        <p><b>12 ＋ 4 ＝ □</b></p>
+                                        <div class="point-box">
+                                            10の まとまりは そのまま。バラの 2つと 4つを あわせて <b>6</b>！
+                                        </div>
+                                        <div class="data-demo">
+                                            (10) と 🍎🍎 ＋ 🍎🍎🍎🍎<br>
+                                            <b>＝ 16</b>
+                                        </div>
+                                        <p>答えは <b>16</b> だね。くりあがりが ないときは かんたんだよ！</p>`,
+                                        quizzes: [
+                                            { question: "13 ＋ 2 は いくつかな？", display: "13 ＋ 2", answer: 15 },
+                                            { question: "11 ＋ 7 は いくつかな？", display: "11 ＋ 7", answer: 18 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 10の まとまりの 計算",
+                                        content: `<h4>10の たばで かんがえよう</h4>
+                                        <div class="point-box">
+                                            10の まとまりが いくつあるか かぞえると かんたんだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>30 ＋ 40 ＝ □</b></p>
+                                            <p>(10)(10)(10) ＋ (10)(10)(10)(10)</p>
+                                            <p>3つ ＋ 4つ ＝ <b>7つ</b></p>
+                                        </div>
+                                        <p>10の まとまりが 7つだから、こたえは <b>70</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "20 ＋ 30 は いくつかな？", display: "20 ＋ 30", answer: 50 },
+                                            { question: "50 ＋ 40 は いくつかな？", display: "50 ＋ 40", answer: 90 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) バラの 足し算",
+                                        content: `<h4>まとまりと バラを あわせよう</h4>
+                                        <div class="data-demo">
+                                            <p><b>20 ＋ 5 ＝ □</b></p>
+                                            <p>(10)(10) と 🍎🍎🍎🍎🍎</p>
+                                        </div>
+                                        <p>10の まとまりが 2つ、バラが 5つで <b>25</b> に なるね！</p>`,
+                                        quizzes: [
+                                            { question: "30 ＋ 4 は いくつかな？", display: "30 ＋ 4", answer: 34 },
+                                            { question: "70 ＋ 9 は いくつかな？", display: "70 ＋ 9", answer: 79 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) 100に なったとき",
+                                        content: `<h4>あたらしい おへや「100の くらい」</h4>
+                                        <p>10の まとまりが <b>10こ</b> あつまると…？</p>
+                                        
+                                        <div class="data-demo">
+                                            <table class="data-table" style="width: 300px; margin: 0 auto;">
+                                                <tr>
+                                                    <th style="background:#d9f7be">100の<br>おへや</th>
+                                                    <th style="background:#ffe58f">10の<br>おへや</th>
+                                                    <th style="background:#bae7ff">1の<br>おへや</th>
+                                                </tr>
+                                                <tr style="font-size: 24px; font-weight: bold; color: #e74c3c;">
+                                                    <td>1</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        
+                                        <p>ついに 10のお部屋も いっぱいに なって、<br>もっと おおきな <b>「100のおへや」</b> に おひっこししたよ！</p>
+                                        <div class="point-box">
+                                            100は <b>「ひゃく」</b> と よむよ！
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "90 ＋ 10 は いくつかな？", display: "90 ＋ 10", answer: 100 },
+                                            { question: "10の まとまりが 10こ あつまると いくつかな？", display: "(10)が 10こ", answer: 100 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. <ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>",
                                 subUnits: [
                                     {
                                         title: "(1) のこりは いくつ？",
