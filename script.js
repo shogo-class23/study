@@ -2849,7 +2849,152 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 円と球", subUnits: [{ title: "(1) コンパスの使い方", content: "きれいな円をかこう。" }] }] },
+                    {
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. いろいろな <ruby>三角形<rt>さんかくけい</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>二等辺<rt>にとうへん</rt></ruby>三角形",
+                                        content: `<h4>2つの 辺（へん）が 同じ ながさ</h4>
+                                        <div class="point-box">
+                                            3つの 辺のうち、<b>2つの 辺の ながさが 同じ</b> 三角形を <b>二等辺三角形</b> と いうよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <div style="width:100px; height:100px; margin:0 auto; position:relative;">
+                                                <div style="width:100%; height:100%; background:#3498db; clip-path:polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+                                                <div style="position:absolute; left:15px; top:45px; transform:rotate(-63deg); font-weight:bold; color:white;">||</div>
+                                                <div style="position:absolute; right:15px; top:45px; transform:rotate(63deg); font-weight:bold; color:white;">||</div>
+                                            </div>
+                                            <p>左右（さゆう）の 辺が ぴったり 同じなんだね。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "二等辺三角形は、何本の 辺の長さが 同じかな？", display: "二等辺三角形", answer: 2 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) <ruby>正三角形<rt>せいさんかくけい</rt></ruby>",
+                                        content: `<h4>3つの 辺が ぜんぶ 同じ ながさ</h4>
+                                        <div class="point-box">
+                                            <b>3つの 辺の ながさが ぜんぶ 同じ</b> 三角形を <b>正三角形</b> と いうよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <div style="width:100px; height:100px; margin:0 auto 20px; position:relative;">
+                                                <div style="width:100%; height:100%; background:#2ecc71; clip-path:polygon(50% 13.4%, 0% 100%, 100% 100%);"></div>
+                                                <div style="position:absolute; left:18px; top:50px; transform:rotate(-60deg); font-weight:bold; color:white;">|</div>
+                                                <div style="position:absolute; right:18px; top:50px; transform:rotate(60deg); font-weight:bold; color:white;">|</div>
+                                                <div style="position:absolute; left:50%; bottom:-8px; transform:translateX(-50%); font-weight:bold; color:#333;">|</div>
+                                            </div>
+                                            <p>どこを 見ても 同じ ながさ。きれいな かたちだね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "正三角形は、何本の 辺の長さが 同じかな？", display: "正三角形", answer: 3 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>作図<rt>さくず</rt></ruby>（かきかた）",
+                                subUnits: [
+                                    {
+                                        title: "(1) コンパスを つかった かきかた",
+                                        content: `<h4>きれいな 三角形を かこう</h4>
+                                        <div class="point-box">
+                                            コンパスは、円（えん）を かくだけじゃないよ。<br>
+                                            <b>「ながさを はかって うつす」</b> のに とっても べんりなんだ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【正三角形の かきかた】</b></p>
+                                            <ol style="text-align: left; display: inline-block;">
+                                                <li>1つの 辺を 定規（じょうぎ）で ひく。</li>
+                                                <li>コンパスを その 辺の ながさに あわせる。</li>
+                                                <li>両（りょう）はしから シュッ！と 線（弧）を かく。</li>
+                                                <li>交わった ところと 両はしを むすぶ。</li>
+                                            </ol>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "長さを はかって うつすのに つかう 道具（どうぐ）は？", display: "📐？ 📏？ 🧭？", answer: "コンパス", options: ["コンパス", "じょうぎ", "ふでばこ"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>円<rt>えん</rt></ruby>と <ruby>球<rt>きゅう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 中心（ちゅうしん）からの きょり",
+                                        content: `<h4>どこを はかっても 同じ</h4>
+                                        <div class="point-box">
+                                            円の <b>中心</b> から まわりの 線までの ながさを <b>半径（はんけい）</b> というよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <div style="width:100px; height:100px; border:2px solid #333; border-radius:50%; margin:0 auto; position:relative;">
+                                                <div style="position:absolute; width:4px; height:4px; background:red; border-radius:50%; top:48px; left:48px;"></div>
+                                                <div style="position:absolute; width:50px; height:2px; background:red; top:50px; left:50px; transform-origin: left center; transform: rotate(-30deg);"></div>
+                                                <div style="position:absolute; width:50px; height:2px; background:red; top:50px; left:50px; transform-origin: left center; transform: rotate(120deg);"></div>
+                                            </div>
+                                            <p>中心から 出ている 赤い線は、ぜんぶ 同じ ながさだよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "円の 中心から まわりの線までの ながさを 何という？", display: "中心 ➔ まわり", answer: "半径", options: ["半径", "直径", "一万"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) <ruby>直径<rt>ちょっけい</rt></ruby>の はかりかた",
+                                        content: `<h4>一番（いちばん） ながい ところ</h4>
+                                        <div class="point-box">
+                                            中心を 通（とお）って、はしから はしまで ひいた 直線を <b>直径</b> というよ。<br>
+                                            直径は <b>半径 2つ分</b> の ながさだよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>球（きゅう）の 直径を はかるには？</b></p>
+                                            <p>ボールのような 球は、定規（じょうぎ）ではさむようにして はかると うまくいくよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "直径は、半径の 何倍（なんばい）かな？", display: "直径 ＝ 半径 ✕ □", answer: 2 },
+                                            { question: "半径が 5cm の 円の 直径は 何cm？", display: "半径5cm ➔ 直径？", answer: 10 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. <ruby>角<rt>かく</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 角（かく）って なに？",
+                                        content: `<h4>2本の 辺（へん）が つくる かたち</h4>
+                                        <div class="point-box">
+                                            1つの 頂点（ちょうてん）から 出ている <b>2本の まっすぐな 線（辺）</b> が つくる かたちを <b>角</b> というよ。
+                                        </div>
+                                        <div class="data-demo" style="font-size: 40px;">
+                                            ∠
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "角（かく）をつくるのは、1つの 頂点から 出る 何本の 辺かな？", display: "角", answer: 2 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 角の 大きさを くらべよう",
+                                        content: `<h4>かさねて みよう</h4>
+                                        <p>どっちの 角が おおきいかな？</p>
+                                        <div class="point-box">
+                                            紙（かみ）を 折（お）って 重（かさ）ねてみると、大きさが わかるよ！
+                                        </div>
+                                        <div class="data-demo" style="text-align: left;">
+                                            <p><b>【二等辺三角形で ためそう】</b></p>
+                                            <p>ながさの 同じ 辺を ぴったり 重ねるように 折ってみると…</p>
+                                            <p>➔ 下の 2つの 角が <b>ぴったり 重なったね！</b></p>
+                                        </div>
+                                        <p>ぴったり 重なるということは、角の 大きさが <b>同じ</b> ということなんだね！</p>`,
+                                        quizzes: [
+                                            { question: "ぴったり 重なるとき、角の 大きさは どうなっている？", display: "重なる ➔ ？", answer: "同じ", options: ["同じ", "ちがう"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 重さ(g, kg)", subUnits: [{ title: "(1) はかりの使い方", content: "重さをはかってみよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 棒グラフ", subUnits: [{ title: "(1) グラフのかき方", content: "データをグラフにしよう。" }] }] }
                 ]
