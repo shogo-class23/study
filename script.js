@@ -765,14 +765,129 @@ const studyData = {
                         name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
                         units: [
                             {
-                                title: "1. かたちあそび",
+                                title: "1. いろいろな かたち",
                                 subUnits: [
                                     {
-                                        title: "(1) いろいろな かたち",
-                                        content: `<h4>はこや つつの かたち</h4>
-                                        <div class="shape-demo-box">
-                                            <div class="demo-shape rectangle-box" style="background:#3498db">📦<br>はこの形</div>
-                                        </div>`
+                                        title: "(1) かたちの なまえ",
+                                        content: `<h4>かたちと なまえ</h4>
+                                        <div class="shape-demo-box" style="display:flex; justify-content:center; gap:30px; align-items:flex-end;">
+                                            <div style="text-align:center;">
+                                                <div style="width:60px; height:60px; background:#e74c3c; border-radius:50%; margin:0 auto 10px;"></div>
+                                                <div style="font-weight:bold;">まる</div>
+                                            </div>
+                                            <div style="text-align:center;">
+                                                <div style="width:0; height:0; border-left:30px solid transparent; border-right:30px solid transparent; border-bottom:50px solid #2ecc71; margin:0 auto 10px;"></div>
+                                                <div style="font-weight:bold;">さんかく</div>
+                                            </div>
+                                            <div style="text-align:center;">
+                                                <div style="width:60px; height:60px; background:#3498db; margin:0 auto 10px;"></div>
+                                                <div style="font-weight:bold;">しかく</div>
+                                            </div>
+                                        </div>
+                                        <p>まわりにある ものから、いろいろな 形（かたち）を 見（み）つけてみよう！</p>`,
+                                        quizzes: [
+                                            { question: "おにぎりは どんな かたちかな？ (1:まる 2:さんかく 3:しかく)", display: "🍙", answer: 2 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) はこ、つつ、ボール",
+                                        content: `<h4>かたちの とくちょうを 知（し）ろう</h4>
+                                        
+                                        <div style="display:flex; flex-direction:column; gap:20px;">
+                                            <div class="point-box" style="background:#eef7ff;">
+                                                <b>① はこの かたち (📦)</b><br>
+                                                ・たいらな ところばかり だから <b>ころがらない</b> よ。<br>
+                                                ・きれいに <b>つめる（つめる）</b> ことができるよ。
+                                            </div>
+
+                                            <div class="point-box" style="background:#fff2f0;">
+                                                <b>② ボールの かたち (⚽️)</b><br>
+                                                ・どこも かどが ないから、どこへでも <b>ころがる</b> よ。
+                                            </div>
+
+                                            <div class="point-box" style="background:#f6ffed; border-left-color:#52c41a;">
+                                                <b>③ つつの かたち (🥤)</b><br>
+                                                ・よこに すると、<b>ころがる</b> よ。<br>
+                                                ・たてに すると、たいらだから <b>つめる</b> よ！
+                                            </div>
+                                        </div>
+                                        
+                                        <p>むきを かえると とくちょうが かわる 「つつ」は おもしろいね！</p>`,
+                                        quizzes: [
+                                            { question: "「たてると つめる」けど「よこにすると ころがる」のは どっち？ (1:📦 2:🥤)", display: "🥤", answer: 2 },
+                                            { question: "どこから 見（み）ても ころがる かたちは どれ？ (1:⚽️ 2:📦)", display: "⚽️", answer: 1 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. かたちづくり",
+                                subUnits: [
+                                    {
+                                        title: "(1) さんかくを くっつける",
+                                        content: `<h4>さんかく 2まいで なにが できる？</h4>
+                                        <div class="data-demo">
+                                            <p>おなじ さんかくを 2まい あわせると…</p>
+                                            <div style="display:flex; justify-content:center; align-items:center; gap:10px;">
+                                                <div style="width:40px; height:40px; background:#e74c3c; clip-path:polygon(0 0, 100% 0, 0 100%)"></div>
+                                                <span>＋</span>
+                                                <div style="width:40px; height:40px; background:#e74c3c; clip-path:polygon(0 0, 100% 0, 0 100%); transform:rotate(180deg)"></div>
+                                                <span>＝</span>
+                                                <div style="width:40px; height:40px; background:#e74c3c;"></div>
+                                            </div>
+                                            <p>大きな <b>しかく</b> に なったね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "さんかく 2まいで 作（つく）った 四角（しかく）は どれ？ (1:■ 2:▲)", display: "📐 ＋ 📐", answer: 1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) しかくを くっつける",
+                                        content: `<h4>しかくを ならべてみよう</h4>
+                                        <div class="data-demo">
+                                            <p>しかくを 2つ よこに ならべると…</p>
+                                            <div style="display:flex; justify-content:center; align-items:center; gap:5px;">
+                                                <div style="width:40px; height:40px; background:#3498db;"></div>
+                                                <div style="width:40px; height:40px; background:#3498db;"></div>
+                                            </div>
+                                            <p>ながい <b>しかく（長方形）</b> に なったね！</p>
+                                        </div>
+                                        <p>たくさん ならべると、おうち や ロケット も つくれるよ。</p>`,
+                                        quizzes: [
+                                            { question: "しかくを 4つ 「田」の 形に ならべると、どんな 形になる？ (1:大きな四角 2:さんかく)", display: "■■<br>■■", answer: 1 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 位置（どこに あるかな？）",
+                                subUnits: [
+                                    {
+                                        title: "(1) うえ・した・まえ・うしろ",
+                                        content: `<h4>ことばで おしえてあげよう</h4>
+                                        <div class="data-demo" style="background:#fff; padding:20px; border-radius:10px;">
+                                            ☁️ (うえ)<br>
+                                            🏠 (まんなか)<br>
+                                            🌻 (した)
+                                        </div>
+                                        <p>おうちの <b>うえ</b> には くも、<b>した</b> には ひまわりが あるね！</p>`,
+                                        quizzes: [
+                                            { question: "いすの 「うえ」に あるものは なにかな？", display: "🕒 (とけい)<br>🪑 (いす)<br>📦 (はこ)", answer: "🕒", options: ["🕒", "🪑", "📦"] },
+                                            { question: "とけいの 「した」に あるものは なにかな？", display: "🕒 (とけい)<br>🪑 (いす)<br>📦 (はこ)", answer: "🪑", options: ["🕒", "🪑", "📦"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) ひだり・みぎ",
+                                        content: `<h4>て を 見て おぼえよう</h4>
+                                        <div class="data-demo" style="display:flex; justify-content:center; gap:50px; font-size:40px;">
+                                            <div>✋<br><small style="font-size:14px;">ひだり</small></div>
+                                            <div>🤚<br><small style="font-size:14px;">みぎ</small></div>
+                                        </div>
+                                        <p>おはしを もつほう（または、おちゃわんを もつほう）は どっちかな？</p>`,
+                                        quizzes: [
+                                            { question: "いすの 「ひだり」に あるものは なにかな？", display: "📚 (たな)　🪑 (いす)　🗑️ (ごみばこ)", answer: "📚", options: ["📚", "🪑", "🗑️"] },
+                                            { question: "たなの 「みぎ」に あるものは なにかな？", display: "📚 (たな)　🪑 (いす)　🗑️ (ごみばこ)", answer: "🪑", options: ["📚", "🪑", "🗑️"] }
+                                        ]
                                     }
                                 ]
                             }
@@ -1131,7 +1246,7 @@ function startQuiz(index = 0) {
             ${q.options ? `
                 <!-- 選択肢が指定されている場合（どっちが大きい？など） -->
                 <div class="quiz-options" style="margin-top: 20px;">
-                    ${q.options.map(opt => `<button class="quiz-btn" style="width: 100px;" onclick="typeNumber(${opt}); submitAnswer();">${opt}</button>`).join('')}
+                    ${q.options.map(opt => `<button class="quiz-btn" style="width: auto; min-width: 80px; padding: 10px;" onclick="checkPictorialAnswer(this, '${q.answer}')">${opt}</button>`).join('')}
                 </div>
             ` : `
                 <!-- テンキー入力の場合（いくつある？など） -->
@@ -1181,6 +1296,34 @@ function clearNumber() {
         currentInput = currentInput.slice(0, -1);
         const display = document.getElementById('input-display');
         if (display) display.innerText = currentInput === "" ? " " : currentInput;
+    }
+}
+
+function checkPictorialAnswer(btn, correctVal) {
+    const feedback = document.getElementById('quiz-feedback');
+    const btns = btn.parentElement.querySelectorAll('.quiz-btn');
+    btns.forEach(b => b.disabled = true); // すべて無効化
+
+    // 正解の値（文字列か数値か）を調整して比較
+    const selectedVal = btn.innerText;
+    const isCorrect = (selectedVal == correctVal); // 型を気にせず比較
+
+    if (isCorrect) {
+        btn.classList.add('correct');
+        correctCount++;
+        feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
+    } else {
+        btn.classList.add('wrong');
+        feedback.innerHTML = `
+            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
+        `;
+    }
+
+    const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
+    if (!isLast) {
+        feedback.innerHTML += `<button class="action-btn" onclick="startQuiz(${currentQuizIndex + 1})">つぎの もんだいへ</button>`;
+    } else {
+        feedback.innerHTML += `<button class="action-btn" onclick="showResults()">さいごの けっかを見る</button>`;
     }
 }
 
