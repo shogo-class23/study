@@ -1931,6 +1931,104 @@ const studyData = {
                                 ]
                             }
                         ]
+                    },
+                    {
+                        name: "2 <ruby>図形<rt>ずけい</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 三角形と 四角形",
+                                subUnits: [
+                                    {
+                                        title: "(1) 三角形（さんかくけい）の やくそく",
+                                        content: `<h4>三角形って どんな形？</h4>
+                                        <div class="point-box">
+                                            3本の まっすぐな 線（辺）で、すきまなく <b>「かこまれている」</b> 形を 三角形というよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【三角形の パーツ】</b></p>
+                                            <p>・<b>辺（へん）</b>：3本<br>
+                                            ・<b>頂点（ちょうてん）</b>：3こ</p>
+                                        </div>
+                                        <div class="point-box" style="background: #fff2f0;">
+                                            <b>【これは 三角形じゃないよ！】</b><br>
+                                            ・線が つながっていない（あいている）<br>
+                                            ・線が まがっている
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "三角形の 「辺」は 何本かな？", display: "📐", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 四角形（しかくけい）の やくそく",
+                                        content: `<h4>四角形って どんな形？</h4>
+                                        <div class="point-box">
+                                            4本の まっすぐな 線（辺）で、すきまなく <b>「かこまれている」</b> 形を 四角形というよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【四角形の パーツ】</b></p>
+                                            <p>・<b>辺（へん）</b>：4本<br>
+                                            ・<b>頂点（ちょうてん）</b>：4こ</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "四角形の 「辺」は 何本かな？", display: "🟦", answer: 4 },
+                                            { question: "四角形の 「頂点」は 何こかな？", display: "🟦", answer: 4 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 辺（へん）と 頂点（ちょうてん）",
+                                        content: `<h4>名前を 正しく おぼえよう</h4>
+                                        <div class="point-box">
+                                            ・<b>辺（へん）</b>：図形（ずけい）を つくっている まっすぐな 線。<br>
+                                            ・<b>頂点（ちょうてん）</b>：辺と 辺が ぶつかっている かどの 点。
+                                        </div>
+                                        <p>図形を かくときは、定規（じょうぎ）を つかって まっすぐな 辺を かくのが ポイントだよ！</p>`,
+                                        quizzes: []
+                                    },
+                                    {
+                                        title: "(4) 直角（ちょっかく）と 長方形・正方形",
+                                        content: `<h4>かどの 形を 見てみよう</h4>
+                                        <div class="point-box">
+                                            おりがみの かど のように、ぴったりした かどを <b>「直角（ちょっかく）」</b> というよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>■ 長方形（ちょうほうけい）</b><br>
+                                            4つの かどが ぜんぶ <b>直角</b> の 四角形。</p>
+                                            <p><b>■ 正方形（せいほうけい）</b><br>
+                                            4つの 辺の 長さが ぜんぶ <b>おなじ</b> で、かどが ぜんぶ <b>直角</b> の 四角形。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "長方形の かどは、ぜんぶ 何かな？", display: "① 直角<br>② まるい", answer: 1, options: [1, 2] },
+                                            { question: "4つの 辺の 長さが ぜんぶ おなじ 直角の 四角形は？", display: "① 長方形<br>② 正方形", answer: 2, options: [1, 2] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. はこの かたち",
+                                subUnits: [
+                                    {
+                                        title: "(1) はこの まわりを かこむもの",
+                                        content: `<h4>はこの 特徴（とくちょう）</h4>
+                                        <div class="point-box">
+                                            はこの まわりにある 平らな ところを <b>「面（めん）」</b> というよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>はこの 形には ぜんぶで <b>6つの 面</b> が あるよ！</p>
+                                            <p>さいコロのような 形や、キャラメルの はこのような 長い形が あるね。</p>
+                                        </div>
+                                        <div class="point-box">
+                                            ・面（めん）：6こ<br>
+                                            ・辺（へん）：12本<br>
+                                            ・頂点（ちょうてん）：8こ
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "はこの 「面（めん）」は ぜんぶで 何こかな？", display: "📦", answer: 6 },
+                                            { question: "はこの 「頂点（ちょうてん）」は 何こかな？", display: "📦", answer: 8 }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
