@@ -32,12 +32,18 @@ const studyData = {
                                         </div>
                                         <p>10は、<b>5が 2つ</b> あつまった かずだね！<br>
                                         えを ゆびで さしながら、こえに だして かぞえてみよう！</p>`,
-                                        quiz: {
-                                            question: "くだものは なんこ あるかな？",
-                                            display: "🍎 🍎 🍎 🍎",
-                                            options: [3, 4, 5],
-                                            answer: 4
-                                        }
+                                        quizzes: [
+                                            { question: "【だい1もん】 くだものは なんこ あるかな？", display: "🍎 🍎 🍎 🍎", answer: 4 },
+                                            { question: "【だい2もん】 くだものは なんこ あるかな？", display: "🍌 🍌 🍌 🍌 🍌 🍌", answer: 6 },
+                                            { question: "【だい3もん】 くだものは なんこ あるかな？", display: "🍊 🍊 🍊", answer: 3 },
+                                            { question: "【だい4もん】 くだものは なんこ あるかな？", display: "🍇 🍇 🍇 🍇 🍇", answer: 5 },
+                                            { question: "【だい5もん】 くだものは なんこ あるかな？", display: "🍓 🍓 🍓 🍓 🍓 🍓 🍓 🍓", answer: 8 },
+                                            { question: "【だい6もん】 くだものは なんこ あるかな？", display: "🍐 🍐", answer: 2 },
+                                            { question: "【だい7もん】 くだものは なんこ あるかな？", display: "🍉", answer: 1 },
+                                            { question: "【だい8もん】 くだものは なんこ あるかな？", display: "🍈 🍈 🍈 🍈 🍈 🍈 🍈", answer: 7 },
+                                            { question: "【だい9もん】 くだものは なんこ あるかな？", display: "🌰 🌰 🌰 🌰 🌰 🌰 🌰 🌰 🌰", answer: 9 },
+                                            { question: "【だい10もん】 くだものは なんこ あるかな？", display: "🍍 🍍 🍍 🍍 🍍 🍍 🍍 🍍 🍍 🍍", answer: 10 }
+                                        ]
                                     },
                                     {
                                         title: "(2) なにもないとき",
@@ -141,7 +147,14 @@ const studyData = {
                                             （「01, 02...」とは かかずに、「1, 2...」と かくんだよ！）
                                         </div>
 
-                                        <p>0は、<b>「ここにおへやはあるけど、なかみは からっぽだよ！」</b> と おしえてくれる たいせつな しるしなんだよ。</p>`
+                                        <p>0は、<b>「ここにおへやはあるけど、なかみは からっぽだよ！」</b> と おしえてくれる たいせつな しるしなんだよ。</p>`,
+                                        quizzes: [
+                                            {
+                                                question: "かごの なかに りんごは なんこ あるかな？",
+                                                display: "🧺",
+                                                answer: 0
+                                            }
+                                        ]
                                     },
                                     {
                                         title: "(3) どっちがおおきい？どっちがちいさい？どのくらいちがう？",
@@ -153,7 +166,14 @@ const studyData = {
                                         <p><b>5 は 3 より おおきい</b> ね。<br>
                                         <b>3 は 5 より ちいさい</b> ね。</p>
                                         <h4>どのくらい ちがう？</h4>
-                                        <p>5 － 3 ＝ 2 だから、<b>2つ ちがう</b> ことが わかるよ！</p>`
+                                        <p>5 － 3 ＝ 2 だから、<b>2つ ちがう</b> ことが わかるよ！</p>`,
+                                        quizzes: [
+                                            {
+                                                question: "5 と 3、どっちが おおきいかな？（おおきい ほうを かいてね）",
+                                                display: "5 , 3",
+                                                answer: 5
+                                            }
+                                        ]
                                     },
                                     {
                                         title: "(4) まとまりでかぞえよう",
@@ -179,7 +199,14 @@ const studyData = {
                                         <div class="data-demo">
                                             (🖐️) (🖐️) (🖐️)<br>
                                             <b>5, 10, 15...</b> と かぞえると 10が すぐ つくれるね！
-                                        </div>`
+                                        </div>`,
+                                        quizzes: [
+                                            {
+                                                question: "ぜんぶで なんこ あるかな？",
+                                                display: "(🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵) 🔵 🔵",
+                                                answer: 12
+                                            }
+                                        ]
                                     },
                                     {
                                         title: "(5) なんばんめ",
@@ -205,7 +232,14 @@ const studyData = {
                                             </div>
                                         </div>
                                         
-                                        <p>「まえから」か 「うしろから」か、よく きいて かぞえてみよう！</p>`
+                                        <p>「まえから」か 「うしろから」か、よく きいて かぞえてみよう！</p>`,
+                                        quizzes: [
+                                            {
+                                                question: "うさぎ🐰は まえから なんばんめ かな？",
+                                                display: "🐱 🐰 🦊 🐻 🦁",
+                                                answer: 2
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -530,9 +564,14 @@ function showSubUnits(j) {
 }
 
 let currentSubUnit = null;
+let currentInput = "";
+let currentQuizIndex = 0;
+let correctCount = 0; // 正解した数をかぞえる
 
 function showContent(s) {
     currentSubUnit = s;
+    currentQuizIndex = 0;
+    correctCount = 0; // リセット
     const subjectName = studyData[currentSubject].name;
     const gradeData = studyData[currentSubject].grades[currentGrade];
     const cat = gradeData.categories[currentCategoryIndex];
@@ -550,9 +589,8 @@ function showContent(s) {
     contentTitle.innerHTML = s.title;
     contentBody.innerHTML = s.content;
     
-    // クイズがある場合はボタンを表示
     const startBtnContainer = document.getElementById('quiz-start-container');
-    if (s.quiz) {
+    if (s.quizzes && s.quizzes.length > 0) {
         startBtnContainer.style.display = 'block';
     } else {
         startBtnContainer.style.display = 'none';
@@ -561,16 +599,20 @@ function showContent(s) {
     showView('content-view');
 }
 
-let currentInput = "";
-
-function startQuiz() {
-    if (!currentSubUnit || !currentSubUnit.quiz) return;
-    const q = currentSubUnit.quiz;
+function startQuiz(index = 0) {
+    if (!currentSubUnit || !currentSubUnit.quizzes || !currentSubUnit.quizzes[index]) return;
+    currentQuizIndex = index;
+    if (index === 0) correctCount = 0; // 1問目ならリセット
+    
+    const q = currentSubUnit.quizzes[currentQuizIndex];
     const quizViewBody = document.getElementById('quiz-view-body');
-    currentInput = ""; // 入力をリセット
+    currentInput = ""; 
     
     quizViewBody.innerHTML = `
         <div class="quiz-container">
+            <div style="font-size: 18px; color: #666; margin-bottom: 10px;">
+                ${currentQuizIndex + 1} / ${currentSubUnit.quizzes.length} もんめ
+            </div>
             <div class="quiz-question">${q.question}</div>
             <div class="quiz-display">${q.display}</div>
             
@@ -600,23 +642,25 @@ function startQuiz() {
         { label: cat.name, action: () => showUnits(currentCategoryIndex) },
         { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
         { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
-        { label: 'くいず' }
+        { label: `${currentQuizIndex + 1}もんめ` }
     ]);
     
     showView('quiz-view');
 }
 
 function typeNumber(n) {
-    if (currentInput.length < 5) { // 最大5桁まで
+    if (currentInput.length < 5) {
         currentInput += n.toString();
-        document.getElementById('input-display').innerText = currentInput;
+        const display = document.getElementById('input-display');
+        if (display) display.innerText = currentInput;
     }
 }
 
 function clearNumber() {
     if (currentInput.length > 0) {
         currentInput = currentInput.slice(0, -1);
-        document.getElementById('input-display').innerText = currentInput === "" ? " " : currentInput;
+        const display = document.getElementById('input-display');
+        if (display) display.innerText = currentInput === "" ? " " : currentInput;
     }
 }
 
@@ -624,23 +668,54 @@ function submitAnswer() {
     if (currentInput === "") return;
     
     const feedback = document.getElementById('quiz-feedback');
-    const correctVal = currentSubUnit.quiz.answer.toString();
+    const q = currentSubUnit.quizzes[currentQuizIndex];
+    const correctVal = q.answer.toString();
 
-    // 入力をロックする（ボタンをすべておせなくする）
     const btns = document.querySelectorAll('.quiz-btn, .clear-btn, .answer-btn');
     btns.forEach(b => b.disabled = true);
     
-    if (currentInput === correctVal) {
-        feedback.innerHTML = `
-            <div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ すごいね！ ✨</div>
-            <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
-        `;
+    const isLast = currentQuizIndex === currentSubUnit.quizzes.length - 1;
+    const isCorrect = currentInput === correctVal;
+    
+    if (isCorrect) {
+        correctCount++;
+        feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
     } else {
         feedback.innerHTML = `
-            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！ もういちど かぞえてみてね。</div>
-            <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
+            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
         `;
     }
+
+    if (!isLast) {
+        feedback.innerHTML += `<button class="action-btn" onclick="startQuiz(${currentQuizIndex + 1})">つぎの もんだいへ</button>`;
+    } else {
+        feedback.innerHTML += `<button class="action-btn" onclick="showResults()">さいごの けっかを見る</button>`;
+    }
+}
+
+function showResults() {
+    const quizViewBody = document.getElementById('quiz-view-body');
+    const total = currentSubUnit.quizzes.length;
+    
+    quizViewBody.innerHTML = `
+        <div class="quiz-container">
+            <h2 style="color: #3498db; margin-bottom: 20px;">✨ くいず おわり！ ✨</h2>
+            <div style="font-size: 24px; margin-bottom: 20px;">
+                ${total}もん ちゅう <b style="font-size: 40px; color: #e74c3c;">${correctCount}</b> もん せいかい！
+            </div>
+            <div style="margin-bottom: 30px;">
+                ${correctCount === total ? 'ぜんぶ せいかい！ 天才（てんさい）だね！' : 'よく がんばったね！'}
+            </div>
+            <button class="action-btn" style="background:#95a5a6" onclick="showContent(currentSubUnit)">お勉強（べんきょう）にもどる</button>
+            <button class="action-btn" style="margin-top:10px" onclick="startQuiz(0)">もういちど くいずをやる</button>
+        </div>
+    `;
+    
+    updateBreadcrumb([
+        { label: 'ホーム', action: showHome },
+        { label: studyData[currentSubject].name, action: showGrades },
+        { label: 'けっか' }
+    ]);
 }
 
 function checkAnswer(btn, correctVal) {
@@ -692,7 +767,7 @@ backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
 
 const startQuizBtn = document.getElementById('start-quiz-btn');
 const backToContentBtn = document.getElementById('back-to-content-btn');
-if (startQuizBtn) startQuizBtn.onclick = startQuiz;
+if (startQuizBtn) startQuizBtn.onclick = () => startQuiz(0);
 if (backToContentBtn) backToContentBtn.onclick = () => showContent(currentSubUnit);
 
 showHome();
