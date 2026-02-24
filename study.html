@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>未来学習ポータル - 学習サイト</title>
+    <title> - 学習サイト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -115,36 +115,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 未来学習ポータル</p>
+        <p>&copy; 学習サイト</p>
     </footer>
 
     <script src="script.js"></script>
-
-    <!-- メモ機能の追加 -->
-    <div id="memo-container" class="memo-overlay hidden">
-        <div class="memo-box">
-            <div class="toolbar">
-                <div class="tool-group">
-                    <button id="pen-tool-btn" class="tool-btn active">✏️ ペン</button>
-                    <button id="eraser-tool-btn" class="tool-btn">🧽 消しゴム</button>
-                </div>
-                <div class="pen-control">
-                    <span>太さ:</span>
-                    <input type="range" id="pen-width" min="1" max="30" value="5">
-                </div>
-                <button id="toggle-mode-btn">⌨️ 文字入力</button>
-                <button id="clear-memo-btn" class="btn-clear">全部消す</button>
-                <button id="close-memo-btn" class="btn-secondary">閉じる</button>
-            </div>
-
-            <div class="content-area">
-                <canvas id="memo-canvas"></canvas>
-                <div id="text-memo-wrapper" class="hidden">
-                    <textarea id="memo-textarea" placeholder="ここにメモを入力してください"></textarea>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button id="toggle-memo-btn" class="floating-memo-btn">📝 メモ</button>
 </body>
 </html>
