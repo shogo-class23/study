@@ -211,78 +211,91 @@ main {
     border-radius: 0 5px 5px 0;
 }
 
-/* Math Specific Visuals */
+/* Calculation & Interactive Elements */
+.num-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.split-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+}
+
 .compare-box {
     background: #fff;
-    border: 1px dashed #ccc;
-    padding: 15px;
-    border-radius: 10px;
+    border: 2px dashed #3498db;
+    padding: 20px;
+    border-radius: 15px;
     display: inline-block;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .compare-box .row {
-    font-size: 24px;
-    letter-spacing: 5px;
-    margin: 5px 0;
-}
-
-.number-line-big {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--primary-color);
-    letter-spacing: 15px;
-    background: #f0f0f0;
-    padding: 10px 20px;
-    border-radius: 30px;
-    display: inline-block;
-    margin: 15px 0;
-}
-
-.compare-visual {
-    font-size: 20px;
-    margin: 15px 0;
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin: 10px 0;
 }
 
 .ten-frame {
     font-size: 40px;
-    margin: 20px 0;
+    letter-spacing: 15px;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
+    display: inline-block;
+    line-height: 1.5;
 }
 
 .calc-demo {
     background: #fffbe6;
-    border: 2px solid #ffe58f;
-    padding: 20px;
-    border-radius: 15px;
+    border: 3px solid #ffe58f;
+    padding: 25px;
+    border-radius: 20px;
     text-align: center;
-    font-size: 28px;
-    margin: 20px 0;
-}
-
-.calc-demo span {
-    display: block;
     font-size: 32px;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 25px 0;
+    color: #444;
+}
+
+.calc-demo b {
+    color: var(--japanese-color);
+    font-size: 40px;
 }
 
 .cherry-calc {
     background: #fff2f0;
-    border-left: 5px solid #ff4d4f;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 0 10px 10px 0;
+    border-left: 8px solid #ff4d4f;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .cherry-calc p {
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-bottom: 12px;
+    font-size: 18px;
 }
 
 .cherry-calc b {
     color: #ff4d4f;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .calc-table {
