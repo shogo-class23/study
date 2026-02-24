@@ -755,6 +755,55 @@ main {
     75% { transform: translateX(5px); }
 }
 
+.quiz-input-display {
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+
+.numeric-pad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+.answer-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.answer-btn:hover {
+    background-color: #2980b9;
+}
+
+.clear-btn {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
 /* Vertical Calculation (Hissan) */
 .hissan {
     display: flex;

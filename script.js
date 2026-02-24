@@ -561,18 +561,29 @@ function showContent(s) {
     showView('content-view');
 }
 
+let currentInput = "";
+
 function startQuiz() {
     if (!currentSubUnit || !currentSubUnit.quiz) return;
     const q = currentSubUnit.quiz;
     const quizViewBody = document.getElementById('quiz-view-body');
+    currentInput = ""; // 入力をリセット
     
     quizViewBody.innerHTML = `
         <div class="quiz-container">
             <div class="quiz-question">${q.question}</div>
             <div class="quiz-display">${q.display}</div>
-            <div class="quiz-options">
-                ${q.options.map(opt => `<button class="quiz-btn" onclick="checkAnswer(this, ${q.answer})">${opt}</button>`).join('')}
+            
+            <div style="display:flex; justify-content:center; align-items:center;">
+                <div class="quiz-input-display" id="input-display"> </div>
+                <button class="clear-btn" onclick="clearNumber()">けす</button>
             </div>
+
+            <div class="numeric-pad">
+                ${[1,2,3,4,5,6,7,8,9,0].map(n => `<button class="quiz-btn" onclick="typeNumber(${n})">${n}</button>`).join('')}
+            </div>
+            
+            <button class="answer-btn" onclick="submitAnswer()">こたえあわせ</button>
             <div class="quiz-feedback" id="quiz-feedback"></div>
         </div>
     `;
@@ -595,31 +606,45 @@ function startQuiz() {
     showView('quiz-view');
 }
 
-function checkAnswer(btn, correctVal) {
-    const feedback = document.getElementById('quiz-feedback');
-    if (!feedback) return;
-    
-    const selectedVal = parseInt(btn.innerText);
-    const btns = btn.parentElement.querySelectorAll('.quiz-btn');
-    btns.forEach(b => {
-        b.classList.remove('correct');
-        b.classList.remove('wrong');
-        b.disabled = true; // 解答後は一度無効化
-    });
+function typeNumber(n) {
+    if (currentInput.length < 5) { // 最大5桁まで
+        currentInput += n.toString();
+        document.getElementById('input-display').innerText = currentInput;
+    }
+}
 
-    if (selectedVal === correctVal) {
-        btn.classList.add('correct');
+function clearNumber() {
+    if (currentInput.length > 0) {
+        currentInput = currentInput.slice(0, -1);
+        document.getElementById('input-display').innerText = currentInput === "" ? " " : currentInput;
+    }
+}
+
+function submitAnswer() {
+    if (currentInput === "") return;
+    
+    const feedback = document.getElementById('quiz-feedback');
+    const correctVal = currentSubUnit.quiz.answer.toString();
+
+    // 入力をロックする（ボタンをすべておせなくする）
+    const btns = document.querySelectorAll('.quiz-btn, .clear-btn, .answer-btn');
+    btns.forEach(b => b.disabled = true);
+    
+    if (currentInput === correctVal) {
         feedback.innerHTML = `
-            <div style="color: #2ecc71; margin-bottom: 15px;">✨ せいかい！ すごいね！ ✨</div>
+            <div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ すごいね！ ✨</div>
             <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
         `;
     } else {
-        btn.classList.add('wrong');
         feedback.innerHTML = `
-            <div style="color: #ff7675; margin-bottom: 15px;">ざんねん！ もういちど かぞえてみてね。</div>
+            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！ もういちど かぞえてみてね。</div>
             <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
         `;
     }
+}
+
+function checkAnswer(btn, correctVal) {
+    // 従来のボタン形式判定（互換性のために残すか、将来的に統合）
 }
 
 function showView(id) {
