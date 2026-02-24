@@ -3331,7 +3331,452 @@ const studyData = {
             e4: {
                 name: "小4",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 大きな数", subUnits: [{ title: "(1) 億と兆", content: "大きな数を読もう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 大きな数",
+                            subUnits: [
+                                {
+                                    title: "(1) 兆（ちょう）までの大きな数",
+                                    content: `<h4>億（おく）の つぎは 兆！</h4>
+                                    <div class="point-box">
+                                        一、十、百、千、万（まん）、億（おく）の つぎは、<b>兆（ちょう）</b> だよ！<br>
+                                        一、十、百、千の <b>4つ</b> が ひとまとまりに なっていることに 気づいたかな？
+                                    </div>
+                                    <div class="data-demo">
+                                        <table class="data-table" style="width: 500px; margin: 0 auto; font-size: 12px;">
+                                            <tr><th style="background:#b5f5ec">兆</th><th style="background:#ffccc7">億</th><th style="background:#efdbff">万</th><th style="background:#d9f7be">千</th><th style="background:#fff7e6">百</th><th style="background:#ffe58f">十</th><th style="background:#bae7ff">一</th></tr>
+                                            <tr style="font-size: 18px; font-weight: bold; color: #e74c3c;"><td>1</td><td>0000</td><td>0000</td><td>0000</td><td>0000</td><td>0000</td><td>0000</td></tr>
+                                        </table>
+                                        <p style="margin-top:10px;"><small>読み方：一兆（いっちょう）</small></p>
+
+                                        <p style="margin-top:20px;"><b>【大きな数を 読むときのコツ】</b></p>
+                                        <p>右から <b>4つずつ</b>、点で 区切（くぎ）って 考えるのが コツだよ！</p>
+                                        <p style="font-size: 24px;"><b>1,2345,6789,0123</b><br>
+                                        <small>↑ 兆の位 ↑ 億の位 ↑ 万の位 ↑ 一の位</small></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1000億の 10倍（ばい）は いくつかな？", display: "1000億 ✕ 10", answer: "1兆" },
+                                        { question: "「5兆3000億」と 書いてあるのは どっち？", display: "5兆3000億", answer: "5,3000,0000,0000", options: ["5,3000,0000,0000", "5,0000,3000,0000"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 3桁（けた）ごとに 区切る",
+                                    content: `<h4>世界（せかい）の 大きな数</h4>
+                                    <div class="point-box">
+                                        日本（にほん）では <b>4つずつ</b> 区切るけど、世界では <b>3つずつ</b> 区切るのが 多いよ！<br>
+                                        英語（えいご）だと 「thousand（せん）」「million（ひゃくまん）」「billion（じゅうおく）」のように 読み方が 変わっていくよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p style="font-size: 24px;"><b>1,000,000,000</b><br>
+                                        <small>↑ billion ↑ million ↑ thousand ↑ one</small></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "日本で 4桁ずつ 区切るのは？", display: "区切り方", answer: "日本", options: ["日本", "世界"] },
+                                        { question: "「million」は 日本の 数で いくつかな？", display: "million", answer: "百万" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 概数（がいすう）と見積もり",
+                            subUnits: [
+                                {
+                                    title: "(1) 四捨五入（ししゃごにゅう）",
+                                    content: `<h4>およそ このくらい の数</h4>
+                                    <div class="point-box">
+                                        細かい数（かず）を、わかりやすく 簡単に した数を <b>概数（がいすう）</b> というよ。<br>
+                                        概数を 出すときに よく使うのが <b>四捨五入（ししゃごにゅう）</b> だよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【四捨五入の ルール】</b></p>
+                                        <p>・残（のこ）したい 位（くらい）の <b>1つ 右</b> の 数字（すうじ）を見る。<br>
+                                        ・それが <b>0, 1, 2, 3, 4</b> なら <b>捨（す）てる</b> （切り捨てる）。<br>
+                                        ・それが <b>5, 6, 7, 8, 9</b> なら <b>繰（く）り上げる</b> （切り上げる）。</p>
+                                        <p><b>【例：432を 十の位まで 四捨五入】</b><br>
+                                        ➔ 十の位の 1つ右は <b>2</b>。<br>
+                                        ➔ 2は 0〜4なので <b>捨てる</b>。<br>
+                                        ➔ 答えは <b>430</b>。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "87を 十の位まで 四捨五入すると？", display: "87 → 十の位まで", answer: 90 },
+                                        { question: "123を 百の位まで 四捨五入すると？", display: "123 → 百の位まで", answer: 100 },
+                                        { question: "75を 十の位まで 四捨五入すると？", display: "75 → 十の位まで", answer: 80 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 以上（いじょう）・以下（いか）・未満（みまん）",
+                                    content: `<h4>数の範囲（はんい）を 表す言葉</h4>
+                                    <div class="point-box">
+                                        ・<b>以上</b>：その数（かず）と、それより 大きい数（○○も含まれる）<br>
+                                        ・<b>以下</b>：その数と、それより 小さい数（○○も含まれる）<br>
+                                        ・<b>未満</b>：その数より 小さい数（○○は含まれない）
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【例：5以上 10未満】</b><br>
+                                        ➔ 5, 6, 7, 8, 9</p>
+                                        <p>「その数」が 含まれるか 含まれないかで、とても 大事な 違いがあるよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "3以上 の数を選んでね", display: "1, 2, 3, 4, 5", answer: "3, 4, 5", options: ["1, 2", "3, 4, 5", "4, 5"] },
+                                        { question: "7以下 の数を選んでね", display: "6, 7, 8, 9, 10", answer: "6, 7", options: ["8, 9, 10", "6, 7", "7, 8"] },
+                                        { question: "4未満 の数を選んでね", display: "1, 2, 3, 4, 5", answer: "1, 2, 3", options: ["1, 2, 3", "1, 2, 3, 4", "4, 5"] }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 見積もり計算",
+                                    content: `<h4>おおよそで 計算しよう</h4>
+                                    <div class="point-box">
+                                        買い物のときなど、細かい計算を しなくても、<b>おおよその数（概数）</b> で 計算すると べんりだよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【例：28円 と 42円 の合計を見積もる】</b><br>
+                                        ➔ 28円を <b>30円</b> に、42円を <b>40円</b> に 四捨五入する。<br>
+                                        ➔ 30 ＋ 40 ＝ <b>70円</b></p>
+                                        <p>正確（せいかく）な答えは 70円だけど、見積もりでも 同じだったね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "32円と 59円の 合計を、十の位まで 四捨五入して 見積もってみよう。", display: "32 + 59", answer: 90 },
+                                        { question: "180円と 210円の 合計を、百の位まで 四捨五入して 見積もってみよう。", display: "180 + 210", answer: 400 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. わり算",
+                            subUnits: [
+                                {
+                                    title: "(1) （2桁）÷（1桁）のわり算",
+                                    content: `<h4>九九を 使う わり算</h4>
+                                    <div class="point-box">
+                                        わる数（右の数）の 九九を おもい出（だ）すと、答えが 見つかるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>12 ÷ 3 ＝ □</b></p>
+                                        <p>3のだん：3 ✕ 1＝3, 3 ✕ 2＝6, 3 ✕ 3＝9, <b>3 ✕ 4＝12</b>！</p>
+                                        <p>答えは <b>4</b> だね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "18 ÷ 2 は いくつかな？", display: "18 ÷ 2", answer: 9 },
+                                        { question: "24 ÷ 4 は いくつかな？", display: "24 ÷ 4", answer: 6 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) （3桁）÷（1桁）のわり算",
+                                    content: `<h4>筆算（ひっさん）で 計算しよう</h4>
+                                    <div class="point-box">
+                                        大きな数の わり算は <b>筆算（ひっさん）</b> で 計算すると、まちがえにくいよ。<br>
+                                        わられる数（左の数）の <b>大きい位</b> から 順番（じゅんばん）に わるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+    1 2 3
+  _______
+3 ) 3 6 9
+    3
+    ---
+      6
+      6
+      ---
+        9
+        9
+        ---
+          0
+                                        </pre>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "484 ÷ 4 は いくつかな？", display: "484 ÷ 4", answer: 121 },
+                                        { question: "525 ÷ 5 は いくつかな？", display: "525 ÷ 5", answer: 105 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) （2桁）÷（2桁）のわり算",
+                                    content: `<h4>商（しょう）が 1に なるときの わり算</h4>
+                                    <div class="point-box">
+                                        わられる数と わる数が 同じくらいの 大きさのとき、商は <b>1</b> になることが 多いよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+    1
+  _______
+21) 21
+    21
+    ---
+     0
+                                        </pre>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "34 ÷ 34 は いくつかな？", display: "34 ÷ 34", answer: 1 },
+                                        { question: "50 ÷ 25 は いくつかな？", display: "50 ÷ 25", answer: 2 }
+                                    ]
+                                },
+                                {
+                                    title: "(4) （3桁）÷（2桁）のわり算",
+                                    content: `<h4>商（しょう）を 見つけるのが 大事！</h4>
+                                    <div class="point-box">
+                                        わる数が 2桁に なっても、筆算の やり方は 基本（きほん）は 同じ。<br>
+                                        商を 見つけるために、わる数を <b>およそ</b> の数（がいすう）で かんがえると いいよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>150 ÷ 25 ＝ □</b></p>
+                                        <p>➔ 25を <b>「30」</b> だと かんがえると、<br>
+                                        150の中に 30は <b>5回</b> はいってるかな？ ➔ 25 ✕ 5 ＝ 125！ まだ入る！<br>
+                                        <b>6回</b> なら？ ➔ 25 ✕ 6 ＝ 150！ ぴったり！</p>
+                                        <p>答えは <b>6</b> だね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "120 ÷ 20 は いくつかな？", display: "120 ÷ 20", answer: 6 },
+                                        { question: "240 ÷ 30 は いくつかな？", display: "240 ÷ 30", answer: 8 }
+                                    ]
+                                },
+                                {
+                                    title: "(5) （わられる数）＝（わる数）✕（商）＋（あまり）",
+                                    content: `<h4>わり算の 答えを たしかめよう</h4>
+                                    <div class="point-box">
+                                        わり算の 計算が あっているか、<br>
+                                        <b>かけ算と たし算</b> を つかって たしかめることが できるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>10 ÷ 3 ＝ 3 あまり 1</b></p>
+                                        <p>たしかめの式：<b>3（わる数） ✕ 3（商） ＋ 1（あまり） ＝ 10（わられる数）</b></p>
+                                        <p>この式が 成立（せいりつ）すれば、わり算は 正解（せいかい）だよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "13 ÷ 4 ＝ 3 あまり 1。たしかめの式は？", display: "13 ÷ 4 ＝ 3 ... 1", answer: "4✕3+1=13", options: ["4✕3+1=13", "3✕4+1=13", "13-4✕3=1"] }
+                                    ]
+                                },
+                                {
+                                    title: "(6) わり算の性質（せいしつ）",
+                                    content: `<h4>わり算の べんりな きまり</h4>
+                                    <div class="point-box">
+                                        ・わられる数と わる数に <b>同じ数を かけても</b>、商は 同じ。<br>
+                                        ・わられる数と わる数から <b>同じ数を わっても</b>、商は 同じ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【例：12 ÷ 4 ＝ 3】</b></p>
+                                        <p>・わられる数と わる数に <b>2をかける</b> ➔ （12✕2）÷（4✕2）＝ 24 ÷ 8 ＝ 3！<br>
+                                        ・わられる数と わる数から <b>2をわる</b> ➔ （12÷2）÷（4÷2）＝ 6 ÷ 2 ＝ 3！</p>
+                                        <p>どちらも 商は <b>3</b> で 同じだったね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "20 ÷ 5 ＝ 4。わられる数と わる数を 3倍（ばい）すると？", display: "20 ÷ 5", answer: 4, options: [4, 12, 60] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 小数（しょうすう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 1/10, 1/100, 1/1000",
+                                    content: `<h4>もっと 小さな数</h4>
+                                    <div class="point-box">
+                                        1を 10こに 分けた 1つ分 ➔ <b>0.1</b>（れい てん いち）<br>
+                                        1を 100こに 分けた 1つ分 ➔ <b>0.01</b>（れい てん れい いち）<br>
+                                        1を 1000こに 分けた 1つ分 ➔ <b>0.001</b>（れい てん れい れい いち）
+                                    </div>
+                                    <div class="data-demo">
+                                        <table class="data-table" style="width: 300px; margin: 0 auto;">
+                                            <tr><th style="background:#bae7ff">1の位</th><th style="background:#ffe58f">1/10の位</th><th style="background:#fff7e6">1/100の位</th><th style="background:#d9f7be">1/1000の位</th></tr>
+                                            <tr><td>0</td><td>.</td><td>1</td><td></td><td></td></tr>
+                                            <tr><td>0</td><td>.</td><td>0</td><td>1</td><td></td></tr>
+                                            <tr><td>0</td><td>.</td><td>0</td><td>0</td><td>1</td></tr>
+                                        </table>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.1が 10こ あつまると いくつかな？", display: "0.1 ✕ 10", answer: 1 },
+                                        { question: "0.01が 10こ あつまると いくつかな？", display: "0.01 ✕ 10", answer: 0.1 },
+                                        { question: "0.001が 1000こ あつまると いくつかな？", display: "0.001 ✕ 1000", answer: 1 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 小数のたし算",
+                                    content: `<h4>小数点を ぴったりそろえよう</h4>
+                                    <div class="point-box">
+                                        小数点の 位置（いち）を ぴったりそろえて、位（くらい）を まちがえないように 足し算しよう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  1 . 2
++ 3 . 4
+-------
+  4 . 6
+                                        </pre>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.5 ＋ 0.3 は いくつかな？", display: "0.5 ＋ 0.3", answer: 0.8 },
+                                        { question: "1.2 ＋ 2.5 は いくつかな？", display: "1.2 ＋ 2.5", answer: 3.7 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 小数のひき算",
+                                    content: `<h4>小数点を ぴったりそろえよう</h4>
+                                    <div class="point-box">
+                                        引き算も、小数点の 位置（いち）を ぴったりそろえて 計算しよう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  4 . 6
+- 1 . 2
+-------
+  3 . 4
+                                        </pre>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.8 － 0.3 は いくつかな？", display: "0.8 － 0.3", answer: 0.5 },
+                                        { question: "3.7 － 1.5 は いくつかな？", display: "3.7 － 1.5", answer: 2.2 }
+                                    ]
+                                },
+                                {
+                                    title: "(4) 小数のかけ算（整数をかける）",
+                                    content: `<h4>小数を 整数倍（せいすうばい）する</h4>
+                                    <div class="point-box">
+                                        小数に 整数をかける 計算は、整数のかけ算と 同じように 計算して、<br>
+                                        あとで 小数点を 打（う）つ位置を 気をつけよう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>0.3 ✕ 2 ＝ □</b></p>
+                                        <p>➔ 3 ✕ 2 ＝ 6 だから、小数点は 1つ左に ずらして <b>0.6</b>！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.4 ✕ 3 は いくつかな？", display: "0.4 ✕ 3", answer: 1.2 },
+                                        { question: "1.5 ✕ 2 は いくつかな？", display: "1.5 ✕ 2", answer: 3.0 }
+                                    ]
+                                },
+                                {
+                                    title: "(5) 小数のわり算（整数でわる）",
+                                    content: `<h4>小数を 整数で分ける</h4>
+                                    <div class="point-box">
+                                        小数を 整数でわる 計算も、整数でのわり算と 同じように 計算して、<br>
+                                        商（しょう）の 小数点は、わられる数（左の数）の 小数点に そろえて 打（う）とう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>0.8 ÷ 2 ＝ □</b></p>
+                                        <p>➔ 8 ÷ 2 ＝ 4 だから、小数点は 1つ左に ずらして <b>0.4</b>！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.9 ÷ 3 は いくつかな？", display: "0.9 ÷ 3", answer: 0.3 },
+                                        { question: "3.6 ÷ 4 は いくつかな？", display: "3.6 ÷ 4", answer: 0.9 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "5. 分数（ぶんすう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 同（どう）分母（ぶんぼ）のたし算",
+                                    content: `<h4>分母が 同じなら、分子を たすだけ！</h4>
+                                    <div class="point-box">
+                                        分母（下の数）が 同じ分数の たし算は、分子（上の数）どうしを 足すだけで いいよ！<br>
+                                        分母は そのまま 変（か）わらないよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p style="font-size: 32px;"><b>1/3 ＋ 1/3 ＝ 2/3</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1/5 ＋ 2/5 は いくつかな？", display: "1/5 ＋ 2/5", answer: "3/5" },
+                                        { question: "2/7 ＋ 3/7 は いくつかな？", display: "2/7 ＋ 3/7", answer: "5/7" }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 同（どう）分母（ぶんぼ）のひき算",
+                                    content: `<h4>分母が 同じなら、分子を ひくだけ！</h4>
+                                    <div class="point-box">
+                                        分母（下の数）が 同じ分数の ひき算も、分子（上の数）どうしを 引くだけで いいよ！<br>
+                                        分母は そのまま 変（か）わらないよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p style="font-size: 32px;"><b>2/3 － 1/3 ＝ 1/3</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "3/5 － 1/5 は いくつかな？", display: "3/5 － 1/5", answer: "2/5" },
+                                        { question: "5/7 － 2/7 は いくつかな？", display: "5/7 － 2/7", answer: "3/7" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "6. 四則演算（しそくえんざん）のルール",
+                            subUnits: [
+                                {
+                                    title: "(1) 計算（けいさん）の順番（じゅんばん）",
+                                    content: `<h4>カッコのなか、かけ算・わり算が 先！</h4>
+                                    <div class="point-box">
+                                        計算は、まちがえないように 正しい 順番（じゅんばん）で しよう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【計算の 順番】</b></p>
+                                        <ol style="text-align: left; display: inline-block;">
+                                            <li><b>カッコ（　）</b>の中</li>
+                                            <li><b>かけ算（✕）</b>と <b>わり算（÷）</b></li>
+                                            <li><b>たし算（＋）</b>と <b>ひき算（－）</b></li>
+                                        </ol>
+                                        <p style="margin-top:10px;">同じ 順番の 計算は、左（ひだり）から 順番に するよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「3 ＋ 4 ✕ 2」の 計算の答えは？", display: "3 ＋ 4 ✕ 2", answer: 11 },
+                                        { question: "「(5 ＋ 3) ÷ 2」の 計算の答えは？", display: "(5 ＋ 3) ÷ 2", answer: 4 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 四則演算の性質",
+                                    content: `<h4>計算を らくにする きまり</h4>
+                                    <div class="point-box">
+                                        たし算と かけ算には、べんりな きまりが あるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【たし算の きまり】</b></p>
+                                        <p>・<b>交換（こうかん）の法則（ほうそく）</b>：順番を 入れかえても 同じ（A＋B＝B＋A）<br>
+                                        ・<b>結合（けつごう）の法則</b>：どこから 先に 計算しても 同じ（(A＋B)＋C＝A＋(B＋C)）</p>
+
+                                        <p style="margin-top:20px;"><b>【かけ算の きまり】</b></p>
+                                        <p>・<b>交換の法則</b>：順番を 入れかえても 同じ（A✕B＝B✕A）<br>
+                                        ・<b>結合の法則</b>：どこから 先に 計算しても 同じ（(A✕B)✕C＝A✕(B✕C)）<br>
+                                        ・<b>分配（ぶんぱい）の法則</b>：カッコを 外（はず）して 計算しても 同じ（(A＋B)✕C＝A✕C＋B✕C）</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「5 ＋ 3 ＝ 3 ＋ 5」のような きまりを 何という？", display: "5 ＋ 3 ＝ 3 ＋ 5", answer: "交換の法則", options: ["交換の法則", "結合の法則", "分配の法則"] },
+                                        { question: "「(2 ✕ 4) ✕ 5 ＝ 2 ✕ (4 ✕ 5)」のような きまりを 何という？", display: "(2✕4)✕5＝2✕(4✕5)", answer: "結合の法則", options: ["交換の法則", "結合の法則", "分配の法則"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "7. そろばん",
+                            subUnits: [
+                                {
+                                    title: "(1) 大きな数（かず）の表し方",
+                                    content: `<h4>そろばんで 大きな数を 理解（りかい）しよう</h4>
+                                    <div class="point-box">
+                                        そろばんは、<b>位（くらい）</b> のしくみを 理解するのに とても べんりな 道具だよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>そろばんは、珠（たま）を 置く位置（いち）で 位が決まるから、<br>
+                                        万（まん）、億（おく）、兆（ちょう）などの 大きな数も、正しく 表すことが できるよ。</p>
+                                        <p style="margin-top:10px;">どこかを 「一の位」と 決めれば、左へ いくほど 大きな数に なるんだね。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "そろばんで、万の位の珠を 置くのは どの位置かな？", display: "そろばんの位", answer: "一の位の左から4番目", options: ["一の位の左から3番目", "一の位の左から4番目", "一の位の右から1番目"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 小数（しょうすう）の表し方",
+                                    content: `<h4>そろばんで 小数を 理解（りかい）しよう</h4>
+                                    <div class="point-box">
+                                        そろばんは、小数（しょうすう）の 計算にも つかうことができるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>そろばんでは、どこかを 「一の位」と 決めれば、<br>
+                                        その右が 0.1、さらに右が 0.01 といった 小数も 表せるんだ。</p>
+                                        <p style="margin-top:10px;">小数点を 意識（いしき）して、正確（せいかく）な 計算を しよう！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "そろばんで 0.1を表すのは、一の位の どの位置かな？", display: "そろばんの小数", answer: "一の位のすぐ右", options: ["一の位のすぐ右", "一の位のすぐ左", "十の位のすぐ右"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 角の大きさ", subUnits: [{ title: "(1) 分度器の使い方", content: "角度をはかろう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 面積", subUnits: [{ title: "(1) 広さの表し方", content: "面積の公式を覚えよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 折れ線グラフ", subUnits: [{ title: "(1) 変化を見る", content: "グラフで変化を調べよう。" }] }] }
