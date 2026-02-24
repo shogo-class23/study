@@ -1954,7 +1954,7 @@ const studyData = {
                                             ・線が つながっていない（あいている）<br>
                                             ・線が まがっている
                                         </div>`,
-                                        quizzes: [
+                                        quizzes: [{ question: "三矩形の辺の数は？", display: "三角形の辺の数は？", answer: 3 }
 
                                         ]
                                     },
@@ -1969,7 +1969,7 @@ const studyData = {
                                             <p>・<b>辺（へん）</b>：4本<br>
                                             ・<b>頂点（ちょうてん）</b>：4こ</p>
                                         </div>`,
-                                        quizzes: []
+                                        quizzes: [{ question: "四矩形の辺の数は？", display: "四角形の辺の数は？", answer: 4 }]
                                     },
                                     {
                                         title: "(3) 辺（へん）と 頂点（ちょうてん）",
@@ -1993,7 +1993,7 @@ const studyData = {
                                             <p><b>■ 正方形（せいほうけい）</b><br>
                                             4つの 辺の 長さが ぜんぶ <b>おなじ</b> で、かどが ぜんぶ <b>直角</b> の 四角形。</p>
                                         </div>`,
-                                        quizzes: []
+
                                     }
                                 ]
                             },
