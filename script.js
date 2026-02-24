@@ -2200,7 +2200,655 @@ const studyData = {
             e3: {
                 name: "小3",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. わり算", subUnits: [{ title: "(1) わり算の意味", content: "同じ数ずつ分けよう。" }] }] },
+                    {
+                        name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 1<ruby>億<rt>おく</rt></ruby>までの <ruby>数<rt>かず</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 2<ruby>年生<rt>ねんせい</rt></ruby>の <ruby>復習<rt>ふくしゅう</rt></ruby> と おおきな数",
+                                        content: `<h4>かずが ふえると おへやはどうなる？</h4>
+                                        <div class="data-demo">
+                                            <p><b>① 1000に なったとき</b></p>
+                                            <table class="data-table" style="width: 300px; margin: 0 auto;">
+                                                <tr><th style="background:#d9f7be">1000の<br>おへや</th><th style="background:#fff7e6">100の<br>おへや</th><th style="background:#ffe58f">10の<br>おへや</th><th style="background:#bae7ff">1の<br>おへや</th></tr>
+                                                <tr style="font-size: 24px; font-weight: bold; color: #e74c3c;"><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+                                            </table>
+                                            <p><small>「100の おへや」がいっぱいに なって、<br>「1000の おへや」に <b>1つ</b> おひっこし したよ！</small></p>
+
+                                            <p style="margin-top:20px;"><b>② 10000（一万）に なったとき</b></p>
+                                            <table class="data-table" style="width: 350px; margin: 0 auto;">
+                                                <tr><th style="background:#efdbff">一万の<br>おへや</th><th style="background:#d9f7be">1000の</th><th style="background:#fff7e6">100の</th><th style="background:#ffe58f">10の</th><th style="background:#bae7ff">1の</th></tr>
+                                                <tr style="font-size: 24px; font-weight: bold; color: #e74c3c;"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                            </table>
+                                            <p><small>1000の まとまりが 10こで <b>10000（いちまん）</b> に なったね！</small></p>
+
+                                            <p style="margin-top:20px;"><b>③ もっと もっと ふえると？</b></p>
+                                            <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                                                <table class="data-table" style="width: 400px;">
+                                                    <tr><th style="background:#efdbff">十万の</th><th style="background:#efdbff">一万の</th><th style="background:#d9f7be">千の</th><th style="background:#fff7e6">百の</th><th style="background:#ffe58f">十の</th><th style="background:#bae7ff">一の</th></tr>
+                                                    <tr style="font-size: 20px; font-weight: bold;"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                                </table>
+                                                <p><small>一万の まとまりが 10こで <b>100000（じゅうまん）</b></small></p>
+
+                                                <table class="data-table" style="width: 450px;">
+                                                    <tr><th style="background:#efdbff">千万の</th><th style="background:#efdbff">百万の</th><th style="background:#efdbff">十万の</th><th style="background:#efdbff">一万の</th><th style="background:#d9f7be">千の</th><th style="background:#fff7e6">百の</th><th style="background:#ffe58f">十の</th><th style="background:#bae7ff">一の</th></tr>
+                                                    <tr style="font-size: 18px; font-weight: bold;"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                                </table>
+                                                <p><small>百万の まとまりが 10こで <b>10000000（せんまん）</b></small></p>
+
+                                                <p style="font-size: 20px; color: #e74c3c; font-weight: bold;">④ ついに 1億（いちおく）！</p>
+                                                <table class="data-table" style="width: 500px; font-size: 12px;">
+                                                    <tr><th style="background:#ffccc7">一億の<br>おへや</th><th style="background:#efdbff">千万</th><th style="background:#efdbff">百万</th><th style="background:#efdbff">十万</th><th style="background:#efdbff">一万</th><th style="background:#d9f7be">千</th><th style="background:#fff7e6">百</th><th style="background:#ffe58f">十</th><th style="background:#bae7ff">一</th></tr>
+                                                    <tr style="font-size: 18px; font-weight: bold; color: #e74c3c;"><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                                                </table>
+                                                <p><small>千万の まとまりが 10こで <b>100000000（いちおく）</b> に おひっこし！</small></p>
+                                            </div>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1000が 10こ あつまると いくつかな？", display: "1000が 10こ", answer: 10000 },
+                                            { question: "一万が 10こ あつまると いくつかな？", display: "一万が 10こ", answer: 100000 },
+                                            { question: "千万が 10こ あつまると いくつかな？", display: "千万が 10こ", answer: 100000000 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>等号<rt>とうごう</rt></ruby>と <ruby>不等号<rt>ふとうごう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) おおきい ほうを むく しるし",
+                                        content: `<h4>「く」の字（じ）の しるしを おぼえよう</h4>
+                                        <div class="point-box">
+                                            かずの おおきさを くらべるときは、<b>「＞」</b> や <b>「＜」</b> を つかうよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>5000 ＞ 3000</b></p>
+                                            <p>おくちが <b>ひらいている ほう</b> が、おおきい かずだよ！</p>
+                                            <p style="font-size: 40px;">🐊</p>
+                                            <p>「わにさんの おくち」は、おいしいものが たくさん あるほうを むくんだね！</p>
+                                        </div>
+                                        <h4>おなじ おおきさの ときは？</h4>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>1000 ＝ 1000</b></p>
+                                            <p>おなじ おおきさなら <b>「＝」（は）</b> を かくよ。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "あてはまる しるしを えらんでね", display: "4500 □ 5400", answer: "＜", options: ["＞", "＜", "＝"] },
+                                            { question: "あてはまる しるしを えらんでね", display: "一万 □ 9999", answer: "＞", options: ["＞", "＜", "＝"] },
+                                            { question: "あてはまる しるしを えらんでね", display: "10000 □ 10000", answer: "＝", options: ["＞", "＜", "＝"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>（<ruby>筆算<rt>ひっさん</rt></ruby>）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 3けたの <ruby>足<rt>た</rt></ruby>し算（くりあがりなし）",
+                                        content: `<h4>お部屋ごとに たすだけ！</h4>
+                                        <div class="point-box">
+                                            どの お部屋も 10より ちいさいときは、そのまま たすだけで OKだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  1 2 3
++ 4 5 6
+-------
+  5 7 9
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "214 ＋ 352 は いくつかな？", display: "  214<br>+ 352", answer: 566 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 3けたの <ruby>足<rt>た</rt></ruby>し算（くりあがりあり）",
+                                        content: `<h4>10あつまったら お引（ひ）っこし！</h4>
+                                        <div class="point-box">
+                                            合計（ごうけい）が 10以上に なったら、おとなりの お部屋へ 1つ あげるんだったね。
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  5 8 2
++ 1 3 9
+-------
+  7 2 1
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "468 ＋ 275 は いくつかな？", display: "  468<br>+ 275", answer: 743 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 4けたの <ruby>足<rt>た</rt></ruby>し算",
+                                        content: `<h4>千のお部屋まで たしてみよう</h4>
+                                        <div class="point-box">
+                                            お部屋が ふえても、やりかたは おなじ！ 右から じゅんばんに けいさんしよう。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>① くりあがりなし</b></p>
+                                            <pre style="font-size: 20px; line-height: 1.2; letter-spacing: 5px;">
+  1 2 0 0
++ 3 4 0 0
+---------
+  4 6 0 0
+                                            </pre>
+                                            <p style="margin-top:10px;"><b>② くりあがりあり</b></p>
+                                            <pre style="font-size: 20px; line-height: 1.2; letter-spacing: 5px;">
+  4 5 0 0
++ 2 8 0 0
+---------
+  7 3 0 0
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "2300 ＋ 1500 は？", display: "2300 ＋ 1500", answer: 3800 },
+                                            { question: "5700 ＋ 2600 は？", display: "5700 ＋ 2600", answer: 8300 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. <ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>（<ruby>筆算<rt>ひっさん</rt></ruby>）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 3けたの <ruby>引<rt>ひ</rt></ruby>き算（くりさがりなし）",
+                                        content: `<h4>お部屋ごとに ひくだけ！</h4>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  8 4 5
+- 2 1 3
+-------
+  6 3 2
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "789 － 456 は いくつかな？", display: "  789<br>- 456", answer: 333 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 3けたの <ruby>引<rt>ひ</rt></ruby>き算（くりさがりあり）",
+                                        content: `<h4>おとなりから 借りてこよう</h4>
+                                        <div class="point-box">
+                                            引けないときは、おとなりの お部屋を 1つ バラして 10個 もらうよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  5 1 2
+- 2 4 5
+-------
+  2 6 7
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "634 － 258 は いくつかな？", display: "  634<br>- 258", answer: 376 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 4けたの <ruby>引<rt>ひ</rt></ruby>き算",
+                                        content: `<h4>大きな 数の 引き算</h4>
+                                        <div class="data-demo">
+                                            <p><b>① くりさがりなし</b></p>
+                                            <pre style="font-size: 20px; line-height: 1.2; letter-spacing: 5px;">
+  4 5 0 0
+- 1 2 0 0
+---------
+  3 3 0 0
+                                            </pre>
+                                            <p style="margin-top:10px;"><b>② くりさがりあり</b></p>
+                                            <pre style="font-size: 20px; line-height: 1.2; letter-spacing: 5px;">
+  5 0 0 0
+- 1 2 0 0
+---------
+  3 8 0 0
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "8900 － 3400 は？", display: "8900 － 3400", answer: 5500 },
+                                            { question: "4000 － 1500 は？", display: "4000 － 1500", answer: 2500 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "5. かけ<ruby>算<rt>ざん</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 2けた ✕ 1けた の 筆算（ひっさん）",
+                                        content: `<h4>たてに ならべて 計算しよう</h4>
+                                        <div class="point-box">
+                                            2年生の 九九（くく）を つかって、お部屋ごとに 計算するよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  2 1
+✕   3
+-----
+  6 3
+                                            </pre>
+                                            <p>① 3 ✕ 1 ＝ 3<br>
+                                            ② 3 ✕ 2 ＝ 6</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "23 ✕ 3 は いくつかな？", display: "  23<br>✕  3", answer: 69 },
+                                            { question: "12 ✕ 4 は いくつかな？", display: "  12<br>✕  4", answer: 48 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 3けた ✕ 1けた の 筆算（ひっさん）",
+                                        content: `<h4>お部屋が ふえても やりかたは おなじ！</h4>
+                                        <div class="point-box">
+                                            百のお部屋、十のお部屋、一のお部屋。右から じゅんばんに かけていこう。
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  1 2 3
+✕   2
+-------
+  2 4 6
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "312 ✕ 2 は いくつかな？", display: "  312<br>✕   2", answer: 624 },
+                                            { question: "102 ✕ 3 は いくつかな？", display: "  102<br>✕   3", answer: 306 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 2けた ✕ 2けた の 筆算（ひっさん）",
+                                        content: `<h4>2だんに わけて 計算しよう</h4>
+                                        <div class="point-box">
+                                            かける数の 「一の位」と 「十の位」で、2回 かけ算をするんだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+    2 1
+  ✕ 1 3
+  -----
+    6 3  (3 ✕ 21)
+  2 1    (1 ✕ 21)
+  -----
+  2 7 3
+                                            </pre>
+                                        </div>
+                                        <p>さいごに 2つの 答えを たすと、できあがり！</p>`,
+                                        quizzes: [
+                                            { question: "12 ✕ 13 は いくつかな？", display: "  12<br>✕ 13", answer: 156 },
+                                            { question: "21 ✕ 32 は いくつかな？", display: "  21<br>✕ 32", answer: 672 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) 3けた ✕ 2けた の 筆算（ひっさん）",
+                                        content: `<h4>もっと おおきな かけ算</h4>
+                                        <div class="point-box">
+                                            これも 2だんに わけて 書いて、さいごに たし算をするよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+    1 2 3
+  ✕   1 2
+  -------
+    2 4 6
+  1 2 3
+  -------
+  1 4 7 6
+                                            </pre>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "231 ✕ 12 は いくつかな？", display: "  231<br>✕  12", answer: 2772 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) かけ算の きまり（性質）",
+                                        content: `<h4>計算（けいさん）が らくになる 3つの きまり</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            <b>① 交換（こうかん）の きまり</b><br>
+                                            <ruby>掛<rt>か</rt></ruby>ける 数を 入れかえても、答えは 同じだよ！<br>
+                                            <p style="text-align:center;"><b>3 ✕ 5 ＝ 5 ✕ 3</b></p>
+                                        </div>
+                                        <div class="point-box" style="background:#fff2f0;">
+                                            <b>② 結合（けつごう）の きまり</b><br>
+                                            3つの 数の かけ算は、どこから 先に 計算しても 答えは 同じ！<br>
+                                            <p style="text-align:center;"><b>(2 ✕ 3) ✕ 4 ＝ 2 ✕ (3 ✕ 4)</b></p>
+                                        </div>
+                                        <div class="point-box" style="background:#f6ffed;">
+                                            <b>③ 分配（ぶんぱい）の きまり</b><br>
+                                            たし算の 答えに 数を かけても、バラバラに かけてから たしても 同じ！<br>
+                                            <p style="text-align:center;"><b>(10 ＋ 2) ✕ 3 ＝ 10 ✕ 3 ＋ 2 ✕ 3</b></p>
+                                        </div>
+                                        <p>この きまりを つかうと、むずかしい 計算も かんたんに できるよ！</p>`,
+                                        quizzes: [
+                                            { question: "「3 ✕ 8」と 答えが 同じなのは？", display: "3 ✕ 8", answer: "8 ✕ 3", options: ["8 ✕ 3", "3 ＋ 8", "8 － 3"] },
+                                            { question: "「(7 ＋ 3) ✕ 2」と 答えが 同じなのは？", display: "(7 ＋ 3) ✕ 2", answer: "7✕2＋3✕2", options: ["7✕2＋3✕2", "7 ＋ 3 ＋ 2", "7✕3✕2"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. わり<ruby>算<rt>ざん</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) わり算の いみ（1位数 ✕ 1位数）",
+                                        content: `<h4>おなじ 数ずつ 分（わ）けると？</h4>
+                                        <div class="point-box">
+                                            12この 🍎を 3人に おなじ数ずつ 分けると、1人 <b>4こ</b> になるね。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>12 ÷ 3 ＝ 4</b></p>
+                                            <p>「12 わる 3 は 4」と よむよ！</p>
+                                        </div>
+                                        <p>このように、おなじ数ずつ 分ける 計算を <b>わり算</b> というよ。</p>`,
+                                        quizzes: [
+                                            { question: "8こを 2人で 同じ数ずつ 分けると、1人 何こかな？", display: "8 ÷ 2", answer: 4 },
+                                            { question: "15こを 3人で 同じ数ずつ 分けると、1人 何こかな？", display: "15 ÷ 3", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) かけ算・たし算・ひき算との かんけい",
+                                        content: `<h4>わり算の 答えを 見つける ヒント</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            <b>かけ算との かんけい</b><br>
+                                            12 ÷ 3 の 答えは、<b>3 ✕ □ ＝ 12</b> になる □ を さがせばいいんだよ！
+                                        </div>
+                                        <div class="point-box" style="background:#fff2f0;">
+                                            <b>ひきざんとの かんけい</b><br>
+                                            12から 3を 何回 引（ひ）けるかな？<br>
+                                            12 － 3 － 3 － 3 － 3 ＝ 0 ➔ <b>4回</b> 引けるから、答えは 4！
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「20 ÷ 4」の 答えを かけ算で さがすと？", display: "4 ✕ □ ＝ 20", answer: 5 },
+                                            { question: "「10 ÷ 2」の 答えを ひき算で さがすと？", display: "10 － 2 － 2 － ... 何回引ける？", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 1位数で わる 計算（けいさん）",
+                                        content: `<h4>九九（くく）を つかって パッと とこう</h4>
+                                        <div class="point-box">
+                                            わる数（右がわの数）の だんの 九九を おもい出そう！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>24 ÷ 6 ＝ □</b></p>
+                                            <p>➔ 6のだん：6 ✕ 1＝6, 6 ✕ 2＝12, 6 ✕ 3＝18, <b>6 ✕ 4＝24</b>！</p>
+                                            <p>答えは <b>4</b> だね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "32 ÷ 8 は いくつかな？", display: "32 ÷ 8", answer: 4 },
+                                            { question: "45 ÷ 9 は いくつかな？", display: "45 ÷ 9", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) 答えが 2けたに なる わり算",
+                                        content: `<h4>50 や 30 などの 計算</h4>
+                                        <div class="point-box">
+                                            大きな 数でも、10の まとまりで かんがえると かんたんだよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>80 ÷ 2 ＝ □</b></p>
+                                            <p>➔ 10の まとまりが <b>8つ</b> あるよ。</p>
+                                            <p>➔ 8 ÷ 2 ＝ 4</p>
+                                            <p>➔ 10の まとまりが 4つだから、答えは <b>40</b> だね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "60 ÷ 3 は いくつかな？", display: "60 ÷ 3", answer: 20 },
+                                            { question: "100 ÷ 2 は いくつかな？", display: "100 ÷ 2", answer: 50 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "7. <ruby>小数<rt>しょうすう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) 「.」（てん）と 1/10 の おはなし",
+                                        content: `<h4>1より ちいさい お部屋（位）</h4>
+                                        <div class="point-box">
+                                            1を 10こに 分けた 1つ分を <b>0.1（れい てん いち）</b> というよ。<br>
+                                            この 「 . 」 を <b>小数（しょうすう）点</b> と よぶんだ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>0.1 が 10こ あつまると <b>1</b> になるよ！</p>
+                                            <div style="display:flex; width:200px; height:30px; border:2px solid #333; margin:0 auto;">
+                                                <div style="flex:1; background:#ffd6e7; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div>
+                                            </div>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "0.1 が 10こ あつまると いくつ？", display: "0.1 ✕ 10", answer: 1 },
+                                            { question: "1を 10こに 分けた 1つ分は？", display: "1 ÷ 10", answer: 0.1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 小数の たし算",
+                                        content: `<h4>「.」を そろえて たそう</h4>
+                                        <div class="point-box">
+                                            たし算の ときは、小数点の ばしょを ぴったり そろえて 書くのが ポイント！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>0.3 ＋ 0.5 ＝ 0.8</b></p>
+                                            <p>3 ＋ 5 ＝ 8 と 同じように かんがえていいよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "0.4 ＋ 0.2 は いくつかな？", display: "0.4 ＋ 0.2", answer: 0.6 },
+                                            { question: "0.6 ＋ 0.4 は いくつかな？", display: "0.6 ＋ 0.4", answer: 1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 小数の 引き算",
+                                        content: `<h4>「.」を そろえて ひこう</h4>
+                                        <div class="point-box">
+                                            引き算も 同じ！ 小数点を そろえて 計算しよう。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>0.8 － 0.3 ＝ 0.5</b></p>
+                                            <p><b>1 － 0.2</b> のときは、1を <b>1.0</b> だと かんがえると まちがえにくいよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "0.9 － 0.5 は いくつかな？", display: "0.9 － 0.5", answer: 0.4 },
+                                            { question: "1 － 0.3 は いくつかな？", display: "1 － 0.3", answer: 0.7 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "8. <ruby>分数<rt>ぶんすう</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>分母<rt>ぶんぼ</rt></ruby>と <ruby>分子<rt>ぶんし</rt></ruby>",
+                                        content: `<h4>分数の なまえを おぼえよう</h4>
+                                        <div class="point-box">
+                                            ・下の数 ➔ <b>分母（ぶんぼ）</b>：お母さんが 子を おんぶしているよ。<br>
+                                            ・上の数 ➔ <b>分子（ぶんし）</b>：上に 乗っているのが 子どもだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 32px;"><b><ruby>1<rt>（分子）</rt></ruby><br>―<br><ruby>3<rt>（分母）</rt></ruby></b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「3分の1」の下の数（3）のなまえは？", display: "1/3", answer: "分母", options: ["分母", "分子"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) <ruby>単位<rt>たんい</rt></ruby>分数の いくつ分",
+                                        content: `<h4>もとになる 大きさ</h4>
+                                        <div class="point-box">
+                                            1/3（3分の1）が 2こ あつまると <b>2/3（3分の2）</b> になるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>1/4 が 3こ あつまると ➔ <b>3/4</b></p>
+                                            <p>1/4 が 4こ あつまると ➔ <b>4/4（つまり 1！）</b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1/5 が 3こ あつまると いくつ？", display: "1/5 ✕ 3", answer: "3/5" }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 分数の たし算",
+                                        content: `<h4>上の数（分子）だけ たそう</h4>
+                                        <div class="point-box">
+                                            分母（下の数）が 同じなら、上の数（分子）を たすだけだよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>1/5 ＋ 2/5 ＝ 3/5</b></p>
+                                            <p>※ 下の数は 5のままで 変わらないよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1/4 ＋ 2/4 は いくつ？", display: "1/4 ＋ 2/4", answer: "3/4" }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) 分数の 引き算",
+                                        content: `<h4>上の数（分子）だけ ひこう</h4>
+                                        <div class="point-box">
+                                            分母が 同じなら、上の数（分子）を ひくだけ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>3/5 － 1/5 ＝ 2/5</b></p>
+                                            <p><b>1 － 1/3</b> のときは、1を <b>3/3</b> だと かんがえよう！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "4/5 － 1/5 は いくつ？", display: "4/5 － 1/5", answer: "3/5" },
+                                            { question: "1 － 1/4 は いくつ？", display: "1 － 1/4", answer: "3/4" }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "9. □を つかった <ruby>式<rt>しき</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) わからない <ruby>数<rt>かず</rt></ruby>を □に しよう",
+                                        content: `<h4>おはなしを そのまま 式（しき）にする</h4>
+                                        <div class="point-box">
+                                            わからない 数があるときは、そこに<b>「□」</b>を 書いて 式を たてることができるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【もんだい】</b><br>
+                                            あめを 何こか もっていました。8こ もらったら、ぜんぶで 17こに なりました。</p>
+                                            <p style="text-align:center; font-size: 24px; font-weight: bold;">
+                                                <span style="border: 2px solid #333; padding: 0 10px; border-radius: 5px;">？</span> ＋ 8 ＝ 17<br>
+                                                ↓<br>
+                                                <span style="border: 2px solid #333; padding: 0 10px; border-radius: 5px;">□</span> ＋ 8 ＝ 17
+                                            </p>
+                                        </div>
+                                        <p>おはなしの じゅんばん 通（どお）りに 式を つくれるから、とっても わかりやすいね！</p>`,
+                                        quizzes: [
+                                            { question: "「はじめに 5こ あって、いくつか もらったら 12こに なった」を 式にすると？", display: "5 ＋ □ ＝ 12", answer: "5+□=12", options: ["5+□=12", "5+12=□", "□-5=12"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) □に あてはまる <ruby>数<rt>かず</rt></ruby>を 見（み）つけよう",
+                                        content: `<h4>どうやって さがす？</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            <b>① じゅんばんに 入（い）れてみる</b><br>
+                                            1, 2, 3... と じゅんばんに 入れてみて、ぴったりに なるのを さがすよ。<br>
+                                            「8かな？ 9かな？」と およその 見当（けんとう）を つけるのも いいね！
+                                        </div>
+                                        <div class="point-box" style="background:#fff2f0;">
+                                            <b>② ぎゃくの 計算（けいさん）を する</b><br>
+                                            <b>□ ＋ 8 ＝ 17</b> なら、<br>
+                                            <b>17 － 8</b> を すると、□が <b>9</b> だって すぐわかるよ！
+                                        </div>
+                                        <p>□を つかった 「□ ＋ 8」という 式そのものが、17 という 一つの 数を あらわしているんだね。</p>`,
+                                        quizzes: [
+                                            { question: "□ ＋ 5 ＝ 13 。 □は いくつかな？", display: "□ ＋ 5 ＝ 13", answer: 8 },
+                                            { question: "20 － □ ＝ 15 。 □は いくつかな？", display: "20 － □ ＝ 15", answer: 5 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "10. そろばん",
+                                subUnits: [
+                                    {
+                                        title: "(1) そろばんの 道具（どうぐ）と おやくそく",
+                                        content: `<h4>お部屋（くらい）が よくわかる！</h4>
+                                        <div class="point-box">
+                                            そろばんは、珠（たま）を 動（うご）かして 計算する 道具（どうぐ）だよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>・上にある 1つの珠 ➔ <b>5</b>（五だま）<br>
+                                            ・下にある 4つの珠 ➔ <b>1</b>（一だま）</p>
+                                        </div>
+                                        <p>そろばんの 縦（たて）の 棒（ぼう）は、一つひとつが <b>「お部屋（位）」</b> を あらわしているんだよ！</p>`,
+                                        quizzes: [
+                                            { question: "そろばんの 上にある 珠（たま）1つは、いくつ分かな？", display: "上にある珠", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) <ruby>整数<rt>せいすう</rt></ruby>と <ruby>小数<rt>しょうすう</rt></ruby>の 表し方",
+                                        content: `<h4>お部屋を 決（き）めて 数（かず）を おこう</h4>
+                                        <div class="point-box">
+                                            どこを 「一の位」に するか 決めたら、そこから 左へ いくほど 大きな数に なるよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>① 整数（せいすう）</b><br>
+                                            一、十、百、千、<b>万（まん）</b> の 単位まで 表せるよ！</p>
+                                            <p><b>② 小数（しょうすう）</b><br>
+                                            一の位の 右どなりを <b>0.1（1/10）</b> の お部屋に するんだよ。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "一の位の 左どなりは、何の お部屋かな？", display: "一の位 ➔ ❓", answer: "十の位", options: ["十の位", "百の位", "0.1の位"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) そろばんで <ruby>足<rt>た</rt></ruby>し算",
+                                        content: `<h4>珠（たま）を 入れてみよう</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            <b>① そのまま 入れる</b><br>
+                                            「2＋1」なら 一だまを 1つ 入れるだけ。
+                                        </div>
+                                        <div class="point-box" style="background:#fffbe6;">
+                                            <b>② 「5」の まとまりを つかう</b><br>
+                                            「4＋3」なら、五だまを 入れてから、一だまを 2つ 取るよ！
+                                        </div>
+                                        <div class="point-box" style="background:#f6ffed;">
+                                            <b>③ お引（ひ）っこし（くりあがり）</b><br>
+                                            「8＋9」なら、おとなりの お部屋に 1入れて、自分のお部屋から 一だまを 1つ取るよ。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「4 ＋ 3」を するとき、五だまを 入れたあとに 取る 一だまは 何こ？", display: "4 ＋ 3", answer: 2 },
+                                            { question: "「8 ＋ 9」を するとき、おとなりの お部屋に いくつ 入れる？", display: "8 ＋ 9", answer: 1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) そろばんで <ruby>引<rt>ひ</rt></ruby>き算",
+                                        content: `<h4>珠（たま）を 取ってみよう</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            <b>① そのまま 取る</b><br>
+                                            「3－1」なら 一だまを 1つ 取るだけ！
+                                        </div>
+                                        <div class="point-box" style="background:#fffbe6;">
+                                            <b>② 「5」から 借りる</b><br>
+                                            「6－4」なら、五だまを 取ってから、一だまを 1つ 入れるよ。
+                                        </div>
+                                        <div class="point-box" style="background:#fff2f0;">
+                                            <b>③ おとなりから 借りる（くりさがり）</b><br>
+                                            「15－7」なら、おとなりの お部屋から 1取って、自分のお部屋に 一だまを 3つ 入れるよ。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「6 － 4」を するとき、五だまを 取ったあとに 入れる 一だまは 何こ？", display: "6 － 4", answer: 1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) おおきな数や 小数の 計算",
+                                        content: `<h4>万（まん）や 小数（しょうすう）も かんたん！</h4>
+                                        <div class="point-box">
+                                            どこの お部屋を つかうか 決（き）めれば、どんな 計算も おなじ やりかた！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>① 万の 単位（たんい）</b><br>
+                                            3万 ＋ 5万 ➔ 万の お部屋で 3 ＋ 5 を するだけ！ ➔ <b>8万</b></p>
+                                            <p><b>② 小数（しょうすう）</b><br>
+                                            2.6 ＋ 0.3 ➔ 0.1の お部屋で 6＋3 を すれば OK！ ➔ <b>2.9</b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「2万 ＋ 4万」は いくつかな？", display: "2万 ＋ 4万", answer: "6万" },
+                                            { question: "「1.5 ＋ 0.2」は いくつかな？", display: "1.5 ＋ 0.2", answer: 1.7 }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 円と球", subUnits: [{ title: "(1) コンパスの使い方", content: "きれいな円をかこう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 重さ(g, kg)", subUnits: [{ title: "(1) はかりの使い方", content: "重さをはかってみよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 棒グラフ", subUnits: [{ title: "(1) グラフのかき方", content: "データをグラフにしよう。" }] }] }
