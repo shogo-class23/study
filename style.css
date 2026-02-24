@@ -667,6 +667,94 @@ main {
     gap: 30px;
 }
 
+/* Quiz Styles */
+.quiz-container {
+    background: #fff;
+    border: 3px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.quiz-title {
+    background: #ff7675;
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quiz-question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.quiz-display {
+    font-size: 40px;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+.quiz-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.quiz-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quiz-btn:hover {
+    border-color: #3498db;
+    background: #f1f7fd;
+}
+
+.quiz-btn.correct {
+    background: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+    animation: bounce 0.5s;
+}
+
+.quiz-btn.wrong {
+    background: #ff7675;
+    color: white;
+    border-color: #d63031;
+    animation: shake 0.5s;
+}
+
+.quiz-feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    min-height: 30px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
 /* Vertical Calculation (Hissan) */
 .hissan {
     display: flex;

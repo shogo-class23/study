@@ -16,7 +16,7 @@ const studyData = {
                                         title: "(1) いくつある？",
                                         content: `<h4>1から じゅんばんに ふえていくよ</h4>
                                         <div class="point-box">
-                                            ひとつずつ ふえると、かずの なまえも かわるよ。
+                                            ひとつずつ ふえると、かずの なまえも かわるよ.
                                         </div>
                                         <div class="data-demo" style="text-align: left; line-height: 2;">
                                             🍎 ➔ <b>1</b>（いち）<br>
@@ -31,7 +31,13 @@ const studyData = {
                                             🍎🍎🍎🍎🍎 🍎🍎🍎🍎🍎 ➔ <b>10</b>（じゅう）
                                         </div>
                                         <p>10は、<b>5が 2つ</b> あつまった かずだね！<br>
-                                        えを ゆびで さしながら、こえに だして かぞえてみよう！</p>`
+                                        えを ゆびで さしながら、こえに だして かぞえてみよう！</p>`,
+                                        quiz: {
+                                            question: "くだものは なんこ あるかな？",
+                                            display: "🍎 🍎 🍎 🍎",
+                                            options: [3, 4, 5],
+                                            answer: 4
+                                        }
                                     },
                                     {
                                         title: "(2) なにもないとき",
@@ -174,6 +180,32 @@ const studyData = {
                                             (🖐️) (🖐️) (🖐️)<br>
                                             <b>5, 10, 15...</b> と かぞえると 10が すぐ つくれるね！
                                         </div>`
+                                    },
+                                    {
+                                        title: "(5) なんばんめ",
+                                        content: `<h4>「かず」と 「じゅんばん」の ちがい</h4>
+                                        <div class="point-box">
+                                            「〜にん」と 「〜ばんめ」は、にているけど ちがうよ！
+                                        </div>
+                                        
+                                        <div class="data-demo">
+                                            <p>🐱 🐰 🦊 🐻 🦁<br>
+                                            <small>まえ　➔　うしろ</small></p>
+
+                                            <div style="background: #fff; padding: 10px; border-radius: 10px; border: 2px solid #eee;">
+                                                <p><b>① まえから 3にん</b></p>
+                                                <p><span style="background: #bae7ff;">🐱 🐰 🦊</span> 🐻 🦁</p>
+                                                <p><small>まえから 3にん <b>ぜんぶ</b> の ことだよ。</small></p>
+                                            </div>
+
+                                            <div style="background: #fff; padding: 10px; border-radius: 10px; border: 2px solid #eee; margin-top: 10px;">
+                                                <p><b>② まえから 3ばんめ</b></p>
+                                                <p>🐱 🐰 <span style="background: #ffe58f; padding: 2px 5px; border-radius: 5px; border: 2px solid #e74c3c;">🦊</span> 🐻 🦁</p>
+                                                <p><small>3ばんめの <b>ひとりだけ</b> の ことだよ。</small></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <p>「まえから」か 「うしろから」か、よく きいて かぞえてみよう！</p>`
                                     }
                                 ]
                             },
@@ -497,7 +529,10 @@ function showSubUnits(j) {
     showView('sub-unit-view');
 }
 
+let currentSubUnit = null;
+
 function showContent(s) {
+    currentSubUnit = s;
     const subjectName = studyData[currentSubject].name;
     const gradeData = studyData[currentSubject].grades[currentGrade];
     const cat = gradeData.categories[currentCategoryIndex];
@@ -514,13 +549,111 @@ function showContent(s) {
 
     contentTitle.innerHTML = s.title;
     contentBody.innerHTML = s.content;
+    
+    // クイズがある場合はボタンを表示
+    const startBtnContainer = document.getElementById('quiz-start-container');
+    if (s.quiz) {
+        startBtnContainer.style.display = 'block';
+    } else {
+        startBtnContainer.style.display = 'none';
+    }
+    
     showView('content-view');
 }
 
+function startQuiz() {
+    if (!currentSubUnit || !currentSubUnit.quiz) return;
+    const q = currentSubUnit.quiz;
+    const quizViewBody = document.getElementById('quiz-view-body');
+    
+    quizViewBody.innerHTML = `
+        <div class="quiz-container">
+            <div class="quiz-question">${q.question}</div>
+            <div class="quiz-display">${q.display}</div>
+            <div class="quiz-options">
+                ${q.options.map(opt => `<button class="quiz-btn" onclick="checkAnswer(this, ${q.answer})">${opt}</button>`).join('')}
+            </div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+        </div>
+    `;
+    
+    const subjectName = studyData[currentSubject].name;
+    const gradeData = studyData[currentSubject].grades[currentGrade];
+    const cat = gradeData.categories[currentCategoryIndex];
+    const unit = cat.units[currentUnitIndex];
+
+    updateBreadcrumb([
+        { label: 'ホーム', action: showHome },
+        { label: subjectName, action: showGrades },
+        { label: gradeData.name, action: showCategories },
+        { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+        { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+        { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
+        { label: 'くいず' }
+    ]);
+    
+    showView('quiz-view');
+}
+
+function checkAnswer(btn, correctVal) {
+    const feedback = document.getElementById('quiz-feedback');
+    if (!feedback) return;
+    
+    const selectedVal = parseInt(btn.innerText);
+    const btns = btn.parentElement.querySelectorAll('.quiz-btn');
+    btns.forEach(b => {
+        b.classList.remove('correct');
+        b.classList.remove('wrong');
+        b.disabled = true; // 解答後は一度無効化
+    });
+
+    if (selectedVal === correctVal) {
+        btn.classList.add('correct');
+        feedback.innerHTML = `
+            <div style="color: #2ecc71; margin-bottom: 15px;">✨ せいかい！ すごいね！ ✨</div>
+            <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
+        `;
+    } else {
+        btn.classList.add('wrong');
+        feedback.innerHTML = `
+            <div style="color: #ff7675; margin-bottom: 15px;">ざんねん！ もういちど かぞえてみてね。</div>
+            <button class="action-btn" onclick="startQuiz()">もういちど やる</button>
+        `;
+    }
+}
+
 function showView(id) {
-    [homeView, gradeView, categoryView, unitView, subUnitView, contentView].forEach(v => { if (v) v.classList.add('hidden'); });
+    const views = ['home-view', 'grade-view', 'category-view', 'unit-view', 'sub-unit-view', 'content-view', 'quiz-view'];
+    views.forEach(v => {
+        const el = document.getElementById(v);
+        if (el) el.classList.add('hidden');
+    });
     const target = document.getElementById(id);
     if (target) target.classList.remove('hidden');
+}
+
+function initQuiz() {
+    const quizBox = document.getElementById('quiz-1');
+    if (quizBox) {
+        const nums = quizBox.querySelectorAll('.meas-num');
+        const result = document.getElementById('quiz-result');
+        nums.forEach(num => {
+            num.onclick = () => {
+                if (num.dataset.type === 'slant') {
+                    num.classList.add('wrong');
+                    result.innerText = 'おっと！ななめは使わないよ。';
+                    setTimeout(() => num.classList.remove('wrong'), 500);
+                } else {
+                    num.classList.toggle('selected');
+                    const sel = Array.from(quizBox.querySelectorAll('.meas-num.selected')).map(n => n.dataset.type);
+                    if (sel.includes('base') && sel.includes('height')) {
+                        result.innerText = '正解！ 14 × 8 ＝ 112';
+                        result.style.color = '#2ecc71';
+                    }
+                }
+            };
+        });
+    }
 }
 
 homeBtn.onclick = showHome;
@@ -531,5 +664,10 @@ backToGradeBtn.onclick = showGrades;
 backToCategoryBtn.onclick = showCategories;
 backToUnitBtn.onclick = () => showUnits(currentCategoryIndex);
 backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
+
+const startQuizBtn = document.getElementById('start-quiz-btn');
+const backToContentBtn = document.getElementById('back-to-content-btn');
+if (startQuizBtn) startQuizBtn.onclick = startQuiz;
+if (backToContentBtn) backToContentBtn.onclick = () => showContent(currentSubUnit);
 
 showHome();
