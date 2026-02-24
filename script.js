@@ -2023,6 +2023,177 @@ const studyData = {
                                 ]
                             }
                         ]
+                    },
+                    {
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. <ruby>長<rt>なが</rt></ruby>さと<ruby>かさ<rt>かさ</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>長<rt>なが</rt></ruby>さの <ruby>単位<rt>たんい</rt></ruby>（cm, mm）",
+                                        content: `<h4>ものさしで はかってみよう</h4>
+                                        <div class="point-box">
+                                            ・<b>cm（センチメートル）</b>：ものさしの 大きな めもり。<br>
+                                            ・<b>mm（ミリメートル）</b>：ものさしの 小さな めもり。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>1cm ＝ 10mm</b></p>
+                                        </div>
+                                        <p>1cmを 10こに 分けた 1つ分が 1mmだよ！</p>`,
+                                        quizzes: [
+                                            { question: "1cmは 何mmかな？", display: "1cm ＝ □mm", answer: 10 },
+                                            { question: "3cmは 何mmかな？", display: "3cm ＝ □mm", answer: 30 },
+                                            { question: "10mmは 何cmかな？", display: "10mm ＝ □cm", answer: 1 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) <ruby>長<rt>なが</rt></ruby>さの けいさん",
+                                        content: `<h4>おなじ 単位（たんい）どうしで 計算（けいさん）しよう</h4>
+                                        <div class="data-demo">
+                                            5cm ＋ 3cm ＝ <b>8cm</b><br>
+                                            7mm － 2mm ＝ <b>5mm</b>
+                                        </div>
+                                        <p>単位が ちがうときは、どちらかに そろえてから 計算するよ！</p>`,
+                                        quizzes: [
+                                            { question: "4cm ＋ 2cm は？", display: "4cm ＋ 2cm", answer: "6cm", options: ["6cm", "8cm", "6mm"] },
+                                            { question: "1cm ＋ 5mm は 何mmかな？", display: "10mm ＋ 5mm", answer: 15 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) <ruby>かさ<rt>かさ</rt></ruby>の <ruby>単位<rt>たんい</rt></ruby>（L, dL, mL）",
+                                        content: `<h4>みずの りょうを あらわそう</h4>
+                                        <div class="point-box">
+                                            ・<b>L（リットル）</b>：大きな かさ。<br>
+                                            ・<b>dL（デシリットル）</b>：Lの 次に大きな かさ。<br>
+                                            ・<b>mL（ミリリットル）</b>：小さな かさ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>1L ＝ 10dL</b></p>
+                                            <p><b>1dL ＝ 100mL</b></p>
+                                            <p><b>1L ＝ 1000mL</b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1Lは 何dLかな？", display: "1L ＝ □dL", answer: 10 },
+                                            { question: "1dLは 何mLかな？", display: "1dL ＝ □mL", answer: 100 },
+                                            { question: "2Lは 何dLかな？", display: "2L ＝ □dL", answer: 20 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. <ruby>単位<rt>たんい</rt></ruby>の <ruby>選択<rt>せんたく</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) どれを つかう？",
+                                        content: `<h4>ふさわしい 単位（たんい）を えらぼう</h4>
+                                        <div class="point-box">
+                                            ものの 大きさに あわせて、つかう 単位を かえるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>・<b>えんぴつの 長さ</b> ➔ cm<br>
+                                            ・<b>教科書の あつさ</b> ➔ mm<br>
+                                            ・<b>教室の はば</b> ➔ m（メートル）</p>
+                                            <p>・<b>ペットボトルの 水</b> ➔ L または mL<br>
+                                            ・<b>計量（けいりょう）スプーン</b> ➔ mL</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "えんぴつの ながさを はかるのに ちょうどいいのは？", display: "えんぴつ", answer: "cm", options: ["mm", "cm", "m"] },
+                                            { question: "牛乳（ぎゅうにゅう）パックの かさを はかるのに ちょうどいいのは？", display: "牛乳パック", answer: "L", options: ["mm", "cm", "L"] },
+                                            { question: "ノートの あつさを はかるのに ちょうどいいのは？", display: "ノートのあつさ", answer: "mm", options: ["mm", "cm", "m"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. <ruby>時間<rt>じかん</rt></ruby>",
+                                subUnits: [
+                                    {
+                                        title: "(1) <ruby>時<rt>じ</rt></ruby>と <ruby>分<rt>ふん</rt></ruby>",
+                                        content: `<h4>時間の 長さを しろう</h4>
+                                        <div class="point-box">
+                                            <b>1時間 ＝ 60分</b>
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>長い はりが 1しゅう すると、1時間だね！</p>
+                                            <p>午前（ごぜん）は 12時間、午後（ごご）も 12時間。<br>
+                                            あわせて <b>1日 ＝ 24時間</b> だよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1時間は 何分かな？", display: "1時間 ＝ □分", answer: 60 },
+                                            { question: "1日は 何時間かな？", display: "1日 ＝ □時間", answer: 24 },
+                                            { question: "2時間は 何分かな？", display: "2時間 ＝ □分", answer: 120 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 時間（じかん）と 時刻（じこく）",
+                                        content: `<h4>ちがいを わかるかな？</h4>
+                                        <div class="point-box">
+                                            ・<b>時刻（じこく）</b>：「3時10分」などの、そのときのこと。<br>
+                                            ・<b>時間（じかん）</b>：「10分間」などの、長さのこと。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>3時10分から 3時20分までの <b>時間は 10分</b> だね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "2時から 2時30分までの 時間は 何分かな？", display: "2時 ➔ 2時30分", answer: 30 },
+                                            { question: "10時40分から 11時までの 時間は 何分かな？", display: "10時40分 ➔ 11時", answer: 20 }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. グラフと ひょう",
+                                subUnits: [
+                                    {
+                                        title: "(1) 好きな 色しらべ",
+                                        content: `<h4>「○」をつかって 整理（せいり）しよう</h4>
+                                        <div class="point-box">
+                                            バラバラに ならんでいるものを、○（まる）にならべて 整理すると、どれが 多いか すぐわかるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【クラスの 好きな色】</b></p>
+                                            <table style="margin: 0 auto; text-align: left; line-height: 2;">
+                                                <tr><td>あか：</td><td>○○○○○ (5)</td></tr>
+                                                <tr><td>あお：</td><td>○○○○○○○ (7)</td></tr>
+                                                <tr><td>きいろ：</td><td>○○ (2)</td></tr>
+                                            </table>
+                                        </div>
+                                        <p>このように 並べると…<br>
+                                        ・一番（いちばん） 多いのは？ ➔ <b>あお</b><br>
+                                        ・一番（いちばん） 少ないのは？ ➔ <b>きいろ</b><br>
+                                        ・あかは あおより 何こ 少ない？ ➔ <b>2こ</b>（7-5）</p>`,
+                                        quizzes: [
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） 多い（おおい）色は どれかな？", 
+                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
+                                                answer: "あお", options: ["あか", "あお", "しろ"] 
+                                            },
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） 少ない（すくない）色は どれかな？", 
+                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
+                                                answer: "しろ", options: ["あか", "あお", "しろ"] 
+                                            },
+                                            { 
+                                                question: "「あか」は 何こ（なんこ） あるかな？", 
+                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
+                                                answer: 3
+                                            },
+                                            { 
+                                                question: "「あお」は 「あか」より 何こ 多いかな？", 
+                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
+                                                answer: 3
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },

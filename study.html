@@ -118,6 +118,36 @@
         <p>&copy; 学習サイト</p>
     </footer>
 
+    <!-- メモ機能のUI -->
+    <button id="toggle-memo-btn" class="floating-memo-btn">
+        <span>✏️</span>
+        <span>めも</span>
+    </button>
+
+    <div id="memo-container" class="memo-overlay hidden">
+        <div class="memo-box">
+            <div class="toolbar">
+                <div class="tool-group">
+                    <button id="pen-tool-btn" class="tool-btn active">✏️ ぺん</button>
+                    <button id="eraser-tool-btn" class="tool-btn">🧽 けしごむ</button>
+                </div>
+                <div class="pen-control">
+                    <span>太さ</span>
+                    <input type="range" id="pen-width" min="1" max="20" value="5">
+                </div>
+                <button id="toggle-mode-btn" class="btn-secondary">⌨️ 文字入力</button>
+                <button id="clear-memo-btn" class="btn-clear">全部消す</button>
+                <button id="close-memo-btn" class="btn-secondary">とじる</button>
+            </div>
+            <div class="content-area">
+                <canvas id="memo-canvas"></canvas>
+                <div id="text-memo-wrapper" class="hidden">
+                    <textarea id="memo-textarea" placeholder="ここになにか かけるよ..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
