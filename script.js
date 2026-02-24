@@ -126,9 +126,21 @@ const studyData = {
                                                 <tr style="font-size: 24px; font-weight: bold; color: #e74c3c;"><td>1</td><td>0</td></tr>
                                             </table>
                                             <p><small>「1の おへや」がいっぱいに なって、<br>「10の おへや」に <b>1つ</b> おひっこし したよ！</small></p>
+
+                                            <p style="margin-top:20px;"><b>④ そのつぎは？ (11)</b></p>
+                                            <table class="data-table" style="width: 200px; margin: 0 auto;">
+                                                <tr><th style="background:#ffe58f">10の<br>おへや</th><th style="background:#bae7ff">1の<br>おへや</th></tr>
+                                                <tr style="font-size: 24px; font-weight: bold;"><td>1</td><td>1</td></tr>
+                                            </table>
+                                            <p><small>「10の まとまり」が 1つと、<br>「バラ」が 1つで <b>11</b>（じゅういち）に なるんだね！</small></p>
                                         </div>
 
                                         <p>この <b>0</b> が ないと、「1」なのか 「10」なのか わからなくなっちゃうね。</p>
+
+                                        <div class="point-box" style="background: #fffbe6; border: 2px solid #ffe58f;">
+                                            <b>【とっても だいじな ルール】</b><br>
+                                            どんなに おおきな かずでも、<b>「0, 1, 2, 3, 4, 5, 6, 7, 8, 9」</b> の 10この すうじを くみあわせて かくんだよ！
+                                        </div>
 
                                         <h4>「おへや（くらい）」の だいじな ルール</h4>
                                         <p>それぞれの おへやには、<b>「0, 1, 2, 3, 4, 5, 6, 7, 8, 9」</b> の どれか <b>ひとつだけ</b> 数字（すうじ）を いれることが できるよ。</p>
@@ -149,11 +161,11 @@ const studyData = {
 
                                         <p>0は、<b>「ここにおへやはあるけど、なかみは からっぽだよ！」</b> と おしえてくれる たいせつな しるしなんだよ。</p>`,
                                         quizzes: [
-                                            {
-                                                question: "かごの なかに りんごは なんこ あるかな？",
-                                                display: "🧺",
-                                                answer: 0
-                                            }
+                                            { question: "くだものは なんこ あるかな？", display: " ", answer: 0 },
+                                            { question: "くだものは なんこ あるかな？", display: "(🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎)", answer: 10 },
+                                            { question: "くだものは なんこ あるかな？", display: "(🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎) 🍎", answer: 11 },
+                                            { question: "くだものは なんこ あるかな？", display: "🍎 🍎 🍎 🍎 🍎", answer: 5 },
+                                            { question: "くだものは なんこ あるかな？", display: "🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎", answer: 9 }
                                         ]
                                     },
                                     {
@@ -166,13 +178,27 @@ const studyData = {
                                         <p><b>5 は 3 より おおきい</b> ね。<br>
                                         <b>3 は 5 より ちいさい</b> ね。</p>
                                         <h4>どのくらい ちがう？</h4>
-                                        <p>5 － 3 ＝ 2 だから、<b>2つ ちがう</b> ことが わかるよ！</p>`,
+                                        <p>ふたつの かずを じゅんばんに ならべて くらべてみよう。<br>
+                                        <b>「たりない かず」</b> を かぞえると、ちがいが わかるよ！</p>
+                                        
+                                        <div class="data-demo">
+                                            <table style="margin: 0 auto; border-collapse: collapse; text-align: center; font-size: 24px;">
+                                                <tr><td>🍎</td><td>🍎</td><td>🍎</td><td>🍎</td><td>🍎</td></tr>
+                                                <tr style="font-size: 16px; color: #3498db; line-height: 1;"><td>↕</td><td>↕</td><td>↕</td><td> </td><td> </td></tr>
+                                                <tr><td>🍎</td><td>🍎</td><td>🍎</td><td style="color: #ccc;">○</td><td style="color: #ccc;">○</td></tr>
+                                            </table>
+                                        </div>
+                                        
+                                        <p>したの 🍎 が <b>2つ</b> たりなくて、まるが 2つあるね。<br>
+                                        だから、<b>「2つ ちがう」</b> ということが わかるよ！</p>`,
                                         quizzes: [
-                                            {
-                                                question: "5 と 3、どっちが おおきいかな？（おおきい ほうを かいてね）",
-                                                display: "5 , 3",
-                                                answer: 5
-                                            }
+                                            { question: "どっちが おおきいかな？（おおきい ほうの かずを おしてね）", display: "🍎🍎🍎🍎🍎 (5)<br>🍎🍎 (2)", answer: 5, options: [2, 5] },
+                                            { question: "どっちが おおきいかな？（おおきい ほうの かずを おしてね）", display: "🍌🍌 (2)<br>🍌🍌🍌🍌🍌🍌🍌🍌 (8)", answer: 8, options: [2, 8] },
+                                            { question: "どっちが ちいさいかな？（ちいさい ほうの かずを おしてね）", display: "🍓🍓🍓 (3)<br>🍓🍓🍓🍓🍓🍓🍓 (7)", answer: 3, options: [3, 7] },
+                                            { question: "どっちが ちいさいかな？（ちいさい ほうの かずを おしてね）", display: "🍇🍇🍇🍇🍇🍇 (6)<br>🍇🍇🍇🍇 (4)", answer: 4, options: [4, 6] },
+                                            { question: "なんこ ちがうかな？", display: "🍎🍎🍎🍎🍎 (5)<br>🍎🍎 (2)", answer: 3 },
+                                            { question: "なんこ ちがうかな？", display: "🐱🐱🐱🐱 (4)<br>🐱🐱🐱 (3)", answer: 1 },
+                                            { question: "なんこ ちがうかな？", display: "🍰 (1)<br>🍰🍰🍰 (3)", answer: 2 }
                                         ]
                                     },
                                     {
@@ -201,11 +227,12 @@ const studyData = {
                                             <b>5, 10, 15...</b> と かぞえると 10が すぐ つくれるね！
                                         </div>`,
                                         quizzes: [
-                                            {
-                                                question: "ぜんぶで なんこ あるかな？",
-                                                display: "(🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵) 🔵 🔵",
-                                                answer: 12
-                                            }
+                                            { question: "5の まとまりは なんこ あるかな？", display: "(🖐️) (🖐️) (🖐️) (🖐️)", answer: 4 },
+                                            { question: "2の まとまりは なんこ あるかな？", display: "(🍒) (🍒) (🍒)", answer: 3 },
+                                            { question: "10の まとまりは なんこ あるかな？", display: "(🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵) (🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵)", answer: 2 },
+                                            { question: "5の まとまりは なんこ あるかな？", display: "(🖐️) (🖐️)", answer: 2 },
+                                            { question: "2の まとまりは なんこ あるかな？", display: "(🍒) (🍒) (🍒) (🍒) (🍒) (🍒)", answer: 6 },
+                                            { question: "10の まとまりは なんこ あるかな？", display: "(🔵🔵🔵🔵🔵🔵🔵🔵🔵🔵)", answer: 1 }
                                         ]
                                     },
                                     {
@@ -230,15 +257,26 @@ const studyData = {
                                                 <p>🐱 🐰 <span style="background: #ffe58f; padding: 2px 5px; border-radius: 5px; border: 2px solid #e74c3c;">🦊</span> 🐻 🦁</p>
                                                 <p><small>3ばんめの <b>ひとりだけ</b> の ことだよ。</small></p>
                                             </div>
+
+                                            <div style="background: #fff; padding: 10px; border-radius: 10px; border: 2px solid #eee; margin-top: 10px;">
+                                                <p><b>③ うしろから 2ばんめ</b></p>
+                                                <p>🐱 🐰 🦊 <span style="background: #ffe58f; padding: 2px 5px; border-radius: 5px; border: 2px solid #e74c3c;">🐻</span> 🦁</p>
+                                                <p><small>うしろ（いちばん 右）から かぞえて 2ばんめの ことだよ。</small></p>
+                                            </div>
                                         </div>
                                         
-                                        <p>「まえから」か 「うしろから」か、よく きいて かぞえてみよう！</p>`,
+                                        <div class="point-box" style="background: #eef7ff;">
+                                            <b>【ここが ポイント！】</b><br>
+                                            「まえから」か 「うしろから」かで、おなじ どうぶつでも じゅんばんが かわるよ！<br>
+                                            たとえば くま🐻は、まえから 4ばんめ だけど、うしろからは 2ばんめ だね。
+                                        </div>
+                                        
+                                        <p>よく きいて、どちらから かぞえるか まちがえないように しよう！</p>`,
                                         quizzes: [
-                                            {
-                                                question: "うさぎ🐰は まえから なんばんめ かな？",
-                                                display: "🐱 🐰 🦊 🐻 🦁",
-                                                answer: 2
-                                            }
+                                            { question: "「まえから 5にん」は、ぜんぶで なんこ かな？", display: "🐱 🐰 🦊 🐻 🦁 🐵 🐶 🐷 🐮", answer: 5 },
+                                            { question: "さる🐵は、まえから なんばんめ かな？", display: "🐱 🐰 🦊 🐻 🦁 🐵 🐶 🐷 🐮", answer: 6 },
+                                            { question: "さる🐵は、うしろから なんばんめ かな？", display: "🐱 🐰 🦊 🐻 🦁 🐵 🐶 🐷 🐮", answer: 4 },
+                                            { question: "「うしろから 5にん」は、ぜんぶで なんこ かな？", display: "🐱 🐰 🦊 🐻 🦁 🐵 🐶 🐷 🐮", answer: 5 }
                                         ]
                                     }
                                 ]
@@ -634,16 +672,24 @@ function startQuiz(index = 0) {
             <div class="quiz-question">${q.question}</div>
             <div class="quiz-display">${q.display}</div>
             
-            <div style="display:flex; justify-content:center; align-items:center;">
-                <div class="quiz-input-display" id="input-display"> </div>
-                <button class="clear-btn" onclick="clearNumber()">けす</button>
-            </div>
+            ${q.options ? `
+                <!-- 選択肢が指定されている場合（どっちが大きい？など） -->
+                <div class="quiz-options" style="margin-top: 20px;">
+                    ${q.options.map(opt => `<button class="quiz-btn" style="width: 100px;" onclick="typeNumber(${opt}); submitAnswer();">${opt}</button>`).join('')}
+                </div>
+            ` : `
+                <!-- テンキー入力の場合（いくつある？など） -->
+                <div style="display:flex; justify-content:center; align-items:center;">
+                    <div class="quiz-input-display" id="input-display"> </div>
+                    <button class="clear-btn" onclick="clearNumber()">けす</button>
+                </div>
 
-            <div class="numeric-pad">
-                ${[1,2,3,4,5,6,7,8,9,0].map(n => `<button class="quiz-btn" onclick="typeNumber(${n})">${n}</button>`).join('')}
-            </div>
-            
-            <button class="answer-btn" onclick="submitAnswer()">こたえあわせ</button>
+                <div class="numeric-pad">
+                    ${[1,2,3,4,5,6,7,8,9,0].map(n => `<button class="quiz-btn" onclick="typeNumber(${n})">${n}</button>`).join('')}
+                </div>
+                
+                <button class="answer-btn" onclick="submitAnswer()">こたえあわせ</button>
+            `}
             <div class="quiz-feedback" id="quiz-feedback"></div>
         </div>
     `;
