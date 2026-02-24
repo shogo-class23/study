@@ -388,6 +388,25 @@ const studyData = {
                                             { question: "りんごが 3こ、みかんが 4こ あります。あわせて なんこ？", display: "🍎🍎🍎 ＋ 🍊🍊🍊🍊", answer: 7 },
                                             { question: "くるまが 5だい、バスが 3だい あります。あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 }
                                         ]
+                                    },
+                                    {
+                                        title: "(6) 0の たしざん",
+                                        content: `<h4>なにも たさないときは？</h4>
+                                        <p><b>3 ＋ 0 ＝ □</b></p>
+                                        <div class="point-box" style="background: #eef7ff;">
+                                            0は 「なにも ない」ことだったね。<br>
+                                            なにも たさないから、かずは <b>かわらない</b> んだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            🍎 🍎 🍎 ＋ (なし)<br>
+                                            <b>＝ 3</b>
+                                        </div>
+                                        <p>3に 0を たしても <b>3</b> のままだね！</p>`,
+                                        quizzes: [
+                                            { question: "4 ＋ 0 は いくつかな？", display: "4 ＋ 0", answer: 4 },
+                                            { question: "0 ＋ 7 は いくつかな？", display: "0 ＋ 7", answer: 7 },
+                                            { question: "0 ＋ 0 は いくつかな？", display: "0 ＋ 0", answer: 0 }
+                                        ]
                                     }
                                 ]
                             },
@@ -493,9 +512,250 @@ const studyData = {
                                 subUnits: [
                                     {
                                         title: "(1) のこりは いくつ？",
-                                        content: `<h4>ひきざんの しき</h4>
-                                        <div class="calc-demo">5 － 2 ＝ 3</div>
-                                        <p>5この クッキーを 2こ たべたら、のこりは 3こだね。</p>`
+                                        content: `<h4>へると いくつかな？</h4>
+                                        <div class="point-box" style="background: #fff2f0;">
+                                            へったり、たべたり したときに つかうのが <b>「ひきざん」</b> だよ。
+                                        </div>
+
+                                        <div class="data-demo">
+                                            <h4>「－」と 「＝」の つかいかた</h4>
+                                            <p style="font-size: 24px;"><b>5 － 2 ＝ 3</b></p>
+                                            <div style="text-align: left; display: inline-block;">
+                                                <p><b>－（ひく）：</b> へる、とる しるし。</p>
+                                                <p><b>＝（は）：</b> のこりが いくつに なったか おしえる しるし。</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="data-demo" style="margin-top: 20px;">
+                                            🍎 🍎 🍎 🍎 🍎 (5こ) あるなかから、<br>
+                                            🍎 🍎 (2こ) たべました。<br>
+                                            <b>5 － 2 ＝ 3</b>
+                                        </div>
+                                        <p>のこりは <b>3こ</b> に なったね！</p>`,
+                                        quizzes: [
+                                            { question: "クッキーが 4こ ありました。1こ たべました。のこりは なんこ？", display: "🍪🍪🍪🍪 － 🍪", answer: 3 },
+                                            { question: "あめが 6こ ありました。2こ あげました。のこりは なんこ？", display: "🍬🍬🍬🍬🍬🍬 － 🍬🍬", answer: 4 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) ちがいは いくつ？",
+                                        content: `<h4>くらべると いくつ ちがうかな？</h4>
+                                        <div class="point-box">
+                                            ふたつの かずを ならべて、どちらが どのくらい おおいか（すくないか）を みるときも <b>「ひきざん」</b> だよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <table style="margin: 0 auto; border-collapse: collapse; text-align: center; font-size: 24px;">
+                                                <tr><td>🍎</td><td>🍎</td><td>🍎</td><td>🍎</td><td>🍎</td></tr>
+                                                <tr style="font-size: 16px; color: #3498db; line-height: 1;"><td>↕</td><td>↕</td><td>↕</td><td> </td><td> </td></tr>
+                                                <tr><td>🍊</td><td>🍊</td><td>🍊</td><td style="color: #ccc;">○</td><td style="color: #ccc;">○</td></tr>
+                                            </table>
+                                        </div>
+                                        <p>りんごが 5こ、みかんが 3こ。ペアを つくると、りんごが <b>2つ</b> あまるね。<br>
+                                        <b>5 － 3 ＝ 2</b><br>
+                                        ちがいは <b>2つ</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "あかい おはなが 5ほん、しろい おはなが 2ほん あります。ちがいは なんぼん？", display: "🌹🌹🌹🌹🌹<br>🌻🌻", answer: 3 },
+                                            { question: "バナナが 4ほん、メロンが 1こ あります。どちらが なんこ おおい？", display: "🍌🍌🍌🍌<br>🍈", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) なんばんめ？",
+                                        content: `<h4>じゅんばんの ひきざん</h4>
+                                        <p>まえから 7にん ならんでいるよ。<br>
+                                        まえから 3ばんめの ひとから うしろは、なんにん かな？</p>
+                                        <div class="data-demo">
+                                            🔵 🔵 <span style="background:#ffe58f; border:1px solid #e74c3c;">🔴</span> (3ばんめ)<br>
+                                            ＋ 🔵 🔵 🔵 🔵 (ここを もとめたい)<br>
+                                            <b>7 － 3 ＝ 4</b>
+                                        </div>
+                                        <p>のこりは <b>4にん</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "まえから 5にん ならんでいます。まえから 2ばんめの ひとより うしろは なんにん？", display: "🔵🔴 ＋ 🔵🔵🔵", answer: 3 },
+                                            { question: "まえから 8にん ならんでいます。まえから 5ばんめの ひとより うしろは なんにん？", display: "🔵🔵🔵🔵🔴 ＋ 🔵🔵🔵", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) なんこ すくない",
+                                        content: `<h4>すくないほうを もとめよう</h4>
+                                        <p>りんごが 5こ あります。みかんは りんごより 2こ すくないです。<br>
+                                        みかんは なんこ かな？</p>
+                                        <div class="data-demo" style="font-size: 24px;">
+                                            🍎 🍎 🍎 <span style="text-decoration: line-through; color: #ccc;">🍎 🍎</span> (5こ)<br>
+                                            🍊 🍊 🍊 (3こ)<br>
+                                            <b>5 － 2 ＝ 3</b>
+                                        </div>
+                                        <p>みかんは <b>3こ</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "おさらが 6まい あります。コップは、おさらより 2こ すくないです。コップは なんこ？", display: "🍽️(6) － 🥛(2すくない)", answer: 4 },
+                                            { question: "えんぴつが 8ほん あります。けしごむは、えんぴつより 5こ すくないです。けしごむは なんこ？", display: "✏️(8) － 🧼(5すくない)", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) ちがうものどうし",
+                                        content: `<h4>のこったのは どっち？</h4>
+                                        <p>いぬが 4ひき、いぬのごはんが 3こ あります。<br>
+                                        ごはんが あたらない いぬは なんびき？</p>
+                                        <div class="data-demo">
+                                            🐶 🐶 🐶 🐶 (4ひき)<br>
+                                            🍖 🍖 🍖 (3こ)<br>
+                                            <b>4 － 3 ＝ 1</b>
+                                        </div>
+                                        <p>ごはんが もらえない いぬは <b>1ぴき</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "うさぎが 5ひき、にんじんが 3ぼん あります。にんじんが もらえない うさぎは なんびき？", display: "🐰🐰🐰🐰🐰<br>🥕🥕🥕", answer: 2 },
+                                            { question: "ねこが 3びき、おさかなが 5ひき あります。あまる おさかなは なんこ？", display: "🐱🐱🐱<br>🐟🐟🐟🐟🐟", answer: 2 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(6) 0の ひきざん",
+                                        content: `<h4>なにも ひかないとき、こたえが 0のとき</h4>
+                                        <div class="point-box" style="background: #fff2f0;">
+                                            「0を ひく」ときと、「ぜんぶ ひく」ときの お勉強だよ。
+                                        </div>
+
+                                        <h4>① 0を ひく (かわらない)</h4>
+                                        <p><b>4 － 0 ＝ 4</b></p>
+                                        <p>なにも とらないから、かずは そのまま。4だね！</p>
+
+                                        <h4>② ぜんぶ ひく (0に なる)</h4>
+                                        <p><b>3 － 3 ＝ 0</b></p>
+                                        <p>3こ あるなかから、3こ ぜんぶ たべちゃった。のこりは 0だね！</p>`,
+                                        quizzes: [
+                                            { question: "5 － 0 は いくつかな？", display: "5 － 0", answer: 5 },
+                                            { question: "2 － 2 は いくつかな？", display: "2 － 2", answer: 0 },
+                                            { question: "0 － 0 は いくつかな？", display: "0 － 0", answer: 0 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "5. <ruby>引<rt>ひ</rt></ruby>き<ruby>算<rt>ざん</rt></ruby>（2）",
+                                subUnits: [
+                                    {
+                                        title: "(1) 10を つかった 引き算",
+                                        content: `<h4>10から ひいてみよう</h4>
+                                        <div class="data-demo">
+                                            <p><b>10 － 3 ＝ 7</b></p>
+                                            <p>(10) － 🍎🍎🍎</p>
+                                        </div>
+                                        <p>10の まとまりから バラを ひく けいさんだよ。</p>`,
+                                        quizzes: [
+                                            { question: "10 － 2 は いくつかな？", display: "10 － 2", answer: 8 },
+                                            { question: "10 － 5 は いくつかな？", display: "10 － 5", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 10より 大きい かずの 引き算",
+                                        content: `<h4>1の お部屋だけで 計算しよう</h4>
+                                        <p><b>15 － 3 ＝ □</b></p>
+                                        <div class="point-box">
+                                            10の まとまりは そのまま。バラの 5つから 3つを ひいて <b>2</b>！
+                                        </div>
+                                        <div class="data-demo">
+                                            (10) と 🍎🍎🍎🍎🍎 － 🍎🍎🍎<br>
+                                            <b>＝ 12</b>
+                                        </div>
+                                        <p>答えは <b>12</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "17 － 4 は いくつかな？", display: "17 － 4", answer: 13 },
+                                            { question: "19 － 6 は いくつかな？", display: "19 － 6", answer: 13 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 10の まとまりの 引き算",
+                                        content: `<h4>10の たばで ひいてみよう</h4>
+                                        <div class="data-demo">
+                                            <p><b>70 － 30 ＝ □</b></p>
+                                            <p>(10)(10)(10)(10)(10)(10)(10) － (10)(10)(10)</p>
+                                            <p>7つ － 3つ ＝ <b>4つ</b></p>
+                                        </div>
+                                        <p>10の まとまりが 4つだから、こたえは <b>40</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "50 － 20 は いくつかな？", display: "50 － 20", answer: 30 },
+                                            { question: "80 － 40 は いくつかな？", display: "80 － 40", answer: 40 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) バラの 引き算",
+                                        content: `<h4>バラを ぜんぶ ひいてみよう</h4>
+                                        <p><b>25 － 5 ＝ □</b></p>
+                                        <div class="data-demo">
+                                            (10)(10) と 🍎🍎🍎🍎🍎 － 🍎🍎🍎🍎🍎<br>
+                                            <b>＝ 20</b>
+                                        </div>
+                                        <p>バラが なくなって、10の まとまりだけが のこるね！</p>`,
+                                        quizzes: [
+                                            { question: "34 － 4 は いくつかな？", display: "34 － 4", answer: 30 },
+                                            { question: "68 － 8 は いくつかな？", display: "68 － 8", answer: 60 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) 100からの 引き算",
+                                        content: `<h4>100から 10を ひくと？</h4>
+                                        <div class="point-box">
+                                            100は 10の まとまりが 10こ だったね。<br>
+                                            そこから 10（まとまり1つ）を ひくと…？
+                                        </div>
+                                        <div class="data-demo">
+                                            (10)が 10こ － (10)が 1こ<br>
+                                            <b>＝ (10)が 9こ</b>
+                                        </div>
+                                        <p>答えは <b>90</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "100 － 10 は いくつかな？", display: "100 － 10", answer: 90 },
+                                            { question: "100 － 50 は いくつかな？", display: "100 － 50", answer: 50 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. 3つの かずの けいさん",
+                                subUnits: [
+                                    {
+                                        title: "(1) じゅんばんに 計算しよう",
+                                        content: `<h4>まえから ひとつずつ 計算しよう</h4>
+                                        <div class="point-box">
+                                            かずが 3つ 以上（いじょう）あっても、まえから じゅんばんに やれば 大丈夫（だいじょうぶ）だよ！
+                                        </div>
+
+                                        <h4>① たしざん だけの とき</h4>
+                                        <p><b>2 ＋ 3 ＋ 4 ＝ □</b></p>
+                                        <p>2 ＋ 3 をして <b>5</b>。つぎに 5 ＋ 4 をして <b>9</b>！</p>
+
+                                        <h4>② ひきざん だけの とき</h4>
+                                        <p><b>10 － 2 － 3 ＝ □</b></p>
+                                        <p>10 － 2 をして <b>8</b>。つぎに 8 － 3 をして <b>5</b>！</p>
+
+                                        <h4>③ たしざんと ひきざんが まざっている とき</h4>
+                                        <div class="data-demo">
+                                            <p><b>5 ＋ 4 － 2 ＝ □</b></p>
+                                            <p>5 ＋ 4 をして <b>9</b>。そのあとに 9 － 2 をして <b>7</b>！</p>
+                                        </div>
+                                        <p>どんなときでも、<b>「まえから ひとつずつ」</b> が 合言葉（あいことば）だよ！</p>`,
+                                        quizzes: [
+                                            { question: "2 ＋ 5 ＋ 1 は いくつかな？", display: "2 ＋ 5 ＋ 1", answer: 8 },
+                                            { question: "9 － 4 － 2 は いくつかな？", display: "9 － 4 － 2", answer: 3 },
+                                            { question: "6 ＋ 3 － 5 は いくつかな？", display: "6 ＋ 3 － 5", answer: 4 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "7. <ruby>引<rt>ひ</rt></ruby>けない？！",
+                                subUnits: [
+                                    {
+                                        title: "(1) ちいさい かずから ひけるかな？",
+                                        content: `<h4>3つしかないのに 5つ ひける？</h4>
+                                        <div class="data-demo">
+                                            🍎 🍎 🍎 － 🍎 🍎 🍎 🍎 🍎 ＝ <b>？</b>
+                                        </div>
+                                        <p>1ねんせいの みんなは、<b>「ひけない！」</b> って おもうよね。</p>
+                                        <div class="point-box" style="background: #f0f5ff;">
+                                            <b>【みらいの おべんきょう】</b><br>
+                                            ちゅうがくせいに なると、<b>「マイナス」</b> という かずを つかって、<br>
+                                            0よりも ちいさい かずを おべんきょうするんだよ！
+                                        </div>
+                                        <p>れいぞうこの なか みたいに、とっても さむい かずの世界（せかい）があるんだ。ふしぎだね！</p>`
                                     }
                                 ]
                             }
