@@ -285,10 +285,109 @@ const studyData = {
                                 title: "2. <ruby>足<rt>た</rt></ruby>し<ruby>算<rt>ざん</rt></ruby>",
                                 subUnits: [
                                     {
-                                        title: "(1) あわせると いくつ？",
-                                        content: `<h4>たしざんの しき</h4>
-                                        <div class="calc-demo">3 ＋ 2 ＝ 5</div>
-                                        <p>3びきの ねこに 2ひきの ねこが きたら、ぜんぶで 5ひきだね。</p>`
+                                        title: "(1) いくつになった？",
+                                        content: `<h4>ふえると いくつかな？</h4>
+                                        <div class="point-box" style="background: #eef7ff;">
+                                            あとから ふえたときに つかうのが <b>「たしざん」</b> だよ。
+                                        </div>
+
+                                        <div class="data-demo">
+                                            <h4>「＋」と 「＝」の つかいかた</h4>
+                                            <p style="font-size: 24px;"><b>3 ＋ 2 ＝ 5</b></p>
+                                            <div style="text-align: left; display: inline-block;">
+                                                <p><b>＋（たす）：</b> ふえる、あわせる しるし。</p>
+                                                <p><b>＝（は）：</b> ぜんぶで いくつに なったか おしえる しるし。</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="point-box" style="font-size: 14px; background: #fffbe6;">
+                                            <b>【かぞえかたの ヒント】</b><br>
+                                            どうぶつを かぞえるときは、<br>
+                                            「1ぴき、2ひき、3びき...」と かぞえるよ。
+                                        </div>
+
+                                        <div class="data-demo" style="margin-top: 20px;">
+                                            🐱 🐱 🐱 (3びき) いるところに、<br>
+                                            🐱 🐱 (2ひき) きました。<br>
+                                            <b>3 ＋ 2 ＝ 5</b>
+                                        </div>
+                                        <p>ぜんぶで <b>5ひき</b> に なったね！</p>`,
+                                        quizzes: [
+                                            { question: "ねこが 2ひき います。3びき きました。ぜんぶで なんびき？", display: "🐱🐱 ＋ 🐱🐱🐱", answer: 5 },
+                                            { question: "あめを 4こ もっていました。2こ もらいました。ぜんぶで なんこ？", display: "🍬🍬🍬🍬 ＋ 🍬🍬", answer: 6 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) がったいすると",
+                                        content: `<h4>あわせると いくつかな？</h4>
+                                        <div class="point-box">
+                                            べつべつの ものを ひとつに まとめるときも <b>「たしざん」</b> だよ。
+                                        </div>
+
+                                        <div class="point-box" style="font-size: 14px; background: #fffbe6;">
+                                            <b>【かぞえかたの ヒント】</b><br>
+                                            ものを かぞえるときは、<br>
+                                            「1つ（ひとつ）、2つ（ふたつ）、3つ（みっつ）...」と かぞえるよ。
+                                        </div>
+
+                                        <div class="data-demo">
+                                            ひだりに 🍎 🍎 🍎 🍎 (4こ)<br>
+                                            みぎに 🍎 🍎 (2こ)<br>
+                                            <b>4 ＋ 2 ＝ 6</b>
+                                        </div>
+                                        <p>がったいして <b>6こ</b> に なったね！</p>`,
+                                        quizzes: [
+                                            { question: "あかい おはじきが 3こ、あおい おはじきが 5こ あります。ぜんぶで なんこ？", display: "🔴🔴🔴 ＋ 🔵🔵🔵🔵🔵", answer: 8 },
+                                            { question: "みかんが 1こ、りんごが 4こ あります。ぜんぶで なんこ？", display: "🍊 ＋ 🍎🍎🍎🍎", answer: 5 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) なんばんめ？",
+                                        content: `<h4>じゅんばんの たしざん</h4>
+                                        <p>まえから 3ばんめの うしろに、4にん ならんでいるよ。<br>
+                                        ぜんぶで なんにん かな？</p>
+                                        <div class="data-demo">
+                                            🔵 🔵 <span style="background:#ffe58f; padding:2px; border:1px solid #e74c3c;">🔴</span> (3ばんめ)<br>
+                                            ＋ 🔵 🔵 🔵 🔵 (4にん)<br>
+                                            <b>3 ＋ 4 ＝ 7</b>
+                                        </div>
+                                        <p>ぜんぶで <b>7にん</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "まえから 2ばんめの うしろに、3にん います。ぜんぶで なんにん？", display: "🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵 🔵", answer: 5 },
+                                            { question: "まえから 4ばんめの うしろに、2にん います。ぜんぶで なんにん？", display: "🔵 🔵 🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵", answer: 6 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(4) ○こおおい",
+                                        content: `<h4>おおいほうを もとめよう</h4>
+                                        <p>りんごが 3こ あります。みかんは りんごより 2こ おおいです。<br>
+                                        みかんは なんこ かな？</p>
+                                        <div class="data-demo">
+                                            🍎 🍎 🍎 (3こ)<br>
+                                            🍊 🍊 🍊 ＋ 🍊 🍊 (2こ おおい)<br>
+                                            <b>3 ＋ 2 ＝ 5</b>
+                                        </div>
+                                        <p>みかんは <b>5こ</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "あかい おはなが 4ほん あります。きいろい おはなは、あかいのより 2ほん おおいです。きいろいのは なんぼん？", display: "🌹🌹🌹🌹 ＋ 🌻🌻", answer: 6 },
+                                            { question: "クッキーが 5こ あります。ケーキは、クッキーより 4こ おおいです。ケーキは なんこ？", display: "🍪🍪🍪🍪🍪 ＋ 🍰🍰🍰🍰", answer: 9 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) ちがうものどうし",
+                                        content: `<h4>ちがう 種類のものを あわせよう</h4>
+                                        <p>ねこが 2ひき、いぬが 4ひき います。<br>
+                                        どうぶつは ぜんぶで なんびき？</p>
+                                        <div class="data-demo">
+                                            🐱 🐱 (2ひき)<br>
+                                            🐶 🐶 🐶 🐶 (4ひき)<br>
+                                            <b>2 ＋ 4 ＝ 6</b>
+                                        </div>
+                                        <p>ぜんぶで <b>6ぴき</b> だね！</p>`,
+                                        quizzes: [
+                                            { question: "りんごが 3こ、みかんが 4こ あります。あわせて なんこ？", display: "🍎🍎🍎 ＋ 🍊🍊🍊🍊", answer: 7 },
+                                            { question: "くるまが 5だい、バスが 3だい あります。あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 }
+                                        ]
                                     }
                                 ]
                             },
