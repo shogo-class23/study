@@ -2144,57 +2144,7 @@ const studyData = {
                             }
                         ]
                     },
-                    {
-                        name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
-                        units: [
-                            {
-                                title: "1. グラフと ひょう",
-                                subUnits: [
-                                    {
-                                        title: "(1) 好きな 色しらべ",
-                                        content: `<h4>「○」をつかって 整理（せいり）しよう</h4>
-                                        <div class="point-box">
-                                            バラバラに ならんでいるものを、○（まる）にならべて 整理すると、どれが 多いか すぐわかるよ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>【クラスの 好きな色】</b></p>
-                                            <table style="margin: 0 auto; text-align: left; line-height: 2;">
-                                                <tr><td>あか：</td><td>○○○○○ (5)</td></tr>
-                                                <tr><td>あお：</td><td>○○○○○○○ (7)</td></tr>
-                                                <tr><td>きいろ：</td><td>○○ (2)</td></tr>
-                                            </table>
-                                        </div>
-                                        <p>このように 並べると…<br>
-                                        ・一番（いちばん） 多いのは？ ➔ <b>あお</b><br>
-                                        ・一番（いちばん） 少ないのは？ ➔ <b>きいろ</b><br>
-                                        ・あかは あおより 何こ 少ない？ ➔ <b>2こ</b>（7-5）</p>`,
-                                        quizzes: [
-                                            { 
-                                                question: "グラフを 見てね。一番（いちばん） 多い（おおい）色は どれかな？", 
-                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
-                                                answer: "あお", options: ["あか", "あお", "しろ"] 
-                                            },
-                                            { 
-                                                question: "グラフを 見てね。一番（いちばん） 少ない（すくない）色は どれかな？", 
-                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
-                                                answer: "しろ", options: ["あか", "あお", "しろ"] 
-                                            },
-                                            { 
-                                                question: "「あか」は 何こ（なんこ） あるかな？", 
-                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
-                                                answer: 3
-                                            },
-                                            { 
-                                                question: "「あお」は 「あか」より 何こ 多いかな？", 
-                                                display: "あか：○○○<br>あお：○○○○○○<br>しろ：○○", 
-                                                answer: 3
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
+
                 ]
             },
             e3: {
@@ -2995,8 +2945,387 @@ const studyData = {
                             }
                         ]
                     },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 重さ(g, kg)", subUnits: [{ title: "(1) はかりの使い方", content: "重さをはかってみよう。" }] }] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 棒グラフ", subUnits: [{ title: "(1) グラフのかき方", content: "データをグラフにしよう。" }] }] }
+                    {
+                        name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>",
+                        units: [
+                            {
+                                title: "1. 長さ",
+                                subUnits: [
+                                    {
+                                        title: "(1) 1km（キロメートル）",
+                                        content: `<h4>1kmって どのくらい？</h4>
+                                        <div class="point-box" style="background:#eef7ff;">
+                                            1000m を あつめると <b>1km（1キロメートル）</b> に なるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>1000m ＝ 1km</b></p>
+                                        </div>
+                                        <p>学校から おうちまで など、ながい 道（みち）のりを あらわすときに つかうよ！</p>`,
+                                        quizzes: [
+                                            { question: "1000m は 何kmかな？", display: "1000m ＝ □km", answer: 1 },
+                                            { question: "3000m は 何kmかな？", display: "3000m ＝ □km", answer: 3 },
+                                            { question: "1km 500m は 何mかな？", display: "1km 500m ＝ □m", answer: 1500 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) まきじゃくで はかろう",
+                                        content: `<h4>ながい ものを はかる 道具</h4>
+                                        <p>ものさし よりも、もっと ながいものを はかるには <b>「まきじゃく」</b> を つかうよ。</p>
+                                        <div class="point-box">
+                                            ・<b>まるまった</b> 形（かたち）をしているよ。<br>
+                                            ・<b>カーブ</b> している ところも はかれるよ！
+                                        </div>
+                                        <p>体育館（たいいくかん）の ながさ や、木の まわり を はかってみよう！</p>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 重さ",
+                                subUnits: [
+                                    {
+                                        title: "(1) g（グラム）と kg（キログラム）",
+                                        content: `<h4>重さの たんい</h4>
+                                        <div class="point-box" style="background:#fff2f0;">
+                                            ・<b>g（グラム）</b>：1円玉（えんだま）1こ分 くらいの 重さ。<br>
+                                            ・<b>kg（キログラム）</b>：1000g あつまった 重さ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>1000g ＝ 1kg</b></p>
+                                        </div>
+                                        <p>キッチンスケール や 体重計（たいじゅうけい）で はかってみよう！</p>`,
+                                        quizzes: [
+                                            { question: "1000g は 何kgかな？", display: "1000g ＝ □kg", answer: 1 },
+                                            { question: "2kg は 何gかな？", display: "2kg ＝ □g", answer: 2000 },
+                                            { question: "1kg 200g は 何gかな？", display: "1kg 200g ＝ □g", answer: 1200 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) t（トン）",
+                                        content: `<h4>とっても おもい もの</h4>
+                                        <div class="point-box" style="background:#f6ffed;">
+                                            ゾウ や トラック など、すごく おもい ものには <b>t（トン）</b> を つかうよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>1000kg ＝ 1t</b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1000kg は 何tかな？", display: "1000kg ＝ □t", answer: 1 },
+                                            { question: "3t は 何kgかな？", display: "3t ＝ □kg", answer: 3000 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) はかりの よみかた",
+                                        content: `<h4>めもりを よもう</h4>
+                                        <div class="point-box">
+                                            はかりの めもりを よむときは、<b>1めもりが 何gか</b> を さきに たしかめよう！
+                                        </div>
+                                        <p>・1kg までのはかりで、めもりが 10こ あったら ➔ 1めもり 100g<br>
+                                        ・1kg までのはかりで、めもりが 100こ あったら ➔ 1めもり 10g</p>`
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 単位の まとめ",
+                                subUnits: [
+                                    {
+                                        title: "(1) いろいろな 単位のまとめ",
+                                        content: `<h4>【1. 長さの単位】</h4>
+                                        <div class="data-demo">
+                                            <p>短いものから長いものへと単位が変わります。</p>
+                                            <table class="data-table">
+                                                <tr><th>単位</th><th>読み方</th><th>関係</th><th>使い道の例</th></tr>
+                                                <tr><td>mm</td><td>ミリメートル</td><td>-</td><td>消しゴムの厚み、アリの長さ</td></tr>
+                                                <tr><td>cm</td><td>センチメートル</td><td>1cm = <b>10mm</b></td><td>ノートの大きさ、身長</td></tr>
+                                                <tr><td>m</td><td>メートル</td><td>1m = <b>100cm</b></td><td>教室の長さ、プールの長さ</td></tr>
+                                                <tr><td>km</td><td>キロメートル</td><td>1km = <b>1000m</b></td><td>隣の町までの道のり、マラソン</td></tr>
+                                            </table>
+                                        </div>
+
+                                        <h4>【2. 重さの単位】</h4>
+                                        <div class="data-demo">
+                                            <p>重さの単位は、名前に「キロ」がつくと1000倍になると覚えるのがコツです。</p>
+                                            <table class="data-table">
+                                                <tr><th>単位</th><th>読み方</th><th>関係</th><th>使い道の例</th></tr>
+                                                <tr><td>g</td><td>グラム</td><td>-</td><td>1円玉（1g）、たまご1こ（約60g）</td></tr>
+                                                <tr><td>kg</td><td>キログラム</td><td>1kg = <b>1000g</b></td><td>ランドセル、自分の体重</td></tr>
+                                                <tr><td>t</td><td>トン</td><td>1t = <b>1000kg</b></td><td>ゾウの重さ、大きなトラック</td></tr>
+                                            </table>
+                                        </div>
+
+                                        <h4>【3. 時間の単位】</h4>
+                                        <div class="data-demo">
+                                            <p>時間は100ではなく「60」で単位が変わるのが特徴です。</p>
+                                            <table class="data-table">
+                                                <tr><th>単位</th><th>読み方</th><th>関係</th></tr>
+                                                <tr><td>秒</td><td>びょう</td><td>-</td></tr>
+                                                <tr><td>分</td><td>ふん</td><td>1分 = <b>60秒</b></td></tr>
+                                                <tr><td>時間</td><td>じかん</td><td>1時間 = <b>60分</b></td></tr>
+                                                <tr><td>日</td><td>にち</td><td>1日 = <b>24時間</b></td></tr>
+                                            </table>
+                                        </div>
+
+                                        <h4>【4. かさ（水など）の単位】</h4>
+                                        <div class="data-demo">
+                                            <p></p>
+                                            <table class="data-table">
+                                                <tr><th>単位</th><th>読み方</th><th>関係</th><th>使い道の例</th></tr>
+                                                <tr><td>mL</td><td>ミリリットル</td><td>-</td><td>牛乳パック（小）、薬の量</td></tr>
+                                                <tr><td>dL</td><td>デシリットル</td><td>1dL = <b>100mL</b></td><td>小さなコップ</td></tr>
+                                                <tr><td>L</td><td>リットル</td><td>1L = <b>10dL</b> = <b>1000mL</b></td><td>牛乳パック（大）、バケツの水</td></tr>
+                                            </table>
+                                        </div>
+
+                                        <div class="point-box">
+                                            <b>【💡 覚えるポイント】</b><br>
+                                            <ul>
+                                                <li><b>「m（ミリ）」</b>がつくと：<b>1000分の1</b>（1000集まると元の単位になる）</li>
+                                                <li><b>「k（キロ）」</b>がつくと：<b>1000倍</b>（元の単位が1000個分）</li>
+                                                <li><b>「d（デシ）」</b>がつくと：<b>10分の1</b>（10集まると元の単位になる）</li>
+                                            </ul>
+                                            このように整理すると、バラバラな単位がすっきり繋がります！
+                                        </div>`,
+                                        quizzes: []
+                                    },
+                                    {
+                                        title: "(2) ぴったりな 単位を えらぼう",
+                                        content: `<h4>どの 単位（たんい）を つかう？</h4>
+                                        <div class="point-box">
+                                            はかる ものの 大きさに あわせて、単位を かえると わかりやすくなるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【長さ】</b><br>
+                                            ・ありの ながさ ➔ <b>mm</b><br>
+                                            ・ノートの ながさ ➔ <b>cm</b><br>
+                                            ・教室（きょうしつ）の ながさ ➔ <b>m</b><br>
+                                            ・となりの 町までの みちのり ➔ <b>km</b></p>
+                                            
+                                            <p style="margin-top:20px;"><b>【重さ】</b><br>
+                                            ・クリップ ➔ <b>g</b><br>
+                                            ・ランドセル ➔ <b>kg</b><br>
+                                            ・クジラ ➔ <b>t</b></p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "えんぴつの 長さを はかるときは？", display: "えんぴつの 長さ", answer: "cm", options: ["mm", "cm", "km"] },
+                                            { question: "マラソンの きょりを はかるときは？", display: "マラソンの きょり", answer: "km", options: ["cm", "m", "km"] },
+                                            { question: "たまご 1この 重さを はかるときは？", display: "たまご 1この 重さ", answer: "g", options: ["g", "kg", "t"] },
+                                            { question: "ゾウの 重さを はかるときは？", display: "ゾウの 重さ", answer: "t", options: ["g", "kg", "t"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. 時間",
+                                subUnits: [
+                                    {
+                                        title: "(1) 秒（びょう）",
+                                        content: `<h4>みじかい 時間の たんい</h4>
+                                        <div class="point-box" style="background:#f9f0ff;">
+                                            1分（いっぷん） よりも みじかい 時間を <b>「秒（びょう）」</b> というよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p style="font-size: 24px;"><b>1分 ＝ 60秒</b></p>
+                                        </div>
+                                        <p>ストップウォッチを つかって、10秒（じゅうびょう） ぴったりで とめられるか やってみよう！</p>`,
+                                        quizzes: [
+                                            { question: "1分は 何秒かな？", display: "1分 ＝ □秒", answer: 60 },
+                                            { question: "2分は 何秒かな？", display: "2分 ＝ □秒", answer: 120 },
+                                            { question: "90秒は 何分何秒かな？", display: "90秒 ＝ □分□秒", answer: "1分30秒", options: ["1分20秒", "1分30秒", "1分40秒"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 時刻（じこく）と 時間（じかん）",
+                                        content: `<h4>「じこく」と 「じかん」の ちがい</h4>
+                                        <div class="point-box">
+                                            ・<b>時刻（じこく）</b>：「9時（じ）」のように、とけいの <b>数字（すうじ）</b> のこと。<br>
+                                            ・<b>時間（じかん）</b>：「1時間（じかん）」のように、ある時刻から ある時刻までの <b>あいだ</b> のこと。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p>9時 ➔ (30分間) ➔ 9時30分</p>
+                                            <p>この <b>「30分間」</b> が 時間（じかん）だよ！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "10時から 10時20分までの 「時間」は 何分かな？", display: "10:00 ➔ 10:20", answer: 20 },
+                                            { question: "2時30分の 10分まえの 「時刻」は 何時何分かな？", display: "2:30 の 10分まえ", answer: "2時20分", options: ["2時10分", "2時20分", "2時40分"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                            {
+                                title: "1. データを整理しよう",
+                                subUnits: [
+                                    {
+                                        title: "(1) 落ちや重なりがない整理",
+                                        content: `<h4>正しく 数（かず）を かぞえよう</h4>
+                                        <div class="point-box">
+                                            データを 正しく 整理（せいり）するには、<br>
+                                            <b>「数え忘れ（かぞえわすれ）」</b> や <b>「二重（にじゅう）に数える」</b> ことがないように 気をつけよう！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【例：好きな くだもの アンケート】</b></p>
+                                            <p>🍎🍊🍌🍎🍊🍇🍎🍌🍊</p>
+                                            <p>バラバラだと 数えにくいね。</p>
+                                            <p style="margin-top:20px;"><b>数えるときは、線（せん）を 引（ひ）いて 消（け）していくと いいよ！</b></p>
+                                            <p style="font-size: 24px;"><s>🍎</s>🍊🍌<s>🍎</s>🍊🍇<s>🍎</s>🍌🍊</p>
+                                            <p>➔ りんご🍎：3こ、みかん🍊：3こ、バナナ🍌：2こ、ぶどう🍇：1こ</p>
+                                            <p>こうすると、落ちや重なりがなく、正しく数えられるね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "次の動物たちを、正しく数えてみよう！犬は 何匹（なんびき）かな？", display: "🐶🐱🐶🐰🐶🐱🐶", answer: 4 },
+                                            { question: "次の色を数えてみよう！赤は 何個（なんこ）かな？", display: "🔴🔵🔴🟢🔵🔴", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 2つの見方で整理（せいり）",
+                                        content: `<h4>たてと よこで 比（くら）べよう</h4>
+                                        <div class="point-box">
+                                            データの整理には <b>「表（ひょう）」</b> が とっても べんりだよ！<br>
+                                            たてと よこの 2つの 見方で、もっとくわしく 分（わ）かるようになるよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【例：好きな くだもの アンケート（男の子と女の子）】</b></p>
+                                            <table class="data-table" style="width: 80%; margin: 20px auto;">
+                                                <tr><th></th><th>りんご</th><th>みかん</th><th>バナナ</th><th>合計</th></tr>
+                                                <tr><td>男の子</td><td>3</td><td>2</td><td>1</td><td>6</td></tr>
+                                                <tr><td>女の子</td><td>2</td><td>3</td><td>2</td><td>7</td></tr>
+                                                <tr><td>合計</td><td>5</td><td>5</td><td>3</td><td>13</td></tr>
+                                            </table>
+                                            <p>この表を見ると、男の子は りんごが 好きで、女の子は みかんが 好きなことが わかるね！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "上の表を見て、好きなくだものが「バナナ」の女の子は 何人かな？", display: "", answer: 2 },
+                                            { question: "上の表を見て、好きなくだものが「みかん」の男の子は 何人かな？", display: "", answer: 2 }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 棒グラフで表そう",
+                                subUnits: [
+                                    {
+                                        title: "(1) 棒グラフって何？",
+                                        content: `<h4>数（かず）を 棒（ぼう）の 長さで 表す グラフ</h4>
+                                        <div class="point-box">
+                                            棒グラフは、データの 数を <b>棒の 長さ</b> で 表して、<br>
+                                            何が どれくらいあるか、ひと目で わかるようにする グラフだよ。
+                                        </div>
+                                        <div class="data-demo">
+                                            <img src="https://via.placeholder.com/300x200?text=Bar+Graph+Example" alt="棒グラフの例" style="max-width:100%;">
+                                            <p>・たての線（目盛り）➔ <b>数（かず）の 大きさ</b> を 表すよ。<br>
+                                            ・よこの線 ➔ <b>しゅるい</b> や <b>項目（こうもく）</b> を 表すよ。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "棒グラフで、数の大きさを表すのは 何の長さかな？", display: "棒グラフ", answer: "棒", options: ["棒", "線", "数字"] },
+                                            { question: "棒グラフのたての線（目盛り）が表すものは 何かな？", display: "棒グラフのたての線", answer: "数", options: ["種類", "時間", "数"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) 目盛り（めもり）の読み方",
+                                        content: `<h4>目盛りの 大きさを たしかめよう</h4>
+                                        <div class="point-box">
+                                            棒グラフの 目盛りを 読むときは、<b>1つの 目盛りが いくつ分か</b> を 最初に 確かめることが 大事だよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <img src="https://via.placeholder.com/300x200?text=Bar+Graph+Scale+Example" alt="棒グラフの目盛りの例" style="max-width:100%;">
+                                            <p>・0から 10までで、線が 5本なら ➔ 1目盛り 2<br>
+                                            ・0から 10までで、線が 10本なら ➔ 1目盛り 1</p>
+                                            <p>目盛りの間（あいだ）の 数を、均等（きんとう）に分けているんだね。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { 
+                                                question: "0から 10までの 目盛りで、線が 5本（0, 2, 4, 6, 8, 10）あるとき、1目盛りは いくつ分かな？", 
+                                                display: "0-10, 線が5本", 
+                                                answer: 2 
+                                            },
+                                            { 
+                                                question: "0から 20までの 目盛りで、線が 4本（0, 5, 10, 15, 20）あるとき、1目盛りは いくつ分かな？", 
+                                                display: "0-20, 線が4本", 
+                                                answer: 5 
+                                            },
+                                            { 
+                                                question: "下の棒グラフを見て、リンゴの数はいくつかな？", 
+                                                display: `<div style="display:flex; height:150px; align-items:flex-end; border-left:2px solid black; border-bottom:2px solid black; margin:20px; padding-left:5px;">
+                                                                <div style="width:30px; background-color:red; height:60%; margin-right:10px;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 2px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 15px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 30px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 45px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 60px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 75px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 90px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 105px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 120px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 135px); width:5px; height:2px; background:black;"></div>
+                                                                <span style="position:absolute; left:-25px; top:135px;">0</span>
+                                                                <span style="position:absolute; left:-25px; top:120px;">1</span>
+                                                                <span style="position:absolute; left:-25px; top:105px;">2</span>
+                                                                <span style="position:absolute; left:-25px; top:90px;">3</span>
+                                                                <span style="position:absolute; left:-25px; top:75px;">4</span>
+                                                                <span style="position:absolute; left:-25px; top:60px;">5</span>
+                                                                <span style="position:absolute; left:-25px; top:45px;">6</span>
+                                                                <span style="position:absolute; left:-25px; top:30px;">7</span>
+                                                                <span style="position:absolute; left:-25px; top:15px;">8</span>
+                                                                <span style="position:absolute; left:-25px; top:0px;">9</span>
+                                                                <span style="position:absolute; left:50px; bottom:-20px;">リンゴ</span>
+                                                            </div>`,
+                                                answer: 6
+                                            },
+                                            { 
+                                                question: "下の棒グラフを見て、ミカンの数はいくつかな？", 
+                                                display: `<div style="display:flex; height:150px; align-items:flex-end; border-left:2px solid black; border-bottom:2px solid black; margin:20px; padding-left:5px;">
+                                                                <div style="width:30px; background-color:orange; height:40%; margin-right:10px;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 2px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 15px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 30px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 45px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 60px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 75px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 90px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 105px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 120px); width:5px; height:2px; background:black;"></div>
+                                                                <div style="position:absolute; left:0; top:calc(150px - 135px); width:5px; height:2px; background:black;"></div>
+                                                                <span style="position:absolute; left:-25px; top:135px;">0</span>
+                                                                <span style="position:absolute; left:-25px; top:120px;">1</span>
+                                                                <span style="position:absolute; left:-25px; top:105px;">2</span>
+                                                                <span style="position:absolute; left:-25px; top:90px;">3</span>
+                                                                <span style="position:absolute; left:-25px; top:75px;">4</span>
+                                                                <span style="position:absolute; left:-25px; top:60px;">5</span>
+                                                                <span style="position:absolute; left:-25px; top:45px;">6</span>
+                                                                <span style="position:absolute; left:-25px; top:30px;">7</span>
+                                                                <span style="position:absolute; left:-25px; top:15px;">8</span>
+                                                                <span style="position:absolute; left:-25px; top:0px;">9</span>
+                                                                <span style="position:absolute; left:50px; bottom:-20px;">ミカン</span>
+                                                            </div>`,
+                                                answer: 4
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 棒グラフをかこう",
+                                        content: `<h4>データを見やすく！</h4>
+                                        <div class="point-box">
+                                            棒グラフをかくときは、<b>「目盛り（めもり）」</b> と <b>「棒（ぼう）の長さ」</b> に 気をつけよう。<br>
+                                            タイトルや 項目名（こうもくめい）も 忘れずに 書こうね！
+                                        </div>
+                                        <div class="data-demo">
+                                            <p><b>【棒グラフをかく手順（てじゅん）】</b></p>
+                                            <ol style="text-align: left; display: inline-block;">
+                                                <li>いちばん大きい 数が入る 目盛りを 決める。</li>
+                                                <li>たてと よこの 軸（じく）を かく。</li>
+                                                <li>項目名と 棒の 長さを かく。</li>
+                                                <li>グラフの 名前（タイトル）を つける。</li>
+                                            </ol>
+                                            <img src="https://via.placeholder.com/300x200?text=Draw+Bar+Graph+Example" alt="棒グラフのかき方の例" style="max-width:100%;">
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "棒グラフをかくときに、いちばん最初に決めることは何かな？", display: "棒グラフ作成", answer: "目盛り", options: ["棒の太さ", "棒の色", "目盛り"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ] }
                 ]
             },
             e4: {
