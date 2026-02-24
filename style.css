@@ -1427,3 +1427,127 @@ footer {
         padding: 20px;
     }
 }
+
+/* メモ機能のスタイル（マルチメモツールデザイン） */
+.floating-memo-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #4A90E2;
+    color: white;
+    border: 4px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.floating-memo-btn:hover {
+    transform: scale(1.1);
+}
+
+.memo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.memo-box {
+    background: #fff;
+    width: 100%;
+    max-width: 650px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: memoPop 0.3s ease-out;
+}
+
+@keyframes memoPop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.toolbar {
+    padding: 10px 15px;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toolbar strong {
+    font-size: 14px;
+    color: #333;
+    margin-right: auto;
+}
+
+.toolbar button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 13px;
+    font-weight: bold;
+    background: #fff;
+}
+
+.toolbar button:hover { background: #f0f0f0; }
+.toolbar .btn-clear { background: #ffcccc; border-color: #ff9999; }
+.toolbar .btn-secondary { background: #e0e0e0; }
+
+.content-area {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+}
+
+#memo-canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+    touch-action: none;
+}
+
+#text-memo-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#memo-textarea {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    font-size: 18px;
+    line-height: 1.6;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    background: #fdfdfd;
+}
+
+.hidden {
+    display: none !important;
+}

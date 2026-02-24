@@ -110,7 +110,7 @@ const studyData = {
                                             （「010」とは かかずに、「10」と かくんだよ！）
                                         </div>
 
-                                        <p>0は、<b>「ここにおへやはあるけど、なかみは からっぽだよ！」</b> と おしえてくれる たいせつな しるしなんだよ。</p>`,
+                                        <p>0は、<b>「ここにおへやはあるけど、なかみは からっぽだよ！」</b> と おしえてくれる たいせつな しるしんだよ。</p>`,
                                         quizzes: [
                                             { question: "くだものは なんこ あるかな？", display: " ", answer: 0 },
                                             { question: "くだものは なんこ あるかな？", display: "(🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎)", answer: 10 },
@@ -258,7 +258,7 @@ const studyData = {
                                         </div>
                                         <p>ぜんぶで <b>5ひき</b> に なったね！</p>`,
                                         quizzes: [
-                                            { question: "ねこが 2ひき います。3びき きました。ぜんぶで なんびき？", display: "🐱🐱 ＋ 🐱🐱🐱", answer: 5 },
+                                            { question: "ねこが 2ひき います. 3びき きました。ぜんぶで なんびき？", display: "🐱🐱 ＋ 🐱🐱🐱", answer: 5 },
                                             { question: "あめを 4こ もっていました。2こ もらいました。ぜんぶで なんこ？", display: "🍬🍬🍬🍬 ＋ 🍬🍬", answer: 6 }
                                         ]
                                     },
@@ -282,7 +282,7 @@ const studyData = {
                                         </div>
                                         <p>がったいして <b>6こ</b> に なったね！</p>`,
                                         quizzes: [
-                                            { question: "あかい おはじきが 3こ、あおい おはじきが 5こ あります。ぜんぶで なんこ？", display: "🔴🔴🔴 ＋ 🔵🔵🔵🔵🔵", answer: 8 },
+                                            { question: "あめを 3こ、りんごを 5こ あります。ぜんぶで なんこ？", display: "🍬🍬🍬 ＋ 🍎🍎🍎🍎🍎", answer: 8 },
                                             { question: "みかんが 1こ、りんごが 4こ あります。ぜんぶで なんこ？", display: "🍊 ＋ 🍎🍎🍎🍎", answer: 5 }
                                         ]
                                     },
@@ -298,8 +298,8 @@ const studyData = {
                                         </div>
                                         <p>ぜんぶで <b>7にん</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "まえから 2ばんめの うしろに、3にん います。ぜんぶで なんにん？", display: "🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵 🔵", answer: 5 },
-                                            { question: "まえから 4ばんめの うしろに、2にん います。ぜんぶで なんにん？", display: "🔵 🔵 🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵", answer: 6 }
+                                            { question: "まえから 2ばんめの うしろに、3にん います. ぜんぶで なんにん？", display: "🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵 🔵", answer: 5 },
+                                            { question: "まえから 4ばんめの うしろに、2にん います. ぜんぶで なんにん？", display: "🔵 🔵 🔵 <span style='background:#ffe58f; border:1px solid #e74c3c;'>🔴</span> ＋ 🔵 🔵", answer: 6 }
                                         ]
                                     },
                                     {
@@ -314,12 +314,12 @@ const studyData = {
                                         </div>
                                         <p>みかんは <b>5こ</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "あかい おはなが 4ほん あります。きいろい おはなは、あかいのより 2ほん おおいです。きいろいのは なんぼん？", display: "🌹🌹🌹🌹 ＋ 🌻🌻", answer: 6 },
-                                            { question: "クッキーが 5こ あります。ケーキは、クッキーより 4こ おおいです。ケーキは なんこ？", display: "🍪🍪🍪🍪🍪 ＋ 🍰🍰🍰🍰", answer: 9 }
+                                            { question: "あかい おはなが 4ほん あります. きいろい おはなは、あかいのより 2ほん おおいです。きいろいのは なんぼん？", display: "🌹🌹🌹🌹 ＋ 🌻🌻", answer: 6 },
+                                            { question: "クッキーが 5こ あります。ケーキは、クッキーより 4こ おおいです. ケーキは なんこ？", display: "🍪🍪🍪🍪🍪 ＋ 🍰🍰🍰🍰", answer: 9 }
                                         ]
                                     },
                                     {
-                                        title: "(5) ちがうものどうし",
+                                        title: "(5) ちいさな 種類のものを あわせよう",
                                         content: `<h4>ちがう 種類のものを あわせよう</h4>
                                         <p>ねこが 2ひき、いぬが 4ひき います。<br>
                                         どうぶつは ぜんぶで なんびき？</p>
@@ -330,8 +330,8 @@ const studyData = {
                                         </div>
                                         <p>ぜんぶで <b>6ぴき</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "りんごが 3こ、みかんが 4こ あります。あわせて なんこ？", display: "🍎🍎🍎 ＋ 🍊🍊🍊🍊", answer: 7 },
-                                            { question: "くるまが 5だい、バスが 3だい あります。あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 }
+                                            { question: "りんごが 3こ、みかんが 4こ あります. あわせて なんこ？", display: "🍎🍎🍎 ＋ 🍊🍊🍊🍊", answer: 7 },
+                                            { question: "くるまが 5だい、バスが 3だい あります. あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 }
                                         ]
                                     },
                                     {
@@ -385,7 +385,7 @@ const studyData = {
                                             (10) と 🍎🍎 ＋ 🍎🍎🍎🍎<br>
                                             <b>＝ 16</b>
                                         </div>
-                                        <p>答えは <b>16</b> だね。くりあがりが ないときは かんたんだよ！</p>`,
+                                        <p>答えは <b>16</b> だね. くりあがりが ないときは かんたんだよ！</p>`,
                                         quizzes: [
                                             { question: "13 ＋ 2 は いくつかな？", display: "13 ＋ 2", answer: 15 },
                                             { question: "11 ＋ 7 は いくつかな？", display: "11 ＋ 7", answer: 18 }
@@ -410,12 +410,12 @@ const studyData = {
                                     },
                                     {
                                         title: "(4) バラの 足し算",
-                                        content: `<h4>まとまりと バラを あわせよう</h4>
+                                        content: `<h4>バラを あわせよう</h4>
                                         <div class="data-demo">
                                             <p><b>20 ＋ 5 ＝ □</b></p>
                                             <p>(10)(10) と 🍎🍎🍎🍎🍎</p>
                                         </div>
-                                        <p>10の まままりが 2つ、バラが 5つで <b>25</b> に なるね！</p>`,
+                                        <p>10の まとまりが 2つ、バラが 5つで <b>25</b> に なるね！</p>`,
                                         quizzes: [
                                             { question: "30 ＋ 4 は いくつかな？", display: "30 ＋ 4", answer: 34 },
                                             { question: "70 ＋ 9 は いくつかな？", display: "70 ＋ 9", answer: 79 }
@@ -478,8 +478,8 @@ const studyData = {
                                         </div>
                                         <p>のこりは <b>3こ</b> に なったね！</p>`,
                                         quizzes: [
-                                            { question: "クッキーが 4こ ありました。1こ たべました。のこりは なんこ？", display: "🍪🍪🍪🍪 － 🍪", answer: 3 },
-                                            { question: "あめが 6こ ありました。2こ あげました。のこりは なんこ？", display: "🍬🍬🍬🍬🍬🍬 － 🍬🍬", answer: 4 }
+                                            { question: "クッキーが 4こ ありました. 1こ たべました。のこりは なんこ？", display: "🍪🍪🍪🍪 － 🍪", answer: 3 },
+                                            { question: "あめが 6こ ありました. 2こ あげました。のこりは なんこ？", display: "🍬🍬🍬🍬🍬🍬 － 🍬🍬", answer: 4 }
                                         ]
                                     },
                                     {
@@ -500,8 +500,8 @@ const studyData = {
                                         <b>5 － 3 ＝ 2</b><br>
                                         ちがいは <b>2つ</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "あかい おはなが 5ほん、しろい おはなが 2ほん あります。ちがいは なんぼん？", display: "🌹🌹🌹🌹🌹<br>🌻🌻", answer: 3 },
-                                            { question: "バナナが 4ほん、メロンが 1こ あります。どちらが なんこ おおい？", display: "🍌🍌🍌🍌<br>🍈", answer: 3 }
+                                            { question: "あかい おはなが 5ほん、しろい おはなが 2ほん あります. ちがいは なんぼん？", display: "🌹🌹🌹🌹🌹<br>🌻🌻", answer: 3 },
+                                            { question: "バナナが 4ほん、メロンが 1こ あります. どちらが なんこ おおい？", display: "🍌🍌🍌🍌<br>🍈", answer: 3 }
                                         ]
                                     },
                                     {
@@ -516,8 +516,8 @@ const studyData = {
                                         </div>
                                         <p>のこりは <b>4にん</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "まえから 5にん ならんでいます。まえから 2ばんめの ひとより うしろは なんにん？", display: "🔵🔴 ＋ 🔵🔵🔵", answer: 3 },
-                                            { question: "まえから 8にん ならんでいます。まえから 5ばんめの ひとより うしろは なんにん？", display: "🔵🔵🔵🔵🔴 ＋ 🔵🔵🔵", answer: 3 }
+                                            { question: "まえから 5にん ならんでいます. まえから 2ばんめの ひとより うしろは なんにん？", display: "🔵🔴 ＋ 🔵🔵🔵", answer: 3 },
+                                            { question: "まえから 8にん ならんでいます. まえから 5ばんめの ひとより うしろは なんにん？", display: "🔵🔵🔵🔵🔴 ＋ 🔵🔵🔵", answer: 3 }
                                         ]
                                     },
                                     {
@@ -532,8 +532,8 @@ const studyData = {
                                         </div>
                                         <p>みかんは <b>3こ</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "おさらが 6まい あります。コップは、おさらより 2こ すくないです。コップは なんこ？", display: "🍽️(6) － 🥛(2すくない)", answer: 4 },
-                                            { question: "えんぴつが 8ほん あります。けしごむは、えんぴつより 5こ すくないです。けしごむは なんこ？", display: "✏️(8) － 🧼(5すくない)", answer: 3 }
+                                            { question: "おさらが 6まい あります. コップは、おさらより 2こ すくないです。コップは なんこ？", display: "🍽️(6) － 🥛(2すくない)", answer: 4 },
+                                            { question: "えんぴつが 8ほん あります. けしごむは、えんぴつより 5こ すくないです。けしごむは なんこ？", display: "✏️(8) － 🧼(5すくない)", answer: 3 }
                                         ]
                                     },
                                     {
@@ -548,8 +548,8 @@ const studyData = {
                                         </div>
                                         <p>ごはんが もらえない いぬは <b>1ぴき</b> だね！</p>`,
                                         quizzes: [
-                                            { question: "うさぎが 5ひき、にんじんが 3ぼん あります。にんじんが もらえない うさぎは なんびき？", display: "🐰🐰🐰🐰🐰<br>🥕🥕🥕", answer: 2 },
-                                            { question: "ねこが 3びき、おさかなが 5ひき あります。あまる おさかなは なんこ？", display: "🐱🐱🐱<br>🐟🐟🐟🐟🐟", answer: 2 }
+                                            { question: "うさぎが 5ひき、にんじんが 3ぼん あります. にんじんが もらえない うさぎは なんびき？", display: "🐰🐰🐰🐰🐰<br>🥕🥕🥕", answer: 2 },
+                                            { question: "ねこが 3びき、おさかなが 5ひき あります. あまる おさかなは なんこ？", display: "🐱🐱🐱<br>🐟🐟🐟🐟🐟", answer: 2 }
                                         ]
                                     },
                                     {
@@ -565,7 +565,7 @@ const studyData = {
 
                                         <h4>② ぜんぶ ひく (0に なる)</h4>
                                         <p><b>3 － 3 ＝ 0</b></p>
-                                        <p>3こ あるなかから、3こ ぜんぶ たべちゃった。のこりは 0だね！</p>`,
+                                        <p>3こ あるなかから、3こ ぜんぶ たべちゃった. のこりは 0だね！</p>`,
                                         quizzes: [
                                             { question: "5 － 0 は いくつかな？", display: "5 － 0", answer: 5 },
                                             { question: "2 － 2 は いくつかな？", display: "2 － 2", answer: 0 },
@@ -701,7 +701,7 @@ const studyData = {
                                             ちゅうがくせいに なると、<b>「マイナス」</b> という かずを つかって、<br>
                                             0よりも ちいさい かずを おべんきょうするんだよ！
                                         </div>
-                                        <p>れいぞうこの なか みたいに、とっても さむい かずの世界（せかい）があるんだ。ふしぎだね！</p>`
+                                        <p>れいぞうこの なか みたいに、とっても さむい かずの世界（せかい）があるんだ. ふしぎだね！</p>`
                                     }
                                 ]
                             }
@@ -903,7 +903,7 @@ const studyData = {
                                         title: "(1) なにかに かえて くらべよう",
                                         content: `<h4>はなれた ところに あるときは？</h4>
                                         <div class="point-box" style="background:#fffbe6;">
-                                            つくえの ながさと、ドアの はば。かさねられないときは <b>「なにか」</b> を つかおう！
+                                            つくえの ながさと、ドアの はば. かさねられないときは <b>「なにか」</b> を つかおう！
                                         </div>
                                         <p>・<b>ひも</b> で はかって、その ひもの ながさを くらべる。<br>
                                         ・<b>えんぴつ</b> が なんぼんぶん あるか かぞえる。</p>
@@ -1212,112 +1212,122 @@ const studyData = {
                                     }
                                 ]
                             },
-                                                        {
-                                                            title: "4. 半分の 半分の……",
-                                                            subUnits: [
-                                                                {
-                                                                    title: "(1) いろいろな 大きさに 分（わ）けてみよう",
-                                                                    content: `<h4>おなじ 大きさに 分ける</h4>
-                                                                    <div class="point-box">
-                                                                        ひとつの ものを、おなじ 大きさに 分ける べんきょうだよ！
-                                                                    </div>
-                                                                    
-                                                                    <div class="data-demo">
-                                                                        <p><b>① 2つに 分けると？ (1/2)</b></p>
-                                                                        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:10px;">
-                                                                            <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f;"></div>
-                                                                            <div style="font-size:20px;">➔</div>
-                                                                            <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f; position:relative;">
-                                                                                <div style="position:absolute; left:50%; top:0; bottom:0; border-left:2px dashed #ff4d4f;"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <p>2つに 分けた 1つ分を <b>2分の1（にぶんのいち）</b> というよ。</p>
-                            
-                                                                        <p style="margin-top:20px;"><b>② 3つに 分けると？ (1/3)</b></p>
-                                                                        <div style="width:120px; height:30px; border:2px solid #333; margin:0 auto 10px; display:flex;">
-                                                                            <div style="flex:1; background:#ff7675; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div>
-                                                                        </div>
-                                                                        <p>3つに 分けた 1つ分を <b>3分の1（さんぶんのいち）</b> というよ。</p>
-                            
-                                                                        <p style="margin-top:20px;"><b>③ 4つに 分けると？ (1/4)</b></p>
-                                                                        <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f; margin:0 auto 10px; position:relative;">
-                                                                            <div style="position:absolute; left:50%; top:0; bottom:0; border-left:2px dashed #ff4d4f;"></div>
-                                                                            <div style="position:absolute; top:50%; left:0; right:0; border-top:2px dashed #ff4d4f;"></div>
-                                                                        </div>
-                                                                        <p>4つに 分けた 1つ分を <b>4分の1（よんぶんのいち）</b> というよ。</p>
-                            
-                                                                        <p style="margin-top:20px;"><b>④ もっと たくさんに 分けると？</b></p>
-                                                                        <div style="background:#f9f9f9; padding:15px; border-radius:10px; margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:14px;">
-                                                                            <div style="border:1px solid #ddd; padding:5px;">
-                                                                                <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#74b9ff; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
-                                                                                5つに 分けた <b>1/5</b>
-                                                                            </div>
-                                                                            <div style="border:1px solid #ddd; padding:5px;">
-                                                                                <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#a29bfe; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
-                                                                                6つに 分けた <b>1/6</b>
-                                                                            </div>
-                                                                            <div style="border:1px solid #ddd; padding:5px;">
-                                                                                <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#55efc4; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
-                                                                                7つに 分けた <b>1/7</b>
-                                                                            </div>
-                                                                            <div style="border:1px solid #ddd; padding:5px;">
-                                                                                <div style="width:40px; height:40px; background:#ffd6e7; border:1px solid #ff4d4f; margin:0 auto; display:grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr);">
-                                                                                    <div style="border:1px dashed #ff4d4f; background:#ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div>
-                                                                                    <div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div>
-                                                                                </div>
-                                                                                8つに 分けた <b>1/8</b>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <p>分ける 数が <b>おおきくなる</b> ほど、1つ分は <b>ちいさく</b> なるんだね！</p>`,
-                                                                                                            quizzes: [
-                                                                                                                { 
-                                                                                                                    question: "2つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#ffd6e7; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 2 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "3つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#ff7675; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 3 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "4つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#ffe58f; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 4 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "5つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#74b9ff; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 5 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "6つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#a29bfe; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 6 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "7つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#55efc4; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 7 
-                                                                                                                },
-                                                                                                                { 
-                                                                                                                    question: "8つに 分けた うちの 1つは、なんぶんの1かな？", 
-                                                                                                                    display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#fab1a0; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
-                                                                                                                    answer: 8 
-                                                                                                                }
-                                                                                                            ]                                                                }
-                                                            ]
-                                                        },
+                            {
+                                title: "4. 半分の 半分の……",
+                                subUnits: [
+                                    {
+                                        title: "(1) いろいろな 大きさに 分（わ）けてみよう",
+                                        content: `<h4>おなじ 大きさに 分ける</h4>
+                                        <div class="point-box">
+                                            ひとつの ものを、おなじ 大きさに 分ける べんきょうだよ！
+                                        </div>
+                                        
+                                        <div class="data-demo">
+                                            <p><b>① 2つに 分けると？ (1/2)</b></p>
+                                            <div style="display:flex; justify-content:center; gap:10px; margin-bottom:10px;">
+                                                <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f;"></div>
+                                                <div style="font-size:20px;">➔</div>
+                                                <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f; position:relative;">
+                                                    <div style="position:absolute; left:50%; top:0; bottom:0; border-left:2px dashed #ff4d4f;"></div>
+                                                </div>
+                                            </div>
+                                            <p>2つに 分けた 1つ分を <b>2分の1（にぶんのいち）</b> というよ。</p>
+
+                                            <p style="margin-top:20px;"><b>② 3つに 分けると？ (1/3)</b></p>
+                                            <div style="width:120px; height:30px; border:2px solid #333; margin:0 auto 10px; display:flex;">
+                                                <div style="flex:1; background:#ff7675; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div>
+                                            </div>
+                                            <p>3つに 分けた 1つ分を <b>3分の1（さんぶんのいち）</b> というよ。</p>
+
+                                            <p style="margin-top:20px;"><b>③ 4つに 分けると？ (1/4)</b></p>
+                                            <div style="width:60px; height:60px; background:#ffd6e7; border:1px solid #ff4d4f; margin:0 auto 10px; position:relative;">
+                                                <div style="position:absolute; left:50%; top:0; bottom:0; border-left:2px dashed #ff4d4f;"></div>
+                                                <div style="position:absolute; top:50%; left:0; right:0; border-top:2px dashed #ff4d4f;"></div>
+                                            </div>
+                                            <p>4つに 分けた 1つ分を <b>4分の1（よんぶんのいち）</b> というよ。</p>
+
+                                            <p style="margin-top:20px;"><b>④ もっと たくさんに 分けると？</b></p>
+                                            <div style="background:#f9f9f9; padding:15px; border-radius:10px; margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:14px;">
+                                                <div style="border:1px solid #ddd; padding:5px;">
+                                                    <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#74b9ff; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
+                                                    5つに 分けた <b>1/5</b>
+                                                </div>
+                                                <div style="border:1px solid #ddd; padding:5px;">
+                                                    <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#a29bfe; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
+                                                    6つに 分けた <b>1/6</b>
+                                                </div>
+                                                <div style="border:1px solid #ddd; padding:5px;">
+                                                    <div style="display:flex; height:20px; border:1px solid #333;"><div style="flex:1; background:#55efc4; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>
+                                                    7つに 分けた <b>1/7</b>
+                                                </div>
+                                                <div style="border:1px solid #ddd; padding:5px;">
+                                                    <div style="width:40px; height:40px; background:#ffd6e7; border:1px solid #ff4d4f; margin:0 auto; display:grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr);">
+                                                        <div style="border:1px dashed #ff4d4f; background:#ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div>
+                                                        <div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div><div style="border:1px dashed #ff4d4f;"></div>
+                                                    </div>
+                                                    8つに 分けた <b>1/8</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>分ける 数が <b>おおきくなる</b> ほど、1つ分は <b>ちいさく</b> なるんだね！</p>`,
+                                        quizzes: [
+                                            { 
+                                                question: "2つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#ffd6e7; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 2 
+                                            },
+                                            { 
+                                                question: "3つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#ff7675; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 3 
+                                            },
+                                            { 
+                                                question: "4つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="background:#ffe58f; flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 4 
+                                            },
+                                            { 
+                                                question: "5つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#74b9ff; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 5 
+                                            },
+                                            { 
+                                                question: "6つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#a29bfe; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 6 
+                                            },
+                                            { 
+                                                question: "7つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#55efc4; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 7 
+                                            },
+                                            { 
+                                                question: "8つに 分けた うちの 1つは、なんぶんの1かな？", 
+                                                display: `<div style="display:flex; width:150px; height:30px; border:2px solid #333; margin:0 auto;"><div style="flex:1; background:#fab1a0; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div></div>`, 
+                                                answer: 8 
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
                             {
                                 title: "5. 足し算（筆算）",
                                 subUnits: [
                                     {
-                                        title: "(1) たてに ならべて けいさんしよう",
-                                        content: `<h4>たしざんの ひっさん</h4>
+                                        title: "(1) 筆算（ひっさん）とは？",
+                                        content: `<h4>たてに ならべて けいさんしよう</h4>
                                         <div class="point-box">
-                                            かずが おおきくなったら、たてに ならべて けいさんしよう！
+                                            かずが おおきくなったら、よこに かくより <b>「たて」</b> に ならべるほうが まちがえにくいよ！これを <b>「筆算（ひっさん）」</b> というよ。
                                         </div>
+                                        <div class="data-demo">
+                                            <p><b>【ひっさんの おやくそく】</b></p>
+                                            <p>① くらい（お部屋）を ぴったり そろえて かく！<br>
+                                            ② 右がわ（1の くらい）から じゅんばんに 計算する！</p>
+                                        </div>`
+                                    },
+                                    {
+                                        title: "(2) 2位数の 計算（くりあがりなし）",
+                                        content: `<h4>2けたの たしざん</h4>
                                         <div class="data-demo">
                                             <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
   2 5
@@ -1325,13 +1335,110 @@ const studyData = {
 -----
   3 9
                                             </pre>
-                                            <p>① くらいを ぴったり そろえるよ。<br>
-                                            ② 1の くらいから じゅんばんに たすよ！</p>
+                                            <p>1の くらい：5 ＋ 4 ＝ 9<br>
+                                            10の くらい：2 ＋ 1 ＝ 3</p>
+                                        </div>
+                                        <p>お部屋ごとに たすだけだから かんたんだね！</p>`,
+                                        quizzes: [
+                                            { question: "52 ＋ 16 は いくつかな？", display: "  52<br>+ 16", answer: 68 },
+                                            { question: "23 ＋ 45 は いくつかな？", display: "  23<br>+ 45", answer: 68 },
+                                            { question: "71 ＋ 28 は いくつかな？", display: "  71<br>+ 28", answer: 99 },
+                                            { question: "34 ＋ 52 は いくつかな？", display: "  34<br>+ 52", answer: 86 },
+                                            { question: "60 ＋ 19 は いくつかな？", display: "  60<br>+ 19", answer: 79 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) 2位数の 計算（くりあがりあり）",
+                                        content: `<h4>おとなりへ おひっこし！</h4>
+                                        <div class="point-box">
+                                            1の くらいが 10以上に なったら、<b>10の まとまりを おとなりの お部屋（10の くらい）</b> に あげるよ！
+                                        </div>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  2 8
++ 1 5
+-----
+  4 3
+                                            </pre>
+                                            <p>① 8 ＋ 5 ＝ 13<br>
+                                            ② 3を 下にかいて、<b>10（1）</b> を おとなりへ！<br>
+                                            ③ 10の くらい：1(くりあがり) ＋ 2 ＋ 1 ＝ 4</p>
                                         </div>`,
                                         quizzes: [
-                                            { question: "23 ＋ 14 は いくつかな？", display: "  23<br>+ 14", answer: 37 },
-                                            { question: "41 ＋ 35 は いくつかな？", display: "  41<br>+ 35", answer: 76 }
+                                            { question: "39 ＋ 45 は いくつかな？", display: "  39<br>+ 45", answer: 84 },
+                                            { question: "27 ＋ 56 は いくつかな？", display: "  27<br>+ 56", answer: 83 },
+                                            { question: "48 ＋ 37 は いくつかな？", display: "  48<br>+ 37", answer: 85 },
+                                            { question: "65 ＋ 29 は いくつかな？", display: "  65<br>+ 29", answer: 94 },
+                                            { question: "18 ＋ 74 は いくつかな？", display: "  18<br>+ 74", answer: 92 }
                                         ]
+                                    },
+                                    {
+                                        title: "(4) 3位数の 計算（くりあがりなし）",
+                                        content: `<h4>もっと おおきな かずの 筆算</h4>
+                                        <p>100の くらいが あっても、やりかたは おなじだよ！</p>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  1 2 3
++ 2 4 5
+-------
+  3 6 8
+                                            </pre>
+                                            <p>1の くらい、10の くらい、100の くらい。<br>
+                                            右から じゅんばんに 計算しよう！</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "214 ＋ 152 は いくつかな？", display: "  214<br>+ 152", answer: 366 },
+                                            { question: "430 ＋ 215 は いくつかな？", display: "  430<br>+ 215", answer: 645 },
+                                            { question: "123 ＋ 564 は いくつかな？", display: "  123<br>+ 564", answer: 687 },
+                                            { question: "702 ＋ 186 は いくつかな？", display: "  702<br>+ 186", answer: 888 },
+                                            { question: "341 ＋ 427 は いくつかな？", display: "  341<br>+ 427", answer: 768 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(5) 3位数の 計算（くりあがりあり）",
+                                        content: `<h4>なんかいも くりあがるよ</h4>
+                                        <p>10の くらいから 100の くらいへ くりあがる ことも あるよ！</p>
+                                        <div class="data-demo">
+                                            <pre style="font-size: 24px; line-height: 1.2; letter-spacing: 5px;">
+  1 5 6
++ 2 7 8
+-------
+  4 3 4
+                                            </pre>
+                                            <p>① 6＋8＝14 (1くりあがる)<br>
+                                            ② 1＋5＋7＝13 (1くりあがる)<br>
+                                            ③ 1＋1＋2＝4</p>
+                                        </div>
+                                        <p>あわてずに ひとつずつ 計算しよう！</p>`,
+                                        quizzes: [
+                                            { question: "468 ＋ 215 は いくつかな？", display: "  468<br>+ 215", answer: 683 },
+                                            { question: "576 ＋ 287 は いくつかな？", display: "  576<br>+ 287", answer: 863 },
+                                            { question: "158 ＋ 264 は いくつかな？", display: "  158<br>+ 264", answer: 422 },
+                                            { question: "392 ＋ 415 は いくつかな？", display: "  392<br>+ 415", answer: 807 },
+                                            { question: "475 ＋ 386 は いくつかな？", display: "  475<br>+ 386", answer: 861 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(6) たしざんの 法則（ほうそく）",
+                                        content: `<h4>たしざんの べんりな きまり</h4>
+                                        <div class="point-box">
+                                            たしざんには、計算（けいさん）が らくに なる <b>2つの きまり</b> が あるよ！
+                                        </div>
+
+                                        <h4>① たす じゅんばんを いれかえても OK！</h4>
+                                        <div class="data-demo">
+                                            <p><b>20 ＋ 30 ＝ 50</b></p>
+                                            <p><b>30 ＋ 20 ＝ 50</b></p>
+                                            <p><small>これを「交換法則（こうかんほうそく）」というよ。</small></p>
+                                        </div>
+
+                                        <h4>② どこから 先に 計算しても OK！</h4>
+                                        <div class="data-demo">
+                                            <p><b>(12 ＋ 8) ＋ 5 ＝ 25</b></p>
+                                            <p><b>12 ＋ (8 ＋ 5) ＝ 25</b></p>
+                                            <p><small>これを「結合法則（けつごうほうそく）」というよ。</small></p>
+                                        </div>
+                                        <p>10や 20など、<b>「ぴったりの かず」</b> を 先につくると 計算が かんたんに なるね！</p>`
                                     }
                                 ]
                             },
@@ -1479,391 +1586,518 @@ const studyData = {
     }
 };
 
-const homeView = document.getElementById('home-view');
-const gradeView = document.getElementById('grade-view');
-const categoryView = document.getElementById('category-view');
-const unitView = document.getElementById('unit-view');
-const subUnitView = document.getElementById('sub-unit-view');
-const contentView = document.getElementById('content-view');
-const quizView = document.getElementById('quiz-view');
+window.onload = () => {
+    const homeView = document.getElementById('home-view');
+    const gradeView = document.getElementById('grade-view');
+    const categoryView = document.getElementById('category-view');
+    const unitView = document.getElementById('unit-view');
+    const subUnitView = document.getElementById('sub-unit-view');
+    const contentView = document.getElementById('content-view');
+    const quizView = document.getElementById('quiz-view');
 
-const categoryList = document.getElementById('category-list');
-const unitList = document.getElementById('unit-list');
-const subUnitList = document.getElementById('sub-unit-list');
+    const categoryList = document.getElementById('category-list');
+    const unitList = document.getElementById('unit-list');
+    const subUnitList = document.getElementById('sub-unit-list');
 
-const selectedGradeName = document.getElementById('selected-grade-name');
-const selectedCategoryName = document.getElementById('selected-category-name');
-const selectedUnitName = document.getElementById('selected-unit-name');
+    const selectedGradeName = document.getElementById('selected-grade-name');
+    const selectedCategoryName = document.getElementById('selected-category-name');
+    const selectedUnitName = document.getElementById('selected-unit-name');
 
-const contentTitle = document.getElementById('content-title');
-const contentBody = document.getElementById('content-body');
-const quizViewBody = document.getElementById('quiz-view-body');
-const breadcrumb = document.getElementById('breadcrumb');
+    const contentTitle = document.getElementById('content-title');
+    const contentBody = document.getElementById('content-body');
+    const quizViewBody = document.getElementById('quiz-view-body');
+    const breadcrumb = document.getElementById('breadcrumb');
 
-const homeBtn = document.getElementById('home-btn');
-const backToHomeBtn = document.getElementById('back-to-home-btn');
-const backToGradeBtn = document.getElementById('back-to-grade-btn');
-const backToCategoryBtn = document.getElementById('back-to-category-btn');
-const backToUnitBtn = document.getElementById('back-to-unit-btn');
-const backToSubUnitBtn = document.getElementById('back-to-sub-unit-btn');
-const startQuizBtn = document.getElementById('start-quiz-btn');
-const backToContentBtn = document.getElementById('back-to-content-btn');
+    const homeBtn = document.getElementById('home-btn');
+    const backToHomeBtn = document.getElementById('back-to-home-btn');
+    const backToGradeBtn = document.getElementById('back-to-grade-btn');
+    const backToCategoryBtn = document.getElementById('back-to-category-btn');
+    const backToUnitBtn = document.getElementById('back-to-unit-btn');
+    const backToSubUnitBtn = document.getElementById('back-to-sub-unit-btn');
+    const startQuizBtn = document.getElementById('start-quiz-btn');
+    const backToContentBtn = document.getElementById('back-to-content-btn');
 
-let currentSubject = 'math';
-let currentGrade = '';
-let currentCategoryIndex = -1;
-let currentUnitIndex = -1;
-let currentSubUnit = null;
-let currentInput = "";
-let currentQuizIndex = 0;
-let correctCount = 0;
-let shuffledQuizzes = []; // シャッフルした問題をいれる
+    let currentSubject = 'math';
+    let currentGrade = '';
+    let currentCategoryIndex = -1;
+    let currentUnitIndex = -1;
+    let currentSubUnit = null;
+    let currentInput = "";
+    let currentQuizIndex = 0;
+    let correctCount = 0;
+    let shuffledQuizzes = []; 
 
-function shuffleArray(array) {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-}
-
-function updateBreadcrumb(pathItems) {
-    breadcrumb.innerHTML = '';
-    pathItems.forEach((item, index) => {
-        const span = document.createElement('span');
-        span.innerHTML = item.label;
-        if (item.action && index < pathItems.length - 1) {
-            span.classList.add('breadcrumb-link');
-            span.onclick = item.action;
+    function shuffleArray(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
         }
-        breadcrumb.appendChild(span);
-        if (index < pathItems.length - 1) {
-            const separator = document.createElement('span');
-            separator.innerText = ' > ';
-            breadcrumb.appendChild(separator);
-        }
-    });
-}
-
-function showHome() { 
-    updateBreadcrumb([{ label: 'ホーム' }]); 
-    showView('home-view'); 
-}
-
-function showGrades() { 
-    const subjectName = studyData[currentSubject].name;
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName }
-    ]);
-    showView('grade-view'); 
-}
-
-function showCategories() {
-    const subjectName = studyData[currentSubject].name;
-    const gradeData = studyData[currentSubject].grades[currentGrade];
-    if (!gradeData) {
-        alert("まだデータがありません。");
-        return;
+        return newArray;
     }
-    selectedGradeName.innerHTML = gradeData.name;
 
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName, action: showGrades },
-        { label: gradeData.name }
-    ]);
-
-    categoryList.innerHTML = '';
-    if (gradeData.categories) {
-        gradeData.categories.forEach((cat, i) => {
-            const div = document.createElement('div');
-            div.className = 'material-item';
-            div.innerHTML = `<span>${cat.name}</span>`;
-            div.onclick = () => showUnits(i);
-            categoryList.appendChild(div);
+    function updateBreadcrumb(pathItems) {
+        breadcrumb.innerHTML = '';
+        pathItems.forEach((item, index) => {
+            const span = document.createElement('span');
+            span.innerHTML = item.label;
+            if (item.action && index < pathItems.length - 1) {
+                span.classList.add('breadcrumb-link');
+                span.onclick = item.action;
+            }
+            breadcrumb.appendChild(span);
+            if (index < pathItems.length - 1) {
+                const separator = document.createElement('span');
+                separator.innerText = ' > ';
+                breadcrumb.appendChild(separator);
+            }
         });
     }
-    showView('category-view');
-}
 
-function showUnits(i) {
-    currentCategoryIndex = i;
-    const subjectName = studyData[currentSubject].name;
-    const gradeData = studyData[currentSubject].grades[currentGrade];
-    const cat = gradeData.categories[i];
-    selectedCategoryName.innerHTML = cat.name;
-
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName, action: showGrades },
-        { label: gradeData.name, action: showCategories },
-        { label: cat.name }
-    ]);
-
-    unitList.innerHTML = '';
-    cat.units.forEach((u, j) => {
-        const div = document.createElement('div');
-        div.className = 'material-item';
-        div.innerHTML = `<span>${u.title}</span>`;
-        div.onclick = () => showSubUnits(j);
-        unitList.appendChild(div);
-    });
-    showView('unit-view');
-}
-
-function showSubUnits(j) {
-    currentUnitIndex = j;
-    const subjectName = studyData[currentSubject].name;
-    const gradeData = studyData[currentSubject].grades[currentGrade];
-    const cat = gradeData.categories[currentCategoryIndex];
-    const unit = cat.units[j];
-    selectedUnitName.innerHTML = unit.title;
-
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName, action: showGrades },
-        { label: gradeData.name, action: showCategories },
-        { label: cat.name, action: () => showUnits(currentCategoryIndex) },
-        { label: unit.title }
-    ]);
-
-    subUnitList.innerHTML = '';
-    unit.subUnits.forEach(s => {
-        const div = document.createElement('div');
-        div.className = 'material-item';
-        div.innerHTML = `<span>${s.title}</span>`;
-        div.onclick = () => showContent(s);
-        subUnitList.appendChild(div);
-    });
-    showView('sub-unit-view');
-}
-
-function showContent(s) {
-    currentSubUnit = s;
-    currentQuizIndex = 0;
-    correctCount = 0;
-    
-    // クイズがある場合はシャッフルして準備する
-    if (s.quizzes && s.quizzes.length > 0) {
-        shuffledQuizzes = shuffleArray(s.quizzes);
-    } else {
-        shuffledQuizzes = [];
+    function showHome() { 
+        updateBreadcrumb([{ label: 'ホーム' }]); 
+        showView('home-view'); 
     }
 
-    const subjectName = studyData[currentSubject].name;
-    const gradeData = studyData[currentSubject].grades[currentGrade];
-    const cat = gradeData.categories[currentCategoryIndex];
-    const unit = cat.units[currentUnitIndex];
-
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName, action: showGrades },
-        { label: gradeData.name, action: showCategories },
-        { label: cat.name, action: () => showUnits(currentCategoryIndex) },
-        { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
-        { label: s.title }
-    ]);
-
-    contentTitle.innerHTML = s.title;
-    contentBody.innerHTML = s.content;
-    
-    // クイズがある場合はボタンを表示
-    const startBtnContainer = document.getElementById('quiz-start-container');
-    if (s.quizzes && s.quizzes.length > 0) {
-        startBtnContainer.style.display = 'block';
-    } else {
-        startBtnContainer.style.display = 'none';
+    function showGrades() { 
+        const subjectName = studyData[currentSubject].name;
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName }
+        ]);
+        showView('grade-view'); 
     }
-    
-    showView('content-view');
-}
 
-function startQuiz(index = 0) {
-    if (!currentSubUnit || shuffledQuizzes.length === 0 || !shuffledQuizzes[index]) return;
-    currentQuizIndex = index;
-    if (index === 0) correctCount = 0; // 1問目ならリセット
-    
-    const q = shuffledQuizzes[currentQuizIndex];
-    const quizViewBody = document.getElementById('quiz-view-body');
-    currentInput = ""; 
-    
-    quizViewBody.innerHTML = `
-        <div class="quiz-container">
-            <div style="font-size: 18px; color: #666; margin-bottom: 10px;">
-                ${currentQuizIndex + 1} / ${shuffledQuizzes.length} もんめ
-            </div>
-            <div class="quiz-question">${q.question}</div>
-            <div class="quiz-display">${q.display}</div>
-            
-            ${q.options ? `
-                <!-- 選択肢が指定されている場合 -->
-                <div class="quiz-options" style="margin-top: 20px;">
-                    ${q.options.map(opt => `<button class="quiz-btn" style="width: auto; min-width: 80px; padding: 10px;" onclick="checkPictorialAnswer(this, '${q.answer}')">${opt}</button>`).join('')}
-                </div>
-            ` : `
-                <!-- テンキー入力の場合 -->
-                <div style="display:flex; justify-content:center; align-items:center;">
-                    <div class="quiz-input-display" id="input-display"> </div>
-                    <button class="clear-btn" onclick="clearNumber()">けす</button>
-                </div>
-
-                <div class="numeric-pad">
-                    ${[1,2,3,4,5,6,7,8,9,0].map(n => `<button class="quiz-btn" onclick="typeNumber(${n})">${n}</button>`).join('')}
-                    <button class="quiz-btn" style="background:#fffbe6;" onclick="typeNumber('じ')">じ</button>
-                    <button class="quiz-btn" style="background:#fffbe6;" onclick="typeNumber('はん')">はん</button>
-                </div>
-                
-                <button class="answer-btn" onclick="submitAnswer()">こたえあわせ</button>
-            `}
-            <div class="quiz-feedback" id="quiz-feedback"></div>
-        </div>
-    `;
-    
-    const subjectName = studyData[currentSubject].name;
-    const gradeData = studyData[currentSubject].grades[currentGrade];
-    const cat = gradeData.categories[currentCategoryIndex];
-    const unit = cat.units[currentUnitIndex];
-
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: subjectName, action: showGrades },
-        { label: gradeData.name, action: showCategories },
-        { label: cat.name, action: () => showUnits(currentCategoryIndex) },
-        { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
-        { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
-        { label: `${currentQuizIndex + 1}もんめ` }
-    ]);
-    
-    showView('quiz-view');
-}
-
-function typeNumber(n) {
-    if (currentInput.length < 5) {
-        currentInput += n.toString();
-        const display = document.getElementById('input-display');
-        if (display) display.innerText = currentInput;
-    }
-}
-
-function clearNumber() {
-    if (currentInput.length > 0) {
-        if (currentInput.endsWith('はん')) {
-            currentInput = currentInput.slice(0, -2);
-        } else {
-            currentInput = currentInput.slice(0, -1);
+    function showCategories() {
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        if (!gradeData) {
+            alert("まだデータがありません。");
+            return;
         }
-        const display = document.getElementById('input-display');
-        if (display) display.innerText = currentInput === "" ? " " : currentInput;
-    }
-}
+        selectedGradeName.innerHTML = gradeData.name;
 
-function checkPictorialAnswer(btn, correctVal) {
-    const feedback = document.getElementById('quiz-feedback');
-    const btns = btn.parentElement.querySelectorAll('.quiz-btn');
-    btns.forEach(b => b.disabled = true); 
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name }
+        ]);
 
-    const selectedVal = btn.innerText;
-    const isCorrect = (selectedVal == correctVal); 
-
-    if (isCorrect) {
-        btn.classList.add('correct');
-        correctCount++;
-        feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
-    } else {
-        btn.classList.add('wrong');
-        feedback.innerHTML = `
-            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
-        `;
+        categoryList.innerHTML = '';
+        if (gradeData.categories) {
+            gradeData.categories.forEach((cat, i) => {
+                const div = document.createElement('div');
+                div.className = 'material-item';
+                div.innerHTML = `<span>${cat.name}</span>`;
+                div.onclick = () => showUnits(i);
+                categoryList.appendChild(div);
+            });
+        }
+        showView('category-view');
     }
 
-    const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
-    if (!isLast) {
-        feedback.innerHTML += `<button class="action-btn" onclick="startQuiz(${currentQuizIndex + 1})">つぎの もんだいへ</button>`;
-    } else {
-        feedback.innerHTML += `<button class="action-btn" onclick="showResults()">さいごの けっかを見る</button>`;
-    }
-}
+    function showUnits(i) {
+        currentCategoryIndex = i;
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[i];
+        selectedCategoryName.innerHTML = cat.name;
 
-function submitAnswer() {
-    if (currentInput === "") return;
-    
-    const feedback = document.getElementById('quiz-feedback');
-    const q = shuffledQuizzes[currentQuizIndex];
-    const correctVal = q.answer.toString();
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name }
+        ]);
 
-    const btns = document.querySelectorAll('.quiz-btn, .clear-btn, .answer-btn');
-    btns.forEach(b => b.disabled = true);
-    
-    const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
-    const isCorrect = currentInput === correctVal;
-    
-    if (isCorrect) {
-        correctCount++;
-        feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
-    } else {
-        feedback.innerHTML = `
-            <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
-        `;
+        unitList.innerHTML = '';
+        cat.units.forEach((u, j) => {
+            const div = document.createElement('div');
+            div.className = 'material-item';
+            div.innerHTML = `<span>${u.title}</span>`;
+            div.onclick = () => showSubUnits(j);
+            unitList.appendChild(div);
+        });
+        showView('unit-view');
     }
 
-    if (!isLast) {
-        feedback.innerHTML += `<button class="action-btn" onclick="startQuiz(${currentQuizIndex + 1})">つぎの もんだいへ</button>`;
-    } else {
-        feedback.innerHTML += `<button class="action-btn" onclick="showResults()">さいごの けっかを見る</button>`;
-    }
-}
+    function showSubUnits(j) {
+        currentUnitIndex = j;
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[currentCategoryIndex];
+        const unit = cat.units[j];
+        selectedUnitName.innerHTML = unit.title;
 
-function showResults() {
-    const quizViewBody = document.getElementById('quiz-view-body');
-    const total = shuffledQuizzes.length;
-    
-    quizViewBody.innerHTML = `
-        <div class="quiz-container">
-            <h2 style="color: #3498db; margin-bottom: 20px;">✨ くいず おわり！ ✨</h2>
-            <div style="font-size: 24px; margin-bottom: 20px;">
-                ${total}もん ちゅう <b style="font-size: 40px; color: #e74c3c;">${correctCount}</b> もん せいかい！
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+            { label: unit.title }
+        ]);
+
+        subUnitList.innerHTML = '';
+        unit.subUnits.forEach(s => {
+            const div = document.createElement('div');
+            div.className = 'material-item';
+            div.innerHTML = `<span>${s.title}</span>`;
+            div.onclick = () => showContent(s);
+            subUnitList.appendChild(div);
+        });
+        showView('sub-unit-view');
+    }
+
+    function showContent(s) {
+        currentSubUnit = s;
+        currentQuizIndex = 0;
+        correctCount = 0;
+        
+        if (s.quizzes && s.quizzes.length > 0) {
+            shuffledQuizzes = shuffleArray(s.quizzes);
+        } else {
+            shuffledQuizzes = [];
+        }
+
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[currentCategoryIndex];
+        const unit = cat.units[currentUnitIndex];
+
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+            { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+            { label: s.title }
+        ]);
+
+        contentTitle.innerHTML = s.title;
+        contentBody.innerHTML = s.content;
+        
+        const startBtnContainer = document.getElementById('quiz-start-container');
+        if (s.quizzes && s.quizzes.length > 0) {
+            startBtnContainer.style.display = 'block';
+        } else {
+            startBtnContainer.style.display = 'none';
+        }
+        
+        showView('content-view');
+    }
+
+    function startQuiz(index = 0) {
+        if (!currentSubUnit || shuffledQuizzes.length === 0 || !shuffledQuizzes[index]) return;
+        currentQuizIndex = index;
+        if (index === 0) correctCount = 0; 
+        
+        const q = shuffledQuizzes[currentQuizIndex];
+        const quizViewBody = document.getElementById('quiz-view-body');
+        currentInput = ""; 
+        
+        quizViewBody.innerHTML = `
+            <div class="quiz-container">
+                <div style="font-size: 18px; color: #666; margin-bottom: 10px;">
+                    ${currentQuizIndex + 1} / ${shuffledQuizzes.length} もんめ
+                </div>
+                <div class="quiz-question">${q.question}</div>
+                <div class="quiz-display">${q.display}</div>
+                
+                ${q.options ? `
+                    <div class="quiz-options" style="margin-top: 20px;">
+                        ${q.options.map(opt => `<button class="quiz-btn" style="width: auto; min-width: 80px; padding: 10px;">${opt}</button>`).join('')}
+                    </div>
+                ` : `
+                    <div style="display:flex; justify-content:center; align-items:center;">
+                        <div class="quiz-input-display" id="input-display"> </div>
+                        <button class="clear-btn" id="quiz-clear-btn">けす</button>
+                    </div>
+
+                    <div class="numeric-pad" id="numeric-pad">
+                        ${[1,2,3,4,5,6,7,8,9,0].map(n => `<button class="quiz-btn">${n}</button>`).join('')}
+                        <button class="quiz-btn" style="background:#fffbe6;">じ</button>
+                        <button class="quiz-btn" style="background:#fffbe6;">はん</button>
+                    </div>
+                    
+                    <button class="answer-btn" id="quiz-submit-btn">こたえあわせ</button>
+                `}
+                <div class="quiz-feedback" id="quiz-feedback"></div>
             </div>
-            <div style="margin-bottom: 30px;">
-                ${correctCount === total ? 'ぜんぶ せいかい！ 天才（てんさい）だね！' : 'よく がんばったね！'}
-            </div>
-            <button class="action-btn" style="background:#95a5a6" onclick="showContent(currentSubUnit)">お勉強（べんきょう）にもどる</button>
-            <button class="action-btn" style="margin-top:10px" onclick="showContent(currentSubUnit); setTimeout(()=>startQuiz(0), 10);">もういちど くいずをやる</button>
-        </div>
-    `;
-    
-    updateBreadcrumb([
-        { label: 'ホーム', action: showHome },
-        { label: studyData[currentSubject].name, action: showGrades },
-        { label: 'けっか' }
-    ]);
-}
+        `;
 
-function showView(id) {
-    const views = ['home-view', 'grade-view', 'category-view', 'unit-view', 'sub-unit-view', 'content-view', 'quiz-view'];
-    views.forEach(v => {
-        const el = document.getElementById(v);
-        if (el) el.classList.add('hidden');
+        if (q.options) {
+            const btns = quizViewBody.querySelectorAll('.quiz-options .quiz-btn');
+            btns.forEach(btn => {
+                btn.onclick = () => checkPictorialAnswer(btn, q.answer);
+            });
+        } else {
+            const padBtns = quizViewBody.querySelectorAll('#numeric-pad .quiz-btn');
+            padBtns.forEach(btn => {
+                btn.onclick = () => typeNumber(btn.innerText);
+            });
+            quizViewBody.querySelector('#quiz-clear-btn').onclick = clearNumber;
+            quizViewBody.querySelector('#quiz-submit-btn').onclick = submitAnswer;
+        }
+        
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[currentCategoryIndex];
+        const unit = cat.units[currentUnitIndex];
+
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+            { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+            { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
+            { label: `${currentQuizIndex + 1}もんめ` }
+        ]);
+        
+        showView('quiz-view');
+    }
+
+    function typeNumber(n) {
+        if (currentInput.length < 5) {
+            currentInput += n.toString();
+            const display = document.getElementById('input-display');
+            if (display) display.innerText = currentInput;
+        }
+    }
+
+    function clearNumber() {
+        if (currentInput.length > 0) {
+            if (currentInput.endsWith('はん')) {
+                currentInput = currentInput.slice(0, -2);
+            } else {
+                currentInput = currentInput.slice(0, -1);
+            }
+            const display = document.getElementById('input-display');
+            if (display) display.innerText = currentInput === "" ? " " : currentInput;
+        }
+    }
+
+    function checkPictorialAnswer(btn, correctVal) {
+        const feedback = document.getElementById('quiz-feedback');
+        const btns = btn.parentElement.querySelectorAll('.quiz-btn');
+        btns.forEach(b => b.disabled = true); 
+
+        const selectedVal = btn.innerText;
+        const isCorrect = (selectedVal == correctVal); 
+
+        if (isCorrect) {
+            btn.classList.add('correct');
+            correctCount++;
+            feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
+        } else {
+            btn.classList.add('wrong');
+            feedback.innerHTML = `
+                <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
+            `;
+        }
+
+        const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
+        if (!isLast) {
+            feedback.innerHTML += `<button class="action-btn" id="next-quiz-btn">つぎの もんだいへ</button>`;
+            document.getElementById('next-quiz-btn').onclick = () => startQuiz(currentQuizIndex + 1);
+        } else {
+            feedback.innerHTML += `<button class="action-btn" id="results-btn">さいごの けっかを見る</button>`;
+            document.getElementById('results-btn').onclick = showResults;
+        }
+    }
+
+    function submitAnswer() {
+        if (currentInput === "") return;
+        
+        const feedback = document.getElementById('quiz-feedback');
+        const q = shuffledQuizzes[currentQuizIndex];
+        const correctVal = q.answer.toString();
+
+        const btns = document.querySelectorAll('.quiz-btn, .clear-btn, .answer-btn');
+        btns.forEach(b => b.disabled = true);
+        
+        const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
+        const isCorrect = currentInput === correctVal;
+        
+        if (isCorrect) {
+            correctCount++;
+            feedback.innerHTML = `<div style="color: #2ecc71; margin-bottom: 15px; font-size: 24px;">✨ せいかい！ ✨</div>`;
+        } else {
+            feedback.innerHTML = `
+                <div style="color: #ff7675; margin-bottom: 15px; font-size: 20px;">ざんねん！<br>もういちど かんがえてみてね。</div>
+            `;
+        }
+
+        if (!isLast) {
+            feedback.innerHTML += `<button class="action-btn" id="next-quiz-btn">つぎの もんだいへ</button>`;
+            document.getElementById('next-quiz-btn').onclick = () => startQuiz(currentQuizIndex + 1);
+        } else {
+            feedback.innerHTML += `<button class="action-btn" id="results-btn">さいごの けっかを見る</button>`;
+            document.getElementById('results-btn').onclick = showResults;
+        }
+    }
+
+    function showResults() {
+        const quizViewBody = document.getElementById('quiz-view-body');
+        const total = shuffledQuizzes.length;
+        
+        quizViewBody.innerHTML = `
+            <div class="quiz-container">
+                <h2 style="color: #3498db; margin-bottom: 20px;">✨ くいず おわり！ ✨</h2>
+                <div style="font-size: 24px; margin-bottom: 20px;">
+                    ${total}もん ちゅう <b style="font-size: 40px; color: #e74c3c;">${correctCount}</b> もん せいかい！
+                </div>
+                <div style="margin-bottom: 30px;">
+                    ${correctCount === total ? 'ぜんぶ せいかい！ 天才（てんさい）だね！' : 'よく がんばったね！'}
+                </div>
+                <button class="action-btn" style="background:#95a5a6" id="back-study-btn">お勉強（べんきょう）にもどる</button>
+                <button class="action-btn" style="margin-top:10px" id="retry-quiz-btn">もういちど くいずをやる</button>
+            </div>
+        `;
+        
+        document.getElementById('back-study-btn').onclick = () => showContent(currentSubUnit);
+        document.getElementById('retry-quiz-btn').onclick = () => {
+            showContent(currentSubUnit);
+            setTimeout(() => startQuiz(0), 10);
+        };
+
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: studyData[currentSubject].name, action: showGrades },
+            { label: 'けっか' }
+        ]);
+    }
+
+    function showView(id) {
+        const views = ['home-view', 'grade-view', 'category-view', 'unit-view', 'sub-unit-view', 'content-view', 'quiz-view'];
+        views.forEach(v => {
+            const el = document.getElementById(v);
+            if (el) el.classList.add('hidden');
+        });
+        const target = document.getElementById(id);
+        if (target) target.classList.remove('hidden');
+    }
+
+    homeBtn.onclick = showHome;
+    document.querySelectorAll('.subject-card').forEach(c => { c.onclick = () => { currentSubject = c.dataset.subject; showGrades(); }; });
+    document.querySelectorAll('.grade-card').forEach(c => { c.onclick = () => { currentGrade = c.dataset.grade; showCategories(); }; });
+    backToHomeBtn.onclick = showHome;
+    backToGradeBtn.onclick = showGrades;
+    backToCategoryBtn.onclick = showCategories;
+    backToUnitBtn.onclick = () => showUnits(currentCategoryIndex);
+    backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
+
+    if (startQuizBtn) startQuizBtn.onclick = () => startQuiz(0);
+    if (backToContentBtn) backToContentBtn.onclick = () => showContent(currentSubUnit);
+
+    // --- メモ機能（お絵かき & テキスト）のロジック ---
+    const memoContainer = document.getElementById('memo-container');
+    const memoCanvas = document.getElementById('memo-canvas');
+    const textMemoWrapper = document.getElementById('text-memo-wrapper');
+    const memoTextarea = document.getElementById('memo-textarea');
+    const memoStatus = document.getElementById('memo-status');
+    const toggleMemoBtn = document.getElementById('toggle-memo-btn');
+    const toggleModeBtn = document.getElementById('toggle-mode-btn');
+    const clearMemoBtn = document.getElementById('clear-memo-btn');
+    const closeMemoBtn = document.getElementById('close-memo-btn');
+    const ctx = memoCanvas.getContext('2d');
+
+    let isDrawing = false;
+    let isTextMode = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    function resizeCanvas() {
+        const rect = memoCanvas.parentNode.getBoundingClientRect();
+        memoCanvas.width = rect.width;
+        memoCanvas.height = rect.height;
+        ctx.strokeStyle = '#0000FF'; 
+        ctx.lineWidth = 5;          
+        ctx.lineCap = 'round';      
+        ctx.lineJoin = 'round';
+    }
+
+    function getPos(e) {
+        const rect = memoCanvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+
+    function startDraw(e) {
+        if (isTextMode) return;
+        isDrawing = true;
+        const { x, y } = getPos(e);
+        lastX = x; lastY = y;
+    }
+
+    function draw(e) {
+        if (!isDrawing || isTextMode) return;
+        const { x, y } = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        lastX = x; lastY = y;
+        if (e.touches) e.preventDefault(); 
+    }
+
+    toggleModeBtn.onclick = () => {
+        isTextMode = !isTextMode;
+        if (isTextMode) {
+            memoCanvas.classList.add('hidden');
+            textMemoWrapper.classList.remove('hidden');
+            toggleModeBtn.innerText = '✏️ お絵かきにする';
+            memoStatus.innerText = '文字入力中';
+            memoTextarea.focus();
+        } else {
+            memoCanvas.classList.remove('hidden');
+            textMemoWrapper.classList.add('hidden');
+            toggleModeBtn.innerText = '⌨️ 文字入力にする';
+            memoStatus.innerText = 'お絵かき中';
+            setTimeout(resizeCanvas, 50);
+        }
+    };
+
+    toggleMemoBtn.onclick = () => {
+        memoContainer.classList.remove('hidden');
+        toggleMemoBtn.classList.add('hidden');
+        memoTextarea.value = localStorage.getItem('study-memo-text') || '';
+        if (!isTextMode) setTimeout(resizeCanvas, 50);
+    };
+
+    closeMemoBtn.onclick = () => {
+        localStorage.setItem('study-memo-text', memoTextarea.value);
+        memoContainer.classList.add('hidden');
+        toggleMemoBtn.classList.remove('hidden');
+    };
+
+    clearMemoBtn.onclick = () => {
+        const msg = isTextMode ? '文字を全部消していいかな？' : '書いたものを全部消していいかな？';
+        if (confirm(msg)) {
+            if (isTextMode) {
+                memoTextarea.value = '';
+                localStorage.removeItem('study-memo-text');
+            } else {
+                ctx.clearRect(0, 0, memoCanvas.width, memoCanvas.height);
+            }
+        }
+    };
+
+    memoTextarea.oninput = () => {
+        localStorage.setItem('study-memo-text', memoTextarea.value);
+    };
+
+    memoCanvas.addEventListener('mousedown', startDraw);
+    memoCanvas.addEventListener('mousemove', draw);
+    window.addEventListener('mouseup', () => isDrawing = false);
+    memoCanvas.addEventListener('touchstart', startDraw, { passive: false });
+    memoCanvas.addEventListener('touchmove', draw, { passive: false });
+    memoCanvas.addEventListener('touchend', () => isDrawing = false);
+
+    window.addEventListener('resize', () => {
+        if (!memoContainer.classList.contains('hidden') && !isTextMode) resizeCanvas();
     });
-    const target = document.getElementById(id);
-    if (target) target.classList.remove('hidden');
-}
 
-function initQuiz() {
-    // 従来のSVG型クイズ用
-}
-
-homeBtn.onclick = showHome;
-document.querySelectorAll('.subject-card').forEach(c => { c.onclick = () => { currentSubject = c.dataset.subject; showGrades(); }; });
-document.querySelectorAll('.grade-card').forEach(c => { c.onclick = () => { currentGrade = c.dataset.grade; showCategories(); }; });
-backToHomeBtn.onclick = showHome;
-backToGradeBtn.onclick = showGrades;
-backToCategoryBtn.onclick = showCategories;
-backToUnitBtn.onclick = () => showUnits(currentCategoryIndex);
-backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
-
-if (startQuizBtn) startQuizBtn.onclick = () => startQuiz(0);
-if (backToContentBtn) backToContentBtn.onclick = () => showContent(currentSubUnit);
-
-showHome();
+    showHome();
+};
