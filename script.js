@@ -566,12 +566,30 @@ function showSubUnits(j) {
 let currentSubUnit = null;
 let currentInput = "";
 let currentQuizIndex = 0;
-let correctCount = 0; // 正解した数をかぞえる
+let correctCount = 0;
+let shuffledQuizzes = []; // シャッフルした問題をいれる
+
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
 
 function showContent(s) {
     currentSubUnit = s;
     currentQuizIndex = 0;
-    correctCount = 0; // リセット
+    correctCount = 0;
+    
+    // クイズがある場合はシャッフルして準備する
+    if (s.quizzes && s.quizzes.length > 0) {
+        shuffledQuizzes = shuffleArray(s.quizzes);
+    } else {
+        shuffledQuizzes = [];
+    }
+
     const subjectName = studyData[currentSubject].name;
     const gradeData = studyData[currentSubject].grades[currentGrade];
     const cat = gradeData.categories[currentCategoryIndex];
@@ -600,18 +618,18 @@ function showContent(s) {
 }
 
 function startQuiz(index = 0) {
-    if (!currentSubUnit || !currentSubUnit.quizzes || !currentSubUnit.quizzes[index]) return;
+    if (!currentSubUnit || shuffledQuizzes.length === 0 || !shuffledQuizzes[index]) return;
     currentQuizIndex = index;
     if (index === 0) correctCount = 0; // 1問目ならリセット
     
-    const q = currentSubUnit.quizzes[currentQuizIndex];
+    const q = shuffledQuizzes[currentQuizIndex];
     const quizViewBody = document.getElementById('quiz-view-body');
     currentInput = ""; 
     
     quizViewBody.innerHTML = `
         <div class="quiz-container">
             <div style="font-size: 18px; color: #666; margin-bottom: 10px;">
-                ${currentQuizIndex + 1} / ${currentSubUnit.quizzes.length} もんめ
+                ${currentQuizIndex + 1} / ${shuffledQuizzes.length} もんめ
             </div>
             <div class="quiz-question">${q.question}</div>
             <div class="quiz-display">${q.display}</div>
@@ -668,13 +686,13 @@ function submitAnswer() {
     if (currentInput === "") return;
     
     const feedback = document.getElementById('quiz-feedback');
-    const q = currentSubUnit.quizzes[currentQuizIndex];
+    const q = shuffledQuizzes[currentQuizIndex];
     const correctVal = q.answer.toString();
 
     const btns = document.querySelectorAll('.quiz-btn, .clear-btn, .answer-btn');
     btns.forEach(b => b.disabled = true);
     
-    const isLast = currentQuizIndex === currentSubUnit.quizzes.length - 1;
+    const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
     const isCorrect = currentInput === correctVal;
     
     if (isCorrect) {
@@ -695,7 +713,7 @@ function submitAnswer() {
 
 function showResults() {
     const quizViewBody = document.getElementById('quiz-view-body');
-    const total = currentSubUnit.quizzes.length;
+    const total = shuffledQuizzes.length;
     
     quizViewBody.innerHTML = `
         <div class="quiz-container">
@@ -707,7 +725,7 @@ function showResults() {
                 ${correctCount === total ? 'ぜんぶ せいかい！ 天才（てんさい）だね！' : 'よく がんばったね！'}
             </div>
             <button class="action-btn" style="background:#95a5a6" onclick="showContent(currentSubUnit)">お勉強（べんきょう）にもどる</button>
-            <button class="action-btn" style="margin-top:10px" onclick="startQuiz(0)">もういちど くいずをやる</button>
+            <button class="action-btn" style="margin-top:10px" onclick="showContent(currentSubUnit); setTimeout(()=>startQuiz(0), 10);">もういちど くいずをやる</button>
         </div>
     `;
     
