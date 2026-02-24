@@ -1009,12 +1009,122 @@ const studyData = {
                         name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>",
                         units: [
                             {
-                                title: "1. なかまづくりと グラフ",
+                                title: "1. どっちが おおい？",
                                 subUnits: [
                                     {
-                                        title: "(1) なかまに わけよう",
+                                        title: "(1) 大きさと かず",
+                                        content: `<h4>見た目に だまされないで かぞえよう</h4>
+                                        <div class="point-box">
+                                            「バランスボール」と 「スーパーボール」。<br>
+                                            どっちが たくさん あるかな？
+                                        </div>
+
+                                        <div class="data-demo">
+                                            <p><b>① そのまま 見たとき</b></p>
+                                            <div style="font-size: 40px;">🔵 🔵 🔵</div>
+                                            <p><small>バランスボール（大きい）</small></p>
+                                            <div style="font-size: 14px;">⚪️ ⚪️ ⚪️ ⚪️ ⚪️</div>
+                                            <p><small>スーパーボール（小さい）</small></p>
+                                        </div>
+                                        
+                                        <p>大きい バランスボールの ほうが、たくさん あるように 見えるね。</p>
+
+                                        <div class="data-demo" style="margin-top: 20px;">
+                                            <p><b>② 大きさを そろえて ならべたとき</b></p>
+                                            <table style="margin: 0 auto; border-collapse: collapse; text-align: center; font-size: 20px;">
+                                                <tr><td>🔵</td><td>🔵</td><td>🔵</td><td> </td><td> </td></tr>
+                                                <tr><td>⚪️</td><td>⚪️</td><td>⚪️</td><td>⚪️</td><td>⚪️</td></tr>
+                                            </table>
+                                        </div>
+
+                                        <p>大きさを おなじにして ならべると、<br>
+                                        スーパーボールの ほうが <b>2つ おおい</b> ことが わかるよ！</p>`,
+                                        quizzes: [
+                                            { 
+                                                question: "どっちが おおいかな？（かずを かぞえてね）", 
+                                                display: "🔵 🔵 🔵 (バランスボール)<br>⚪️ ⚪️ ⚪️ ⚪️ ⚪️ (スーパーボール)", 
+                                                answer: "⚪️", 
+                                                options: ["🔵", "⚪️"] 
+                                            },
+                                            { 
+                                                question: "どっちが おおいかな？（かずを かぞえてね）", 
+                                                display: "✏️ ✏️ (ながいえんぴつ)<br>🖍️ 🖍️ 🖍️ 🖍️ (みじかいクレヨン)", 
+                                                answer: "🖍️", 
+                                                options: ["✏️", "🖍️"] 
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "(2) なかまに わけよう",
                                         content: `<h4>おなじ 種類（しゅるい）を あつめよう</h4>
-                                        <p>整理すると、みかんのほうが 多いことが すぐに わかるね！</p>`
+                                        <div class="data-demo">
+                                            🍎 🍊 🍎 🍌 🍊 🍎<br>
+                                            <small>バラバラだと かぞえにくいね。</small>
+                                        </div>
+                                        <div class="point-box" style="background: #f6ffed;">
+                                            <b>「りんご」</b> <b>「みかん」</b> <b>「バナナ」</b> <br>
+                                            種類（しゅるい）ごとに 整理（せいり）してみよう！
+                                        </div>
+                                        <div class="data-demo">
+                                            🍎🍎🍎 (3こ)<br>
+                                            🍊🍊 (2こ)<br>
+                                            🍌 (1こ)
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "りんご🍎は なんこ あったかな？", display: "🍎 🍊 🍎 🍌 🍊 🍎", answer: 3 }
+                                        ]
+                                    },
+                                    {
+                                        title: "(3) グラフに しよう",
+                                        content: `<h4>したから つみあげてみよう</h4>
+                                        <p>整理（せいり）した かずを、グラフに してみるよ。</p>
+                                        <div class="data-demo">
+                                            <div style="display:flex; justify-content:center; align-items:flex-end; gap:20px; height:120px;">
+                                                <div style="display:flex; flex-direction:column-reverse; border-bottom:2px solid #333;">🍎<br>🍎<br>🍎</div>
+                                                <div style="display:flex; flex-direction:column-reverse; border-bottom:2px solid #333;">🍊<br>🍊</div>
+                                                <div style="display:flex; flex-direction:column-reverse; border-bottom:2px solid #333;">🍌</div>
+                                            </div>
+                                            <div style="display:flex; justify-content:center; gap:20px; font-size:12px; margin-top:5px;">
+                                                <div style="width:30px;">りんご</div>
+                                                <div style="width:30px;">みかん</div>
+                                                <div style="width:30px;">バナナ</div>
+                                            </div>
+                                        </div>
+                                        <p>一番（いちばん） 高（たか）いところが、一番 多いね！</p>`,
+                                        quizzes: [
+                                            // 一番おおい 3パターン
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） おおいのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎<br>🍎<br>🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊<br>🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍎", options: ["🍎", "🍊", "🍌"] 
+                                            },
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） おおいのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊<br>🍊<br>🍊<br>🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌<br>🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍊", options: ["🍎", "🍊", "🍌"] 
+                                            },
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） おおいのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎<br>🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌<br>🍌<br>🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍌", options: ["🍎", "🍊", "🍌"] 
+                                            },
+                                            // 一番すくない 3パターン
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） すくないのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎<br>🍎<br>🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊<br>🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍌", options: ["🍎", "🍊", "🍌"] 
+                                            },
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） すくないのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎<br>🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊<br>🍊<br>🍊<br>🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌<br>🍌<br>🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍎", options: ["🍎", "🍊", "🍌"] 
+                                            },
+                                            { 
+                                                question: "グラフを 見てね。一番（いちばん） すくないのは どれかな？", 
+                                                display: `<div style="display:flex; justify-content:center; align-items:flex-end; gap:10px; height:80px; font-size:20px;"><div style="display:flex; flex-direction:column-reverse;">🍎<br>🍎<br>🍎</div><div style="display:flex; flex-direction:column-reverse;">🍊</div><div style="display:flex; flex-direction:column-reverse;">🍌<br>🍌</div></div><div style="border-top:1px solid #333; width:120px; margin:0 auto;"></div>`, 
+                                                answer: "🍊", options: ["🍎", "🍊", "🍌"] 
+                                            }
+                                        ]
                                     }
                                 ]
                             }
