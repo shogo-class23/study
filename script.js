@@ -1995,66 +1995,133 @@ window.onload = () => {
     const memoCanvas = document.getElementById('memo-canvas');
     const textMemoWrapper = document.getElementById('text-memo-wrapper');
     const memoTextarea = document.getElementById('memo-textarea');
-    const memoStatus = document.getElementById('memo-status');
+    const penWidthInput = document.getElementById('pen-width');
     const toggleMemoBtn = document.getElementById('toggle-memo-btn');
     const toggleModeBtn = document.getElementById('toggle-mode-btn');
     const clearMemoBtn = document.getElementById('clear-memo-btn');
     const closeMemoBtn = document.getElementById('close-memo-btn');
+    const penToolBtn = document.getElementById('pen-tool-btn');
+    const eraserToolBtn = document.getElementById('eraser-tool-btn');
     const ctx = memoCanvas.getContext('2d');
 
     let isDrawing = false;
     let isTextMode = false;
+    let currentTool = 'pen'; // 'pen' または 'eraser'
     let lastX = 0;
     let lastY = 0;
 
+    // キャンバスのサイズを物理ピクセルに合わせる
     function resizeCanvas() {
-        const rect = memoCanvas.parentNode.getBoundingClientRect();
+        const rect = memoCanvas.getBoundingClientRect();
+        if (rect.width === 0) return;
+
+        // 解像度を物理サイズに合わせる
         memoCanvas.width = rect.width;
         memoCanvas.height = rect.height;
-        ctx.strokeStyle = '#0000FF'; 
-        ctx.lineWidth = 5;          
+        
+        applyStrokeSettings();
+    }
+
+    function applyStrokeSettings() {
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = penWidthInput.value;
         ctx.lineCap = 'round';      
         ctx.lineJoin = 'round';
+        
+        if (currentTool === 'eraser') {
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.lineWidth = penWidthInput.value * 2; // 消しゴムは少し太め
+        } else {
+            ctx.globalCompositeOperation = 'source-over';
+        }
     }
+
+    penWidthInput.oninput = () => {
+        applyStrokeSettings();
+    };
+
+    penToolBtn.onclick = () => {
+        currentTool = 'pen';
+        penToolBtn.classList.add('active');
+        eraserToolBtn.classList.remove('active');
+        applyStrokeSettings();
+    };
+
+    eraserToolBtn.onclick = () => {
+        currentTool = 'eraser';
+        eraserToolBtn.classList.add('active');
+        penToolBtn.classList.remove('active');
+        applyStrokeSettings();
+    };
 
     function getPos(e) {
         const rect = memoCanvas.getBoundingClientRect();
-        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-        return { x: clientX - rect.left, y: clientY - rect.top };
+        let clientX, clientY;
+        if (e.touches && e.touches.length > 0) {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+        
+        // CSS上の表示サイズと物理解像度の比率を計算（ズレ防止の核心）
+        const scaleX = memoCanvas.width / rect.width;
+        const scaleY = memoCanvas.height / rect.height;
+
+        return {
+            x: (clientX - rect.left) * scaleX,
+            y: (clientY - rect.top) * scaleY
+        };
     }
 
     function startDraw(e) {
         if (isTextMode) return;
+        // 描き始めに位置を微調整（アニメーション終了後などのために）
+        if (memoCanvas.width === 0) resizeCanvas();
+        
         isDrawing = true;
         const { x, y } = getPos(e);
         lastX = x; lastY = y;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
     }
 
     function draw(e) {
         if (!isDrawing || isTextMode) return;
         const { x, y } = getPos(e);
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
         ctx.lineTo(x, y);
         ctx.stroke();
         lastX = x; lastY = y;
         if (e.touches) e.preventDefault(); 
     }
 
+    function stopDraw() {
+        isDrawing = false;
+        ctx.closePath();
+    }
+
     toggleModeBtn.onclick = () => {
         isTextMode = !isTextMode;
+        const memoBox = document.querySelector('.memo-box');
+        const penControl = document.querySelector('.pen-control');
+        const toolGroup = document.querySelector('.tool-group');
+        
         if (isTextMode) {
             memoCanvas.classList.add('hidden');
             textMemoWrapper.classList.remove('hidden');
-            toggleModeBtn.innerText = '✏️ お絵かきにする';
-            memoStatus.innerText = '文字入力中';
+            penControl.classList.add('hidden');
+            toolGroup.classList.add('hidden');
+            memoBox.style.background = '#fff'; 
+            toggleModeBtn.innerText = '✏️ お絵かき';
             memoTextarea.focus();
         } else {
             memoCanvas.classList.remove('hidden');
             textMemoWrapper.classList.add('hidden');
-            toggleModeBtn.innerText = '⌨️ 文字入力にする';
-            memoStatus.innerText = 'お絵かき中';
+            penControl.classList.remove('hidden');
+            toolGroup.classList.remove('hidden');
+            memoBox.style.background = 'rgba(255, 255, 255, 0.2)'; 
+            toggleModeBtn.innerText = '⌨️ 文字入力';
             setTimeout(resizeCanvas, 50);
         }
     };
@@ -2062,6 +2129,8 @@ window.onload = () => {
     toggleMemoBtn.onclick = () => {
         memoContainer.classList.remove('hidden');
         toggleMemoBtn.classList.add('hidden');
+        const memoBox = document.querySelector('.memo-box');
+        memoBox.style.background = isTextMode ? '#fff' : 'rgba(255, 255, 255, 0.2)';
         memoTextarea.value = localStorage.getItem('study-memo-text') || '';
         if (!isTextMode) setTimeout(resizeCanvas, 50);
     };
@@ -2088,12 +2157,20 @@ window.onload = () => {
         localStorage.setItem('study-memo-text', memoTextarea.value);
     };
 
+    // イベント登録
     memoCanvas.addEventListener('mousedown', startDraw);
     memoCanvas.addEventListener('mousemove', draw);
-    window.addEventListener('mouseup', () => isDrawing = false);
-    memoCanvas.addEventListener('touchstart', startDraw, { passive: false });
-    memoCanvas.addEventListener('touchmove', draw, { passive: false });
-    memoCanvas.addEventListener('touchend', () => isDrawing = false);
+    window.addEventListener('mouseup', stopDraw);
+    
+    memoCanvas.addEventListener('touchstart', (e) => {
+        if (e.target === memoCanvas) e.preventDefault();
+        startDraw(e);
+    }, { passive: false });
+    memoCanvas.addEventListener('touchmove', (e) => {
+        if (e.target === memoCanvas) e.preventDefault();
+        draw(e);
+    }, { passive: false });
+    memoCanvas.addEventListener('touchend', stopDraw);
 
     window.addEventListener('resize', () => {
         if (!memoContainer.classList.contains('hidden') && !isTextMode) resizeCanvas();

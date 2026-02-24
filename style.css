@@ -1470,10 +1470,10 @@ footer {
 }
 
 .memo-box {
-    background: #fff;
-    width: 100%;
-    max-width: 650px;
-    border: 2px solid #ccc;
+    background: rgba(255, 255, 255, 0.2); 
+    width: 95%;
+    max-width: 900px; /* サイズを大きく */
+    border: 3px solid #333; 
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     overflow: hidden;
@@ -1483,23 +1483,56 @@ footer {
 }
 
 @keyframes memoPop {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .toolbar {
     padding: 10px 15px;
-    background: #eee;
-    border-bottom: 1px solid #ccc;
+    background: #333; 
+    border-bottom: 1px solid #000;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.toolbar strong {
-    font-size: 14px;
-    color: #333;
-    margin-right: auto;
+.tool-group {
+    display: flex;
+    gap: 5px;
+    background: #444;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+.toolbar .tool-btn {
+    background: transparent;
+    color: #ccc;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.toolbar .tool-btn.active {
+    background: #4A90E2;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.pen-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 13px;
+    padding: 0 10px;
+    border-left: 1px solid #555;
+}
+
+#pen-width {
+    width: 100px;
+    cursor: pointer;
 }
 
 .toolbar button {
@@ -1510,17 +1543,19 @@ footer {
     font-size: 13px;
     font-weight: bold;
     background: #fff;
+    transition: all 0.2s;
 }
 
 .toolbar button:hover { background: #f0f0f0; }
-.toolbar .btn-clear { background: #ffcccc; border-color: #ff9999; }
-.toolbar .btn-secondary { background: #e0e0e0; }
+.toolbar .btn-clear { background: #ffcccc; border-color: #ff9999; color: #333; }
+.toolbar .btn-secondary { background: #e0e0e0; color: #333; }
 
 .content-area {
     position: relative;
     width: 100%;
-    height: 400px;
-    background: #fff;
+    height: 550px; 
+    background: transparent; 
+    overflow: hidden; /* はみ出し防止 */
 }
 
 #memo-canvas {
@@ -1533,6 +1568,7 @@ footer {
 #text-memo-wrapper {
     width: 100%;
     height: 100%;
+    background: #fff; /* 文字入力の時は白地にする */
 }
 
 #memo-textarea {
