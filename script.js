@@ -6889,6 +6889,250 @@ const studyData = {
                         }
                     ] }
                 ]
+            },
+            summary: {
+                name: "重要まとめ",
+                categories: [
+                    { name: "1 数と計算の応用", units: [
+                        {
+                            title: "1. 利益（りえき）などの計算",
+                            subUnits: [
+                                {
+                                    title: "(1) 原価・定価・売価",
+                                    content: `<h4>商売（しょうばい）の計算</h4>
+                                    <div class="point-box">
+                                        ・<b>定価 ＝ 原価 ✕ (1 ＋ 利益率)</b><br>
+                                        ・<b>売価 ＝ 定価 ✕ (1 － 割引率)</b><br>
+                                        ・<b>利益 ＝ 売価 － 原価</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "原価1000円に2割の利益をのせた定価は？", display: "1000 ✕ 1.2", answer: 1200 },
+                                        { question: "定価2000円の3割引の売価は？", display: "2000 ✕ 0.7", answer: 1400 },
+                                        { question: "原価800円、売価1000円のときの利益は？", display: "1000 － 800", answer: 200 },
+                                        { question: "1500円の品物を10%引きで買った時の代金は？", display: "1500 ✕ 0.9", answer: 1350 },
+                                        { question: "原価にのせる利益の割合のことを何という？", display: "用語", answer: "利益率", options: ["利益率", "割引率", "原価率"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 割合（わりあい）の総合",
+                            subUnits: [
+                                {
+                                    title: "(1) 割合の使いこなし",
+                                    content: `<h4>「く・わ・も」の復習</h4>
+                                    <div class="point-box">
+                                        ・<b>割合 ＝ 比べる量 ÷ もとにする量</b><br>
+                                        ・<b>100% ＝ 1</b>（全体）として考えよう。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "200人の80%は何人？", display: "200 ✕ 0.8", answer: 160 },
+                                        { question: "40人は200人の何%？", display: "40 ÷ 200", answer: 20 },
+                                        { question: "15人が全体の30%のとき、全体の人数は？", display: "15 ÷ 0.3", answer: 50 },
+                                        { question: "割合 0.05 を百分率（%）で表すと？", display: "0.05 ✕ 100", answer: 5 },
+                                        { question: "全体を「1」とした時の割合の表し方を何という？", display: "用語", answer: "割合", options: ["割合", "百分率", "歩合"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 仕事算（しごとざん）",
+                            subUnits: [
+                                {
+                                    title: "(1) 全体の仕事を 1 とおく",
+                                    content: `<h4>協力して終わらせよう</h4>
+                                    <div class="point-box">
+                                        ・全体の仕事量を <b>1</b> とおく。<br>
+                                        ・1日（1時間）あたりの仕事量をだして、足し合わせる。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "Aが12日、Bが12日で終わる仕事。2人ですると何日？", display: "1 ÷ (1/12 + 1/12)", answer: 6 },
+                                        { question: "Aが20分、Bが30分で終わる仕事。2人ですると何分？", display: "1 ÷ (1/20 + 1/30)", answer: 12 },
+                                        { question: "仕事算で、最初に決める「全体の量」は普通いくつ？", display: "考え方", answer: 1, options: [1, 100, 0] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 濃度（のうど）",
+                            subUnits: [
+                                {
+                                    title: "(1) 食塩水の濃さ",
+                                    content: `<h4>溶けている量を考えよう</h4>
+                                    <div class="point-box">
+                                        <b>濃度(%) ＝（食塩 / 食塩水）✕ 100</b><br>
+                                        ※ 食塩水 ＝ 食塩 ＋ 水
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "水90gに食塩10gを溶かした濃度は？", display: "10 ÷ (90+10)", answer: 10 },
+                                        { question: "200gの5%食塩水に含まれる食塩は何g？", display: "200 ✕ 0.05", answer: 10 },
+                                        { question: "食塩12gが溶けている濃度6%の食塩水は何g？", display: "12 ÷ 0.06", answer: 200 },
+                                        { question: "水を追加すると、濃度はどうなりますか？", display: "性質", answer: "薄くなる", options: ["濃くなる", "薄くなる"] },
+                                        { question: "濃度10%の食塩水100gと水100gを混ぜると濃度は何%？", display: "10 ÷ 200", answer: 5 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
+                    { name: "2 図形と空間", units: [
+                        {
+                            title: "1. 展開図と 断面（だんめん）",
+                            subUnits: [
+                                {
+                                    title: "(1) 立体を切る・開く",
+                                    content: `<h4>頭の中で組み立てよう</h4>
+                                    <div class="point-box">
+                                        ・<b>断面</b>：立体を平面で切ったときの切り口。<br>
+                                        ・<b>最短距離</b>：展開図上で <b>直線</b> をひいて考える。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "立方体を1つの平面で切った時、断面が三角形になることはある？", display: "切断", answer: "ある", options: ["ある", "ない"] },
+                                        { question: "円柱を軸に並行に切った断面の形は？", display: "切断", answer: "長方形", options: ["円", "長方形", "楕円"] },
+                                        { question: "立方体の表面を通る最短距離を求めるのに使う図は？", display: "道具", answer: "展開図", options: ["見取り図", "展開図", "投影図"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
+                    { name: "3 関数とグラフ", units: [
+                        {
+                            title: "1. みはじ（道のり・速さ・時間）",
+                            subUnits: [
+                                {
+                                    title: "(1) 3つの関係のまとめ",
+                                    content: `<h4>公式の使い分け</h4>
+                                    <div style="display:flex; justify-content:center; margin:10px;">
+                                        <div style="width:60px; height:60px; border:2px solid #333; border-radius:50%; display:flex; flex-direction:column; align-items:center; overflow:hidden;">
+                                            <div style="flex:1; border-bottom:1px solid #333; width:100%; display:flex; justify-content:center; align-items:center; font-weight:bold;">み</div>
+                                            <div style="flex:1; width:100%; display:flex;">
+                                                <div style="flex:1; border-right:1px solid #333; display:flex; justify-content:center; align-items:center; font-weight:bold;">は</div>
+                                                <div style="flex:1; display:flex; justify-content:center; align-items:center; font-weight:bold;">じ</div>
+                                            </div>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "分速80mで15分走った道のりは？", display: "80 ✕ 15", answer: 1200 },
+                                        { question: "12kmを時速4kmで歩いた時間は？", display: "12 ÷ 4", answer: 3 },
+                                        { question: "100mを20秒で走った時の秒速は？", display: "100 ÷ 20", answer: 5 },
+                                        { question: "分速60mは、時速何km？", display: "(60 ✕ 60) ÷ 1000", answer: 3.6 },
+                                        { question: "道のりを出す式は？", display: "公式", answer: "速さ ✕ 時間", options: ["速さ ✕ 時間", "速さ ÷ 時間"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. グラフの領域（りょういき）",
+                            subUnits: [
+                                {
+                                    title: "(1) 不等式と グラフの範囲",
+                                    content: `<h4>境界線のどちら側？</h4>
+                                    <div class="point-box">
+                                        ・<b>y ＞ ax ＋ b</b> ➔ 直線より <b>上側</b><br>
+                                        ・<b>y ＜ ax ＋ b</b> ➔ 直線より <b>下側</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ≧ x の領域は、直線 y=x の上側・下側どっち？", display: "範囲", answer: "上側", options: ["上側", "下側"] },
+                                        { question: "x² + y² ≦ 1 が表す領域の形は？", display: "円の式", answer: "円の内側", options: ["円の内側", "円の外側", "四角形"] },
+                                        { question: "不等号に「＝」がついている時、境界線は含みますか？", display: "ルール", answer: "含む", options: ["含む", "含まない"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
+                    { name: "4 データ・推論", units: [
+                        {
+                            title: "1. 表・資料の読み取り",
+                            subUnits: [
+                                {
+                                    title: "(1) 必要なデータを探す",
+                                    content: `<h4>正確に 情報をぬきだそう</h4>
+                                    <div class="point-box">
+                                        大きな表から、計算に必要な数字だけを 正確に選ぶ練習だよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1月から12月の表から、夏（7-9月）の合計を出す時、使うのは何ヶ月分？", display: "抽出", answer: 3 },
+                                        { question: "前年比110%とは、前年より増えた？減った？", display: "割合の読解", answer: "増えた", options: ["増えた", "減った"] },
+                                        { question: "平均値と合計値、どちらが全体の規模を表しやすい？", display: "読み取り", answer: "合計値", options: ["合計値", "平均値"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 順列 と 組み合わせ",
+                            subUnits: [
+                                {
+                                    title: "(1) 並べるか、選ぶか",
+                                    content: `<h4>パターンの数え方</h4>
+                                    <div class="point-box">
+                                        ・<b>順列</b>：順番が関係ある（リレーの走順など）。<br>
+                                        ・<b>組み合わせ</b>：順番は関係ない（掃除当番など）。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "4人から2人選ぶ組み合わせは何通り？", display: "4 ✕ 3 ÷ 2", answer: 6 },
+                                        { question: "3人を1列に並べる方法は何通り？", display: "3 ✕ 2 ✕ 1", answer: 6 },
+                                        { question: "A,B,Cの3人から代表1人、副代表1人を選ぶのはどっち？", display: "判定", answer: "順列", options: ["順列", "組み合わせ"] },
+                                        { question: "5種類のアイスから2つ選ぶ方法は？", display: "5 ✕ 4 ÷ 2", answer: 10 },
+                                        { question: "「n人を並べる」計算で、nから1まで順にかけることを何という？", display: "用語", answer: "階乗", options: ["階乗", "累乗", "約数"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 確率（かくりつ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 期待される割合",
+                                    content: `<h4>起こりやすさの数値</h4>
+                                    <div class="point-box">
+                                        <b>確率 ＝ 求める場合 / すべての場合</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1つのサイコロで偶数が出る確率は？", display: "3/6", answer: "1/2" },
+                                        { question: "2枚のコインが両方表になる確率は？", display: "1/4", answer: "1/4" },
+                                        { question: "当たりが2本入った10本のくじで、1本引いて当たる確率は？", display: "2/10", answer: "1/5" },
+                                        { question: "確率は最大でいくつになりますか？", display: "数値", answer: 1 },
+                                        { question: "「降水確率0%」は、絶対に雨が降らないという意味？", display: "統計の考え方", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 集合（しゅうごう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 重なりを考えよう",
+                                    content: `<h4>ベン図 で整理</h4>
+                                    <div class="point-box">
+                                        ・<b>和集合 (A ∪ B)</b>：A または B。<br>
+                                        ・<b>共通部分 (A ∩ B)</b>：A かつ B。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "A(10人), B(8人)で共通が3人のとき、AまたはBの合計は？", display: "10 + 8 - 3", answer: 15 },
+                                        { question: "「AであってBでない」人を求める式は？", display: "引き算", answer: "A - 共通部分", options: ["A - 共通部分", "A + B", "B - A"] },
+                                        { question: "集合を円で囲って表した図を何という？", display: "用語", answer: "ベン図", options: ["ベン図", "樹形図", "線分図"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "5. 推論 と 論証",
+                            subUnits: [
+                                {
+                                    title: "(1) 正しい結論をみちびく",
+                                    content: `<h4>論理的なパズル</h4>
+                                    <div class="point-box">
+                                        「AならBである」という条件を組み合わせて、新しい事実を見つけることだよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「AならB」「BならC」のとき言えるのは？", display: "三段論法", answer: "AならC", options: ["AならC", "CならA", "BならA"] },
+                                        { question: "「すべての人間は死ぬ」「ソクラテスは人間だ」よって？", display: "推論", answer: "ソクラテスは死ぬ" },
+                                        { question: "推論をする時に、図（ベン図など）をかくと整理しやすい？", display: "コツ", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
+                ]
             }
         }
     },
