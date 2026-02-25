@@ -7154,30 +7154,95 @@ const studyData = {
             e1: { name: "小1", categories: [{ name: "漢字", units: [{ title: "1年生の漢字", subUnits: [{ title: "山の書き方", content: "山、川などの漢字を覚えよう。" }] }] }] }
         } 
     },
-    science: { 
-        name: "<ruby>理科<rt>りか</rt></ruby>", 
-        grades: {
-            elementary: { 
-                name: "小学生", 
-                categories: [
-                    { name: "生物", units: [] },
-                    { name: "化学", units: [] },
-                    { name: "物理", units: [] },
-                    { name: "地学", units: [] }
-                ] 
-            },
-            juniorHigh: { 
-                name: "中学生", 
-                categories: [
-                    { name: "生物", units: [] },
-                    { name: "化学", units: [] },
-                    { name: "物理", units: [] },
-                    { name: "地学", units: [] }
-                ] 
-            }
-        } 
-    },
-    social: { 
+        science: { 
+            name: "<ruby>理科<rt>りか</rt></ruby>", 
+            grades: {
+                elementary: { 
+                    name: "小学生", 
+                    categories: [
+                        { name: "生物", units: [] },
+                        { name: "化学", units: [] },
+                        {
+                            name: "物理",
+                            units: [
+                                {
+                                    title: "1. 物と 重さ",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 形と 重さ",
+                                            content: "ねん土を丸めても、平らにしても、重さは変わりません。",
+                                            quizzes: [{ question: "ねん土100gを3つに分けました。全部あわせると何g？", answer: "100g" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "2. 風と ゴムの 力",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 風の 力",
+                                            content: "風が強いほど、物は遠くまで動きます。",
+                                            quizzes: [{ question: "風を強くすると物はどうなる？", answer: "遠くまで進む" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "3. 光の 性質",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 光の 反射",
+                                            content: "光はまっすぐ進みます。鏡にあてるとはねかえります。",
+                                            quizzes: [{ question: "鏡で光をはね返すことを何という？", answer: "反射" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "4. 音の 性質",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 音と 震え",
+                                            content: "音が出るとき、物は震えています。",
+                                            quizzes: [{ question: "音が出ているとき、物はどうなっていますか？", answer: "震えている" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "5. 磁石の 性質",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 磁石と 鉄",
+                                            content: "磁石は鉄を引きつけます。N極とS極があります。",
+                                            quizzes: [{ question: "磁石の違う極（NとS）はどうなる？", answer: "引き合う" }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "6. 電気の 通り道",
+                                    subUnits: [
+                                        {
+                                            title: "(1) 回路の しくみ",
+                                            content: "電気が一周する通り道を回路といいます。",
+                                            quizzes: [{ question: "電気が一周する通り道を何という？", answer: "回路" }]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        { name: "地学", units: [] }
+                    ] 
+                },
+                juniorHigh: { 
+                    name: "中学生", 
+                    categories: [
+                        { name: "生物", units: [] },
+                        { name: "化学", units: [] },
+                        { name: "物理", units: [] },
+                        { name: "地学", units: [] }
+                    ] 
+                }
+            } 
+        },
+        social: { 
+     
         name: "<ruby>社会<rt>社会</rt></ruby>", 
         grades: {
             e3: { name: "小3", categories: [{ name: "町", units: [{ title: "わたしたちの町", subUnits: [{ title: "町の地図", content: "地図記号を覚えよう。" }] }] }] }
