@@ -6322,7 +6322,71 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 一次関数", subUnits: [{ title: "(1) 直線の式", content: "グラフを式で表そう。" }] }] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 一次関数（いちじかんすう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 一次関数の式",
+                                    content: `<h4>y は x の 一次式で表される</h4>
+                                    <div class="point-box">
+                                        x の値を決めると、y の値がただ1つ決まり、<br>
+                                        <b>y ＝ ax ＋ b</b> （a, b は定数）<br>
+                                        という形で表される関数だよ。
+                                    </div>
+                                    <p>・b ＝ 0 のときは、中1で習った「比例」と同じになるね！</p>`,
+                                    quizzes: [
+                                        { question: "y ＝ 2x ＋ 3 のとき、x ＝ 4 なら y はいくつ？", display: "2 ✕ 4 + 3", answer: 11 },
+                                        { question: "y ＝ －3x ＋ 10 のとき、x ＝ 2 なら y はいくつ？", display: "-3 ✕ 2 + 10", answer: 4 },
+                                        { question: "一次関数の一般式「y ＝ ax ＋ b」で、bのことを何という？", display: "用語", answer: "切片 (せっぺん)", options: ["傾き", "切片 (せっぺん)", "係数"] },
+                                        { question: "y ＝ 5x － 2 のとき、x ＝ 0 なら y はいくつ？", display: "x=0を代入", answer: -2 },
+                                        { question: "次のうち一次関数はどれ？", display: "判定", answer: "y = 3x + 1", options: ["y = 3x + 1", "y = 5/x", "y = x²"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 変化の割合・傾き・切片",
+                            subUnits: [
+                                {
+                                    title: "(1) 変化の割合と グラフ",
+                                    content: `<h4>どれくらい 急（きゅう）かな？</h4>
+                                    <div class="point-box">
+                                        ・<b>変化の割合</b> ＝ yの増加量 / xの増加量 ＝ <b>a</b><br>
+                                        ・<b>傾き</b>：グラフの直線の 傾き具合。変化の割合（a）と等しい。<br>
+                                        ・<b>切片（b）</b>：グラフが y軸と交わる点の y座標。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 4x ＋ 5 の「傾き」はいくつ？", display: "a の値", answer: 4 },
+                                        { question: "y ＝ －2x ＋ 8 の「切片」はいくつ？", display: "b の値", answer: 8 },
+                                        { question: "xが1増えるとき、yが3増える一次関数の「変化の割合」は？", display: "3 ÷ 1", answer: 3 },
+                                        { question: "一次関数 y ＝ ax ＋ b で、常に一定な値（変化の割合）はどれ？", display: "性質", answer: "a", options: ["a", "b", "x", "y"] },
+                                        { question: "傾きが －3 で、切片が 2 の直線の式は？", display: "式をつくる", answer: "y = -3x + 2" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 二元一次方程式と 一次関数",
+                            subUnits: [
+                                {
+                                    title: "(1) 方程式のグラフ",
+                                    content: `<h4>方程式を 関数の形になおそう</h4>
+                                    <div class="point-box">
+                                        2x ＋ y ＝ 6 のような方程式も、y について解くと<br>
+                                        <b>y ＝ －2x ＋ 6</b> となり、一次関数のグラフとして書けるよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x ＋ y ＝ 5 を y について解くと？", display: "y ＝ ？", answer: "y = -x + 5" },
+                                        { question: "3x － y ＝ 2 を y について解くと？", display: "y ＝ ？", answer: "y = 3x - 2" },
+                                        { question: "2x ＋ 3y ＝ 12 のグラフの切片は？ (x=0を代入)", display: "3y = 12", answer: 4 },
+                                        { question: "x ＝ 3 のグラフはどんな直線？", display: "特殊なグラフ", answer: "y軸に平行な直線", options: ["y軸に平行な直線", "x軸に平行な直線", "斜めの直線"] },
+                                        { question: "連立方程式の解は、2つの直線の何にあたりますか？", display: "グラフの関係", answer: "交点", options: ["交点", "切片", "端点"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 確率", subUnits: [{ title: "(1) 起こりやすさ", content: "確率を計算しよう。" }] }] }
                 ]
             },
