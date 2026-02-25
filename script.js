@@ -6124,14 +6124,22 @@ const studyData = {
                                 },
                                 {
                                     title: "(5) 式の変形",
-                                    content: `<h4>等式の変形</h4>
+                                    content: `<h4>等式の変形（とうしきのへんけい）</h4>
                                     <div class="point-box">
-                                        y ＝ ... のように、ある文字について 解くことだよ。
+                                        ある文字について 解く（その文字 ＝ ... の形にする）ことだよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【例：三角形の面積 S ＝ ah/2 を h について解く】</b></p>
+                                        <p>① 両辺を 2倍する ➔ 2S ＝ ah<br>
+                                        ② 左右をいれかえる ➔ ah ＝ 2S<br>
+                                        ③ a でわる ➔ <b>h ＝ 2S/a</b></p>
                                     </div>`,
                                     quizzes: [
                                         { question: "x ＋ y ＝ 5 を y について解くと？", display: "y ＝ ？", answer: "y = 5 - x" },
-                                        { question: "2x ＝ y を x について解くと？", display: "x ＝ ？", answer: "x = y/2" },
-                                        { question: "3x ＋ y ＝ 10 を y について解くと？", display: "y ＝ ？", answer: "y = 10 - 3x" }
+                                        { question: "三角形の面積 S ＝ ah/2 を a について解くと？", display: "a ＝ ？", answer: "a = 2S/h" },
+                                        { question: "円周の長さ ℓ ＝ 2πr を r について解くと？", display: "r ＝ ？", answer: "r = ℓ/2π" },
+                                        { question: "2x ＋ 3y ＝ 12 を y について解くと？", display: "3y ＝ 12 - 2x ➔ y ＝ ？", answer: "y = (12-2x)/3" },
+                                        { question: "ある文字について解くとき、＝ をこえて移動させることを何という？", display: "用語", answer: "移項", options: ["移項", "代入", "約分"] }
                                     ]
                                 }
                             ]
