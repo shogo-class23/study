@@ -6445,7 +6445,102 @@ const studyData = {
             j3: {
                 name: "中3",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 因数分解", subUnits: [{ title: "(1) 式の展開", content: "式を積の形にしよう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 平方根（へいほうこん）",
+                            subUnits: [
+                                {
+                                    title: "(1) ルートの 意味と性質",
+                                    content: `<h4>2乗すると その数になる数</h4>
+                                    <div class="point-box">
+                                        ・<b>平方根</b>：2乗すると a になる数を、a の平方根というよ。<br>
+                                        ・<b>記号 √（ルート）</b> を使って表す。<br>
+                                        ・√a ✕ √a ＝ a
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：4 の平方根は <b>2 と －2</b><br>
+                                        例：√2 ✕ √3 ＝ <b>√6</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "9 の平方根は？", display: "2乗して9になる数", answer: "3 と -3", options: ["3 と -3", "3", "81"] },
+                                        { question: "√25 はいくつ？", display: "√25", answer: 5 },
+                                        { question: "√2 ✕ √5 はいくつ？", display: "ルートのかけ算", answer: "√10" },
+                                        { question: "3√2 ＋ 5√2 を計算すると？", display: "ルートのたし算", answer: "8√2" },
+                                        { question: "√の中をできるだけ簡単な数にせよ：√12", display: "√12 ➔ 2√3", answer: "2√3" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 多項式の 展開（てんかい）と 因数分解",
+                            subUnits: [
+                                {
+                                    title: "(1) 展開と 因数分解の 公式",
+                                    content: `<h4>逆（ぎゃく）の関係をおぼえよう</h4>
+                                    <div class="point-box">
+                                        ・<b>展開</b>：カッコをはずして バラバラにする。<br>
+                                        ・<b>因数分解</b>：たし算の形を かけ算の形に まとめる。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【公式】</b></p>
+                                        <p>1. (x+a)(x+b) ＝ x²+(a+b)x+ab<br>
+                                        2. (x+a)² ＝ x²+2ax+a²<br>
+                                        3. (x+a)(x-a) ＝ x²-a²</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(x + 2)(x + 3) を展開すると？", display: "展開公式1", answer: "x^2 + 5x + 6" },
+                                        { question: "(x + 5)^2 を展開すると？", display: "展開公式2", answer: "x^2 + 10x + 25" },
+                                        { question: "x^2 － 9 を因数分解すると？", display: "2乗のひき算", answer: "(x+3)(x-3)" },
+                                        { question: "x^2 + 6x + 8 を因数分解すると？", display: "たして6, かけて8", answer: "(x+2)(x+4)" },
+                                        { question: "共通な因数でくくる因数分解：ax + ay ➔ ？", display: "くくりだし", answer: "a(x+y)" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 二次方程式（にじほうていしき）",
+                            subUnits: [
+                                {
+                                    title: "(1) 二次方程式の 解き方",
+                                    content: `<h4>いろいろな 武器（ぶき）を使おう</h4>
+                                    <div class="point-box">
+                                        1. <b>因数分解</b> を使う： (x-2)(x-3)=0 ➔ x=2, 3<br>
+                                        2. <b>平方根</b> を使う： x²=5 ➔ x=±√5<br>
+                                        3. <b>解の公式</b> を使う： どんな式でも解ける最強の公式！
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x^2 ＝ 16 の解は？", display: "x^2 = 16", answer: "4 と -4" },
+                                        { question: "(x － 1)(x － 2) ＝ 0 の解は？", display: "因数分解の形", answer: "1, 2" },
+                                        { question: "x^2 + 5x + 6 ＝ 0 の解は？", display: "因数分解して解く", answer: "-2, -3" },
+                                        { question: "二次方程式の解の公式、分母は何？", display: "公式の形", answer: "2a", options: ["2a", "a", "4ac"] },
+                                        { question: "x^2 ＝ 0 の解はいくつありますか？", display: "重解", answer: "1つ (0)", options: ["1つ", "2つ", "なし"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 誤差（ごさ）・近似値・有効数字",
+                            subUnits: [
+                                {
+                                    title: "(1) 近似値（きんじち）と 有効数字",
+                                    content: `<h4>だいたいの数と 信頼できる数字</h4>
+                                    <div class="point-box">
+                                        ・<b>近似値</b>：真の値に近い値。<br>
+                                        ・<b>誤差</b>：誤差 ＝ 近似値 － 真の値。<br>
+                                        ・<b>有効数字</b>：測定して得られた、信頼できる数字。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：3.14 ✕ 10² ➔ 有効数字は 3, 1, 4 の <b>3桁</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "近似値から真の値をひいたものを何という？", display: "用語", answer: "誤差", options: ["誤差", "有効数字", "余り"] },
+                                        { question: "測定値 1.50m の有効数字は何桁？", display: "1.50", answer: 3 },
+                                        { question: "有効数字をはっきりさせる書き方は？", display: "表現", answer: "a ✕ 10^n", options: ["a ✕ 10^n", "分数", "√"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 三平方の定理", subUnits: [{ title: "(1) 直角三角形の辺", content: "辺の長さを求めよう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 関数 y=ax^2", subUnits: [{ title: "(1) 放物線", content: "2次関数を調べよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 標本調査", subUnits: [{ title: "(1) 全体と標本", content: "一部から全体を推測しよう。" }] }] }
