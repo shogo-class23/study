@@ -4933,7 +4933,109 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 平均", subUnits: [{ title: "(1) 平均の求め方", content: "平均を計算しよう。" }] }] }
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                        {
+                            title: "1. 円グラフ（えんぐらふ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 円グラフの特徴",
+                                    content: `<h4>全体の 割合を 円で表そう</h4>
+                                    <div class="point-box">
+                                        円全体を <b>100％</b> として、項目の 大きさを 扇形の 広さで 表したグラフだよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:100px; height:100px; border-radius:50%; border:2px solid #333; margin:0 auto; background: conic-gradient(#3498db 0% 60%, #e74c3c 60% 100%);"></div>
+                                        <p style="font-size:11px; margin-top:5px;"><span style="color:#3498db;">● A (60%)</span> / <span style="color:#e74c3c;">● B (40%)</span></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "円グラフ全体を百分率で表すと何％ですか？", display: "全体", answer: 100 },
+                                        { question: "円グラフで、項目の大きさは何の広さで表されますか？", display: "扇形の形", answer: "広さ", options: ["広さ", "高さ", "長さ"] },
+                                        { question: "一番大きな割合の項目を見つけるのに適したグラフは？", display: "グラフ選び", answer: "円グラフ", options: ["折れ線グラフ", "円グラフ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 帯グラフ（おびぐらふ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 帯グラフの見方",
+                                    content: `<h4>横長の 帯で 比べよう</h4>
+                                    <div class="point-box">
+                                        長方形を 区切って 割合を表したグラフだよ。複数の グラフを 並べて 比べるのに べんり！
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:200px; height:30px; border:2px solid #333; margin:0 auto; display:flex;">
+                                            <div style="width:70%; background:#3498db; height:100%;"></div>
+                                            <div style="width:30%; background:#e74c3c; height:100%;"></div>
+                                        </div>
+                                        <p style="font-size:11px; text-align:center;">左から 割合の大きい順に 並べるのが 基本だよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "帯グラフ全体は何％を表していますか？", display: "全体", answer: 100 },
+                                        { question: "帯グラフで、各項目は通常どの順に並べますか？", display: "並び順", answer: "大きい順", options: ["大きい順", "小さい順", "あいうえお順"] },
+                                        { question: "割合の変化を2つのグラフで比べるのに適しているのは？", display: "比較", answer: "帯グラフ", options: ["帯グラフ", "円グラフ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 統計的な 問題解決",
+                            subUnits: [
+                                {
+                                    title: "(1) データの 活用サイクル",
+                                    content: `<h4>グラフから 何が言えるかな？</h4>
+                                    <div class="point-box">
+                                        目的に あわせて データを 集め、適切な グラフを 選んで 分析（ぶんせき）することが 大事だよ。
+                                    </div>
+                                    <p>・<b>変化</b> を見たい ➔ <b>折れ線グラフ</b><br>
+                                    ・<b>割合</b> を見たい ➔ <b>円グラフ・帯グラフ</b></p>`,
+                                    quizzes: [
+                                        { question: "1年間の気温の変化を調べるのに最適なグラフは？", display: "目的別", answer: "折れ線グラフ", options: ["折れ線グラフ", "円グラフ", "帯グラフ"] },
+                                        { question: "クラスの好きな果物の割合を調べるのに最適なグラフは？", display: "目的別", answer: "円グラフ", options: ["折れ線グラフ", "円グラフ"] },
+                                        { question: "データを分析する目的は何ですか？", display: "分析の目的", answer: "問題を解決するため", options: ["きれいにするため", "問題を解決するため", "紙を埋めるため"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 平均（へいきん）",
+                            subUnits: [
+                                {
+                                    title: "(1) 平均の 求め方",
+                                    content: `<h4>ならすと いくつ？</h4>
+                                    <div class="point-box">
+                                        いくつかの 数を 同じ大きさに なるように ならすことを <b>平均</b> というよ。<br>
+                                        ・<b>平均 ＝ 合計 ÷ 個数</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2, 4, 6 の平均は？", display: "(2+4+6) ÷ 3", answer: 4 },
+                                        { question: "10, 20, 30, 40 の平均は？", display: "100 ÷ 4", answer: 25 },
+                                        { question: "5回のテストが全部80点なら、平均は何点？", display: "同じ数の平均", answer: 80 },
+                                        { question: "合計が 150、個数が 5 のとき、平均は？", display: "150 ÷ 5", answer: 30 },
+                                        { question: "合計を出す式は「平均 ✕ ？」", display: "逆の計算", answer: "個数", options: ["個数", "最大値", "外れ値"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 外れ値（はずれち）",
+                                    content: `<h4>平均を 変えてしまう 特別な数</h4>
+                                    <div class="point-box">
+                                        データの中で、他と 比べて 極端（きょくたん）に 大きかったり 小さかったりする 数を <b>外れ値</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：10, 12, 11, <b>90</b>, 13<br>
+                                        90 があるせいで、平均が すごく 大きくなってしまうね。<br>
+                                        正しい 分析をするために、あえて 外して 考えることもあるよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "他と比べて極端にちがう数値を何という？", display: "名前", answer: "外れ値", options: ["外れ値", "当たり値", "真ん中"] },
+                                        { question: "外れ値があると、平均はどうなりますか？", display: "平均への影響", answer: "大きく変わる", options: ["変わらない", "大きく変わる"] },
+                                        { question: "外れ値は必ず平均に含めなければなりませんか？", display: "分析のコツ", answer: "いいえ", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
                 ]
             },
             e6: {
