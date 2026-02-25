@@ -7152,30 +7152,48 @@ const studyData = {
                 }
             }
         },
-    japanese: { 
-        name: "<ruby>国語<rt>こくご</rt></ruby>", 
-        grades: {
-            e1: { name: "小1", categories: [{ name: "漢字", units: [{ title: "1年生の漢字", subUnits: [{ title: "山の書き方", content: "山、川などの漢字を覚えよう。" }] }] }] }
-        } 
-    },
-    science: { 
-        name: "<ruby>理科<rt>理科</rt></ruby>", 
-        grades: {
-            e3: { name: "小3", categories: [{ name: "生き物", units: [{ title: "昆虫", subUnits: [{ title: "チョウの育ち方", content: "たまごから成虫までを調べよう。" }] }] }] }
-        } 
-    },
-    social: { 
-        name: "<ruby>社会<rt>社会</rt></ruby>", 
-        grades: {
-            e3: { name: "小3", categories: [{ name: "町", units: [{ title: "わたしたちの町", subUnits: [{ title: "町の地図", content: "地図記号を覚えよう。" }] }] }] }
-        } 
-    },
-    english: { 
-        name: "<ruby>英語<rt>英語</rt></ruby>", 
-        grades: {
-            j1: { name: "中1", categories: [{ name: "文法", units: [{ title: "be動詞", subUnits: [{ title: "I am / You are", content: "自己紹介をしてみよう。" }] }] }] }
-        } 
-    }
+        japanese: { 
+            name: "<ruby>国語<rt>こくご</rt></ruby>", 
+            grades: {
+                e1: { name: "小1", categories: [{ name: "漢字", units: [{ title: "1年生の漢字", subUnits: [{ title: "山の書き方", content: "山、川などの漢字を覚えよう。" }] }] }] }
+            } 
+        },
+        science: { 
+            name: "<ruby>理科<rt>りか</rt></ruby>", 
+            grades: {
+                e3: { name: "小3", categories: [{ name: "生き物", units: [{ title: "昆虫", subUnits: [{ title: "チョウの育ち方", content: "たまごから成虫までを調べよう。" }] }] }] }
+            } 
+        },
+        social: { 
+            name: "<ruby>社会<rt>しゃかい</rt></ruby>", 
+            grades: {
+                e3: { name: "小3", categories: [{ name: "町", units: [{ title: "わたしたちの町", subUnits: [{ title: "町の地図", content: "地図記号を覚えよう。" }] }] }] }
+            } 
+        },
+        english: { 
+            name: "<ruby>英語<rt>えいご</rt></ruby>", 
+            grades: {
+                j1: { 
+                    name: "中1", 
+                    categories: [
+                        { 
+                            name: "文法", 
+                            units: [
+                                { 
+                                    title: "be動詞", 
+                                    subUnits: [
+                                        { 
+                                            title: "I am / You are", 
+                                            content: "自己紹介をしてみよう。" 
+                                        }
+                                    ] 
+                                }
+                            ] 
+                        }
+                    ] 
+                }
+            } 
+        }
 };
 
 window.onload = () => {
