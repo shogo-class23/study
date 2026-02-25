@@ -7166,22 +7166,40 @@ const studyData = {
                             name: "物理",
                             units: [
                                 {
-                                    title: "1. 物と 重さ",
+                                    title: "1. 物（形・体積）と 重さ",
                                     subUnits: [
                                         {
-                                            title: "(1) 形と 重さ",
-                                            content: "ねん土を丸めても、平らにしても、重さは変わりません。",
-                                            quizzes: [{ question: "ねん土100gを3つに分けました。全部あわせると何g？", answer: "100g" }]
+                                            title: "(ア) 形と 重さ",
+                                            content: `<h4>形が変わっても 重さは変わる？</h4><div class="point-box">粘土などを「広げる」「分ける」「丸める」といった操作で形を変えても、<b>その物の重さは変わらない</b>ことを理解しましょう。</div><div class="data-demo">🍎（まるめる）➔ 🍎（ひらたくする）➔ 🍎（わける）<br><b>重さは ずっと おなじ！</b></div>`,
+                                            quizzes: [
+                                                { question: "100gの粘土を3つに分けました。全部あわせた重さはいくつ？", display: "分けた後の合計", answer: "100g", options: ["100g", "軽くなる", "重くなる"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 体積と 重さ",
+                                            content: `<h4>同じ大きさでも 重さはちがう？</h4><div class="point-box">木、鉄、プラスチックなど、<b>体積（大きさ）を同じにした複数の物</b>を比較すると、物質の種類によって重さに違いがあります。</div><div class="data-demo">【重いじゅんばん】<br><b>鉄 ＞ プラスチック ＞ 木</b></div>`,
+                                            quizzes: [
+                                                { question: "同じ大きさの「鉄」と「木」では、どちらが重いかな？", display: "しゅるいと重さ", answer: "鉄", options: ["鉄", "木"] }
+                                            ]
                                         }
                                     ]
                                 },
                                 {
-                                    title: "2. 風と ゴムの 力",
+                                    title: "2. 風や ゴムの 力の 働き",
                                     subUnits: [
                                         {
-                                            title: "(1) 風の 力",
-                                            content: "風が強いほど、物は遠くまで動きます。",
-                                            quizzes: [{ question: "風を強くすると物はどうなる？", answer: "遠くまで進む" }]
+                                            title: "(ア) 風の 力",
+                                            content: `<h4>風で 物を 動かそう</h4><div class="point-box">風の強さを変えると、物の動き方（動く距離や速さ）が変わります。<br>風が<b>強いほど</b>、物は<b>遠くまで速く</b>動きます。</div>`,
+                                            quizzes: [
+                                                { question: "送風機の風を強くすると、車はどうなるかな？", display: "風を強くする", answer: "遠くまで速く進む", options: ["遠くまで速く進む", "進む距離は変わらない", "止まる"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) ゴムの 力",
+                                            content: `<h4>ゴムの のびと もどる力</h4><div class="point-box">ゴムを引っぱる長さを変えて、元に戻ろうとする力の大きさを変えると、物の動く様子が変わります。</div>`,
+                                            quizzes: [
+                                                { question: "ゴムを長く引っぱると、進む距離はどうなる？", display: "ゴムを引く長さ", answer: "長くなる", options: ["長くなる", "短くなる", "変わらない"] }
+                                            ]
                                         }
                                     ]
                                 },
@@ -7189,9 +7207,19 @@ const studyData = {
                                     title: "3. 光の 性質",
                                     subUnits: [
                                         {
-                                            title: "(1) 光の 反射",
-                                            content: "光はまっすぐ進みます。鏡にあてるとはねかえります。",
-                                            quizzes: [{ question: "鏡で光をはね返すことを何という？", answer: "反射" }]
+                                            title: "(ア) 光의 進み方",
+                                            content: `<h4>日光は まっすぐ進む</h4><div class="point-box">・日光は<b>直進（まっすぐ進む）</b>します。<br>・鏡を使うと光を<b>反射</b>させることができます。<br>・虫眼鏡を使うと日光を<b>一点に集める</b>ことができます。</div>`,
+                                            quizzes: [
+                                                { question: "鏡に当たった日光がはね返ることを何という？", display: "用語", answer: "反射", options: ["反射", "屈折", "直進"] },
+                                                { question: "日光を集めることができる道具はどれ？", display: "道具", answer: "虫眼鏡", options: ["虫眼鏡", "定規", "消しゴム"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 光の 熱と 明るさ",
+                                            content: `<h4>光を集めると どうなる？</h4><div class="point-box">反射させた光を重ねたり、虫眼鏡で集めたりすると、当てた場所の<b>明るさや暖かさが増します。</b></div>`,
+                                            quizzes: [
+                                                { question: "反射させた光を3枚分重ねると、1枚の時よりどうなる？", display: "光を重ねる", answer: "明るく、暖かくなる", options: ["明るく、暖かくなる", "暗く、冷たくなる", "変わらない"] }
+                                            ]
                                         }
                                     ]
                                 },
@@ -7199,9 +7227,18 @@ const studyData = {
                                     title: "4. 音の 性質",
                                     subUnits: [
                                         {
-                                            title: "(1) 音と 震え",
-                                            content: "音が出るとき、物は震えています。",
-                                            quizzes: [{ question: "音が出ているとき、物はどうなっていますか？", answer: "震えている" }]
+                                            title: "(ア) 音と 震え",
+                                            content: `<h4>音の正体は「ふるえ」</h4><div class="point-box">音が出ているときや伝わるときは、<b>物が震えている（振動している）</b>ことを理解しましょう。</div>`,
+                                            quizzes: [
+                                                { question: "太鼓を叩いて音が出ているとき、皮はどうなっている？", display: "音と震え", answer: "ふるえている", options: ["ふるえている", "止まっている"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 音の 大きさと 震え",
+                                            content: `<h4>大きくたたくと どうなる？</h4><div class="point-box">音が<b>大きく</b>なれば震え方も<b>大きく</b>なり、音が小さければ震え方も小さくなります。</div>`,
+                                            quizzes: [
+                                                { question: "大きな音が出ているときの震え方は？", display: "音の大きさと震え", answer: "大きく震える", options: ["大きく震える", "小さく震える"] }
+                                            ]
                                         }
                                     ]
                                 },
@@ -7209,19 +7246,38 @@ const studyData = {
                                     title: "5. 磁石の 性質",
                                     subUnits: [
                                         {
-                                            title: "(1) 磁石と 鉄",
-                                            content: "磁石は鉄を引きつけます。N極とS極があります。",
-                                            quizzes: [{ question: "磁石の違う極（NとS）はどうなる？", answer: "引き合う" }]
+                                            title: "(ア) 引き付けられる物",
+                                            content: `<h4>磁石にくっつくものは？</h4><div class="point-box">・<b>鉄</b>は磁石に引き付けられますが、アルミニウムや銅などは引き付けられません。<br>・磁石に付いた鉄は、それ自身も磁石の性質を帯びます（<b>磁化</b>）。</div>`,
+                                            quizzes: [
+                                                { question: "磁石に引き付けられる金属はどれ？", display: "磁石と金属", answer: "鉄", options: ["鉄", "アルミニウム", "銅"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 極と 向き",
+                                            content: `<h4>N極と S極</h4><div class="point-box">・磁石には<b>N極</b>と<b>S極</b>があります。<br>・ちがう極（NとS）は引き合い、同じ極（NとNなど）はしりぞけ合います。<br>・自由に動く磁石は、常に<b>南北</b>の向きを指して止まります。</div>`,
+                                            quizzes: [
+                                                { question: "磁石のN極とN極を近づけるとどうなる？", display: "極の性質", answer: "しりぞけ合う", options: ["しりぞけ合う", "引き合う"] },
+                                                { question: "方位磁針が指す方向はどこ？", display: "磁石と向き", answer: "北と南", options: ["北と南", "東と西"] }
+                                            ]
                                         }
                                     ]
                                 },
                                 {
-                                    title: "6. 電気の 通り道",
+                                    title: "6. 電気の 回路",
                                     subUnits: [
                                         {
-                                            title: "(1) 回路の しくみ",
-                                            content: "電気が一周する通り道を回路といいます。",
-                                            quizzes: [{ question: "電気が一周する通り道を何という？", answer: "回路" }]
+                                            title: "(ア) 回路の つなぎ方",
+                                            content: `<h4>電気が通る道「回路」</h4><div class="point-box">乾電池、導線、豆電球がひと繋がりになった電気の通り道を<b>「回路（かいろ）」</b>といいます。回路がつながっていないと、豆電球はつきません。</div>`,
+                                            quizzes: [
+                                                { question: "電気が通る、ひと繋がりの道のことを何という？", display: "用語", answer: "回路", options: ["回路", "線路", "道路"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 電気を 通す物",
+                                            content: `<h4>金属は電気を通す</h4><div class="point-box">回路の一部に色々な物を入れると、<b>電気を通す物（金属など）</b>と、通さない物（プラスチック、ゴムなど）があることがわかります。</div>`,
+                                            quizzes: [
+                                                { question: "次のうち、電気を通すものはどれ？", display: "電気を通す物", answer: "10円玉（銅）", options: ["10円玉（銅）", "ゴム消しゴム", "プラスチックの定規"] }
+                                            ]
                                         }
                                     ]
                                 }
