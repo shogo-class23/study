@@ -5249,7 +5249,80 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比", subUnits: [{ title: "(1) 比の等しさ", content: "比の値を求めよう。" }] }] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 比例（ひれい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 比例のグラフと式",
+                                    content: `<h4>まっすぐ 伸びるグラフ</h4>
+                                    <div class="point-box">
+                                        x が 2倍, 3倍... になると、y も 2倍, 3倍... になる関係だよ。<br>
+                                        ・式：<b>y ＝ 決まった数 ✕ x</b><br>
+                                        ・グラフ：<b>原点（0,0）を通る 直線</b> になる。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="150" height="100" style="border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; display:block;">
+                                            <line x1="0" y1="100" x2="140" y2="20" stroke="#3498db" stroke-width="2" />
+                                        </svg>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "xが2倍のときyも2倍になる関係を何という？", display: "変化のきまり", answer: "比例", options: ["比例", "反比例"] },
+                                        { question: "比例のグラフはどんな形になりますか？", display: "グラフの形", answer: "直線", options: ["直線", "曲線"] },
+                                        { question: "y ＝ 3 ✕ x のとき、x ＝ 4 なら y はいくつ？", display: "3 ✕ 4", answer: 12 },
+                                        { question: "y ＝ 2 ✕ x のとき、y ＝ 10 なら x はいくつ？", display: "10 ÷ 2", answer: 5 },
+                                        { question: "比例のグラフは必ずどこを通りますか？", display: "グラフの特徴", answer: "原点 (0,0)", options: ["原点 (0,0)", "どこでもいい"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 反比例（はんぴれい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 反比例の性質と式",
+                                    content: `<h4>一方が増えると もう一方が減る</h4>
+                                    <div class="point-box">
+                                        x が 2倍, 3倍... になると、y は <b>1/2倍, 1/3倍...</b> になる関係だよ。<br>
+                                        ・式：<b>y ＝ 決まった数 ÷ x</b><br>
+                                        ・x ✕ y ＝ 決まった数（いつも一定）
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="150" height="100" style="border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; display:block;">
+                                            <path d="M10,10 Q20,80 140,90" fill="none" stroke="#e74c3c" stroke-width="2" />
+                                        </svg>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "xが2倍のときyが1/2倍になる関係を何という？", display: "変化のきまり", answer: "反比例", options: ["比例", "反比例"] },
+                                        { question: "y ＝ 12 ÷ x のとき、x ＝ 3 なら y はいくつ？", display: "12 ÷ 3", answer: 4 },
+                                        { question: "x ✕ y の値がいつも一定になるのはどっち？", display: "特徴", answer: "反比例", options: ["比例", "反比例"] },
+                                        { question: "y ＝ 24 ÷ x のとき、y ＝ 6 なら x はいくつ？", display: "24 ÷ 6", answer: 4 },
+                                        { question: "面積 24㎠ の長方形の「縦 x」と「横 y」の関係は？", display: "具体例", answer: "反比例", options: ["比例", "反比例"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 比（ひ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 比と 比の値",
+                                    content: `<h4>割合を 簡単な数で表そう</h4>
+                                    <div class="point-box">
+                                        ・<b>比</b>：2つの数量の割合を <b>「a : b」</b> と表したもの。<br>
+                                        ・<b>比の値</b>：a : b のとき、<b>a ÷ b</b> で計算した数。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2 : 3 の比の値を分数で表すと？", display: "2 : 3", answer: "2/3", options: ["2/3", "3/2", "5"] },
+                                        { question: "10 : 5 の比の値を整数で表すと？", display: "10 : 5", answer: 2 },
+                                        { question: "比 4 : 6 をもっとも簡単な整数の比にすると？", display: "4 : 6", answer: "2 : 3" },
+                                        { question: "比の値が 0.5 になる比はどれ？", display: "比の値 0.5", answer: "1 : 2", options: ["1 : 2", "2 : 1", "5 : 1"] },
+                                        { question: "x : 10 ＝ 2 : 5 のとき、xはいくつ？", display: "比の計算", answer: 4 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分布", subUnits: [{ title: "(1) ドットプロット", content: "データの散らばりを見よう。" }] }] }
                 ]
             },
