@@ -5639,7 +5639,190 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 平面図形", subUnits: [{ title: "(1) 基本的な作図", content: "垂直二等分線などをかこう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 平面図形の 作図（さくず）",
+                            subUnits: [
+                                {
+                                    title: "(1) 基本の 作図",
+                                    content: `<h4>コンパスと 定規だけで かこう</h4>
+                                    <div class="point-box">
+                                        ・<b>垂直二等分線</b>：線分を 垂直に 2等分する線。<br>
+                                        ・<b>角の二等分線</b>：角を 2等分する線。<br>
+                                        ・<b>垂線</b>：点を通って直線に 垂直（90°）に交わる線。
+                                    </div>
+                                    <div class="data-demo" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                                        <div style="text-align:center; width:100px;">
+                                            <div style="width:100px; height:60px; position:relative; border-bottom:2px solid #333; margin:0 auto;">
+                                                <div style="width:2px; height:80px; background:red; position:absolute; left:49px; top:-10px;"></div>
+                                                <div style="width:40px; height:40px; border:1px dashed #aaa; border-radius:50%; position:absolute; left:30px; top:-20px;"></div>
+                                            </div>
+                                            <p style="font-size:10px;">垂直二等分線</p>
+                                        </div>
+                                        <div style="text-align:center; width:100px;">
+                                            <div style="width:100px; height:60px; position:relative; margin:0 auto;">
+                                                <div style="width:80px; height:2px; background:#333; position:absolute; bottom:0; left:10px;"></div>
+                                                <div style="width:80px; height:2px; background:#333; position:absolute; bottom:0; left:10px; transform:rotate(-45deg); transform-origin:left center;"></div>
+                                                <div style="width:100px; height:2px; background:red; position:absolute; bottom:0; left:10px; transform:rotate(-22.5deg); transform-origin:left center;"></div>
+                                            </div>
+                                            <p style="font-size:10px;">角の二等分線</p>
+                                        </div>
+                                        <div style="text-align:center; width:100px;">
+                                            <div style="width:100px; height:60px; position:relative; border-bottom:2px solid #333; margin:0 auto;">
+                                                <div style="width:4px; height:4px; background:black; border-radius:50%; position:absolute; left:48px; top:10px;"></div>
+                                                <div style="width:2px; height:50px; background:red; position:absolute; left:49px; top:10px;"></div>
+                                                <div style="width:10px; height:10px; border-top:1px solid red; border-right:1px solid red; position:absolute; bottom:0; left:49px;"></div>
+                                            </div>
+                                            <p style="font-size:10px;">垂線</p>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "線分を垂直に半分に分ける線を何という？", display: "用語", answer: "垂直二等分線", options: ["垂直二等分線", "角の二等分線", "平行線"] },
+                                        { question: "垂直二等分線上の点から、線分の両端までの距離はどうなっていますか？", display: "性質", answer: "等しい", options: ["等しい", "ちがう", "2倍になる"] },
+                                        { question: "角の二等分線上の点から、2つの辺までの距離はどうなっていますか？", display: "性質", answer: "等しい", options: ["等しい", "ちがう"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 図形の 移動（いどう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 3つの 移動",
+                                    content: `<h4>形を変えずに 位置をかえる</h4>
+                                    <div class="point-box">
+                                        ・<b>平行移動</b>：一定の方向に 一定の長さだけ ずらす。<br>
+                                        ・<b>回転移動</b>：1つの点を中心に 一定の角度だけ まわす。<br>
+                                        ・<b>対称移動</b>：1つの直線を軸として 裏返す。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "形を変えずに、向きを変えずにずらす移動を何という？", display: "移動の名前", answer: "平行移動", options: ["平行移動", "回転移動", "対称移動"] },
+                                        { question: "1つの点（中心）のまわりにまわす移動を何という？", display: "移動の名前", answer: "回転移動", options: ["平行移動", "回転移動", "対称移動"] },
+                                        { question: "対称移動で、対応する点をつなぐ線分と対称の軸の関係は？", display: "性質", answer: "垂直に交わる", options: ["平行になる", "垂直に交わる", "重なる"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 空間図形（くうかんずけい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 位置関係と 回転体",
+                                    content: `<h4>立体を イメージしよう</h4>
+                                    <div id="explanation-container" style="background: #ffffff; padding: 15px; border: 1px solid #cccccc; border-radius: 8px; font-family: sans-serif; margin-bottom:15px;">
+                                        <h5 style="margin-top: 0; border-bottom: 2px solid #333333; padding-bottom: 5px;">空間図形：ねじれの位置の解説</h5>
+                                        <div style="position: relative; width: 260px; height: 260px; margin: 10px auto;">
+                                            <canvas id="nejire-canvas" width="260" height="260" style="width:100%; height:auto;"></canvas>
+                                        </div>
+                                        <div id="explanation-text" style="background: #f9f9f9; padding: 10px; border-radius: 5px; min-height: 50px; font-size: 13px; line-height: 1.4;">
+                                            下のボタンをクリックして、辺の関係を確認してください。
+                                        </div>
+                                        <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; justify-content: center;">
+                                            <button onclick="showRelation('parallel')" style="padding: 5px 10px; cursor: pointer; font-size:12px;">平行な辺</button>
+                                            <button onclick="showRelation('intersect')" style="padding: 5px 10px; cursor: pointer; font-size:12px;">交わる辺</button>
+                                            <button onclick="showRelation('skew')" style="padding: 5px 10px; cursor: pointer; background: #d93025; color: white; border: none; border-radius: 4px; font-weight: bold; font-size:12px;">ねじれの位置</button>
+                                            <button onclick="resetCanvas()" style="padding: 5px 10px; cursor: pointer; background: #eeeeee; border: 1px solid #cccccc; font-size:12px;">リセット</button>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        (function() {
+                                            const nCanvas = document.getElementById('nejire-canvas');
+                                            const nCtx = nCanvas.getContext('2d');
+                                            const pts = {
+                                                A: [50, 70],  B: [180, 70],  C: [230, 30],  D: [100, 30],
+                                                E: [50, 200], F: [180, 200], G: [230, 160], H: [100, 160]
+                                            };
+                                            function drawLine(p1, p2, color = '#dddddd', width = 2) {
+                                                nCtx.beginPath();
+                                                nCtx.strokeStyle = color;
+                                                nCtx.lineWidth = width;
+                                                nCtx.moveTo(p1[0], p1[1]);
+                                                nCtx.lineTo(p2[0], p2[1]);
+                                                nCtx.stroke();
+                                            }
+                                            window.drawBaseBox = function() {
+                                                nCtx.clearRect(0, 0, nCanvas.width, nCanvas.height);
+                                                drawLine(pts.D, pts.C); drawLine(pts.C, pts.G); drawLine(pts.G, pts.H); drawLine(pts.H, pts.D);
+                                                drawLine(pts.A, pts.B); drawLine(pts.B, pts.F); drawLine(pts.F, pts.E); drawLine(pts.E, pts.A);
+                                                drawLine(pts.A, pts.D); drawLine(pts.B, pts.C); drawLine(pts.F, pts.G); drawLine(pts.E, pts.H);
+                                                drawLine(pts.A, pts.B, '#1a73e8', 5);
+                                                nCtx.fillStyle = '#1a73e8';
+                                                nCtx.font = 'bold 12px sans-serif';
+                                                nCtx.fillText('基準となる辺', 80, 60);
+                                            };
+                                            window.showRelation = function(type) {
+                                                drawBaseBox();
+                                                const display = document.getElementById('explanation-text');
+                                                if (type === 'parallel') {
+                                                    const targets = [[pts.E, pts.F], [pts.D, pts.C], [pts.H, pts.G]];
+                                                    targets.forEach(t => drawLine(t[0], t[1], '#34a853', 5));
+                                                    display.innerHTML = "<strong>平行な辺：</strong> 基準と同じ向きの辺です。これらは基準の辺と同じ平面上にあります。";
+                                                } else if (type === 'intersect') {
+                                                    const targets = [[pts.A, pts.D], [pts.A, pts.E], [pts.B, pts.C], [pts.B, pts.F]];
+                                                    targets.forEach(t => drawLine(t[0], t[1], '#f9ab00', 5));
+                                                    display.innerHTML = "<strong>交わる辺：</strong> 頂点で基準の辺とつながっている辺です。";
+                                                } else if (type === 'skew') {
+                                                    const targets = [[pts.D, pts.H], [pts.C, pts.G], [pts.E, pts.H], [pts.F, pts.G]];
+                                                    targets.forEach(t => drawLine(t[0], t[1], '#d93025', 5));
+                                                    display.innerHTML = "<strong>ねじれの位置：</strong> 「平行ではなく」かつ「交わらない」関係です。これらは基準の辺と<strong>同じ平面上に存在しません。</strong>";
+                                                }
+                                            };
+                                            window.resetCanvas = function() {
+                                                drawBaseBox();
+                                                document.getElementById('explanation-text').innerText = "下のボタンをクリックして、辺の関係を確認してください。";
+                                            };
+                                            drawBaseBox();
+                                        })();
+                                    </script>
+                                    <div class="point-box" style="margin-top:10px;">
+                                        ・<b>回転体</b>：平面図形を 1回転させてできる立体。<br>
+                                        ・<b>投影図</b>：立面図（正面）と 平面図（真上）。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "同じ平面になく、平行でも交わりもしない位置関係を？", display: "用語", answer: "ねじれの位置", options: ["平行", "垂直", "ねじれの位置"] },
+                                        { question: "長方形を1回転させると、どんな立体になりますか？", display: "回転体", answer: "円柱", options: ["円柱", "円錐", "球"] },
+                                        { question: "直角三角形を1回転させると、どんな立体になりますか？", display: "回転体", answer: "円錐", options: ["円柱", "円錐", "球"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. おうぎ形・表面積・体積",
+                            subUnits: [
+                                {
+                                    title: "(1) おうぎ形 の計算",
+                                    content: `<h4>円の一部を 考えよう</h4>
+                                    <div class="point-box">
+                                        ・<b>弧（こ）の長さ ＝ 直径 ✕ 3.14 ✕（中心角/360）</b><br>
+                                        ・<b>おうぎ形の面積 ＝ 半径 ✕ 半径 ✕ 3.14 ✕（中心角/360）</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "半径 6cm、中心角 120° のおうぎ形の面積は？ (円の1/3)", display: "6 ✕ 6 ✕ 3.14 ✕ (120/360)", answer: 37.68 },
+                                        { question: "半径 10cm、中心角 90° のおうぎ形の弧の長さは？ (円の1/4)", display: "20 ✕ 3.14 ÷ 4", answer: 15.7 },
+                                        { question: "半径 4cm、中心角 180° のおうぎ形の面積は？ (半円)", display: "4 ✕ 4 ✕ 3.14 ÷ 2", answer: 25.12 },
+                                        { question: "中心角が 360° のおうぎ形は、何の形と同じですか？", display: "形", answer: "円", options: ["円", "半円", "三角形"] },
+                                        { question: "おうぎ形の面積は、中心角の大きさに比例しますか？", display: "性質", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 表面積 と 体積（錐体・球）",
+                                    content: `<h4>尖（とが）った形 と 丸い形</h4>
+                                    <div class="point-box">
+                                        ・<b>錐体（すいたい）の体積 ＝ 底面積 ✕ 高さ ÷ 3</b><br>
+                                        ・<b>球の体積 ＝ (4/3) ✕ 3.14 ✕ 半径³</b><br>
+                                        ・<b>球の表面積 ＝ 4 ✕ 3.14 ✕ 半径²</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "底面積 30㎠、高さ 9cm の角錐の体積は？", display: "30 ✕ 9 ÷ 3", answer: 90 },
+                                        { question: "半径 3cm の球の表面積は？ (4 ✕ 3.14 ✕ 3²)", display: "4 ✕ 3.14 ✕ 9", answer: 113.04 },
+                                        { question: "錐（すい）の体積は、同じ底面・高さの柱の体積の何倍？", display: "比較", answer: "1/3倍", options: ["1/2倍", "1/3倍", "3倍"] },
+                                        { question: "球の表面積を覚える呪文は？", display: "覚え方", answer: "心配ある事情", options: ["身の上に心配あり", "心配ある事情"] },
+                                        { question: "底面積 20㎠、高さ 6cm の円錐の体積は？", display: "20 ✕ 6 ÷ 3", answer: 40 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比例と反比例", subUnits: [{ title: "(1) 関数の考え方", content: "変化する2つの量を調べよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分析", subUnits: [{ title: "(1) ヒストグラム", content: "データの傾向をつかもう。" }] }] }
                 ]
@@ -5879,6 +6062,14 @@ window.onload = () => {
 
         contentTitle.innerHTML = s.title;
         contentBody.innerHTML = s.content;
+
+        // コンテンツ内のスクリプトを実行できるようにする
+        const scripts = contentBody.getElementsByTagName('script');
+        for (let i = 0; i < scripts.length; i++) {
+            const newScript = document.createElement('script');
+            newScript.text = scripts[i].innerText;
+            document.head.appendChild(newScript).parentNode.removeChild(newScript);
+        }
         
         const startBtnContainer = document.getElementById('quiz-start-container');
         if (s.quizzes && s.quizzes.length > 0) {
