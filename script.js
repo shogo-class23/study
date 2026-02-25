@@ -4277,7 +4277,65 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 折れ線グラフ", subUnits: [{ title: "(1) 変化を見る", content: "グラフで変化を調べよう。" }] }] }
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                        {
+                            title: "1. 折れ線グラフ",
+                            subUnits: [
+                                {
+                                    title: "(1) 折れ線グラフの見方",
+                                    content: `<h4>変わり方が 一目でわかる</h4>
+                                    <div class="point-box">
+                                        点の 位置（高さ）で 数を表し、それを 線でつないだものを <b>折れ線グラフ</b> というよ。<br>
+                                        線が <b>右上がり</b> なら 増えている、<b>右下がり</b> なら 減っていることがわかるね。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:180px; height:100px; border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; position:relative; display:flex; align-items:flex-end; padding-bottom:10px;">
+                                            <svg width="100%" height="100%" style="position:absolute; bottom:0; left:0;">
+                                                <polyline points="20,80 60,60 100,70 140,30 180,20" fill="none" stroke="#3498db" stroke-width="3" />
+                                                <circle cx="20" cy="80" r="4" fill="#3498db" />
+                                                <circle cx="60" cy="60" r="4" fill="#3498db" />
+                                                <circle cx="100" cy="70" r="4" fill="#3498db" />
+                                                <circle cx="140" cy="30" r="4" fill="#3498db" />
+                                                <circle cx="180" cy="20" r="4" fill="#3498db" />
+                                            </svg>
+                                        </div>
+                                        <p style="font-size:12px; text-align:center;">横軸：時間 / 縦軸：気温 など</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "グラフの線が 右上がりになっているとき、数は どうなっている？", display: "右上がりの線", answer: "増えている", options: ["増えている", "減っている", "変わらない"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. グラフの活用（応用）",
+                            subUnits: [
+                                {
+                                    title: "(1) 2つの地域の気温を比べる",
+                                    content: `<h4>ちがいを見つけよう</h4>
+                                    <div class="point-box">
+                                        2つのデータを 1つのグラフに書くと、どちらが高いかや、変わり方のちがいが よくわかるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【東京と札幌の気温】</b></p>
+                                        <div style="width:180px; height:100px; border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; position:relative; display:flex; align-items:flex-end; padding-bottom:10px;">
+                                            <svg width="100%" height="100%" style="position:absolute; bottom:0; left:0;">
+                                                <!-- 地域A (青) -->
+                                                <polyline points="20,60 60,40 100,30 140,20 180,10" fill="none" stroke="#3498db" stroke-width="2" />
+                                                <!-- 地域B (赤) -->
+                                                <polyline points="20,90 60,80 100,70 140,60 180,55" fill="none" stroke="#e74c3c" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <p style="font-size:11px; margin-top:5px;"><span style="color:#3498db;">● 東京</span> / <span style="color:#e74c3c;">● 札幌</span></p>
+                                        <p style="font-size:12px;">2つの線の **間（はば）** を見ると、気温の差が どれくらいあるかわかるね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2つの折れ線が 交差（こうさ）したとき、何が起きたといえる？", display: "線の入れ替わり", answer: "順位が変わった", options: ["順位が変わった", "差が広がった", "雨が降った"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
                 ]
             },
             e5: {
