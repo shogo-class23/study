@@ -4659,7 +4659,156 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 体積", subUnits: [{ title: "(1) 直方体の体積", content: "体積を求めよう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 合同（ごうどう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 合同な図形とは",
+                                    content: `<h4>ぴったり 重なるかたち</h4>
+                                    <div class="point-box">
+                                        形も 大きさも 同じで、裏（うら）返したり 回したりして ぴったり重なる 2つの図形を <b>合同</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【合同な図形の 特徴】</b></p>
+                                        <p>・対応する <b>辺の長さ</b> が すべて同じ。<br>
+                                        ・対応する <b>角の大きさ</b> が すべて同じ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "ぴったり重なる2つの図形の関係を何という？", display: "図形の関係", answer: "合同", options: ["合同", "平行", "垂直"] },
+                                        { question: "合同な図形で、対応する角の大きさはどうなっていますか？", display: "角の大きさ", answer: "同じ", options: ["同じ", "ちがう", "合わせて180度"] },
+                                        { question: "合同な図形で、対応する辺の長さはどうなっていますか？", display: "辺の長さ", answer: "同じ", options: ["同じ", "ちがう", "半分になる"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 多角形（たかくけい）と 角の和",
+                            subUnits: [
+                                {
+                                    title: "(1) 三角形と 四角形の 角の和",
+                                    content: `<h4>全部たすと 何度？</h4>
+                                    <div class="point-box">
+                                        ・三角形の 3つの角の和 ＝ <b>180°</b><br>
+                                        ・四角形の 4つの角の和 ＝ <b>360°</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "三角形の3つの角を全部たすと何度？", display: "三角形の和", answer: 180 },
+                                        { question: "四角形の4つの角を全部たすと何度？", display: "四角形の和", answer: 360 },
+                                        { question: "三角形の2つの角が60度と40度の時、残りの角は何度？", display: "180 - (60+40)", answer: 80 },
+                                        { question: "四角形で3つの角が90度の時、残りの角は何度？", display: "360 - 270", answer: 90 },
+                                        { question: "正三角形の1つの角は何度？", display: "180 ÷ 3", answer: 60 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 正多角形（せいたかくけい）",
+                                    content: `<h4>辺も 角も すべて同じ</h4>
+                                    <div class="point-box">
+                                        辺の長さが すべて等しく、角の大きさも すべて等しい 多角形を <b>正多角形</b> というよ。<br>
+                                        （正三角形、正方形、正五角形、正六角形など）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "全ての辺と角が等しい図形を何という？", display: "図形の名前", answer: "正多角形", options: ["多角形", "正多角形", "台形"] },
+                                        { question: "正六角形には、同じ大きさの角がいくつありますか？", display: "正六角形", answer: 6 },
+                                        { question: "円の中に正多角形をかくとき、中心の角を等しく分ければいいですか？", display: "かきかた", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 円周（えんしゅう）と 円周率",
+                            subUnits: [
+                                {
+                                    title: "(1) 円周率（えんしゅうりつ）",
+                                    content: `<h4>直径と 円周の関係</h4>
+                                    <div class="point-box">
+                                        円のまわりの長さを <b>円周</b> というよ。<br>
+                                        ・<b>円周 ＝ 直径 ✕ 円周率</b>（3.14）
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>円周率は 約 <b>3.14</b> だよ。<br>
+                                        円が 大きくなっても、この割合は 変わらないんだ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "円周を求める式は「直径 ✕ ？」", display: "円周の公式", answer: 3.14 },
+                                        { question: "直径 10cm の円の円周は 何cm？", display: "10 ✕ 3.14", answer: 31.4 },
+                                        { question: "半径 5cm の円の円周は 何cm？ (直径に注意！)", display: "10 ✕ 3.14", answer: 31.4 },
+                                        { question: "円周が 15.7cm の円の直径は 何cm？", display: "15.7 ÷ 3.14", answer: 5 },
+                                        { question: "直径が 2倍になると、円周は何倍になる？", display: "円周の変化", answer: 2 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 面積の公式（いろいろな形）",
+                            subUnits: [
+                                {
+                                    title: "(1) 平行四辺形 と 三角形の面積",
+                                    content: `<h4>高さを 見つけよう</h4>
+                                    <div class="point-box">
+                                        ・<b>平行四辺形の面積 ＝ 底辺 ✕ 高さ</b><br>
+                                        ・<b>三角形の面積 ＝ 底辺 ✕ 高さ ÷ 2</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "底辺 6cm、高さ 4cm の平行四辺形の面積は？", display: "6 ✕ 4", answer: 24 },
+                                        { question: "底辺 8cm、高さ 5cm の三角形の面積は？", display: "8 ✕ 5 ÷ 2", answer: 20 },
+                                        { question: "底辺 10m、高さ 7m の平行四辺形の面積は？", display: "10 ✕ 7", answer: 70 },
+                                        { question: "底辺 4cm、高さ 9cm の三角形の面積は？", display: "4 ✕ 9 ÷ 2", answer: 18 },
+                                        { question: "三角形の面積を出すとき、最後に何でわりますか？", display: "公式のルール", answer: 2 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 台形（だいけい）と ひし形の面積",
+                                    content: `<h4>公式を おぼえよう</h4>
+                                    <div class="point-box">
+                                        ・<b>台形の面積 ＝（上底 ＋ 下底）✕ 高さ ÷ 2</b><br>
+                                        ・<b>ひし形の面積 ＝ 対角線 ✕ 対角線 ÷ 2</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "上底 3cm、下底 5cm、高さ 4cm の台形の面積は？", display: "(3+5) ✕ 4 ÷ 2", answer: 16 },
+                                        { question: "対角線 6cm と 8cm のひし形の面積は？", display: "6 ✕ 8 ÷ 2", answer: 24 },
+                                        { question: "上底 2cm、下底 8cm、高さ 5cm の台形の面積は？", display: "(2+8) ✕ 5 ÷ 2", answer: 25 },
+                                        { question: "対角線 10cm と 10cm のひし形の面積は？", display: "10 ✕ 10 ÷ 2", answer: 50 },
+                                        { question: "台形の面積で、( ) の中身は何と何をたしたもの？", display: "公式のパーツ", answer: "上底と下底", options: ["上底と下底", "底辺と高さ", "対角線"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "5. 立体（角柱と円柱）と 体積",
+                            subUnits: [
+                                {
+                                    title: "(1) 角柱（かくちゅう）と 円柱（えんちゅう）",
+                                    content: `<h4>柱（はしら）のかたち</h4>
+                                    <div class="point-box">
+                                        上下に 同じ形の面（<b>底面</b>）があり、まわりの面（<b>側面</b>）が 垂直になっている立体だよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>・<b>底面（ていめん）</b>：上下にある 2つの面。<br>
+                                        ・<b>側面（そくめん）</b>：まわりを かこむ面。</p>
+                                    </div>`
+                                },
+                                {
+                                    title: "(2) 角柱・円柱の体積（たいせき）",
+                                    content: `<h4>かさを もとめよう</h4>
+                                    <div class="point-box">
+                                        ・<b>体積 ＝ 底面積 ✕ 高さ</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>底面の 面積（底面積）に 高さを かけるだけ！<br>
+                                        どんな 柱の形でも 使える べんりな公式だよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "底面積 10㎠、高さ 5cm の角柱の体積は？", display: "10 ✕ 5", answer: 50 },
+                                        { question: "底面積 20㎠、高さ 3cm の円柱の体積は？", display: "20 ✕ 3", answer: 60 },
+                                        { question: "1辺 2cm の正方形が底面の、高さ 10cm の四角柱の体積は？", display: "(2✕2) ✕ 10", answer: 40 },
+                                        { question: "底面積 15㎠、高さ 4cm の角柱の体積は？", display: "15 ✕ 4", answer: 60 },
+                                        { question: "体積を出すとき、底面積にかけるものは何？", display: "公式", answer: "高さ", options: ["高さ", "横幅", "重さ"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
                         {
                             title: "1. 単位量あたりの大きさ と 変わり方",
