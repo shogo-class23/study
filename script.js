@@ -5126,7 +5126,129 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 対称な図形", subUnits: [{ title: "(1) 線対称・点対称", content: "図形の重なりを調べよう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 拡大図（かくだいず）と 縮図（しゅくず）",
+                            subUnits: [
+                                {
+                                    title: "(1) 形は同じで 大きさがちがう",
+                                    content: `<h4>倍率（ばいりつ）を考えよう</h4>
+                                    <div class="point-box">
+                                        ・<b>拡大図</b>：形を変えずに 大きくした図。<br>
+                                        ・<b>縮図</b>：形を変えずに 小さくした図。<br>
+                                        対応する角の大きさは <b>同じ</b> で、辺の長さの <b>比</b> が等しいよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2倍の拡大図にしたとき、角の大きさはどうなりますか？", display: "角度の変化", answer: "変わらない", options: ["2倍になる", "変わらない", "半分になる"] },
+                                        { question: "辺の長さを半分にした図を何といいますか？", display: "図の名前", answer: "縮図", options: ["拡大図", "縮図", "合同な図"] },
+                                        { question: "拡大図や縮図で、対応する辺の長さの割合を何といいますか？", display: "用語", answer: "倍率 (比)", options: ["倍率 (比)", "角度", "面積"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 線対称（せんたいしょう）と 点対称（てんたいしょう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 線対称な図形",
+                                    content: `<h4>折り目で見よう</h4>
+                                    <div class="point-box">
+                                        1本の 直線を 折り目にして 重ねたとき、ぴったり重なる図形だよ。<br>
+                                        この直線を <b>対称の軸（じく）</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:80px; height:80px; border:2px solid #333; margin:0 auto; position:relative; clip-path:polygon(50% 0, 100% 100%, 0 100%);">
+                                            <div style="width:2px; height:100%; background:red; position:absolute; left:39px; top:0;"></div>
+                                        </div>
+                                        <p style="font-size:11px; color:red; text-align:center;">赤い線が 対称の軸</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "線対称な図形で、折り目になる線を何という？", display: "線のなまえ", answer: "対称の軸", options: ["対称の軸", "対称の中心", "対角線"] },
+                                        { question: "正方形には対称の軸が何本ありますか？", display: "軸の数", answer: 4 },
+                                        { question: "二等辺三角形は線対称な図形ですか？", display: "判定", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 点対称な図形",
+                                    content: `<h4>180度 まわしてみよう</h4>
+                                    <div class="point-box">
+                                        1つの 点を中心に <b>180度</b> まわしたとき、もとの図形と ぴったり重なる図形だよ。<br>
+                                        この点を <b>対称の中心</b> というよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "点対称な図形は、何中心に何度まわすと重なりますか？", display: "回転角度", answer: 180, options: [90, 180, 360] },
+                                        { question: "平行四辺形は点対称な図形ですか？", display: "判定", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "点対称な図形で、中心を通る直線で分けた2つの図形は合同ですか？", display: "性質", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 円の面積",
+                            subUnits: [
+                                {
+                                    title: "(1) 円の面積の公式",
+                                    content: `<h4>半径をつかった計算</h4>
+                                    <div class="point-box">
+                                        ・<b>円の面積 ＝ 半径 ✕ 半径 ✕ 3.14</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>円を 細かく切って 並べかえると、長方形に 近づくことから この公式が生まれるんだよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "半径 10cm の円の面積は？", display: "10 ✕ 10 ✕ 3.14", answer: 314 },
+                                        { question: "半径 2cm の円の面積は？", display: "2 ✕ 2 ✕ 3.14", answer: 12.56 },
+                                        { question: "直径 6cm の円の面積は？ (半径に注意！)", display: "3 ✕ 3 ✕ 3.14", answer: 28.26 },
+                                        { question: "半径が 3倍になると、面積は何倍になる？", display: "3 ✕ 3", answer: 9 },
+                                        { question: "円の面積を求める公式は？", display: "公式", answer: "半径 ✕ 半径 ✕ 3.14", options: ["半径 ✕ 半径 ✕ 3.14", "直径 ✕ 3.14", "半径 ✕ 2 ✕ 3.14"] }
+                                    ]
+                                }
+                            ]
+                        },
+                                                {
+                                                    title: "4. 立体の体積（たいせき）",
+                                                    subUnits: [
+                                                        {
+                                                            title: "(1) 角柱と 円柱の体積",
+                                                            content: `<h4>底面積（ていめんせき）に 注目！</h4>
+                                                            <div class="point-box">
+                                                                どちらも <b>体積 ＝ 底面積 ✕ 高さ</b> で もとめられるよ！
+                                                            </div>
+                                                            <div class="data-demo">
+                                                                <p><b>【角柱のばあい】</b></p>
+                                                                <p>底面（三角形や四角形）の 面積を だしてから、高さを かける。</p>
+                                                                <p><b>【円柱のばあい】</b></p>
+                                                                <p><b>半径 ✕ 半径 ✕ 3.14</b> で 円の面積（底面積）を だしてから、高さを かける。</p>
+                                                            </div>`,
+                                                            quizzes: [
+                                                                { question: "底面積 30㎠、高さ 5cm の角柱の体積は？", display: "30 ✕ 5", answer: 150 },
+                                                                { question: "半径 2cm、高さ 10cm の円柱の体積は？", display: "(2✕2✕3.14) ✕ 10", answer: 125.6 },
+                                                                { question: "底面が 1辺5cmの正方形で、高さ 4cm の四角柱の体積は？", display: "(5✕5) ✕ 4", answer: 100 },
+                                                                { question: "円柱の体積をだすとき、底面積は何の面積のこと？", display: "円柱の底面", answer: "円の面積", options: ["円の面積", "正方形の面積", "三角形の面積"] },
+                                                                { question: "体積 200㎤、高さ 10cm の立体の底面積は？", display: "200 ÷ 10", answer: 20 }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                        ,
+                        {
+                            title: "5. おおよその面積と 体積",
+                            subUnits: [
+                                {
+                                    title: "(1) 身の回りのものを 図形にたとえる",
+                                    content: `<h4>だいたいの 大きさを 知ろう</h4>
+                                    <div class="point-box">
+                                        複雑な形も、<b>長方形</b> や <b>直方体</b> など 知っている図形に 見立てることで、だいたいの大きさを 計算できるよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "自分の手のひらの面積をだいたい求めるには、何の形にたとえる？", display: "見立て", answer: "長方形", options: ["円", "長方形", "球"] },
+                                        { question: "山のような形の体積をだいたい求めるには、何の形にたとえる？", display: "見立て", answer: "円錐や角錐 (または柱)", options: ["円柱・角柱", "円", "線"] },
+                                        { question: "おおよその計算をする時、端数（はすう）はどうしますか？", display: "計算のコツ", answer: "四捨五入などで丸める", options: ["細かく計算する", "四捨五入などで丸める"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比", subUnits: [{ title: "(1) 比の等しさ", content: "比の値を求めよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分布", subUnits: [{ title: "(1) ドットプロット", content: "データの散らばりを見よう。" }] }] }
                 ]
