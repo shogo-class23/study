@@ -4116,46 +4116,58 @@ const studyData = {
                                         L字型のような 複雑な図形は、次の 3つの考え方で もとめることができるよ！
                                     </div>
                                     <div class="data-demo" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-                                        <!-- パターン1: たてにわける -->
-                                        <div style="text-align:center; width:120px;">
-                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
-                                                <!-- 左の長方形(40x80): 上・左・下を黒 -->
-                                                <div style="width:40px; height:80px; position:absolute; left:0; top:0; border:2px solid #333; border-right:none;"></div>
-                                                <!-- 右の長方形(40x40): 上・右・下を黒 -->
-                                                <div style="width:40px; height:40px; position:absolute; left:40px; top:40px; border:2px solid #333; border-left:none;"></div>
-                                                <!-- 境界線: 上半分は外郭なので黒、下半分は分け目なので赤点線 -->
-                                                <div style="width:2px; height:40px; background:#333; position:absolute; left:40px; top:0;"></div>
-                                                <div style="width:0; height:40px; border-left:2px dashed red; position:absolute; left:40px; top:40px;"></div>
-                                            </div>
-                                            <p style="font-size:12px;">①たてに<br>わけてたす</p>
-                                        </div>
-                                        <!-- パターン2: よこにわける -->
-                                        <div style="text-align:center; width:120px;">
-                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
-                                                <!-- 上の長方形(40x40): 上・左・右を黒 -->
-                                                <div style="width:40px; height:40px; position:absolute; left:0; top:0; border:2px solid #333; border-bottom:none;"></div>
-                                                <!-- 下の長方形(80x40): 左・右・下を黒 -->
-                                                <div style="width:80px; height:40px; position:absolute; left:0; top:40px; border:2px solid #333; border-top:none;"></div>
-                                                <!-- 境界線: 右半分は外郭なので黒、左半分は分け目なので赤点線 -->
-                                                <div style="width:40px; height:2px; background:#333; position:absolute; left:40px; top:40px;"></div>
-                                                <div style="width:40px; height:0; border-top:2px dashed red; position:absolute; left:0; top:40px;"></div>
-                                            </div>
-                                            <p style="font-size:12px;">②よこに<br>わけてたす</p>
-                                        </div>
-                                        <!-- パターン3: 全体からひく -->
-                                        <div style="text-align:center; width:120px;">
-                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
-                                                <!-- 大きい長方形（黒） -->
-                                                <div style="width:80px; height:80px; position:absolute; left:0; top:0; border:2px solid #333;"></div>
-                                                <!-- 引く部分（赤点線） -->
-                                                <div style="width:40px; height:40px; position:absolute; right:0; top:0; border-left:2px dashed red; border-bottom:2px dashed red; background:rgba(255,0,0,0.05);">
-                                                    <span style="color:red; font-size:10px; position:absolute; top:10px; left:5px;">ひく</span>
-                                                </div>
-                                            </div>
-                                            <p style="font-size:12px;">③全体から<br>欠けた分をひく</p>
-                                        </div>
-                                    </div>
-                                    <p style="margin-top:15px;">どの方法を使っても 答えは同じになるよ。自分が計算しやすい方法を見つけよう！</p>`
+                                                                                                                        <!-- パターン1: たてにわける -->
+                                                                                                                        <div style="text-align:center; width:120px;">
+                                                                                                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                                                                                                <!-- 左の長方形(40x80): 上・左・下を黒 -->
+                                                                                                                                <div style="width:40px; height:80px; position:absolute; left:0; top:0; border:2px solid #333; border-right:none;"></div>
+                                                                                                                                <!-- 右の長方形(40x40): 上・右・下を黒 -->
+                                                                                                                                <div style="width:40px; height:40px; position:absolute; left:40px; top:40px; border:2px solid #333; border-left:none;"></div>
+                                                                                                                                <!-- L字の外郭の「段差」の垂直線（黒） -->
+                                                                                                                                <div style="width:2px; height:40px; background:#333; position:absolute; left:40px; top:0;"></div>
+                                                                                                                                <!-- 境界線（赤点線） -->
+                                                                                                                                <div style="width:0; height:40px; border-left:2px dashed red; position:absolute; left:40px; top:40px;"></div>
+                                                                                                                            </div>
+                                                                                                                            <p style="font-size:12px;">①たてに<br>わけてたす</p>
+                                                                                                                        </div>
+                                                                                                                        <!-- パターン2: よこにわける -->
+                                                                                                                        <div style="text-align:center; width:120px;">
+                                                                                                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                                                                                                <!-- 上の長方形(40x40): 上・左・右を黒 -->
+                                                                                                                                <div style="width:40px; height:40px; position:absolute; left:0; top:0; border:2px solid #333; border-bottom:none;"></div>
+                                                                                                                                <!-- 下の長方形(80x40): 左・右・下を黒 -->
+                                                                                                                                <div style="width:80px; height:40px; position:absolute; left:0; top:40px; border:2px solid #333; border-top:none;"></div>
+                                                                                                                                <!-- L字の外郭の「段差」の水平線（黒） -->
+                                                                                                                                <div style="width:40px; height:2px; background:#333; position:absolute; left:40px; top:40px;"></div>
+                                                                                                                                <!-- 境界線（赤点線） -->
+                                                                                                                                <div style="width:40px; height:0; border-top:2px dashed red; position:absolute; left:0; top:40px;"></div>
+                                                                                                                            </div>
+                                                                                                                            <p style="font-size:12px;">②よこに<br>わけてたす</p>
+                                                                                                                        </div>
+                                                                                                                                                                                                        <!-- パターン3: 大きい四角 － 小さい四角 -->
+                                                                                                                                                                                                        <div style="text-align:center; width:220px;">
+                                                                                                                                                                                                            <div style="display:flex; align-items:center; justify-content:center; height:110px; margin-bottom:10px; gap:15px;">
+                                                                                                                                                                                                                <!-- 大きい四角 -->
+                                                                                                                                                                                                                <div style="display:flex; flex-direction:column; align-items:center;">
+                                                                                                                                                                                                                    <div style="width:80px; height:80px; border:2px solid #333; background:#f9f9f9;"></div>
+                                                                                                                                                                                                                    <span style="font-size:11px; margin-top:5px;">全体</span>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                <div style="font-size:28px; font-weight:bold; color:#333; margin-top:-20px;">－</div>
+                                                                                                                                                                                                                <!-- 小さい四角（右上に対応する位置に配置） -->
+                                                                                                                                                                                                                <div style="display:flex; flex-direction:column; align-items:center; align-self: flex-start; margin-top:5px;">
+                                                                                                                                                                                                                    <div style="width:40px; height:40px; border:2px dashed red; background:rgba(255,0,0,0.05);"></div>
+                                                                                                                                                                                                                    <span style="font-size:11px; margin-top:5px; color:red; white-space:nowrap;">欠けた部分</span>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            <p style="font-size:12px; margin-top:5px;">③大きい四角 － 小さい四角</p>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                        
+                                    <p style="margin-top:15px;">どの方法を使っても 答えは同じになるよ。自分が計算しやすい方法を見つけよう！</p>`,
+                                    quizzes: [
+                                        { question: "縦3cm・横4cmの長方形と、一辺2cmの正方形をあわせた図形の面積は？", display: "(3x4) + (2x2)", answer: 16 },
+                                        { question: "一辺が6cmの正方形から、縦2cm・横3cmの長方形を切り取った面積は？", display: "(6x6) - (2x3)", answer: 30 }
+                                    ]
                                 }
                             ]
                         },
