@@ -6541,7 +6541,168 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 三平方の定理", subUnits: [{ title: "(1) 直角三角形の辺", content: "辺の長さを求めよう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 相似（そうじ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 相似な図形と 条件",
+                                    content: `<h4>形は同じで 大きさがちがう</h4>
+                                    <div class="point-box">
+                                        ある図形を 拡大または縮小した図形を <b>相似</b> といい、記号 <b>∽</b> で表すよ。
+                                    </div>
+                                    <div class="data-demo" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                                        <div style="text-align:center;">
+                                            <svg width="100" height="80">
+                                                <polygon points="50,5 10,75 90,75" fill="none" stroke="#333" stroke-width="2" />
+                                                <line x1="25" y1="48" x2="75" y2="48" stroke="red" stroke-width="2" />
+                                            </svg>
+                                            <p style="font-size:10px;">ピラミッド型</p>
+                                        </div>
+                                        <div style="text-align:center;">
+                                            <svg width="100" height="80">
+                                                <line x1="10" y1="5" x2="90" y2="5" stroke="#333" stroke-width="2" />
+                                                <line x1="10" y1="75" x2="90" y2="75" stroke="#333" stroke-width="2" />
+                                                <line x1="10" y1="5" x2="90" y2="75" stroke="red" stroke-width="1" />
+                                                <line x1="90" y1="5" x2="10" y2="75" stroke="red" stroke-width="1" />
+                                            </svg>
+                                            <p style="font-size:10px;">砂時計（クロス）型</p>
+                                        </div>
+                                    </div>
+                                    <div class="point-box">
+                                        <b>【三角形の相似条件】</b><br>
+                                        1. 3組の辺の <b>比</b> がすべて等しい。<br>
+                                        2. 2組の辺の <b>比</b> とその間の角がそれぞれ等しい。<br>
+                                        3. <b>2組の角</b> がそれぞれ等しい。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "形が同じで大きさがちがう図形の関係を何という？", display: "用語", answer: "相似 (そうじ)", options: ["相似 (そうじ)", "合同", "平行"] },
+                                        { question: "三角形の相似条件のうち、2つの角が等しければ相似といえる？", display: "判定", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "相似を表す記号はどれ？", display: "記号", answer: "∽", options: ["∽", "≡", "＝"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 平行線（へいこうせん）と 線分の比",
+                            subUnits: [
+                                {
+                                    title: "(1) 線分の比の 性質",
+                                    content: `<h4>平行なら 比が等しい</h4>
+                                    <div class="point-box">
+                                        三角形の辺に平行な線をひくと、切り取られた線分の <b>長さの比</b> は等しくなるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="160" height="120" style="margin:0 auto; display:block;">
+                                            <polygon points="80,10 20,110 140,110" fill="none" stroke="#333" stroke-width="2" />
+                                            <line x1="44" y1="70" x2="116" y2="70" stroke="red" stroke-width="2" />
+                                            <text x="40" y="50" font-size="10" fill="red">a</text>
+                                            <text x="25" y="95" font-size="10" fill="red">b</text>
+                                            <text x="110" y="50" font-size="10" fill="blue">c</text>
+                                            <text x="125" y="95" font-size="10" fill="blue">d</text>
+                                        </svg>
+                                        <p style="font-size:11px; text-align:center;">赤い線が平行なら <b>a : b ＝ c : d</b></p>
+                                    </div>
+                                    <div class="point-box">
+                                        ・<b>中点連結定理</b>：2辺の中点をつなぐと、底辺に平行で 長さは半分になる！
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "三角形の2辺の中点をつないだ線は、底辺の何倍の長さ？", display: "中点連結定理", answer: "1/2倍", options: ["1/2倍", "2倍", "同じ"] },
+                                        { question: "中点連結定理で、つないだ線と底辺の関係は？", display: "位置関係", answer: "平行", options: ["平行", "垂直", "ねじれ"] },
+                                        { question: "平行線によって分けられた線分の比はどうなりますか？", display: "性質", answer: "等しくなる", options: ["等しくなる", "逆になる", "2倍になる"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 円周角（えんしゅうかく）の定理",
+                            subUnits: [
+                                {
+                                    title: "(1) 中心角と 円周角",
+                                    content: `<h4>中心角の 半分</h4>
+                                    <div class="point-box">
+                                        同じ 弧（こ）に対する 円周角の大きさは 一定で、<b>中心角の 半分</b> になるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="120" height="120" style="margin:0 auto; display:block;">
+                                            <circle cx="60" cy="60" r="50" fill="none" stroke="#333" stroke-width="2" />
+                                            <polyline points="25,95 60,60 95,95" fill="none" stroke="#aaa" stroke-width="1" />
+                                            <polyline points="25,95 60,10 95,95" fill="none" stroke="red" stroke-width="2" />
+                                            <circle cx="60" cy="60" r="3" fill="#333" />
+                                            <text x="52" y="85" font-size="10">2a</text>
+                                            <text x="55" y="30" font-size="10" fill="red">a</text>
+                                        </svg>
+                                        <p style="font-size:11px; text-align:center;">同じ弧からの角は、<b>中心 ＝ 円周 ✕ 2</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "ある弧に対する中心角が100°のとき、円周角は何度？", display: "100 ÷ 2", answer: 50 },
+                                        { question: "直径に対する円周角は必ず何度になりますか？", display: "特別な角", answer: 90 },
+                                        { question: "円周角の大きさは中心角の何倍ですか？", display: "公式", answer: "1/2倍", options: ["1/2倍", "2倍", "同じ"] },
+                                        { question: "同じ弧に対する円周角の大きさは、場所によって変わる？", display: "性質", answer: "変わらない", options: ["変わらない", "変わる"] },
+                                        { question: "円周角が 30° のとき、対応する中心角は何度？", display: "30 ✕ 2", answer: 60 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 三平方の定理（ピタゴラスの定理）",
+                            subUnits: [
+                                {
+                                    title: "(1) 直角三角形の 3辺の関係",
+                                    content: `<h4>a² ＋ b² ＝ c²</h4>
+                                    <div class="point-box">
+                                        直角三角形の 斜辺（一番長い辺）を <b>c</b> とすると、<br>
+                                        <b>a² ＋ b² ＝ c²</b> が成り立つよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="140" height="100" style="margin:0 auto; display:block;">
+                                            <polygon points="20,10 20,90 120,90" fill="none" stroke="#333" stroke-width="2" />
+                                            <line x1="20" y1="80" x2="30" y2="80" stroke="#333" stroke-width="1" />
+                                            <line x1="30" y1="80" x2="30" y2="90" stroke="#333" stroke-width="1" />
+                                            <text x="5" y="55" font-size="12">a</text>
+                                            <text x="65" y="105" font-size="12">b</text>
+                                            <text x="75" y="45" font-size="12" fill="red">c</text>
+                                        </svg>
+                                    </div>
+                                                                        <div class="data-demo">
+                                                                            <p><b>【必ずおぼえる 特別な比】</b></p>
+                                                                            <div style="display:flex; justify-content:center; gap:15px; font-size:11px; flex-wrap:wrap;">
+                                                                                <div style="text-align:center;">
+                                                                                    <div style="width:40px; height:30px; border-left:2px solid #3498db; border-bottom:2px solid #3498db; position:relative;">
+                                                                                        <div style="width:50px; height:2px; background:#3498db; position:absolute; top:0; left:0; transform:rotate(37deg); transform-origin:left top;"></div>
+                                                                                    </div>
+                                                                                    <b>3 : 4 : 5</b>
+                                                                                </div>
+                                                                                <div style="text-align:center;">
+                                                                                    <div style="width:30px; height:30px; border-left:2px solid #e74c3c; border-bottom:2px solid #e74c3c; position:relative;">
+                                                                                        <div style="width:42.4px; height:2px; background:#e74c3c; position:absolute; top:0; left:0; transform:rotate(45deg); transform-origin:left top;"></div>
+                                                                                    </div>
+                                                                                    <b>1 : 1 : √2</b>
+                                                                                </div>
+                                                                                <div style="text-align:center;">
+                                                                                    <div style="width:30px; height:52px; border-left:2px solid #2ecc71; border-bottom:2px solid #2ecc71; position:relative;">
+                                                                                        <div style="width:60px; height:2px; background:#2ecc71; position:absolute; top:0; left:0; transform:rotate(60deg); transform-origin:left top;"></div>
+                                                                                    </div>
+                                                                                    <b>1 : √3 : 2</b>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p style="font-size:12px; margin-top:10px;"><b>【他にも便利な比】</b><br>
+                                                                            ・<b>5 : 12 : 13</b><br>
+                                                                            ・<b>8 : 15 : 17</b><br>
+                                                                            ・<b>7 : 24 : 25</b></p>
+                                                                        </div>
+                                    `,
+                                    quizzes: [
+                                        { question: "直角をはさむ2辺が 3, 4 のとき、斜辺は？", display: "3² + 4² = c²", answer: 5 },
+                                        { question: "直角三角形の3辺の比 1 : 1 : √2 のときの角は？", display: "特別な三角形", answer: "45°, 45°, 90°", options: ["45°, 45°, 90°", "30°, 60°, 90°"] },
+                                        { question: "3辺の比 1 : √3 : 2 のときの角は？", display: "特別な三角形", answer: "30°, 60°, 90°", options: ["30°, 60°, 90°", "45°, 45°, 90°"] },
+                                        { question: "三平方の定理の別名は？", display: "別名", answer: "ピタゴラスの定理" },
+                                        { question: "斜辺が 10、1辺が 6 のとき、残りの1辺は？", display: "10² - 6² = b²", answer: 8 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 関数 y=ax^2", subUnits: [{ title: "(1) 放物線", content: "2次関数を調べよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 標本調査", subUnits: [{ title: "(1) 全体と標本", content: "一部から全体を推測しよう。" }] }] }
                 ]
