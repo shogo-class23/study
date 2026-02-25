@@ -6703,7 +6703,108 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 関数 y=ax^2", subUnits: [{ title: "(1) 放物線", content: "2次関数を調べよう。" }] }] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 関数 y ＝ ax²",
+                            subUnits: [
+                                {
+                                    title: "(1) 2乗に比例する関数",
+                                    content: `<h4>y は x の 2乗に比例する</h4>
+                                    <div class="point-box">
+                                        x の値を 2倍, 3倍... にすると、y の値が <b>4倍, 9倍...</b> になる関係だよ。<br>
+                                        ・<b>式：y ＝ ax²</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：y ＝ 2x² で x ＝ 3 のとき<br>
+                                        y ＝ 2 ✕ 3² ＝ 2 ✕ 9 ＝ <b>18</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 3x² のとき、x ＝ 2 なら y はいくつ？", display: "3 ✕ 2²", answer: 12 },
+                                        { question: "y ＝ －x² のとき、x ＝ 4 なら y はいくつ？", display: "－(4²)", answer: -16 },
+                                        { question: "x ＝ 2 のとき y ＝ 20 なら、定数 a はいくつ？", display: "20 ＝ a ✕ 2²", answer: 5 },
+                                        { question: "x ＝ －3 のとき y ＝ 18 なら、定数 a はいくつ？", display: "18 ＝ a ✕ (－3)²", answer: 2 },
+                                        { question: "y ＝ ax² で、x が 4倍になると y は何倍になる？", display: "4の2乗", answer: 16 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 放物線（ほうぶつせん）の特徴",
+                            subUnits: [
+                                {
+                                    title: "(1) グラフの形と 向き",
+                                    content: `<h4>なめらかな 曲線</h4>
+                                    <div class="point-box">
+                                        ・<b>a ＞ 0</b> ➔ 上に開く（谷の形）<br>
+                                        ・<b>a ＜ 0</b> ➔ 下に開く（山の形）<br>
+                                        ・<b>y軸</b> について対称な曲線だよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="160" height="120" style="border-left:1px solid #ccc; border-bottom:1px solid #ccc; margin:0 auto; display:block; background:#fff;">
+                                            <path d="M30,10 Q80,110 130,10" fill="none" stroke="#3498db" stroke-width="3" />
+                                            <line x1="80" y1="0" x2="80" y2="120" stroke="#aaa" stroke-dasharray="4" />
+                                        </svg>
+                                        <p style="font-size:10px; text-align:center;">y ＝ ax² (a ＞ 0) のイメージ</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ ax² のグラフの形を何という？", display: "用語", answer: "放物線", options: ["放物線", "双曲線", "直線"] },
+                                        { question: "a の絶対値が大きくなると、グラフの開き方はどうなる？", display: "開き方", answer: "しぼむ (狭くなる)", options: ["広がる", "しぼむ (狭くなる)"] },
+                                        { question: "y ＝ ax² のグラフが必ず通る点はどこ？", display: "座標", answer: "原点 (0,0)" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 変化の割合",
+                            subUnits: [
+                                {
+                                    title: "(1) 変化の割合の 計算",
+                                    content: `<h4>一定ではない 変化</h4>
+                                    <div class="point-box">
+                                        ・<b>変化の割合 ＝ yの増加量 / xの増加量</b><br>
+                                        関数 y ＝ ax² では、場所によって変化の割合が変わるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【裏ワザ公式】</b></p>
+                                        x が p から q まで変化するとき<br>
+                                        <b>変化の割合 ＝ a(p ＋ q)</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 2x² で、x が 1 から 3 まで変化する時の変化の割合は？", display: "2 ✕ (1 ＋ 3)", answer: 8 },
+                                        { question: "y ＝ －x² で、x が 2 から 5 まで変化する時の変化の割合は？", display: "－1 ✕ (2 ＋ 5)", answer: -7 },
+                                        { question: "y ＝ 3x² で、x が －2 から 4 まで変化する時の変化の割合は？", display: "3 ✕ (－2 ＋ 4)", answer: 6 },
+                                        { question: "一次関数の変化の割合は一定だが、y＝ax²は一定？", display: "性質", answer: "いいえ", options: ["はい", "いいえ"] },
+                                        { question: "y ＝ ax² で x が 0 から 2 まで変化する時の変化の割合が 6 のとき、a は？", display: "a ✕ (0 ＋ 2) ＝ 6", answer: 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. いろいろな 関数",
+                            subUnits: [
+                                {
+                                    title: "(1) 階段状のグラフ など",
+                                    content: `<h4>日常にある 特殊な関数</h4>
+                                    <div class="point-box">
+                                        郵便料金や タクシー代のように、ある範囲で値が <b>階段状（ステップ状）</b> に変わる関数があるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="160" height="100" style="margin:0 auto; display:block;">
+                                            <line x1="10" y1="80" x2="50" y2="80" stroke="#333" stroke-width="3" />
+                                            <line x1="50" y1="50" x2="90" y2="50" stroke="#333" stroke-width="3" />
+                                            <line x1="90" y1="20" x2="130" y2="20" stroke="#333" stroke-width="3" />
+                                        </svg>
+                                        <p style="font-size:10px; text-align:center;">階段状のグラフのイメージ</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "重さによって料金が決まる郵便代金のグラフはどんな形？", display: "生活の中の関数", answer: "階段状", options: ["直線", "曲線", "階段状"] },
+                                        { question: "階段状のグラフで、値がジャンプする境界線に注意が必要？", display: "見方", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "関数とは、xを決めるとyが「いくつ」決まる関係のこと？", display: "定義の復習", answer: "1つ", options: ["1つ", "2つ", "たくさん"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 標本調査", subUnits: [{ title: "(1) 全体と標本", content: "一部から全体を推測しよう。" }] }] }
                 ]
             }
