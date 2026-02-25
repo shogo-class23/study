@@ -1970,8 +1970,8 @@ const studyData = {
                                             ・線が つながっていない（あいている）<br>
                                             ・線が まがっている
                                         </div>`,
-                                        quizzes: [{ question: "三矩形の辺の数は？", display: "三角形の辺の数は？", answer: 3 }
-
+                                        quizzes: [
+                                            { question: "三角形の辺の数はいくつ？", display: "辺の数", answer: 3 }
                                         ]
                                     },
                                     {
@@ -1985,7 +1985,9 @@ const studyData = {
                                             <p>・<b>辺（へん）</b>：4本<br>
                                             ・<b>頂点（ちょうてん）</b>：4こ</p>
                                         </div>`,
-                                        quizzes: [{ question: "四矩形の辺の数は？", display: "四角形の辺の数は？", answer: 4 }]
+                                        quizzes: [
+                                            { question: "四角形の辺の数はいくつ？", display: "辺の数", answer: 4 }
+                                        ]
                                     },
                                     {
                                         title: "(3) 辺（へん）と 頂点（ちょうてん）",
@@ -7279,6 +7281,7 @@ window.onload = () => {
     }
 
     function showCategories() {
+        if (!studyData[currentSubject]) return;
         const subjectName = studyData[currentSubject].name;
         const gradeData = studyData[currentSubject].grades[currentGrade];
         if (!gradeData) {
@@ -7596,14 +7599,14 @@ window.onload = () => {
         if (target) target.classList.remove('hidden');
     }
 
-    homeBtn.onclick = showHome;
+    if (homeBtn) homeBtn.onclick = showHome;
     document.querySelectorAll('.subject-card').forEach(c => { c.onclick = () => { currentSubject = c.dataset.subject; showGrades(); }; });
     document.querySelectorAll('.grade-card').forEach(c => { c.onclick = () => { currentGrade = c.dataset.grade; showCategories(); }; });
-    backToHomeBtn.onclick = showHome;
-    backToGradeBtn.onclick = showGrades;
-    backToCategoryBtn.onclick = showCategories;
-    backToUnitBtn.onclick = () => showUnits(currentCategoryIndex);
-    backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
+    if (backToHomeBtn) backToHomeBtn.onclick = showHome;
+    if (backToGradeBtn) backToGradeBtn.onclick = showGrades;
+    if (backToCategoryBtn) backToCategoryBtn.onclick = showCategories;
+    if (backToUnitBtn) backToUnitBtn.onclick = () => showUnits(currentCategoryIndex);
+    if (backToSubUnitBtn) backToSubUnitBtn.onclick = () => showSubUnits(currentUnitIndex);
 
     if (startQuizBtn) startQuizBtn.onclick = () => startQuiz(0);
     if (backToContentBtn) backToContentBtn.onclick = () => showContent(currentSubUnit);
