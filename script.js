@@ -3777,8 +3777,423 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 角の大きさ", subUnits: [{ title: "(1) 分度器の使い方", content: "角度をはかろう。" }] }] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 面積", subUnits: [{ title: "(1) 広さの表し方", content: "面積の公式を覚えよう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 垂直（すいちょく）と 平行（へいこう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 垂直（すいちょく）",
+                                    content: `<h4>まじわりかたを 見てみよう</h4>
+                                    <div class="point-box">
+                                        2つの 直線が <b>直角（90°）</b> に まじわるとき、この 2つの直線は <b>垂直</b> であるというよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display:flex; justify-content:center; align-items:center; height:100px;">
+                                            <div style="width:2px; height:80px; background:#333; position:relative;">
+                                                <div style="width:80px; height:2px; background:#333; position:absolute; top:40px; left:-40px;"></div>
+                                                <div style="width:10px; height:10px; border-top:2px solid red; border-right:2px solid red; position:absolute; top:40px; left:0;"></div>
+                                            </div>
+                                        </div>
+                                        <p>三角定規（さんかくじょうぎ）の 直角の部分を あててみると、たしかめることができるね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2つの直線が 垂直にまじわるとき、その角度は 何度？", display: "垂直の角度", answer: 90 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 平行（へいこう）",
+                                    content: `<h4>どこまでいっても 交わらない</h4>
+                                    <div class="point-box">
+                                        1つの 直線に 垂直な 2つの直線は、<b>平行</b> であるというよ。<br>
+                                        平行な 直線は、どこまで のばしても 交（まじ）わらないんだ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display:flex; flex-direction:column; gap:20px; align-items:center; padding:20px;">
+                                            <div style="width:150px; height:3px; background:#3498db;"></div>
+                                            <div style="width:150px; height:3px; background:#3498db;"></div>
+                                        </div>
+                                        <p>平行な 2つの直線の はば（きょり）は、どこでも <b>同じ</b> になっているよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "平行な 2本の線の 角度（はば）の関係は？", display: "平行線の特徴", answer: "どこでも同じ", options: ["だんだん広がる", "どこでも同じ", "いつか交わる"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 台形、平行四辺形、ひし形の性質・敷き詰め",
+                            subUnits: [
+                                {
+                                    title: "(1) 台形（だいけい）",
+                                    content: `<h4>一組（ひとくみ）だけ 平行</h4>
+                                    <div class="point-box">
+                                        向（む）かいあった 一組の 辺が <b>平行</b> な 四角形を <b>台形</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:100px; height:50px; background:#ffe58f; clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%); margin:0 auto;"></div>
+                                        <p>上と下の 辺が まっすぐ 平行（へいこう）だね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "台形は、何組の辺が 平行かな？", display: "台形の平行な辺", answer: 1 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 平行四辺形（へいこうしへんけい）",
+                                    content: `<h4>二組（ふたくみ）とも 平行</h4>
+                                    <div class="point-box">
+                                        向かいあった 二組の 辺が どちらも <b>平行</b> な 四角形を <b>平行四辺形</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:100px; height:50px; background:#bae7ff; clip-path:polygon(20% 0, 100% 0, 80% 100%, 0 100%); margin:0 auto;"></div>
+                                        <p><b>【平行四辺形の 特徴（とくちょう）】</b></p>
+                                        <p>・向かいあった 辺の <b>長さ</b> が 同じ。<br>
+                                        ・向かいあった 角の <b>大きさ</b> が 同じ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "平行四辺形は、何組の辺が 平行かな？", display: "平行四辺形の平行な辺", answer: 2 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) ひし形（ひしがた）",
+                                    content: `<h4>全部（ぜんぶ）の 辺の長さが 同じ</h4>
+                                    <div class="point-box">
+                                        4つの 辺の <b>長さが すべて同じ</b> 四角形を <b>ひし形</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:60px; height:60px; background:#ffd6e7; clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%); margin:0 auto;"></div>
+                                        <p>ひし形も 向かいあった 辺が 平行だから、平行四辺形の なかまだよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "4つの辺の長さが すべて同じ四角形は？", display: "辺の長さが全部同じ", answer: "ひし形", options: ["台形", "平行四辺形", "ひし形"] }
+                                    ]
+                                },
+                                {
+                                    title: "(4) 対角線（たいかくせん）",
+                                    content: `<h4>図形を つなぐ線</h4>
+                                    <div class="point-box">
+                                        向かいあった 頂点（ちょうてん）を 結（むす）んだ 直線を <b>対角線</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【図形と 対角線の 関係】</b></p>
+                                        <p>・<b>平行四辺形</b>：対角線が 真ん中で 交わる。<br>
+                                        ・<b>ひし形</b>：対角線が <b>垂直（すいちょく）</b> に 交わる！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "対角線が 垂直（90°）に まじわる 四角形は？", display: "対角線が垂直", answer: "ひし形", options: ["長方形", "平行四辺形", "ひし形"] }
+                                    ]
+                                },
+                                {
+                                    title: "(5) 図形の 敷（し）き詰め",
+                                    content: `<h4>すきまなく ならべよう</h4>
+                                    <div class="point-box">
+                                        同じ 図形を ならべて、すきまなく しきつめることができるよ。<br>
+                                        平行四辺形や ひし形は、きれいに しきつめられるね。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display:flex; justify-content:center; flex-wrap:wrap; width:150px; margin:0 auto; line-height:0;">
+                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
+                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
+                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
+                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
+                                        </div>
+                                        <p>かべがみ の もよう みたいだね！</p>
+                                    </div>`
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 立体（見取り図や展開図など）",
+                            subUnits: [
+                                {
+                                    title: "(1) 直方体（ちょくほうたい）と 立方体（りっぽうたい）",
+                                    content: `<h4>はこの かたち</h4>
+                                    <div class="point-box">
+                                        ・<b>直方体</b>：長方形（または正方形）だけで かこまれた 立体。<br>
+                                        ・<b>立方体</b>：正方形 だけで かこまれた 立体。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【立体の パーツ】</b></p>
+                                        <p>・<b>面（めん）</b>：6つ<br>
+                                        ・<b>辺（へん）</b>：12本<br>
+                                        ・<b>頂点（ちょうてん）</b>：8こ</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "直方体や 立方体の 面の数は 全部で いくつ？", display: "面の数", answer: 6 },
+                                        { question: "直方体や 立方体の 辺の数は 全部で いくつ？", display: "辺の数", answer: 12 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 見取（みと）り図",
+                                    content: `<h4>ななめから 見た図</h4>
+                                    <div class="point-box">
+                                        立体の 全体の 形が わかるように かいた図を <b>見取り図</b> というよ。
+                                    </div>
+                                    <div class="box-demo-container">
+                                        <div class="box-3d"></div>
+                                    </div>
+                                    <p>・目に見えない 辺は <b>点線</b> で かくのが ルールだよ！</p>`
+                                },
+                                {
+                                    title: "(3) 展開図（てんかいず）",
+                                    content: `<h4>切りひらいた図</h4>
+                                    <div class="point-box">
+                                        立体を 切りひらいて 平面（へいめん）に した図を <b>展開図</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display: flex; justify-content: center; padding: 20px;">
+                                            <div style="display: grid; grid-template-columns: repeat(3, 30px); grid-template-rows: repeat(4, 30px); gap: 0;">
+                                                <!-- Row 1 -->
+                                                <div style="grid-column: 2; border: 1px solid #333;"></div>
+                                                <!-- Row 2 -->
+                                                <div style="grid-row: 2; grid-column: 1; border: 1px solid #333;"></div>
+                                                <div style="grid-row: 2; grid-column: 2; border: 1px solid #333; background: #ffd6e7;"></div>
+                                                <div style="grid-row: 2; grid-column: 3; border: 1px solid #333;"></div>
+                                                <!-- Row 3 -->
+                                                <div style="grid-row: 3; grid-column: 2; border: 1px solid #333;"></div>
+                                                <!-- Row 4 -->
+                                                <div style="grid-row: 4; grid-column: 2; border: 1px solid #333;"></div>
+                                            </div>
+                                        </div>
+                                        <p>組み立てたときに、どの面と どの面が <b>向かいあうか</b> 考えるのが 大事だよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "正六面体（立方体）の 展開図は 全部で 何種類（なんしゅるい）あるかな？", display: "展開図の種類", answer: 11, options: [6, 11, 14] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 位置（いち）",
+                            subUnits: [
+                                {
+                                    title: "(1) 平面（へいめん）の位置",
+                                    content: `<h4>どこに あるかな？</h4>
+                                    <div class="point-box">
+                                        「横（よこ）」と 「縦（たて）」の 2つの 数を使って、場所（ばしょ）を 表すことができるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【例：たからもの の場所】</b></p>
+                                        <p>横に 3、縦に 2 進んだところ ➔ <b>(3, 2)</b></p>
+                                        <p>このように、基準（きじゅん）からの きょりで 位置が 決まるんだね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "横に 5、縦に 4 進んだ位置を 表すと？", display: "位置の表し方", answer: "(5, 4)" }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 空間（くうかん）の位置",
+                                    content: `<h4>高さも 加（くわ）えよう</h4>
+                                    <div class="point-box">
+                                        空間（立体の中など）では、<b>「横」「縦」「高さ」</b> の 3つの 数を使って 表すよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>教室の 中の 自分の席（せき）も、「前から○列目、右から○番目、高さ○階」のように 表せるね！</p>
+                                    </div>`
+                                }
+                            ]
+                        },
+                        {
+                            title: "5. 単位（たんい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 面積の単位（㎠，㎡，㎢）",
+                                    content: `<h4>広さを表す 単位</h4>
+                                    <div class="point-box">
+                                        面積（広さ）を表すときには、次のような 単位を使うよ。<br>
+                                        ・<b>㎠</b>（平方センチメートル）<br>
+                                        ・<b>㎡</b>（平方メートル）<br>
+                                        ・<b>㎢</b>（平方キロメートル）
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【単位の関係】</b></p>
+                                        <p>・1㎡ ＝ 10000 ㎠<br>
+                                        ・1㎢ ＝ 1000000 ㎡</p>
+                                        <p>図形や 場所の大きさに あわせて、使いわけよう！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1㎡ は 何 ㎠ かな？", display: "1㎡", answer: 10000 },
+                                        { question: "1㎢ は 何 ㎡ かな？", display: "1㎢", answer: 1000000 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "6. 角度（かくど）",
+                            subUnits: [
+                                {
+                                    title: "(1) 角の大きさとは",
+                                    content: `<h4>開（ひら）きぐあいを はかろう</h4>
+                                    <div class="point-box">
+                                        辺（へん）と 辺の 開きぐあいの ことを <b>角（かく）の大きさ（角度）</b> というよ。<br>
+                                        単位（たんい）は <b>度（ど）</b> を使い、<b>「°」</b> と書くよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【いろいろな 角度】</b></p>
+                                        <div style="display:flex; justify-content:center; gap:30px; align-items:flex-end;">
+                                            <div style="text-align:center;">
+                                                <div style="width:60px; height:2px; background:#333; position:relative; margin-bottom:10px;">
+                                                    <div style="width:60px; height:2px; background:#333; position:absolute; left:0; bottom:0; transform:rotate(-45deg); transform-origin:left center;"></div>
+                                                </div>
+                                                <div>45°</div>
+                                            </div>
+                                            <div style="text-align:center;">
+                                                <div style="width:60px; height:2px; background:#333; position:relative; margin-bottom:10px;">
+                                                    <div style="width:60px; height:2px; background:#333; position:absolute; left:0; bottom:0; transform:rotate(-90deg); transform-origin:left center;"></div>
+                                                </div>
+                                                <div>直角（90°）</div>
+                                            </div>
+                                            <div style="text-align:center;">
+                                                <div style="width:60px; height:2px; background:#333; position:relative; margin-bottom:10px;">
+                                                    <div style="width:60px; height:2px; background:#333; position:absolute; left:0; bottom:0; transform:rotate(-180deg); transform-origin:left center;"></div>
+                                                </div>
+                                                <div>180°</div>
+                                            </div>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "直角（ちょっかく）は 何度かな？", display: "直角", answer: 90 },
+                                        { question: "直角が 2つ分だと 何度かな？", display: "90° ✕ 2", answer: 180 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 分度器（ぶんどき）の使い方",
+                                    content: `<h4>正しい はかりかた</h4>
+                                    <div class="point-box">
+                                        ① 分度器の <b>中心</b> を、角の <b>頂点（ちょうてん）</b> に あわせる。<br>
+                                        ② <b>0°の線</b> を、一方の 辺（へん）に ぴったりあわせる。<br>
+                                        ③ もう一方の 辺が 指（さ）している 目盛りを よむ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【読むときの注意】</b></p>
+                                        <p>目盛りには 右から始まるものと 左から始まるものがあるよ。<br>
+                                        <b>0から 始まっているほう</b> を 数えていこう！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "直角の半分（半分に 折った角度）は 何度かな？", display: "90 ÷ 2", answer: 45 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 180度より 大きい角",
+                                    content: `<h4>くふうして はかろう</h4>
+                                    <div class="point-box">
+                                        分度器は 180度までしか ないけど、くふうすれば もっと大きい角も はかれるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【2つの やりかた】</b></p>
+                                        <p>① <b>180度 ＋（はみ出したぶん）</b> で 計算する。<br>
+                                        ② <b>360度 －（はんたいがわ）</b> で 計算する。<br>
+                                        一周（いっしゅう）は <b>360度</b> だということを おぼえておこう！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "一回転（いっかいてん）した 角度は 何度かな？", display: "一周", answer: 360 },
+                                        { question: "直角が 3つ分だと 何度かな？", display: "90° ✕ 3", answer: 270 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "7. 長方形・正方形、複雑な図形の面積",
+                            subUnits: [
+                                {
+                                    title: "(1) 長方形と正方形の面積",
+                                    content: `<h4>広さを 計算で もとめよう</h4>
+                                    <div class="point-box">
+                                        ・<b>長方形の面積 ＝ 縦 ✕ 横</b><br>
+                                        ・<b>正方形の面積 ＝ 一辺 ✕ 一辺</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>面積の 単位は、<b>㎠</b>（平方センチメートル）、<b>㎡</b>（平方メートル）、<b>㎢</b>（平方キロメートル）を使うよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "縦 5cm、横 8cm の長方形の面積は？", display: "5cm ✕ 8cm", answer: 40 },
+                                        { question: "一辺が 6cm の正方形の面積は？", display: "6cm ✕ 6cm", answer: 36 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 複雑（ふくざつ）な図形の面積",
+                                    content: `<h4>くふうして 計算しよう</h4>
+                                    <div class="point-box">
+                                        L字型のような 複雑な図形は、次の 3つの考え方で もとめることができるよ！
+                                    </div>
+                                    <div class="data-demo" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+                                        <!-- パターン1: たてにわける -->
+                                        <div style="text-align:center; width:120px;">
+                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                <!-- 左の長方形(40x80): 上・左・下を黒 -->
+                                                <div style="width:40px; height:80px; position:absolute; left:0; top:0; border:2px solid #333; border-right:none;"></div>
+                                                <!-- 右の長方形(40x40): 上・右・下を黒 -->
+                                                <div style="width:40px; height:40px; position:absolute; left:40px; top:40px; border:2px solid #333; border-left:none;"></div>
+                                                <!-- 境界線: 上半分は外郭なので黒、下半分は分け目なので赤点線 -->
+                                                <div style="width:2px; height:40px; background:#333; position:absolute; left:40px; top:0;"></div>
+                                                <div style="width:0; height:40px; border-left:2px dashed red; position:absolute; left:40px; top:40px;"></div>
+                                            </div>
+                                            <p style="font-size:12px;">①たてに<br>わけてたす</p>
+                                        </div>
+                                        <!-- パターン2: よこにわける -->
+                                        <div style="text-align:center; width:120px;">
+                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                <!-- 上の長方形(40x40): 上・左・右を黒 -->
+                                                <div style="width:40px; height:40px; position:absolute; left:0; top:0; border:2px solid #333; border-bottom:none;"></div>
+                                                <!-- 下の長方形(80x40): 左・右・下を黒 -->
+                                                <div style="width:80px; height:40px; position:absolute; left:0; top:40px; border:2px solid #333; border-top:none;"></div>
+                                                <!-- 境界線: 右半分は外郭なので黒、左半分は分け目なので赤点線 -->
+                                                <div style="width:40px; height:2px; background:#333; position:absolute; left:40px; top:40px;"></div>
+                                                <div style="width:40px; height:0; border-top:2px dashed red; position:absolute; left:0; top:40px;"></div>
+                                            </div>
+                                            <p style="font-size:12px;">②よこに<br>わけてたす</p>
+                                        </div>
+                                        <!-- パターン3: 全体からひく -->
+                                        <div style="text-align:center; width:120px;">
+                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                <!-- 大きい長方形（黒） -->
+                                                <div style="width:80px; height:80px; position:absolute; left:0; top:0; border:2px solid #333;"></div>
+                                                <!-- 引く部分（赤点線） -->
+                                                <div style="width:40px; height:40px; position:absolute; right:0; top:0; border-left:2px dashed red; border-bottom:2px dashed red; background:rgba(255,0,0,0.05);">
+                                                    <span style="color:red; font-size:10px; position:absolute; top:10px; left:5px;">ひく</span>
+                                                </div>
+                                            </div>
+                                            <p style="font-size:12px;">③全体から<br>欠けた分をひく</p>
+                                        </div>
+                                    </div>
+                                    <p style="margin-top:15px;">どの方法を使っても 答えは同じになるよ。自分が計算しやすい方法を見つけよう！</p>`
+                                }
+                            ]
+                        },
+                        {
+                            title: "8. 周（まわ）りの長さ",
+                            subUnits: [
+                                {
+                                    title: "(1) 周りの長さの もとめ方",
+                                    content: `<h4>すべての 辺を たそう</h4>
+                                    <div class="point-box">
+                                        図形の <b>周りの長さ</b> とは、その図形を かこんでいる 線の 長さの 合計のことだよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【長方形の ばあい】</b></p>
+                                        <p>（縦 ＋ 横） ✕ 2 ＝ 周りの長さ</p>
+                                        <p><b>【正方形の ばあい】</b></p>
+                                        <p>一辺 ✕ 4 ＝ 周りの長さ</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "縦 3cm、横 7cm の長方形の 周りの長さは？", display: "(3+7) ✕ 2", answer: 20 },
+                                        { question: "一辺が 5cm の正方形の 周りの長さは？", display: "5 ✕ 4", answer: 20 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 複雑な図形の 周りの長さ",
+                                    content: `<h4>線を いどうさせて 考える</h4>
+                                    <div class="point-box">
+                                        階段（かいだん）のような かたちの 周りの長さは、<b>線を はしっこへ 移動（いどう）</b> させると、大きな長方形と 同じになることに 気づけるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>へこんでいる部分の 辺を、外側（そとがわ）へ ずらしてみよう。<br>
+                                        すると、ふつうの 長方形として 計算できるんだ。ふしぎだね！</p>
+                                    </div>`
+                                }
+                            ]
+                        }
+                    ] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 折れ線グラフ", subUnits: [{ title: "(1) 変化を見る", content: "グラフで変化を調べよう。" }] }] }
                 ]
             },
