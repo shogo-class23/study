@@ -5681,6 +5681,47 @@ const studyData = {
                                         { question: "垂直二等分線上の点から、線分の両端までの距離はどうなっていますか？", display: "性質", answer: "等しい", options: ["等しい", "ちがう", "2倍になる"] },
                                         { question: "角の二等分線上の点から、2つの辺までの距離はどうなっていますか？", display: "性質", answer: "等しい", options: ["等しい", "ちがう"] }
                                     ]
+                                },
+                                {
+                                    title: "(2) いろいろな 角の作図",
+                                    content: `<h4>角度の パズルを 解こう</h4>
+                                    <div class="point-box">
+                                        基本の角度（90°, 60°）を <b>たしたり 二等分したり</b> することで、いろいろな角度が作れるよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【よく出る 角度の作り方】</b></p>
+                                        <ul style="font-size:13px;">
+                                            <li><b>45度</b> ➔ 90度を 二等分する。</li>
+                                            <li><b>30度</b> ➔ 60度を 二等分する。</li>
+                                            <li><b>75度</b> ➔ 60度 ＋ 15度（30度の半分）</li>
+                                            <li><b>105度</b> ➔ 90度 ＋ 15度、または 60度 ＋ 45度</li>
+                                        </ul>
+                                    </div>
+                                    <div class="data-demo" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                                        <div style="text-align:center; width:120px;">
+                                            <div style="width:100px; height:80px; position:relative; margin:0 auto;">
+                                                <div style="width:80px; height:2px; background:#333; position:absolute; bottom:10px; left:10px;"></div>
+                                                <div style="width:80px; height:2px; background:red; position:absolute; bottom:10px; left:10px; transform:rotate(-60deg); transform-origin:left center;"></div>
+                                                <div style="width:40px; height:40px; border:1px dashed #aaa; border-radius:50%; position:absolute; left:50px; bottom:20px;"></div>
+                                            </div>
+                                            <p style="font-size:10px;"><b>60度の作図</b></p>
+                                        </div>
+                                        <div style="text-align:center; width:120px;">
+                                            <div style="width:100px; height:80px; position:relative; margin:0 auto;">
+                                                <div style="width:80px; height:2px; background:#333; position:absolute; bottom:10px; left:10px;"></div>
+                                                <div style="width:80px; height:2px; background:red; position:absolute; bottom:10px; left:10px; transform:rotate(-75deg); transform-origin:left center;"></div>
+                                                <div style="width:10px; height:10px; border-left:1px dashed #aaa; border-bottom:1px dashed #aaa; position:absolute; left:30px; bottom:30px; transform:rotate(-37.5deg);"></div>
+                                            </div>
+                                            <p style="font-size:10px;"><b>75度の作図</b><br>(60 + 15)</p>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "60度を作図するとき、どんな図形の性質を使いますか？", display: "ヒント：3つの辺が同じ", answer: "正三角形", options: ["正三角形", "直角三角形", "二等辺三角形"] },
+                                        { question: "75度を作るには、60度に何度をたせばいい？", display: "60 ＋ □ ＝ 75", answer: 15 },
+                                        { question: "45度を作るには、何度を二等分すればいい？", display: "□ ÷ 2 ＝ 45", answer: 90 },
+                                        { question: "105度を作る組み合わせはどれ？", display: "足し算", answer: "90 + 15", options: ["90 + 15", "60 + 30", "45 + 45"] },
+                                        { question: "15度を作るには、30度をどうすればいい？", display: "半分にする", answer: "二等分する" }
+                                    ]
                                 }
                             ]
                         },
@@ -5823,8 +5864,199 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比例と反比例", subUnits: [{ title: "(1) 関数の考え方", content: "変化する2つの量を調べよう。" }] }] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分析", subUnits: [{ title: "(1) ヒストグラム", content: "データの傾向をつかもう。" }] }] }
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 関数（かんすう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 変数（へんすう）と 変域（へんいき）",
+                                    content: `<h4>ともなって変わる 2つの量</h4>
+                                    <div class="point-box">
+                                        ・<b>変数</b>：いろいろな値をとる文字（x, y など）。<br>
+                                        ・<b>関数</b>：x の値を決めると、それにともなって y の値が <b>ただ1つ</b> 決まる関係。<br>
+                                        ・<b>変域</b>：変数のとる値の <b>範囲（はんい）</b>。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "xの値を決めるとyがただ1つ決まる関係を何という？", display: "用語", answer: "関数", options: ["関数", "比例", "代入"] },
+                                        { question: "変数がとる値の範囲のことを何という？", display: "用語", answer: "変域", options: ["変域", "全域", "領域"] },
+                                        { question: "「xは 0以上 5以下」を変域の記号で表すと？", display: "記号", answer: "0 ≦ x ≦ 5", options: ["0 ≦ x ≦ 5", "0 < x < 5", "x = 5"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 比例（ひれい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 比例の式と グラフ",
+                                    content: `<h4>y は x に 比例する</h4>
+                                    <div class="point-box">
+                                        ・<b>式：y ＝ ax</b> （a は比例定数）<br>
+                                        ・<b>グラフ</b>：原点を通る <b>直線</b>。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="160" height="120" style="border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; display:block; background:#f9f9f9;">
+                                            <line x1="0" y1="120" x2="140" y2="20" stroke="#3498db" stroke-width="3" />
+                                            <circle cx="0" cy="120" r="4" fill="#e74c3c" />
+                                            <text x="5" y="115" font-size="10">原点</text>
+                                        </svg>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 4x のとき、x ＝ 3 なら y はいくつ？", display: "4 ✕ 3", answer: 12 },
+                                        { question: "y ＝ －2x のとき、x ＝ 5 なら y はいくつ？", display: "-2 ✕ 5", answer: -10 },
+                                        { question: "x ＝ 2 のとき y ＝ 10 なら、比例定数 a はいくつ？", display: "10 ＝ a ✕ 2", answer: 5 },
+                                        { question: "y ＝ 3x のグラフが通る点はどれ？", display: "座標", answer: "(1, 3)", options: ["(1, 3)", "(3, 1)", "(0, 3)"] },
+                                        { question: "比例定数 a が負の数（マイナス）のとき、グラフは右下がりになる？", display: "グラフの向き", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 比例の 変域（へんいき）",
+                                    content: `<h4>グラフの 使う部分を決めよう</h4>
+                                    <div class="point-box">
+                                        x の範囲（変域）が決まると、それにあわせて y の範囲（変域）も決まるよ。<br>
+                                        <b>端（はし）の値を 式に代入</b> して確かめよう。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：y ＝ 2x で、x の変域が 1 ≦ x ≦ 4 のとき<br>
+                                        ・x ＝ 1 のとき y ＝ 2<br>
+                                        ・x ＝ 4 のとき y ＝ 8<br>
+                                        ➔ y の変域は <b>2 ≦ y ≦ 8</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 3x で、0 ≦ x ≦ 2 のとき、y の変域は？", display: "0 ≦ y ≦ □", answer: 6 },
+                                        { question: "y ＝ －2x で、1 ≦ x ≦ 5 のとき、y の最大値は？", display: "代入して計算", answer: -2 },
+                                        { question: "変域で、数を含まない（〜より大きい）ときに使う記号は？", display: "不等号", answer: "<", options: ["<", "≦"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 反比例（はんぴれい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 反比例の式と グラフ",
+                                    content: `<h4>y は x に 反比例する</h4>
+                                    <div class="point-box">
+                                        ・<b>式：y ＝ a/x</b> または <b>xy ＝ a</b><br>
+                                        ・<b>グラフ</b>：2つのなめらかな曲線（<b>双曲線</b>）。
+                                    </div>
+                                    <div class="data-demo">
+                                        <svg width="160" height="120" style="border-left:2px solid #333; border-bottom:2px solid #333; margin:0 auto; display:block; background:#f9f9f9;">
+                                            <path d="M10,10 Q20,100 140,110" fill="none" stroke="#e74c3c" stroke-width="3" />
+                                        </svg>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 12/x のとき、x ＝ 4 なら y はいくつ？", display: "12 ÷ 4", answer: 3 },
+                                        { question: "y ＝ －18/x のとき、x ＝ 3 なら y はいくつ？", display: "-18 ÷ 3", answer: -6 },
+                                        { question: "x ＝ 2 のとき y ＝ 6 なら、比例定数 a はいくつ？", display: "a ＝ x ✕ y", answer: 12 },
+                                        { question: "反比例のグラフの形を何という？", display: "用語", answer: "双曲線", options: ["双曲線", "放物線", "直線"] },
+                                        { question: "反比例のグラフは原点（0,0）を通りますか？", display: "グラフの特徴", answer: "いいえ", options: ["はい", "いいえ"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 反比例の 変域",
+                                    content: `<h4>0 を またがないように注意</h4>
+                                    <div class="point-box">
+                                        反比例では <b>x ＝ 0</b> は考えないよ。x の変域に 0 が入ることはないので 安心しよう。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：y ＝ 12/x で、2 ≦ x ≦ 6 のとき<br>
+                                        ・x ＝ 2 のとき y ＝ 6<br>
+                                        ・x ＝ 6 のとき y ＝ 2<br>
+                                        ➔ y の変域は <b>2 ≦ y ≦ 6</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "y ＝ 8/x で、1 ≦ x ≦ 4 のとき、y の変域は？", display: "2 ≦ y ≦ □", answer: 8 },
+                                        { question: "y ＝ 10/x で、x ＝ 2 のときの y の値はいくつ？", display: "代入", answer: 5 },
+                                        { question: "反比例 y ＝ a/x で、x が 2倍、3倍になると y はどうなる？", display: "変化のきまり", answer: "1/2倍, 1/3倍になる", options: ["1/2倍, 1/3倍になる", "2倍, 3倍になる"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                        {
+                            title: "1. ヒストグラム（柱状グラフ）",
+                            subUnits: [
+                                {
+                                    title: "(1) データの分布を見る",
+                                    content: `<h4>柱の高さで度数を表そう</h4>
+                                    <div class="point-box">
+                                        横軸に階級、縦軸に度数をとったグラフだよ。データの <b>散らばり（分布）</b> の様子がよくわかるね。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "ヒストグラムの横軸は何を表していますか？", display: "グラフの軸", answer: "階級", options: ["度数", "階級", "名前"] },
+                                        { question: "ヒストグラムの縦軸は何を表していますか？", display: "グラフの軸", answer: "度数", options: ["度数", "階級", "平均"] },
+                                        { question: "ヒストグラムで一番高い柱がある階級を何という？", display: "用語", answer: "最頻値 (の階級)", options: ["最頻値 (の階級)", "中央値", "範囲"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 相対度数（そうたいどすう）と 累積度数",
+                            subUnits: [
+                                {
+                                    title: "(1) 相対度数と 累積（るいせき）度数",
+                                    content: `<h4>割合と 合計を考えよう</h4>
+                                    <div class="point-box">
+                                        ・<b>相対度数</b>：その階級の度数 ÷ 度数の合計。<br>
+                                        ・<b>累積度数</b>：最初の階級から その階級までの 度数の合計。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：合計 20人で 度数が 4人のとき<br>
+                                        相対度数 ＝ 4 ÷ 20 ＝ <b>0.20</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "合計50人で度数が10人のとき、相対度数は？", display: "相対度数をもとめよう", answer: 0.2 },
+                                        { question: "合計25人で度数が5人のとき、相対度数は？", display: "相対度数をもとめよう", answer: 0.2 },
+                                        { question: "相対度数の合計は必ずいくつになりますか？", display: "ルール", answer: 1 },
+                                        { question: "一番上の階級から順番に度数をたしたものを何という？", display: "用語", answer: "累積度数", options: ["累積度数", "相対度数", "平均度数"] },
+                                        { question: "相対度数はデータの何を表していますか？", display: "意味", answer: "割合", options: ["割合", "合計", "個数"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 範囲（はんい）",
+                            subUnits: [
+                                {
+                                    title: "(1) データの散らばりの大きさ",
+                                    content: `<h4>最大値 と 最小値 の差</h4>
+                                    <div class="point-box">
+                                        <b>範囲（レンジ） ＝ 最大の値 － 最小の値</b><br>
+                                        値が大きければ大きいほど、データの散らばりが大きいことがわかるよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "データ [3, 5, 10, 15] の範囲は？", display: "15 － 3", answer: 12 },
+                                        { question: "データ [20, 2, 45, 30] の範囲は？", display: "45 － 2", answer: 43 },
+                                        { question: "範囲を求める式は「最大値 － ？」", display: "公式", answer: "最小値", options: ["最小値", "平均値", "中央値"] },
+                                        { question: "データ [100, 150, 200, 250] の範囲は？", display: "250 － 100", answer: 100 },
+                                        { question: "データ [7, 7, 7, 7] の範囲は？", display: "7 － 7", answer: 0 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 確率（かくりつ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 起こりやすさを数で表す",
+                                    content: `<h4>どっちが 起きやすい？</h4>
+                                    <div class="point-box">
+                                        ・<b>確率 ＝（ある事柄の起こる数）÷（すべての場合の数）</b><br>
+                                        絶対に起こる確率は <b>1</b>、絶対に起こらない確率は <b>0</b> だよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "サイコロを振って「1」が出る確率は？", display: "1 ÷ 6", answer: "1/6", options: ["1/6", "1/2", "1"] },
+                                        { question: "コインを投げて「表」が出る確率は？", display: "1 ÷ 2", answer: "1/2", options: ["1/2", "1/4", "0"] },
+                                        { question: "絶対（ぜったい）に起こる確率を数で言うと？", display: "数値", answer: 1 },
+                                        { question: "1から10のカードから偶数を引く確率は？", display: "5 ÷ 10", answer: "1/2", options: ["1/2", "5/10", "2/5"] },
+                                        { question: "確率は必ず 0 から いくつの間の数になりますか？", display: "範囲", answer: 1 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
                 ]
             },
             j2: {
