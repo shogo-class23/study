@@ -7096,24 +7096,36 @@ const studyData = {
                                 }
                             ]
                         },
-                        {
-                            title: "4. 集合（しゅうごう）",
-                            subUnits: [
-                                {
-                                    title: "(1) 重なりを考えよう",
-                                    content: `<h4>ベン図 で整理</h4>
-                                    <div class="point-box">
-                                        ・<b>和集合 (A ∪ B)</b>：A または B。<br>
-                                        ・<b>共通部分 (A ∩ B)</b>：A かつ B。
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "A(10人), B(8人)で共通が3人のとき、AまたはBの合計は？", display: "10 + 8 - 3", answer: 15 },
-                                        { question: "「AであってBでない」人を求める式は？", display: "引き算", answer: "A - 共通部分", options: ["A - 共通部分", "A + B", "B - A"] },
-                                        { question: "集合を円で囲って表した図を何という？", display: "用語", answer: "ベン図", options: ["ベン図", "樹形図", "線分図"] }
-                                    ]
-                                }
-                            ]
-                        },
+                                                        {
+                                                            title: "4. 集合（しゅうごう）",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 重なりを考えよう",
+                                                                    content: `<h4>ベン図 で整理しよう</h4>
+                                                                    <div class="data-demo">
+                                                                        <svg width="200" height="120" style="margin:0 auto; display:block;">
+                                                                            <!-- 円A -->
+                                                                            <circle cx="70" cy="60" r="45" fill="rgba(52, 152, 219, 0.3)" stroke="#3498db" stroke-width="2" />
+                                                                            <!-- 円B -->
+                                                                            <circle cx="130" cy="60" r="45" fill="rgba(231, 76, 60, 0.3)" stroke="#e74c3c" stroke-width="2" />
+                                                                            <text x="40" y="65" font-size="14" font-weight="bold" fill="#2980b9">A</text>
+                                                                            <text x="150" y="65" font-size="14" font-weight="bold" fill="#c0392b">B</text>
+                                                                        </svg>
+                                                                        <p style="font-size:11px; text-align:center;">重なっている部分が <b>「A かつ B」</b> だよ</p>
+                                                                    </div>
+                                                                    <div class="point-box">
+                                                                        ・<b>和集合 (A ∪ B)</b>：A または B（どちらかに入っていればOK）。<br>
+                                                                        ・<b>共通部分 (A ∩ B)</b>：A かつ B（両方に入っている）。
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "A(10人), B(8人)で共通が3人のとき、AまたはBの合計は？", display: "10 + 8 - 3", answer: 15 },
+                                                                        { question: "「AであってBでない」人を求める式は？", display: "引き算", answer: "A - 共通部分", options: ["A - 共通部分", "A + B", "B - A"] },
+                                                                        { question: "集合を円で囲って表した図を何という？", display: "用語", answer: "ベン図", options: ["ベン図", "樹形図", "線分図"] }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                        
                         {
                             title: "5. 推論 と 論証",
                             subUnits: [
