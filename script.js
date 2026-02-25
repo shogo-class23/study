@@ -6062,7 +6062,112 @@ const studyData = {
             j2: {
                 name: "中2",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 連立方程式", subUnits: [{ title: "(1) 2つの文字の方程式", content: "2つの未知数を求めよう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 文字式の 計算",
+                            subUnits: [
+                                {
+                                    title: "(1) 加法（たし算）",
+                                    content: `<h4>同類項をまとめよう</h4>
+                                    <div class="point-box">
+                                        文字と 次数が同じ項を たし算するときは、係数を たすだけ！
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "3x ＋ 5x は？", display: "係数をたそう", answer: "8x" },
+                                        { question: "2a ＋ 4b ＋ 3a は？", display: "同じ文字どうし", answer: "5a + 4b" },
+                                        { question: "x² ＋ 2x² は？", display: "次数が同じ", answer: "3x^2" },
+                                        { question: "0.5y ＋ 1.2y は？", display: "小数の係数", answer: "1.7y" },
+                                        { question: "a ＋ a は？", display: "1を忘れずに", answer: "2a" }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 減法（ひき算）",
+                                    content: `<h4>カッコをはずすときは 符号に注意</h4>
+                                    <div class="point-box">
+                                        カッコの前の － は、中のすべての項の 符号を 逆に変えよう。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "7a － 2a は？", display: "ひき算", answer: "5a" },
+                                        { question: "3x － (x － 2y) は？", display: "符号に注意", answer: "2x + 2y" },
+                                        { question: "5b － (－3b) は？", display: "マイナス ✕ マイナス", answer: "8b" },
+                                        { question: "(4a － 2b) － (a ＋ 3b) は？", display: "カッコをはずす", answer: "3a - 5b" },
+                                        { question: "x － 5x は？", display: "マイナスになるよ", answer: "-4x" }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 乗法（かけ算）",
+                                    content: `<h4>係数は数字、文字は累乗</h4>
+                                    <div class="point-box">
+                                        数字どうしをかけ、同じ文字は 指数を使ってまとめよう。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2a ✕ 4b は？", display: "かけ算", answer: "8ab" },
+                                        { question: "(－3x) ✕ 5x は？", display: "累乗に注意", answer: "-15x^2" },
+                                        { question: "2a² ✕ 3a は？", display: "aが3つになる", answer: "6a^3" },
+                                        { question: "(－2y)² はいくつ？", display: "(-2y) ✕ (-2y)", answer: "4y^2" },
+                                        { question: "x ✕ y ✕ x は？", display: "文字をまとめよう", answer: "x^2y" }
+                                    ]
+                                },
+                                {
+                                    title: "(4) 除法（わり算）",
+                                    content: `<h4>分数にして 約分しよう</h4>
+                                    <div class="point-box">
+                                        わる数を 分母に。文字も 数字も 約分して スッキリ！
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "12ab ÷ 3a は？", display: "約分しよう", answer: "4b" },
+                                        { question: "8x² ÷ 2x は？", display: "xが1つのこる", answer: "4x" },
+                                        { question: "－15xy ÷ (－5y) は？", display: "符号に注意", answer: "3x" },
+                                        { question: "6a³ ÷ 2a は？", display: "指数をひく", answer: "3a^2" },
+                                        { question: "10x²y ÷ 5xy は？", display: "文字を消去", answer: "2x" }
+                                    ]
+                                },
+                                {
+                                    title: "(5) 式の変形",
+                                    content: `<h4>等式の変形</h4>
+                                    <div class="point-box">
+                                        y ＝ ... のように、ある文字について 解くことだよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x ＋ y ＝ 5 を y について解くと？", display: "y ＝ ？", answer: "y = 5 - x" },
+                                        { question: "2x ＝ y を x について解くと？", display: "x ＝ ？", answer: "x = y/2" },
+                                        { question: "3x ＋ y ＝ 10 を y について解くと？", display: "y ＝ ？", answer: "y = 10 - 3x" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 連立二元一次方程式",
+                            subUnits: [
+                                {
+                                    title: "(1) 加減法（かげんほう）",
+                                    content: `<h4>文字を 消去しよう</h4>
+                                    <div class="point-box">
+                                        たしたり ひいたりして 1つの文字を 消す方法だよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x＋y＝7, x－y＝3 のとき、xは？", display: "①＋②で 2x=10", answer: 5 },
+                                        { question: "2x＋y＝8, x＋y＝5 のとき、xは？", display: "①－②", answer: 3 },
+                                        { question: "x＋2y＝10, x＋y＝6 のとき、yは？", display: "①－②", answer: 4 },
+                                        { question: "3x＋y＝11, x－y＝1 のとき、xは？", display: "①＋②で 4x=12", answer: 3 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 代入法（だいにゅうほう）",
+                                    content: `<h4>式を そのまま入れかえる</h4>
+                                    <div class="point-box">
+                                        y ＝ ... の式を、もう片方の y に 代入する方法だよ。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x＋y＝9, y＝2x のとき、xは？", display: "x＋(2x)＝9", answer: 3 },
+                                        { question: "2x＋y＝12, y＝x＋3 のとき、xは？", display: "2x＋(x+3)＝12", answer: 3 },
+                                        { question: "x＝y＋1, 2x＋y＝11 のとき、yは？", display: "2(y+1)＋y＝11", answer: 3 },
+                                        { question: "y＝3x, x＋y＝12 のとき、yは？", display: "代入して計算", answer: 9 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 図形の性質", subUnits: [{ title: "(1) 三角形の合同", content: "図形が重なることを証明しよう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 一次関数", subUnits: [{ title: "(1) 直線の式", content: "グラフを式で表そう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 確率", subUnits: [{ title: "(1) 起こりやすさ", content: "確率を計算しよう。" }] }] }
