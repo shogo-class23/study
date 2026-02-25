@@ -7207,7 +7207,7 @@ const studyData = {
                                     title: "3. 光の 性質",
                                     subUnits: [
                                         {
-                                            title: "(ア) 光의 進み方",
+                                            title: "(ア) 光の 進み方",
                                             content: `<h4>日光は まっすぐ進む</h4><div class="point-box">・日光は<b>直進（まっすぐ進む）</b>します。<br>・鏡を使うと光を<b>反射</b>させることができます。<br>・虫眼鏡を使うと日光を<b>一点に集める</b>ことができます。</div>`,
                                             quizzes: [
                                                 { question: "鏡に当たった日光がはね返ることを何という？", display: "用語", answer: "反射", options: ["反射", "屈折", "直進"] },
