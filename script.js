@@ -5041,7 +5041,91 @@ const studyData = {
             e6: {
                 name: "小6",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 分数の計算", subUnits: [{ title: "(1) 分数のかけ算", content: "分数の計算をマスターしよう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 分数（ぶんすう）のかけ算",
+                            subUnits: [
+                                {
+                                    title: "(1) 分数 ✕ 整数 / 分数 ✕ 分数",
+                                    content: `<h4>分子どうし、分母どうしを かけよう</h4>
+                                    <div class="point-box">
+                                        ・<b>分数 ✕ 整数</b>：分子に 整数を かける。<br>
+                                        ・<b>分数 ✕ 分数</b>：分母は 分母どうし、分子は 分子どうしを かける。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>2/3 ✕ 4/5 ＝ (2✕4) / (3✕5) ＝ <b>8/15</b></p>
+                                        <p>計算の 途中で <b>約分（やくぶん）</b> できるときは、先に しておくと らくになるよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1/3 ✕ 2 は いくつかな？", display: "1/3 ✕ 2", answer: "2/3" },
+                                        { question: "2/5 ✕ 3/4 は いくつ？ (約分に注意！)", display: "2/5 ✕ 3/4", answer: "3/10", options: ["3/10", "6/20", "5/9"] },
+                                        { question: "3/8 ✕ 4 は いくつかな？", display: "3/8 ✕ 4", answer: "3/2 (1 1/2)", options: ["3/2", "12/8", "3/4"] },
+                                        { question: "5/6 ✕ 3/10 は いくつ？", display: "5/6 ✕ 3/10", answer: "1/4", options: ["1/4", "15/60", "1/2"] },
+                                        { question: "2/7 ✕ 1/3 は いくつ？", display: "2/7 ✕ 1/3", answer: "2/21" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 分数（ぶんすう）のわり算",
+                            subUnits: [
+                                {
+                                    title: "(1) ひっくり返して かけよう",
+                                    content: `<h4>逆数（ぎゃくすう）を つかおう</h4>
+                                    <div class="point-box">
+                                        分数の わり算は、わる数の <b>分子と 分母を ひっくり返して（逆数にして）</b> かければいいんだよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>2/3 ÷ 4/5 ＝ 2/3 ✕ <b>5/4</b> ＝ 10/12 ＝ <b>5/6</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2/3 ÷ 2 は いくつかな？ (2/3 ✕ 1/2)", display: "2/3 ÷ 2", answer: "1/3" },
+                                        { question: "3/4 ÷ 1/2 は いくつ？ (3/4 ✕ 2/1)", display: "3/4 ÷ 1/2", answer: "3/2 (1 1/2)", options: ["3/2", "3/8", "2/3"] },
+                                        { question: "5/8 ÷ 5/6 は いくつ？", display: "5/8 ÷ 5/6", answer: "3/4", options: ["3/4", "30/40", "25/48"] },
+                                        { question: "1/2 ÷ 1/3 は いくつ？", display: "1/2 ÷ 1/3", answer: "3/2 (1 1/2)" },
+                                        { question: "わり算をするとき、わる数は どうする？", display: "わりのルール", answer: "ひっくり返してかける", options: ["ひっくり返してかける", "そのままかける", "分子だけかける"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 分数でも成り立つ性質",
+                            subUnits: [
+                                {
+                                    title: "(1) 計算の きまり",
+                                    content: `<h4>ルールは 整数と同じ</h4>
+                                    <div class="point-box">
+                                        分数になっても、交換（こうかん）法則や 分配（ぶんぱい）法則は 成り立つよ。<br>
+                                        ・(a + b) ✕ c ＝ a ✕ c + b ✕ c
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(1/2 + 1/3) ✕ 6 ＝ 1/2 ✕ 6 + 1/3 ✕ 6 ＝ 3 + 2 ＝ ？", display: "計算の工夫", answer: 5 },
+                                        { question: "2/3 ✕ 3/4 と 3/4 ✕ 2/3 の答えは同じ？", display: "入れかえ", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "分数の計算でも分配法則は使えますか？", display: "きまり", answer: "はい", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. □や△を使った式（分数）",
+                            subUnits: [
+                                {
+                                    title: "(1) 分数の 逆算（ぎゃくさん）",
+                                    content: `<h4>□を もとめよう</h4>
+                                    <div class="point-box">
+                                        分数の 式でも □ を使って 表せるよ。逆の計算で □ を出そう。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "□ ✕ 1/3 ＝ 2/3 のとき、□は？", display: "2/3 ÷ 1/3", answer: 2 },
+                                        { question: "□ ÷ 1/2 ＝ 3/4 のとき、□は？", display: "3/4 ✕ 1/2", answer: "3/8" },
+                                        { question: "□ ＋ 1/4 ＝ 3/4 のとき、□は？", display: "3/4 － 1/4", answer: "1/2", options: ["1/2", "2/4", "1"] },
+                                        { question: "1 － □ ＝ 1/3 のとき、□は？", display: "1 － 1/3", answer: "2/3" },
+                                        { question: "□ ✕ 2/5 ＝ 4/5 のとき、□は？", display: "4/5 ÷ 2/5", answer: 2 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 対称な図形", subUnits: [{ title: "(1) 線対称・点対称", content: "図形の重なりを調べよう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比", subUnits: [{ title: "(1) 比の等しさ", content: "比の値を求めよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分布", subUnits: [{ title: "(1) ドットプロット", content: "データの散らばりを見よう。" }] }] }
