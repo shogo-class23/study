@@ -4341,7 +4341,230 @@ const studyData = {
             e5: {
                 name: "小5",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 小数の計算", subUnits: [{ title: "(1) 小数のかけ算", content: "小数点に注意しよう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 偶数・奇数、倍数・約数",
+                            subUnits: [
+                                {
+                                    title: "(1) 偶数（ぐうすう）と 奇数（きすう）",
+                                    content: `<h4>2で われるかな？</h4>
+                                    <div class="point-box">
+                                        ・<b>偶数</b>：2で わり切れる整数（0, 2, 4, 6...）<br>
+                                                　　※ 0 も 偶数に ふくめるよ。<br>
+                                        ・<b>奇数</b>：2で わり切れない整数（1, 3, 5, 7...）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「15」は 偶数・奇数 どっちかな？", display: "15", answer: "奇数", options: ["偶数", "奇数"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 倍数（ばいすう）と 公倍数",
+                                    content: `<h4>どんどん ふえる数</h4>
+                                    <div class="point-box">
+                                        ・<b>倍数</b>：ある数に 1, 2, 3... を かけてできる数。<br>
+                                        ・<b>公倍数</b>：2つ以上の数に 共通する 倍数。<br>
+                                        ・<b>最小公倍数</b>：公倍数の中で いちばん小さい数。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "3 と 4 の 最小公倍数は？", display: "3, 4", answer: 12 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 約数（やくすう）と 公約数",
+                                    content: `<h4>わり切れる数</h4>
+                                    <div class="point-box">
+                                        ・<b>約数</b>：ある数を わり切ることができる数。<br>
+                                        ・<b>公約数</b>：2つ以上の数に 共通する 約数。<br>
+                                        ・<b>最大公約数</b>：公約数の中で いちばん大きい数。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "12 と 18 の 最大公約数は？", display: "12, 18", answer: 6 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 小数のしくみ（10倍、1/10倍）",
+                            subUnits: [
+                                {
+                                    title: "(1) 位（くらい）の移動",
+                                    content: `<h4>小数点が 動くよ</h4>
+                                    <div class="point-box">
+                                        ・10倍, 100倍すると、小数点は <b>右</b> に移動する。<br>
+                                        ・1/10, 1/100にすると、小数点は <b>左</b> に移動する。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>例：1.23<br>
+                                        ・10倍 ＝ <b>12.3</b><br>
+                                        ・1/10 ＝ <b>0.123</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2.5 を 100倍すると いくらになる？", display: "2.5 ✕ 100", answer: 250 },
+                                        { question: "45 を 1/100 にすると いくらになる？", display: "45 ÷ 100", answer: 0.45 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 小数のかけ算",
+                            subUnits: [
+                                {
+                                    title: "(1) 小数 ✕ 小数",
+                                    content: `<h4>小数点の位置が ポイント</h4>
+                                    <div class="point-box">
+                                        ① 小数点がないものとして 計算する。<br>
+                                        ② かける数と かけられる数の 小数位の合計ぶん、小数点を打つ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>0.3 ✕ 0.2 ＝ <b>0.06</b><br>
+                                        （1位 ＋ 1位 ＝ 2位）</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.4 ✕ 0.8 は？", display: "0.4 ✕ 0.8", answer: 0.32 },
+                                        { question: "1.2 ✕ 0.3 は？", display: "1.2 ✕ 0.3", answer: 0.36 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 小数のわり算",
+                            subUnits: [
+                                {
+                                    title: "(1) 小数でわる計算",
+                                    content: `<h4>整数にしてから わろう</h4>
+                                    <div class="point-box">
+                                        わる数が 整数になるように、小数点を <b>右</b> に動かして計算するよ。<br>
+                                        （わられる数も 同じだけ動かす！）
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>1.2 ÷ 0.3<br>
+                                        ↓ 両方を10倍<br>
+                                        12 ÷ 3 ＝ <b>4</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.8 ÷ 0.2 は？", display: "0.8 ÷ 0.2", answer: 4 },
+                                        { question: "1.5 ÷ 0.5 は？", display: "1.5 ÷ 0.5", answer: 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "5. 小数でも成り立つ性質",
+                            subUnits: [
+                                {
+                                    title: "(1) 計算のきまり",
+                                    content: `<h4>小数になっても 同じだよ</h4>
+                                    <div class="point-box">
+                                        ・ア ＋ イ ＝ イ ＋ ア<br>
+                                        ・（ア ＋ イ） ✕ ウ ＝ ア ✕ ウ ＋ イ ✕ ウ
+                                    </div>
+                                    <p>これらを使うと、計算が らくになることがあるよ！</p>`,
+                                    quizzes: [
+                                        { question: "3.2 ✕ 4 ＋ 6.8 ✕ 4 ＝ （3.2＋6.8）✕ 4 ＝ ？", display: "10 ✕ 4", answer: 40 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "6. 分数・小数・整数の関係",
+                            subUnits: [
+                                {
+                                    title: "(1) 書きかえの ルール",
+                                    content: `<h4>なかま分けを しよう</h4>
+                                    <div class="point-box">
+                                        ・<b>整数 ＝ 分数</b>（例：2 ＝ 2/1）<br>
+                                        ・<b>小数 ＝ 分数</b>（例：0.3 ＝ 3/10）<br>
+                                        ・<b>分数 ＝ 小数</b>（分子 ÷ 分母 で出せるよ！）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "0.7 を 分数で表すと？", display: "0.7", answer: "7/10", options: ["7/10", "1/7", "7/100"] },
+                                        { question: "1/4 を 小数で表すと？", display: "1 ÷ 4", answer: 0.25 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "7. わり算と分数",
+                            subUnits: [
+                                {
+                                    title: "(1) わり算を 分数で表す",
+                                    content: `<h4>商（しょう）を 分数に</h4>
+                                    <div class="point-box">
+                                        <b>ア ÷ イ ＝ ア / イ</b><br>
+                                        （わられる数 が 分子、わる数 が 分母になるよ）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2 ÷ 3 を 分数で表すと？", display: "2 ÷ 3", answer: "2/3", options: ["2/3", "3/2"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "8. 大きさの等しい分数",
+                            subUnits: [
+                                {
+                                    title: "(1) 約分（やくぶん）と 通分",
+                                    content: `<h4>見た目は ちがうけど 同じ大きさ</h4>
+                                    <div class="point-box">
+                                        ・<b>約分</b>：分子と分母を 同じ数でわって シンプルにすること。<br>
+                                        ・<b>通分</b>：分母を 最小公倍数に そろえること。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "4/8 を 約分して いちばん小さくすると？", display: "4/8", answer: "1/2", options: ["1/2", "2/4", "1/4"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "9. 異分母の たし算",
+                            subUnits: [
+                                {
+                                    title: "(1) 分母が ちがう たし算",
+                                    content: `<h4>まず 通分しよう</h4>
+                                    <div class="point-box">
+                                        ① 分母を 通分して そろえる。<br>
+                                        ② 分子だけを たす。<br>
+                                        ③ 約分できるときは 約分する。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1/2 ＋ 1/3 は？ (通分して答えよう)", display: "3/6 ＋ 2/6", answer: "5/6", options: ["5/6", "2/5", "1/5"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "10. 異分母の ひき算",
+                            subUnits: [
+                                {
+                                    title: "(1) 分母が ちがう ひき算",
+                                    content: `<h4>ひくときも 通分！</h4>
+                                    <div class="point-box">
+                                        ① 分母を 通分して そろえる。<br>
+                                        ② 分子を ひく。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "1/2 － 1/4 は？", display: "2/4 － 1/4", answer: "1/4", options: ["1/4", "1/2", "1/6"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "11. □や△を使った式（小数の計算）",
+                            subUnits: [
+                                {
+                                    title: "(1) □をもとめる式",
+                                    content: `<h4>わからない数を □におく</h4>
+                                    <div class="point-box">
+                                        小数の計算でも、わからない数を □（しかく）とおいて 式をつくることができるよ。<br>
+                                        逆の計算（ぎゃくさん）で □を もとめよう。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "□ ✕ 0.5 ＝ 4 のとき、□は？", display: "4 ÷ 0.5", answer: 8 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 体積", subUnits: [{ title: "(1) 直方体の体積", content: "体積を求めよう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
                         {
