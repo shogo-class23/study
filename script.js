@@ -315,7 +315,8 @@ const studyData = {
                                         <p>みかんは <b>5こ</b> だね！</p>`,
                                         quizzes: [
                                             { question: "あかい おはなが 4ほん あります. きいろい おはなは、あかいのより 2ほん おおいです。きいろいのは なんぼん？", display: "🌹🌹🌹🌹 ＋ 🌻🌻", answer: 6 },
-                                            { question: "クッキーが 5こ あります。ケーキは、キュッキーより 4こ おおいです. ケーキは なんこ？", display: "🍪🍪🍪🍪🍪 ＋ 🍰🍰🍰🍰", answer: 9 }
+                                            { question: "クッキーが 5こ あります。ケーキは、キュッキーより 4こ おおいです. ケーキは なんこ？", display: "🍪🍪🍪🍪🍪 ＋ 🍰🍰🍰🍰", answer: 9 },
+                                            { question: "いぬが 2ひき います. ねこは、いぬより 3びき おおいです. ねこは なんびき？", display: "🐶🐶 ＋ 🐱🐱🐱", answer: 5 }
                                         ]
                                     },
                                     {
@@ -331,7 +332,8 @@ const studyData = {
                                         <p>ぜんぶで <b>6ぴき</b> だね！</p>`,
                                         quizzes: [
                                             { question: "りんごが 3こ、みかんが 4こ あります. あわせて なんこ？", display: "🍎🍎🍎 ＋ 🍊🍊🍊🍊", answer: 7 },
-                                            { question: "くるまが 5だい、バスが 3だい あります. あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 }
+                                            { question: "くるまが 5だい、バスが 3だい あります. あわせて なんだい？", display: "🚗🚗🚗🚗🚗 ＋ 🚌🚌🚌", answer: 8 },
+                                            { question: "とりが 1わ、ちょうちょが 6ぴき います. ぜんぶで いくつ？", display: "🐦 ＋ 🦋🦋🦋🦋🦋🦋", answer: 7 }
                                         ]
                                     },
                                     {
@@ -350,7 +352,9 @@ const studyData = {
                                         quizzes: [
                                             { question: "4 ＋ 0 は いくつかな？", display: "4 ＋ 0", answer: 4 },
                                             { question: "0 ＋ 7 は いくつかな？", display: "0 ＋ 7", answer: 7 },
-                                            { question: "0 ＋ 0 は いくつかな？", display: "0 ＋ 0", answer: 0 }
+                                            { question: "0 ＋ 0 は いくつかな？", display: "0 ＋ 0", answer: 0 },
+                                            { question: "10 ＋ 0 は いくつかな？", display: "10 ＋ 0", answer: 10 },
+                                            { question: "0 ＋ 5 は いくつかな？", display: "0 ＋ 5", answer: 5 }
                                         ]
                                     }
                                 ]
@@ -371,7 +375,10 @@ const studyData = {
                                         <p>10のお部屋に 1、1のお部屋に 3を かくだけだね！</p>`,
                                         quizzes: [
                                             { question: "10 ＋ 5 は いくつかな？", display: "10 ＋ 5", answer: 15 },
-                                            { question: "10 ＋ 8 は いくつかな？", display: "10 ＋ 8", answer: 18 }
+                                            { question: "10 ＋ 8 は いくつかな？", display: "10 ＋ 8", answer: 18 },
+                                            { question: "10 ＋ 2 は いくつかな？", display: "10 ＋ 2", answer: 12 },
+                                            { question: "10 ＋ 9 は いくつかな？", display: "10 ＋ 9", answer: 19 },
+                                            { question: "10 ＋ 1 は いくつかな？", display: "10 ＋ 1", answer: 11 }
                                         ]
                                     },
                                     {
@@ -388,7 +395,10 @@ const studyData = {
                                         <p>答えは <b>16</b> だね. くりあがりが ないときは かんたんだよ！</p>`,
                                         quizzes: [
                                             { question: "13 ＋ 2 は いくつかな？", display: "13 ＋ 2", answer: 15 },
-                                            { question: "11 ＋ 7 は いくつかな？", display: "11 ＋ 7", answer: 18 }
+                                            { question: "11 ＋ 7 は いくつかな？", display: "11 ＋ 7", answer: 18 },
+                                            { question: "15 ＋ 4 は いくつかな？", display: "15 ＋ 4", answer: 19 },
+                                            { question: "14 ＋ 5 は いくつかな？", display: "14 ＋ 5", answer: 19 },
+                                            { question: "12 ＋ 6 は いくつかな？", display: "12 ＋ 6", answer: 18 }
                                         ]
                                     },
                                     {
@@ -405,7 +415,10 @@ const studyData = {
                                         <p>10の まとまりが 7つだから、こたえは <b>70</b> だね！</p>`,
                                         quizzes: [
                                             { question: "20 ＋ 30 は いくつかな？", display: "20 ＋ 30", answer: 50 },
-                                            { question: "50 ＋ 40 は いくつかな？", display: "50 ＋ 40", answer: 90 }
+                                            { question: "50 ＋ 40 は いくつかな？", display: "50 ＋ 40", answer: 90 },
+                                            { question: "10 ＋ 60 は いくつかな？", display: "10 ＋ 60", answer: 70 },
+                                            { question: "30 ＋ 30 は いくつかな？", display: "30 ＋ 30", answer: 60 },
+                                            { question: "20 ＋ 70 は いくつかな？", display: "20 ＋ 70", answer: 90 }
                                         ]
                                     },
                                     {
@@ -418,7 +431,10 @@ const studyData = {
                                         <p>10の まとまりが 2つ、バラが 5つで <b>25</b> に なるね！</p>`,
                                         quizzes: [
                                             { question: "30 ＋ 4 は いくつかな？", display: "30 ＋ 4", answer: 34 },
-                                            { question: "70 ＋ 9 は いくつかな？", display: "70 ＋ 9", answer: 79 }
+                                            { question: "70 ＋ 9 は いくつかな？", display: "70 ＋ 9", answer: 79 },
+                                            { question: "50 ＋ 2 は いくつかな？", display: "50 ＋ 2", answer: 52 },
+                                            { question: "10 ＋ 6 は いくつかな？", display: "10 ＋ 6", answer: 16 },
+                                            { question: "80 ＋ 3 は いくつかな？", display: "80 ＋ 3", answer: 83 }
                                         ]
                                     },
                                     {
@@ -3800,168 +3816,170 @@ const studyData = {
                                         { question: "2つの直線が 垂直にまじわるとき、その角度は 何度？", display: "垂直の角度", answer: 90 }
                                     ]
                                 },
-                                {
-                                    title: "(2) 平行（へいこう）",
-                                    content: `<h4>どこまでいっても 交わらない</h4>
-                                    <div class="point-box">
-                                        1つの 直線に 垂直な 2つの直線は、<b>平行</b> であるというよ。<br>
-                                        平行な 直線は、どこまで のばしても 交（まじ）わらないんだ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="display:flex; flex-direction:column; gap:20px; align-items:center; padding:20px;">
-                                            <div style="width:150px; height:3px; background:#3498db;"></div>
-                                            <div style="width:150px; height:3px; background:#3498db;"></div>
-                                        </div>
-                                        <p>平行な 2つの直線の はば（きょり）は、どこでも <b>同じ</b> になっているよ。</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "平行な 2本の線の 角度（はば）の関係は？", display: "平行線の特徴", answer: "どこでも同じ", options: ["だんだん広がる", "どこでも同じ", "いつか交わる"] }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            title: "2. 台形、平行四辺形、ひし形の性質・敷き詰め",
-                            subUnits: [
-                                {
-                                    title: "(1) 台形（だいけい）",
-                                    content: `<h4>一組（ひとくみ）だけ 平行</h4>
-                                    <div class="point-box">
-                                        向（む）かいあった 一組の 辺が <b>平行</b> な 四角形を <b>台形</b> というよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="width:100px; height:50px; background:#ffe58f; clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%); margin:0 auto;"></div>
-                                        <p>上と下の 辺が まっすぐ 平行（へいこう）だね！</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "台形は、何組の辺が 平行かな？", display: "台形の平行な辺", answer: 1 }
-                                    ]
-                                },
-                                {
-                                    title: "(2) 平行四辺形（へいこうしへんけい）",
-                                    content: `<h4>二組（ふたくみ）とも 平行</h4>
-                                    <div class="point-box">
-                                        向かいあった 二組の 辺が どちらも <b>平行</b> な 四角形を <b>平行四辺形</b> というよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="width:100px; height:50px; background:#bae7ff; clip-path:polygon(20% 0, 100% 0, 80% 100%, 0 100%); margin:0 auto;"></div>
-                                        <p><b>【平行四辺形の 特徴（とくちょう）】</b></p>
-                                        <p>・向かいあった 辺の <b>長さ</b> が 同じ。<br>
-                                        ・向かいあった 角の <b>大きさ</b> が 同じ。</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "平行四辺形は、何組の辺が 平行かな？", display: "平行四辺形の平行な辺", answer: 2 }
-                                    ]
-                                },
-                                {
-                                    title: "(3) ひし形（ひしがた）",
-                                    content: `<h4>全部（ぜんぶ）の 辺の長さが 同じ</h4>
-                                    <div class="point-box">
-                                        4つの 辺の <b>長さが すべて同じ</b> 四角形を <b>ひし形</b> というよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="width:60px; height:60px; background:#ffd6e7; clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%); margin:0 auto;"></div>
-                                        <p>ひし形も 向かいあった 辺が 平行だから、平行四辺形の なかまだよ！</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "4つの辺の長さが すべて同じ四角形は？", display: "辺の長さが全部同じ", answer: "ひし形", options: ["台形", "平行四辺形", "ひし形"] }
-                                    ]
-                                },
-                                {
-                                    title: "(4) 対角線（たいかくせん）",
-                                    content: `<h4>図形を つなぐ線</h4>
-                                    <div class="point-box">
-                                        向かいあった 頂点（ちょうてん）を 結（むす）んだ 直線を <b>対角線</b> というよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <p><b>【図形と 対角線の 関係】</b></p>
-                                        <p>・<b>平行四辺形</b>：対角線が 真ん中で 交わる。<br>
-                                        ・<b>ひし形</b>：対角線が <b>垂直（すいちょく）</b> に 交わる！</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "対角線が 垂直（90°）に まじわる 四角形は？", display: "対角線が垂直", answer: "ひし形", options: ["長方形", "平行四辺形", "ひし形"] }
-                                    ]
-                                },
-                                {
-                                    title: "(5) 図形の 敷（し）き詰め",
-                                    content: `<h4>すきまなく ならべよう</h4>
-                                    <div class="point-box">
-                                        同じ 図形を ならべて、すきまなく しきつめることができるよ。<br>
-                                        平行四辺形や ひし形は、きれいに しきつめられるね。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="display:flex; justify-content:center; flex-wrap:wrap; width:150px; margin:0 auto; line-height:0;">
-                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
-                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
-                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
-                                            <div style="width:50px; height:30px; border:1px solid #333; background:#bae7ff; transform:skewX(-20deg);"></div>
-                                        </div>
-                                        <p>かべがみ の もよう みたいだね！</p>
-                                    </div>`
-                                }
-                            ]
-                        },
-                        {
-                            title: "3. 立体（見取り図や展開図など）",
-                            subUnits: [
-                                {
-                                    title: "(1) 直方体（ちょくほうたい）と 立方体（りっぽうたい）",
-                                    content: `<h4>はこの かたち</h4>
-                                    <div class="point-box">
-                                        ・<b>直方体</b>：長方形（または正方形）だけで かこまれた 立体。<br>
-                                        ・<b>立方体</b>：正方形 だけで かこまれた 立体。
-                                    </div>
-                                    <div class="data-demo">
-                                        <p><b>【立体の パーツ】</b></p>
-                                        <p>・<b>面（めん）</b>：6つ<br>
-                                        ・<b>辺（へん）</b>：12本<br>
-                                        ・<b>頂点（ちょうてん）</b>：8こ</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "直方体や 立方体の 面の数は 全部で いくつ？", display: "面の数", answer: 6 },
-                                        { question: "直方体や 立方体の 辺の数は 全部で いくつ？", display: "辺の数", answer: 12 }
-                                    ]
-                                },
-                                {
-                                    title: "(2) 見取（みと）り図",
-                                    content: `<h4>ななめから 見た図</h4>
-                                    <div class="point-box">
-                                        立体の 全体の 形が わかるように かいた図を <b>見取り図</b> というよ。
-                                    </div>
-                                    <div class="box-demo-container">
-                                        <div class="box-3d"></div>
-                                    </div>
-                                    <p>・目に見えない 辺は <b>点線</b> で かくのが ルールだよ！</p>`
-                                },
-                                {
-                                    title: "(3) 展開図（てんかいず）",
-                                    content: `<h4>切りひらいた図</h4>
-                                    <div class="point-box">
-                                        立体を 切りひらいて 平面（へいめん）に した図を <b>展開図</b> というよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="display: flex; justify-content: center; padding: 20px;">
-                                            <div style="display: grid; grid-template-columns: repeat(3, 30px); grid-template-rows: repeat(4, 30px); gap: 0;">
-                                                <!-- Row 1 -->
-                                                <div style="grid-column: 2; border: 1px solid #333;"></div>
-                                                <!-- Row 2 -->
-                                                <div style="grid-row: 2; grid-column: 1; border: 1px solid #333;"></div>
-                                                <div style="grid-row: 2; grid-column: 2; border: 1px solid #333; background: #ffd6e7;"></div>
-                                                <div style="grid-row: 2; grid-column: 3; border: 1px solid #333;"></div>
-                                                <!-- Row 3 -->
-                                                <div style="grid-row: 3; grid-column: 2; border: 1px solid #333;"></div>
-                                                <!-- Row 4 -->
-                                                <div style="grid-row: 4; grid-column: 2; border: 1px solid #333;"></div>
-                                            </div>
-                                        </div>
-                                        <p>組み立てたときに、どの面と どの面が <b>向かいあうか</b> 考えるのが 大事だよ！</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "正六面体（立方体）の 展開図は 全部で 何種類（なんしゅるい）あるかな？", display: "展開図の種類", answer: 11, options: [6, 11, 14] }
-                                    ]
-                                }
-                            ]
-                        },
+                                                                {
+                                                                    title: "(2) 平行（へいこう）",
+                                                                    content: `<h4>どこまでいっても 交わらない</h4>
+                                                                    <div class="point-box">
+                                                                        1つの 直線に 垂直な 2つの直線は、<b>平行</b> であるというよ。<br>
+                                                                        平行な 直線は、どこまで のばしても 交（まじ）わらないんだ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <div style="display:flex; flex-direction:column; gap:20px; align-items:center; padding:20px;">
+                                                                            <div style="width:150px; height:3px; background:#3498db;"></div>
+                                                                            <div style="width:150px; height:3px; background:#3498db;"></div>
+                                                                        </div>
+                                                                        <p>平行な 2つの直線の はば（きょり）は、どこでも <b>同じ</b> になっているよ。</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "平行な 2本の線の 角度（はば）の関係は？", display: "平行線の特徴", answer: "どこでも同じ", options: ["だんだん広がる", "どこでも同じ", "いつか交わる"] },
+                                                                        { question: "1本の直線に垂直な2本の直線は、お互いにどうなっていますか？", display: "垂直と平行", answer: "平行", options: ["垂直", "平行", "交わる"] },
+                                                                        { question: "平行な線同士の間隔（はば）は途中で変わりますか？", display: "平行線のきょり", answer: "変わらない", options: ["広がる", "狭くなる", "変わらない"] }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            title: "2. 台形、平行四辺形、ひし形の性質・敷き詰め",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 台形（だいけい）",
+                                                                    content: `<h4>一組（ひとくみ）だけ 平行</h4>
+                                                                    <div class="point-box">
+                                                                        向（む）かいあった 一組の 辺が <b>平行</b> な 四角形を <b>台形</b> というよ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <div style="width:100px; height:50px; background:#ffe58f; clip-path:polygon(20% 0, 80% 0, 100% 100%, 0 100%); margin:0 auto;"></div>
+                                                                        <p>上と下の 辺が まっすぐ 平行（へいこう）だね！</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "台形は、何組の辺が 平行かな？", display: "台形の平行な辺", answer: 1 },
+                                                                        { question: "一組の向かい合う辺が平行な四角形は何？", display: "四角形の名前", answer: "台形", options: ["台形", "平行四辺形", "ひし形"] },
+                                                                        { question: "台形の「平行な一組の辺」を何と呼ぶ？（上と下の場合）", display: "上底と下底", answer: "上底と下底", options: ["上底と下底", "対角線", "斜辺"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(2) 平行四辺形（へいこうしへんけい）",
+                                                                    content: `<h4>二組（ふたくみ）とも 平行</h4>
+                                                                    <div class="point-box">
+                                                                        向かいあった 二組の 辺が どちらも <b>平行</b> な 四角形を <b>平行四辺形</b> というよ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <div style="width:100px; height:50px; background:#bae7ff; clip-path:polygon(20% 0, 100% 0, 80% 100%, 0 100%); margin:0 auto;"></div>
+                                                                        <p><b>【平行四辺形の 特徴（とくちょう）】</b></p>
+                                                                        <p>・向かいあった 辺の <b>長さ</b> が 同じ。<br>
+                                                                        ・向かいあった 角の <b>大きさ</b> が 同じ。</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "平行四辺形は、何組の辺が 平行かな？", display: "平行四辺形の平行な辺", answer: 2 },
+                                                                        { question: "平行四辺形の向かい合う角の大きさはどうなっていますか？", display: "角の大きさ", answer: "同じ", options: ["同じ", "ちがう", "合わせて90度"] },
+                                                                        { question: "向かい合う2組の辺がどちらも平行な四角形は？", display: "図形の種類", answer: "平行四辺形", options: ["台形", "平行四辺形", "正方形"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(3) ひし形（ひしがた）",
+                                                                    content: `<h4>全部（ぜんぶ）の 辺の長さが 同じ</h4>
+                                                                    <div class="point-box">
+                                                                        4つの 辺の <b>長さが すべて同じ</b> 四角形を <b>ひし形</b> というよ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <div style="width:60px; height:60px; background:#ffd6e7; clip-path:polygon(50% 0, 100% 50%, 50% 100%, 0 50%); margin:0 auto;"></div>
+                                                                        <p>ひし形も 向かいあった 辺が 平行だから、平行四辺形の なかまだよ！</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "4つの辺の長さが すべて同じ四角形は？", display: "辺の長さが全部同じ", answer: "ひし形", options: ["台形", "平行四辺形", "ひし形"] },
+                                                                        { question: "ひし形の向かい合う辺の関係はどうなっていますか？", display: "辺の関係", answer: "平行", options: ["平行", "垂直", "交わらない"] },
+                                                                        { question: "全ての辺が5cmの四角形（角は直角ではない）は何？", display: "図形の名前", answer: "ひし形", options: ["長方形", "台形", "ひし形"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(4) 対角線（たいかくせん）",
+                                                                    content: `<h4>図形を つなぐ線</h4>
+                                                                    <div class="point-box">
+                                                                        向かいあった 頂点（ちょうてん）を 結（むす）んだ 直線を <b>対角線</b> というよ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <p><b>【図形と 対角線の 関係】</b></p>
+                                                                        <p>・<b>平行四辺形</b>：対角線が 真ん中で 交わる。<br>
+                                                                        ・<b>ひし形</b>：対角線が <b>垂直（すいちょく）</b> に 交わる！</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "対角線が 垂直（90°）に まじわる 四角形は？", display: "対角線が垂直", answer: "ひし形", options: ["長方形", "平行四辺形", "ひし形"] },
+                                                                        { question: "長方形の2本の対角線の長さはどうなっていますか？", display: "対角線の長さ", answer: "同じ", options: ["同じ", "ちがう", "2倍になる"] },
+                                                                        { question: "向かい合う頂点を結んだ線を何と呼ぶ？", display: "線の名前", answer: "対角線", options: ["辺", "対角線", "垂直線"] }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            title: "3. 立体（見取り図や展開図など）",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 直方体（ちょくほうたい）と 立方体（りっぽうたい）",
+                                                                    content: `<h4>はこの かたち</h4>
+                                                                    <div class="point-box">
+                                                                        ・<b>直方体</b>：長方形（または正方形）だけで かこまれた 立体。<br>
+                                                                        ・<b>立方体</b>：正方形 だけで かこまれた 立体。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <p><b>【立体の パーツ】</b></p>
+                                                                        <p>・<b>面（めん）</b>：6つ<br>
+                                                                        ・<b>辺（へん）</b>：12本<br>
+                                                                        ・<b>頂点（ちょうてん）</b>：8こ</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "直方体や 立方体の 面の数は 全部で いくつ？", display: "面の数", answer: 6 },
+                                                                        { question: "直方体や 立方体の 辺の数は 全部で いくつ？", display: "辺の数", answer: 12 },
+                                                                        { question: "直方体や 立方体の 頂点の数は 全部で いくつ？", display: "頂点の数", answer: 8 }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(2) 見取（みと）り図",
+                                                                    content: `<h4>ななめから 見た図</h4>
+                                                                    <div class="point-box">
+                                                                        立体の 全体の 形が わかるように かいた図を <b>見取り図</b> というよ。
+                                                                    </div>
+                                                                    <div class="box-demo-container">
+                                                                        <div class="box-3d"></div>
+                                                                    </div>
+                                                                    <p>・目に見えない 辺は <b>点線</b> で かくのが ルールだよ！</p>`,
+                                                                    quizzes: [
+                                                                        { question: "見取り図で、実際には見えない辺は何線でかきますか？", display: "線の種類", answer: "点線", options: ["太線", "点線", "赤線"] },
+                                                                        { question: "見取り図は何のためにかきますか？", display: "図の目的", answer: "全体の形をわかるようにするため", options: ["色を塗るため", "全体の形をわかるようにするため", "重さをはかるため"] },
+                                                                        { question: "見取り図で、平行な辺は図の中でも平行にかきますか？", display: "平行のルール", answer: "はい", options: ["はい", "いいえ"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(3) 展開図（てんかいず）",
+                                                                    content: `<h4>切りひらいた図</h4>
+                                                                    <div class="point-box">
+                                                                        立体を 切りひらいて 平面（へいめん）に した図を <b>展開図</b> というよ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <div style=" flex-direction: column; align-items: center; display: flex; justify-content: center; padding: 20px;">
+                                                                            <div style="display: grid; grid-template-columns: repeat(3, 30px); grid-template-rows: repeat(4, 30px); gap: 0;">
+                                                                                <!-- Row 1 -->
+                                                                                <div style="grid-column: 2; border: 1px solid #333;"></div>
+                                                                                <!-- Row 2 -->
+                                                                                <div style="grid-row: 2; grid-column: 1; border: 1px solid #333;"></div>
+                                                                                <div style="grid-row: 2; grid-column: 2; border: 1px solid #333; background: #ffd6e7;"></div>
+                                                                                <div style="grid-row: 2; grid-column: 3; border: 1px solid #333;"></div>
+                                                                                <!-- Row 3 -->
+                                                                                <div style="grid-row: 3; grid-column: 2; border: 1px solid #333;"></div>
+                                                                                <!-- Row 4 -->
+                                                                                <div style="grid-row: 4; grid-column: 2; border: 1px solid #333;"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p>組み立てたときに、どの面と どの面が <b>向かいあうか</b> 考えるのが 大事だよ！</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "正六面体（立方体）の 展開図は 全部で 何種類（なんしゅるい）あるかな？", display: "展開図の種類", answer: 11, options: [6, 11, 14] },
+                                                                        { question: "立方体の展開図を組み立てた時、隣り合う面同士は何度で交わりますか？", display: "面の角度", answer: 90, options: [45, 90, 180] },
+                                                                        { question: "展開図を組み立てるとどんな形になりますか？", display: "組み立て後", answer: "立体", options: ["平面", "立体", "線"] }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                ,
                         {
                             title: "4. 位置（いち）",
                             subUnits: [
@@ -4104,93 +4122,103 @@ const studyData = {
                                     <div class="data-demo">
                                         <p>面積の 単位は、<b>㎠</b>（平方センチメートル）、<b>㎡</b>（平方メートル）、<b>㎢</b>（平方キロメートル）を使うよ。</p>
                                     </div>`,
-                                    quizzes: [
-                                        { question: "縦 5cm、横 8cm の長方形の面積は？", display: "5cm ✕ 8cm", answer: 40 },
-                                        { question: "一辺が 6cm の正方形の面積は？", display: "6cm ✕ 6cm", answer: 36 }
-                                    ]
-                                },
-                                {
-                                    title: "(2) 複雑（ふくざつ）な図形の面積",
-                                    content: `<h4>くふうして 計算しよう</h4>
-                                    <div class="point-box">
-                                        L字型のような 複雑な図形は、次の 3つの考え方で もとめることができるよ！
-                                    </div>
-                                    <div class="data-demo" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
-                                                                                                                        <!-- パターン1: たてにわける -->
-                                                                                                                        <div style="text-align:center; width:120px;">
-                                                                                                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
-                                                                                                                                <!-- 左の長方形(40x80): 上・左・下を黒 -->
-                                                                                                                                <div style="width:40px; height:80px; position:absolute; left:0; top:0; border:2px solid #333; border-right:none;"></div>
-                                                                                                                                <!-- 右の長方形(40x40): 上・右・下を黒 -->
-                                                                                                                                <div style="width:40px; height:40px; position:absolute; left:40px; top:40px; border:2px solid #333; border-left:none;"></div>
-                                                                                                                                <!-- L字の外郭の「段差」の垂直線（黒） -->
-                                                                                                                                <div style="width:2px; height:40px; background:#333; position:absolute; left:40px; top:0;"></div>
-                                                                                                                                <!-- 境界線（赤点線） -->
-                                                                                                                                <div style="width:0; height:40px; border-left:2px dashed red; position:absolute; left:40px; top:40px;"></div>
-                                                                                                                            </div>
-                                                                                                                            <p style="font-size:12px;">①たてに<br>わけてたす</p>
-                                                                                                                        </div>
-                                                                                                                        <!-- パターン2: よこにわける -->
-                                                                                                                        <div style="text-align:center; width:120px;">
-                                                                                                                            <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
-                                                                                                                                <!-- 上の長方形(40x40): 上・左・右を黒 -->
-                                                                                                                                <div style="width:40px; height:40px; position:absolute; left:0; top:0; border:2px solid #333; border-bottom:none;"></div>
-                                                                                                                                <!-- 下の長方形(80x40): 左・右・下を黒 -->
-                                                                                                                                <div style="width:80px; height:40px; position:absolute; left:0; top:40px; border:2px solid #333; border-top:none;"></div>
-                                                                                                                                <!-- L字の外郭の「段差」の水平線（黒） -->
-                                                                                                                                <div style="width:40px; height:2px; background:#333; position:absolute; left:40px; top:40px;"></div>
-                                                                                                                                <!-- 境界線（赤点線） -->
-                                                                                                                                <div style="width:40px; height:0; border-top:2px dashed red; position:absolute; left:0; top:40px;"></div>
-                                                                                                                            </div>
-                                                                                                                            <p style="font-size:12px;">②よこに<br>わけてたす</p>
-                                                                                                                        </div>
-                                                                                                                                                                                                        <!-- パターン3: 大きい四角 － 小さい四角 -->
-                                                                                                                                                                                                        <div style="text-align:center; width:220px;">
-                                                                                                                                                                                                            <div style="display:flex; align-items:center; justify-content:center; height:110px; margin-bottom:10px; gap:15px;">
-                                                                                                                                                                                                                <!-- 大きい四角 -->
-                                                                                                                                                                                                                <div style="display:flex; flex-direction:column; align-items:center;">
-                                                                                                                                                                                                                    <div style="width:80px; height:80px; border:2px solid #333; background:#f9f9f9;"></div>
-                                                                                                                                                                                                                    <span style="font-size:11px; margin-top:5px;">全体</span>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                <div style="font-size:28px; font-weight:bold; color:#333; margin-top:-20px;">－</div>
-                                                                                                                                                                                                                <!-- 小さい四角（右上に対応する位置に配置） -->
-                                                                                                                                                                                                                <div style="display:flex; flex-direction:column; align-items:center; align-self: flex-start; margin-top:5px;">
-                                                                                                                                                                                                                    <div style="width:40px; height:40px; border:2px dashed red; background:rgba(255,0,0,0.05);"></div>
-                                                                                                                                                                                                                    <span style="font-size:11px; margin-top:5px; color:red; white-space:nowrap;">欠けた部分</span>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                            <p style="font-size:12px; margin-top:5px;">③大きい四角 － 小さい四角</p>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                        
-                                    <p style="margin-top:15px;">どの方法を使っても 答えは同じになるよ。自分が計算しやすい方法を見つけよう！</p>`,
-                                    quizzes: [
-                                        { question: "縦3cm・横4cmの長方形と、一辺2cmの正方形をあわせた図形の面積は？", display: "(3x4) + (2x2)", answer: 16 },
-                                        { question: "一辺が6cmの正方形から、縦2cm・横3cmの長方形を切り取った面積は？", display: "(6x6) - (2x3)", answer: 30 }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            title: "8. 周（まわ）りの長さ",
-                            subUnits: [
-                                {
-                                    title: "(1) 周りの長さの もとめ方",
-                                    content: `<h4>すべての 辺を たそう</h4>
-                                    <div class="point-box">
-                                        図形の <b>周りの長さ</b> とは、その図形を かこんでいる 線の 長さの 合計のことだよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <p><b>【長方形の ばあい】</b></p>
-                                        <p>（縦 ＋ 横） ✕ 2 ＝ 周りの長さ</p>
-                                        <p><b>【正方形の ばあい】</b></p>
-                                        <p>一辺 ✕ 4 ＝ 周りの長さ</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "縦 3cm、横 7cm の長方形の 周りの長さは？", display: "(3+7) ✕ 2", answer: 20 },
-                                        { question: "一辺が 5cm の正方形の 周りの長さは？", display: "5 ✕ 4", answer: 20 }
-                                    ]
-                                },
+                                                                        quizzes: [
+                                                                            { question: "縦 5cm、横 8cm の長方形の面積は？", display: "5cm ✕ 8cm", answer: 40 },
+                                                                            { question: "一辺が 6cm の正方形の面積は？", display: "6cm ✕ 6cm", answer: 36 },
+                                                                            { question: "縦 10m、横 4m の長方形の面積は？", display: "10m ✕ 4m", answer: 40 },
+                                                                            { question: "一辺が 9cm の正方形の面積は？", display: "9cm ✕ 9cm", answer: 81 },
+                                                                            { question: "縦 2km、横 3km の長方形の面積は？", display: "2km ✕ 3km", answer: 6 }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        title: "(2) 複雑（ふくざつ）な図形の面積",
+                                                                        content: `<h4>くふうして 計算しよう</h4>
+                                                                        <div class="point-box">
+                                                                            L字型のような 複雑な図形は、次の 3つの考え方で もとめることができるよ！
+                                                                        </div>
+                                                                        <div class="data-demo" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+                                                                                                                                                            <!-- パターン1: たてにわける -->
+                                                                                                                                                            <div style="text-align:center; width:120px;">
+                                                                                                                                                                <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                                                                                                                                    <!-- 左の長方形(40x80): 上・左・下を黒 -->
+                                                                                                                                                                    <div style="width:40px; height:80px; position:absolute; left:0; top:0; border:2px solid #333; border-right:none;"></div>
+                                                                                                                                                                    <!-- 右の長方形(40x40): 上・右・下を黒 -->
+                                                                                                                                                                    <div style="width:40px; height:40px; position:absolute; left:40px; top:40px; border:2px solid #333; border-left:none;"></div>
+                                                                                                                                                                    <!-- L字の外郭の「段差」の垂直線（黒） -->
+                                                                                                                                                                    <div style="width:2px; height:40px; background:#333; position:absolute; left:40px; top:0;"></div>
+                                                                                                                                                                    <!-- 境界線（赤点線） -->
+                                                                                                                                                                    <div style="width:0; height:40px; border-left:2px dashed red; position:absolute; left:40px; top:40px;"></div>
+                                                                                                                                                                </div>
+                                                                                                                                                                <p style="font-size:12px;">①たてに<br>わけてたす</p>
+                                                                                                                                                            </div>
+                                                                                                                                                            <!-- パターン2: よこにわける -->
+                                                                                                                                                            <div style="text-align:center; width:120px;">
+                                                                                                                                                                <div style="width:80px; height:80px; position:relative; margin:0 auto 10px;">
+                                                                                                                                                                    <!-- 上の長方形(40x40): 上・左・右を黒 -->
+                                                                                                                                                                    <div style="width:40px; height:40px; position:absolute; left:0; top:0; border:2px solid #333; border-bottom:none;"></div>
+                                                                                                                                                                    <!-- 下の長方形(80x40): 左・右・下を黒 -->
+                                                                                                                                                                    <div style="width:80px; height:40px; position:absolute; left:0; top:40px; border:2px solid #333; border-top:none;"></div>
+                                                                                                                                                                    <!-- L字の外郭の「段差」の水平線（黒） -->
+                                                                                                                                                                    <div style="width:40px; height:2px; background:#333; position:absolute; left:40px; top:40px;"></div>
+                                                                                                                                                                    <!-- 境界線（赤点線） -->
+                                                                                                                                                                    <div style="width:40px; height:0; border-top:2px dashed red; position:absolute; left:0; top:40px;"></div>
+                                                                                                                                                                </div>
+                                                                                                                                                                <p style="font-size:12px;">②よこに<br>わけてたす</p>
+                                                                                                                                                            </div>
+                                                                                                                                                                                                                                            <!-- パターン3: 大きい四角 － 小さい四角 -->
+                                                                                                                                                                                                                                            <div style="text-align:center; width:220px;">
+                                                                                                                                                                                                                                                <div style="display:flex; align-items:center; justify-content:center; height:110px; margin-bottom:10px; gap:15px;">
+                                                                                                                                                                                                                                                    <!-- 大きい四角 -->
+                                                                                                                                                                                                                                                    <div style="display:flex; flex-direction:column; align-items:center;">
+                                                                                                                                                                                                                                                        <div style="width:80px; height:80px; border:2px solid #333; background:#f9f9f9;"></div>
+                                                                                                                                                                                                                                                        <span style="font-size:11px; margin-top:5px;">全体</span>
+                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                    <div style="font-size:28px; font-weight:bold; color:#333; margin-top:-20px;">－</div>
+                                                                                                                                                                                                                                                    <!-- 小さい四角（右上に対応する位置に配置） -->
+                                                                                                                                                                                                                                                    <div style="display:flex; flex-direction:column; align-items:center; align-self: flex-start; margin-top:5px;">
+                                                                                                                                                                                                                                                        <div style="width:40px; height:40px; border:2px dashed red; background:rgba(255,0,0,0.05);"></div>
+                                                                                                                                                                                                                                                        <span style="font-size:11px; margin-top:5px; color:red; white-space:nowrap;">欠けた部分</span>
+                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                <p style="font-size:12px; margin-top:5px;">③大きい四角 － 小さい四角</p>
+                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                            
+                                                                        <p style="margin-top:15px;">どの方法を使っても 答えは同じになるよ。自分が計算しやすい方法を見つけよう！</p>`,
+                                                                        quizzes: [
+                                                                            { question: "縦3cm・横4cmの長方形と、一辺2cmの正方形をあわせた図形の面積は？", display: "(3x4) + (2x2)", answer: 16 },
+                                                                            { question: "一辺が6cmの正方形から、縦2cm・横3cmの長方形を切り取った面積は？", display: "(6x6) - (2x3)", answer: 30 },
+                                                                            { question: "縦5cm・横5cmの正方形に、縦2cm・横2cmの正方形をたした面積は？", display: "25 + 4", answer: 29 },
+                                                                            { question: "縦10cm・横10cmの正方形から、縦5cm・横5cmの正方形をひいた面積は？", display: "100 - 25", answer: 75 },
+                                                                            { question: "縦4cm・横6cmの長方形を2つ合わせた面積は？", display: "(4x6) ✕ 2", answer: 48 }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                title: "8. 周（まわ）りの長さ",
+                                                                subUnits: [
+                                                                    {
+                                                                        title: "(1) 周りの長さの もとめ方",
+                                                                        content: `<h4>すべての 辺を たそう</h4>
+                                                                        <div class="point-box">
+                                                                            図形の <b>周りの長さ</b> とは、その図形を かこんでいる 線の 長さの 合計のことだよ。
+                                                                        </div>
+                                                                        <div class="data-demo">
+                                                                            <p><b>【長方形の ばあい】</b></p>
+                                                                            <p>（縦 ＋ 横） ✕ 2 ＝ 周りの長さ</p>
+                                                                            <p><b>【正方形の ばあい】</b></p>
+                                                                            <p>一辺 ✕ 4 ＝ 周りの長さ</p>
+                                                                        </div>`,
+                                                                        quizzes: [
+                                                                            { question: "縦 3cm、横 7cm の長方形の 周りの長さは？", display: "(3+7) ✕ 2", answer: 20 },
+                                                                            { question: "一辺が 5cm の正方形の 周りの長さは？", display: "5 ✕ 4", answer: 20 },
+                                                                            { question: "縦 10cm、横 2cm の長方形の 周りの長さは？", display: "(10+2) ✕ 2", answer: 24 },
+                                                                            { question: "一辺が 8cm の正方形の 周りの長さは？", display: "8 ✕ 4", answer: 32 },
+                                                                            { question: "縦 4m、横 6m の長方形の 周りの長さは？", display: "(4+6) ✕ 2", answer: 20 }
+                                                                        ]
+                                                                    }
+                                    ,
                                 {
                                     title: "(2) 複雑な図形の 周りの長さ",
                                     content: `<h4>線を いどうさせて 考える</h4>
@@ -4345,109 +4373,125 @@ const studyData = {
                         {
                             title: "1. 偶数・奇数、倍数・約数",
                             subUnits: [
-                                {
-                                    title: "(1) 偶数（ぐうすう）と 奇数（きすう）",
-                                    content: `<h4>2で われるかな？</h4>
-                                    <div class="point-box">
-                                        ・<b>偶数</b>：2で わり切れる整数（0, 2, 4, 6...）<br>
-                                                　　※ 0 も 偶数に ふくめるよ。<br>
-                                        ・<b>奇数</b>：2で わり切れない整数（1, 3, 5, 7...）
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "「15」は 偶数・奇数 どっちかな？", display: "15", answer: "奇数", options: ["偶数", "奇数"] }
-                                    ]
-                                },
-                                {
-                                    title: "(2) 倍数（ばいすう）と 公倍数",
-                                    content: `<h4>どんどん ふえる数</h4>
-                                    <div class="point-box">
-                                        ・<b>倍数</b>：ある数に 1, 2, 3... を かけてできる数。<br>
-                                        ・<b>公倍数</b>：2つ以上の数に 共通する 倍数。<br>
-                                        ・<b>最小公倍数</b>：公倍数の中で いちばん小さい数。
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "3 と 4 の 最小公倍数は？", display: "3, 4", answer: 12 }
-                                    ]
-                                },
-                                {
-                                    title: "(3) 約数（やくすう）と 公約数",
-                                    content: `<h4>わり切れる数</h4>
-                                    <div class="point-box">
-                                        ・<b>約数</b>：ある数を わり切ることができる数。<br>
-                                        ・<b>公約数</b>：2つ以上の数に 共通する 約数。<br>
-                                        ・<b>最大公約数</b>：公約数の中で いちばん大きい数。
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "12 と 18 の 最大公約数は？", display: "12, 18", answer: 6 }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            title: "2. 小数のしくみ（10倍、1/10倍）",
-                            subUnits: [
-                                {
-                                    title: "(1) 位（くらい）の移動",
-                                    content: `<h4>小数点が 動くよ</h4>
-                                    <div class="point-box">
-                                        ・10倍, 100倍すると、小数点は <b>右</b> に移動する。<br>
-                                        ・1/10, 1/100にすると、小数点は <b>左</b> に移動する。
-                                    </div>
-                                    <div class="data-demo">
-                                        <p>例：1.23<br>
-                                        ・10倍 ＝ <b>12.3</b><br>
-                                        ・1/10 ＝ <b>0.123</b></p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "2.5 を 100倍すると いくらになる？", display: "2.5 ✕ 100", answer: 250 },
-                                        { question: "45 を 1/100 にすると いくらになる？", display: "45 ÷ 100", answer: 0.45 }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            title: "3. 小数のかけ算",
-                            subUnits: [
-                                {
-                                    title: "(1) 小数 ✕ 小数",
-                                    content: `<h4>小数点の位置が ポイント</h4>
-                                    <div class="point-box">
-                                        ① 小数点がないものとして 計算する。<br>
-                                        ② かける数と かけられる数の 小数位の合計ぶん、小数点を打つ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <p>0.3 ✕ 0.2 ＝ <b>0.06</b><br>
-                                        （1位 ＋ 1位 ＝ 2位）</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "0.4 ✕ 0.8 は？", display: "0.4 ✕ 0.8", answer: 0.32 },
-                                        { question: "1.2 ✕ 0.3 は？", display: "1.2 ✕ 0.3", answer: 0.36 }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            title: "4. 小数のわり算",
-                            subUnits: [
-                                {
-                                    title: "(1) 小数でわる計算",
-                                    content: `<h4>整数にしてから わろう</h4>
-                                    <div class="point-box">
-                                        わる数が 整数になるように、小数点を <b>右</b> に動かして計算するよ。<br>
-                                        （わられる数も 同じだけ動かす！）
-                                    </div>
-                                    <div class="data-demo">
-                                        <p>1.2 ÷ 0.3<br>
-                                        ↓ 両方を10倍<br>
-                                        12 ÷ 3 ＝ <b>4</b></p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "0.8 ÷ 0.2 は？", display: "0.8 ÷ 0.2", answer: 4 },
-                                        { question: "1.5 ÷ 0.5 は？", display: "1.5 ÷ 0.5", answer: 3 }
-                                    ]
-                                }
-                            ]
-                        },
+                                                                {
+                                                                    title: "(1) 偶数（ぐうすう）と 奇数（きすう）",
+                                                                    content: `<h4>2で われるかな？</h4>
+                                                                    <div class="point-box">
+                                                                        ・<b>偶数</b>：2で わり切れる整数（0, 2, 4, 6...）<br>
+                                                                                　　※ 0 も 偶数に ふくめるよ。<br>
+                                                                        ・<b>奇数</b>：2で わり切れない整数（1, 3, 5, 7...）
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "「15」は 偶数・奇数 どっちかな？", display: "15", answer: "奇数", options: ["偶数", "奇数"] },
+                                                                        { question: "「0」は 偶数・奇数 どっちかな？", display: "0", answer: "偶数", options: ["偶数", "奇数"] },
+                                                                        { question: "「102」は 偶数・奇数 どっちかな？", display: "102", answer: "偶数", options: ["偶数", "奇数"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(2) 倍数（ばいすう）と 公倍数",
+                                                                    content: `<h4>どんどん ふえる数</h4>
+                                                                    <div class="point-box">
+                                                                        ・<b>倍数</b>：ある数に 1, 2, 3... を かけてできる数。<br>
+                                                                        ・<b>公倍数</b>：2つ以上の数に 共通する 倍数。<br>
+                                                                        ・<b>最小公倍数</b>：公倍数の中で いちばん小さい数。
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "3 と 4 の 最小公倍数は？", display: "3, 4", answer: 12 },
+                                                                        { question: "2 と 5 の 最小公倍数は？", display: "2, 5", answer: 10 },
+                                                                        { question: "6 の 倍数を 小さいほうから 3つ言うと？", display: "6の倍数", answer: "6, 12, 18", options: ["6, 12, 18", "1, 2, 3", "6, 8, 10"] }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    title: "(3) 約数（やくすう）と 公約数",
+                                                                    content: `<h4>わり切れる数</h4>
+                                                                    <div class="point-box">
+                                                                        ・<b>約数</b>：ある数を わり切ることができる数。<br>
+                                                                        ・<b>公約数</b>：2つ以上の数に 共通する 約数。<br>
+                                                                        ・<b>最大公約数</b>：公約数の中で いちばん大きい数。
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "12 と 18 の 最大公約数は？", display: "12, 18", answer: 6 },
+                                                                        { question: "8 の 約数は 全部で いくつある？", display: "1, 2, 4, 8", answer: 4 },
+                                                                        { question: "9 と 15 の 公約数は 1 と 何？", display: "9, 15", answer: 3 }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            title: "2. 小数のしくみ（10倍、1/10倍）",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 位（くらい）の移動",
+                                                                    content: `<h4>小数点が 動くよ</h4>
+                                                                    <div class="point-box">
+                                                                        ・10倍, 100倍すると、小数点は <b>右</b> に移動する。<br>
+                                                                        ・1/10, 1/100にすると、小数点は <b>左</b> に移動する。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <p>例：1.23<br>
+                                                                        ・10倍 ＝ <b>12.3</b><br>
+                                                                        ・1/10 ＝ <b>0.123</b></p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "2.5 を 100倍すると いくらになる？", display: "2.5 ✕ 100", answer: 250 },
+                                                                        { question: "45 を 1/100 にすると いくらになる？", display: "45 ÷ 100", answer: 0.45 },
+                                                                        { question: "0.08 を 10倍すると いくらになる？", display: "0.08 ✕ 10", answer: 0.8 },
+                                                                        { question: "320 を 1/1000 にすると いくらになる？", display: "320 ÷ 1000", answer: 0.32 },
+                                                                        { question: "1.234 を 1000倍すると いくらになる？", display: "1.234 ✕ 1000", answer: 1234 }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            title: "3. 小数のかけ算",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 小数 ✕ 小数",
+                                                                    content: `<h4>小数点の位置が ポイント</h4>
+                                                                    <div class="point-box">
+                                                                        ① 小数点がないものとして 計算する。<br>
+                                                                        ② かける数と かけられる数の 小数位の合計ぶん、小数点を打つ。
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <p>0.3 ✕ 0.2 ＝ <b>0.06</b><br>
+                                                                        （1位 ＋ 1位 ＝ 2位）</p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "0.4 ✕ 0.8 は？", display: "0.4 ✕ 0.8", answer: 0.32 },
+                                                                        { question: "1.2 ✕ 0.3 は？", display: "1.2 ✕ 0.3", answer: 0.36 },
+                                                                        { question: "0.5 ✕ 0.5 は？", display: "0.5 ✕ 0.5", answer: 0.25 },
+                                                                        { question: "2.5 ✕ 0.4 は？", display: "2.5 ✕ 0.4", answer: 1 },
+                                                                        { question: "0.02 ✕ 0.3 は？", display: "0.02 ✕ 0.3", answer: 0.006 }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            title: "4. 小数のわり算",
+                                                            subUnits: [
+                                                                {
+                                                                    title: "(1) 小数でわる計算",
+                                                                    content: `<h4>整数にしてから わろう</h4>
+                                                                    <div class="point-box">
+                                                                        わる数が 整数になるように、小数点を <b>右</b> に動かして計算するよ。<br>
+                                                                        （わられる数も 同じだけ動かす！）
+                                                                    </div>
+                                                                    <div class="data-demo">
+                                                                        <p>1.2 ÷ 0.3<br>
+                                                                        ↓ 両方を10倍<br>
+                                                                        12 ÷ 3 ＝ <b>4</b></p>
+                                                                    </div>`,
+                                                                    quizzes: [
+                                                                        { question: "0.8 ÷ 0.2 は？", display: "0.8 ÷ 0.2", answer: 4 },
+                                                                        { question: "1.5 ÷ 0.5 は？", display: "1.5 ÷ 0.5", answer: 3 },
+                                                                        { question: "2.4 ÷ 0.06 は？ (240÷6)", display: "2.4 ÷ 0.06", answer: 40 },
+                                                                        { question: "0.36 ÷ 0.4 は？ (3.6÷4)", display: "0.36 ÷ 0.4", answer: 0.9 },
+                                                                        { question: "1 ÷ 0.5 は？", display: "1 ÷ 0.5", answer: 2 }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                ,
                         {
                             title: "5. 小数でも成り立つ性質",
                             subUnits: [
@@ -4478,7 +4522,8 @@ const studyData = {
                                     </div>`,
                                     quizzes: [
                                         { question: "0.7 を 分数で表すと？", display: "0.7", answer: "7/10", options: ["7/10", "1/7", "7/100"] },
-                                        { question: "1/4 を 小数で表すと？", display: "1 ÷ 4", answer: 0.25 }
+                                        { question: "1/4 を 小数で表すと？", display: "1 ÷ 4", answer: 0.25 },
+                                        { question: "2 を 分数で表すと？", display: "2", answer: "2/1", options: ["2/1", "1/2", "2/2"] }
                                     ]
                                 }
                             ]
@@ -4494,7 +4539,9 @@ const studyData = {
                                         （わられる数 が 分子、わる数 が 分母になるよ）
                                     </div>`,
                                     quizzes: [
-                                        { question: "2 ÷ 3 を 分数で表すと？", display: "2 ÷ 3", answer: "2/3", options: ["2/3", "3/2"] }
+                                        { question: "2 ÷ 3 を 分数で表すと？", display: "2 ÷ 3", answer: "2/3", options: ["2/3", "3/2"] },
+                                        { question: "5 ÷ 8 を 分数で表すと？", display: "5 ÷ 8", answer: "5/8", options: ["5/8", "8/5"] },
+                                        { question: "1 ÷ 2 を 分数で表すと？", display: "1 ÷ 2", answer: "1/2", options: ["1/2", "2/1"] }
                                     ]
                                 }
                             ]
@@ -4510,7 +4557,9 @@ const studyData = {
                                         ・<b>通分</b>：分母を 最小公倍数に そろえること。
                                     </div>`,
                                     quizzes: [
-                                        { question: "4/8 を 約分して いちばん小さくすると？", display: "4/8", answer: "1/2", options: ["1/2", "2/4", "1/4"] }
+                                        { question: "4/8 を 約分して いちばん小さくすると？", display: "4/8", answer: "1/2", options: ["1/2", "2/4", "1/4"] },
+                                        { question: "6/9 を 約分して いちばん小さくすると？", display: "6/9", answer: "2/3", options: ["2/3", "1/3", "3/4"] },
+                                        { question: "1/2 と 1/3 を通分すると、分母は何になる？", display: "最小公倍数", answer: 6 }
                                     ]
                                 }
                             ]
@@ -4527,7 +4576,11 @@ const studyData = {
                                         ③ 約分できるときは 約分する。
                                     </div>`,
                                     quizzes: [
-                                        { question: "1/2 ＋ 1/3 は？ (通分して答えよう)", display: "3/6 ＋ 2/6", answer: "5/6", options: ["5/6", "2/5", "1/5"] }
+                                        { question: "1/2 ＋ 1/3 は？ (通分して答えよう)", display: "3/6 ＋ 2/6", answer: "5/6", options: ["5/6", "2/5", "1/5"] },
+                                        { question: "1/4 ＋ 1/2 は？ (通分して答えよう)", display: "1/4 ＋ 2/4", answer: "3/4", options: ["3/4", "2/6", "1/6"] },
+                                        { question: "2/5 ＋ 1/10 は？", display: "4/10 ＋ 1/10", answer: "5/10 (1/2)", options: ["1/2", "3/15", "3/10"] },
+                                        { question: "1/3 ＋ 1/4 は？", display: "4/12 ＋ 3/12", answer: "7/12", options: ["7/12", "2/7", "1/7"] },
+                                        { question: "1/6 ＋ 1/2 は？", display: "1/6 ＋ 3/6", answer: "4/6 (2/3)", options: ["2/3", "2/8", "1/4"] }
                                     ]
                                 }
                             ]
@@ -4543,7 +4596,11 @@ const studyData = {
                                         ② 分子を ひく。
                                     </div>`,
                                     quizzes: [
-                                        { question: "1/2 － 1/4 は？", display: "2/4 － 1/4", answer: "1/4", options: ["1/4", "1/2", "1/6"] }
+                                        { question: "1/2 － 1/4 は？", display: "2/4 － 1/4", answer: "1/4", options: ["1/4", "1/2", "1/6"] },
+                                        { question: "2/3 － 1/2 は？", display: "4/6 － 3/6", answer: "1/6", options: ["1/6", "1/1", "1/5"] },
+                                        { question: "3/4 － 1/8 は？", display: "6/8 － 1/8", answer: "5/8", options: ["5/8", "2/4", "2/8"] },
+                                        { question: "1/3 － 1/5 は？", display: "5/15 － 3/15", answer: "2/15", options: ["2/15", "0", "1/2"] },
+                                        { question: "5/6 － 1/3 は？", display: "5/6 － 2/6", answer: "3/6 (1/2)", options: ["1/2", "4/3", "4/6"] }
                                     ]
                                 }
                             ]
@@ -4559,7 +4616,11 @@ const studyData = {
                                         逆の計算（ぎゃくさん）で □を もとめよう。
                                     </div>`,
                                     quizzes: [
-                                        { question: "□ ✕ 0.5 ＝ 4 のとき、□は？", display: "4 ÷ 0.5", answer: 8 }
+                                        { question: "□ ✕ 0.5 ＝ 4 のとき、□は？", display: "4 ÷ 0.5", answer: 8 },
+                                        { question: "□ ＋ 1.2 ＝ 5 のとき、□は？", display: "5 － 1.2", answer: 3.8 },
+                                        { question: "□ ÷ 3 ＝ 1.5 のとき、□は？", display: "1.5 ✕ 3", answer: 4.5 },
+                                        { question: "8 － □ ＝ 2.5 のとき、□は？", display: "8 － 2.5", answer: 5.5 },
+                                        { question: "□ ✕ 0.2 ＝ 10 のとき、□は？", display: "10 ÷ 0.2", answer: 50 }
                                     ]
                                 }
                             ]
