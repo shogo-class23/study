@@ -4205,7 +4205,78 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 変わり方（△三角形と周りの長さ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 三角形を並べたときの周りの長さ",
+                                    content: `<h4>規則性（きそくせい）を見つけよう</h4>
+                                    <div class="point-box">
+                                        1辺が 1cmの 正三角形を 横に並べていくときの <b>周りの長さ</b> を調べるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <!-- 三角形を 繋げる図解 -->
+                                        <div style="display:flex; justify-content:center; align-items:flex-end; gap:15px; margin-bottom:15px;">
+                                            <!-- 1個 -->
+                                            <div style="text-align:center;">
+                                                <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-bottom:26px solid #ff7675; margin:0 auto;"></div>
+                                                <div style="font-size:10px; margin-top:5px;">1個: 3cm</div>
+                                            </div>
+                                            <div style="font-size:18px;">→</div>
+                                            <!-- 2個 (△▽) -->
+                                            <div style="text-align:center;">
+                                                <div style="display:flex; align-items:flex-end; justify-content:center;">
+                                                    <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-bottom:26px solid #ff7675;"></div>
+                                                    <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-top:26px solid #fab1a0; margin-left:-15px;"></div>
+                                                </div>
+                                                <div style="font-size:10px; margin-top:5px;">2個: 4cm</div>
+                                            </div>
+                                            <div style="font-size:18px;">→</div>
+                                            <!-- 3個 (△▽△) -->
+                                            <div style="text-align:center;">
+                                                <div style="display:flex; align-items:flex-end; justify-content:center;">
+                                                    <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-bottom:26px solid #ff7675;"></div>
+                                                    <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-top:26px solid #fab1a0; margin-left:-15px;"></div>
+                                                    <div style="width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-bottom:26px solid #ff7675; margin-left:-15px;"></div>
+                                                </div>
+                                                <div style="font-size:10px; margin-top:5px;">3個: 5cm</div>
+                                            </div>
+                                        </div>
+                                        <p>三角形が 1個ふえると、周りの長さは <b>1cmずつ</b> ふえるね！<br>
+                                        <b>周りの長さ ＝ 三角形の数 ＋ 2</b> という決まりがあるよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "三角形を 8個 並べたとき、周りの長さは 何cmかな？", display: "8 ＋ 2", answer: 10 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 割合（わりあい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 割合（何倍かな？）",
+                                    content: `<h4>どちらが 何倍か 調べよう</h4>
+                                    <div class="point-box">
+                                        ある数が、もう一方の数の **何倍** にあたるかを表したものを **割合（わりあい）** というよ。<br>
+                                        計算は シンプルな **わり算** で出せるんだ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p style="text-align:center; font-size:18px; font-weight:bold;">割合 ＝ 比べたい数 ÷ もとにする数</p>
+                                        <p>たとえば…<br>
+                                        「10mは 5mの 何倍かな？」と考えたら、<br>
+                                        10 ÷ 5 ＝ 2 なので、割合は <b>2</b> になるよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "15cmは 5cmの 何倍（割合）かな？", display: "15 ÷ 5", answer: 3 },
+                                        { question: "80円は 20円の 何倍（割合）かな？", display: "80 ÷ 20", answer: 4 },
+                                        { question: "2Lは 10Lの 何倍（割合）かな？", display: "2 ÷ 10", answer: 0.2 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 折れ線グラフ", subUnits: [{ title: "(1) 変化を見る", content: "グラフで変化を調べよう。" }] }] }
                 ]
             },
@@ -4214,7 +4285,129 @@ const studyData = {
                 categories: [
                     { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 小数の計算", subUnits: [{ title: "(1) 小数のかけ算", content: "小数点に注意しよう。" }] }] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 体積", subUnits: [{ title: "(1) 直方体の体積", content: "体積を求めよう。" }] }] },
-                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 割合", subUnits: [{ title: "(1) 割合の計算", content: "比べられる量を求めよう。" }] }] },
+                    { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
+                        {
+                            title: "1. 単位量あたりの大きさ と 変わり方",
+                            subUnits: [
+                                {
+                                    title: "(1) 単位量あたりの大きさ",
+                                    content: `<h4>1単位（1㎡など）あたりで比べよう</h4>
+                                    <div class="point-box">
+                                        広さも 人数も ちがうときは、<b>「1単位（1㎡や1人）」</b> あたりで比べると わかりやすいよ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <table style="width:100%; border-collapse:collapse; text-align:center; background:white; font-size:13px;">
+                                            <tr style="background:#f0f0f0; border-bottom:1px solid #ddd;">
+                                                <th></th><th>人数</th><th>広さ</th><th>1㎡あたり</th>
+                                            </tr>
+                                            <tr style="border-bottom:1px solid #eee;">
+                                                <td>うさぎ組</td><td>12人</td><td>6㎡</td><td><b>2人</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>きりん組</td><td>15人</td><td>10㎡</td><td><b>1.5人</b></td>
+                                            </tr>
+                                        </table>
+                                        <p style="margin-top:10px;">数字が大きいほうが「混んでいる」ということになるね！</p>
+                                    </div>`
+                                },
+                                {
+                                    title: "(2) △ 三角形の数と周りの長さ",
+                                    content: `<h4>並べたときの 変化（へんか）を調べよう</h4>
+                                    <div class="point-box">
+                                        1辺が 1cmの 正三角形を 横に並べていくときの <b>周りの長さ</b> を考えるよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
+                                            <!-- 1個 -->
+                                            <div style="text-align:center;">
+                                                <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
+                                                <div style="font-size:11px;">1個: 3cm</div>
+                                            </div>
+                                            <div style="font-size:20px;">→</div>
+                                            <!-- 2個 -->
+                                            <div style="text-align:center;">
+                                                <div style="display:flex;">
+                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
+                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
+                                                </div>
+                                                <div style="font-size:11px;">2個: 4cm</div>
+                                            </div>
+                                            <div style="font-size:20px;">→</div>
+                                            <!-- 3個 -->
+                                            <div style="text-align:center;">
+                                                <div style="display:flex;">
+                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
+                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
+                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
+                                                </div>
+                                                <div style="font-size:11px;">3個: 5cm</div>
+                                            </div>
+                                        </div>
+                                        <p>三角形が 1個ふえると、周りの長さは <b>1cmずつ</b> ふえるね！<br>
+                                        <b>周りの長さ ＝ 三角形の数 ＋ 2</b> という決まりがあるよ。</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "三角形を 10個 並べたとき、周りの長さは 何cmかな？", display: "10 ＋ 2", answer: 12 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 割合（わりあい）",
+                            subUnits: [
+                                {
+                                    title: "(1) 割合の公式（く・わ・も）",
+                                    content: `<h4>関係を 図でおぼえよう</h4>
+                                    <div class="point-box">
+                                        ・<b>割合 ＝ 比べられる量 ÷ もとにする量</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
+                                            <div style="width:80px; height:80px; border-radius:50%; border:3px solid #ff7675; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; font-weight:bold; color:#d63031;">
+                                                <div style="border-bottom:2px solid #ff7675; width:100%; text-align:center;">く</div>
+                                                <div style="display:flex; width:100%; justify-content:space-around;">
+                                                    <span>わ</span><span>も</span>
+                                                </div>
+                                            </div>
+                                            <div style="font-size:13px;">
+                                                く：<b>比べられる量</b><br>
+                                                わ：<b>割合</b><br>
+                                                も：<b>もとにする量</b>
+                                            </div>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "もとにする量が 50、比べられる量が 10 のとき、割合は？", display: "10 ÷ 50", answer: 0.2 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 百分率（％）と 歩合",
+                                    content: `<h4>いろいろな 表し方</h4>
+                                    <div class="data-demo">
+                                        <table style="width:100%; border-collapse:collapse; text-align:center; font-size:13px; background:white;">
+                                            <tr style="background:#f0f0f0; border-bottom:1px solid #ddd;">
+                                                <th>割合</th><th>百分率</th><th>歩合</th>
+                                            </tr>
+                                            <tr style="border-bottom:1px solid #eee;">
+                                                <td>1</td><td>100％</td><td>10割</td>
+                                            </tr>
+                                            <tr style="border-bottom:1px solid #eee;">
+                                                <td>0.1</td><td>10％</td><td>1割</td>
+                                            </tr>
+                                            <tr style="border-bottom:1px solid #eee;">
+                                                <td>0.01</td><td>1％</td><td>1分</td>
+                                            </tr>
+                                        </table>
+                                        <p style="margin-top:10px;">0.25 なら 「25％」 や 「2割5分」 と言うよ！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "割合 0.4 を 百分率（％）で言うと？", display: "0.4 ✕ 100", answer: 40 },
+                                        { question: "2割 を 小数で表すと？", display: "2割", answer: 0.2 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 平均", subUnits: [{ title: "(1) 平均の求め方", content: "平均を計算しよう。" }] }] }
                 ]
             },
