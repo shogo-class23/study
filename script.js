@@ -5323,7 +5323,102 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分布", subUnits: [{ title: "(1) ドットプロット", content: "データの散らばりを見よう。" }] }] }
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                        {
+                            title: "1. 代表値（だいひょうち）",
+                            subUnits: [
+                                {
+                                    title: "(1) 平均・中央値・最頻値",
+                                    content: `<h4>データの 特徴をつかもう</h4>
+                                    <div class="point-box">
+                                        ・<b>平均（へいきん）</b>：合計 ÷ 個数。<br>
+                                        ・<b>中央値（メジアン）</b>：大きさ順に並べた 真ん中の値。<br>
+                                        ・<b>最頻値（モード）</b>：もっとも多く出てくる値。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>データ：[1, 2, 2, 3, 7]<br>
+                                        ・中央値：<b>2</b><br>
+                                        ・最頻値：<b>2</b><br>
+                                        ・平均：<b>3</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "[3, 5, 8, 10, 14] の中央値はいくつ？", display: "真ん中の値", answer: 8 },
+                                        { question: "[1, 2, 2, 4, 5] の最頻値はいくつ？", display: "一番多い値", answer: 2 },
+                                        { question: "[2, 4, 6] の平均はいくつ？", display: "(2+4+6) ÷ 3", answer: 4 },
+                                        { question: "データの値が偶数個の時、中央値はどう出す？", display: "中央値の出し方", answer: "真ん中の2つの平均", options: ["真ん中の2つの平均", "大きい方を選ぶ", "小さい方を選ぶ"] },
+                                        { question: "他と比べて極端に大きい数値の影響を一番受けやすいのは？", display: "代表値の性質", answer: "平均", options: ["平均", "中央値", "最頻値"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 度数分布表（どすうぶんぷひょう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 階級と度数",
+                                    content: `<h4>データを 整理しよう</h4>
+                                    <div class="point-box">
+                                        ・<b>階級（かいきゅう）</b>：データを区切った区間。<br>
+                                        ・<b>度数（どすう）</b>：各階級に入っているデータの数。<br>
+                                        ・<b>柱状グラフ（ヒストグラム）</b>：度数分布表をグラフにしたもの。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "データがいくつあるかを表す数を何という？", display: "用語", answer: "度数", options: ["度数", "階級", "平均"] },
+                                        { question: "「10以上〜20未満」のように分けた区間を何という？", display: "用語", answer: "階級", options: ["度数", "階級", "範囲"] },
+                                        { question: "度数分布表を棒グラフのような形で表したものを何という？", display: "グラフの名前", answer: "ヒストグラム (柱状グラフ)", options: ["折れ線グラフ", "ヒストグラム", "円グラフ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 順列（じゅんれつ）",
+                            subUnits: [
+                                {
+                                    title: "(1) 並び方の数",
+                                    content: `<h4>順番（じゅんばん）が 大事！</h4>
+                                    <div class="point-box">
+                                        異なるいくつかのものを <b>順番に並べる</b> ときの 全てのパターンの数だよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>A, B, C の3人を並べる方法：<br>
+                                        ABC, ACB, BAC, BCA, CAB, CBA<br>
+                                        全部で <b>6通り</b> だね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "赤、青、黄の3枚のカードを横一列に並べる方法は？", display: "3 ✕ 2 ✕ 1", answer: 6 },
+                                        { question: "1, 2, 3, 4 の4つの数字から2桁の数を作る方法は？", display: "4 ✕ 3", answer: 12 },
+                                        { question: "A, B の2人を並べる方法は？", display: "2 ✕ 1", answer: 2 },
+                                        { question: "3人のリレーの走順（走る順番）を決めるのは順列？", display: "判定", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "樹形図（じゅけいず）は何をかくときに使いますか？", display: "道具", answer: "全てのパターンを出すとき", options: ["全てのパターンを出すとき", "面積を出すとき"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 組み合わせ",
+                            subUnits: [
+                                {
+                                    title: "(1) 選び方の数",
+                                    content: `<h4>順番は 気にしない！</h4>
+                                    <div class="point-box">
+                                        順番は関係なく、<b>どのメンバーを選ぶか</b> だけを考えるパターンの数だよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>A, B, C の3人から 2人選ぶ方法：<br>
+                                        (A,B), (A,C), (B,C)<br>
+                                        全部で <b>3通り</b> だね！</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "4人の中から、掃除当番を2人選ぶ方法は？", display: "4 ✕ 3 ÷ 2", answer: 6 },
+                                        { question: "赤、青、白、緑の4色から2色選ぶ方法は？", display: "4 ✕ 3 ÷ 2", answer: 6 },
+                                        { question: "3人の中から代表を2人選ぶ方法は？", display: "3 ✕ 2 ÷ 2", answer: 3 },
+                                        { question: "5人の中から2人選ぶ方法は？", display: "5 ✕ 4 ÷ 2", answer: 10 },
+                                        { question: "選ぶだけの「組み合わせ」は、並べる「順列」より数は多い？少ない？", display: "比較", answer: "少ない", options: ["多い", "少ない", "同じ"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
                 ]
             },
             j1: {
