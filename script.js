@@ -6176,7 +6176,152 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 図形の性質", subUnits: [{ title: "(1) 三角形の合同", content: "図形が重なることを証明しよう。" }] }] },
+                    { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [
+                        {
+                            title: "1. 平行線（へいこうせん）と 角の性質",
+                            subUnits: [
+                                {
+                                    title: "(1) 対頂角・同位角・錯角",
+                                    content: `<h4>角の名前と関係</h4>
+                                    <div class="point-box">
+                                        ・<b>対頂角（たいちょうかく）</b>：向かい合う角。いつでも等しい。<br>
+                                        ・<b>同位角（どういかく）</b>：同じ位置にある角。平行なら等しい。<br>
+                                        ・<b>錯角（さっかく）</b>：Z字の内側にある角。平行なら等しい。
+                                    </div>
+                                    <div class="data-demo" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                                        <!-- 対頂角 -->
+                                        <div style="text-align:center;">
+                                            <svg width="100" height="100">
+                                                <line x1="10" y1="10" x2="90" y2="90" stroke="#333" stroke-width="2" />
+                                                <line x1="10" y1="90" x2="90" y2="10" stroke="#333" stroke-width="2" />
+                                                <!-- ペアをオレンジで強調 -->
+                                                <path d="M 50 50 L 70 30 A 28 28 0 0 0 30 30 Z" fill="orange" opacity="0.6" />
+                                                <path d="M 50 50 L 30 70 A 28 28 0 0 0 70 70 Z" fill="orange" opacity="0.6" />
+                                            </svg>
+                                            <p style="font-size:10px;">対頂角</p>
+                                        </div>
+                                        <!-- 同位角 -->
+                                        <div style="text-align:center;">
+                                            <svg width="100" height="100">
+                                                <!-- 平行線 -->
+                                                <line x1="10" y1="30" x2="90" y2="30" stroke="#333" stroke-width="2" />
+                                                <line x1="10" y1="70" x2="90" y2="70" stroke="#333" stroke-width="2" />
+                                                <!-- 交差する線 -->
+                                                <line x1="20" y1="10" x2="80" y2="90" stroke="#333" stroke-width="2" />
+                                                <!-- ペアを青で塗りつぶし（左上） -->
+                                                <!-- 上側: 頂点(35, 30) -->
+                                                <path d="M 35 30 L 15 30 A 20 20 0 0 1 20 10 Z" fill="blue" opacity="0.5" />
+                                                <text x="18" y="25" font-size="12" fill="blue" font-weight="bold">a</text>
+                                                <!-- 下側: 頂点(65, 70) -->
+                                                <path d="M 65 70 L 45 70 A 20 20 0 0 1 50 50 Z" fill="blue" opacity="0.5" />
+                                                <text x="48" y="65" font-size="12" fill="blue" font-weight="bold">A</text>
+                                            </svg>
+                                            <p style="font-size:10px;">同位角 (a ＝ A)</p>
+                                        </div>
+                                        <!-- 錯角 -->
+                                        <div style="text-align:center;">
+                                            <svg width="100" height="100">
+                                                <line x1="10" y1="30" x2="90" y2="30" stroke="#333" stroke-width="2" />
+                                                <line x1="10" y1="70" x2="90" y2="70" stroke="#333" stroke-width="2" />
+                                                <line x1="70" y1="30" x2="30" y2="70" stroke="red" stroke-width="2" />
+                                                <!-- ペアを赤で強調 -->
+                                                <path d="M 70 30 L 50 30 A 20 20 0 0 1 60 40 Z" fill="red" opacity="0.6" />
+                                                <path d="M 30 70 L 50 70 A 20 20 0 0 0 40 60 Z" fill="red" opacity="0.6" />
+                                            </svg>
+                                            <p style="font-size:10px;">錯角 (Z字)</p>
+                                        </div>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "向かい合う角（対頂角）の大きさはいつでも等しい？", display: "性質", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "2本の直線が平行なとき、錯角の大きさはどうなりますか？", display: "性質", answer: "等しい", options: ["等しい", "ちがう", "合わせて180度"] },
+                                        { question: "Z字の形に見つけられる角を何という？", display: "用語", answer: "錯角", options: ["対頂角", "同位角", "錯角"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 多角形（たかくけい）の角",
+                            subUnits: [
+                                {
+                                    title: "(1) 内角（ないかく）と 外角（がいかく）",
+                                    content: `<h4>角の和の 公式</h4>
+                                    <div class="point-box">
+                                        ・<b>三角形の外角</b>：それと隣り合わない2つの内角の和に等しい。<br>
+                                        ・<b>n角形の内角の和</b> ＝ 180° ✕ (n － 2)<br>
+                                        ・<b>多角形の外角の和</b> ＝ 360° （何角形でも一定！）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "五角形（n=5）の内角の和は何度？", display: "180 ✕ (5-2)", answer: 540 },
+                                        { question: "十角形の外角の和は何度？", display: "外角の和", answer: 360 },
+                                        { question: "三角形の2つの内角が50°と70°のとき、もう1つの角の外角は？", display: "50 + 70", answer: 120 },
+                                        { question: "六角形の内角の和は何度？", display: "180 ✕ 4", answer: 720 },
+                                        { question: "正六角形の1つの外角は何度？", display: "360 ÷ 6", answer: 60 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 三角形の合同条件（ごうどうじょうけん）と 証明",
+                            subUnits: [
+                                {
+                                    title: "(1) 3つの 合同条件",
+                                    content: `<h4>ぴったり重なるための ルール</h4>
+                                    <div class="point-box">
+                                        1. <b>3組の辺</b>がそれぞれ等しい。<br>
+                                        2. <b>2組の辺とその間の角</b>がそれぞれ等しい。<br>
+                                        3. <b>1組の辺とその両端の角</b>がそれぞれ等しい。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "三角形の合同条件は全部でいくつ？", display: "知識", answer: 3 },
+                                        { question: "「3組の辺がそれぞれ等しい」は合同条件？", display: "判定", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "2組の辺が等しい時、どこの角が等しければ合同といえますか？", display: "条件", answer: "その間の角", options: ["その間の角", "どこでもいい"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 証明（しょうめい）の進め方",
+                                    content: `<h4>論理的（ろんりてき）に説明しよう</h4>
+                                    <div class="point-box">
+                                        <b>【証明の 型】</b><br>
+                                        1. <b>仮定（かてい）</b>：問題でわかっていること。<br>
+                                        2. <b>根拠（こんきょ）</b>：合同条件や図形の性質。<br>
+                                        3. <b>結論（けつろん）</b>：いいたいこと。
+                                    </div>
+                                    <div class="data-demo" style="font-size:13px; text-align:left;">
+                                        △ABCと△DEFにおいて、<br>
+                                        仮定より AB=DE...①<br>
+                                        ...中略...<br>
+                                        ①②③より<b>合同条件</b>を書き、<br>
+                                        よって △ABC≡△DEF である。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "証明で、問題文にあらかじめ与えられている条件を何という？", display: "用語", answer: "仮定", options: ["仮定", "結論", "根拠"] },
+                                        { question: "証明の最後にかく、言いたい目標のことを何という？", display: "用語", answer: "結論", options: ["仮定", "結論", "理由"] },
+                                        { question: "合同を表す記号「≡」の読み方は？", display: "記号", answer: "合同 (ごうどう)", options: ["合同 (ごうどう)", "等しい", "似ている"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 三角形と 四角形の性質",
+                            subUnits: [
+                                {
+                                    title: "(1) 特別な 三角形と 四角形",
+                                    content: `<h4>定義（ていぎ）と 性質</h4>
+                                    <div class="point-box">
+                                        ・<b>二等辺三角形</b>：2つの底角が等しい。<br>
+                                        ・<b>平行四辺形</b>：対辺が平行、対角が等しい、対角線が中点で交わる。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "二等辺三角形の底角（下の2つの角）の大きさは？", display: "性質", answer: "等しい", options: ["等しい", "ちがう"] },
+                                        { question: "平行四辺形の対角線はどこで交わりますか？", display: "性質", answer: "それぞれの中点", options: ["中点", "端っこ", "交わらない"] },
+                                        { question: "長方形は平行四辺形のなかまといえる？", display: "関係", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "ひし形の対角線はどのように交わりますか？", display: "性質", answer: "垂直に交わる", options: ["垂直に交わる", "平行になる"] },
+                                        { question: "4つの角がすべて直角で、4つの辺がすべて等しい四角形は？", display: "名前", answer: "正方形" }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 一次関数", subUnits: [{ title: "(1) 直線の式", content: "グラフを式で表そう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 確率", subUnits: [{ title: "(1) 起こりやすさ", content: "確率を計算しよう。" }] }] }
                 ]
