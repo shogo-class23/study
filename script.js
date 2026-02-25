@@ -5424,7 +5424,221 @@ const studyData = {
             j1: {
                 name: "中1",
                 categories: [
-                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [{ title: "1. 正負の数", subUnits: [{ title: "(1) プラスとマイナス", content: "負の数を学びましょう。" }] }] },
+                    { name: "1 <ruby>数<rt>かず</rt></ruby>と<ruby>式<rt>しき</rt></ruby>", units: [
+                        {
+                            title: "1. 正負の数（せいふのすう）",
+                            subUnits: [
+                                {
+                                    title: "(1) 負の数とは",
+                                    content: `<h4>0より 小さい数</h4>
+                                    <div class="point-box">
+                                        ・<b>正の数</b>：0より 大きい数（＋5 など）<br>
+                                        ・<b>負の数</b>：0より 小さい数（－3 など）
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【絶対値（ぜったいち）】</b></p>
+                                        <p>0 からの 距離のこと。<br>
+                                        例：－5 の絶対値は <b>5</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「－10」の絶対値はいくつ？", display: "絶対値", answer: 10 },
+                                        { question: "0より 7 小さい数を表すと？", display: "0 － 7", answer: -7 },
+                                        { question: "－3 と －5、大きいのはどっち？", display: "数の大小", answer: "-3", options: ["-3", "-5"] }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 加法（たし算）",
+                                    content: `<h4>同じ向きか、逆向きか</h4>
+                                    <div class="point-box">
+                                        ・<b>同じ符号</b>：絶対値をたして、共通の符号をつける。<br>
+                                        ・<b>違う符号</b>：絶対値の大きい方から小さい方をひき、大きい方の符号をつける。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(－2) ＋ (－3) は？", display: "-2 + -3", answer: -5 },
+                                        { question: "(＋5) ＋ (+4) は？", display: "5 + 4", answer: 9 },
+                                        { question: "(－8) ＋ (+3) は？", display: "-8 + 3", answer: -5 },
+                                        { question: "(＋7) ＋ (－10) は？", display: "7 + -10", answer: -3 },
+                                        { question: "(－1.5) ＋ (－0.5) は？", display: "-1.5 + -0.5", answer: -2 }
+                                    ]
+                                },
+                                {
+                                    title: "(3) 減法（ひき算）",
+                                    content: `<h4>たし算になおして計算</h4>
+                                    <div class="point-box">
+                                        <b>ひく数の 符号を 逆（＋ ➔ －、－ ➔ ＋）</b> にして、たし算になおそう！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>5 － (－3) ➔ 5 <b>＋ (＋3)</b> ＝ 8</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(＋4) － (＋9) は？", display: "4 - 9", answer: -5 },
+                                        { question: "(－6) － (－2) は？", display: "-6 - (-2)", answer: -4 },
+                                        { question: "(－3) － (+5) は？", display: "-3 - 5", answer: -8 },
+                                        { question: "0 － (－12) は？", display: "0 - (-12)", answer: 12 },
+                                        { question: "(－7) － (－7) は？", display: "-7 - (-7)", answer: 0 }
+                                    ]
+                                },
+                                {
+                                    title: "(4) 乗法（かけ算）",
+                                    content: `<h4>マイナスの個数に注目</h4>
+                                    <div class="point-box">
+                                        ・<b>マイナスが 1個（奇数）</b> ➔ 答えは <b>マイナス</b><br>
+                                        ・<b>マイナスが 2個（偶数）</b> ➔ 答えは <b>プラス</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(－3) ✕ (+6) は？", display: "-3 ✕ 6", answer: -18 },
+                                        { question: "(－4) ✕ (－5) は？", display: "-4 ✕ -5", answer: 20 },
+                                        { question: "(＋2) ✕ (－8) は？", display: "2 ✕ -8", answer: -16 },
+                                        { question: "(－1) ✕ (－1) ✕ (－1) は？", display: "-1 ✕ -1 ✕ -1", answer: -1 },
+                                        { question: "0 ✕ (－99) は？", display: "0 ✕ -99", answer: 0 }
+                                    ]
+                                },
+                                {
+                                    title: "(5) 除法（わり算）",
+                                    content: `<h4>符号のルールはかけ算と同じ</h4>
+                                    <div class="point-box">
+                                        ・<b>（－） ÷ （－） ＝ （＋）</b><br>
+                                        ・<b>（＋） ÷ （－） ＝ （－）</b>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(－15) ÷ (－3) は？", display: "-15 ÷ -3", answer: 5 },
+                                        { question: "(－24) ÷ (＋4) は？", display: "-24 ÷ 4", answer: -6 },
+                                        { question: "(＋10) ÷ (－5) は？", display: "10 ÷ -5", answer: -2 },
+                                        { question: "0 ÷ (－8) は？", display: "0 ÷ -8", answer: 0 },
+                                        { question: "(－100) ÷ (－10) は？", display: "-100 ÷ -10", answer: 10 }
+                                    ]
+                                },
+                                {
+                                    title: "(6) 累乗（るいじょう）",
+                                    content: `<h4>同じ数を 何回もかけよう</h4>
+                                    <div class="point-box">
+                                        ・<b>2乗（平方）</b>：a ✕ a ＝ a²<br>
+                                        ・<b>3乗（立方）</b>：a ✕ a ✕ a ＝ a³<br>
+                                        <br>
+                                        <b>【注意！】</b> カッコがあるかないかで 答えが変わるよ！<br>
+                                        ・<b>(－3)²</b> ＝ (－3) ✕ (－3) ＝ <b>9</b><br>
+                                        ・<b>－3²</b> ＝ －(3 ✕ 3) ＝ <b>－9</b>
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【2のn乗の 規則性】</b></p>
+                                        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; font-size:13px;">
+                                            <div>
+                                                2¹ ＝ 2<br>2² ＝ 4<br>2³ ＝ 8<br>2⁴ ＝ 16<br>2⁵ ＝ 32
+                                            </div>
+                                            <div>
+                                                2⁶ ＝ 64<br>2⁷ ＝ 128<br>2⁸ ＝ 256<br>2⁹ ＝ 512<br>2¹⁰ ＝ <b>1024</b>
+                                            </div>
+                                        </div>
+                                        <p style="margin-top:10px; font-size:12px;">2¹⁰ の <b>1024</b> は、コンピュータの世界（キロバイトなど）でも よく使われる 重要な数字だよ！</p>
+                                        <p><b>【0乗（発展）】</b></p>
+                                        <p>どんな数でも（0以外）、<b>0乗すると 1</b> になるという ルールがあるよ！<br>
+                                        例：2⁰ ＝ 1, 100⁰ ＝ 1</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "(－4)² は いくつ？", display: "(-4) ✕ (-4)", answer: 16 },
+                                        { question: "－2⁴ は いくつ？ (2の4乗にマイナス)", display: "-(2✕2✕2✕2)", answer: -16 },
+                                        { question: "2の10乗（2¹⁰）は いくつ？", display: "1024", answer: 1024 },
+                                        { question: "2の6乗（2⁶）は いくつ？", display: "64", answer: 64 },
+                                        { question: "「5⁰」は いくつになる？ (発展)", display: "5の0乗", answer: 1 }
+                                    ]
+                                },
+                                {
+                                    title: "(7) 四則の混じった計算と 性質",
+                                    content: `<h4>計算の じゅんばん</h4>
+                                    <div class="point-box">
+                                        ① 累乗（指数）➔ ② カッコ内 ➔ ③ かけ算・わり算 ➔ ④ たし算・ひき算
+                                    </div>
+                                    <p>分配法則 a(b + c) ＝ ab + ac も活用しよう！</p>`,
+                                    quizzes: [
+                                        { question: "5 ＋ (－2) ✕ 3 は？", display: "5 + (-6)", answer: -1 },
+                                        { question: "12 ÷ (－2)² は？", display: "12 ÷ 4", answer: 3 },
+                                        { question: "(－3) ✕ 102 ➔ －3 ✕ (100＋2) ➔ ？", display: "分配法則", answer: -306 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 自然数（しぜんすう）と 素因数分解",
+                            subUnits: [
+                                {
+                                    title: "(1) 自然数と 素数",
+                                    content: `<h4>数の なかま分け</h4>
+                                    <div class="point-box">
+                                        ・<b>自然数</b>：正の整数（1, 2, 3...）。 ※ 0 は入らないよ。<br>
+                                        ・<b>素数</b>：1 と その数 自身でしか わり切れない 1より大きい数。
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "10 以下の 素数を すべて言うと？", display: "2, 3, 5, 7", answer: "2, 3, 5, 7", options: ["2, 3, 5, 7", "1, 3, 5, 7, 9", "2, 4, 6, 8"] },
+                                        { question: "「1」は 素数ですか？", display: "判定", answer: "いいえ", options: ["はい", "いいえ"] },
+                                        { question: "もっとも 小さい 自然数は何？", display: "自然数", answer: 1 }
+                                    ]
+                                },
+                                {
+                                    title: "(2) 素因数分解（そいんすうぶんかい）",
+                                    content: `<h4>素数の かけ算に 分解しよう</h4>
+                                    <div class="point-box">
+                                        自然数を 素数だけの かけ算の形に 表すことだよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>12 ＝ 2 ✕ 2 ✕ 3 ＝ <b>2² ✕ 3</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "「6」を 素因数分解すると？", display: "6", answer: "2 ✕ 3" },
+                                        { question: "「20」を 素因数分解すると？", display: "20", answer: "2² ✕ 5" },
+                                        { question: "「18」を 素因数分解すると？", display: "18", answer: "2 ✕ 3²" },
+                                        { question: "「25」を 素因数分解すると？", display: "25", answer: "5²" },
+                                        { question: "「30」を 素因数分解すると？", display: "30", answer: "2 ✕ 3 ✕ 5" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "3. 文字（もじ）の式",
+                            subUnits: [
+                                {
+                                    title: "(1) 文字を使った 式のルール",
+                                    content: `<h4>✕（かける）を はぶいて書こう</h4>
+                                    <div class="point-box">
+                                        ・✕ は 書かない。（a ✕ b ➔ <b>ab</b>）<br>
+                                        ・数字を 文字の <b>前</b> に書く。（x ✕ 3 ➔ <b>3x</b>）<br>
+                                        ・1 は 書かない。（1 ✕ x ➔ <b>x</b>）
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "a ✕ (－5) を ルール通りに 書くと？", display: "a ✕ -5", answer: "-5a" },
+                                        { question: "x ✕ y ✕ x を ルール通りに 書くと？", display: "x ✕ y ✕ x", answer: "x²y" },
+                                        { question: "a ÷ 4 を 分数で 書くと？", display: "a ÷ 4", answer: "a/4" },
+                                        { question: "x ＝ 3 のとき、5x － 2 の値は？ (代入)", display: "5 ✕ 3 - 2", answer: 13 },
+                                        { question: "3x ＋ 2x を 計算すると？", display: "3x + 2x", answer: "5x" }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "4. 一次方程式（いちじほうていしき）",
+                            subUnits: [
+                                {
+                                    title: "(1) 方程式の 解き方",
+                                    content: `<h4>移項（いこう）を マスターしよう</h4>
+                                    <div class="point-box">
+                                        ＝（わ）を こえて 反対側に 行くとき、<b>符号（＋や－）が 逆になる</b> よ！
+                                    </div>
+                                    <div class="data-demo">
+                                        <p>x ＋ 3 ＝ 10<br>
+                                        ↓ 3を 右に 移項<br>
+                                        x ＝ 10 <b>－ 3</b><br>
+                                        x ＝ <b>7</b></p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "x － 5 ＝ 2 のとき、xは？", display: "x - 5 = 2", answer: 7 },
+                                        { question: "3x ＝ 12 のとき、xは？", display: "3x = 12", answer: 4 },
+                                        { question: "2x ＋ 1 ＝ 9 のとき、xは？", display: "2x = 8", answer: 4 },
+                                        { question: "5x ＝ 2x ＋ 6 のとき、xは？", display: "3x = 6", answer: 2 },
+                                        { question: "方程式の答えのことを 何という？", display: "用語", answer: "解 (かい)", options: ["解 (かい)", "係数", "符号"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] },
                     { name: "2 <ruby>図形<rt>ずけい</rt></ruby>", units: [{ title: "1. 平面図形", subUnits: [{ title: "(1) 基本的な作図", content: "垂直二等分線などをかこう。" }] }] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [{ title: "1. 比例と反比例", subUnits: [{ title: "(1) 関数の考え方", content: "変化する2つの量を調べよう。" }] }] },
                     { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. データの分析", subUnits: [{ title: "(1) ヒストグラム", content: "データの傾向をつかもう。" }] }] }
