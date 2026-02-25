@@ -4811,122 +4811,123 @@ const studyData = {
                     ] },
                     { name: "3 <ruby>測定<rt>そくてい</rt></ruby>と<ruby>関数<rt>かんすう</rt></ruby>", units: [
                         {
-                            title: "1. 単位量あたりの大きさ と 変わり方",
+                            title: "1. 比例（ひれい）",
                             subUnits: [
                                 {
-                                    title: "(1) 単位量あたりの大きさ",
-                                    content: `<h4>1単位（1㎡など）あたりで比べよう</h4>
+                                    title: "(1) ともなって変わる量",
+                                    content: `<h4>かたほうが 2倍になると…？</h4>
                                     <div class="point-box">
-                                        広さも 人数も ちがうときは、<b>「1単位（1㎡や1人）」</b> あたりで比べると わかりやすいよ！
+                                        2つの量 ア と イ があって、アが 2倍, 3倍... になると、イも 2倍, 3倍... になるとき、<b>イはアに比例する</b> というよ。
+                                    </div>
+                                    <div class="data-demo">
+                                        <p><b>【正三角形を並べたとき】</b></p>
+                                        <p>三角形の数 <b>1, 2, 3...</b><br>
+                                        周りの長さ <b>3, 4, 5...</b><br>
+                                        これは 比例しているかな？（2倍になっていないから、比例じゃないね！）</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "アが2倍になった時、イも2倍になる関係を何という？", display: "2倍 ➔ 2倍", answer: "比例", options: ["比例", "反比例", "合同"] },
+                                        { question: "1個100円のリンゴを買う時、個数と代金の関係は比例？", display: "買い物", answer: "はい", options: ["はい", "いいえ"] },
+                                        { question: "自分の年齢と、身長の関係は比例といえる？", display: "成長", answer: "いいえ", options: ["はい", "いいえ"] }
+                                    ]
+                                }
+                            ]
+                        },
+                                                {
+                                                    title: "2. 速さ（はやさ）",
+                                                    subUnits: [
+                                                        {
+                                                            title: "(1) 速さ・道のり・時間",
+                                                            content: `<h4>「みはじ」の関係</h4>
+                                                            <div class="point-box">
+                                                                ・<b>道のり ＝ 速さ ✕ 時間</b><br>
+                                                                ・<b>速さ ＝ 道のり ÷ 時間</b><br>
+                                                                ・<b>時間 ＝ 道のり ÷ 速さ</b>
+                                                            </div>
+                                                                                                <div class="data-demo">
+                                                                                                    <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
+                                                                                                        <div style="width:80px; height:80px; border-radius:50%; border:3px solid #333; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; font-weight:bold; overflow:hidden;">
+                                                                                                            <!-- 上段: み -->
+                                                                                                            <div style="flex:1; width:100%; display:flex; justify-content:center; align-items:center; border-bottom:2px solid #333; background:#f9f9f9;">み</div>
+                                                                                                            <!-- 下段: は | じ -->
+                                                                                                            <div style="flex:1; width:100%; display:flex;">
+                                                                                                                <div style="flex:1; display:flex; justify-content:center; align-items:center; border-right:1px solid #333;">は</div>
+                                                                                                                <div style="flex:1; display:flex; justify-content:center; align-items:center;">じ</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div style="font-size:14px;">
+                                                                                                            み：<b>道のり（距離）</b><br>
+                                                                                                            は：<b>速さ</b><br>
+                                                                                                            じ：<b>時間</b>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <p style="margin-top:10px; font-size:12px;">指で かくしたところを 求める式が わかるよ！</p>
+                                                                                                </div>
+                                                            `,
+                                                            quizzes: [
+                                                                { question: "150km を 3時間で走った時の時速は？", display: "150 ÷ 3", answer: 50 },
+                                                                { question: "時速 4km で 2時間歩いた時の道のりは？", display: "4 ✕ 2", answer: 8 },
+                                                                { question: "時速 60km で 180km 進むのにかかる時間は？", display: "180 ÷ 60", answer: 3 },
+                                                                { question: "分速 70m で 10分歩くと何m進む？", display: "70 ✕ 10", answer: 700 },
+                                                                { question: "速さを求める公式は？", display: "公式", answer: "道のり ÷ 時間", options: ["道のり ÷ 時間", "道のり ✕ 時間", "時間 ÷ 道のり"] }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                        ,
+                        {
+                            title: "3. 人口密度（じんこうみつど）",
+                            subUnits: [
+                                {
+                                    title: "(1) 混みぐあいを数値で表す",
+                                    content: `<h4>1㎢ あたりに 何人いるか</h4>
+                                    <div class="point-box">
+                                        <b>人口密度 ＝ 人数 ÷ 面積</b><br>
+                                        単位は 「人 / ㎢」 を使うことが多いよ。
                                     </div>
                                     <div class="data-demo">
                                         <table style="width:100%; border-collapse:collapse; text-align:center; background:white; font-size:13px;">
                                             <tr style="background:#f0f0f0; border-bottom:1px solid #ddd;">
-                                                <th></th><th>人数</th><th>広さ</th><th>1㎡あたり</th>
+                                                <th>地域</th><th>人数</th><th>面積</th><th>人口密度</th>
                                             </tr>
                                             <tr style="border-bottom:1px solid #eee;">
-                                                <td>うさぎ組</td><td>12人</td><td>6㎡</td><td><b>2人</b></td>
+                                                <td>A市</td><td>4000人</td><td>10㎢</td><td><b>400</b></td>
                                             </tr>
                                             <tr>
-                                                <td>きりん組</td><td>15人</td><td>10㎡</td><td><b>1.5人</b></td>
+                                                <td>B市</td><td>6000人</td><td>20㎢</td><td><b>300</b></td>
                                             </tr>
                                         </table>
-                                        <p style="margin-top:10px;">数字が大きいほうが「混んでいる」ということになるね！</p>
-                                    </div>`
-                                },
-                                {
-                                    title: "(2) △ 三角形の数と周りの長さ",
-                                    content: `<h4>並べたときの 変化（へんか）を調べよう</h4>
-                                    <div class="point-box">
-                                        1辺が 1cmの 正三角形を 横に並べていくときの <b>周りの長さ</b> を考えるよ。
-                                    </div>
-                                    <div class="data-demo">
-                                        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:15px;">
-                                            <!-- 1個 -->
-                                            <div style="text-align:center;">
-                                                <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
-                                                <div style="font-size:11px;">1個: 3cm</div>
-                                            </div>
-                                            <div style="font-size:20px;">→</div>
-                                            <!-- 2個 -->
-                                            <div style="text-align:center;">
-                                                <div style="display:flex;">
-                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
-                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
-                                                </div>
-                                                <div style="font-size:11px;">2個: 4cm</div>
-                                            </div>
-                                            <div style="font-size:20px;">→</div>
-                                            <!-- 3個 -->
-                                            <div style="text-align:center;">
-                                                <div style="display:flex;">
-                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675;"></div>
-                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
-                                                    <div style="width:0; height:0; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:34px solid #ff7675; margin-left:-20px;"></div>
-                                                </div>
-                                                <div style="font-size:11px;">3個: 5cm</div>
-                                            </div>
-                                        </div>
-                                        <p>三角形が 1個ふえると、周りの長さは <b>1cmずつ</b> ふえるね！<br>
-                                        <b>周りの長さ ＝ 三角形の数 ＋ 2</b> という決まりがあるよ。</p>
+                                        <p style="margin-top:10px;">A市のほうが、1㎢あたりの人数が多いから「混んでいる」ね！</p>
                                     </div>`,
                                     quizzes: [
-                                        { question: "三角形を 10個 並べたとき、周りの長さは 何cmかな？", display: "10 ＋ 2", answer: 12 }
+                                        { question: "面積 5㎢ に 1000人住んでいる町の人口密度は？", display: "1000 ÷ 5", answer: 200 },
+                                        { question: "人口密度を出す式は「人数 ÷ ？」", display: "公式", answer: "面積", options: ["面積", "速さ", "重さ"] },
+                                        { question: "人口密度が高いほど、その場所はどうなっていますか？", display: "状態", answer: "混んでいる", options: ["混んでいる", "すいている"] }
                                     ]
                                 }
                             ]
                         },
                         {
-                            title: "2. 割合（わりあい）",
+                            title: "4. 割合（わりあい）と 百分率",
                             subUnits: [
                                 {
-                                    title: "(1) 割合の公式（く・わ・も）",
-                                    content: `<h4>関係を 図でおぼえよう</h4>
+                                    title: "(1) 割合・百分率（％）",
+                                    content: `<h4>比べられる量・もとにする量</h4>
                                     <div class="point-box">
-                                        ・<b>割合 ＝ 比べられる量 ÷ もとにする量</b>
+                                        ・<b>割合 ＝ 比べられる量 ÷ もとにする量</b><br>
+                                        ・<b>百分率 ＝ 割合 ✕ 100</b> （単位：％）
                                     </div>
                                     <div class="data-demo">
-                                        <div style="display:flex; justify-content:center; align-items:center; gap:20px;">
-                                            <div style="width:80px; height:80px; border-radius:50%; border:3px solid #ff7675; position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; font-weight:bold; color:#d63031;">
-                                                <div style="border-bottom:2px solid #ff7675; width:100%; text-align:center;">く</div>
-                                                <div style="display:flex; width:100%; justify-content:space-around;">
-                                                    <span>わ</span><span>も</span>
-                                                </div>
-                                            </div>
-                                            <div style="font-size:13px;">
-                                                く：<b>比べられる量</b><br>
-                                                わ：<b>割合</b><br>
-                                                も：<b>もとにする量</b>
-                                            </div>
-                                        </div>
+                                        <p>0.2 ➔ <b>20％</b><br>
+                                        0.05 ➔ <b>5％</b><br>
+                                        1.2 ➔ <b>120％</b></p>
                                     </div>`,
                                     quizzes: [
-                                        { question: "もとにする量が 50、比べられる量が 10 のとき、割合は？", display: "10 ÷ 50", answer: 0.2 }
-                                    ]
-                                },
-                                {
-                                    title: "(2) 百分率（％）と 歩合",
-                                    content: `<h4>いろいろな 表し方</h4>
-                                    <div class="data-demo">
-                                        <table style="width:100%; border-collapse:collapse; text-align:center; font-size:13px; background:white;">
-                                            <tr style="background:#f0f0f0; border-bottom:1px solid #ddd;">
-                                                <th>割合</th><th>百分率</th><th>歩合</th>
-                                            </tr>
-                                            <tr style="border-bottom:1px solid #eee;">
-                                                <td>1</td><td>100％</td><td>10割</td>
-                                            </tr>
-                                            <tr style="border-bottom:1px solid #eee;">
-                                                <td>0.1</td><td>10％</td><td>1割</td>
-                                            </tr>
-                                            <tr style="border-bottom:1px solid #eee;">
-                                                <td>0.01</td><td>1％</td><td>1分</td>
-                                            </tr>
-                                        </table>
-                                        <p style="margin-top:10px;">0.25 なら 「25％」 や 「2割5分」 と言うよ！</p>
-                                    </div>`,
-                                    quizzes: [
-                                        { question: "割合 0.4 を 百分率（％）で言うと？", display: "0.4 ✕ 100", answer: 40 },
-                                        { question: "2割 を 小数で表すと？", display: "2割", answer: 0.2 }
+                                        { question: "40人を もとにして 10人の割合を 百分率で表すと？", display: "(10 ÷ 40) ✕ 100", answer: 25 },
+                                        { question: "定価 1000円の 20％引きは 何円引き？", display: "1000 ✕ 0.2", answer: 200 },
+                                        { question: "800円の 10％の消費税（しょうひぜい）は何円？", display: "800 ✕ 0.1", answer: 80 },
+                                        { question: "割合 0.75 は 何％？", display: "0.75 ✕ 100", answer: 75 },
+                                        { question: "150％ を 割合（小数）で表すと？", display: "150 ÷ 100", answer: 1.5 }
                                     ]
                                 }
                             ]
