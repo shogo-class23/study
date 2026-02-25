@@ -6387,7 +6387,59 @@ const studyData = {
                             ]
                         }
                     ] },
-                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [{ title: "1. 確率", subUnits: [{ title: "(1) 起こりやすさ", content: "確率を計算しよう。" }] }] }
+                    { name: "4 <ruby>データ<rt>でーた</rt></ruby>の<ruby>活用<rt>かつよう</rt></ruby>", units: [
+                        {
+                            title: "1. 四分位数（しぶんいすう）と 箱ひげ図",
+                            subUnits: [
+                                {
+                                    title: "(1) データの散らばりを 4等分しよう",
+                                    content: `<h4>中央値を さらに分ける</h4>
+                                    <div class="point-box">
+                                        ・<b>四分位数</b>：データを大きさ順に並べ、4等分した位置の値。<br>
+                                        ・<b>箱ひげ図</b>：最小値、第1四分位数、中央値、第3四分位数、最大値を 1つの図にしたもの。<br>
+                                        ・<b>四分位範囲</b>：第3四分位数 － 第1四分位数。
+                                    </div>
+                                    <div class="data-demo">
+                                        <div style="width:200px; height:60px; position:relative; margin:0 auto; border-bottom:1px solid #333; padding-top:20px;">
+                                            <div style="width:1px; height:20px; background:#333; position:absolute; left:10px; top:20px;"></div><!-- min -->
+                                            <div style="width:40px; height:1px; background:#333; position:absolute; left:10px; top:30px;"></div><!-- whisker -->
+                                            <div style="width:100px; height:20px; border:2px solid #333; position:absolute; left:50px; top:20px; background:#fff;">
+                                                <div style="width:2px; height:100%; background:red; position:absolute; left:40%;"></div><!-- Q2 -->
+                                            </div><!-- box -->
+                                            <div style="width:40px; height:1px; background:#333; position:absolute; left:150px; top:30px;"></div><!-- whisker -->
+                                            <div style="width:1px; height:20px; background:#333; position:absolute; left:190px; top:20px;"></div><!-- max -->
+                                        </div>
+                                        <p style="font-size:10px; text-align:center;">箱の中の赤い線が「中央値」だよ</p>
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "データを4等分した時の区切りの値を何という？", display: "用語", answer: "四分位数", options: ["四分位数", "平均値", "最頻値"] },
+                                        { question: "箱ひげ図の「箱の長さ」が表しているのはどれ？", display: "図の見方", answer: "四分位範囲", options: ["四分位範囲", "全範囲", "中央値"] },
+                                        { question: "第3四分位数から第1四分位数をひいた値を何という？", display: "用語", answer: "四分位範囲", options: ["四分位範囲", "平均偏差", "誤差"] }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            title: "2. 場合の数（ばあいのすう）と 確率",
+                            subUnits: [
+                                {
+                                    title: "(1) 起こりうる すべてのパターン",
+                                    content: `<h4>樹形図（じゅけいず）を使おう</h4>
+                                    <div class="point-box">
+                                        ・<b>同様に確からしい</b>：どの結果が起こることも 同じくらい期待できること。<br>
+                                        ・<b>確率</b> ＝ 起こるパターンの数 / すべてのパターンの数
+                                    </div>`,
+                                    quizzes: [
+                                        { question: "2枚のコインを投げた時、すべての場合の数は？", display: "(表,表), (表,裏), ...", answer: 4 },
+                                        { question: "サイコロを2つ振った時、すべての場合の数は？", display: "6 ✕ 6", answer: 36 },
+                                        { question: "2枚のコインを投げて、2枚とも「表」になる確率は？", display: "1 ÷ 4", answer: "1/4" },
+                                        { question: "3人のリレーの走順の決め方は全部で何通り？", display: "3 ✕ 2 ✕ 1", answer: 6 },
+                                        { question: "「絶対に起こらない」確率を数で言うと？", display: "数値", answer: 0 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] }
                 ]
             },
             j3: {
