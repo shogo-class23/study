@@ -2504,179 +2504,212 @@ const studyData = {
                                             <p style="font-size: 24px;"><b>12 ÷ 3 ＝ 4</b></p>
                                             <p>「12 わる 3 は 4」と よむよ！</p>
                                         </div>
-                                        <p>このように、おなじ数ずつ 分ける 計算を <b>わり算</b> というよ。</p>`,
-                                        quizzes: [
-                                            { question: "8こを 2人で 同じ数ずつ 分けると、1人 何こかな？", display: "8 ÷ 2", answer: 4 },
-                                            { question: "15こを 3人で 同じ数ずつ 分けると、1人 何こかな？", display: "15 ÷ 3", answer: 5 }
-                                        ]
-                                    },
-                                    {
-                                        title: "(2) かけ算・たし算・ひき算との かんけい",
-                                        content: `<h4>わり算の 答えを 見つける ヒント</h4>
-                                        <div class="point-box" style="background:#eef7ff;">
-                                            <b>かけ算との かんけい</b><br>
-                                            12 ÷ 3 の 答えは、<b>3 ✕ □ ＝ 12</b> になる □ を さがせばいいんだよ！
-                                        </div>
-                                        <div class="point-box" style="background:#fff2f0;">
-                                            <b>ひきざんとの かんけい</b><br>
-                                            12から 3を 何回 引（ひ）けるかな？<br>
-                                            12 － 3 － 3 － 3 － 3 ＝ 0 ➔ <b>4回</b> 引けるから、答えは 4！
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "「20 ÷ 4」の 答えを かけ算で さがすと？", display: "4 ✕ □ ＝ 20", answer: 5 },
-                                            { question: "「10 ÷ 2」の 答えを ひき算で さがすと？", display: "10 － 2 － 2 － ... 何回引ける？", answer: 5 }
-                                        ]
-                                    },
-                                    {
-                                        title: "(3) 1位数で わる 計算（けいさん）",
-                                        content: `<h4>九九（くく）を つかって パッと とこう</h4>
-                                        <div class="point-box">
-                                            わる数（右がわの数）の だんの 九九を おもい出そう！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>24 ÷ 6 ＝ □</b></p>
-                                            <p>➔ 6のだん：6 ✕ 1＝6, 6 ✕ 2＝12, 6 ✕ 3＝18, <b>6 ✕ 4＝24</b>！</p>
-                                            <p>答えは <b>4</b> だね！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "32 ÷ 8 は いくつかな？", display: "32 ÷ 8", answer: 4 },
-                                            { question: "45 ÷ 9 は いくつかな？", display: "45 ÷ 9", answer: 5 }
-                                        ]
-                                    },
-                                    {
-                                        title: "(4) 答えが 2けたに なる わり算",
-                                        content: `<h4>50 や 30 などの 計算</h4>
-                                        <div class="point-box">
-                                            大きな 数でも、10の まとまりで かんがえると かんたんだよ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>80 ÷ 2 ＝ □</b></p>
-                                            <p>➔ 10の まとまりが <b>8つ</b> あるよ。</p>
-                                            <p>➔ 8 ÷ 2 ＝ 4</p>
-                                            <p>➔ 10の まとまりが 4つだから、答えは <b>40</b> だね！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "60 ÷ 3 は いくつかな？", display: "60 ÷ 3", answer: 20 },
-                                            { question: "100 ÷ 2 は いくつかな？", display: "100 ÷ 2", answer: 50 }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                title: "7. <ruby>小数<rt>しょうすう</rt></ruby>",
-                                subUnits: [
-                                    {
-                                        title: "(1) 「.」（てん）と 1/10 の おはなし",
-                                        content: `<h4>1より ちいさい お部屋（位）</h4>
-                                        <div class="point-box">
-                                            1を 10こに 分けた 1つ分を <b>0.1（れい てん いち）</b> というよ。<br>
-                                            この 「 . 」 を <b>小数（しょうすう）点</b> と よぶんだ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p>0.1 が 10こ あつまると <b>1</b> になるよ！</p>
-                                            <div style="display:flex; width:200px; height:30px; border:2px solid #333; margin:0 auto;">
-                                                <div style="flex:1; background:#ffd6e7; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div>
-                                            </div>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "0.1 が 10こ あつまると いくつ？", display: "0.1 ✕ 10", answer: 1 },
-                                            { question: "1を 10こに 分けた 1つ分は？", display: "1 ÷ 10", answer: 0.1 }
-                                        ]
-                                    },
-                                    {
-                                        title: "(2) 小数の たし算",
-                                        content: `<h4>「.」を そろえて たそう</h4>
-                                        <div class="point-box">
-                                            たし算の ときは、小数点の ばしょを ぴったり そろえて 書くのが ポイント！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>0.3 ＋ 0.5 ＝ 0.8</b></p>
-                                            <p>3 ＋ 5 ＝ 8 と 同じように かんがえていいよ！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "0.4 ＋ 0.2 は いくつかな？", display: "0.4 ＋ 0.2", answer: 0.6 },
-                                            { question: "0.6 ＋ 0.4 は いくつかな？", display: "0.6 ＋ 0.4", answer: 1 }
-                                        ]
-                                    },
-                                    {
-                                        title: "(3) 小数の 引き算",
-                                        content: `<h4>「.」を そろえて ひこう</h4>
-                                        <div class="point-box">
-                                            引き算も 同じ！ 小数点を そろえて 計算しよう。
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>0.8 － 0.3 ＝ 0.5</b></p>
-                                            <p><b>1 － 0.2</b> のときは、1を <b>1.0</b> だと かんがえると まちがえにくいよ！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "0.9 － 0.5 は いくつかな？", display: "0.9 － 0.5", answer: 0.4 },
-                                            { question: "1 － 0.3 は いくつかな？", display: "1 － 0.3", answer: 0.7 }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                title: "8. <ruby>分数<rt>ぶんすう</rt></ruby>",
-                                subUnits: [
-                                    {
-                                        title: "(1) <ruby>分母<rt>ぶんぼ</rt></ruby>と <ruby>分子<rt>ぶんし</rt></ruby>",
-                                        content: `<h4>分数の なまえを おぼえよう</h4>
-                                        <div class="point-box">
-                                            ・下の数 ➔ <b>分母（ぶんぼ）</b>：お母さんが 子を おんぶしているよ。<br>
-                                            ・上の数 ➔ <b>分子（ぶんし）</b>：上に 乗っているのが 子どもだよ。
-                                        </div>
-                                        <div class="data-demo">
-                                            <p style="font-size: 32px;"><b><ruby>1<rt>（分子）</rt></ruby><br>―<br><ruby>3<rt>（分母）</rt></ruby></b></p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "「3分の1」の下の数（3）のなまえは？", display: "1/3", answer: "分母", options: ["分母", "分子"] }
-                                        ]
-                                    },
-                                    {
-                                        title: "(2) <ruby>単位<rt>たんい</rt></ruby>分数の いくつ分",
-                                        content: `<h4>もとになる 大きさ</h4>
-                                        <div class="point-box">
-                                            1/3（3分の1）が 2こ あつまると <b>2/3（3分の2）</b> になるよ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p>1/4 が 3こ あつまると ➔ <b>3/4</b></p>
-                                            <p>1/4 が 4こ あつまると ➔ <b>4/4（つまり 1！）</b></p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "1/5 が 3こ あつまると いくつ？", display: "1/5 ✕ 3", answer: "3/5" }
-                                        ]
-                                    },
-                                    {
-                                        title: "(3) 分数の たし算",
-                                        content: `<h4>上の数（分子）だけ たそう</h4>
-                                        <div class="point-box">
-                                            分母（下の数）が 同じなら、上の数（分子）を たすだけだよ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>1/5 ＋ 2/5 ＝ 3/5</b></p>
-                                            <p>※ 下の数は 5のままで 変わらないよ！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "1/4 ＋ 2/4 は いくつ？", display: "1/4 ＋ 2/4", answer: "3/4" }
-                                        ]
-                                    },
-                                    {
-                                        title: "(4) 分数の 引き算",
-                                        content: `<h4>上の数（分子）だけ ひこう</h4>
-                                        <div class="point-box">
-                                            分母が 同じなら、上の数（分子）を ひくだけ！
-                                        </div>
-                                        <div class="data-demo">
-                                            <p><b>3/5 － 1/5 ＝ 2/5</b></p>
-                                            <p><b>1 － 1/3</b> のときは、1を <b>3/3</b> だと かんがえよう！</p>
-                                        </div>`,
-                                        quizzes: [
-                                            { question: "4/5 － 1/5 は いくつ？", display: "4/5 － 1/5", answer: "3/5" },
-                                            { question: "1 － 1/4 は いくつ？", display: "1 － 1/4", answer: "3/4" }
-                                        ]
-                                    }
-                                ]
-                            },
+                                                                                <p>このように、おなじ数ずつ 分ける 計算を <b>わり算</b> というよ。</p>`,
+                                                                                quizzes: [
+                                                                                    { question: "8こを 2人で 同じ数ずつ 分けると、1人 何こかな？", display: "8 ÷ 2", answer: 4 },
+                                                                                    { question: "15こを 3人で 同じ数ずつ 分けると、1人 何こかな？", display: "15 ÷ 3", answer: 5 },
+                                                                                    { question: "24こを 4人で 同じ数ずつ 分けると、1人 何こかな？", display: "24 ÷ 4", answer: 6 },
+                                                                                    { question: "30こを 5人で 同じ数ずつ 分けると、1人 何こかな？", display: "30 ÷ 5", answer: 6 },
+                                                                                    { question: "18こを 6人で 同じ数ずつ 分けると、1人 何こかな？", display: "18 ÷ 6", answer: 3 }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(2) かけ算・たし算・ひき算との かんけい",
+                                                                                content: `<h4>わり算の 答えを 見つける ヒント</h4>
+                                                                                <div class="point-box" style="background:#eef7ff;">
+                                                                                    <b>かけ算との かんけい</b><br>
+                                                                                    12 ÷ 3 の 答えは、<b>3 ✕ □ ＝ 12</b> になる □ を さがせばいいんだよ！
+                                                                                </div>
+                                                                                <div class="point-box" style="background:#fff2f0;">
+                                                                                    <b>ひきざんとの かんけい</b><br>
+                                                                                    12から 3を 何回 引（ひ）けるかな？<br>
+                                                                                    12 － 3 － 3 － 3 － 3 ＝ 0 ➔ <b>4回</b> 引けるから、答えは 4！
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "「20 ÷ 4」の 答えを かけ算で さがすと？", display: "4 ✕ □ ＝ 20", answer: 5 },
+                                                                                    { question: "「10 ÷ 2」の 答えを ひき算で さがすと？", display: "10 － 2 － 2 － ... 何回引ける？", answer: 5 },
+                                                                                    { question: "「18 ÷ 3」の 答えを かけ算で さがすと？", display: "3 ✕ □ ＝ 18", answer: 6 },
+                                                                                    { question: "「35 ÷ 5」の 答えを かけ算で さがすと？", display: "5 ✕ □ ＝ 35", answer: 7 },
+                                                                                    { question: "「16 ÷ 4」の 答えを かけ算で さがすと？", display: "4 ✕ □ ＝ 16", answer: 4 }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(3) 1位数で わる 計算（けいさん）",
+                                                                                content: `<h4>九九（くく）を つかって パッと とこう</h4>
+                                                                                <div class="point-box">
+                                                                                    わる数（右がわの数）の だんの 九九を おもい出そう！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>24 ÷ 6 ＝ □</b></p>
+                                                                                    <p>➔ 6のだん：6 ✕ 1＝6, 6 ✕ 2＝12, 6 ✕ 3＝18, <b>6 ✕ 4＝24</b>！</p>
+                                                                                    <p>答えは <b>4</b> だね！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "32 ÷ 8 は いくつかな？", display: "32 ÷ 8", answer: 4 },
+                                                                                    { question: "45 ÷ 9 は いくつかな？", display: "45 ÷ 9", answer: 5 },
+                                                                                    { question: "21 ÷ 7 は いくつかな？", display: "21 ÷ 7", answer: 3 },
+                                                                                    { question: "54 ÷ 6 は いくつかな？", display: "54 ÷ 6", answer: 9 },
+                                                                                    { question: "28 ÷ 4 は いくつかな？", display: "28 ÷ 4", answer: 7 }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(4) 答えが 2けたに なる わり算",
+                                                                                content: `<h4>50 や 30 などの 計算</h4>
+                                                                                <div class="point-box">
+                                                                                    大きな 数でも、10の まとまりで かんがえると かんたんだよ！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>80 ÷ 2 ＝ □</b></p>
+                                                                                    <p>➔ 10の まとまりが <b>8つ</b> あるよ。</p>
+                                                                                    <p>➔ 8 ÷ 2 ＝ 4</p>
+                                                                                    <p>➔ 10の まとまりが 4つだから、答えは <b>40</b> だね！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "60 ÷ 3 は いくつかな？", display: "60 ÷ 3", answer: 20 },
+                                                                                    { question: "100 ÷ 2 は いくつかな？", display: "100 ÷ 2", answer: 50 },
+                                                                                    { question: "90 ÷ 3 は いくつかな？", display: "90 ÷ 3", answer: 30 },
+                                                                                    { question: "40 ÷ 2 は いくつかな？", display: "40 ÷ 2", answer: 20 },
+                                                                                    { question: "120 ÷ 4 は いくつかな？", display: "120 ÷ 4", answer: 30 }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        title: "7. <ruby>小数<rt>しょうすう</rt></ruby>",
+                                                                        subUnits: [
+                                                                            {
+                                                                                title: "(1) 「.」（てん）と 1/10 の おはなし",
+                                                                                content: `<h4>1より ちいさい お部屋（位）</h4>
+                                                                                <div class="point-box">
+                                                                                    1を 10こに 分けた 1つ分を <b>0.1（れい てん いち）</b> というよ。<br>
+                                                                                    この 「 . 」 を <b>小数（しょうすう）点</b> と よぶんだ！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p>0.1 が 10こ あつまると <b>1</b> になるよ！</p>
+                                                                                    <div style="display:flex; width:200px; height:30px; border:2px solid #333; margin:0 auto;">
+                                                                                        <div style="flex:1; background:#ffd6e7; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1; border-right:1px solid #333;"></div><div style="flex:1;"></div>
+                                                                                    </div>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "0.1 が 10こ あつまると いくつ？", display: "0.1 ✕ 10", answer: 1 },
+                                                                                    { question: "1を 10こに 分けた 1つ分は？", display: "1 ÷ 10", answer: 0.1 },
+                                                                                    { question: "0.1 が 5こ あつまると いくつ？", display: "0.1 ✕ 5", answer: 0.5 }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(2) 小数の たし算",
+                                                                                content: `<h4>「.」を そろえて たそう</h4>
+                                                                                <div class="point-box">
+                                                                                    たし算の ときは、小数点の ばしょを ぴったり そろえて 書くのが ポイント！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>0.3 ＋ 0.5 ＝ 0.8</b></p>
+                                                                                    <p>3 ＋ 5 ＝ 8 と 同じように かんがえていいよ！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "0.4 ＋ 0.2 は いくつかな？", display: "0.4 ＋ 0.2", answer: 0.6 },
+                                                                                    { question: "0.6 ＋ 0.4 は いくつかな？", display: "0.6 ＋ 0.4", answer: 1 },
+                                                                                    { question: "1.2 ＋ 0.5 は いくつかな？", display: "1.2 ＋ 0.5", answer: 1.7 },
+                                                                                    { question: "0.8 ＋ 0.7 は いくつかな？", display: "0.8 ＋ 0.7", answer: 1.5 },
+                                                                                    { question: "2.3 ＋ 1.4 は いくつかな？", display: "2.3 ＋ 1.4", answer: 3.7 }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(3) 小数の 引き算",
+                                                                                content: `<h4>「.」を そろえて ひこう</h4>
+                                                                                <div class="point-box">
+                                                                                    引き算も 同じ！ 小数点を そろえて 計算しよう。
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>0.8 － 0.3 ＝ 0.5</b></p>
+                                                                                    <p><b>1 － 0.2</b> のときは、1を <b>1.0</b> だと かんがえると まちがえにくいよ！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "0.9 － 0.5 は いくつかな？", display: "0.9 － 0.5", answer: 0.4 },
+                                                                                    { question: "1 － 0.3 は いくつかな？", display: "1 － 0.3", answer: 0.7 },
+                                                                                    { question: "1.5 － 0.4 は いくつかな？", display: "1.5 － 0.4", answer: 1.1 },
+                                                                                    { question: "2.8 － 1.3 は いくつかな？", display: "2.8 － 1.3", answer: 1.5 },
+                                                                                    { question: "1.2 － 0.6 は いくつかな？", display: "1.2 － 0.6", answer: 0.6 }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        title: "8. <ruby>分数<rt>ぶんすう</rt></ruby>",
+                                                                        subUnits: [
+                                                                            {
+                                                                                title: "(1) <ruby>分母<rt>ぶんぼ</rt></ruby>と <ruby>分子<rt>ぶんし</rt></ruby>",
+                                                                                content: `<h4>分数の なまえを おぼえよう</h4>
+                                                                                <div class="point-box">
+                                                                                    ・下の数 ➔ <b>分母（ぶんぼ）</b>：お母さんが 子を おんぶしているよ。<br>
+                                                                                    ・上の数 ➔ <b>分子（ぶんし）</b>：上に 乗っているのが 子どもだよ。
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p style="font-size: 32px;"><b><ruby>1<rt>（分子）</rt></ruby><br>―<br><ruby>3<rt>（分母）</rt></ruby></b></p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "「3分の1」の下の数（3）のなまえは？", display: "1/3", answer: "分母", options: ["分母", "分子"] },
+                                                                                    { question: "「4分の3」の上の数（3）のなまえは？", display: "3/4", answer: "分子", options: ["分母", "分子"] },
+                                                                                    { question: "分母が5、分子が2の分数は？", display: "分母5, 分子2", answer: "2/5", options: ["2/5", "5/2"] }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(2) <ruby>単位<rt>たんい</rt></ruby>分数の いくつ分",
+                                                                                content: `<h4>もとになる 大きさ</h4>
+                                                                                <div class="point-box">
+                                                                                    1/3（3分の1）が 2こ あつまると <b>2/3（3分の2）</b> になるよ！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p>1/4 が 3こ あつまると ➔ <b>3/4</b></p>
+                                                                                    <p>1/4 が 4こ あつまると ➔ <b>4/4（つまり 1！）</b></p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "1/5 が 3こ あつまると いくつ？", display: "1/5 ✕ 3", answer: "3/5" },
+                                                                                    { question: "1/8 が 5こ あつまると いくつ？", display: "1/8 ✕ 5", answer: "5/8" },
+                                                                                    { question: "1/3 が 3こ あつまると いくつ？", display: "1/3 ✕ 3", answer: "1", options: ["1/3", "3/3 (1)", "2/3"] },
+                                                                                    { question: "1/10 が 7こ あつまると いくつ？", display: "1/10 ✕ 7", answer: "7/10" },
+                                                                                    { question: "1/6 が 2こ あつまると いくつ？", display: "1/6 ✕ 2", answer: "2/6" }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(3) 分数の たし算",
+                                                                                content: `<h4>上の数（分子）だけ たそう</h4>
+                                                                                <div class="point-box">
+                                                                                    分母（下の数）が 同じなら、上の数（分子）を たすだけだよ！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>1/5 ＋ 2/5 ＝ 3/5</b></p>
+                                                                                    <p>※ 下の数は 5のままで 変わらないよ！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "1/4 ＋ 2/4 は いくつ？", display: "1/4 ＋ 2/4", answer: "3/4" },
+                                                                                    { question: "2/7 ＋ 3/7 は いくつ？", display: "2/7 ＋ 3/7", answer: "5/7" },
+                                                                                    { question: "1/5 ＋ 3/5 は いくつ？", display: "1/5 ＋ 3/5", answer: "4/5" },
+                                                                                    { question: "2/9 ＋ 5/9 は いくつ？", display: "2/9 ＋ 5/9", answer: "7/9" },
+                                                                                    { question: "1/3 ＋ 1/3 は いくつ？", display: "1/3 ＋ 1/3", answer: "2/3" }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                title: "(4) 分数の 引き算",
+                                                                                content: `<h4>上の数（分子）だけ ひこう</h4>
+                                                                                <div class="point-box">
+                                                                                    分母が 同じなら、上の数（分子）を ひくだけ！
+                                                                                </div>
+                                                                                <div class="data-demo">
+                                                                                    <p><b>3/5 － 1/5 ＝ 2/5</b></p>
+                                                                                    <p><b>1 － 1/3</b> のときは、1を <b>3/3</b> だと かんがえよう！</p>
+                                                                                </div>`,
+                                                                                quizzes: [
+                                                                                    { question: "4/5 － 1/5 は いくつ？", display: "4/5 － 1/5", answer: "3/5" },
+                                                                                    { question: "1 － 1/4 は いくつ？", display: "1 － 1/4", answer: "3/4" },
+                                                                                    { question: "7/8 － 3/8 は いくつ？", display: "7/8 － 3/8", answer: "4/8" },
+                                                                                    { question: "5/6 － 4/6 は いくつ？", display: "5/6 － 4/6", answer: "1/6" },
+                                                                                    { question: "1 － 2/5 は いくつ？", display: "5/5 － 2/5", answer: "3/5" }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                        ,
                             {
                                 title: "9. □を つかった <ruby>式<rt>しき</rt></ruby>",
                                 subUnits: [
