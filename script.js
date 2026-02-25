@@ -7155,9 +7155,26 @@ const studyData = {
         } 
     },
     science: { 
-        name: "<ruby>理科<rt>理科</rt></ruby>", 
+        name: "<ruby>理科<rt>りか</rt></ruby>", 
         grades: {
-            e3: { name: "小3", categories: [{ name: "生き物", units: [{ title: "昆虫", subUnits: [{ title: "チョウの育ち方", content: "たまごから成虫までを調べよう。" }] }] }] }
+            elementary: { 
+                name: "小学生", 
+                categories: [
+                    { name: "生物", units: [] },
+                    { name: "化学", units: [] },
+                    { name: "物理", units: [] },
+                    { name: "地学", units: [] }
+                ] 
+            },
+            juniorHigh: { 
+                name: "中学生", 
+                categories: [
+                    { name: "生物", units: [] },
+                    { name: "化学", units: [] },
+                    { name: "物理", units: [] },
+                    { name: "地学", units: [] }
+                ] 
+            }
         } 
     },
     social: { 
@@ -7248,11 +7265,37 @@ window.onload = () => {
     }
 
     function showGrades() { 
+        if (!studyData[currentSubject]) return;
         const subjectName = studyData[currentSubject].name;
         updateBreadcrumb([
             { label: 'ホーム', action: showHome },
             { label: subjectName }
         ]);
+
+        const gradeGrid = document.querySelector('.grade-grid');
+        if (gradeGrid) {
+            gradeGrid.innerHTML = '';
+            // 教科ごとの学年データを動的に生成
+            Object.keys(studyData[currentSubject].grades).forEach(gradeKey => {
+                const gradeData = studyData[currentSubject].grades[gradeKey];
+                const div = document.createElement('div');
+                div.className = 'grade-card';
+                div.innerHTML = gradeData.name;
+                div.onclick = () => {
+                    currentGrade = gradeKey;
+                    showCategories();
+                };
+                
+                // 「重要まとめ」などの特殊なボタンには色をつける
+                if (gradeKey === 'summary') {
+                    div.style.background = 'linear-gradient(135deg, #f1c40f, #f39c12)';
+                    div.style.color = 'white';
+                    div.style.fontWeight = 'bold';
+                }
+                gradeGrid.appendChild(div);
+            });
+        }
+
         showView('grade-view'); 
     }
 
