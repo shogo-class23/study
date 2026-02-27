@@ -11063,6 +11063,18 @@ const studyData = {
                                         quizzes: [
                                             { question: "「窓を開けなさい」を英語で？", display: "英文", answer: "Open the window.", options: ["Open the window.", "Opening the window.", "To open the window."] }
                                         ]
+                                    },
+                                    {
+                                        title: "(イ) 命令文 + and / or",
+                                        content: `<h4>「そうすれば」と 「さもないと」</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>命令文, and 〜</b>：「〜しなさい、<b>そうすれば</b>〜」。<br>
+                                            ・<b>命令文, or 〜</b>：「〜しなさい、<b>さもないと</b>〜」。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "Hurry up, ( ) you will miss the train. (さもないと)", display: "接続詞", answer: "or", options: ["or", "and", "but"] },
+                                            { question: "Study hard, ( ) you will pass the exam. (そうすれば)", display: "接続詞", answer: "and", options: ["and", "or", "so"] }
+                                        ]
                                     }
                                 ]
                             },
@@ -11128,6 +11140,30 @@ const studyData = {
                                         quizzes: [
                                             { question: "This book ( ) written by him. (書かれた)", display: "英文", answer: "was", options: ["was", "is", "has"] }
                                         ]
+                                    },
+                                    {
+                                        title: "(イ) 助動詞を 含む 受け身",
+                                        content: `<h4>「〜される かもしれない」など</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>助動詞 + be + 過去分詞</b> の形になる。<br>
+                                            ・This can be done.（これはできる）<br>
+                                            ・The meeting will be held.（会議が開かれるだろう）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "The work must ( ) finished by tomorrow. (終えられなければならない)", display: "英文", answer: "be", options: ["be", "is", "been"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(ウ) by 以外の 前置詞",
+                                        content: `<h4>よく使う 慣用表現</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・be surprised <b>at</b> 〜（〜に驚く）<br>
+                                            ・be filled <b>with</b> 〜（〜で満たされている）<br>
+                                            ・be known <b>to</b> 〜（〜に知られている）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "The mountain is covered ( ) snow. (〜で覆われている)", display: "前置詞", answer: "with", options: ["with", "by", "at"] }
+                                        ]
                                     }
                                 ]
                             },
@@ -11175,6 +11211,84 @@ const studyData = {
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) been to America twice. (行ったことがある)", display: "英文", answer: "have", options: ["have", "am", "was"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "15. 現在完了進行形",
+                                subUnits: [
+                                    {
+                                        title: "(ア) have been 〜ing",
+                                        content: `<h4>ずっと 〜し続けている</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>have been + 動詞のing形</b>：過去から今もずっと動作が続いていることを表す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I ( ) been playing soccer for two hours. (ずっとし続けている)", display: "英文", answer: "have", options: ["have", "am", "was"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "16. 仮定法（かていほう）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) If I were ...",
+                                        content: `<h4>もし 〜だったら</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>If + 主語 + 過去形, 主語 + would/could + 原形</b><br>
+                                            ・今の事実とは違う、ありえないことを想像する時に使う。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "If I ( ) a bird, I could fly to you. (もし鳥だったら)", display: "英文", answer: "were", options: ["were", "am", "was"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "17. 分詞（ぶんし）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 名詞を 説明する 形",
+                                        content: `<h4>形容詞のような 働き</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>現在分詞 (~ing)</b>：〜している（running boy）<br>
+                                            ・<b>過去分詞 (-ed)</b>：〜された（broken window）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "The girl ( ) a song is my sister. (歌っている女の子)", display: "分詞", answer: "singing", options: ["singing", "sung", "sings"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "18. 分詞構文（ぶんしこうぶん）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 文を つなぐ ing",
+                                        content: `<h4>接続詞を 使わない 表現</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・文の先頭に ing形を置き、「〜したとき」「〜しながら」などの意味を表す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "( ) the book, he fell asleep. (本を読んでいる時)", display: "分詞構文", answer: "Reading", options: ["Reading", "Read", "To read"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "19. 話法（わほう）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 直接話法と 間接話法",
+                                        content: `<h4>伝聞の 形</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>直接話法</b>：He said, \"I am hungry.\"<br>
+                                            ・<b>間接話法</b>：He said that he was hungry.（彼はお腹が空いていると言った）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "He told me ( ) he was busy. (〜だと言った)", display: "英文", answer: "that", options: ["that", "which", "what"] }
                                         ]
                                     }
                                 ]
