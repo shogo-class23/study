@@ -11035,6 +11035,57 @@ const studyData = {
                                             { question: "「青色」を英語で書くと？", display: "英単語", answer: "blue", options: ["blue", "red", "black"] },
                                             { question: "「緑色」を英語で書くと？", display: "英単語", answer: "green", options: ["green", "gray", "white"] }
                                         ]
+                                    },
+                                    {
+                                        title: "(カ) 形容詞（けいようし）",
+                                        content: `<h4>様子や 状態を 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em; max-height: 250px; overflow-y: auto;">
+                                            <b>【気持ち・状態】</b><br>
+                                            happy（幸せ） / sad（悲しい） / hungry（空腹） / tired（疲れた） / fine（元気な）<br>
+                                            <b>【大きさ・新旧】</b><br>
+                                            big（大きい） / small（小さい） / large（巨大な） / new（新しい） / old（古い）<br>
+                                            <b>【速さ・難易度】</b><br>
+                                            fast（速い） / slow（遅い） / easy（簡単な） / difficult（難しい）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「お腹が空いている」を英語で言うと？", display: "英単語", answer: "hungry", options: ["hungry", "happy", "tired"] },
+                                            { question: "「難しい」を英語で言うと？", display: "英単語", answer: "difficult", options: ["difficult", "easy", "fast"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(キ) 前置詞（ぜんちし）",
+                                        content: `<h4>場所や つながりを 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            <b>【場所を表す】</b><br>
+                                            ・in（〜の中に） / on（〜の上に） / at（〜に）<br>
+                                            ・under（〜の下に） / near（〜の近くに） / between（〜の間に）<br>
+                                            <b>【その他】</b><br>
+                                            ・with（〜と一緒に） / for（〜のために） / from（〜から） / to（〜へ）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「〜の下に」という意味の前置詞は？", display: "英単語", answer: "under", options: ["under", "on", "in"] },
+                                            { question: "「〜と一緒に」という意味の前置詞は？", display: "英単語", answer: "with", options: ["with", "for", "from"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(ク) 挨拶（あいさつ）",
+                                        content: `<h4>基本の コミュニケーション</h4>
+                                        <div class="point-box" style="font-size: 0.85em; max-height: 250px; overflow-y: auto;">
+                                            <b>【出会ったとき】</b><br>
+                                            Hello / Hi（こんにちは）<br>
+                                            Good morning（おはよう） / Good afternoon（こんにちは） / Good evening（こんばんは）<br>
+                                            Nice to meet you.（はじめまして）<br><br>
+                                            <b>【感謝・あやまる】</b><br>
+                                            Thank you.（ありがとう） / You're welcome.（どういたしまして）<br>
+                                            I'm sorry.（ごめんなさい） / That's okay.（大丈夫ですよ）<br><br>
+                                            <b>【別れるとき・その他】</b><br>
+                                            Goodbye（さようなら） / See you.（またね）<br>
+                                            Excuse me.（すみません：呼びかけ）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「はじめまして」を英語で言うと？", display: "英文", answer: "Nice to meet you.", options: ["Nice to meet you.", "How are you?", "Thank you."] },
+                                            { question: "「どういたしまして」を英語で言うと？", display: "英文", answer: "You're welcome.", options: ["You're welcome.", "I'm sorry.", "Excuse me."] }
+                                        ]
                                     }
                                 ]
                             },
@@ -11046,8 +11097,12 @@ const studyData = {
                                         content: `<h4>自分や 相手の こと</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>be動詞</b>：am, is, are。「〜です、〜にある」を表す。<br>
-                                            ・<b>一般動詞</b>：play, like, go。「（動作）〜する」を表す。<br>
-                                            ・<b>There is / are</b>：「〜がある」を表す。
+                                            ・<b>一般動詞</b>：play, like, go。「（動作）〜する」を表す。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>am</b> from Japan.（私は日本出身です）<br>
+                                            ・He <b>is</b> very kind.（彼はとても親切です）<br>
+                                            ・I <b>play</b> tennis.（私はテニスをします）<br>
+                                            ・There <b>is</b> a book on the table.（机の上に本が1冊あります）
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) a student. に入るbe動詞は？", display: "am/is/are", answer: "am", options: ["am", "is", "are"] }
@@ -11062,9 +11117,12 @@ const studyData = {
                                         title: "(ア) 疑問文の 形",
                                         content: `<h4>相手に たずねる</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・be動詞の文：be動詞を前に出す（Are you...?）。<br>
-                                            ・一般動詞の文：Do / Does を前に出す（Do you...?）。<br>
-                                            ・<b>間接疑問</b>：I don't know who he is.（彼が誰か知らない）。
+                                            ・be動詞の文：be動詞を前に出す。<br>
+                                            ・一般動詞の文：Do / Does を前に出す。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・<b>Are you</b> hungry?（お腹が空いていますか？）<br>
+                                            ・<b>Do you</b> like apples?（リンゴは好きですか？）<br>
+                                            ・I don't know <b>who she is</b>.（彼女が誰なのか知りません）
                                         </div>`,
                                         quizzes: [
                                             { question: "You are happy. を疑問文にすると？", display: "英文", answer: "Are you happy?", options: ["Are you happy?", "Do you happy?", "Is you happy?"] }
@@ -11080,7 +11138,10 @@ const studyData = {
                                         content: `<h4>「〜ではない」と 伝える</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・be動詞の文：be動詞の後に <b>not</b> を置く。<br>
-                                            ・一般動詞の文：動詞の前に <b>don't / doesn't</b> を置く。
+                                            ・一般動詞の文：動詞の前に <b>don't / doesn't</b> を置く。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>am not</b> a teacher.（私は先生ではありません）<br>
+                                            ・She <b>doesn't</b> like coffee.（彼女はコーヒーが好きではありません）
                                         </div>`,
                                         quizzes: [
                                             { question: "I like sushi. を否定文にすると？", display: "英文", answer: "I don't like sushi.", options: ["I don't like sushi.", "I not like sushi.", "I am not like sushi."] }
@@ -11095,8 +11156,12 @@ const studyData = {
                                         title: "(ア) will と be going to",
                                         content: `<h4>これからの こと</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>will</b>：その場で決めたことや、予測を表す。<br>
-                                            ・<b>be going to</b>：すでに決まっている予定を表す。
+                                            ・<b>will</b>：その場の決心や予測。<br>
+                                            ・<b>be going to</b>：予定を表す。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>will</b> help you.（手伝ってあげましょう）<br>
+                                            ・It <b>will</b> rain tomorrow.（明日は雨でしょう）<br>
+                                            ・I <b>am going to</b> visit Kyoto next week.（来週京都に行く予定です）
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) visit Kyoto tomorrow. (予定)", display: "英文", answer: "am going to", options: ["am going to", "will be", "going to"] }
@@ -11111,8 +11176,12 @@ const studyData = {
                                         title: "(ア) 規則動詞と 不規則動詞",
                                         content: `<h4>おわった こと</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・規則動詞：語尾に <b>-ed</b> をつける（played, liked）。<br>
-                                            ・不規則動詞：形が変わる（go → went, have → had）。
+                                            ・規則動詞：語尾に <b>-ed</b> をつける。<br>
+                                            ・不規則動詞：形がバラバラに変わる。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>watched</b> TV last night.（昨夜テレビを見ました）<br>
+                                            ・She <b>went</b> to school yesterday.（彼女は昨日学校へ行きました）<br>
+                                            ・I <b>had</b> lunch at noon.（正午に昼食を食べました）
                                         </div>`,
                                         quizzes: [
                                             { question: "go（行く）の過去形は何？", display: "単語", answer: "went", options: ["went", "goed", "goes"] }
@@ -11128,7 +11197,10 @@ const studyData = {
                                         content: `<h4>今、 している こと</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>be動詞 + 動詞のing形</b> で「今〜しています」を表す。<br>
-                                            ・過去進行形：was/were + ing で「〜していました」。
+                                            ・過去進行形：was/were + ing で「〜していました」。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>am playing</b> the piano now.（私は今ピアノを弾いています）<br>
+                                            ・They <b>were running</b> in the park.（彼らは公園を走っていました）
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) playing tennis now. に入るのは？", display: "英文", answer: "am", options: ["am", "is", "are"] }
@@ -11144,8 +11216,11 @@ const studyData = {
                                         content: `<h4>命令・誘い・感嘆</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>命令文</b>：動詞の原形から始める。「〜しなさい」。<br>
-                                            ・Don't ...：「〜するな」。<br>
-                                            ・<b>感嘆文</b>：What a ...! や How ...! で「なんて〜だろう！」。
+                                            ・<b>感嘆文</b>：なんて〜だろう！<br><br>
+                                            <b>【例文】</b><br>
+                                            ・<b>Be</b> quiet.（静かにしなさい）<br>
+                                            ・<b>Don't</b> touch this.（これに触るな）<br>
+                                            ・<b>What a</b> beautiful flower!（なんて美しい花でしょう！）
                                         </div>`,
                                         quizzes: [
                                             { question: "「窓を開けなさい」を英語で？", display: "英文", answer: "Open the window.", options: ["Open the window.", "Opening the window.", "To open the window."] }
@@ -11156,7 +11231,10 @@ const studyData = {
                                         content: `<h4>「そうすれば」と 「さもないと」</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>命令文, and 〜</b>：「〜しなさい、<b>そうすれば</b>〜」。<br>
-                                            ・<b>命令文, or 〜</b>：「〜しなさい、<b>さもないと</b>〜」。
+                                            ・<b>命令文, or 〜</b>：「〜しなさい、<b>さもないと</b>〜」。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・Hurry up, <b>and</b> you will catch the bus.（急ぎなさい、そうすればバスに間に合います）<br>
+                                            ・Hurry up, <b>or</b> you will be late.（急ぎなさい、さもないと遅刻します）
                                         </div>`,
                                         quizzes: [
                                             { question: "Hurry up, ( ) you will miss the train. (さもないと)", display: "接続詞", answer: "or", options: ["or", "and", "but"] },
@@ -11173,8 +11251,12 @@ const studyData = {
                                         content: `<h4>動詞に 意味を プラスする</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>can</b>：〜できる。<br>
-                                            ・<b>must / have to</b>：〜しなければならない。<br>
-                                            ・<b>should</b>：〜すべきだ。
+                                            ・<b>must</b>：〜しなければならない。<br>
+                                            ・<b>should</b>：〜すべきだ。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>can</b> swim fast.（私は速く泳げます）<br>
+                                            ・You <b>must</b> finish your homework.（宿題を終えなければならない）<br>
+                                            ・You <b>should</b> see a doctor.（医者に診てもらうべきだ）
                                         </div>`,
                                         quizzes: [
                                             { question: "You ( ) study hard. (〜しなければならない)", display: "英文", answer: "must", options: ["must", "can", "may"] }
@@ -11190,8 +11272,11 @@ const studyData = {
                                         content: `<h4>くらべる 表現</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>比較級</b>：-er + than。「〜より〜だ」。<br>
-                                            ・<b>最上級</b>：the + -est。「一番〜だ」。<br>
-                                            ・長い単語は more / most を使う。
+                                            ・<b>最上級</b>：the + -est。「一番〜だ」。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・Ken is <b>taller than</b> me.（ケンは私より背が高い）<br>
+                                            ・This is <b>the most interesting</b> book.（これは一番面白い本です）<br>
+                                            ・I like winter <b>the best</b>.（私は冬が一番好きです）
                                         </div>`,
                                         quizzes: [
                                             { question: "tall（背が高い）の比較級は何？", display: "単語", answer: "taller", options: ["taller", "tallest", "more tall"] }
@@ -11207,7 +11292,11 @@ const studyData = {
                                         content: `<h4>動詞を 名詞のように 使う</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>不定詞 (to + 原形)</b>：〜すること。〜するために。<br>
-                                            ・<b>動名詞 (ing形)</b>：〜すること。
+                                            ・<b>動名詞 (ing形)</b>：〜すること。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I like <b>to listen</b> to music.（音楽を聴くことが好きです）<br>
+                                            ・I went to the library <b>to study</b>.（勉強するために図書館へ行った）<br>
+                                            ・<b>Playing</b> tennis is fun.（テニスをすることは楽しい）
                                         </div>`,
                                         quizzes: [
                                             { question: "I want ( ) to music. (聴くこと)", display: "英文", answer: "to listen", options: ["to listen", "listening", "listen"] }
@@ -11222,7 +11311,10 @@ const studyData = {
                                         title: "(ア) be動詞 + 過去分詞",
                                         content: `<h4>「〜される」という 表現</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>be動詞 + 過去分詞</b> で「〜される、〜された」を表す。
+                                            ・<b>be動詞 + 過去分詞</b> で「〜される、〜された」を表す。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・This cake <b>was made</b> by my mother.（このケーキは母によって作られた）<br>
+                                            ・English <b>is spoken</b> all over the world.（英語は世界中で話されています）
                                         </div>`,
                                         quizzes: [
                                             { question: "This book ( ) written by him. (書かれた)", display: "英文", answer: "was", options: ["was", "is", "has"] }
@@ -11232,9 +11324,10 @@ const studyData = {
                                         title: "(イ) 助動詞を 含む 受け身",
                                         content: `<h4>「〜される かもしれない」など</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>助動詞 + be + 過去分詞</b> の形になる。<br>
-                                            ・This can be done.（これはできる）<br>
-                                            ・The meeting will be held.（会議が開かれるだろう）
+                                            ・<b>助動詞 + be + 過去分詞</b> の形になる。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・The star <b>can be seen</b> tonight.（その星は今夜見ることができます）<br>
+                                            ・The party <b>will be held</b> next Sunday.（パーティーは来週の日曜日に開かれるでしょう）
                                         </div>`,
                                         quizzes: [
                                             { question: "The work must ( ) finished by tomorrow. (終えられなければならない)", display: "英文", answer: "be", options: ["be", "is", "been"] }
@@ -11245,8 +11338,10 @@ const studyData = {
                                         content: `<h4>よく使う 慣用表現</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・be surprised <b>at</b> 〜（〜に驚く）<br>
-                                            ・be filled <b>with</b> 〜（〜で満たされている）<br>
-                                            ・be known <b>to</b> 〜（〜に知られている）
+                                            ・be filled <b>with</b> 〜（〜で満たされている）<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>was surprised at</b> the news.（私はそのニュースに驚きました）<br>
+                                            ・The mountain <b>is covered with</b> snow.（その山は雪で覆われています）
                                         </div>`,
                                         quizzes: [
                                             { question: "The mountain is covered ( ) snow. (〜で覆われている)", display: "前置詞", answer: "with", options: ["with", "by", "at"] }
@@ -11262,7 +11357,10 @@ const studyData = {
                                         content: `<h4>名詞を 文で 説明する</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>who</b>：人を説明する。<br>
-                                            ・<b>which / that</b>：物や動物を説明する。
+                                            ・<b>which / that</b>：物や動物を説明する。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I have a friend <b>who</b> lives in London.（私にはロンドンに住んでいる友達がいます）<br>
+                                            ・This is the cat <b>which</b> Ken likes.（これはケンが好きな猫です）
                                         </div>`,
                                         quizzes: [
                                             { question: "The boy ( ) is running is Ken. に入るのは？", display: "英文", answer: "who", options: ["who", "which", "whose"] }
@@ -11277,8 +11375,10 @@ const studyData = {
                                         title: "(ア) 第5文型まで",
                                         content: `<h4>文の 組み立て方</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・S（主語）、V（動詞）、O（目的語）、C（補語）。<br>
-                                            ・SVC（S=C）、SVO（SがOを〜する）など。
+                                            ・S（主語）、V（動詞）、O（目的語）、C（補語）。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>am</b> a student. (SVC: S=C)<br>
+                                            ・I <b>made</b> him happy. (SVOC: O=C)
                                         </div>`,
                                         quizzes: [
                                             { question: "I made him happy. の happy は何（S,V,O,C）？", display: "文型", answer: "C", options: ["C", "O", "S"] }
@@ -11293,8 +11393,10 @@ const studyData = {
                                         title: "(ア) 現在完了など",
                                         content: `<h4>さらに 豊かな 表現</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>現在完了 (have + 過去分詞)</b>：ずっと〜している、〜したことがある。<br>
-                                            ・付加疑問、強調構文など。
+                                            ・<b>現在完了 (have + 過去分詞)</b>：継続、経験、完了を表す。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・I <b>have been</b> busy since last Monday.（先週の月曜からずっと忙しい）<br>
+                                            ・<b>Have you ever seen</b> a panda?（パンダを見たことがありますか？）
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) been to America twice. (行ったことがある)", display: "英文", answer: "have", options: ["have", "am", "was"] }
@@ -11309,7 +11411,10 @@ const studyData = {
                                         title: "(ア) have been 〜ing",
                                         content: `<h4>ずっと 〜し続けている</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>have been + 動詞のing形</b>：過去から今もずっと動作が続いていることを表す。
+                                            ・<b>have been + 動詞のing形</b>：過去から今も動作が続いている。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・It <b>has been raining</b> for three hours.（3時間ずっと雨が降り続いています）<br>
+                                            ・I <b>have been waiting</b> for you.（ずっとあなたを待っていました）
                                         </div>`,
                                         quizzes: [
                                             { question: "I ( ) been playing soccer for two hours. (ずっとし続けている)", display: "英文", answer: "have", options: ["have", "am", "was"] }
@@ -11324,8 +11429,10 @@ const studyData = {
                                         title: "(ア) If I were ...",
                                         content: `<h4>もし 〜だったら</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>If + 主語 + 過去形, 主語 + would/could + 原形</b><br>
-                                            ・今の事実とは違う、ありえないことを想像する時に使う。
+                                            ・今の事実とは違う想像。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・<b>If I were</b> you, I <b>would</b> go.（もし私があなたなら、行くだろうに）<br>
+                                            ・If I <b>had</b> enough money, I <b>could</b> buy it.（お金があれば買えるのに）
                                         </div>`,
                                         quizzes: [
                                             { question: "If I ( ) a bird, I could fly to you. (もし鳥だったら)", display: "英文", answer: "were", options: ["were", "am", "was"] }
@@ -11340,8 +11447,11 @@ const studyData = {
                                         title: "(ア) 名詞を 説明する 形",
                                         content: `<h4>形容詞のような 働き</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>現在分詞 (~ing)</b>：〜している（running boy）<br>
-                                            ・<b>過去分詞 (-ed)</b>：〜された（broken window）
+                                            ・<b>現在分詞 (~ing)</b>：〜している<br>
+                                            ・<b>過去分詞 (-ed)</b>：〜された<br><br>
+                                            <b>【例文】</b><br>
+                                            ・The <b>sleeping</b> baby is cute.（その眠っている赤ちゃんは可愛い）<br>
+                                            ・This is a <b>used</b> car.（これは中古車（使われた車）です）
                                         </div>`,
                                         quizzes: [
                                             { question: "The girl ( ) a song is my sister. (歌っている女の子)", display: "分詞", answer: "singing", options: ["singing", "sung", "sings"] }
@@ -11356,7 +11466,10 @@ const studyData = {
                                         title: "(ア) 文を つなぐ ing",
                                         content: `<h4>接続詞を 使わない 表現</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・文の先頭に ing形を置き、「〜したとき」「〜しながら」などの意味を表す。
+                                            ・文の先頭に ing形を置く。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・<b>Feeling</b> tired, I went to bed early.（疲れていたので、早く寝ました）<br>
+                                            ・<b>Walking</b> along the street, I met him.（通りを歩いている時、彼に会いました）
                                         </div>`,
                                         quizzes: [
                                             { question: "( ) the book, he fell asleep. (本を読んでいる時)", display: "分詞構文", answer: "Reading", options: ["Reading", "Read", "To read"] }
@@ -11371,8 +11484,11 @@ const studyData = {
                                         title: "(ア) 直接話法と 間接話法",
                                         content: `<h4>伝聞の 形</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
-                                            ・<b>直接話法</b>：He said, \"I am hungry.\"<br>
-                                            ・<b>間接話法</b>：He said that he was hungry.（彼はお腹が空いていると言った）
+                                            ・<b>直接話法</b>：そのまま引用。<br>
+                                            ・<b>間接話法</b>：that節などを使って説明。<br><br>
+                                            <b>【例文】</b><br>
+                                            ・He <b>said that</b> he was busy.（彼は忙しいと言いました）<br>
+                                            ・She <b>told me that</b> she liked music.（彼女は音楽が好きだと私に言いました）
                                         </div>`,
                                         quizzes: [
                                             { question: "He told me ( ) he was busy. (〜だと言った)", display: "英文", answer: "that", options: ["that", "which", "what"] }
