@@ -5,6 +5,8 @@
     --science-color: #2ecc71;
     --social-color: #f1c40f;
     --english-color: #9b59b6;
+    --info-color: #00838f;
+    --car-color: #e67e22;
     --bg-color: #f8f9fa;
     --text-color: #333;
     --white: #ffffff;
@@ -123,6 +125,8 @@ main {
 .subject-card.science { background-color: var(--science-color); color: var(--white); }
 .subject-card.social { background-color: var(--social-color); color: #333; }
 .subject-card.english { background-color: var(--english-color); color: var(--white); }
+.subject-card.info { background-color: var(--info-color); color: var(--white); }
+.subject-card.car { background-color: var(--car-color); color: var(--white); }
 
 .subject-card:hover {
     transform: translateY(-5px);

@@ -11748,6 +11748,48 @@ const studyData = {
                 ]
             }
         } 
+    },
+    info: {
+        name: "<ruby>情報<rt>じょうほう</rt></ruby>",
+        grades: {
+            basic: {
+                name: "デジタル基礎",
+                categories: [
+                    {
+                        name: "情報リテラシー",
+                        units: [
+                            {
+                                title: "1. ネットの 安全な 使い方",
+                                subUnits: [
+                                    { title: "パスワードの 管理", content: "誕生日などの推測されやすいパスワードは避けよう。" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    car: {
+        name: "<ruby>車<rt>くるま</rt></ruby>",
+        grades: {
+            basic: {
+                name: "くるまの 基礎",
+                categories: [
+                    {
+                        name: "くるまの しくみ",
+                        units: [
+                            {
+                                title: "1. エンジンの 役割",
+                                subUnits: [
+                                    { title: "ガソリンと 電気", content: "車が動くエネルギーについて学ぼう。" }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     }
 };
 
