@@ -10952,6 +10952,93 @@ const studyData = {
                         name: "基本文法",
                         units: [
                             {
+                                title: "0. 基礎を 覚えよう",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 時間（月・季節・曜日）",
+                                        content: `<h4>時を 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em; max-height: 300px; overflow-y: auto;">
+                                            <b>【月】</b><br>
+                                            ・1月 January / 2月 February / 3月 March<br>
+                                            ・4月 April / 5月 May / 6月 June<br>
+                                            ・7月 July / 8月 August / 9月 September<br>
+                                            ・10月 October / 11月 November / 12月 December<br>
+                                            <b>【曜日】</b><br>
+                                            ・日 Sunday / 月 Monday / 火 Tuesday / 水 Wednesday<br>
+                                            ・木 Thursday / 金 Friday / 土 Saturday<br>
+                                            <b>【季節】</b><br>
+                                            ・春 Spring / 夏 Summer / 秋 Fall (Autumn) / 冬 Winter
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「1月」を英語で書くと？", display: "英単語", answer: "January", options: ["January", "June", "July"] },
+                                            { question: "「月曜日」を英語で書くと？", display: "英単語", answer: "Monday", options: ["Monday", "Sunday", "Friday"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 数字（すうじ）",
+                                        content: `<h4>数を 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em; max-height: 300px; overflow-y: auto;">
+                                            <b>【1〜12】</b><br>
+                                            one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve<br>
+                                            <b>【13〜19】</b><br>
+                                            thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen<br>
+                                            <b>【20〜90】</b><br>
+                                            twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety<br>
+                                            <b>【大きな数】</b><br>
+                                            hundred (100), thousand (1000), million (100万)<br>
+                                            <b>【序数（〜番目）】</b><br>
+                                            first, second, third, fourth, fifth...
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「3番目」を英語で書くと？", display: "英単語", answer: "third", options: ["third", "three", "thirty"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(ウ) 天気（てんき）",
+                                        content: `<h4>天気を 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            <b>【天候】</b><br>
+                                            ・sunny（晴れ） / cloudy（くもり）<br>
+                                            ・rainy（雨） / snowy（雪） / windy（風が強い）<br>
+                                            <b>【気温】</b><br>
+                                            ・hot（暑い） / warm（暖かい）<br>
+                                            ・cool（涼しい） / cold（寒い）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「今日は晴れです」を英語で言うと？", display: "英文", answer: "It is sunny today.", options: ["It is sunny today.", "Today is sunny.", "Is sunny today."] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(エ) 時間（じかん）",
+                                        content: `<h4>時刻の 言い方</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>〜 o'clock</b>：〜時ちょうど（例: 7 o'clock）<br>
+                                            ・<b>a.m.</b>：午前 / <b>p.m.</b>：午後<br>
+                                            ・half past 〜：〜時半（30分過ぎ）<br>
+                                            ・quarter past 〜：〜時15分<br>
+                                            ・quarter to 〜：〜時15分前
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「今、8時ちょうどです」を英語で言うと？", display: "英文", answer: "It is eight o'clock.", options: ["It is eight o'clock.", "It is eight hours.", "Eight o'clock is."] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(オ) 色（いろ）",
+                                        content: `<h4>色を 表す 言葉</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・red（赤） / blue（青） / yellow（黄）<br>
+                                            ・green（緑） / orange（だいだい） / purple（紫）<br>
+                                            ・pink（桃） / black（黒） / white（白）<br>
+                                            ・brown（茶） / gray（灰色）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「青色」を英語で書くと？", display: "英単語", answer: "blue", options: ["blue", "red", "black"] },
+                                            { question: "「緑色」を英語で書くと？", display: "英単語", answer: "green", options: ["green", "gray", "white"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
                                 title: "1. 自己紹介をしよう（be動詞・一般動詞）",
                                 subUnits: [
                                     {
