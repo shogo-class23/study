@@ -12115,6 +12115,12 @@ const studyData = {
                                                                                                                                                                                 <option value="2">2回</option>
                                                                                                                                                                                 <option value="3">3回</option>
                                                                                                                                                                                 <option value="4">4回</option>
+                                                                                                                                                                                <option value="5">5回</option>
+                                                                                                                                                                                <option value="6">6回</option>
+                                                                                                                                                                                <option value="7">7回</option>
+                                                                                                                                                                                <option value="8">8回</option>
+                                                                                                                                                                                <option value="9">9回</option>
+                                                                                                                                                                                <option value="10">10回</option>
                                                                                                                                                                                 <option value="forever">ずっと</option>
                                                                                                                                                                             </select>
                                                                                                                                                                                                                                     <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameHard.addLoop()">繰り返すブロックを追加</button>
@@ -12175,7 +12181,7 @@ const studyData = {
                                                                                                                                                                         <div style="background: #e1f5fe; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #03a9f4;">
                                                                                                                                                                             <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
                                                                                                                                                                             <select id="loop-count-adv" style="padding: 5px;">
-                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="forever">ずっと</option>
+                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="5">5回</option><option value="6">6回</option><option value="7">7回</option><option value="8">8回</option><option value="9">9回</option><option value="10">10回</option><option value="forever">ずっと</option>
                                                                                                                                                                             </select>
                                                                                                                                                                             <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameAdvanced.addLoop()">繰り返す</button>
                                                                                                                                                                             <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameAdvanced.addIf('if_wall')">もし壁なら</button>
@@ -12233,7 +12239,7 @@ const studyData = {
                                                                                                                                                                         <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #9c27b0;">
                                                                                                                                                                             <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
                                                                                                                                                                             <select id="loop-count-key" style="padding: 5px;">
-                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="7">7回</option><option value="forever">ずっと</option>
+                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="5">5回</option><option value="6">6回</option><option value="7">7回</option><option value="8">8回</option><option value="9">9回</option><option value="10">10回</option><option value="forever">ずっと</option>
                                                                                                                                                                             </select>
                                                                                                                                                                             <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameKey.addLoop()">繰り返す</button>
                                                                                                                                                                             <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameKey.addIf('if_wall')">もし壁なら</button>
@@ -13329,20 +13335,22 @@ window.onload = () => {
             const rbEl = document.getElementById('robot-advanced');
             if(!rbEl) return;
             const cell = document.getElementById('a-cell-' + advRobot.y + '-' + advRobot.x);
-            if(cell) cell.appendChild(rbEl);
-            rbEl.style.transform = 'rotate(' + (advRobot.dir * 90) + 'deg)';
 
             // カギ回収チェック
             const kIdx = currentAdvKeys.findIndex(k => k.x === advRobot.x && k.y === advRobot.y);      
             if(kIdx !== -1) {
                 const k = currentAdvKeys[kIdx];
                 const cellEl = document.getElementById(k.id);
-                if(cellEl) cellEl.innerText = '';
+                if(cellEl) cellEl.innerText = ''; // カギを消去
                 currentAdvKeys.splice(kIdx, 1);
                 keyCountCount++;
                 const mEl = document.getElementById('maze-message-advanced');
                 if(mEl) mEl.innerText = `🔑 カギを拾った！（カギ: ${keyCountCount}/3）`;
             }
+
+            // ロボットを移動（カギを消した後に移動させることで、ロボットが消えないようにする）
+            if(cell) cell.appendChild(rbEl);
+            rbEl.style.transform = 'rotate(' + (advRobot.dir * 90) + 'deg)';
         },
         reset: () => {
             advRobot = { x: 0, y: 0, dir: 0 };
@@ -13411,14 +13419,10 @@ window.onload = () => {
 
             if(advIsRunning && mEl) {
                 if(advRobot.x === 5 && advRobot.y === 5) {
-                    const hasLoop = advQueue.some(cmd => cmd.type === 'loop');
-                    const hasIf = advQueue.some(cmd => cmd.type.includes('if'));
-                    if (keyCountCount === 3 && hasLoop && hasIf) {
-                        mEl.innerHTML = '<span style="color:#2ecc71;">✅ パーフェクト！カギも全部拾って制御ブロックも完璧だね！</span>';
-                    } else if (keyCountCount < 3) {
-                        mEl.innerHTML = '<span style="color:#f1c40f;">🚪 ゴール！でもカギが足りないよ（変数不足）。</span>';
+                    if (keyCountCount === 3) {
+                        mEl.innerHTML = '<span style="color:#2ecc71;">✅ パーフェクト！カギを全部拾ってミッション完了！</span>';
                     } else {
-                        mEl.innerHTML = '<span style="color:#f1c40f;">🚪 ゴール！でもループとIF文の両方を使ってみてね。</span>';
+                        mEl.innerHTML = '<span style="color:#f1c40f;">🚪 ゴール！でもカギが足りないよ（変数不足）。</span>';
                     }
                 } else {
                     mEl.innerText = 'ミッション未完了。ドアまで届かなかった。';
@@ -13548,8 +13552,6 @@ window.onload = () => {
             const rbEl = document.getElementById('robot-key');
             if(!rbEl) return;
             const cell = document.getElementById('k-cell-' + keyRobot.y + '-' + keyRobot.x);
-            if(cell) cell.appendChild(rbEl);
-            rbEl.style.transform = 'rotate(' + (keyRobot.dir * 90) + 'deg)';
 
             // スコアと鍵状態の表示更新
             const sEl = document.getElementById('maze-score');
@@ -13565,13 +13567,17 @@ window.onload = () => {
             if(iIdx !== -1) {
                 const it = currentKeyItems[iIdx];
                 const cellEl = document.getElementById(it.id);
-                if(cellEl) cellEl.innerText = '';
+                if(cellEl) cellEl.innerText = ''; // カギを消去
                 if(it.type === 'special-key') hasDoorKey = true;
                 mazeScore += it.score;
                 currentKeyItems.splice(iIdx, 1);
                 const mEl = document.getElementById('maze-message-key');
                 if(mEl) mEl.innerText = `🔑 カギをゲット！ (+${it.score})`;
             }
+
+            // ロボットを移動
+            if(cell) cell.appendChild(rbEl);
+            rbEl.style.transform = 'rotate(' + (keyRobot.dir * 90) + 'deg)';
         },
         reset: () => {
             keyRobot = { x: 0, y: 0, dir: 0 };
