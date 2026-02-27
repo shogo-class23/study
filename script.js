@@ -12061,13 +12061,12 @@ const studyData = {
                                         <p>下のボタンを押して、命令（プログラム）を作ろう！「実行」を押すとロボットが動くよ。旗のところまで行けるかな？</p>
                                         <div class="maze-container">
                                             <div class="maze-grid" id="maze-grid">
-                                                <!-- 5x5グリッド -->
                                                 <div class="maze-cell" id="cell-0-0"><span id="robot">🤖</span></div>
-                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
-                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
-                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
-                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
-                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell goal" id="cell-4-4"></div>
+                                                <div class="maze-cell" id="cell-0-1"></div><div class="maze-cell" id="cell-0-2"></div><div class="maze-cell" id="cell-0-3"></div><div class="maze-cell" id="cell-0-4"></div>
+                                                <div class="maze-cell" id="cell-1-0"></div><div class="maze-cell" id="cell-1-1"></div><div class="maze-cell" id="cell-1-2"></div><div class="maze-cell" id="cell-1-3"></div><div class="maze-cell" id="cell-1-4"></div>
+                                                <div class="maze-cell" id="cell-2-0"></div><div class="maze-cell" id="cell-2-1"></div><div class="maze-cell" id="cell-2-2"></div><div class="maze-cell" id="cell-2-3"></div><div class="maze-cell" id="cell-2-4"></div>
+                                                <div class="maze-cell" id="cell-3-0"></div><div class="maze-cell" id="cell-3-1"></div><div class="maze-cell" id="cell-3-2"></div><div class="maze-cell" id="cell-3-3"></div><div class="maze-cell" id="cell-3-4"></div>
+                                                <div class="maze-cell" id="cell-4-0"></div><div class="maze-cell" id="cell-4-1"></div><div class="maze-cell" id="cell-4-2"></div><div class="maze-cell" id="cell-4-3"></div><div class="maze-cell goal" id="cell-4-4"></div>
                                             </div>
                                             <div class="command-area">
                                                 <div class="command-queue" id="command-queue">プログラム：</div>
@@ -12087,83 +12086,7 @@ const studyData = {
                                                 </div>
                                             </div>
                                             <div id="maze-message" style="font-weight: bold; color: #e67e22; margin-top: 15px;"></div>
-                                        </div>
-                                        <script>
-                                            (function() {
-                                                const gridW = 5, gridH = 5;
-                                                let robot = { x: 0, y: 0, dir: 1 }; // dir: 0:上, 1:右, 2:下, 3:左
-                                                let queue = [];
-                                                let isRunning = false;
-
-                                                window.mazeGame = {
-                                                    add: (cmd) => {
-                                                        if(isRunning) return;
-                                                        queue.push(cmd);
-                                                        const qEl = document.getElementById('command-queue');
-                                                        const item = document.createElement('span');
-                                                        item.className = 'command-item';
-                                                        const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '⟲', rightTurn: '⟳' };
-                                                        item.innerText = names[cmd];
-                                                        qEl.appendChild(item);
-                                                    },
-                                                    reset: () => {
-                                                        robot = { x: 0, y: 0, dir: 1 };
-                                                        queue = [];
-                                                        isRunning = false;
-                                                        document.getElementById('command-queue').innerHTML = 'プログラム：';
-                                                        document.getElementById('maze-message').innerText = '';
-                                                        window.mazeGame.updateUI();
-                                                    },
-                                                    updateUI: () => {
-                                                        const rbEl = document.getElementById('robot');
-                                                        if(!rbEl) return;
-                                                        const cell = document.getElementById('cell-' + robot.y + '-' + robot.x);
-                                                        if(cell) cell.appendChild(rbEl);
-                                                        rbEl.style.transform = 'rotate(' + (robot.dir * 90 - 90) + 'deg)';
-                                                    },
-                                                    run: async () => {
-                                                        if(isRunning || queue.length === 0) return;
-                                                        isRunning = true;
-                                                        for(let cmd of queue) {
-                                                            let dx = 0, dy = 0;
-                                                            // 向き: 0:上, 1:右, 2:下, 3:左
-                                                            if(cmd === 'forward') {
-                                                                dx = robot.dir === 1 ? 1 : (robot.dir === 3 ? -1 : 0);
-                                                                dy = robot.dir === 2 ? 1 : (robot.dir === 0 ? -1 : 0);
-                                                            } else if(cmd === 'backward') {
-                                                                dx = robot.dir === 1 ? -1 : (robot.dir === 3 ? 1 : 0);
-                                                                dy = robot.dir === 2 ? -1 : (robot.dir === 0 ? 1 : 0);
-                                                            } else if(cmd === 'moveLeft') {
-                                                                dx = robot.dir === 0 ? -1 : (robot.dir === 2 ? 1 : 0);
-                                                                dy = robot.dir === 1 ? -1 : (robot.dir === 3 ? 1 : 0);
-                                                            } else if(cmd === 'moveRight') {
-                                                                dx = robot.dir === 0 ? 1 : (robot.dir === 2 ? -1 : 0);
-                                                                dy = robot.dir === 1 ? 1 : (robot.dir === 3 ? -1 : 0);
-                                                            } else if(cmd === 'leftTurn') {
-                                                                robot.dir = (robot.dir + 3) % 4;
-                                                            } else if(cmd === 'rightTurn') {
-                                                                robot.dir = (robot.dir + 1) % 4;
-                                                            }
-
-                                                            let nx = robot.x + dx, ny = robot.y + dy;
-                                                            if(nx >= 0 && nx < gridW && ny >= 0 && ny < gridH) {
-                                                                robot.x = nx; robot.y = ny;
-                                                            }
-                                                            
-                                                            window.mazeGame.updateUI();
-                                                            await new Promise(r => setTimeout(r, 500));
-                                                        }
-                                                        if(robot.x === 4 && robot.y === 4) {
-                                                            document.getElementById('maze-message').innerText = '🎉 ゴール！おめでとう！';
-                                                        } else {
-                                                            document.getElementById('maze-message').innerText = '残念！もういちど考えてみてね。';
-                                                        }
-                                                        isRunning = false;
-                                                    }
-                                                };
-                                                setTimeout(() => window.mazeGame.updateUI(), 100);
-                                            })();
-                                        </script>`,
+                                        </div>`,
                                         quizzes: [
                                             { question: "プログラムを動かすために、命令を正しい順番で並べることを何という？", display: "用語", answer: "アルゴリズム", options: ["アルゴリズム", "スクリプト", "バグ"] }
                                         ]
@@ -12415,13 +12338,12 @@ window.onload = () => {
         contentTitle.innerHTML = s.title;
         contentBody.innerHTML = s.content;
 
-        // コンテンツ内のスクリプトを実行できるようにする
-        const scripts = contentBody.getElementsByTagName('script');
-        for (let i = 0; i < scripts.length; i++) {
-            const newScript = document.createElement('script');
-            newScript.text = scripts[i].innerText;
-            document.head.appendChild(newScript).parentNode.removeChild(newScript);
-        }
+        // 特殊コンテンツの初期化
+        setTimeout(() => {
+            if (document.getElementById('maze-grid')) window.initMazeGame();
+            if (document.getElementById('motion-sprite')) window.initMotionDemo();
+            if (document.getElementById('looks-sprite')) window.initLooksDemo();
+        }, 50);
         
         const startBtnContainer = document.getElementById('quiz-start-container');
         if (s.quizzes && s.quizzes.length > 0) {
@@ -12813,4 +12735,149 @@ window.onload = () => {
     });
 
     showHome();
+
+    // --- 迷路ゲーム & プログラミングデモのロジック ---
+    let mazeRobot = { x: 0, y: 0, dir: 0 }; 
+    let mazeQueue = [];
+    let mazeIsRunning = false;
+
+    window.initMazeGame = () => {
+        mazeRobot = { x: 0, y: 0, dir: 0 };
+        mazeQueue = [];
+        mazeIsRunning = false;
+        const rbEl = document.getElementById('robot');
+        if(rbEl) rbEl.innerText = '🤖'; // ロボットに戻す
+        window.mazeGame.updateUI();
+    };
+
+    window.mazeGame = {
+        add: (cmd) => {
+            if(mazeIsRunning) return;
+            mazeQueue.push(cmd);
+            const qEl = document.getElementById('command-queue');
+            if(!qEl) return;
+            const item = document.createElement('span');
+            item.className = 'command-item';
+            const names = { forward: '前進', backward: '後退', moveLeft: '左スライド', moveRight: '右スライド', leftTurn: '左回転', rightTurn: '右回転' };
+            item.innerText = names[cmd];
+            qEl.appendChild(item);
+        },
+        reset: () => {
+            window.initMazeGame();
+            const qEl = document.getElementById('command-queue');
+            if(qEl) qEl.innerHTML = 'プログラム：';
+            const mEl = document.getElementById('maze-message');
+            if(mEl) mEl.innerText = '';
+        },
+        updateUI: () => {
+            const rbEl = document.getElementById('robot');
+            if(!rbEl) return;
+            const cell = document.getElementById('cell-' + mazeRobot.y + '-' + mazeRobot.x);
+            if(cell) cell.appendChild(rbEl);
+            // 0:上(0deg), 1:右(90deg), 2:下(180deg), 3:左(270deg)
+            // ロボット（🤖）の絵がデフォルトで上を向いている前提で角度を設定
+            rbEl.style.transform = 'rotate(' + (mazeRobot.dir * 90) + 'deg)';
+        },
+        run: async () => {
+            if(mazeIsRunning || mazeQueue.length === 0) return;
+            mazeIsRunning = true;
+            const qEl = document.getElementById('command-queue');
+            const items = qEl ? qEl.getElementsByClassName('command-item') : [];
+            
+            for(let i = 0; i < mazeQueue.length; i++) {
+                const cmd = mazeQueue[i];
+                if(items[i]) items[i].style.background = '#e67e22';
+
+                let dx = 0, dy = 0;
+                if(cmd === 'forward') {
+                    if(mazeRobot.dir === 0) dy = -1;
+                    else if(mazeRobot.dir === 1) dx = 1;
+                    else if(mazeRobot.dir === 2) dy = 1;
+                    else if(mazeRobot.dir === 3) dx = -1;
+                } else if(cmd === 'backward') {
+                    if(mazeRobot.dir === 0) dy = 1;
+                    else if(mazeRobot.dir === 1) dx = -1;
+                    else if(mazeRobot.dir === 2) dy = -1;
+                    else if(mazeRobot.dir === 3) dx = 1;
+                } else if(cmd === 'moveLeft') {
+                    if(mazeRobot.dir === 0) dx = -1;
+                    else if(mazeRobot.dir === 1) dy = -1;
+                    else if(mazeRobot.dir === 2) dx = 1;
+                    else if(mazeRobot.dir === 3) dy = 1;
+                } else if(cmd === 'moveRight') {
+                    if(mazeRobot.dir === 0) dx = 1;
+                    else if(mazeRobot.dir === 1) dy = 1;
+                    else if(mazeRobot.dir === 2) dx = -1;
+                    else if(mazeRobot.dir === 3) dy = -1;
+                } else if(cmd === 'leftTurn') {
+                    mazeRobot.dir = (mazeRobot.dir + 3) % 4;
+                } else if(cmd === 'rightTurn') {
+                    mazeRobot.dir = (mazeRobot.dir + 1) % 4;
+                }
+
+                let nx = mazeRobot.x + dx, ny = mazeRobot.y + dy;
+                if(nx >= 0 && nx < 5 && ny >= 0 && ny < 5) {
+                    mazeRobot.x = nx; mazeRobot.y = ny;
+                }
+                
+                window.mazeGame.updateUI();
+                await new Promise(r => setTimeout(r, 600));
+                if(items[i]) items[i].style.background = '#3498db';
+            }
+            
+            const msgEl = document.getElementById('maze-message');
+            if(msgEl) {
+                if(mazeRobot.x === 4 && mazeRobot.y === 4) {
+                    msgEl.innerText = '🎉 ゴール！おめでとう！';
+                } else {
+                    msgEl.innerText = '残念！もういちど考えてみてね。';
+                }
+            }
+            mazeIsRunning = false;
+        }
+    };
+
+    let motionX = 0, motionDeg = 0;
+    window.initMotionDemo = () => { motionX = 0; motionDeg = 0; };
+    window.motionDemo = {
+        move: (d) => {
+            motionX += d;
+            const s = document.getElementById('motion-sprite');
+            if(s) s.style.left = 'calc(50% + ' + motionX + 'px)';
+        },
+        turn: (d) => {
+            motionDeg += d;
+            const s = document.getElementById('motion-sprite');
+            if(s) s.style.transform = 'rotate(' + motionDeg + 'deg)';
+        },
+        reset: () => {
+            window.initMotionDemo();
+            const s = document.getElementById('motion-sprite');
+            if(s) { s.style.left = '50%'; s.style.transform = 'rotate(0deg)'; }
+        }
+    };
+
+    let looksSize = 1.0;
+    window.initLooksDemo = () => { looksSize = 1.0; };
+    window.looksDemo = {
+        say: (msg) => {
+            const b = document.getElementById('speech-bubble');
+            if(b) {
+                b.innerText = msg; b.style.display = 'block';
+                setTimeout(() => { if(b) b.style.display = 'none'; }, 2000);
+            }
+        },
+        changeSize: (s) => {
+            looksSize *= s;
+            const sp = document.getElementById('looks-sprite');
+            if(sp) sp.style.fontSize = (50 * looksSize) + 'px';
+        },
+        reset: () => {
+            window.initLooksDemo();
+            const sp = document.getElementById('looks-sprite');
+            const b = document.getElementById('speech-bubble');
+            if(sp) sp.style.fontSize = '50px';
+            if(b) b.style.display = 'none';
+        }
+    };
 };
