@@ -12060,16 +12060,16 @@ const studyData = {
                                                                                 content: `<h4>命令を ならべて 動かそう</h4>
                                                                                 <p>下のボタンを押して、命令（プログラム）を作ろう！「実行」を押すとロボットが動くよ。旗のところまで行けるかな？</p>
                                                                                 <div class="maze-container">
-                                                                                    <div class="maze-grid" id="maze-grid">
-                                                                                        <div class="maze-cell" id="cell-0-0"><span id="robot">🤖</span></div>
-                                                                                        <div class="maze-cell" id="cell-0-1"></div><div class="maze-cell" id="cell-0-2"></div><div class="maze-cell" id="cell-0-3"></div><div class="maze-cell" id="cell-0-4"></div>
-                                                                                        <div class="maze-cell" id="cell-1-0"></div><div class="maze-cell" id="cell-1-1"></div><div class="maze-cell" id="cell-1-2"></div><div class="maze-cell" id="cell-1-3"></div><div class="maze-cell" id="cell-1-4"></div>
-                                                                                        <div class="maze-cell" id="cell-2-0"></div><div class="maze-cell" id="cell-2-1"></div><div class="maze-cell" id="cell-2-2"></div><div class="maze-cell" id="cell-2-3"></div><div class="maze-cell" id="cell-2-4"></div>
-                                                                                        <div class="maze-cell" id="cell-3-0"></div><div class="maze-cell" id="cell-3-1"></div><div class="maze-cell" id="cell-3-2"></div><div class="maze-cell" id="cell-3-3"></div><div class="maze-cell" id="cell-3-4"></div>
-                                                                                        <div class="maze-cell" id="cell-4-0"></div><div class="maze-cell" id="cell-4-1"></div><div class="maze-cell" id="cell-4-2"></div><div class="maze-cell" id="cell-4-3"></div><div class="maze-cell goal" id="cell-4-4"></div>
-                                                                                    </div>
-                                                                                    <div class="command-area">
-                                                                                        <div class="command-queue" id="command-queue">プログラム：</div>
+                                                                                                                                    <div class="maze-grid" id="maze-grid">
+                                                                                                                                        <div class="maze-cell" id="cell-0-0"><span id="robot">🤖</span></div>
+                                                                                                                                        <div class="maze-cell" id="cell-0-1"></div><div class="maze-cell" id="cell-0-2"></div><div class="maze-cell" id="cell-0-3"></div><div class="maze-cell" id="cell-0-4"></div>
+                                                                                                                                        <div class="maze-cell" id="cell-1-0"></div><div class="maze-cell" id="cell-1-1"></div><div class="maze-cell" id="cell-1-2"></div><div class="maze-cell" id="cell-1-3"></div><div class="maze-cell" id="cell-1-4"></div>
+                                                                                                                                        <div class="maze-cell" id="cell-2-0"></div><div class="maze-cell" id="cell-2-1"></div><div class="maze-cell" id="cell-2-2"></div><div class="maze-cell" id="cell-2-3"></div><div class="maze-cell" id="cell-2-4"></div>
+                                                                                                                                        <div class="maze-cell" id="cell-3-0"></div><div class="maze-cell" id="cell-3-1"></div><div class="maze-cell" id="cell-3-2"></div><div class="maze-cell" id="cell-3-3"></div><div class="maze-cell" id="cell-3-4"></div>
+                                                                                                                                        <div class="maze-cell" id="cell-4-0"></div><div class="maze-cell" id="cell-4-1"></div><div class="maze-cell" id="cell-4-2"></div><div class="maze-cell" id="cell-4-3"></div><div class="maze-cell goal" id="cell-4-4"></div>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="status-box" id="maze-message">ミッション待機中...</div>
+                                                                                                                                    <div class="command-area">                                                                                        <div class="command-queue" id="command-queue">プログラム：</div>
                                                                                         <div class="control-panel">
                                                                                             <button class="game-btn btn-rotate" onclick="window.mazeGame.add('leftTurn')">左回</button>
                                                                                             <div class="d-pad">
@@ -12103,10 +12103,10 @@ const studyData = {
                                                                                                                                                                         <div class="maze-cell" id="h-cell-1-0"></div><div class="maze-cell" id="h-cell-1-1"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="h-cell-1-3"></div><div class="maze-cell" id="h-cell-1-4"></div>
                                                                                                                                                                         <div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="h-cell-2-1"></div><div class="maze-cell" id="h-cell-2-2"></div><div class="maze-cell" id="h-cell-2-3"></div><div class="maze-cell" id="h-cell-2-4"></div>
                                                                                                                                                                         <div class="maze-cell" id="h-cell-3-0"></div><div class="maze-cell" id="h-cell-3-1"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="h-cell-3-4"></div>
-                                                                                                                                                                        <div class="maze-cell" id="h-cell-4-0"></div><div class="maze-cell" id="h-cell-4-1"></div><div class="maze-cell" id="h-cell-4-2"></div><div class="maze-cell" id="h-cell-4-3"></div><div class="maze-cell goal" id="h-cell-4-4"></div>
-                                                                                                                                                                    </div>
-                                                                                                                                                                    <div class="command-area">
-                                                                                                                                                                        <div class="command-queue" id="command-queue-hard">プログラム：</div>
+                                                                                                                                                                                                                            <div class="maze-cell" id="h-cell-4-0"></div><div class="maze-cell" id="h-cell-4-1"></div><div class="maze-cell" id="h-cell-4-2"></div><div class="maze-cell" id="h-cell-4-3"></div><div class="maze-cell goal" id="h-cell-4-4"></div>
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                        <div class="status-box" id="maze-message-hard">ミッション待機中...</div>
+                                                                                                                                                                                                                        <div class="command-area">                                                                                                                                                                        <div class="command-queue" id="command-queue-hard">プログラム：</div>
                                                                                                                                                                         
                                                                                                                                                                         <!-- 制御ブロック作成エリア -->
                                                                                                                                                                         <div style="background: #fffbe6; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #f1c40f;">
@@ -12846,7 +12846,10 @@ window.onload = () => {
             // ロボットの位置のみ初期化
             mazeRobot = { x: 0, y: 0, dir: 0 };
             const mEl = document.getElementById('maze-message');
-            if(mEl) mEl.innerText = '';
+            if(mEl) {
+                mEl.innerText = 'ミッション待機中...';
+                mEl.style.color = '#555';
+            }
             window.mazeGame.updateUI();
         },
         updateUI: () => {
@@ -12859,61 +12862,52 @@ window.onload = () => {
         run: async () => {
             if(mazeIsRunning || mazeQueue.length === 0) return;
             mazeIsRunning = true;
-            const qEl = document.getElementById('command-queue');
-            const items = qEl ? qEl.getElementsByClassName('command-item') : [];
+            const mEl = document.getElementById('maze-message');
+            if(mEl) {
+                mEl.innerText = '🚀 ミッション実行中...';
+                mEl.style.color = '#3498db';
+            }
             
-            // 実行前にロボットをスタートに戻す
             mazeRobot = { x: 0, y: 0, dir: 0 };
             window.mazeGame.updateUI();
             await new Promise(r => setTimeout(r, 300));
+
+            const qEl = document.getElementById('command-queue');
+            const items = qEl ? qEl.getElementsByClassName('command-item') : [];
 
             for(let i = 0; i < mazeQueue.length; i++) {
                 const cmd = mazeQueue[i];
                 if(items[i]) items[i].style.background = '#e67e22';
 
                 let dx = 0, dy = 0;
+                const dir = mazeRobot.dir;
                 if(cmd === 'forward') {
-                    if(mazeRobot.dir === 0) dy = -1;
-                    else if(mazeRobot.dir === 1) dx = 1;
-                    else if(mazeRobot.dir === 2) dy = 1;
-                    else if(mazeRobot.dir === 3) dx = -1;
+                    if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
                 } else if(cmd === 'backward') {
-                    if(mazeRobot.dir === 0) dy = 1;
-                    else if(mazeRobot.dir === 1) dx = -1;
-                    else if(mazeRobot.dir === 2) dy = -1;
-                    else if(mazeRobot.dir === 3) dx = 1;
+                    if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
                 } else if(cmd === 'moveLeft') {
-                    if(mazeRobot.dir === 0) dx = -1;
-                    else if(mazeRobot.dir === 1) dy = -1;
-                    else if(mazeRobot.dir === 2) dx = 1;
-                    else if(mazeRobot.dir === 3) dy = 1;
+                    if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
                 } else if(cmd === 'moveRight') {
-                    if(mazeRobot.dir === 0) dx = 1;
-                    else if(mazeRobot.dir === 1) dy = 1;
-                    else if(mazeRobot.dir === 2) dx = -1;
-                    else if(mazeRobot.dir === 3) dy = -1;
-                } else if(cmd === 'leftTurn') {
-                    mazeRobot.dir = (mazeRobot.dir + 3) % 4;
-                } else if(cmd === 'rightTurn') {
-                    mazeRobot.dir = (mazeRobot.dir + 1) % 4;
-                }
+                    if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
+                } else if(cmd === 'leftTurn') mazeRobot.dir = (mazeRobot.dir + 3) % 4;
+                else if(cmd === 'rightTurn') mazeRobot.dir = (mazeRobot.dir + 1) % 4;
 
                 let nx = mazeRobot.x + dx, ny = mazeRobot.y + dy;
                 if(nx >= 0 && nx < 5 && ny >= 0 && ny < 5) {
                     mazeRobot.x = nx; mazeRobot.y = ny;
                 }
-                
                 window.mazeGame.updateUI();
                 await new Promise(r => setTimeout(r, 600));
                 if(items[i]) items[i].style.background = '#3498db';
             }
             
-            const msgEl = document.getElementById('maze-message');
-            if(msgEl) {
+            if(mEl) {
                 if(mazeRobot.x === 4 && mazeRobot.y === 4) {
-                    msgEl.innerText = '🎉 ゴール！おめでとう！';
+                    mEl.innerText = '🎉 ミッション成功！旗に到着しました！';
+                    mEl.style.color = '#2ecc71';
                 } else {
-                    msgEl.innerText = '残念！もういちど考えてみてね。';
+                    mEl.innerText = '❌ ミッション失敗。旗まで届きませんでした。';
+                    mEl.style.color = '#e74c3c';
                 }
             }
             mazeIsRunning = false;
@@ -13046,7 +13040,9 @@ window.onload = () => {
         run: async () => {
             if(hardIsRunning || hardQueue.length === 0) return;
             hardIsRunning = true;
+            // ここで一度宣言
             const mEl = document.getElementById('maze-message-hard');
+            
             hardRobot = { x: 0, y: 0, dir: 0 };
             window.mazeGameHard.updateUI();
             if(mEl) mEl.innerText = '';
@@ -13093,9 +13089,22 @@ window.onload = () => {
                 }
             };
             await executeItems(hardQueue);
-            if(hardIsRunning && mEl) {
-                if(hardRobot.x === 4 && hardRobot.y === 4) mEl.innerText = '🎉 制御ブロックをマスターしたね！';
-                else mEl.innerText = 'ゴールできなかった... 工夫してみよう。';
+            
+            // 実行終了後のメッセージ表示
+            if(mEl && hardIsRunning) {
+                // 制御ブロックが使われているか再確認
+                const hasLoop = hardQueue.some(cmd => cmd.type === 'loop');
+                const hasIf = hardQueue.some(cmd => cmd.type.includes('if'));
+
+                if(hardRobot.x === 4 && hardRobot.y === 4) {
+                    if (hasLoop || hasIf) {
+                        mEl.innerHTML = '<span style="color:#2ecc71;">🎉 パーフェクト！制御ブロックをマスターしたね！</span>';
+                    } else {
+                        mEl.innerHTML = '<span style="color:#e74c3c;">🚩 ゴール！でも、繰り返しや条件のブロックを使っていません（条件未達成）。</span>';
+                    }
+                } else {
+                    mEl.innerText = '残念！ゴールできなかったね。工夫してみよう。';
+                }
             }
             hardIsRunning = false;
         }
