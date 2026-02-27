@@ -11753,15 +11753,143 @@ const studyData = {
         name: "<ruby>情報<rt>じょうほう</rt></ruby>",
         grades: {
             basic: {
-                name: "デジタル基礎",
+                name: "プログラミングの 基礎",
                 categories: [
                     {
-                        name: "情報リテラシー",
+                        name: "コンピュータと プログラム",
                         units: [
                             {
-                                title: "1. ネットの 安全な 使い方",
+                                title: "1. コンピュータの 5要素",
                                 subUnits: [
-                                    { title: "パスワードの 管理", content: "誕生日などの推測されやすいパスワードは避けよう。" }
+                                    {
+                                        title: "(ア) 5つの 働（はたら）き",
+                                        content: `<h4>ハードウェアの 役割</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>入力</b>：マウス、キーボードなど。<br>
+                                            ・<b>出力</b>：ディスプレイ、プリンタなど。<br>
+                                            ・<b>記憶</b>：メモリ、ハードディスクなど。<br>
+                                            ・<b>演算</b>：計算を行う（CPU）。<br>
+                                            ・<b>制御</b>：全体に命令を出す（CPU）。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "計算（演算）や全体の司令塔（制御）の役割を担う部品は？", display: "部品名", answer: "CPU", options: ["CPU", "メモリ", "マウス"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. プログラミングの 制御（せいぎょ）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 3つの 基本構造",
+                                        content: `<h4>プログラムの 流れ</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>順次</b>：上から順番に実行する。<br>
+                                            ・<b>分岐</b>：条件によって分かれる（もし〜なら）。<br>
+                                            ・<b>反復</b>：同じ処理を繰り返す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「もし点数が80点以上なら合格」という処理はどれに当たる？", display: "制御構造", answer: "分岐", options: ["分岐", "順次", "反復"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 論理演算（ろんりえんざん）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 基本の 論理演算",
+                                        content: `<h4>真（しん）か 偽（ぎ）か</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>AND（論理積）</b>：かつ。AとBの両方が正しいとき。 <br>
+                                            ・<b>OR（論理和）</b>：または。AかBのどちらかが正しいとき。<br>
+                                            ・<b>NOT（論理否定）</b>：〜ではない。正しければ間違いに、間違いなら正しくする。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "AとBの両方が正しい（真）ときだけ正解になる演算は？", display: "演算名", answer: "AND", options: ["AND", "OR", "NOT"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 排他的論理和（XOR）",
+                                        content: `<h4>違えば 1、 同じなら 0</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>XOR（排他的論理和）</b>：二つの値が <b>異なるときに 1</b>、<b>同じときに 0</b> になる演算。<br>
+                                            ・1 XOR 0 = 1 / 0 XOR 1 = 1<br>
+                                            ・1 XOR 1 = 0 / 0 XOR 0 = 0
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "XOR演算で、1と1（同じ値）を組み合わせたときの結果は？", display: "数値", answer: "0", options: ["0", "1"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "データの 扱い",
+                        units: [
+                            {
+                                title: "1. 変数（へんすう）と 定数（ていすう）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) データの 入れ物",
+                                        content: `<h4>値（あたい）を 保存する</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>変数</b>：中身を書き換えられる入れ物。<br>
+                                            ・<b>定数</b>：一度決めたら書き換えられない入れ物。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "プログラムの中で、中身を自由に入れ替えられる箱のようなものを何という？", display: "用語", answer: "変数", options: ["変数", "定数", "関数"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 配列（はいれつ）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 複数の データを まとめる",
+                                        content: `<h4>仕切りのある 箱</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・関連する複数のデータを一つにまとめたもの。<br>
+                                            ・0番目, 1番目, 2番目... と番号（インデックス）で中身を取り出します。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "配列の最初のデータを取り出すときの番号はいくつ？", display: "番号", answer: "0", options: ["0", "1", "10"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "関数の しくみ",
+                        units: [
+                            {
+                                title: "1. 関数（かんすう）の 定義と 実行",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 処理を まとめる",
+                                        content: `<h4>一連の 命令に 名前を つける</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・何度も使う処理を一つにまとめて、名前をつけたものを <b>関数</b> といいます。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "特定の処理をまとめて名前をつけたものを何という？", display: "用語", answer: "関数", options: ["関数", "変数", "配列"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 引数（ひきすう）と 戻り値（もどりち）",
+                                        content: `<h4>データの 受け渡し</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>引数</b>：関数に渡すデータ（材料）。<br>
+                                            ・<b>戻り値</b>：関数から返ってくるデータ（結果）。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "関数に渡す材料となるデータのことを何という？", display: "用語", answer: "引数", options: ["引数", "戻り値", "定数"] },
+                                            { question: "関数での処理が終わったあと、呼び出し元に返される結果を何という？", display: "用語", answer: "戻り値", options: ["戻り値", "引数", "変数"] }
+                                        ]
+                                    }
                                 ]
                             }
                         ]
