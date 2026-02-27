@@ -11086,6 +11086,31 @@ const studyData = {
                                             { question: "「はじめまして」を英語で言うと？", display: "英文", answer: "Nice to meet you.", options: ["Nice to meet you.", "How are you?", "Thank you."] },
                                             { question: "「どういたしまして」を英語で言うと？", display: "英文", answer: "You're welcome.", options: ["You're welcome.", "I'm sorry.", "Excuse me."] }
                                         ]
+                                    },
+                                    {
+                                        title: "(ケ) 発音（はつおん）の ポイント",
+                                        content: `<h4>カタカナとは 違う 音</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>L と R</b>：Lは舌を上の歯の付け根につける。Rは舌をどこにもつけず、口を丸める。<br>
+                                            ・<b>TH</b>：舌を上の歯と下の歯で軽くはさむ音。<br>
+                                            ・<b>B と V</b>：Bは両唇を閉じる。Vは上の歯で下唇を軽くかむ。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "上の歯で下唇を軽くかんで発音するアルファベットは？", display: "文字", answer: "V", options: ["V", "B", "P"] },
+                                            { question: "舌をどこにもつけず、口を丸めて「う」の口から始めるのは L と R のどっち？", display: "文字", answer: "R", options: ["R", "L"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(コ) イントネーション（抑揚）",
+                                        content: `<h4>文末の 上げ下げ</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>文末を上げる⤴</b>：Yes / No で答える疑問文（Are you...? / Do you...?）。<br>
+                                            ・<b>文末を下げる⤵</b>：肯定文（I am...）や、疑問詞で始まる疑問文（What is...? / Where are...?）。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "What is your name? の文末は、上げる？下げる？", display: "抑揚", answer: "下げる", options: ["下げる", "上げる"] },
+                                            { question: "Do you like soccer? の文末は、上げる？下げる？", display: "抑揚", answer: "上げる", options: ["上げる", "下げる"] }
+                                        ]
                                     }
                                 ]
                             },
