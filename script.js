@@ -10943,9 +10943,246 @@ const studyData = {
             } 
         },
     english: { 
-        name: "<ruby>英語<rt>英語</rt></ruby>", 
+        name: "<ruby>英語<rt>えいご</rt></ruby>", 
         grades: {
-            j1: { name: "中1", categories: [{ name: "文法", units: [{ title: "be動詞", subUnits: [{ title: "I am / You are", content: "自己紹介をしてみよう。" }] }] }] }
+            j1: { 
+                name: "文法一覧", 
+                categories: [
+                    {
+                        name: "基本文法",
+                        units: [
+                            {
+                                title: "1. 自己紹介をしよう（be動詞・一般動詞）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) be動詞と 一般動詞",
+                                        content: `<h4>自分や 相手の こと</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>be動詞</b>：am, is, are。「〜です、〜にある」を表す。<br>
+                                            ・<b>一般動詞</b>：play, like, go。「（動作）〜する」を表す。<br>
+                                            ・<b>There is / are</b>：「〜がある」を表す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I ( ) a student. に入るbe動詞は？", display: "am/is/are", answer: "am", options: ["am", "is", "are"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 質問をしよう（疑問文）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 疑問文の 形",
+                                        content: `<h4>相手に たずねる</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・be動詞の文：be動詞を前に出す（Are you...?）。<br>
+                                            ・一般動詞の文：Do / Does を前に出す（Do you...?）。<br>
+                                            ・<b>間接疑問</b>：I don't know who he is.（彼が誰か知らない）。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "You are happy. を疑問文にすると？", display: "英文", answer: "Are you happy?", options: ["Are you happy?", "Do you happy?", "Is you happy?"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. 否定しよう（否定文）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 否定の 形",
+                                        content: `<h4>「〜ではない」と 伝える</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・be動詞の文：be動詞の後に <b>not</b> を置く。<br>
+                                            ・一般動詞の文：動詞の前に <b>don't / doesn't</b> を置く。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I like sushi. を否定文にすると？", display: "英文", answer: "I don't like sushi.", options: ["I don't like sushi.", "I not like sushi.", "I am not like sushi."] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. 将来の話をしよう（未来形）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) will と be going to",
+                                        content: `<h4>これからの こと</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>will</b>：その場で決めたことや、予測を表す。<br>
+                                            ・<b>be going to</b>：すでに決まっている予定を表す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I ( ) visit Kyoto tomorrow. (予定)", display: "英文", answer: "am going to", options: ["am going to", "will be", "going to"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "5. 過去の話をしよう（過去形）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 規則動詞と 不規則動詞",
+                                        content: `<h4>おわった こと</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・規則動詞：語尾に <b>-ed</b> をつける（played, liked）。<br>
+                                            ・不規則動詞：形が変わる（go → went, have → had）。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "go（行く）の過去形は何？", display: "単語", answer: "went", options: ["went", "goed", "goes"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. 進行中の話をしよう（進行形）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) be動詞 + 〜ing",
+                                        content: `<h4>今、 している こと</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>be動詞 + 動詞のing形</b> で「今〜しています」を表す。<br>
+                                            ・過去進行形：was/were + ing で「〜していました」。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I ( ) playing tennis now. に入るのは？", display: "英文", answer: "am", options: ["am", "is", "are"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "7. 命令文と 感嘆文",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 命令と 驚き",
+                                        content: `<h4>命令・誘い・感嘆</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>命令文</b>：動詞の原形から始める。「〜しなさい」。<br>
+                                            ・Don't ...：「〜するな」。<br>
+                                            ・<b>感嘆文</b>：What a ...! や How ...! で「なんて〜だろう！」。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「窓を開けなさい」を英語で？", display: "英文", answer: "Open the window.", options: ["Open the window.", "Opening the window.", "To open the window."] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "8. 助動詞を使おう",
+                                subUnits: [
+                                    {
+                                        title: "(ア) can, must, may など",
+                                        content: `<h4>動詞に 意味を プラスする</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>can</b>：〜できる。<br>
+                                            ・<b>must / have to</b>：〜しなければならない。<br>
+                                            ・<b>should</b>：〜すべきだ。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "You ( ) study hard. (〜しなければならない)", display: "英文", answer: "must", options: ["must", "can", "may"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "9. 比較しよう（比較級・最上級）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 2つ以上を 比べる",
+                                        content: `<h4>くらべる 表現</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>比較級</b>：-er + than。「〜より〜だ」。<br>
+                                            ・<b>最上級</b>：the + -est。「一番〜だ」。<br>
+                                            ・長い単語は more / most を使う。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "tall（背が高い）の比較級は何？", display: "単語", answer: "taller", options: ["taller", "tallest", "more tall"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "10. 不定詞と 動名詞",
+                                subUnits: [
+                                    {
+                                        title: "(ア) to と 〜ing",
+                                        content: `<h4>動詞を 名詞のように 使う</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>不定詞 (to + 原形)</b>：〜すること。〜するために。<br>
+                                            ・<b>動名詞 (ing形)</b>：〜すること。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I want ( ) to music. (聴くこと)", display: "英文", answer: "to listen", options: ["to listen", "listening", "listen"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "11. 受け身（受動態）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) be動詞 + 過去分詞",
+                                        content: `<h4>「〜される」という 表現</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>be動詞 + 過去分詞</b> で「〜される、〜された」を表す。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "This book ( ) written by him. (書かれた)", display: "英文", answer: "was", options: ["was", "is", "has"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "12. 関係代名詞",
+                                subUnits: [
+                                    {
+                                        title: "(ア) who, which, that",
+                                        content: `<h4>名詞を 文で 説明する</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>who</b>：人を説明する。<br>
+                                            ・<b>which / that</b>：物や動物を説明する。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "The boy ( ) is running is Ken. に入るのは？", display: "英文", answer: "who", options: ["who", "which", "whose"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "13. 文構造（ぶんこうぞう）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 第5文型まで",
+                                        content: `<h4>文の 組み立て方</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・S（主語）、V（動詞）、O（目的語）、C（補語）。<br>
+                                            ・SVC（S=C）、SVO（SがOを〜する）など。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I made him happy. の happy は何（S,V,O,C）？", display: "文型", answer: "C", options: ["C", "O", "S"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "14. その他",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 現在完了など",
+                                        content: `<h4>さらに 豊かな 表現</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>現在完了 (have + 過去分詞)</b>：ずっと〜している、〜したことがある。<br>
+                                            ・付加疑問、強調構文など。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "I ( ) been to America twice. (行ったことがある)", display: "英文", answer: "have", options: ["have", "am", "was"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
         } 
     }
 };
