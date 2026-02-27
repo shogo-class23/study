@@ -1451,7 +1451,7 @@ main {
 }
 
 .maze-cell.goal { background: #ffeb3b; }
-.maze-cell.goal::after { content: '🚩'; font-size: 20px; }
+.maze-cell.goal::after { content: '🚪'; font-size: 24px; }
 
 #robot {
     transition: all 0.3s ease;
