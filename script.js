@@ -11869,7 +11869,7 @@ const studyData = {
                                 title: "1. 関数（かんすう）の 定義と 実行",
                                 subUnits: [
                                     {
-                                        title: "(ア) 処理を まとめる",
+                                        title: "(ア) 処理を ままとめる",
                                         content: `<h4>一連の 命令に 名前を つける</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・何度も使う処理を一つにまとめて、名前をつけたものを <b>関数</b> といいます。
@@ -11888,6 +11888,284 @@ const studyData = {
                                         quizzes: [
                                             { question: "関数に渡す材料となるデータのことを何という？", display: "用語", answer: "引数", options: ["引数", "戻り値", "定数"] },
                                             { question: "関数での処理が終わったあと、呼び出し元に返される結果を何という？", display: "用語", answer: "戻り値", options: ["戻り値", "引数", "変数"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "プログラミングの 道具箱",
+                        units: [
+                            {
+                                title: "1. 動き (Motion)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) キャラを 動かす 体験",
+                                        content: `<h4>ブロックを 動かしてみよう</h4>
+                                        <div class="demo-stage">
+                                            <div id="motion-sprite" class="sprite-demo">🐱</div>
+                                        </div>
+                                        <div class="game-controls">
+                                            <button class="game-btn btn-cmd" onclick="window.motionDemo.move(10)">10歩動かす</button>
+                                            <button class="game-btn btn-cmd" onclick="window.motionDemo.turn(15)">右に15度回す</button>
+                                            <button class="game-btn btn-reset" onclick="window.motionDemo.reset()">リセット</button>
+                                        </div>
+                                        <script>
+                                            (function() {
+                                                let x = 0, deg = 0;
+                                                window.motionDemo = {
+                                                    move: (d) => {
+                                                        x += d;
+                                                        document.getElementById('motion-sprite').style.left = 'calc(50% + ' + x + 'px)';
+                                                    },
+                                                    turn: (d) => {
+                                                        deg += d;
+                                                        document.getElementById('motion-sprite').style.transform = 'rotate(' + deg + 'deg)';
+                                                    },
+                                                    reset: () => {
+                                                        x = 0; deg = 0;
+                                                        const s = document.getElementById('motion-sprite');
+                                                        s.style.left = '50%';
+                                                        s.style.transform = 'rotate(0deg)';
+                                                    }
+                                                };
+                                            })();
+                                        </script>`,
+                                        quizzes: [
+                                            { question: "右に90度回る命令を4回繰り返すと、向きはどうなる？", display: "向き", answer: "元に戻る", options: ["元に戻る", "反対を向く", "左を向く"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 見た目 (Looks)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 演出と 変化の 体験",
+                                        content: `<h4>見た目を 変えてみよう</h4>
+                                        <div class="demo-stage">
+                                            <div id="looks-sprite" class="sprite-demo">🐱</div>
+                                            <div id="speech-bubble" style="position: absolute; top: 20px; background: white; padding: 5px 10px; border-radius: 10px; border: 2px solid #333; display: none;"></div>
+                                        </div>
+                                        <div class="game-controls">
+                                            <button class="game-btn btn-cmd" onclick="window.looksDemo.say('こんにちは！')">「こんにちは」と言う</button>
+                                            <button class="game-btn btn-cmd" onclick="window.looksDemo.changeSize(1.2)">大きくする</button>
+                                            <button class="game-btn btn-reset" onclick="window.looksDemo.reset()">リセット</button>
+                                        </div>
+                                        <script>
+                                            (function() {
+                                                let size = 1.0;
+                                                window.looksDemo = {
+                                                    say: (msg) => {
+                                                        const b = document.getElementById('speech-bubble');
+                                                        b.innerText = msg; b.style.display = 'block';
+                                                        setTimeout(() => b.style.display = 'none', 2000);
+                                                    },
+                                                    changeSize: (s) => {
+                                                        size *= s;
+                                                        document.getElementById('looks-sprite').style.fontSize = (50 * size) + 'px';
+                                                    },
+                                                    reset: () => {
+                                                        size = 1.0;
+                                                        document.getElementById('looks-sprite').style.fontSize = '50px';
+                                                        document.getElementById('speech-bubble').style.display = 'none';
+                                                    }
+                                                };
+                                            })();
+                                        </script>`,
+                                        quizzes: [
+                                            { question: "キャラを画面から一時的に消したい時に使う命令は？", display: "命令", answer: "隠す（非表示）", options: ["隠す", "消去する", "小さくする"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "3. イベント (Events)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) きっかけを 作る",
+                                        content: `<h4>プログラムの スタート</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>旗が押されたとき</b>：ゲーム開始の合図。<br>
+                                            ・<b>クリックされたとき</b>：キャラを触った時の反応。<br>
+                                            ・<b>キーが押されたとき</b>：キーボードでの操作。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「スペースキーが押されたらジャンプする」という処理のきっかけ（イベント）は？", display: "きっかけ", answer: "キーが押されたとき", options: ["キーが押されたとき", "ずっと繰り返す", "10歩動かす"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "4. 制御 (Control)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 繰り返しと 条件",
+                                        content: `<h4>プログラムの 流れを 操る</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>ずっと繰り返す</b>：ゲーム中ずっと行う処理。<br>
+                                            ・<b>もし〜なら</b>：ある条件（スコアが100など）の時だけ行う。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「ずっと」と「10回」の違いは、繰り返す回数が決まっているかどうかである。○か×か？", display: "判定", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "5. 変数 (Variables)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) スコアと タイマー",
+                                        content: `<h4>数字や 言葉を 覚える</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>スコア</b>：点数を記録する変数。<br>
+                                            ・<b>増やす／変える</b>：今の数字に足したり引いたりする。<br>
+                                            ・ゲームの「状態」を保存するために必須です。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "敵を倒すごとに点数を1点ずつ増やすには、何を使えばいい？", display: "道具", answer: "変数", options: ["変数", "イベント", "見た目"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "6. 演算 (Operators)",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 計算と ランダム",
+                                        content: `<h4>頭脳の 部分</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>四則演算</b>：＋, −, ×, ÷ の計算。<br>
+                                            ・<b>比較</b>：大なり(＞), 小なり(＜), イコール(＝)。<br>
+                                            ・<b>乱数（乱数）</b>：1から10までの「ランダムな数」。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "サイコロのように、実行するたびに違う数字を出したい時に使うのは？", display: "用語", answer: "ランダムな数（乱数）", options: ["ランダムな数", "合計", "定数"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "プログラミング体験",
+                        units: [
+                            {
+                                title: "1. はじめての アルゴリズム",
+                                subUnits: [
+                                    {
+                                        title: "(ア) ロボットを ゴールへ！",
+                                        content: `<h4>命令を ならべて 動かそう</h4>
+                                        <p>下のボタンを押して、命令（プログラム）を作ろう！「実行」を押すとロボットが動くよ。旗のところまで行けるかな？</p>
+                                        <div class="maze-container">
+                                            <div class="maze-grid" id="maze-grid">
+                                                <!-- 5x5グリッド -->
+                                                <div class="maze-cell" id="cell-0-0"><span id="robot">🤖</span></div>
+                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
+                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
+                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
+                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div>
+                                                <div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell"></div><div class="maze-cell goal" id="cell-4-4"></div>
+                                            </div>
+                                            <div class="command-area">
+                                                <div class="command-queue" id="command-queue">プログラム：</div>
+                                                <div class="control-panel">
+                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('leftTurn')">左回転</button>
+                                                    <div class="d-pad">
+                                                        <button class="game-btn btn-up" onclick="window.mazeGame.add('forward')">前へ</button>
+                                                        <button class="game-btn btn-left" onclick="window.mazeGame.add('moveLeft')">左へ</button>
+                                                        <button class="game-btn btn-right" onclick="window.mazeGame.add('moveRight')">右へ</button>
+                                                        <button class="game-btn btn-down" onclick="window.mazeGame.add('backward')">後ろへ</button>
+                                                    </div>
+                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('rightTurn')">右回転</button>
+                                                </div>
+                                                <div class="game-action-group">
+                                                    <button class="game-btn btn-run" onclick="window.mazeGame.run()">実行！</button>
+                                                    <button class="game-btn btn-reset" onclick="window.mazeGame.reset()">リセット</button>
+                                                </div>
+                                            </div>
+                                            <div id="maze-message" style="font-weight: bold; color: #e67e22; margin-top: 15px;"></div>
+                                        </div>
+                                        <script>
+                                            (function() {
+                                                const gridW = 5, gridH = 5;
+                                                let robot = { x: 0, y: 0, dir: 1 }; // dir: 0:上, 1:右, 2:下, 3:左
+                                                let queue = [];
+                                                let isRunning = false;
+
+                                                window.mazeGame = {
+                                                    add: (cmd) => {
+                                                        if(isRunning) return;
+                                                        queue.push(cmd);
+                                                        const qEl = document.getElementById('command-queue');
+                                                        const item = document.createElement('span');
+                                                        item.className = 'command-item';
+                                                        const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '⟲', rightTurn: '⟳' };
+                                                        item.innerText = names[cmd];
+                                                        qEl.appendChild(item);
+                                                    },
+                                                    reset: () => {
+                                                        robot = { x: 0, y: 0, dir: 1 };
+                                                        queue = [];
+                                                        isRunning = false;
+                                                        document.getElementById('command-queue').innerHTML = 'プログラム：';
+                                                        document.getElementById('maze-message').innerText = '';
+                                                        window.mazeGame.updateUI();
+                                                    },
+                                                    updateUI: () => {
+                                                        const rbEl = document.getElementById('robot');
+                                                        if(!rbEl) return;
+                                                        const cell = document.getElementById('cell-' + robot.y + '-' + robot.x);
+                                                        if(cell) cell.appendChild(rbEl);
+                                                        rbEl.style.transform = 'rotate(' + (robot.dir * 90 - 90) + 'deg)';
+                                                    },
+                                                    run: async () => {
+                                                        if(isRunning || queue.length === 0) return;
+                                                        isRunning = true;
+                                                        for(let cmd of queue) {
+                                                            let dx = 0, dy = 0;
+                                                            // 向き: 0:上, 1:右, 2:下, 3:左
+                                                            if(cmd === 'forward') {
+                                                                dx = robot.dir === 1 ? 1 : (robot.dir === 3 ? -1 : 0);
+                                                                dy = robot.dir === 2 ? 1 : (robot.dir === 0 ? -1 : 0);
+                                                            } else if(cmd === 'backward') {
+                                                                dx = robot.dir === 1 ? -1 : (robot.dir === 3 ? 1 : 0);
+                                                                dy = robot.dir === 2 ? -1 : (robot.dir === 0 ? 1 : 0);
+                                                            } else if(cmd === 'moveLeft') {
+                                                                dx = robot.dir === 0 ? -1 : (robot.dir === 2 ? 1 : 0);
+                                                                dy = robot.dir === 1 ? -1 : (robot.dir === 3 ? 1 : 0);
+                                                            } else if(cmd === 'moveRight') {
+                                                                dx = robot.dir === 0 ? 1 : (robot.dir === 2 ? -1 : 0);
+                                                                dy = robot.dir === 1 ? 1 : (robot.dir === 3 ? -1 : 0);
+                                                            } else if(cmd === 'leftTurn') {
+                                                                robot.dir = (robot.dir + 3) % 4;
+                                                            } else if(cmd === 'rightTurn') {
+                                                                robot.dir = (robot.dir + 1) % 4;
+                                                            }
+
+                                                            let nx = robot.x + dx, ny = robot.y + dy;
+                                                            if(nx >= 0 && nx < gridW && ny >= 0 && ny < gridH) {
+                                                                robot.x = nx; robot.y = ny;
+                                                            }
+                                                            
+                                                            window.mazeGame.updateUI();
+                                                            await new Promise(r => setTimeout(r, 500));
+                                                        }
+                                                        if(robot.x === 4 && robot.y === 4) {
+                                                            document.getElementById('maze-message').innerText = '🎉 ゴール！おめでとう！';
+                                                        } else {
+                                                            document.getElementById('maze-message').innerText = '残念！もういちど考えてみてね。';
+                                                        }
+                                                        isRunning = false;
+                                                    }
+                                                };
+                                                setTimeout(() => window.mazeGame.updateUI(), 100);
+                                            })();
+                                        </script>`,
+                                        quizzes: [
+                                            { question: "プログラムを動かすために、命令を正しい順番で並べることを何という？", display: "用語", answer: "アルゴリズム", options: ["アルゴリズム", "スクリプト", "バグ"] }
                                         ]
                                     }
                                 ]
