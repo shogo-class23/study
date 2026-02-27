@@ -12119,11 +12119,14 @@ const studyData = {
                                                                                                                                                                             </select>
                                                                                                                                                                                                                                     <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameHard.addLoop()">繰り返すブロックを追加</button>
                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                    <div style="margin-top: 10px;">
-                                                                                                                                                                                                                                        もし <span style="background:#ddd; padding: 2px 5px;">前が壁</span> なら... 
-                                                                                                                                                                                                                                        <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameHard.addIf()">もし〜ならを追加</button>
-                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            <div style="margin-top: 10px;">
+                                                                                                                                                                                                                                                                                                もし <span style="background:#ddd; padding: 2px 5px;">前が壁</span> なら... 
+                                                                                                                                                                                                                                                                                                <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameHard.addIf('if_wall')">追加</button>
+                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                            <div style="margin-top: 5px;">
+                                                                                                                                                                                                                                                                                                もし <span style="background:#ddd; padding: 2px 5px;">壁ではない</span> なら... 
+                                                                                                                                                                                                                                                                                                <button class="game-btn" style="padding: 5px 10px; background: #d35400; color: white;" onclick="window.mazeGameHard.addIf('if_not_wall')">追加</button>
+                                                                                                                                                                                                                                                                                            </div>                                                                                                                                                                            
                                                                                                                                                                                                                                     <div style="margin-top: 15px; border-top: 1px solid #ddd; padding-top: 10px;">
                                                                                                                                                                                                                                         <button class="game-btn" id="finish-block-btn" style="width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameHard.finishBlock()">ブロックを完成させる（くっつけ終わる）</button>
                                                                                                                                                                                                                                     </div>
@@ -12956,14 +12959,11 @@ window.onload = () => {
             activeBlock = newBlock; // これ以降の命令はこの中に入る
             window.mazeGameHard.renderQueue();
         },
-        addIf: () => {
+        addIf: (type) => {
             if(hardIsRunning) return;
-            const newBlock = { type: 'if_wall', value: null, subCommands: [] };
-            if (activeBlock) {
-                activeBlock.subCommands.push(newBlock);
-            } else {
-                hardQueue.push(newBlock);
-            }
+            const newBlock = { type: type, value: null, subCommands: [] };
+            if (activeBlock) activeBlock.subCommands.push(newBlock);
+            else hardQueue.push(newBlock);
             activeBlock = newBlock;
             window.mazeGameHard.renderQueue();
         },
@@ -12978,8 +12978,7 @@ window.onload = () => {
         },
         clearAll: () => {
             if(hardIsRunning) return;
-            hardQueue = [];
-            activeBlock = null;
+            hardQueue = []; activeBlock = null;
             window.mazeGameHard.renderQueue();
             const mEl = document.getElementById('maze-message-hard');
             if(mEl) mEl.innerText = '';
@@ -12988,48 +12987,48 @@ window.onload = () => {
             const qEl = document.getElementById('command-queue-hard');
             if(!qEl) return;
             qEl.innerHTML = 'プログラム：';
-            
             const btn = document.getElementById('finish-block-btn');
             if(btn) btn.style.display = activeBlock ? 'block' : 'none';
-
             const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回' };
 
-            const buildUI = (items, container, parentArr) => {
+            const buildUI = (items, container) => {
                 items.forEach((cmd, i) => {
-                    if (cmd.type === 'loop' || cmd.type === 'if_wall') {
+                    if (cmd.type === 'loop' || cmd.type === 'if_wall' || cmd.type === 'if_not_wall') {
                         const block = document.createElement('div');
-                        block.className = 'command-block' + (cmd.type === 'if_wall' ? ' if-block' : '');
+                        block.className = 'command-block' + (cmd.type.includes('if') ? ' if-block' : '');
                         if (cmd === activeBlock) block.style.boxShadow = '0 0 10px #f1c40f';
                         
                         const header = document.createElement('div');
                         header.className = 'block-header';
-                        const title = cmd.type === 'loop' ? (cmd.value === 'forever' ? 'ずっと繰り返す' : cmd.value + '回繰り返す') : 'もし前が壁なら';
-                        header.innerHTML = `<span>${title}</span><span class="delete-btn" onclick="event.stopPropagation(); window.mazeGameHard.remove(${i}, studyData.info.grades.basic.categories[studyData.info.grades.basic.categories.length-1].units[1].subUnits[1].currentArray)">×</span>`;
-                        // 削除機能のために配列への参照を一時的に持たせる（簡易実装）
-                        cmd.parent = parentArr;
+                        let title = "";
+                        if(cmd.type === 'loop') title = (cmd.value === 'forever' ? 'ずっと' : cmd.value + '回') + '繰り返す';
+                        else if(cmd.type === 'if_wall') title = 'もし前が壁なら';
+                        else title = 'もし前が壁でないなら';
+
+                        const titleSpan = document.createElement('span');
+                        titleSpan.innerText = title;
+                        const delBtn = document.createElement('span');
+                        delBtn.className = 'delete-btn'; delBtn.innerText = '×';
+                        delBtn.onclick = (e) => { e.stopPropagation(); items.splice(i, 1); if(activeBlock===cmd) activeBlock=null; window.mazeGameHard.renderQueue(); };
                         
+                        header.appendChild(titleSpan); header.appendChild(delBtn);
                         const body = document.createElement('div');
                         body.className = 'block-body';
-                        buildUI(cmd.subCommands, body, cmd.subCommands);
-                        
-                        block.appendChild(header);
-                        block.appendChild(body);
+                        buildUI(cmd.subCommands, body);
+                        block.appendChild(header); block.appendChild(body);
                         container.appendChild(block);
                     } else {
                         const item = document.createElement('span');
                         item.className = 'command-item';
-                        item.innerHTML = `${names[cmd.value]} <span class="delete-btn" onclick="window.mazeGameHard.removeItemFromArr(${i}, ${JSON.stringify(parentArr) === JSON.stringify(hardQueue)})">×</span>`;
-                        // 配列からの削除ロジックを簡略化するため、グローバルな削除関数を後で呼ぶ
-                        item.querySelector('.delete-btn').onclick = (e) => {
-                            e.stopPropagation();
-                            parentArr.splice(i, 1);
-                            window.mazeGameHard.renderQueue();
-                        };
-                        container.appendChild(item);
+                        item.innerText = names[cmd.value] + ' ';
+                        const delBtn = document.createElement('span');
+                        delBtn.className = 'delete-btn'; delBtn.innerText = '×';
+                        delBtn.onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameHard.renderQueue(); };
+                        item.appendChild(delBtn); container.appendChild(item);
                     }
                 });
             };
-            buildUI(hardQueue, qEl, hardQueue);
+            buildUI(hardQueue, qEl);
         },
         updateUI: () => {
             const rbEl = document.getElementById('robot-hard');
@@ -13037,6 +13036,12 @@ window.onload = () => {
             const cell = document.getElementById('h-cell-' + hardRobot.y + '-' + hardRobot.x);
             if(cell) cell.appendChild(rbEl);
             rbEl.style.transform = 'rotate(' + (hardRobot.dir * 90) + 'deg)';
+        },
+        checkWall: () => {
+            const dir = hardRobot.dir;
+            let fx = hardRobot.x + (dir === 1 ? 1 : (dir === 3 ? -1 : 0));
+            let fy = hardRobot.y + (dir === 2 ? 1 : (dir === 0 ? -1 : 0));
+            return hardWalls.some(w => w.x === fx && w.y === fy) || fx < 0 || fx >= 5 || fy < 0 || fy >= 5;
         },
         run: async () => {
             if(hardIsRunning || hardQueue.length === 0) return;
@@ -13056,26 +13061,23 @@ window.onload = () => {
                             await executeItems(cmd.subCommands);
                             if (!hardIsRunning) return;
                         }
-                    } else if (cmd.type === 'if_wall') {
-                        let fx = hardRobot.x + (hardRobot.dir === 1 ? 1 : (hardRobot.dir === 3 ? -1 : 0));
-                        let fy = hardRobot.y + (hardRobot.dir === 2 ? 1 : (hardRobot.dir === 0 ? -1 : 0));
-                        const isWallAhead = hardWalls.some(w => w.x === fx && w.y === fy) || fx < 0 || fx >= 5 || fy < 0 || fy >= 5;
-                        if (isWallAhead) await executeItems(cmd.subCommands);
+                    } else if (cmd.type === 'if_wall' || cmd.type === 'if_not_wall') {
+                        const wallExists = window.mazeGameHard.checkWall();
+                        const conditionMet = (cmd.type === 'if_wall' && wallExists) || (cmd.type === 'if_not_wall' && !wallExists);
+                        if (conditionMet) await executeItems(cmd.subCommands);
                     } else {
                         let dx = 0, dy = 0;
+                        const dir = hardRobot.dir;
                         if(cmd.value === 'forward') {
-                            if(hardRobot.dir === 0) dy = -1; else if(hardRobot.dir === 1) dx = 1; else if(hardRobot.dir === 2) dy = 1; else if(hardRobot.dir === 3) dx = -1;
+                            if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
                         } else if(cmd.value === 'backward') {
-                            if(hardRobot.dir === 0) dy = 1; else if(hardRobot.dir === 1) dx = -1; else if(hardRobot.dir === 2) dy = -1; else if(hardRobot.dir === 3) dx = 1;
+                            if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
                         } else if(cmd.value === 'moveLeft') {
-                            if(hardRobot.dir === 0) dx = -1; else if(hardRobot.dir === 1) dy = -1; else if(hardRobot.dir === 2) dx = 1; else if(hardRobot.dir === 3) dy = 1;
+                            if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
                         } else if(cmd.value === 'moveRight') {
-                            if(hardRobot.dir === 0) dx = 1; else if(hardRobot.dir === 1) dy = 1; else if(hardRobot.dir === 2) dx = -1; else if(hardRobot.dir === 3) dy = -1;
-                        } else if(cmd.value === 'leftTurn') {
-                            hardRobot.dir = (hardRobot.dir + 3) % 4;
-                        } else if(cmd.value === 'rightTurn') {
-                            hardRobot.dir = (hardRobot.dir + 1) % 4;
-                        }
+                            if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
+                        } else if(cmd.value === 'leftTurn') hardRobot.dir = (hardRobot.dir + 3) % 4;
+                        else if(cmd.value === 'rightTurn') hardRobot.dir = (hardRobot.dir + 1) % 4;
 
                         let nx = hardRobot.x + dx, ny = hardRobot.y + dy;
                         if (hardWalls.some(w => w.x === nx && w.y === ny)) {
@@ -13090,11 +13092,9 @@ window.onload = () => {
                     }
                 }
             };
-
             await executeItems(hardQueue);
-            
             if(hardIsRunning && mEl) {
-                if(hardRobot.x === 4 && hardRobot.y === 4) mEl.innerText = '🎉 制御ブロックを使いこなしたね！クリア！';
+                if(hardRobot.x === 4 && hardRobot.y === 4) mEl.innerText = '🎉 制御ブロックをマスターしたね！';
                 else mEl.innerText = 'ゴールできなかった... 工夫してみよう。';
             }
             hardIsRunning = false;
