@@ -7151,7 +7151,229 @@ const studyData = {
     japanese: { 
         name: "<ruby>国語<rt>こくご</rt></ruby>", 
         grades: {
-            e1: { name: "小1", categories: [{ name: "漢字", units: [{ title: "1年生の漢字", subUnits: [{ title: "山の書き方", content: "山、川などの漢字を覚えよう。" }] }] }] }
+            gendai: { 
+                name: "現代日本", 
+                categories: [
+                    {
+                        name: "言葉の 基礎と 文法",
+                        units: [
+                            {
+                                title: "1. 文字（五十音・漢字・ローマ字）",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 五十音と 音の種類",
+                                        content: `<h4>日本語の 音</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>濁音</b>：がぎぐげご<br>
+                                            ・<b>半濁音</b>：ぱぴぷぺぽ<br>
+                                            ・<b>拗音</b>：きゃ、きゅ、きょ
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「ぱ」は何音？", display: "用語", answer: "半濁音", options: ["半濁音", "濁音"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 漢字の 成り立ち",
+                                        content: `<h4>漢字の 種類</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>象形文字</b>：物の形から（山、川）<br>
+                                            ・<b>指事文字</b>：しるしから（上、下）<br>
+                                            ・<b>会意文字</b>：意味を組み合わせて（休＝人＋木）<br>
+                                            ・<b>形声文字</b>：音と意味を組み合わせて（江＝水＋工）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「山」や「川」のように、物の形をかたどってできた漢字を何という？", display: "用語", answer: "象形文字", options: ["象形文字", "指事文字", "形声文字"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(ウ) ローマ字表",
+                                        content: `<h4>ヘボン式 書き方</h4>
+                                        <div class="point-box" style="font-size: 0.8em; max-height: 200px; overflow-y: auto;">
+                                            し(shi), ち(chi), つ(tsu), ふ(fu)<br>
+                                            しゃ(sha), しゅ(shu), しょ(sho)<br>
+                                            ちゃ(cha), ちゅ(chu), ちょ(cho)<br>
+                                            っ（小さい「つ」）は、次の子音を重ねる（例: kappe = かっぺ）
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「つ」をローマ字で書くと？", display: "書き方", answer: "tsu", options: ["tsu", "tu"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 文法と 敬語",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 十品詞の 体系",
+                                        content: `<h4>言葉の 分類</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>体言</b>：名詞（活用がない）<br>
+                                            ・<b>用言</b>：動詞、形容詞、形容動詞（活用がある）<br>
+                                            ・その他：副詞、連体詞、接続詞、感動詞、助詞、助動詞。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "活用があり、述語になる言葉を何という？", display: "用語", answer: "用言", options: ["用言", "体言"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 敬語：重要 30動詞 完全表",
+                                        content: `<h4>1〜30の 変換表</h4>
+                                        <div class="point-box" style="font-size: 0.7em; max-height: 450px; overflow-y: auto;">
+                                            <table style="width: 100%; border-collapse: collapse;">
+                                                <tr style="background: #f0f0f0;"><th>#</th><th>元の語</th><th>尊敬語</th><th>謙譲語</th></tr>
+                                                <tr><td>1</td><td>する</td><td>なさる</td><td>いたす</td></tr>
+                                                <tr><td>2</td><td>言う</td><td>おっしゃる</td><td>申し上げる</td></tr>
+                                                <tr><td>3</td><td>行く</td><td>いらっしゃる</td><td>伺う・参る</td></tr>
+                                                <tr><td>4</td><td>来る</td><td>いらっしゃる</td><td>参る</td></tr>
+                                                <tr><td>5</td><td>見る</td><td>ご覧になる</td><td>拝見する</td></tr>
+                                                <tr><td>6</td><td>聞く</td><td>お聞きになる</td><td>拝聴する・伺う</td></tr>
+                                                <tr><td>7</td><td>知る</td><td>ご存じだ</td><td>存じている</td></tr>
+                                                <tr><td>8</td><td>会う</td><td>お会いになる</td><td>お目にかかる</td></tr>
+                                                <tr><td>9</td><td>食べる</td><td>召し上がる</td><td>いただく</td></tr>
+                                                <tr><td>10</td><td>思う</td><td>おぼし召す</td><td>存ずる</td></tr>
+                                                <tr><td>11</td><td>読む</td><td>お読みになる</td><td>拝読する</td></tr>
+                                                <tr><td>12</td><td>伝える</td><td>お伝えになる</td><td>申し伝える</td></tr>
+                                                <tr><td>13</td><td>待つ</td><td>お待ちになる</td><td>お待ちする</td></tr>
+                                                <tr><td>14</td><td>座る</td><td>お掛けになる</td><td>お座りする</td></tr>
+                                                <tr><td>15</td><td>帰る</td><td>お帰りになる</td><td>失礼する</td></tr>
+                                                <tr><td>16</td><td>与える</td><td>くださる</td><td>差し上げる</td></tr>
+                                                <tr><td>17</td><td>受け取る</td><td>お受け取りになる</td><td>受領する</td></tr>
+                                                <tr><td>18</td><td>もらう</td><td>ー</td><td>いただく</td></tr>
+                                                <tr><td>19</td><td>考える</td><td>お考えになる</td><td>拝考する</td></tr>
+                                                <tr><td>20</td><td>利用する</td><td>ご利用になる</td><td>利用させていただく</td></tr>
+                                                <tr><td>21</td><td>買う</td><td>お買い求めになる</td><td>拝受する</td></tr>
+                                                <tr><td>22</td><td>着る</td><td>お召しになる</td><td>ー</td></tr>
+                                                <tr><td>23</td><td>借りる</td><td>ー</td><td>拝借する</td></tr>
+                                                <tr><td>24</td><td>渡す</td><td>お渡しになる</td><td>お渡しする</td></tr>
+                                                <tr><td>25</td><td>呼ぶ</td><td>お呼びになる</td><td>お呼びする</td></tr>
+                                                <tr><td>26</td><td>訪ねる</td><td>お訪ねになる</td><td>伺う</td></tr>
+                                                <tr><td>27</td><td>尋ねる</td><td>お尋ねになる</td><td>伺う</td></tr>
+                                                <tr><td>28</td><td>探す</td><td>お探しになる</td><td>お探しする</td></tr>
+                                                <tr><td>29</td><td>使う</td><td>お使いになる</td><td>お使いする</td></tr>
+                                                <tr><td>30</td><td>持つ</td><td>お持ちになる</td><td>お持ちする</td></tr>
+                                            </table>
+                                            <p>※「です・ます」は <b>丁寧語</b>、お茶などの「お」は <b>美化語</b> です。</p>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「食べる」の尊敬語（相手が食べる）は？", display: "敬語", answer: "召し上がる", options: ["召し上がる", "いただく", "存ずる"] },
+                                            { question: "「行く」の謙譲語（自分が相手のところへ行く）は？", display: "敬語", answer: "伺う", options: ["伺う", "いらっしゃる", "なさる"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: "表現と 読解",
+                        units: [
+                            {
+                                title: "1. 文章を 読み書きする",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 読解の コツ",
+                                        content: `<h4>文章の 流れを つかむ</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>指示語</b>：「これ」「それ」が指す内容を直前から探す。<br>
+                                            ・<b>接続詞</b>：「しかし（逆接）」の後は筆者の主張が来やすい。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「しかし」のように、前と反対の内容をつなぐ言葉は？", display: "用語", answer: "逆接", options: ["逆接", "順接"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 作文の ルール",
+                                        content: `<h4>原稿用紙の 使い方</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・書き出しや段落の変わり目は <b>一字下げる</b>。<br>
+                                            ・句読点（、。）も一字分使う。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "文章の書き出しは何字下げますか？", display: "ルール", answer: "1字", options: ["1字", "下げない"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ] 
+            },
+            igai: {
+                name: "現代日本以外",
+                categories: [
+                    {
+                        name: "古典の世界",
+                        units: [
+                            {
+                                title: "1. 古文・漢文の 基礎",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 古文 読解ポイント",
+                                        content: `<h4>古語の 意味</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>うつくし</b>：かわいい<br>
+                                            ・<b>おどろく</b>：目が覚める<br>
+                                            ・<b>ありがたし</b>：めったにない
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "古文で「うつくし」の意味は？", display: "意味", answer: "かわいい", options: ["かわいい", "美しい"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(イ) 漢文 ルール",
+                                        content: `<h4>返り点と 句法</h4>
+                                        <div class="point-box" style="font-size: 0.85em;">
+                                            ・<b>レ点</b>：下の字から一字返る。<br>
+                                            ・<b>一・二点</b>：二から一へ返る。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "下の字から一字だけ返って読む記号は？", display: "記号", answer: "レ点", options: ["レ点", "一・二点"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "2. 文学史：時代の あゆみ",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 上代から 近現代の名作 完全リスト",
+                                        content: `<h4>時代を 彩る 文学</h4>
+                                        <div class="point-box" style="font-size: 0.8em; max-height: 450px; overflow-y: auto;">
+                                            <b>1. 上代（奈良時代まで）</b><br>
+                                            ・<b>万葉集</b>：現存する日本最古の歌集。<br>
+                                            ・<b>古事記</b>・<b>日本書紀</b>：日本の成り立ち。<br><br>
+                                            <b>2. 中古（平安時代）</b><br>
+                                            ・<b>源氏物語</b>（紫式部）：長編物語の最高傑作。<br>
+                                            ・<b>枕草子</b>（清少納言）：日本最古の随筆。<br>
+                                            ・<b>古今和歌集</b>：最初の勅撰和歌集。<br>
+                                            ・<b>竹取物語</b>：最古の物語（かぐや姫）。<br><br>
+                                            <b>3. 中世（鎌倉・室町時代）</b><br>
+                                            ・<b>平家物語</b>：軍記物語。無常観。<br>
+                                            ・<b>方丈記</b>（鴨長明）：三大随筆。<br>
+                                            ・<b>徒然草</b>（兼好法師）：三大随筆。<br>
+                                            ・<b>新古今和歌集</b>：技巧を凝らした歌風。<br><br>
+                                            <b>4. 近世（江戸時代）</b><br>
+                                            ・<b>おくのほそ道</b>（松尾芭蕉）：俳諧。<br>
+                                            ・<b>曽根崎心中</b>（近松門左衛門）：人形浄瑠璃・歌舞伎。<br>
+                                            ・<b>日本永代蔵</b>（井原西鶴）：浮世草子。<br><br>
+                                            <b>5. 近現代（明治〜）</b><br>
+                                            ・<b>夏目漱石</b>：坊っちゃん、こころ、吾輩は猫である<br>
+                                            ・<b>森鴎外</b>：舞姫、阿部一族<br>
+                                            ・<b>芥川龍之介</b>：羅生門、鼻、蜘蛛の糸<br>
+                                            ・<b>太宰治</b>：走れメロス、人間失格<br>
+                                            ・<b>中島敦</b>：山月記
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "平安時代に清少納言によって書かれた、日本最古の随筆は？", display: "作品名", answer: "枕草子", options: ["枕草子", "源氏物語", "方丈記"] },
+                                            { question: "江戸時代、『おくのほそ道』を著した俳句の名人は？", display: "人物", answer: "松尾芭蕉", options: ["松尾芭蕉", "井原西鶴", "近松門左衛門"] },
+                                            { question: "『走れメロス』の著者は？", display: "人物", answer: "太宰治", options: ["太宰治", "芥川龍之介", "森鴎外"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
         } 
     },
         science: { 
