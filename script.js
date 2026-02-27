@@ -12071,18 +12071,19 @@ const studyData = {
                                             <div class="command-area">
                                                 <div class="command-queue" id="command-queue">プログラム：</div>
                                                 <div class="control-panel">
-                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('leftTurn')">左回転</button>
+                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('leftTurn')">左回</button>
                                                     <div class="d-pad">
-                                                        <button class="game-btn btn-up" onclick="window.mazeGame.add('forward')">前へ</button>
-                                                        <button class="game-btn btn-left" onclick="window.mazeGame.add('moveLeft')">左へ</button>
-                                                        <button class="game-btn btn-right" onclick="window.mazeGame.add('moveRight')">右へ</button>
-                                                        <button class="game-btn btn-down" onclick="window.mazeGame.add('backward')">後ろへ</button>
+                                                        <button class="game-btn btn-up" onclick="window.mazeGame.add('forward')">前</button>
+                                                        <button class="game-btn btn-left" onclick="window.mazeGame.add('moveLeft')">左</button>
+                                                        <button class="game-btn btn-right" onclick="window.mazeGame.add('moveRight')">右</button>
+                                                        <button class="game-btn btn-down" onclick="window.mazeGame.add('backward')">後</button>
                                                     </div>
-                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('rightTurn')">右回転</button>
+                                                    <button class="game-btn btn-rotate" onclick="window.mazeGame.add('rightTurn')">右回</button>
                                                 </div>
                                                 <div class="game-action-group">
                                                     <button class="game-btn btn-run" onclick="window.mazeGame.run()">実行！</button>
-                                                    <button class="game-btn btn-reset" onclick="window.mazeGame.reset()">リセット</button>
+                                                    <button class="game-btn btn-reset" onclick="window.mazeGame.reset()">位置を戻す</button>
+                                                    <button class="game-btn btn-clear-all" onclick="window.mazeGame.clearAll()">全消去</button>
                                                 </div>
                                             </div>
                                             <div id="maze-message" style="font-weight: bold; color: #e67e22; margin-top: 15px;"></div>
@@ -12754,28 +12755,44 @@ window.onload = () => {
         add: (cmd) => {
             if(mazeIsRunning) return;
             mazeQueue.push(cmd);
-            const qEl = document.getElementById('command-queue');
-            if(!qEl) return;
-            const item = document.createElement('span');
-            item.className = 'command-item';
-            const names = { forward: '前進', backward: '後退', moveLeft: '左スライド', moveRight: '右スライド', leftTurn: '左回転', rightTurn: '右回転' };
-            item.innerText = names[cmd];
-            qEl.appendChild(item);
+            window.mazeGame.renderQueue();
         },
-        reset: () => {
-            window.initMazeGame();
-            const qEl = document.getElementById('command-queue');
-            if(qEl) qEl.innerHTML = 'プログラム：';
+        remove: (index) => {
+            if(mazeIsRunning) return;
+            mazeQueue.splice(index, 1);
+            window.mazeGame.renderQueue();
+        },
+        clearAll: () => {
+            if(mazeIsRunning) return;
+            mazeQueue = [];
+            window.mazeGame.renderQueue();
             const mEl = document.getElementById('maze-message');
             if(mEl) mEl.innerText = '';
+        },
+        renderQueue: () => {
+            const qEl = document.getElementById('command-queue');
+            if(!qEl) return;
+            qEl.innerHTML = 'プログラム：';
+            const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回' };
+            mazeQueue.forEach((cmd, i) => {
+                const item = document.createElement('span');
+                item.className = 'command-item';
+                item.innerHTML = `${names[cmd]} <span class="delete-btn" onclick="window.mazeGame.remove(${i})">×</span>`;
+                qEl.appendChild(item);
+            });
+        },
+        reset: () => {
+            // ロボットの位置のみ初期化
+            mazeRobot = { x: 0, y: 0, dir: 0 };
+            const mEl = document.getElementById('maze-message');
+            if(mEl) mEl.innerText = '';
+            window.mazeGame.updateUI();
         },
         updateUI: () => {
             const rbEl = document.getElementById('robot');
             if(!rbEl) return;
             const cell = document.getElementById('cell-' + mazeRobot.y + '-' + mazeRobot.x);
             if(cell) cell.appendChild(rbEl);
-            // 0:上(0deg), 1:右(90deg), 2:下(180deg), 3:左(270deg)
-            // ロボット（🤖）の絵がデフォルトで上を向いている前提で角度を設定
             rbEl.style.transform = 'rotate(' + (mazeRobot.dir * 90) + 'deg)';
         },
         run: async () => {
@@ -12784,6 +12801,11 @@ window.onload = () => {
             const qEl = document.getElementById('command-queue');
             const items = qEl ? qEl.getElementsByClassName('command-item') : [];
             
+            // 実行前にロボットをスタートに戻す
+            mazeRobot = { x: 0, y: 0, dir: 0 };
+            window.mazeGame.updateUI();
+            await new Promise(r => setTimeout(r, 300));
+
             for(let i = 0; i < mazeQueue.length; i++) {
                 const cmd = mazeQueue[i];
                 if(items[i]) items[i].style.background = '#e67e22';
