@@ -12152,6 +12152,114 @@ const studyData = {
                                                                                                                                                                 quizzes: [
                                                                                                                                                                     { question: "同じ命令を何度も書かずに、一つにまとめる方法を何という？", display: "用語", answer: "繰り返し（ループ）", options: ["繰り返し（ループ）", "条件分岐", "変数"] }
                                                                                                                                                                 ]
+                                                                                                                                                            },
+                                                                                                                                                            {
+                                                                                                                                                                title: "(ウ) ロボットを ゴールへ！ (3)",
+                                                                                                                                                                content: `<h4>変数を使って ミッション完了！</h4>
+                                                                                                                                                                <p>3つの カギ（🔑）をすべて拾ってからゴールしよう。カギの数は、「変数」で数えられているよ。</p>
+                                                                                                                                                                <div class="maze-container">
+                                                                                                                                                                    <div class="maze-grid" id="maze-grid-advanced" style="grid-template-columns: repeat(6, 50px); grid-template-rows: repeat(6, 50px);">
+                                                                                                                                                                        <!-- 6x6グリッド -->
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-0-0"><span id="robot-advanced">🤖</span></div>
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-0-1"></div><div class="maze-cell" id="a-cell-0-2"></div><div class="maze-cell item" id="a-cell-0-3">🔑</div><div class="maze-cell" id="a-cell-0-4"></div><div class="maze-cell" id="a-cell-0-5"></div>
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-1-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="a-cell-1-5"></div>
+                                                                                                                                                                        <div class="maze-cell item" id="a-cell-2-0">🔑</div><div class="maze-cell" id="a-cell-2-1"></div><div class="maze-cell" id="a-cell-2-2"></div><div class="maze-cell" id="a-cell-2-3"></div><div class="maze-cell" id="a-cell-2-4"></div><div class="maze-cell" id="a-cell-2-5"></div>
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-3-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="a-cell-3-4"></div><div class="maze-cell" id="a-cell-3-5"></div>
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-4-0"></div><div class="maze-cell" id="a-cell-4-1"></div><div class="maze-cell" id="a-cell-4-2"></div><div class="maze-cell" id="a-cell-4-3"></div><div class="maze-cell" id="a-cell-4-4"></div><div class="maze-cell item" id="a-cell-4-5">🔑</div>
+                                                                                                                                                                        <div class="maze-cell" id="a-cell-5-0"></div><div class="maze-cell" id="a-cell-5-1"></div><div class="maze-cell" id="a-cell-5-2"></div><div class="maze-cell" id="a-cell-5-3"></div><div class="maze-cell" id="a-cell-5-4"></div><div class="maze-cell goal" id="a-cell-5-5">🚪</div>
+                                                                                                                                                                    </div> 
+                                                                                                                                                                    <div class="status-box" id="maze-message-advanced">ミッション待機中... (カギ: 0/3)</div>
+                                                                                                                                                                    <div class="command-area">
+                                                                                                                                                                        <div class="command-queue" id="command-queue-advanced">プログラム：</div>
+                                                                                                                                                                        
+                                                                                                                                                                        <div style="background: #e1f5fe; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #03a9f4;">
+                                                                                                                                                                            <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
+                                                                                                                                                                            <select id="loop-count-adv" style="padding: 5px;">
+                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="forever">ずっと</option>
+                                                                                                                                                                            </select>
+                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameAdvanced.addLoop()">繰り返す</button>
+                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameAdvanced.addIf('if_wall')">もし壁なら</button>
+                                                                                                                                                                            <button class="game-btn" id="finish-block-btn-adv" style="margin-top:10px; width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameAdvanced.finishBlock()">ブロックを閉じる</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        
+                                                                                                                                                                        <div class="control-panel">
+                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameAdvanced.add('leftTurn')">左回</button>
+                                                                                                                                                                            <div class="d-pad">
+                                                                                                                                                                                <button class="game-btn btn-up" onclick="window.mazeGameAdvanced.add('forward')">前</button>
+                                                                                                                                                                                <button class="game-btn btn-left" onclick="window.mazeGameAdvanced.add('moveLeft')">左</button>
+                                                                                                                                                                                <button class="game-btn btn-right" onclick="window.mazeGameAdvanced.add('moveRight')">右</button>
+                                                                                                                                                                                <button class="game-btn btn-down" onclick="window.mazeGameAdvanced.add('backward')">後</button>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameAdvanced.add('rightTurn')">右回</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <div class="game-action-group">
+                                                                                                                                                                            <button class="game-btn btn-run" onclick="window.mazeGameAdvanced.run()">実行！</button>
+                                                                                                                                                                            <button class="game-btn btn-reset" onclick="window.mazeGameAdvanced.reset()">位置を戻す</button>
+                                                                                                                                                                            <button class="game-btn btn-clear-all" onclick="window.mazeGameAdvanced.clearAll()">全消去</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div> 
+                                                                                                                                                                </div>`,
+                                                                                                                                                                quizzes: [
+                                                                                                                                                                    { question: "プログラムの中で、数や言葉を覚えさせておく入れ物のことを何という？", display: "用語", answer: "変数", options: ["変数", "定数", "関数"] }
+                                                                                                                                                                ]
+                                                                                                                                                            },
+                                                                                                                                                            {
+                                                                                                                                                                title: "(エ) ロボットを ゴールへ！ (4)",
+                                                                                                                                                                content: `<h4>鍵（🔑）を拾って ドアを開けよう！</h4>
+                                                                                                                                                                <p>まずは 鍵を拾いに行こう。鍵がないと ドアは開きません。カギを拾うと スコアがアップするよ！</p>
+                                                                                                                                                                
+                                                                                                                                                                <div class="maze-container">
+                                                                                                                                                                    <!-- スコア表示エリア -->
+                                                                                                                                                                    <div style="display: flex; justify-content: space-between; align-items: center; background: #34495e; color: white; padding: 10px 20px; border-radius: 10px; margin-bottom: 10px; font-weight: bold; font-family: monospace;">
+                                                                                                                                                                        <div>SCORE: <span id="maze-score">0000</span></div>
+                                                                                                                                                                        <div>STATUS: <span id="maze-key-status">🔑 NOT FOUND</span></div>
+                                                                                                                                                                    </div>
+
+                                                                                                                                                                    <div class="maze-grid" id="maze-grid-key" style="grid-template-columns: repeat(7, 45px); grid-template-rows: repeat(7, 45px);">
+                                                                                                                                                                        <!-- 7x7グリッド -->
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-0-0"><span id="robot-key">🤖</span></div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-0-1"></div><div class="maze-cell" id="k-cell-0-2"></div><div class="maze-cell item" id="k-cell-0-3">🔑</div><div class="maze-cell" id="k-cell-0-4"></div><div class="maze-cell" id="k-cell-0-5"></div><div class="maze-cell" id="k-cell-0-6"></div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-1-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="k-cell-1-6"></div>
+                                                                                                                                                                        <div class="maze-cell item" id="k-cell-2-0">🔑</div><div class="maze-cell" id="k-cell-2-1"></div><div class="maze-cell" id="k-cell-2-2"></div><div class="maze-cell" id="k-cell-2-3"></div><div class="maze-cell" id="k-cell-2-4"></div><div class="maze-cell" id="k-cell-2-5"></div><div class="maze-cell item" id="k-cell-2-6">🔑</div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-3-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="k-cell-3-6"></div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-4-0"></div><div class="maze-cell" id="k-cell-4-1"></div><div class="maze-cell" id="k-cell-4-2"></div><div class="maze-cell" id="k-cell-4-3"></div><div class="maze-cell" id="k-cell-4-4"></div><div class="maze-cell" id="k-cell-4-5"></div><div class="maze-cell" id="k-cell-4-6"></div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-5-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell item" id="k-cell-5-6">🔑</div>
+                                                                                                                                                                        <div class="maze-cell" id="k-cell-6-0"></div><div class="maze-cell" id="k-cell-6-1"></div><div class="maze-cell" id="k-cell-6-2"></div><div class="maze-cell" id="k-cell-6-3"></div><div class="maze-cell" id="k-cell-6-4"></div><div class="maze-cell" id="k-cell-6-5"></div><div class="maze-cell goal" id="k-cell-6-6">🚪</div>
+                                                                                                                                                                    </div> 
+                                                                                                                                                                    <div class="status-box" id="maze-message-key">ミッション待機中...</div>
+                                                                                                                                                                    <div class="command-area">
+                                                                                                                                                                        <div class="command-queue" id="command-queue-key">プログラム：</div>
+                                                                                                                                                                        
+                                                                                                                                                                        <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #9c27b0;">
+                                                                                                                                                                            <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
+                                                                                                                                                                            <select id="loop-count-key" style="padding: 5px;">
+                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="7">7回</option><option value="forever">ずっと</option>
+                                                                                                                                                                            </select>
+                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameKey.addLoop()">繰り返す</button>
+                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameKey.addIf('if_wall')">もし壁なら</button>
+                                                                                                                                                                            <button class="game-btn" id="finish-block-btn-key" style="margin-top:10px; width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameKey.finishBlock()">ブロックを閉じる</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        
+                                                                                                                                                                        <div class="control-panel">
+                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('leftTurn')">左回</button>
+                                                                                                                                                                            <div class="d-pad">
+                                                                                                                                                                                <button class="game-btn btn-up" onclick="window.mazeGameKey.add('forward')">前</button>
+                                                                                                                                                                                <button class="game-btn btn-left" onclick="window.mazeGameKey.add('moveLeft')">左</button>
+                                                                                                                                                                                <button class="game-btn btn-right" onclick="window.mazeGameKey.add('moveRight')">右</button>
+                                                                                                                                                                                <button class="game-btn btn-down" onclick="window.mazeGameKey.add('backward')">後</button>
+                                                                                                                                                                            </div>
+                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('rightTurn')">右回</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <div class="game-action-group">
+                                                                                                                                                                            <button class="game-btn btn-run" onclick="window.mazeGameKey.run()">実行！</button>
+                                                                                                                                                                            <button class="game-btn btn-reset" onclick="window.mazeGameKey.reset()">位置を戻す</button>
+                                                                                                                                                                            <button class="game-btn btn-clear-all" onclick="window.mazeGameKey.clearAll()">全消去</button>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div> 
+                                                                                                                                                                </div>`,
+                                                                                                                                                                quizzes: [
+                                                                                                                                                                    { question: "複雑な問題を、コンピュータが解きやすい手順に分けることを何という？", display: "用語", answer: "アルゴリズム設計", options: ["アルゴリズム設計", "ハードウェア設計", "ネットワーク設計"] }
+                                                                                                                                                                ]
                                                                                                                                                             }                                ]
                             }
                         ]
@@ -12403,6 +12511,8 @@ window.onload = () => {
         setTimeout(() => {
             if (document.getElementById('maze-grid')) window.initMazeGame();
             if (document.getElementById('maze-grid-hard')) window.initMazeGameHard();
+            if (document.getElementById('maze-grid-advanced')) window.initMazeGameAdvanced();
+            if (document.getElementById('maze-grid-key')) window.initMazeGameKey();
             if (document.getElementById('motion-sprite')) window.initMotionDemo();
             if (document.getElementById('looks-sprite')) window.initLooksDemo();
         }, 50);
@@ -13107,6 +13217,442 @@ window.onload = () => {
                 }
             }
             hardIsRunning = false;
+        }
+    };
+
+    // --- 迷路ゲーム（３：カギ回収・変数）のロジック ---
+    let advRobot = { x: 0, y: 0, dir: 0 };
+    let advQueue = [];
+    let advIsRunning = false;
+    let advActiveBlock = null;
+    let keyCountCount = 0;
+    const advWalls = [{x:1, y:1}, {x:2, y:1}, {x:3, y:1}, {x:4, y:1}, {x:1, y:3}, {x:2, y:3}, {x:3, y:3}];
+    const initialAdvKeys = [{x:3, y:0, id:'a-cell-0-3'}, {x:0, y:2, id:'a-cell-2-0'}, {x:5, y:4, id:'a-cell-4-5'}];
+    let currentAdvKeys = [];
+
+    window.initMazeGameAdvanced = () => {
+        advRobot = { x: 0, y: 0, dir: 0 };
+        advQueue = [];
+        advActiveBlock = null;
+        advIsRunning = false;
+        keyCountCount = 0;
+        currentAdvKeys = JSON.parse(JSON.stringify(initialAdvKeys));
+        
+        initialAdvKeys.forEach(k => {
+            const cell = document.getElementById(k.id);
+            if(cell) cell.innerText = '🔑';
+        });
+
+        window.mazeGameAdvanced.renderQueue();
+        window.mazeGameAdvanced.updateUI();
+        const mEl = document.getElementById('maze-message-advanced');
+        if(mEl) mEl.innerText = 'ミッション待機中... (カギ: 0/3)';
+    };
+
+    window.mazeGameAdvanced = {
+        add: (cmd) => {
+            if(advIsRunning) return;
+            const newItem = { type: 'normal', value: cmd };
+            if (advActiveBlock) advActiveBlock.subCommands.push(newItem);
+            else advQueue.push(newItem);
+            window.mazeGameAdvanced.renderQueue();
+        },
+        addLoop: () => {
+            if(advIsRunning) return;
+            const count = document.getElementById('loop-count-adv').value;
+            const newBlock = { type: 'loop', value: count, subCommands: [] };
+            if (advActiveBlock) advActiveBlock.subCommands.push(newBlock);
+            else advQueue.push(newBlock);
+            advActiveBlock = newBlock;
+            window.mazeGameAdvanced.renderQueue();
+        },
+        addIf: (type) => {
+            if(advIsRunning) return;
+            const newBlock = { type: type, value: null, subCommands: [] };
+            if (advActiveBlock) advActiveBlock.subCommands.push(newBlock);
+            else advQueue.push(newBlock);
+            advActiveBlock = newBlock;
+            window.mazeGameAdvanced.renderQueue();
+        },
+        finishBlock: () => {
+            advActiveBlock = null;
+            window.mazeGameAdvanced.renderQueue();
+        },
+        remove: (index, items) => {
+            if(advIsRunning) return;
+            items.splice(index, 1);
+            window.mazeGameAdvanced.renderQueue();
+        },
+        clearAll: () => {
+            if(advIsRunning) return;
+            advQueue = []; advActiveBlock = null;
+            window.mazeGameAdvanced.renderQueue();
+            window.initMazeGameAdvanced();
+        },
+        renderQueue: () => {
+            const qEl = document.getElementById('command-queue-advanced');
+            if(!qEl) return;
+            qEl.innerHTML = 'プログラム：';
+            const btn = document.getElementById('finish-block-btn-adv');
+            if(btn) btn.style.display = advActiveBlock ? 'block' : 'none';
+            const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回' };
+
+            const buildUI = (items, container) => {
+                items.forEach((cmd, i) => {
+                    if (cmd.type === 'loop' || cmd.type === 'if_wall') {
+                        const block = document.createElement('div');
+                        block.className = 'command-block' + (cmd.type === 'if_wall' ? ' if-block' : ''); 
+                        if (cmd === advActiveBlock) block.style.boxShadow = '0 0 10px #f1c40f';
+                        const header = document.createElement('div');
+                        header.className = 'block-header';
+                        const title = cmd.type === 'loop' ? (cmd.value === 'forever' ? 'ずっと' : cmd.value + '回') + '繰り返す' : 'もし前が壁なら';
+                        header.innerHTML = `<span>${title}</span><span class="delete-btn">×</span>`;     
+                        header.querySelector('.delete-btn').onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameAdvanced.renderQueue(); };
+                        const body = document.createElement('div');
+                        body.className = 'block-body';
+                        buildUI(cmd.subCommands, body);
+                        block.appendChild(header); block.appendChild(body); container.appendChild(block);
+                    } else {
+                        const item = document.createElement('span');
+                        item.className = 'command-item';
+                        item.innerText = names[cmd.value] + ' ';
+                        const delBtn = document.createElement('span');
+                        delBtn.className = 'delete-btn'; delBtn.innerText = '×';
+                        delBtn.onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameAdvanced.renderQueue(); };
+                        item.appendChild(delBtn); container.appendChild(item);
+                    }
+                });
+            };
+            buildUI(advQueue, qEl);
+        },
+        updateUI: () => {
+            const rbEl = document.getElementById('robot-advanced');
+            if(!rbEl) return;
+            const cell = document.getElementById('a-cell-' + advRobot.y + '-' + advRobot.x);
+            if(cell) cell.appendChild(rbEl);
+            rbEl.style.transform = 'rotate(' + (advRobot.dir * 90) + 'deg)';
+
+            // カギ回収チェック
+            const kIdx = currentAdvKeys.findIndex(k => k.x === advRobot.x && k.y === advRobot.y);      
+            if(kIdx !== -1) {
+                const k = currentAdvKeys[kIdx];
+                const cellEl = document.getElementById(k.id);
+                if(cellEl) cellEl.innerText = '';
+                currentAdvKeys.splice(kIdx, 1);
+                keyCountCount++;
+                const mEl = document.getElementById('maze-message-advanced');
+                if(mEl) mEl.innerText = `🔑 カギを拾った！（カギ: ${keyCountCount}/3）`;
+            }
+        },
+        reset: () => {
+            advRobot = { x: 0, y: 0, dir: 0 };
+            keyCountCount = 0;
+            currentAdvKeys = JSON.parse(JSON.stringify(initialAdvKeys));
+            initialAdvKeys.forEach(k => {
+                const cell = document.getElementById(k.id);
+                if(cell) cell.innerText = '🔑';
+            });
+            const mEl = document.getElementById('maze-message-advanced');
+            if(mEl) mEl.innerText = 'ミッション待機中... (カギ: 0/3)';
+            window.mazeGameAdvanced.updateUI();
+        },
+        run: async () => {
+            if(advIsRunning || advQueue.length === 0) return;
+            advIsRunning = true;
+            const mEl = document.getElementById('maze-message-advanced');
+            window.mazeGameAdvanced.reset();
+            if(mEl) mEl.innerText = '🔍 探索開始！';
+            await new Promise(r => setTimeout(r, 300));
+
+            const executeItems = async (items) => {
+                for(let cmd of items) {
+                    if (!advIsRunning) return;
+                    if (cmd.type === 'loop') {
+                        const times = cmd.value === 'forever' ? 30 : parseInt(cmd.value);
+                        for(let t=0; t<times; t++) {
+                            await executeItems(cmd.subCommands);
+                            if (!advIsRunning) return;
+                        }
+                    } else if (cmd.type === 'if_wall') {
+                        const dir = advRobot.dir;
+                        let fx = advRobot.x + (dir === 1 ? 1 : (dir === 3 ? -1 : 0));
+                        let fy = advRobot.y + (dir === 2 ? 1 : (dir === 0 ? -1 : 0));
+                        const isWall = advWalls.some(w => w.x === fx && w.y === fy) || fx < 0 || fx >= 6 || fy < 0 || fy >= 6;
+                        if (isWall) await executeItems(cmd.subCommands);
+                    } else {
+                        let dx = 0, dy = 0;
+                        const dir = advRobot.dir;
+                        if(cmd.value === 'forward') {
+                            if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
+                        } else if(cmd.value === 'backward') {
+                            if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
+                        } else if(cmd.value === 'moveLeft') {
+                            if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
+                        } else if(cmd.value === 'moveRight') {
+                            if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
+                        } else if(cmd.value === 'leftTurn') advRobot.dir = (advRobot.dir + 3) % 4;       
+                        else if(cmd.value === 'rightTurn') advRobot.dir = (advRobot.dir + 1) % 4;        
+
+                        let nx = advRobot.x + dx, ny = advRobot.y + dy;
+                        if (advWalls.some(w => w.x === nx && w.y === ny)) {
+                            if(mEl) mEl.innerText = '💥 壁に衝突！';
+                            advIsRunning = false; return;
+                        }
+                        if(nx >= 0 && nx < 6 && ny >= 0 && ny < 6) {
+                            advRobot.x = nx; advRobot.y = ny;
+                        }
+                        window.mazeGameAdvanced.updateUI();
+                        await new Promise(r => setTimeout(r, 400));
+                    }
+                }
+            };
+
+            await executeItems(advQueue);
+
+            if(advIsRunning && mEl) {
+                if(advRobot.x === 5 && advRobot.y === 5) {
+                    const hasLoop = advQueue.some(cmd => cmd.type === 'loop');
+                    const hasIf = advQueue.some(cmd => cmd.type.includes('if'));
+                    if (keyCountCount === 3 && hasLoop && hasIf) {
+                        mEl.innerHTML = '<span style="color:#2ecc71;">✅ パーフェクト！カギも全部拾って制御ブロックも完璧だね！</span>';
+                    } else if (keyCountCount < 3) {
+                        mEl.innerHTML = '<span style="color:#f1c40f;">🚪 ゴール！でもカギが足りないよ（変数不足）。</span>';
+                    } else {
+                        mEl.innerHTML = '<span style="color:#f1c40f;">🚪 ゴール！でもループとIF文の両方を使ってみてね。</span>';
+                    }
+                } else {
+                    mEl.innerText = 'ミッション未完了。ドアまで届かなかった。';
+                }
+            }
+            advIsRunning = false;
+        }
+    };
+
+    // --- 迷路ゲーム（４：鍵とスコア）のロジック ---
+    let keyRobot = { x: 0, y: 0, dir: 0 };
+    let keyQueue = [];
+    let keyIsRunning = false;
+    let keyActiveBlock = null;
+    let mazeScore = 0;
+    let hasDoorKey = false;
+    const keyWalls = [
+        {x:1, y:1}, {x:2, y:1}, {x:3, y:1}, {x:4, y:1}, {x:5, y:1},
+        {x:1, y:3}, {x:2, y:3}, {x:3, y:3}, {x:4, y:3}, {x:5, y:3},
+        {x:1, y:5}, {x:2, y:5}, {x:3, y:5}, {x:4, y:5}, {x:5, y:5}
+    ];
+    const initialKeyItems = [
+        {x:3, y:0, id:'k-cell-0-3', type:'key', score:100},
+        {x:0, y:2, id:'k-cell-2-0', type:'key', score:100},
+        {x:6, y:5, id:'k-cell-5-6', type:'key', score:100},
+        {x:6, y:2, id:'k-cell-2-6', type:'special-key', score:500}
+    ];
+    let currentKeyItems = [];
+
+    window.initMazeGameKey = () => {
+        keyRobot = { x: 0, y: 0, dir: 0 };
+        keyQueue = [];
+        keyActiveBlock = null;
+        keyIsRunning = false;
+        mazeScore = 0;
+        hasDoorKey = false;
+        currentKeyItems = JSON.parse(JSON.stringify(initialKeyItems));
+        
+        initialKeyItems.forEach(item => {
+            const cell = document.getElementById(item.id);
+            if(cell) cell.innerText = '🔑';
+        });
+
+        window.mazeGameKey.renderQueue();
+        window.mazeGameKey.updateUI();
+        const mEl = document.getElementById('maze-message-key');
+        if(mEl) mEl.innerText = 'ミッション待機中... カギを探そう！';
+    };
+
+    window.mazeGameKey = {
+        add: (cmd) => {
+            if(keyIsRunning) return;
+            const newItem = { type: 'normal', value: cmd };
+            if (keyActiveBlock) keyActiveBlock.subCommands.push(newItem);
+            else keyQueue.push(newItem);
+            window.mazeGameKey.renderQueue();
+        },
+        addLoop: () => {
+            if(keyIsRunning) return;
+            const count = document.getElementById('loop-count-key').value;
+            const newBlock = { type: 'loop', value: count, subCommands: [] };
+            if (keyActiveBlock) keyActiveBlock.subCommands.push(newBlock);
+            else keyQueue.push(newBlock);
+            keyActiveBlock = newBlock;
+            window.mazeGameKey.renderQueue();
+        },
+        addIf: (type) => {
+            if(keyIsRunning) return;
+            const newBlock = { type: type, value: null, subCommands: [] };
+            if (keyActiveBlock) keyActiveBlock.subCommands.push(newBlock);
+            else keyQueue.push(newBlock);
+            keyActiveBlock = newBlock;
+            window.mazeGameKey.renderQueue();
+        },
+        finishBlock: () => {
+            keyActiveBlock = null;
+            window.mazeGameKey.renderQueue();
+        },
+        remove: (index, items) => {
+            if(keyIsRunning) return;
+            items.splice(index, 1);
+            window.mazeGameKey.renderQueue();
+        },
+        clearAll: () => {
+            if(keyIsRunning) return;
+            keyQueue = []; keyActiveBlock = null;
+            window.mazeGameKey.renderQueue();
+            window.initMazeGameKey();
+        },
+        renderQueue: () => {
+            const qEl = document.getElementById('command-queue-key');
+            if(!qEl) return;
+            qEl.innerHTML = 'プログラム：';
+            const btn = document.getElementById('finish-block-btn-key');
+            if(btn) btn.style.display = keyActiveBlock ? 'block' : 'none';
+            const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回' };
+
+            const buildUI = (items, container) => {
+                items.forEach((cmd, i) => {
+                    if (cmd.type === 'loop' || cmd.type === 'if_wall') {
+                        const block = document.createElement('div');
+                        block.className = 'command-block' + (cmd.type === 'if_wall' ? ' if-block' : ''); 
+                        if (cmd === keyActiveBlock) block.style.boxShadow = '0 0 10px #f1c40f';
+                        const header = document.createElement('div');
+                        header.className = 'block-header';
+                        const title = cmd.type === 'loop' ? (cmd.value === 'forever' ? 'ずっと' : cmd.value + '回') + '繰り返す' : 'もし前が壁なら';
+                        header.innerHTML = `<span>${title}</span><span class="delete-btn">×</span>`;     
+                        header.querySelector('.delete-btn').onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameKey.renderQueue(); };
+                        const body = document.createElement('div');
+                        body.className = 'block-body';
+                        buildUI(cmd.subCommands, body);
+                        block.appendChild(header); block.appendChild(body); container.appendChild(block);
+                    } else {
+                        const item = document.createElement('span');
+                        item.className = 'command-item';
+                        item.innerText = names[cmd.value] + ' ';
+                        const delBtn = document.createElement('span');
+                        delBtn.className = 'delete-btn'; delBtn.innerText = '×';
+                        delBtn.onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameKey.renderQueue(); };
+                        item.appendChild(delBtn); container.appendChild(item);
+                    }
+                });
+            };
+            buildUI(keyQueue, qEl);
+        },
+        updateUI: () => {
+            const rbEl = document.getElementById('robot-key');
+            if(!rbEl) return;
+            const cell = document.getElementById('k-cell-' + keyRobot.y + '-' + keyRobot.x);
+            if(cell) cell.appendChild(rbEl);
+            rbEl.style.transform = 'rotate(' + (keyRobot.dir * 90) + 'deg)';
+
+            // スコアと鍵状態の表示更新
+            const sEl = document.getElementById('maze-score');
+            if(sEl) sEl.innerText = mazeScore.toString().padStart(4, '0');
+            const kEl = document.getElementById('maze-key-status');
+            if(kEl) {
+                kEl.innerText = hasDoorKey ? '🔑 KEY OBTAINED' : '🔑 NOT FOUND';
+                kEl.style.color = hasDoorKey ? '#2ecc71' : '#e74c3c';
+            }
+
+            // アイテム回収チェック
+            const iIdx = currentKeyItems.findIndex(it => it.x === keyRobot.x && it.y === keyRobot.y);      
+            if(iIdx !== -1) {
+                const it = currentKeyItems[iIdx];
+                const cellEl = document.getElementById(it.id);
+                if(cellEl) cellEl.innerText = '';
+                if(it.type === 'special-key') hasDoorKey = true;
+                mazeScore += it.score;
+                currentKeyItems.splice(iIdx, 1);
+                const mEl = document.getElementById('maze-message-key');
+                if(mEl) mEl.innerText = `🔑 カギをゲット！ (+${it.score})`;
+            }
+        },
+        reset: () => {
+            keyRobot = { x: 0, y: 0, dir: 0 };
+            mazeScore = 0;
+            hasDoorKey = false;
+            currentKeyItems = JSON.parse(JSON.stringify(initialKeyItems));
+            initialKeyItems.forEach(item => {
+                const cell = document.getElementById(item.id);
+                if(cell) cell.innerText = '🔑';
+            });
+            const mEl = document.getElementById('maze-message-key');
+            if(mEl) mEl.innerText = 'ミッション待機中... カギを探そう！';
+            window.mazeGameKey.updateUI();
+        },
+        run: async () => {
+            if(keyIsRunning || keyQueue.length === 0) return;
+            keyIsRunning = true;
+            const mEl = document.getElementById('maze-message-key');
+            window.mazeGameKey.reset();
+            if(mEl) mEl.innerText = '🚀 探索開始！';
+            await new Promise(r => setTimeout(r, 300));
+
+            const executeItems = async (items) => {
+                for(let cmd of items) {
+                    if (!keyIsRunning) return;
+                    if (cmd.type === 'loop') {
+                        const times = cmd.value === 'forever' ? 50 : parseInt(cmd.value);
+                        for(let t=0; t<times; t++) {
+                            await executeItems(cmd.subCommands);
+                            if (!keyIsRunning) return;
+                        }
+                    } else if (cmd.type === 'if_wall') {
+                        const dir = keyRobot.dir;
+                        let fx = keyRobot.x + (dir === 1 ? 1 : (dir === 3 ? -1 : 0));
+                        let fy = keyRobot.y + (dir === 2 ? 1 : (dir === 0 ? -1 : 0));
+                        const isWall = keyWalls.some(w => w.x === fx && w.y === fy) || fx < 0 || fx >= 7 || fy < 0 || fy >= 7;
+                        if (isWall) await executeItems(cmd.subCommands);
+                    } else {
+                        let dx = 0, dy = 0;
+                        const dir = keyRobot.dir;
+                        if(cmd.value === 'forward') {
+                            if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
+                        } else if(cmd.value === 'backward') {
+                            if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
+                        } else if(cmd.value === 'moveLeft') {
+                            if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
+                        } else if(cmd.value === 'moveRight') {
+                            if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
+                        } else if(cmd.value === 'leftTurn') keyRobot.dir = (keyRobot.dir + 3) % 4;       
+                        else if(cmd.value === 'rightTurn') keyRobot.dir = (keyRobot.dir + 1) % 4;        
+
+                        let nx = keyRobot.x + dx, ny = keyRobot.y + dy;
+                        if (keyWalls.some(w => w.x === nx && w.y === ny)) {
+                            if(mEl) mEl.innerText = '💥 壁にガツン！';
+                            keyIsRunning = false; return;
+                        }
+                        if(nx >= 0 && nx < 7 && ny >= 0 && ny < 7) {
+                            keyRobot.x = nx; keyRobot.y = ny;
+                        }
+                        window.mazeGameKey.updateUI();
+                        await new Promise(r => setTimeout(r, 400));
+                    }
+                }
+            };
+
+            await executeItems(keyQueue);
+
+            if(keyIsRunning && mEl) {
+                if(keyRobot.x === 6 && keyRobot.y === 6) {
+                    if (hasDoorKey) {
+                        mazeScore += 1000;
+                        window.mazeGameKey.updateUI();
+                        mEl.innerHTML = `<span style="color:#2ecc71;">✅ クリア！カギを使ってドアを開けました！ (最終スコア: ${mazeScore})</span>`;
+                    } else {
+                        mEl.innerHTML = '<span style="color:#e74c3c;">🚪 ドアが閉まっている... カギが必要です。</span>';
+                    }
+                } else {
+                    mEl.innerText = 'ミッション未完了。ドアまで届きませんでした。';
+                }
+            }
+            keyIsRunning = false;
         }
     };
 
