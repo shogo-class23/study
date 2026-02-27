@@ -13092,15 +13092,15 @@ window.onload = () => {
             
             // 実行終了後のメッセージ表示
             if(mEl && hardIsRunning) {
-                // 制御ブロックが使われているか再確認
+                // 制御ブロック（繰り返しとIF文の両方）が使われているかチェック
                 const hasLoop = hardQueue.some(cmd => cmd.type === 'loop');
                 const hasIf = hardQueue.some(cmd => cmd.type.includes('if'));
 
                 if(hardRobot.x === 4 && hardRobot.y === 4) {
-                    if (hasLoop || hasIf) {
+                    if (hasLoop && hasIf) {
                         mEl.innerHTML = '<span style="color:#2ecc71;">🎉 パーフェクト！制御ブロックをマスターしたね！</span>';
                     } else {
-                        mEl.innerHTML = '<span style="color:#e74c3c;">🚩 ゴール！でも、繰り返しや条件のブロックを使っていません（条件未達成）。</span>';
+                        mEl.innerHTML = '<span style="color:#e74c3c;">🚩 ゴール！でも、繰り返しとIF文の両方を使う条件を満たしていません。</span>';
                     }
                 } else {
                     mEl.innerText = '残念！ゴールできなかったね。工夫してみよう。';
