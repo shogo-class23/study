@@ -10786,8 +10786,9 @@ const studyData = {
                                         {
                                             title: "(ア) 物が 売れる しくみ",
                                             content: `<h4>売り買いの 流れ</h4>
-                                            <div class="point-box">
-                                                ・商品は、生産者から卸売業者、小売店（スーパーやコンビニ）を通って、消費者のもとに届きます。
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・商品は、生産者から卸売業者、小売店（スーパーなど）を通って消費者に届きます。<br>
+                                                ・消費者は <b>契約</b> に基づいて商品を購入します。
                                             </div>`,
                                             quizzes: [
                                                 { question: "私たちがふだん買い物をしているスーパーなどのことを何という？", display: "用語", answer: "小売店", options: ["小売店", "卸売業者", "生産者"] }
@@ -10798,19 +10799,31 @@ const studyData = {
                             ]
                         },
                         {
-                            name: "公共（こうきょう）サービス",
+                            name: "効率・公正・情報化",
                             units: [
                                 {
-                                    title: "1. 水（みず）の 流れ（水道）",
+                                    title: "1. 現代社会の 見方・考え方",
                                     subUnits: [
                                         {
-                                            title: "(ア) 水が 届くまで",
-                                            content: `<h4>水道の しくみ</h4>
-                                            <div class="point-box">
-                                                ・川やダムの水は、<b>浄水場（じょうすいじょう）</b>できれいにされ、水道管を通って家庭に届きます。
+                                            title: "(ア) 効率（こうりつ）と 公正（こうせい）",
+                                            content: `<h4>みんなで 決める ルール</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・<b>効率</b>：無駄をなくすこと。<br>
+                                                ・<b>公正</b>：手続きや結果が平等であること。
                                             </div>`,
                                             quizzes: [
-                                                { question: "川などの水をきれいに飲み水に変える施設を何という？", display: "施設", answer: "浄水場", options: ["浄水場", "下水処理場", "発電所"] }
+                                                { question: "社会の決まりを作る際、無駄をなくす考え方を何という？", display: "用語", answer: "効率", options: ["効率", "公正", "多数決"] }
+                                            ]
+                                        },
+                                        {
+                                            title: "(イ) 情報化と 情報リテラシー",
+                                            content: `<h4>情報を 使いこなす</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・メディアからの情報を正しく見極める力（<b>情報リテラシー</b>）が重要です。<br>
+                                                ・インターネットの普及により、グローバル化が加速しています。
+                                            </div>`,
+                                            quizzes: [
+                                                { question: "情報を正しく判断し、活用する能力のことを何という？", display: "用語", answer: "情報リテラシー", options: ["情報リテラシー", "プログラミング", "メディアミックス"] }
                                             ]
                                         }
                                     ]
@@ -10818,36 +10831,107 @@ const studyData = {
                             ]
                         },
                         {
-                            name: "産業（さんぎょう）と 情報（じょうほう）",
+                            name: "政府・憲法・政治の しくみ",
                             units: [
                                 {
-                                    title: "1. 工業（こうぎょう）の 種類（しゅるい）",
+                                    title: "1. 日本国憲法（にほんこくけんぽう）",
                                     subUnits: [
                                         {
-                                            title: "(ア) 重化学工業と 軽工業",
-                                            content: `<h4>ものづくりの 分類</h4>
-                                            <div class="point-box">
-                                                ・<b>重化学工業</b>：鉄鋼、機械、化学工業など、重いものや化学製品をつくる産業。<br>
-                                                ・<b>軽工業</b>：食料品、繊維（せんい）など、比較的軽いものをつくる産業。
+                                            title: "(ア) 憲法の 三大原理と 三大義務",
+                                            content: `<h4>日本の 基本原則</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・<b>三大原理</b>：国民主権、基本的人権の尊重、平和主義。<br>
+                                                ・<b>三大義務</b>：教育を受けさせる、勤労、納税の義務。
                                             </div>`,
                                             quizzes: [
-                                                { question: "鉄鋼や自動車をつくる工業は、重化学工業・軽工業のどっちかな？", display: "工業の分類", answer: "重化学工業", options: ["重化学工業", "軽工業"] }
+                                                { question: "日本国憲法の三大原理のうち、国の政治を決める権利が国民にあることを何という？", display: "用語", answer: "国民主権", options: ["国民主権", "平和主義", "基本的人権の尊重"] }
                                             ]
                                         }
                                     ]
                                 },
                                 {
-                                    title: "2. メディアと 情報（じょうほう）",
+                                    title: "2. 三権分立（さんけんぶんりつ）",
                                     subUnits: [
                                         {
-                                            title: "(ア) マスメディアの 役割",
-                                            content: `<h4>情報を 伝える</h4>
-                                            <div class="point-box">
-                                                ・テレビ、新聞、インターネットなどは <b>マスメディア</b> と呼ばれ、多くの人に情報を伝えます。<br>
-                                                ・情報を正しく見極める力（<b>情報リテラシー</b>）を身につけることが大切です。
+                                            title: "(ア) 3つの 機関と 選挙の 計算",
+                                            content: `<h4>権力の 分立</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・<b>国会（立法）</b>、<b>内閣（行政）</b>、<b>裁判所（司法）</b>。<br>
+                                                ・選挙（比例代表）では <b>ドント式</b> で議席を配分します。
                                             </div>`,
                                             quizzes: [
-                                                { question: "情報を正しく判断し、活用する能力のことを何という？", display: "用語", answer: "情報リテラシー", options: ["情報リテラシー", "メディアミックス", "プログラミング"] }
+                                                { question: "比例代表選挙などで、得票数を1, 2, 3...で割っていく計算方法は？", display: "名称", answer: "ドント式", options: ["ドント式", "累進課税", "一票の格差"] }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "3. 国際連合（UN）",
+                                    subUnits: [
+                                        {
+                                            title: "(ア) 世界の 平和を 守る",
+                                            content: `<h4>国連の 役割</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・1945年設立。安全保障理事会の常任理事国（米英仏露中）は <b>拒否権</b> を持つ。
+                                            </div>`,
+                                            quizzes: [
+                                                { question: "安全保障理事会の常任理事国が持つ、議決を阻止できる強力な権利は？", display: "用語", answer: "拒否権", options: ["拒否権", "解散権", "表決権"] }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "公共サービスと 産業",
+                            units: [
+                                {
+                                    title: "1. 公共（こうきょう）サービス",
+                                    subUnits: [
+                                        {
+                                            title: "(ア) 水道の しくみ",
+                                            content: `<h4>水が 届くまで</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・川などの水は <b>浄水場</b> で飲み水にされ、家庭に届きます。
+                                            </div>`,
+                                            quizzes: [
+                                                { question: "水をきれいに飲み水に変える施設を何という？", display: "施設名", answer: "浄水場", options: ["浄水場", "ダム", "発電所"] }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    title: "2. 産業（さんぎょう）の 種類",
+                                    subUnits: [
+                                        {
+                                            title: "(ア) 重化学工業と 軽工業",
+                                            content: `<h4>工業の 分類</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・<b>重化学工業</b>：鉄鋼や自動車、化学製品など。<br>
+                                                ・<b>軽工業</b>：食料品や繊維など。
+                                            </div>`,
+                                            quizzes: [
+                                                { question: "鉄鋼や自動車をつくる工業は、どっちの分類かな？", display: "分類", answer: "重化学工業", options: ["重化学工業", "軽工業"] }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "地球上の 問題",
+                            units: [
+                                {
+                                    title: "1. 持続可能な 社会に向けて",
+                                    subUnits: [
+                                        {
+                                            title: "(ア) 環境・資源・格差",
+                                            content: `<h4>世界の 課題</h4>
+                                            <div class="point-box" style="font-size: 0.85em;">
+                                                ・地球温暖化、南北問題。これらを解決するための <b>SDGs</b>（持続可能な開発目標）。
+                                            </div>`,
+                                            quizzes: [
+                                                { question: "先進国と途上国の経済格差の問題を何という？", display: "用語", answer: "南北問題", options: ["南北問題", "東西問題", "貧富問題"] }
                                             ]
                                         }
                                     ]
