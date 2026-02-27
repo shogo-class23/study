@@ -12225,7 +12225,7 @@ const studyData = {
                                                                                                                                                                                                                                                                                                                                     <!-- 6x6グリッド -->
                                                                                                                                                                                                                                                                                                                                     <div class="maze-cell" id="k-cell-0-0"><span id="robot-key">🤖</span></div>
                                                                                                                                                                                                                                                                                                                                     <div class="maze-cell" id="k-cell-0-1"></div><div class="maze-cell" id="k-cell-0-2"></div><div class="maze-cell item" id="k-cell-0-3">🔑</div><div class="maze-cell" id="k-cell-0-4"></div><div class="maze-cell" id="k-cell-0-5"></div>
-                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" id="k-cell-1-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="k-cell-1-5"></div>
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" id="k-cell-1-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell hole" id="k-cell-1-5"></div>
                                                                                                                                                                                                                                                                                                                                     <div class="maze-cell item" id="k-cell-2-0">🔑</div><div class="maze-cell" id="k-cell-2-1"></div><div class="maze-cell" id="k-cell-2-2"></div><div class="maze-cell" id="k-cell-2-3"></div><div class="maze-cell" id="k-cell-2-4"></div><div class="maze-cell" id="k-cell-2-5"></div>
                                                                                                                                                                                                                                                                                                                                     <div class="maze-cell" id="k-cell-3-0"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell wall" style="background:#333;"></div><div class="maze-cell" id="k-cell-3-4"></div><div class="maze-cell" id="k-cell-3-5"></div>
                                                                                                                                                                                                                                                                                                                                     <div class="maze-cell" id="k-cell-4-0"></div><div class="maze-cell" id="k-cell-4-1"></div><div class="maze-cell" id="k-cell-4-2"></div><div class="maze-cell hole" id="k-cell-4-3"></div><div class="maze-cell" id="k-cell-4-4"></div><div class="maze-cell item" id="k-cell-4-5">🔑</div>
@@ -12235,26 +12235,38 @@ const studyData = {
                                                                                                                                                                                                                                                                                                                                 <div class="command-area">
                                                                                                                                                                                                                                                                                                                                     <div class="command-queue" id="command-queue-key">プログラム：</div>
                                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                                                                                    <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #9c27b0;">
-                                                                                                                                                                                                                                                                                                                                        <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
-                                                                                                                                                                                                                                                                                                                                        <select id="loop-count-key" style="padding: 5px;">
-                                                                                                                                                                                                                                                                                                                                            <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="5">5回</option><option value="6">6回</option><option value="7">7回</option><option value="8">8回</option><option value="9">9回</option><option value="10">10回</option><option value="forever">ずっと</option>
-                                                                                                                                                                                                                                                                                                                                        </select>
-                                                                                                                                                                                                                                                                                                                                        <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameKey.addLoop()">繰り返す</button>
-                                                                                                                                                                                                                                                                                                                                        <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameKey.addIf('if_wall')">もし壁なら</button>
-                                                                                                                                                                                                                                                                                                                                        <button class="game-btn" id="finish-block-btn-key" style="margin-top:10px; width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameKey.finishBlock()">ブロックを閉じる</button>
-                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div style="background: #f3e5f5; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #9c27b0;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div style="margin-bottom: 5px;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <select id="loop-count-key" style="padding: 5px;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="5">5回</option><option value="6">6回</option><option value="7">7回</option><option value="8">8回</option><option value="9">9回</option><option value="10">10回</option><option value="forever">ずっと</option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </select>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameKey.addLoop()">繰り返す</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div style="margin-bottom: 5px;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameKey.addIf('if_wall')">もし壁なら</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <select id="hole-dist-key" style="padding: 5px; margin-left: 10px;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <option value="1">1マス前</option><option value="2">2マス前</option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </select>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn" style="padding: 5px 10px; background: #9b59b6; color: white;" onclick="window.mazeGameKey.addIfHole()">もし穴なら</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="game-btn" id="finish-block-btn-key" style="margin-top:10px; width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameKey.finishBlock()">ブロックを閉じる</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="control-panel">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('leftTurn')">左回</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="d-pad">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn btn-up" onclick="window.mazeGameKey.add('forward')">前</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn btn-left" onclick="window.mazeGameKey.add('moveLeft')">左</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn btn-right" onclick="window.mazeGameKey.add('moveRight')">右</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button class="game-btn btn-down" onclick="window.mazeGameKey.add('backward')">後</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('rightTurn')">右回</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div style="text-align: center; margin-top: 10px;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="game-btn" style="background: #34495e; color: white; width: 100%;" onclick="window.mazeGameKey.add('jump')">とび越える (2マス前へ)</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
                                                                                                                                                                                                                                                                                                                                     
-                                                                                                                                                                                                                                                                                                                                    <div class="control-panel">
-                                                                                                                                                                                                                                                                                                                                        <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('leftTurn')">左回</button>
-                                                                                                                                                                                                                                                                                                                                        <div class="d-pad">
-                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-up" onclick="window.mazeGameKey.add('forward')">前</button>
-                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-left" onclick="window.mazeGameKey.add('moveLeft')">左</button>
-                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-right" onclick="window.mazeGameKey.add('moveRight')">右</button>
-                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-down" onclick="window.mazeGameKey.add('backward')">後</button>
-                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                        <button class="game-btn btn-rotate" onclick="window.mazeGameKey.add('rightTurn')">右回</button>
-                                                                                                                                                                                                                                                                                                                                    </div>
                                                                                                                                                                                                                                                                                                                                     <div class="game-action-group">
                                                                                                                                                                                                                                                                                                                                         <button class="game-btn btn-run" onclick="window.mazeGameKey.run()">実行！</button>
                                                                                                                                                                                                                                                                                                                                         <button class="game-btn btn-reset" onclick="window.mazeGameKey.reset()">位置を戻す</button>
@@ -13443,7 +13455,7 @@ window.onload = () => {
         {x:1, y:1}, {x:2, y:1}, {x:3, y:1}, {x:4, y:1}, {x:1, y:3}, {x:2, y:3}, {x:3, y:3}
     ];
     const keyHoles = [
-        {x:3, y:4}
+        {x:3, y:4}, {x:5, y:1}
     ];
     const initialKeyItems = [
         {x:3, y:0, id:'k-cell-0-3', type:'key', score:100},
@@ -13491,7 +13503,16 @@ window.onload = () => {
         },
         addIf: (type) => {
             if(keyIsRunning) return;
-            const newBlock = { type: type, value: null, subCommands: [] };
+            const newBlock = { type: type, subCommands: [] };
+            if (keyActiveBlock) keyActiveBlock.subCommands.push(newBlock);
+            else keyQueue.push(newBlock);
+            keyActiveBlock = newBlock;
+            window.mazeGameKey.renderQueue();
+        },
+        addIfHole: () => {
+            if (keyIsRunning) return;
+            const dist = parseInt(document.getElementById('hole-dist-key').value);
+            const newBlock = { type: 'if_hole', dist: dist, subCommands: [] };
             if (keyActiveBlock) keyActiveBlock.subCommands.push(newBlock);
             else keyQueue.push(newBlock);
             keyActiveBlock = newBlock;
@@ -13518,17 +13539,22 @@ window.onload = () => {
             qEl.innerHTML = 'プログラム：';
             const btn = document.getElementById('finish-block-btn-key');
             if(btn) btn.style.display = keyActiveBlock ? 'block' : 'none';
-            const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回' };
+            const names = { forward: '前', backward: '後', moveLeft: '左', moveRight: '右', leftTurn: '左回', rightTurn: '右回', jump: '🚀とび越える' };
 
             const buildUI = (items, container) => {
                 items.forEach((cmd, i) => {
-                    if (cmd.type === 'loop' || cmd.type === 'if_wall') {
+                    if (cmd.type === 'loop' || cmd.type === 'if_wall' || cmd.type === 'if_hole') {
                         const block = document.createElement('div');
-                        block.className = 'command-block' + (cmd.type === 'if_wall' ? ' if-block' : ''); 
-                        if (cmd === keyActiveBlock) block.style.boxShadow = '0 0 10px #f1c40f';
+                        block.className = 'command-block' + (cmd.type.startsWith('if') ? ' if-block' : ''); 
+                        if (cmd.subCommands === keyActiveBlock) block.style.boxShadow = '0 0 10px #f1c40f';
                         const header = document.createElement('div');
                         header.className = 'block-header';
-                        const title = cmd.type === 'loop' ? (cmd.value === 'forever' ? 'ずっと' : cmd.value + '回') + '繰り返す' : 'もし前が壁なら';
+                        
+                        let title = '';
+                        if (cmd.type === 'loop') title = (cmd.value === 'forever' ? 'ずっと' : cmd.value + '回') + '繰り返す';
+                        else if (cmd.type === 'if_wall') title = 'もし前が壁なら';
+                        else if (cmd.type === 'if_hole') title = `もし${cmd.dist}マス前が穴なら`;
+
                         header.innerHTML = `<span>${title}</span><span class="delete-btn">×</span>`;     
                         header.querySelector('.delete-btn').onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameKey.renderQueue(); };
                         const body = document.createElement('div');
@@ -13538,7 +13564,7 @@ window.onload = () => {
                     } else {
                         const item = document.createElement('span');
                         item.className = 'command-item';
-                        item.innerText = names[cmd.value] + ' ';
+                        item.innerText = (names[cmd.value] || cmd.value) + ' ';
                         const delBtn = document.createElement('span');
                         delBtn.className = 'delete-btn'; delBtn.innerText = '×';
                         delBtn.onclick = (e) => { e.stopPropagation(); items.splice(i, 1); window.mazeGameKey.renderQueue(); };
@@ -13567,7 +13593,12 @@ window.onload = () => {
             if(iIdx !== -1) {
                 const it = currentKeyItems[iIdx];
                 const cellEl = document.getElementById(it.id);
-                if(cellEl) cellEl.innerText = ''; // カギを消去
+                if(cellEl) {
+                    // カギの絵文字（テキストノード）だけを消し、ロボット（span）は残す
+                    Array.from(cellEl.childNodes).forEach(node => {
+                        if (node.nodeType === 3) cellEl.removeChild(node);
+                    });
+                }
                 if(it.type === 'special-key') hasDoorKey = true;
                 mazeScore += it.score;
                 currentKeyItems.splice(iIdx, 1);
@@ -13591,10 +13622,24 @@ window.onload = () => {
             mazeScore = 0;
             hasDoorKey = false;
             currentKeyItems = JSON.parse(JSON.stringify(initialKeyItems));
+            
+            // 鍵を全てのマスから一度消し、正しい位置に再配置
+            for(let y=0; y<6; y++) {
+                for(let x=0; x<6; x++) {
+                    const cell = document.getElementById(`k-cell-${y}-${x}`);
+                    if(cell) {
+                        // 子要素（ロボットなど）は残し、テキストノード（鍵など）だけ消す
+                        Array.from(cell.childNodes).forEach(node => {
+                            if (node.nodeType === 3) cell.removeChild(node);
+                        });
+                    }
+                }
+            }
             initialKeyItems.forEach(item => {
                 const cell = document.getElementById(item.id);
-                if(cell) cell.innerText = '🔑';
+                if(cell) cell.appendChild(document.createTextNode('🔑'));
             });
+
             const mEl = document.getElementById('maze-message-key');
             if(mEl) mEl.innerText = 'ミッション待機中... カギを探そう！';
             window.mazeGameKey.updateUI();
@@ -13622,32 +13667,49 @@ window.onload = () => {
                         let fy = keyRobot.y + (dir === 2 ? 1 : (dir === 0 ? -1 : 0));
                         const isWall = keyWalls.some(w => w.x === fx && w.y === fy) || fx < 0 || fx >= 6 || fy < 0 || fy >= 6;
                         if (isWall) await executeItems(cmd.subCommands);
-                    } else {
-                        let dx = 0, dy = 0;
+                    } else if (cmd.type === 'if_hole') {
                         const dir = keyRobot.dir;
-                        if(cmd.value === 'forward') {
-                            if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
-                        } else if(cmd.value === 'backward') {
-                            if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
-                        } else if(cmd.value === 'moveLeft') {
-                            if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
-                        } else if(cmd.value === 'moveRight') {
-                            if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
-                        } else if(cmd.value === 'leftTurn') keyRobot.dir = (keyRobot.dir + 3) % 4;       
-                        else if(cmd.value === 'rightTurn') keyRobot.dir = (keyRobot.dir + 1) % 4;        
+                        let d = cmd.dist;
+                        let fx = keyRobot.x + (dir === 1 ? d : (dir === 3 ? -d : 0));
+                        let fy = keyRobot.y + (dir === 2 ? d : (dir === 0 ? -d : 0));
+                        const isHole = keyHoles.some(h => h.x === fx && h.y === fy);
+                        if (isHole) await executeItems(cmd.subCommands);
+                    } else {
+                        const dir = keyRobot.dir;
+                        let dx = 0, dy = 0;
+                        let isTurn = false;
 
-                        let nx = keyRobot.x + dx, ny = keyRobot.y + dy;
-                        if (keyWalls.some(w => w.x === nx && w.y === ny)) {
-                            if(mEl) mEl.innerText = '💥 壁にガツン！';
-                            keyIsRunning = false; return;
+                        if (cmd.value === 'forward') {
+                            if(dir === 0) dy = -1; else if(dir === 1) dx = 1; else if(dir === 2) dy = 1; else if(dir === 3) dx = -1;
+                        } else if (cmd.value === 'jump') {
+                            if(dir === 0) dy = -2; else if(dir === 1) dx = 2; else if(dir === 2) dy = 2; else if(dir === 3) dx = -2;
+                        } else if (cmd.value === 'backward') {
+                            if(dir === 0) dy = 1; else if(dir === 1) dx = -1; else if(dir === 2) dy = -1; else if(dir === 3) dx = 1;
+                        } else if (cmd.value === 'moveLeft') {
+                            if(dir === 0) dx = -1; else if(dir === 1) dy = -1; else if(dir === 2) dx = 1; else if(dir === 3) dy = 1;
+                        } else if (cmd.value === 'moveRight') {
+                            if(dir === 0) dx = 1; else if(dir === 1) dy = 1; else if(dir === 2) dx = -1; else if(dir === 3) dy = -1;
+                        } else if (cmd.value === 'leftTurn') {
+                            keyRobot.dir = (keyRobot.dir + 3) % 4; isTurn = true;
+                        } else if (cmd.value === 'rightTurn') {
+                            keyRobot.dir = (keyRobot.dir + 1) % 4; isTurn = true;
                         }
-                        if (keyHoles.some(h => h.x === nx && h.y === ny)) {
-                            if(mEl) mEl.innerText = '🕳️ ドボン！穴に落ちた！';
-                            keyIsRunning = false; return;
+
+                        if (!isTurn) {
+                            let nx = keyRobot.x + dx, ny = keyRobot.y + dy;
+                            if (keyWalls.some(w => w.x === nx && w.y === ny)) {
+                                if(mEl) mEl.innerText = '💥 壁にガツン！';
+                                keyIsRunning = false; return;
+                            }
+                            if (keyHoles.some(h => h.x === nx && h.y === ny)) {
+                                if(mEl) mEl.innerText = '🕳️ ドボン！穴に落ちた！';
+                                keyIsRunning = false; return;
+                            }
+                            if(nx >= 0 && nx < 6 && ny >= 0 && ny < 6) {
+                                keyRobot.x = nx; keyRobot.y = ny;
+                            }
                         }
-                        if(nx >= 0 && nx < 6 && ny >= 0 && ny < 6) {
-                            keyRobot.x = nx; keyRobot.y = ny;
-                        }
+                        
                         window.mazeGameKey.updateUI();
                         await new Promise(r => setTimeout(r, 400));
                     }
