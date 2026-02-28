@@ -12486,6 +12486,73 @@ const studyData = {
                                             { question: "1〜100の数字を当てる時、範囲を半分ずつ絞っていく探し方を何という？", display: "用語", answer: "二分探索", options: ["二分探索", "線形探索", "ランダム探索"] },
                                             { question: "二分探索を使うと、100個の数字の中から正解を見つけるのに最大何回必要？", display: "知識", answer: "7回", options: ["7回", "50回", "100回"] }
                                         ]
+                                    },
+                                    {
+                                        title: "(イ) 数字当てゲームを 作ってみよう！",
+                                        content: `<h4>ゲームの「しくみ」を プログラミングしよう</h4>
+                                        <p>コンピュータが「もっと大きいよ」「正解！」と返事をするためのロジックを、ブロックで組み立ててみよう。正しい返事ができるかな？</p>
+                                        
+                                        <div class="maze-container" style="background: #fdfefe; border: 2px solid #9b59b6;">
+                                            <div style="background: #f4ecf7; padding: 15px; border-radius: 10px; margin-bottom: 15px;">
+                                                <div style="font-weight: bold; margin-bottom: 10px; color: #8e44ad;">[ ロジックを 組み立てる ]</div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left;">
+                                                    もし <b>[入れた数]</b> が <b>[正解]</b> より <b>大きい</b> なら...<br>
+                                                    <select id="logic-action-big" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- 返事を選ぶ ---</option>
+                                                        <option value="smaller">「もっと小さいよ」と言う</option>
+                                                        <option value="bigger">「もっと大きいよ」と言う</option>
+                                                        <option value="correct">「正解！」と言う</option>
+                                                        <option value="hello">「こんにちは」と言う</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left;">
+                                                    もし <b>[入れた数]</b> が <b>[正解]</b> より <b>小さい</b> なら...<br>
+                                                    <select id="logic-action-small" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- 返事を選ぶ ---</option>
+                                                        <option value="smaller">「もっと小さいよ」と言う</option>
+                                                        <option value="bigger">「もっと大きいよ」と言う</option>
+                                                        <option value="correct">「正解！」と言う</option>
+                                                        <option value="hello">「こんにちは」と言う</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left;">
+                                                    もし <b>[入れた数]</b> が <b>[正解]</b> と <b>同じ</b> なら...<br>
+                                                    <select id="logic-action-equal" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- 返事を選ぶ ---</option>
+                                                        <option value="smaller">「もっと小さいよ」と言う</option>
+                                                        <option value="bigger">「もっと大きいよ」と言う</option>
+                                                        <option value="correct">「正解！」と言う</option>
+                                                        <option value="hello">「こんにちは」と言う</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <button class="game-btn" onclick="window.makeGuessGame.runTest()" style="background: #9b59b6; color: white; width: 100%; font-weight: bold; padding: 10px;">このプログラムで テストする！</button>
+                                            </div>
+
+                                            <div id="test-run-area" style="display: none; background: #fff; padding: 15px; border-radius: 10px; border: 2px solid #2ecc71; max-height: 400px; overflow-y: auto;">
+                                                <div style="font-weight: bold; margin-bottom: 10px; color: #27ae60; position: sticky; top: 0; background: white; padding-bottom: 5px; z-index: 1; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                                                    <span>[ テスト走行中... ]</span>
+                                                    <span style="color: #2c3e50;">正解の数: <span id="test-target-display" style="color: #e67e22;">?</span></span>
+                                                </div>
+                                                
+                                                <!-- 対話ログエリア -->
+                                                <div id="test-dialog-log" style="font-size: 0.85em; display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+                                                    <!-- ここにやり取りが追加される -->
+                                                </div>
+                                                
+                                                <div id="test-result-msg" style="margin-top: 15px; font-weight: bold; text-align: center; color: #e67e22; border-top: 1px solid #eee; padding-top: 10px;"></div>
+                                                
+                                                <div style="margin-top: 15px; text-align: center; position: sticky; bottom: 0; background: white; padding-top: 5px;">
+                                                    <button id="test-stop-btn" class="game-btn" onclick="window.makeGuessGame.stopTest()" style="background: #95a5a6; color: white;">作り直す</button>
+                                                </div>
+                                            </div>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「もし～なら」を使って、条件に合わせて動きを変えることを何という？", display: "用語", answer: "条件分岐", options: ["条件分岐", "繰り返し", "変数"] }
+                                        ]
                                     }
                                 ]
                             }
@@ -14327,6 +14394,105 @@ window.onload = () => {
                 bar.style.left = `${left}%`;
                 bar.style.width = `${width}%`;
             }
+        }
+    };
+
+    // (イ) 数字当てゲームを作ってみよう！ 用ロジック
+    window.makeGuessGame = {
+        isRunning: false,
+        testAnswer: 0,
+        isRunning: false,
+        targetAnswer: 0,
+
+        async runTest() {
+            if (this.isRunning) return;
+            const big = document.getElementById("logic-action-big").value;
+            const small = document.getElementById("logic-action-small").value;
+            const equal = document.getElementById("logic-action-equal").value;
+
+            if (big === "none" || small === "none" || equal === "none") {
+                alert("すべての 条件に 返事を えらんでね！"); return;
+            }
+
+            const runArea = document.getElementById("test-run-area");
+            const logArea = document.getElementById("test-dialog-log");
+            const resultEl = document.getElementById("test-result-msg");
+            const targetDisplay = document.getElementById("test-target-display");
+            if(!runArea || !logArea || !resultEl) return;
+
+            runArea.style.display = "block";
+            logArea.innerHTML = "";
+            resultEl.textContent = "";
+            this.isRunning = true;
+            this.targetAnswer = Math.floor(Math.random() * 100) + 1;
+            if (targetDisplay) targetDisplay.textContent = this.targetAnswer;
+
+            let min = 1, max = 100, count = 0;
+            const mapper = {
+                smaller: "「もっと小さいよ」", bigger: "「もっと大きいよ」",
+                correct: "「正解！」", hello: "「こんにちは」"
+            };
+
+            while (this.isRunning && count < 10) {
+                count++;
+                let guess = Math.floor((min + max) / 2);
+                this.addLog(logArea, `👤 プレイヤー: 「${guess}」かな？`, "user");
+                await new Promise(r => setTimeout(r, 800));
+                if (!this.isRunning) break;
+
+                let actionType = (guess > this.targetAnswer) ? big : (guess < this.targetAnswer) ? small : equal;
+                let replyText = mapper[actionType] || "...";
+                this.addLog(logArea, `🤖 プログラム: ${replyText}`, "bot");
+                await new Promise(r => setTimeout(r, 600));
+                if (!this.isRunning) break;
+
+                const isCorrectLogic = (guess > this.targetAnswer && actionType === "smaller") ||
+                                       (guess < this.targetAnswer && actionType === "bigger") ||
+                                       (guess === this.targetAnswer && actionType === "correct");
+
+                if (!isCorrectLogic) {
+                    resultEl.innerHTML = `❌ 返答が まちがっています！<br>正解(${this.targetAnswer}) に対して ${guess} と言われ、${replyText} と答えました。`;
+                    resultEl.style.color = "#e74c3c";
+                    this.isRunning = false; return;
+                }
+
+                if (actionType === "correct") {
+                    resultEl.innerHTML = `✨ お見事！${count}回で 正解に たどり着きました！<br>あなたのプログラムは 完璧です。`;
+                    resultEl.style.color = "#27ae60";
+                    this.isRunning = false; return;
+                }
+
+                if (actionType === "smaller") max = guess - 1;
+                else if (actionType === "bigger") min = guess + 1;
+                
+                if (min > max) {
+                    resultEl.innerHTML = "🤔 範囲が なくなってしまいました。ヒントが 矛盾しているかも？";
+                    resultEl.style.color = "#e67e22";
+                    this.isRunning = false; return;
+                }
+            }
+            if(count >= 10 && this.isRunning) resultEl.textContent = "10回たっても 正解できませんでした。";
+            this.isRunning = false;
+        },
+
+        addLog(area, msg, type) {
+            const div = document.createElement("div");
+            div.style.padding = "8px 12px"; div.style.borderRadius = "10px"; div.style.maxWidth = "80%";
+            div.style.fontSize = "0.9em";
+            if (type === "user") {
+                div.style.alignSelf = "flex-start"; div.style.background = "#f1f1f1";
+            } else {
+                div.style.alignSelf = "flex-end"; div.style.background = "#e1f5fe"; div.style.border = "1px solid #03a9f4";
+            }
+            div.textContent = msg;
+            area.appendChild(div);
+            area.scrollTop = area.scrollHeight;
+        },
+
+        stopTest() {
+            this.isRunning = false;
+            const el = document.getElementById("test-run-area");
+            if (el) el.style.display = "none";
         }
     };
 
