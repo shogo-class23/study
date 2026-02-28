@@ -12553,6 +12553,48 @@ const studyData = {
                                         quizzes: [
                                             { question: "「もし～なら」を使って、条件に合わせて動きを変えることを何という？", display: "用語", answer: "条件分岐", options: ["条件分岐", "繰り返し", "変数"] }
                                         ]
+                                    },
+                                    {
+                                        title: "(ウ) 並べ替え（ソート）の 魔法",
+                                        content: `<h4>バラバラの 数字を 小さい順に 並べよう</h4>
+                                        <p>コンピュータは、一度にたくさんの数字を比べるのが苦手です。2つずつ順番に比べて入れ替えていく「バブルソート」という方法に挑戦しよう！</p>
+                                        
+                                        <div class="maze-container" style="background: #eef2f3; border: 2px solid #27ae60; padding: 20px;">
+                                            <!-- カード置き場 -->
+                                            <div id="sort-cards-area" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; min-height: 80px;">
+                                                <!-- カードがここに生成される -->
+                                            </div>
+                                            
+                                            <!-- 操作パネル -->
+                                            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; text-align: center;">
+                                                <div id="sort-message" style="font-weight: bold; margin-bottom: 15px; color: #2c3e50; height: 1.2em;">2枚の カードを えらんでね</div>
+                                                
+                                                <div style="display: flex; gap: 10px; justify-content: center;">
+                                                    <button class="game-btn" id="sort-compare-btn" onclick="window.sortGame.compare()" style="background: #3498db; color: white; padding: 10px 20px; flex: 1;">比べる</button>
+                                                    <button class="game-btn" id="sort-swap-btn" onclick="window.sortGame.swap()" style="background: #e67e22; color: white; padding: 10px 20px; flex: 1;">入れ替える</button>
+                                                </div>
+                                                
+                                                <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
+                                                    <button class="game-btn" onclick="window.sortGame.init()" style="background: #95a5a6; color: white; flex: 1;">シャッフル</button>
+                                                    <button class="game-btn" onclick="window.sortGame.check()" style="background: #2ecc71; color: white; flex: 1; font-weight: bold;">完成チェック！</button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="sort-status" style="margin-top: 15px; text-align: center; font-size: 0.9em; color: #7f8c8d;">
+                                                比較回数: 0回 / 入れ替え回数: 0回
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="point-box" style="margin-top: 15px; font-size: 0.85em; background: #e8f5e9;">
+                                            <b>💡 アルゴリズムの ヒント：バブルソート</b><br>
+                                            1. 左から順番に「隣り合う2枚」を比べる。<br>
+                                            2. 右の方が小さければ入れ替える。<br>
+                                            これを繰り返すと、重い（大きい）数字が泡（バブル）のように右へ移動していくよ！
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "バラバラのデータを、決まった順序に並べ替えることを何という？", display: "用語", answer: "ソート", options: ["ソート", "サーチ", "マージ"] },
+                                            { question: "隣り合う2つを比べて入れ替えていく、代表的なソート方法は？", display: "用語", answer: "バブルソート", options: ["バブルソート", "クイックソート", "挿入ソート"] }
+                                        ]
                                     }
                                 ]
                             }
@@ -12809,6 +12851,7 @@ window.onload = () => {
             if (document.getElementById('maze-grid-key')) window.initMazeGameKey();
             if (document.getElementById('maze-grid-custom')) window.mazeEditor.editMode();
             if (document.getElementById('guess-input')) window.guessGame.init();
+            if (document.getElementById('sort-cards-area')) window.sortGame.init();
             if (document.getElementById('motion-sprite')) window.initMotionDemo();
             if (document.getElementById('looks-sprite')) window.initLooksDemo();
         }, 50);
@@ -14493,6 +14536,134 @@ window.onload = () => {
             this.isRunning = false;
             const el = document.getElementById("test-run-area");
             if (el) el.style.display = "none";
+        }
+    };
+
+    // (ウ) 並べ替え（ソート）の 魔法 用ロジック
+    window.sortGame = {
+        cards: [],
+        selectedIndices: [],
+        compareCount: 0,
+        swapCount: 0,
+        isAnimating: false,
+
+        init() {
+            this.cards = Array(5).fill().map(() => Math.floor(Math.random() * 90) + 10);
+            this.selectedIndices = [];
+            this.compareCount = 0;
+            this.swapCount = 0;
+            this.isAnimating = false;
+            this.updateMessage("2枚の カードを えらんでね");
+            this.render();
+            this.updateStatus();
+        },
+
+        render() {
+            const area = document.getElementById("sort-cards-area");
+            if(!area) return;
+            area.innerHTML = "";
+            this.cards.forEach((val, i) => {
+                const div = document.createElement("div");
+                div.style.cssText = `
+                    width: 50px; height: 70px; background: #fff; border: 2px solid #bdc3c7;
+                    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+                    font-size: 1.2em; font-weight: bold; color: #2c3e50; cursor: pointer;
+                    user-select: none; transition: all 0.3s; position: relative;
+                `;
+                div.textContent = "?"; 
+                if (this.selectedIndices.includes(i)) {
+                    div.style.borderColor = "#3498db";
+                    div.style.boxShadow = "0 0 10px rgba(52, 152, 219, 0.5)";
+                    div.style.transform = "translateY(-5px)";
+                }
+                div.onclick = () => this.select(i);
+                area.appendChild(div);
+            });
+        },
+
+        select(index) {
+            if (this.isAnimating) return;
+            const idx = this.selectedIndices.indexOf(index);
+            if (idx > -1) {
+                this.selectedIndices.splice(idx, 1);
+            } else if (this.selectedIndices.length < 2) {
+                this.selectedIndices.push(index);
+            }
+            this.render();
+        },
+
+        async compare() {
+            if (this.selectedIndices.length !== 2 || this.isAnimating) return;
+            this.isAnimating = true;
+            this.compareCount++;
+            this.updateStatus();
+            
+            const area = document.getElementById("sort-cards-area");
+            if(!area) return;
+            const cards = area.children;
+            const v1 = this.cards[this.selectedIndices[0]];
+            const v2 = this.cards[this.selectedIndices[1]];
+
+            cards[this.selectedIndices[0]].textContent = v1;
+            cards[this.selectedIndices[1]].textContent = v2;
+            
+            let result = (v1 < v2) ? "左の方が 小さいね" : (v1 > v2) ? "左の方が 大きいね" : "同じ大きさだね";
+            this.updateMessage(result);
+
+            await new Promise(r => setTimeout(r, 1500));
+            this.isAnimating = false;
+            this.render();
+        },
+
+        async swap() {
+            if (this.selectedIndices.length !== 2 || this.isAnimating) return;
+            this.isAnimating = true;
+            this.swapCount++;
+            this.updateStatus();
+
+            const [i1, i2] = this.selectedIndices;
+            [this.cards[i1], this.cards[i2]] = [this.cards[i2], this.cards[i1]];
+            
+            this.updateMessage("カードを 入れ替えたよ！");
+            await new Promise(r => setTimeout(r, 600));
+            
+            this.selectedIndices = [];
+            this.isAnimating = false;
+            this.render();
+        },
+
+        updateMessage(msg) {
+            const el = document.getElementById("sort-message");
+            if(el) el.textContent = msg;
+        },
+
+        updateStatus() {
+            const el = document.getElementById("sort-status");
+            if(el) el.textContent = `比較回数: ${this.compareCount}回 / 入れ替え回数: ${this.swapCount}回`;
+        },
+
+        check() {
+            const sorted = [...this.cards].sort((a,b) => a-b);
+            const isCorrect = this.cards.every((v, i) => v === sorted[i]);
+            
+            const area = document.getElementById("sort-cards-area");
+            if(!area) return;
+            const cards = area.children;
+            this.cards.forEach((val, i) => cards[i].textContent = val); 
+
+            if (isCorrect) {
+                this.updateMessage("🚩 クリア！きれいに 並んだね！");
+                const el = document.getElementById("sort-message");
+                if(el) { el.style.color = "#27ae60"; el.style.fontWeight = "bold"; }
+            } else {
+                this.updateMessage("❌ まだ 順番が バラバラだよ...");
+                const el = document.getElementById("sort-message");
+                if(el) el.style.color = "#e74c3c";
+                setTimeout(() => {
+                    if(el) el.style.color = "#2c3e50";
+                    this.render();
+                }, 2000);
+            }
         }
     };
 
