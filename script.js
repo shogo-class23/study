@@ -12567,28 +12567,30 @@ const studyData = {
                                             </div>
                                             
                                             <!-- 電卓ボタンエリア -->
-                                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; flex-grow: 1;">
-                                                <button class="game-btn" onclick="window.calcApp.clear()" style="grid-column: span 3; background: #e74c3c; color: white; font-weight: bold; font-size: 1.1em; padding: 12px 0;">AC (全消去)</button>
-                                                <button class="game-btn" onclick="window.calcApp.setOp('div')" style="background: #f39c12; color: white; font-size: 1.2em;">÷</button>
+                                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; flex-grow: 1;">
+                                                <button class="game-btn" onclick="window.calcApp.clear()" style="grid-column: span 2; background: #e74c3c; color: white; font-weight: bold; font-size: 1.1em; padding: 10px 0;">AC</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum('(')" style="background: #95a5a6; color: white; font-size: 1.2em;">(</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum(')')" style="background: #95a5a6; color: white; font-size: 1.2em;">)</button>
                                                 
-                                                <button class="game-btn" onclick="window.calcApp.addNum('7')" style="background: #34495e; color: white; font-size: 1.2em; padding: 15px 0;">7</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum('7')" style="background: #34495e; color: white; font-size: 1.2em; padding: 12px 0;">7</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('8')" style="background: #34495e; color: white; font-size: 1.2em;">8</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('9')" style="background: #34495e; color: white; font-size: 1.2em;">9</button>
-                                                <button class="game-btn" onclick="window.calcApp.setOp('mul')" style="background: #f39c12; color: white; font-size: 1.2em;">×</button>
+                                                <button class="game-btn" onclick="window.calcApp.setOp('div')" style="background: #f39c12; color: white; font-size: 1.2em;">÷</button>
                                                 
-                                                <button class="game-btn" onclick="window.calcApp.addNum('4')" style="background: #34495e; color: white; font-size: 1.2em; padding: 15px 0;">4</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum('4')" style="background: #34495e; color: white; font-size: 1.2em; padding: 12px 0;">4</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('5')" style="background: #34495e; color: white; font-size: 1.2em;">5</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('6')" style="background: #34495e; color: white; font-size: 1.2em;">6</button>
-                                                <button class="game-btn" onclick="window.calcApp.setOp('sub')" style="background: #f39c12; color: white; font-size: 1.2em;">－</button>
+                                                <button class="game-btn" onclick="window.calcApp.setOp('mul')" style="background: #f39c12; color: white; font-size: 1.2em;">×</button>
                                                 
-                                                <button class="game-btn" onclick="window.calcApp.addNum('1')" style="background: #34495e; color: white; font-size: 1.2em; padding: 15px 0;">1</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum('1')" style="background: #34495e; color: white; font-size: 1.2em; padding: 12px 0;">1</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('2')" style="background: #34495e; color: white; font-size: 1.2em;">2</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('3')" style="background: #34495e; color: white; font-size: 1.2em;">3</button>
-                                                <button class="game-btn" onclick="window.calcApp.setOp('add')" style="background: #f39c12; color: white; font-size: 1.2em;">＋</button>
+                                                <button class="game-btn" onclick="window.calcApp.setOp('sub')" style="background: #f39c12; color: white; font-size: 1.2em;">－</button>
                                                 
-                                                <button class="game-btn" onclick="window.calcApp.addNum('0')" style="grid-column: span 2; background: #34495e; color: white; font-size: 1.2em;">0</button>
+                                                <button class="game-btn" onclick="window.calcApp.addNum('0')" style="background: #34495e; color: white; font-size: 1.2em; padding: 12px 0;">0</button>
                                                 <button class="game-btn" onclick="window.calcApp.addNum('.')" style="background: #34495e; color: white; font-size: 1.2em;">.</button>
                                                 <button class="game-btn" onclick="window.calcApp.calculate()" style="background: #2ecc71; color: white; font-weight: bold; font-size: 1.5em;">＝</button>
+                                                <button class="game-btn" onclick="window.calcApp.setOp('add')" style="background: #f39c12; color: white; font-size: 1.2em;">＋</button>
                                             </div>
                                         </div>
                                         
@@ -14908,70 +14910,76 @@ window.onload = () => {
 
     // (ウ) 電卓を 使ってみよう！ 用ロジック
     window.calcApp = {
-        currentVal: "0",
-        memory: null,
-        op: null,
-        history: "",
-        resetOnNext: false,
+        expression: "",
+        result: "0",
+        lastInputIsOp: false,
 
         update() {
             const el = document.getElementById("calc-display");
             const histEl = document.getElementById("calc-history");
-            if (el) el.textContent = this.currentVal;
-            if (histEl) histEl.innerHTML = this.history || "&nbsp;";
+            if (el) el.textContent = this.result;
+            if (histEl) histEl.innerHTML = this.expression || "&nbsp;";
         },
 
-        addNum(num) {
-            if (this.resetOnNext) {
-                this.currentVal = "0";
-                this.resetOnNext = false;
+        addNum(val) {
+            // カッコや数字を追加
+            if (this.result !== "0" && !this.lastInputIsOp && this.expression === "") {
+                // 結果が出た後に数字を打ったらリセット
+                this.expression = "";
+                this.result = "0";
             }
-            if (this.currentVal === "0" && num !== ".") {
-                this.currentVal = num;
+            
+            if (this.expression === "" && val !== "(" && val !== ".") {
+                this.result = val;
             } else {
-                if (num === "." && this.currentVal.includes(".")) return;
-                this.currentVal += num;
+                this.result += val;
             }
+            this.expression += val;
+            this.lastInputIsOp = false;
             this.update();
         },
 
         setOp(op) {
-            if (this.memory !== null && this.op !== null && !this.resetOnNext) {
-                this.calculate();
+            const symbols = { add: "+", sub: "-", mul: "×", div: "÷" };
+            const jsOps = { add: "+", sub: "-", mul: "*", div: "/" };
+            
+            if (this.expression === "" && this.result !== "0") {
+                this.expression = this.result;
             }
-            const opSymbols = { add: "+", sub: "-", mul: "×", div: "÷" };
-            this.memory = parseFloat(this.currentVal);
-            this.op = op;
-            this.history = `${this.memory} ${opSymbols[op]}`;
-            this.resetOnNext = true;
+            
+            this.expression += ` ${symbols[op]} `;
+            this.lastInputIsOp = true;
+            this.result = "0";
             this.update();
         },
 
         calculate() {
-            if (this.memory === null || this.op === null) return;
-            const secondVal = parseFloat(this.currentVal);
-            const opSymbols = { add: "+", sub: "-", mul: "×", div: "÷" };
-            let result = 0;
-            switch (this.op) {
-                case "add": result = this.memory + secondVal; break;
-                case "sub": result = this.memory - secondVal; break;
-                case "mul": result = this.memory * secondVal; break;
-                case "div": result = (secondVal !== 0) ? this.memory / secondVal : "Err"; break;
+            if (this.expression === "") return;
+            
+            // 表示用の記号を計算用の記号に変換
+            let calcExpr = this.expression.replace(/×/g, "*").replace(/÷/g, "/");
+            
+            try {
+                // 安全な計算のために Function を使用
+                let evalResult = new Function(`return ${calcExpr}`)();
+                
+                // 小数点以下の長さを調整
+                if (!Number.isInteger(evalResult)) {
+                    evalResult = Math.round(evalResult * 1000000) / 1000000;
+                }
+                
+                this.result = String(evalResult);
+                this.expression = ""; // 次の入力のためにクリア
+            } catch (e) {
+                this.result = "Error";
             }
-            this.history = `${this.memory} ${opSymbols[this.op]} ${secondVal} =`;
-            this.currentVal = String(result);
-            this.memory = null;
-            this.op = null;
-            this.resetOnNext = true;
             this.update();
         },
 
         clear() {
-            this.currentVal = "0";
-            this.memory = null;
-            this.op = null;
-            this.history = "";
-            this.resetOnNext = false;
+            this.expression = "";
+            this.result = "0";
+            this.lastInputIsOp = false;
             this.update();
         }
     };
