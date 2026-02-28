@@ -12942,15 +12942,32 @@ const studyData = {
                 name: "第２段階",
                 categories: [
                     {
-                        name: "応用的な ルールと 知識",
-                        units: [
-                            {
-                                title: "1. 危険予測と 安全",
-                                subUnits: [
-                                    { title: "危険を 予測する", content: "事故を未然に防ぐための考え方を学ぼう。" }
-                                ]
-                            }
-                        ]
+                        name: "１ 駐車と停車",
+                        units: [{ title: "駐車と停車のルール", subUnits: [] }]
+                    },
+                    {
+                        name: "２ 灯火及び合図（２）",
+                        units: [{ title: "状況に応じた灯火と合図", subUnits: [] }]
+                    },
+                    {
+                        name: "３ 乗車、積載及び牽引",
+                        units: [{ title: "荷物の積み方と牽引", subUnits: [] }]
+                    },
+                    {
+                        name: "４ 死角と交通事故",
+                        units: [{ title: "死角の理解と事故防止", subUnits: [] }]
+                    },
+                    {
+                        name: "５ 高速自動車国道等における自動車の交通方法等",
+                        units: [{ title: "高速道路での運転ルール", subUnits: [] }]
+                    },
+                    {
+                        name: "６ 安全運転の知識と経路設計",
+                        units: [{ title: "計画的な運転と知識", subUnits: [] }]
+                    },
+                    {
+                        name: "７ 危険予測",
+                        units: [{ title: "危険を予測した運転", subUnits: [] }]
                     }
                 ]
             }
