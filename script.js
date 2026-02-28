@@ -12595,6 +12595,56 @@ const studyData = {
                                             { question: "バラバラのデータを、決まった順序に並べ替えることを何という？", display: "用語", answer: "ソート", options: ["ソート", "サーチ", "マージ"] },
                                             { question: "隣り合う2つを比べて入れ替えていく、代表的なソート方法は？", display: "用語", answer: "バブルソート", options: ["バブルソート", "クイックソート", "挿入ソート"] }
                                         ]
+                                    },
+                                    {
+                                        title: "(カ) 暗号を 解読しよう！",
+                                        content: `<h4>秘密の メッセージを 送り合おう</h4>
+                                        <p>文字を 一定の数だけ ずらして 隠す「シーザー暗号」に挑戦しよう。正しい「鍵（数字）」を知っていれば、元の言葉に戻せるよ！</p>
+                                        
+                                        <div class="maze-container" style="background: #f4f6f7; border: 2px solid #34495e; padding: 20px;">
+                                            <!-- 暗号化・復号エリア -->
+                                            <div style="background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 20px;">
+                                                <div style="font-weight: bold; margin-bottom: 10px; color: #2c3e50;">[ 暗号マシン ]</div>
+                                                
+                                                <input type="text" id="cipher-input" placeholder="アルファベットをいれてね" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #bdc3c7; margin-bottom: 15px; font-family: monospace; font-size: 1.2em;">
+                                                
+                                                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
+                                                    <span>鍵 (ずらす数):</span>
+                                                    <input type="number" id="cipher-key" value="3" min="1" max="25" style="width: 50px; padding: 5px; text-align: center;">
+                                                    <button class="game-btn" onclick="window.cipherGame.process(true)" style="background: #e74c3c; color: white;">暗号化 🔒</button>
+                                                    <button class="game-btn" onclick="window.cipherGame.process(false)" style="background: #3498db; color: white;">復号 🔓</button>
+                                                </div>
+                                                
+                                                <div id="cipher-result" style="background: #2c3e50; color: #2ecc71; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 1.5em; text-align: center; min-height: 1.5em; word-break: break-all;">
+                                                    RESULT
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 解読ミッション -->
+                                            <div style="background: #fcf3cf; padding: 15px; border-radius: 10px; border: 2px dashed #f1c40f;">
+                                                <div style="font-weight: bold; margin-bottom: 10px; color: #b7950b;">🕵️ 解読ミッション！</div>
+                                                <p style="font-size: 0.9em; margin-bottom: 10px;">以下の 暗号文を 解読して、秘密の言葉を見つけよう！<br>（ヒント：鍵は「3」だよ）</p>
+                                                <div style="background: #fff; padding: 10px; border-radius: 5px; text-align: center; font-family: monospace; font-weight: bold; font-size: 1.2em; letter-spacing: 2px; margin-bottom: 10px;">
+                                                    <span id="cipher-mission-text">ALJR</span>
+                                                </div>
+                                                <div style="display: flex; gap: 10px;">
+                                                    <input type="text" id="cipher-mission-input" placeholder="答えを入力" style="flex: 1; padding: 5px; border-radius: 3px; border: 1px solid #ddd;">
+                                                    <button class="game-btn" onclick="window.cipherGame.checkMission()" style="background: #27ae60; color: white;">チェック</button>
+                                                </div>
+                                                <div id="cipher-mission-msg" style="margin-top: 10px; font-weight: bold; text-align: center; font-size: 0.9em;"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="point-box" style="margin-top: 15px; font-size: 0.85em; background: #ebf5fb;">
+                                            <b>💡 アルゴリズムの ヒント：シーザー暗号</b><br>
+                                            ・文字を A→B→C... のように ずらして隠す 最も古い暗号の一つです。<br>
+                                            ・「鍵（何文字ずらすか）」を知っていれば、逆に戻すことができます。<br>
+                                            ・現代の インターネットの安全も、これをもっと複雑にした アルゴリズムで 守られているよ！
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "文字を一定の数だけずらして隠す暗号の名前は？", display: "用語", answer: "シーザー暗号", options: ["シーザー暗号", "モールス信号", "QRコード"] },
+                                            { question: "暗号をもとの言葉に戻すことを何という？", display: "用語", answer: "復号（ふくごう）", options: ["復号", "符号", "解号"] }
+                                        ]
                                     }
                                 ]
                             }
@@ -12852,6 +12902,7 @@ window.onload = () => {
             if (document.getElementById('maze-grid-custom')) window.mazeEditor.editMode();
             if (document.getElementById('guess-input')) window.guessGame.init();
             if (document.getElementById('sort-cards-area')) window.sortGame.init();
+            if (document.getElementById('cipher-mission-text')) window.cipherGame.init();
             if (document.getElementById('motion-sprite')) window.initMotionDemo();
             if (document.getElementById('looks-sprite')) window.initLooksDemo();
         }, 50);
@@ -14663,6 +14714,66 @@ window.onload = () => {
                     if(el) el.style.color = "#2c3e50";
                     this.render();
                 }, 2000);
+            }
+        }
+    };
+
+    // (カ) 暗号を 解読しよう！ 用ロジック
+    window.cipherGame = {
+        missions: [
+            { enc: "KHOOR", dec: "HELLO" },
+            { enc: "FRGH", dec: "CODE" },
+            { enc: "VHFUHW", dec: "SECRET" },
+            { enc: "SDB", dec: "PAV" }
+        ],
+        currentMission: null,
+
+        init() {
+            this.currentMission = this.missions[Math.floor(Math.random() * this.missions.length)];
+            const el = document.getElementById("cipher-mission-text");
+            if (el) el.textContent = this.currentMission.enc;
+            const msg = document.getElementById("cipher-mission-msg");
+            if (msg) msg.textContent = "";
+            const input = document.getElementById("cipher-mission-input");
+            if (input) input.value = "";
+        },
+
+        process(isEncrypt) {
+            const input = document.getElementById("cipher-input");
+            const keyEl = document.getElementById("cipher-key");
+            const resultEl = document.getElementById("cipher-result");
+            if(!input || !keyEl || !resultEl) return;
+
+            let text = input.value.toUpperCase();
+            let key = parseInt(keyEl.value);
+            if (isNaN(key)) key = 3;
+            if (!isEncrypt) key = (26 - (key % 26)) % 26;
+
+            let result = "";
+            for (let i = 0; i < text.length; i++) {
+                let char = text[i];
+                if (char.match(/[A-Z]/)) {
+                    let code = text.charCodeAt(i);
+                    result += String.fromCharCode(((code - 65 + key) % 26) + 65);
+                } else {
+                    result += char;
+                }
+            }
+            resultEl.textContent = result || "RESULT";
+        },
+
+        checkMission() {
+            const input = document.getElementById("cipher-mission-input");
+            const msg = document.getElementById("cipher-mission-msg");
+            if(!input || !msg || !this.currentMission) return;
+
+            const val = input.value.toUpperCase().trim();
+            if (val === this.currentMission.dec) {
+                msg.textContent = "✨ おめでとう！解読 成功！";
+                msg.style.color = "#27ae60";
+            } else {
+                msg.textContent = "❌ ざんねん！ちがう 言葉みたいだ...";
+                msg.style.color = "#e74c3c";
             }
         }
     };
