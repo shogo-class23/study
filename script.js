@@ -12967,7 +12967,62 @@ const studyData = {
                     },
                     {
                         name: "７ 危険予測",
-                        units: [{ title: "危険を予測した運転", subUnits: [] }]
+                        units: [{
+                            title: "危険予測トレーニング（○×問題）",
+                            content: "実際の運転場面を想定した○×クイズです。すべての問題に正解して、安全運転の意識を高めましょう。",
+                            quizzes: [
+                                {
+                                    question: "住宅街を走行中、停車している車の陰から子供が飛び出してくるかもしれないと予測して、速度を落とした。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "交差点を右折するとき、対向車線の大型車の影に二輪車が隠れているかもしれないと予測した。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "前を走る車が急に左折の合図を出したので、そのままの速度で追い越した。",
+                                    answer: "×",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "雨の日は路面が滑りやすくブレーキが効きにくくなるので、いつもより車間距離を多めにとった。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "歩行者が横断歩道の手前で立っていたが、こちらを見ていたのでそのままの速度で通過した。",
+                                    answer: "×",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "夜間の運転中、対向車のライトで見えにくくなっている歩行者がいるかもしれないと予測した。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "自転車を追い越すとき、自転車がふらついたり進路変更したりするかもしれないので、十分な間隔をあけた。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "前方の信号が青になったばかりなので、左右の確認をせずにそのまま発進した。",
+                                    answer: "×",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "狭い道で対向車とすれ違うとき、相手が止まってくれるだろうと考えてそのまま進んだ。",
+                                    answer: "×",
+                                    options: ["○", "×"]
+                                },
+                                {
+                                    question: "山道でカーブの先に故障車や対向車がいるかもしれないと予測して、速度を落として走行した。",
+                                    answer: "○",
+                                    options: ["○", "×"]
+                                }
+                            ]
+                        }]
                     }
                 ]
             }
@@ -13142,6 +13197,13 @@ window.onload = () => {
         const gradeData = studyData[currentSubject].grades[currentGrade];
         const cat = gradeData.categories[currentCategoryIndex];
         const unit = cat.units[j];
+
+        // subUnits がない場合は直接コンテンツを表示
+        if (!unit.subUnits || unit.subUnits.length === 0) {
+            showContent(unit);
+            return;
+        }
+
         selectedUnitName.innerHTML = unit.title;
 
         updateBreadcrumb([
