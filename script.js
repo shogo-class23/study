@@ -7162,7 +7162,40 @@ const studyData = {
                                 subUnits: [
                                     {
                                         title: "(ア) 五十音と 音の種類",
-                                        content: `<h4>日本語の 音</h4>
+                                        content: `<h4>五十音表</h4>
+                                        <div class="point-box" style="font-size: 0.8em; overflow-x: auto;">
+                                            <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid #ddd;">
+                                                <tr style="background: #f0f0f0;">
+                                                    <td style="width: 10%;"></td>
+                                                    <td>わ</td><td>ら</td><td>や</td><td>ま</td><td>は</td><td>な</td><td>た</td><td>さ</td><td>か</td><td>あ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">あ段</td>
+                                                    <td>わ</td><td>ら</td><td>や</td><td>ま</td><td>は</td><td>な</td><td>た</td><td>さ</td><td>か</td><td>あ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">い段</td>
+                                                    <td></td><td>り</td><td></td><td>み</td><td>ひ</td><td>に</td><td>ち</td><td>し</td><td>き</td><td>い</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">う段</td>
+                                                    <td></td><td>る</td><td>ゆ</td><td>む</td><td>ふ</td><td>ぬ</td><td>つ</td><td>す</td><td>く</td><td>う</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">え段</td>
+                                                    <td></td><td>れ</td><td></td><td>め</td><td>へ</td><td>ね</td><td>て</td><td>せ</td><td>け</td><td>え</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">お段</td>
+                                                    <td>を</td><td>ろ</td><td>よ</td><td>も</td><td>ほ</td><td>の</td><td>と</td><td>そ</td><td>こ</td><td>お</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;"></td>
+                                                    <td>ん</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <h4>日本語の 音</h4>
                                         <div class="point-box" style="font-size: 0.85em;">
                                             ・<b>濁音</b>：がぎぐげご<br>
                                             ・<b>半濁音</b>：ぱぴぷぺぽ<br>
@@ -7187,12 +7220,68 @@ const studyData = {
                                     },
                                     {
                                         title: "(ウ) ローマ字表",
-                                        content: `<h4>ヘボン式 書き方</h4>
+                                        content: `<h4>ローマ字表（訓令式 / ヘボン式）</h4>
+                                        <div class="point-box" style="font-size: 0.65em; overflow-x: auto;">
+                                            <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid #ddd; margin-bottom: 10px;">
+                                                <tr style="background: #f0f0f0;">
+                                                    <td style="width: 10%;">清音</td>
+                                                    <td>わ</td><td>ら</td><td>や</td><td>ま</td><td>は</td><td>な</td><td>た</td><td>さ</td><td>か</td><td>あ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">あ段</td>
+                                                    <td>wa</td><td>ra</td><td>ya</td><td>ma</td><td>ha</td><td>na</td><td>ta</td><td>sa</td><td>ka</td><td>a</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">い段</td>
+                                                    <td></td><td>ri</td><td></td><td>mi</td><td>hi</td><td>ni</td><td>ti / <b>chi</b></td><td>si / <b>shi</b></td><td>ki</td><td>i</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">う段</td>
+                                                    <td></td><td>ru</td><td>yu</td><td>mu</td><td>hu / <b>fu</b></td><td>nu</td><td>tu / <b>tsu</b></td><td>su</td><td>ku</td><td>u</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">え段</td>
+                                                    <td></td><td>re</td><td></td><td>me</td><td>he</td><td>ne</td><td>te</td><td>se</td><td>ke</td><td>e</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">お段</td>
+                                                    <td>wo / (o)</td><td>ro</td><td>yo</td><td>mo</td><td>ho</td><td>no</td><td>to</td><td>so</td><td>ko</td><td>o</td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid #ddd;">
+                                                <tr style="background: #f0f0f0;">
+                                                    <td style="width: 10%;">濁音<br>半濁音</td>
+                                                    <td>ぱ</td><td>ば</td><td>だ</td><td>ざ</td><td>が</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">あ段</td>
+                                                    <td>pa</td><td>ba</td><td>da</td><td>za</td><td>ga</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">い段</td>
+                                                    <td>pi</td><td>bi</td><td>di / <b>ji</b></td><td>zi / <b>ji</b></td><td>gi</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">う段</td>
+                                                    <td>pu</td><td>bu</td><td>du / <b>zu</b></td><td>zu</td><td>gu</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">え段</td>
+                                                    <td>pe</td><td>be</td><td>de</td><td>ze</td><td>ge</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background: #f0f0f0;">お段</td>
+                                                    <td>po</td><td>bo</td><td>do</td><td>zo</td><td>go</td>
+                                                </tr>
+                                            </table>
+                                            <p style="margin-top: 5px; font-size: 0.9em;">※「訓令式 / <b>ヘボン式</b>」で表示。異なる箇所は<b>太字</b></p>
+                                        </div>
+                                        <h4>書き方の ルール</h4>
                                         <div class="point-box" style="font-size: 0.8em; max-height: 200px; overflow-y: auto;">
-                                            し(shi), ち(chi), つ(tsu), ふ(fu)<br>
-                                            しゃ(sha), しゅ(shu), しょ(sho)<br>
-                                            ちゃ(cha), ちゅ(chu), ちょ(cho)<br>
-                                            っ（小さい「つ」）は、次の子音を重ねる（例: kappe = かっぺ）
+                                            ・<b>撥音（ん）</b>：基本は n。ただし、b, m, p の前では m（例: shimbun）<br>
+                                            ・<b>促音（っ）</b>：次の子音を重ねる（例: kappe = かっぺ）<br>
+                                            ・<b>長音（ー）</b>：母音の上に記号（^）をつけるか、省略する。
                                         </div>`,
                                         quizzes: [
                                             { question: "「つ」をローマ字で書くと？", display: "書き方", answer: "tsu", options: ["tsu", "tu"] }
