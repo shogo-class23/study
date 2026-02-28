@@ -13509,7 +13509,6 @@ window.onload = () => {
 
         submitBtn.onclick = () => {
             const feedback = document.getElementById('quiz-feedback');
-            // データ側に answers 配列がない場合は、answer を3つ並べたものとみなす（デモ用）
             const correctAnswers = q.answers || [q.answer, q.answer, q.answer]; 
             const isAllCorrect = userAnswers.every((ans, i) => ans === correctAnswers[i]);
 
@@ -13519,29 +13518,24 @@ window.onload = () => {
             if (isAllCorrect) {
                 correctCount++;
                 feedback.innerHTML = `<div style="color: #2ecc71; font-size: 32px; font-weight: bold; margin-bottom: 20px;">✨ ぜんぶせいかい！ ✨</div>`;
-                const nextBtn = document.createElement('button');
-                nextBtn.className = 'quiz-btn next-btn';
-                nextBtn.style.width = 'auto';
-                nextBtn.style.padding = '0 30px';
-                nextBtn.innerText = currentQuizIndex + 1 < shuffledQuizzes.length ? 'つぎの問題へ' : '結果を見る';
-                nextBtn.onclick = () => {
-                    if (currentQuizIndex + 1 < shuffledQuizzes.length) {
-                        startQuiz(currentQuizIndex + 1);
-                    } else {
-                        showQuizResult();
-                    }
-                };
-                feedback.appendChild(nextBtn);
             } else {
                 feedback.innerHTML = `<div style="color: #e74c3c; font-size: 32px; font-weight: bold; margin-bottom: 20px;">❌ ざんねん！（完答ならず）</div>`;
-                const retryBtn = document.createElement('button');
-                retryBtn.className = 'quiz-btn next-btn';
-                retryBtn.style.width = 'auto';
-                retryBtn.style.padding = '0 30px';
-                retryBtn.innerText = 'もう一度とく';
-                retryBtn.onclick = () => startCompleteAnswerBinaryQuiz(currentQuizIndex);
-                feedback.appendChild(retryBtn);
             }
+
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'quiz-btn next-btn';
+            nextBtn.style.width = 'auto';
+            nextBtn.style.padding = '0 30px';
+            const isLast = currentQuizIndex === shuffledQuizzes.length - 1;
+            nextBtn.innerText = isLast ? '結果を見る' : 'つぎの問題へ';
+            nextBtn.onclick = () => {
+                if (!isLast) {
+                    startQuiz(currentQuizIndex + 1);
+                } else {
+                    showResults(); // 既存の関数名 showResults に合わせます
+                }
+            };
+            feedback.appendChild(nextBtn);
         };
 
         const subjectName = studyData[currentSubject].name;
