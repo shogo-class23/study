@@ -12366,6 +12366,82 @@ const studyData = {
                                                                                                                                                                                                                                                                                                                             quizzes: [
                                                                                                                                                                                                                                                                                                                                 { question: "複雑な問題を、コンピュータが解きやすい手順に分けることを何という？", display: "用語", answer: "アルゴリズム設計", options: ["アルゴリズム設計", "ハードウェア設計", "ネットワーク設計"] }
                                                                                                                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                                        {
+                                                                                                                                                                                                                                                                                                                            title: "(オ) オリジナルの 迷路を 作ろう！",
+                                                                                                                                                                                                                                                                                                                            content: `<h4>自分だけの ミッションを 設計しよう！</h4>
+                                                                                                                                                                                                                                                                                                                            <p>パーツを選んでマスをクリックすると、迷路を作れるよ。完成したら「この迷路で遊ぶ」を押して、プログラムを作ってみよう！</p>
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                            <div class="maze-container">
+                                                                                                                                                                                                                                                                                                                                <!-- エディタ用パレット -->
+                                                                                                                                                                                                                                                                                                                                <div id="editor-palette" style="display: flex; gap: 10px; justify-content: center; background: #ecf0f1; padding: 10px; border-radius: 10px; margin-bottom: 15px; border: 2px solid #bdc3c7;">
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn active" onclick="window.mazeEditor.setTool('wall', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: #34495e; color: white;">🧱 壁</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn" onclick="window.mazeEditor.setTool('hole', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: #e74c3c; color: white;">🕳️ 穴</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn" onclick="window.mazeEditor.setTool('key', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: #f1c40f; color: black;">🔑 鍵</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn" onclick="window.mazeEditor.setTool('robot', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: #3498db; color: white;">🤖 ロボ</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn" onclick="window.mazeEditor.setTool('goal', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: #2ecc71; color: white;">🚩 旗</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="tool-btn" onclick="window.mazeEditor.setTool('empty', this)" style="padding: 5px 10px; cursor: pointer; border-radius: 5px; border: 1px solid #7f8c8d; background: white; color: black;">🧹 消す</button>
+                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                <!-- 編集・表示用グリッド -->
+                                                                                                                                                                                                                                                                                                                                <div class="maze-grid" id="maze-grid-custom" style="grid-template-columns: repeat(5, 60px); grid-template-rows: repeat(5, 60px); cursor: crosshair;">
+                                                                                                                                                                                                                                                                                                                                    <!-- 5x5 グリッドを動的に生成、または固定配置 -->
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" onclick="window.mazeEditor.paint(0,0,this)" id="c-cell-0-0"></div><div class="maze-cell" onclick="window.mazeEditor.paint(0,1,this)" id="c-cell-0-1"></div><div class="maze-cell" onclick="window.mazeEditor.paint(0,2,this)" id="c-cell-0-2"></div><div class="maze-cell" onclick="window.mazeEditor.paint(0,3,this)" id="c-cell-0-3"></div><div class="maze-cell" onclick="window.mazeEditor.paint(0,4,this)" id="c-cell-0-4"></div>
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" onclick="window.mazeEditor.paint(1,0,this)" id="c-cell-1-0"></div><div class="maze-cell" onclick="window.mazeEditor.paint(1,1,this)" id="c-cell-1-1"></div><div class="maze-cell" onclick="window.mazeEditor.paint(1,2,this)" id="c-cell-1-2"></div><div class="maze-cell" onclick="window.mazeEditor.paint(1,3,this)" id="c-cell-1-3"></div><div class="maze-cell" onclick="window.mazeEditor.paint(1,4,this)" id="c-cell-1-4"></div>
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" onclick="window.mazeEditor.paint(2,0,this)" id="c-cell-2-0"></div><div class="maze-cell" onclick="window.mazeEditor.paint(2,1,this)" id="c-cell-2-1"></div><div class="maze-cell" onclick="window.mazeEditor.paint(2,2,this)" id="c-cell-2-2"></div><div class="maze-cell" onclick="window.mazeEditor.paint(2,3,this)" id="c-cell-2-3"></div><div class="maze-cell" onclick="window.mazeEditor.paint(2,4,this)" id="c-cell-2-4"></div>
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" onclick="window.mazeEditor.paint(3,0,this)" id="c-cell-3-0"></div><div class="maze-cell" onclick="window.mazeEditor.paint(3,1,this)" id="c-cell-3-1"></div><div class="maze-cell" onclick="window.mazeEditor.paint(3,2,this)" id="c-cell-3-2"></div><div class="maze-cell" onclick="window.mazeEditor.paint(3,3,this)" id="c-cell-3-3"></div><div class="maze-cell" onclick="window.mazeEditor.paint(3,4,this)" id="c-cell-3-4"></div>
+                                                                                                                                                                                                                                                                                                                                    <div class="maze-cell" onclick="window.mazeEditor.paint(4,0,this)" id="c-cell-4-0"></div><div class="maze-cell" onclick="window.mazeEditor.paint(4,1,this)" id="c-cell-4-1"></div><div class="maze-cell" onclick="window.mazeEditor.paint(4,2,this)" id="c-cell-4-2"></div><div class="maze-cell" onclick="window.mazeEditor.paint(4,3,this)" id="c-cell-4-3"></div><div class="maze-cell" onclick="window.mazeEditor.paint(4,4,this)" id="c-cell-4-4"></div>
+                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                <div id="editor-actions" style="margin-top: 15px; display: flex; gap: 10px; justify-content: center;">
+                                                                                                                                                                                                                                                                                                                                    <button class="game-btn" onclick="window.mazeEditor.clear()" style="background: #95a5a6; color: white;">全消去</button>
+                                                                                                                                                                                                                                                                                                                                    <button class="game-btn" onclick="window.mazeEditor.playMode()" style="background: #e67e22; color: white; padding: 10px 30px; font-weight: bold;">この迷路で遊ぶ！</button>
+                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                <!-- プレイモード用UI (最初は非表示) -->
+                                                                                                                                                                                                                                                                                                                                <div id="play-ui" style="display: none; margin-top: 20px; border-top: 2px solid #ddd; padding-top: 20px;">
+                                                                                                                                                                                                                                                                                                                                    <div style="background: #2c3e50; color: white; padding: 10px; border-radius: 10px; margin-bottom: 10px; text-align: center; font-weight: bold;">[ プレイ中：プログラムを組もう ]</div>
+                                                                                                                                                                                                                                                                                                                                    <div class="status-box" id="maze-message-custom">準備完了！</div>
+                                                                                                                                                                                                                                                                                                                                    <div class="command-area">
+                                                                                                                                                                                                                                                                                                                                        <div class="command-queue" id="command-queue-custom">プログラム：</div>
+                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                        <div style="background: #fff; padding: 15px; border-radius: 10px; margin-bottom: 15px; border: 2px dashed #3498db;">
+                                                                                                                                                                                                                                                                                                                                            <div style="margin-bottom: 10px; font-weight: bold;">[ 制御ブロック ]</div>
+                                                                                                                                                                                                                                                                                                                                            <select id="loop-count-custom" style="padding: 5px;">
+                                                                                                                                                                                                                                                                                                                                                <option value="2">2回</option><option value="3">3回</option><option value="4">4回</option><option value="5">5回</option><option value="forever">ずっと</option>
+                                                                                                                                                                                                                                                                                                                                            </select>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #f39c12; color: white;" onclick="window.mazeGameCustom.addLoop()">繰り返す</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #e67e22; color: white;" onclick="window.mazeGameCustom.addIf('if_wall')">もし壁なら</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" style="padding: 5px 10px; background: #9b59b6; color: white;" onclick="window.mazeGameCustom.addIfHole()">もし穴なら</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" id="finish-block-btn-custom" style="margin-top:10px; width: 100%; background: #2ecc71; color: white; display: none;" onclick="window.mazeGameCustom.finishBlock()">ブロックを閉じる</button>
+                                                                                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                                                                                        <div class="control-panel">
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameCustom.add('leftTurn')">左回</button>
+                                                                                                                                                                                                                                                                                                                                            <div class="d-pad">
+                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-up" onclick="window.mazeGameCustom.add('forward')">前</button>
+                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-left" onclick="window.mazeGameCustom.add('moveLeft')">左</button>
+                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-right" onclick="window.mazeGameCustom.add('moveRight')">右</button>
+                                                                                                                                                                                                                                                                                                                                                <button class="game-btn btn-down" onclick="window.mazeGameCustom.add('backward')">後</button>
+                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-rotate" onclick="window.mazeGameCustom.add('rightTurn')">右回</button>
+                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                        <div style="text-align: center; margin-top: 10px;">
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" style="background: #34495e; color: white; width: 100%;" onclick="window.mazeGameCustom.add('jump')">とび越える (2マス前へ)</button>
+                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                        <div class="game-action-group">
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-run" onclick="window.mazeGameCustom.run()">実行！</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-reset" onclick="window.mazeGameCustom.reset()">位置を戻す</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn btn-clear-all" onclick="window.mazeGameCustom.clearAll()">プログラム消去</button>
+                                                                                                                                                                                                                                                                                                                                            <button class="game-btn" onclick="window.mazeEditor.editMode()" style="background: #e74c3c; color: white;">迷路を作り直す</button>
+                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                            </div>`,
+                                                                                                                                                                                                                                                                                                                            quizzes: [
+                                                                                                                                                                                                                                                                                                                                { question: "「プログラムを作る人」だけでなく「解くべき問題を作る人」になることで身につく視点は？", display: "思考", answer: "多角的な視点", options: ["多角的な視点", "ただの遊び", "タイピングの速さ"] }
+                                                                                                                                                                                                                                                                                                                            ]
                                                                                                                                                                                                                                                                                                                         }
                                                                                                                                                                                             ]
                             }
@@ -13865,6 +13941,287 @@ window.onload = () => {
             const b = document.getElementById('speech-bubble');
             if(sp) sp.style.fontSize = '50px';
             if(b) b.style.display = 'none';
+        }
+    };
+
+    // (オ) オリジナル迷路用エディタとゲームロジック
+    window.mazeEditor = {
+        currentTool: "wall",
+        mapData: Array(5).fill().map(() => Array(5).fill("empty")),
+        robotPos: { r: 0, c: 0 },
+        goalPos: { r: 4, c: 4 },
+
+        setTool(tool, btn) {
+            this.currentTool = tool;
+            document.querySelectorAll(".tool-btn").forEach(b => {
+                b.classList.remove("active");
+                b.style.border = "1px solid #7f8c8d";
+            });
+            btn.classList.add("active");
+            btn.style.border = "2px solid #000";
+        },
+
+        paint(r, c, cell) {
+            cell.className = "maze-cell";
+            cell.innerHTML = "";
+            cell.style.background = "";
+            this.mapData[r][c] = this.currentTool;
+
+            if (this.currentTool === "wall") {
+                cell.classList.add("wall");
+                cell.style.background = "#333";
+            } else if (this.currentTool === "hole") {
+                cell.classList.add("hole");
+                cell.style.background = "#7f8c8d";
+                cell.innerHTML = "🕳️";
+            } else if (this.currentTool === "key") {
+                cell.classList.add("item");
+                cell.innerHTML = "🔑";
+            } else if (this.currentTool === "robot") {
+                document.querySelectorAll("#maze-grid-custom .maze-cell").forEach(el => {
+                    if (el.innerHTML === "🤖") el.innerHTML = "";
+                });
+                this.robotPos = { r, c };
+                cell.innerHTML = "🤖";
+            } else if (this.currentTool === "goal") {
+                document.querySelectorAll("#maze-grid-custom .maze-cell").forEach(el => {
+                    el.classList.remove("goal");
+                });
+                this.goalPos = { r, c };
+                cell.classList.add("goal");
+                cell.innerHTML = "🚩";
+            } else if (this.currentTool === "empty") {
+                this.mapData[r][c] = "empty";
+            }
+        },
+
+        clear() {
+            document.querySelectorAll("#maze-grid-custom .maze-cell").forEach(cell => {
+                cell.className = "maze-cell";
+                cell.innerHTML = "";
+                cell.style.background = "";
+            });
+            this.mapData = Array(5).fill().map(() => Array(5).fill("empty"));
+            this.robotPos = { r: 0, c: 0 };
+            this.goalPos = { r: 4, c: 4 };
+            this.paint(0, 0, document.getElementById("c-cell-0-0"));
+            this.setTool("goal", document.querySelector("button[onclick*='goal']"));
+            this.paint(4, 4, document.getElementById("c-cell-4-4"));
+            this.setTool("wall", document.querySelector("button[onclick*='wall']"));
+        },
+
+        playMode() {
+            document.getElementById("editor-palette").style.display = "none";
+            document.getElementById("editor-actions").style.display = "none";
+            document.getElementById("play-ui").style.display = "block";
+            document.getElementById("maze-grid-custom").style.cursor = "default";
+            
+            const grid = document.getElementById("maze-grid-custom");
+            const cells = grid.querySelectorAll(".maze-cell");
+            cells.forEach(cell => { cell.onclick = null; });
+
+            const startCell = document.getElementById(`c-cell-${this.robotPos.r}-${this.robotPos.c}`);
+            startCell.innerHTML = "<span id='robot-custom'>🤖</span>";
+            
+            window.mazeGameCustom.init();
+        },
+
+        editMode() {
+            document.getElementById("editor-palette").style.display = "flex";
+            document.getElementById("editor-actions").style.display = "flex";
+            document.getElementById("play-ui").style.display = "none";
+            document.getElementById("maze-grid-custom").style.cursor = "crosshair";
+            
+            for(let r=0; r<5; r++) {
+                for(let c=0; c<5; c++) {
+                    const cell = document.getElementById(`c-cell-${r}-${c}`);
+                    cell.onclick = () => this.paint(r, c, cell);
+                }
+            }
+        }
+    };
+
+    window.mazeGameCustom = {
+        queue: [],
+        pos: { r: 0, c: 0 },
+        dir: 0,
+        isRunning: false,
+        hasKey: false,
+        tempBlock: null,
+
+        init() {
+            this.pos = { ...window.mazeEditor.robotPos };
+            this.dir = 0;
+            this.hasKey = false;
+            this.reset();
+        },
+
+        add(cmd) {
+            if (this.isRunning) return;
+            if (this.tempBlock) {
+                this.tempBlock.commands.push(cmd);
+                this.updateQueueDisplay();
+            } else {
+                this.queue.push({ type: "basic", command: cmd });
+                this.updateQueueDisplay();
+            }
+        },
+
+        addLoop() {
+            const count = document.getElementById("loop-count-custom").value;
+            this.tempBlock = { type: "loop", count: count === "forever" ? Infinity : parseInt(count), commands: [] };
+            document.getElementById("finish-block-btn-custom").style.display = "block";
+            this.updateQueueDisplay();
+        },
+
+        addIf(cond) {
+            this.tempBlock = { type: "if", condition: cond, commands: [] };
+            document.getElementById("finish-block-btn-custom").style.display = "block";
+            this.updateQueueDisplay();
+        },
+
+        addIfHole() {
+            this.tempBlock = { type: "if_hole", commands: [] };
+            document.getElementById("finish-block-btn-custom").style.display = "block";
+            this.updateQueueDisplay();
+        },
+
+        finishBlock() {
+            this.queue.push(this.tempBlock);
+            this.tempBlock = null;
+            document.getElementById("finish-block-btn-custom").style.display = "none";
+            this.updateQueueDisplay();
+        },
+
+        clearAll() { this.queue = []; this.updateQueueDisplay(); },
+
+        updateQueueDisplay() {
+            const q = document.getElementById("command-queue-custom");
+            if(!q) return;
+            q.innerHTML = "プログラム：";
+            this.queue.forEach(item => {
+                const span = document.createElement("span");
+                span.style.padding = "2px 5px"; span.style.margin = "2px"; span.style.borderRadius = "3px";
+                if (item.type === "basic") {
+                    span.textContent = item.command; span.style.background = "#eee";
+                } else if (item.type === "loop") {
+                    span.textContent = `[ ${item.count}回: ${item.commands.join(",")} ]`; span.style.background = "#fffbe6";
+                } else {
+                    span.textContent = `[ もし...: ${item.commands.join(",")} ]`; span.style.background = "#e1f5fe";
+                }
+                q.appendChild(span);
+            });
+            if (this.tempBlock) {
+                const temp = document.createElement("span");
+                temp.textContent = " (作成中...) "; temp.style.color = "red";
+                q.appendChild(temp);
+            }
+        },
+
+        async run() {
+            if (this.isRunning || this.queue.length === 0) return;
+            this.isRunning = true;
+            this.init();
+            const msg = document.getElementById("maze-message-custom");
+            msg.textContent = "実行中...";
+
+            try {
+                for (const item of this.queue) {
+                    if (item.type === "basic") {
+                        await this.execute(item.command);
+                    } else if (item.type === "loop") {
+                        for (let i = 0; i < item.count; i++) {
+                            for (const sub of item.commands) await this.execute(sub);
+                            if (i > 100) break;
+                        }
+                    } else if (item.type === "if") {
+                        if (this.checkCondition(item.condition)) {
+                            for (const sub of item.commands) await this.execute(sub);
+                        }
+                    } else if (item.type === "if_hole") {
+                        if (this.checkHole()) {
+                            for (const sub of item.commands) await this.execute(sub);
+                        }
+                    }
+                }
+                msg.textContent = "プログラム終了";
+            } catch (e) {
+                msg.textContent = e.message;
+            }
+            this.isRunning = false;
+        },
+
+        checkCondition(cond) {
+            const next = this.getNextPos(this.pos, this.dir);
+            const isWall = !next || window.mazeEditor.mapData[next.r][next.c] === "wall";
+            return cond === "if_wall" ? isWall : !isWall;
+        },
+
+        checkHole() {
+            const next = this.getNextPos(this.pos, this.dir);
+            return next && window.mazeEditor.mapData[next.r][next.c] === "hole";
+        },
+
+        getNextPos(pos, dir) {
+            let { r, c } = pos;
+            if (dir === 0) c++; else if (dir === 1) r++; else if (dir === 2) c--; else if (dir === 3) r--;
+            if (r < 0 || r > 4 || c < 0 || c > 4) return null;
+            return { r, c };
+        },
+
+        async execute(cmd) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let next = { ...this.pos };
+                    if (cmd === "forward") next = this.getNextPos(this.pos, this.dir);
+                    else if (cmd === "backward") next = this.getNextPos(this.pos, (this.dir + 2) % 4);
+                    else if (cmd === "moveLeft") next = this.getNextPos(this.pos, (this.dir + 3) % 4);
+                    else if (cmd === "moveRight") next = this.getNextPos(this.pos, (this.dir + 1) % 4);
+                    else if (cmd === "leftTurn") this.dir = (this.dir + 3) % 4;
+                    else if (cmd === "rightTurn") this.dir = (this.dir + 1) % 4;
+                    else if (cmd === "jump") {
+                        let mid = this.getNextPos(this.pos, this.dir);
+                        next = mid ? this.getNextPos(mid, this.dir) : null;
+                    }
+
+                    if (!next) return reject(new Error("迷路の外には行けません！"));
+                    const cellType = window.mazeEditor.mapData[next.r][next.c];
+                    if (cellType === "wall") return reject(new Error("壁にぶつかりました！"));
+                    if (cellType === "hole" && cmd !== "jump") return reject(new Error("穴に落ちました！🕳️"));
+
+                    this.pos = next;
+                    if (cellType === "key") {
+                        this.hasKey = true;
+                        window.mazeEditor.mapData[next.r][next.c] = "empty";
+                        document.getElementById(`c-cell-${next.r}-${next.c}`).innerHTML = "";
+                    }
+
+                    this.updateRobot();
+                    if (this.pos.r === window.mazeEditor.goalPos.r && this.pos.c === window.mazeEditor.goalPos.c) {
+                        return reject(new Error("🚩 ゴール！おめでとう！"));
+                    }
+                    resolve();
+                }, 300);
+            });
+        },
+
+        updateRobot() {
+            const robot = document.getElementById("robot-custom");
+            if (!robot) return;
+            const targetCell = document.getElementById(`c-cell-${this.pos.r}-${this.pos.c}`);
+            targetCell.appendChild(robot);
+            const angles = [0, 90, 180, 270];
+            robot.style.display = "inline-block";
+            robot.style.transform = `rotate(${angles[this.dir]}deg)`;
+            robot.style.transition = "all 0.3s";
+        },
+
+        reset() {
+            this.pos = { ...window.mazeEditor.robotPos };
+            this.dir = 0;
+            this.updateRobot();
+            const msg = document.getElementById("maze-message-custom");
+            if(msg) msg.textContent = "準備完了！";
         }
     };
 };
