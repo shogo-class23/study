@@ -12606,47 +12606,39 @@ const studyData = {
                                     },
                                     {
                                         title: "(エ) 計算プログラムを 作ってみよう！",
-                                        content: `<h4>条件に合わせて「計算のルール」を決めよう</h4>
-                                        <p>「＋」のスイッチが押されたときには「足し算」をする、というようにプログラムを組み立ててみよう。正しい答えを返せるかな？</p>
+                                        content: `<h4>四則演算の ロジックを 完成させよう</h4>
+                                        <p>それぞれのスイッチが押されたときに、どの計算（＋ － × ÷）をするか決めてね。すべての計算ができる「最強の計算機」を作ってみよう！</p>
                                         
                                         <div class="maze-container" style="background: #fdfefe; border: 2px solid #e67e22; padding: 20px;">
                                             <!-- プログラム組み立てエリア -->
-                                            <div style="background: #fff5e6; padding: 15px; border-radius: 10px; border: 1px solid #f39c12; margin-bottom: 20px; text-align: left; font-size: 0.9em;">
+                                            <div style="background: #fff5e6; padding: 15px; border-radius: 10px; border: 1px solid #f39c12; margin-bottom: 20px; text-align: left; font-size: 0.85em;">
                                                 <div style="font-weight: bold; margin-bottom: 10px; color: #d35400; text-align: center;">[ 計算マシンの プログラム ]</div>
                                                 
-                                                <div style="background: white; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
-                                                    もし <b>[ ＋ スイッチ ]</b> が <b>ON</b> なら...<br>
-                                                    <div style="margin-top: 5px; padding-left: 20px; border-left: 3px solid #e67e22;">
-                                                        答え ＝ <span style="background: #eee; padding: 2px 5px;">数A</span> 
-                                                        <select id="calc-logic-add" style="padding: 2px;">
-                                                            <option value="none">？</option>
-                                                            <option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option>
-                                                        </select>
-                                                        <span style="background: #eee; padding: 2px 5px;">数B</span>
+                                                <div style="background: white; padding: 8px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 8px;">
+                                                    もし <b>[ ＋ ]</b> が 押されたら...<br>
+                                                    <div style="margin-top: 5px; padding-left: 15px; border-left: 3px solid #e67e22;">
+                                                        答え ＝ A <select id="calc-logic-add"><option value="none">？</option><option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option></select> B
                                                     </div>
                                                 </div>
 
-                                                <div style="background: white; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
-                                                    もし <b>[ － スイッチ ]</b> が <b>ON</b> なら...<br>
-                                                    <div style="margin-top: 5px; padding-left: 20px; border-left: 3px solid #3498db;">
-                                                        答え ＝ <span style="background: #eee; padding: 2px 5px;">数A</span> 
-                                                        <select id="calc-logic-sub" style="padding: 2px;">
-                                                            <option value="none">？</option>
-                                                            <option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option>
-                                                        </select>
-                                                        <span style="background: #eee; padding: 2px 5px;">数B</span>
+                                                <div style="background: white; padding: 8px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 8px;">
+                                                    もし <b>[ － ]</b> が 押されたら...<br>
+                                                    <div style="margin-top: 5px; padding-left: 15px; border-left: 3px solid #3498db;">
+                                                        答え ＝ A <select id="calc-logic-sub"><option value="none">？</option><option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option></select> B
                                                     </div>
                                                 </div>
 
-                                                <div style="background: white; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                                                    もし <b>[ × スイッチ ]</b> が <b>ON</b> なら...<br>
-                                                    <div style="margin-top: 5px; padding-left: 20px; border-left: 3px solid #f1c40f;">
-                                                        答え ＝ <span style="background: #eee; padding: 2px 5px;">数A</span> 
-                                                        <select id="calc-logic-mul" style="padding: 2px;">
-                                                            <option value="none">？</option>
-                                                            <option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option>
-                                                        </select>
-                                                        <span style="background: #eee; padding: 2px 5px;">数B</span>
+                                                <div style="background: white; padding: 8px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 8px;">
+                                                    もし <b>[ × ]</b> が 押されたら...<br>
+                                                    <div style="margin-top: 5px; padding-left: 15px; border-left: 3px solid #f1c40f;">
+                                                        答え ＝ A <select id="calc-logic-mul"><option value="none">？</option><option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option></select> B
+                                                    </div>
+                                                </div>
+
+                                                <div style="background: white; padding: 8px; border-radius: 5px; border: 1px solid #ddd;">
+                                                    もし <b>[ ÷ ]</b> が 押されたら...<br>
+                                                    <div style="margin-top: 5px; padding-left: 15px; border-left: 3px solid #9b59b6;">
+                                                        答え ＝ A <select id="calc-logic-div"><option value="none">？</option><option value="add">＋</option><option value="sub">－</option><option value="mul">×</option><option value="div">÷</option></select> B
                                                     </div>
                                                 </div>
                                             </div>
@@ -12655,31 +12647,90 @@ const studyData = {
                                             <div style="background: #f4f6f7; padding: 15px; border-radius: 10px; border: 1px solid #bdc3c7; text-align: center;">
                                                 <div style="font-weight: bold; margin-bottom: 10px; color: #34495e;">[ テスト 実行 ]</div>
                                                 
-                                                <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px;">
-                                                    <input type="number" id="calc-input-a" value="10" style="width: 60px; text-align: center;">
-                                                    <span style="font-size: 1.5em; font-weight: bold;">[ <span id="calc-op-active">?</span> ]</span>
-                                                    <input type="number" id="calc-input-b" value="5" style="width: 60px; text-align: center;">
-                                                    <span style="font-size: 1.5em;">＝</span>
-                                                    <span id="calc-result-display" style="background: #2c3e50; color: #f1c40f; padding: 5px 15px; border-radius: 5px; min-width: 50px;">？</span>
+                                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 15px; align-items: center;">
+                                                    <input type="number" id="calc-input-a" value="12" style="width: 50px; text-align: center;">
+                                                    <span style="font-weight: bold; color: #e67e22;">[ <span id="calc-op-active">?</span> ]</span>
+                                                    <input type="number" id="calc-input-b" value="3" style="width: 50px; text-align: center;">
+                                                    <span>＝</span>
+                                                    <span id="calc-result-display" style="background: #2c3e50; color: #f1c40f; padding: 5px 10px; border-radius: 5px; min-width: 40px; display: inline-block;">？</span>
                                                 </div>
 
-                                                <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px;">
-                                                    <button class="game-btn" onclick="window.calcBuilder.run('add')" style="background: #e67e22; color: white;">＋ スイッチ</button>
-                                                    <button class="game-btn" onclick="window.calcBuilder.run('sub')" style="background: #3498db; color: white;">－ スイッチ</button>
-                                                    <button class="game-btn" onclick="window.calcBuilder.run('mul')" style="background: #f1c40f; color: black;">× スイッチ</button>
+                                                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+                                                    <button class="game-btn" onclick="window.calcBuilder.run('add')" style="background: #e67e22; color: white;">＋</button>
+                                                    <button class="game-btn" onclick="window.calcBuilder.run('sub')" style="background: #3498db; color: white;">－</button>
+                                                    <button class="game-btn" onclick="window.calcBuilder.run('mul')" style="background: #f1c40f; color: black;">×</button>
+                                                    <button class="game-btn" onclick="window.calcBuilder.run('div')" style="background: #9b59b6; color: white;">÷</button>
                                                 </div>
                                                 
-                                                <div id="calc-test-msg" style="font-weight: bold; font-size: 1.1em;"></div>
+                                                <div id="calc-test-msg" style="margin-top: 15px; font-weight: bold; font-size: 0.9em; min-height: 1.2em;"></div>
                                             </div>
                                             
-                                            <div style="margin-top: 20px; padding: 10px; background: #e8f8f5; border-radius: 5px; border: 1px dashed #1abc9c; font-size: 0.9em;">
+                                            <div style="margin-top: 20px; padding: 10px; background: #e8f8f5; border-radius: 5px; border: 1px dashed #1abc9c; font-size: 0.85em;">
                                                 <b>🎯 ミッション：</b><br>
-                                                「＋」スイッチで 15、「×」スイッチで 50 になるように作ろう！
+                                                すべてのスイッチで 正しい計算ができるように 設定しよう！
                                             </div>
                                         </div>`,
                                         quizzes: [
-                                            { question: "プログラミングで「掛け算」をするときに使う記号は？", display: "知識", answer: "*", options: ["*", "x", "+"] },
-                                            { question: "条件に合わせて動きを変える（もし～なら）という処理を何という？", display: "用語", answer: "条件分岐", options: ["条件分岐", "繰り返し", "変数"] }
+                                            { question: "プログラミングで「割り算」をするときに使う記号は？", display: "知識", answer: "/", options: ["/", "÷", "\\"] },
+                                            { question: "「＋が押されたら足し算をする」というように、きっかけに応じて動く仕組みを何という？", display: "用語", answer: "イベント駆動", options: ["イベント駆動", "無限ループ", "変数代入"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "(カ) 計算の じゅんじょ（アルゴリズム）",
+                                        content: `<h4>計算の「ルール（アルゴリズム）」を プログラミングしよう</h4>
+                                        <p>複雑な式を解くためのルールを決めてね。正しいアルゴリズムなら、どんなに難しい式も解けるはず！</p>
+                                        
+                                        <div class="maze-container" style="background: #fdfefe; border: 2px solid #3498db; padding: 20px;">
+                                            <!-- ブロック組み立てエリア -->
+                                            <div style="background: #f4f6f7; padding: 15px; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 20px;">
+                                                <div style="font-weight: bold; margin-bottom: 10px; color: #2c3e50; text-align: center;">[ アルゴリズムを 組み立てる ]</div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left; font-size: 0.85em;">
+                                                    もし 式の中に <b>( ) カッコ</b> があるなら...<br>
+                                                    <select id="rule-paren" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- どうする？ ---</option>
+                                                        <option value="first">カッコの中を 先に計算する</option>
+                                                        <option value="last">カッコの中を 後に計算する</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left; font-size: 0.85em;">
+                                                    もし <b>( )</b> の中に さらに <b>( )</b> があるなら...<br>
+                                                    <select id="rule-nested" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- どうする？ ---</option>
+                                                        <option value="inside">一番 内側のカッコ から計算する</option>
+                                                        <option value="outside">一番 外側のカッコ から計算する</option>
+                                                    </select>
+                                                </div>
+                                                
+                                                <div class="logic-block" style="background: #fff; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px; text-align: left; font-size: 0.85em;">
+                                                    もし 式の中に <b>× ÷ (かけ算・わり算)</b> があるなら...<br>
+                                                    <select id="rule-muldiv" style="margin-top:5px; padding: 5px; width: 100%;">
+                                                        <option value="none">--- どうする？ ---</option>
+                                                        <option value="first">＋ － (たし算・ひき算) より先に計算する</option>
+                                                        <option value="last">＋ － (たし算・ひき算) より後に計算する</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- テスト式エリア -->
+                                            <div style="background: #2c3e50; color: #fff; padding: 15px; border-radius: 10px; margin-bottom: 20px; text-align: center;">
+                                                <div style="font-size: 0.8em; color: #bdc3c7; margin-bottom: 10px;">[ テストする式 ]</div>
+                                                <div id="order-formula-test" style="font-family: monospace; font-size: 1.1em; letter-spacing: 1px; word-break: break-all;">
+                                                    3 － 2 × 5 ＋ ( 3 － 2 × 5 ＋ ( 3 － 2 × 5 ) )
+                                                </div>
+                                            </div>
+
+                                            <button class="game-btn" onclick="window.calcOrder.runSimulation()" style="background: #3498db; color: white; width: 100%; font-weight: bold; padding: 10px; margin-bottom: 15px;">アルゴリズムを 実行する！</button>
+                                            
+                                            <div id="order-sim-log" style="background: #f4f6f7; padding: 10px; border-radius: 5px; font-size: 0.8em; max-height: 150px; overflow-y: auto; border: 1px solid #ddd; display: none;">
+                                                <!-- ここに 手順が表示される -->
+                                            </div>
+                                            
+                                            <div id="order-sim-result" style="margin-top: 15px; font-weight: bold; text-align: center; min-height: 1.2em;"></div>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "コンピュータが正しい答えを出すために守るべき「手順」のことを何という？", display: "用語", answer: "アルゴリズム", options: ["アルゴリズム", "プログラミング", "データベース"] }
                                         ]
                                     },
                                     {
@@ -13031,7 +13082,9 @@ window.onload = () => {
             if (document.getElementById('guess-input')) window.guessGame.init();
             if (document.getElementById('sort-cards-area')) window.sortGame.init();
             if (document.getElementById('calc-display')) window.calcApp.clear();
-            if (document.getElementById('calc-mission-text')) window.calcBuilder.init();
+            if (document.getElementById('calc-logic-add')) window.calcBuilder.init();
+            if (document.getElementById('calc-logic-complex')) window.calcPuzzle.init();
+            if (document.getElementById('order-formula-display')) window.calcOrder.init();
             if (document.getElementById('cipher-mission-text')) window.cipherGame.init();
             if (document.getElementById('motion-sprite')) window.initMotionDemo();
             if (document.getElementById('looks-sprite')) window.initLooksDemo();
@@ -14989,9 +15042,9 @@ window.onload = () => {
         init() {
             const resDisp = document.getElementById("calc-result-display");
             const msgEl = document.getElementById("calc-test-msg");
+            const opDisp = document.getElementById("calc-op-active");
             if (resDisp) resDisp.textContent = "？";
             if (msgEl) msgEl.textContent = "";
-            const opDisp = document.getElementById("calc-op-active");
             if (opDisp) opDisp.textContent = "?";
         },
 
@@ -15006,21 +15059,22 @@ window.onload = () => {
             const valA = parseFloat(inputA.value);
             const valB = parseFloat(inputB.value);
             
-            // 組み立てたロジックを取得
             const logicAdd = document.getElementById("calc-logic-add").value;
             const logicSub = document.getElementById("calc-logic-sub").value;
             const logicMul = document.getElementById("calc-logic-mul").value;
+            const logicDiv = document.getElementById("calc-logic-div").value;
 
             let op = "none";
             let opSymbol = "?";
             if (activeSwitch === "add") { op = logicAdd; opSymbol = "＋"; }
             else if (activeSwitch === "sub") { op = logicSub; opSymbol = "－"; }
             else if (activeSwitch === "mul") { op = logicMul; opSymbol = "×"; }
+            else if (activeSwitch === "div") { op = logicDiv; opSymbol = "÷"; }
 
             opDisp.textContent = opSymbol;
 
             if (op === "none") {
-                msgEl.textContent = "⚠ その条件の計算が 決まっていません！";
+                msgEl.textContent = "⚠ そのボタンの計算が決まっていません！";
                 msgEl.style.color = "#e74c3c";
                 resDisp.textContent = "？";
                 return;
@@ -15031,19 +15085,180 @@ window.onload = () => {
                 case "add": result = valA + valB; break;
                 case "sub": result = valA - valB; break;
                 case "mul": result = valA * valB; break;
-                case "div": result = (valB !== 0) ? valA / valB : "Err"; break;
+                case "div": result = (valB !== 0) ? (Math.round((valA / valB) * 100) / 100) : "Err"; break;
             }
 
             resDisp.textContent = result;
 
-            // ミッション判定
-            if (logicAdd === "add" && logicMul === "mul") {
-                msgEl.innerHTML = "✨ 完璧です！正しい 計算マシンに なりました！";
+            const isPerfect = (logicAdd === "add" && logicSub === "sub" && logicMul === "mul" && logicDiv === "div");
+            if (isPerfect) {
+                msgEl.innerHTML = "✨ 素晴らしい！すべての計算ができる 完璧なマシンです！";
                 msgEl.style.color = "#27ae60";
             } else {
-                msgEl.innerHTML = "💡 スイッチ通りの 計算に なるように 直してみよう。";
+                msgEl.innerHTML = "💡 他のボタンも 正しく動くか 試してみよう！";
                 msgEl.style.color = "#f39c12";
             }
+        }
+    };
+
+    // (オ) カッコを使って 高度な計算をしよう 用ロジック
+    window.calcPuzzle = {
+        init() {
+            const resDisp = document.getElementById("calc-result-display-p");
+            const msgEl = document.getElementById("calc-test-msg-p");
+            if (resDisp) resDisp.textContent = "？";
+            if (msgEl) msgEl.textContent = "";
+        },
+
+        run() {
+            const inputA = document.getElementById("calc-input-a-p");
+            const inputB = document.getElementById("calc-input-b-p");
+            const inputC = document.getElementById("calc-input-c-p");
+            const resDisp = document.getElementById("calc-result-display-p");
+            const msgEl = document.getElementById("calc-test-msg-p");
+            const logicSelect = document.getElementById("calc-logic-complex");
+            if (!inputA || !inputB || !inputC || !resDisp || !msgEl || !logicSelect) return;
+
+            const a = parseFloat(inputA.value);
+            const b = parseFloat(inputB.value);
+            const c = parseFloat(inputC.value);
+            const pattern = logicSelect.value;
+
+            if (pattern === "none") {
+                msgEl.textContent = "⚠ 式の形を えらんでね！";
+                msgEl.style.color = "#e74c3c";
+                return;
+            }
+
+            let result = 0;
+            let formula = "";
+            switch (pattern) {
+                case "p1": result = (a + b) * c; formula = `(${a} + ${b}) × ${c}`; break;
+                case "p2": result = a + (b * c); formula = `${a} + (${b} × ${c})`; break;
+                case "p3": result = (c !== 0) ? (a - b) / c : "Err"; formula = `(${a} - ${b}) ÷ ${c}`; break;
+                case "p4": result = a * b + c; formula = `${a} × ${b} + ${c}`; break;
+            }
+
+            resDisp.textContent = result;
+
+            if (result === 30) {
+                msgEl.innerHTML = `✨ ミッション達成！<br>${formula} ＝ 30 になりました！`;
+                msgEl.style.color = "#27ae60";
+            } else {
+                msgEl.innerHTML = `💡 今の答えは ${result} です。<br>30 になる 式を探してみよう！`;
+                msgEl.style.color = "#f39c12";
+            }
+        }
+    };
+
+    // (カ) 計算の じゅんじょ（アルゴリズム） 用ロジック
+    window.calcOrder = {
+        isRunning: false,
+        originalFormula: "3 － 2 × 5 ＋ ( 3 － 2 × 5 ＋ ( 3 － 2 × 5 ) )",
+
+        init() {
+            this.isRunning = false;
+            const display = document.getElementById("order-formula-test");
+            if (display) display.textContent = this.originalFormula;
+            const log = document.getElementById("order-sim-log");
+            if (log) log.textContent = "ここに 手順が 表示されるよ";
+            const res = document.getElementById("order-sim-result");
+            if (res) res.textContent = "";
+        },
+
+        async runSimulation() {
+            if (this.isRunning) return;
+            
+            const ruleParen = document.getElementById("rule-paren").value;
+            const ruleNested = document.getElementById("rule-nested").value;
+            const ruleMulDiv = document.getElementById("rule-muldiv").value;
+
+            if (ruleParen === "none" || ruleNested === "none" || ruleMulDiv === "none") {
+                alert("すべての ルールを 設定してね！"); return;
+            }
+
+            const logArea = document.getElementById("order-sim-log");
+            const resEl = document.getElementById("order-sim-result");
+            const display = document.getElementById("order-formula-test");
+            if(!logArea || !resEl || !display) return;
+
+            this.isRunning = true;
+            logArea.style.display = "block";
+            logArea.innerHTML = "🚀 アルゴリズム 実行開始...<br>";
+            resEl.textContent = "";
+            
+            let currentExpr = this.originalFormula;
+            let step = 0;
+
+            try {
+                while (step < 20) {
+                    step++;
+                    display.textContent = currentExpr;
+                    await new Promise(r => setTimeout(r, 1000));
+
+                    if (/^-?\d+(\.\d+)?$/.test(currentExpr.trim())) {
+                        const finalResult = parseFloat(currentExpr.trim());
+                        if (finalResult === -21) {
+                            resEl.innerHTML = "✨ お見事！ 正しい アルゴリズム（順序）で 計算できました！";
+                            resEl.style.color = "#27ae60";
+                        } else {
+                            resEl.innerHTML = `❌ ざんねん！ 答えが <b>${finalResult}</b> になりました。<br>正しい ルール（じゅんじょ）を 考えてみよう。`;
+                            resEl.style.color = "#e74c3c";
+                        }
+                        break;
+                    }
+
+                    let nextPart = "";
+                    let reason = "";
+
+                    if (currentExpr.includes("(")) {
+                        if (ruleParen === "last") {
+                            throw new Error("カッコの中を後回しにしたため、式が正しく計算できませんでした。");
+                        }
+                        if (ruleNested === "outside") {
+                            throw new Error("外側のカッコから計算しようとして、中身が決まらず行き止まりになりました。");
+                        }
+                        let match = currentExpr.match(/\(([^()]+)\)/);
+                        if (match) {
+                            nextPart = match[1];
+                            reason = "一番内側のカッコ内を見つけたよ";
+                        }
+                    } else {
+                        let parts = currentExpr.trim().split(/\s+/);
+                        const hasMulDiv = currentExpr.includes("×") || currentExpr.includes("÷");
+                        
+                        if (hasMulDiv && ruleMulDiv === "first") {
+                            let idx = parts.findIndex(p => p === "×" || p === "÷");
+                            nextPart = `${parts[idx-1]} ${parts[idx]} ${parts[idx+1]}`;
+                            reason = "掛け算・割り算を先に見つけたよ";
+                        } else {
+                            let idx = parts.findIndex(p => p === "＋" || p === "－" || p === "×" || p === "÷");
+                            nextPart = `${parts[idx-1]} ${parts[idx]} ${parts[idx+1]}`;
+                            reason = "左から順番に計算するよ";
+                        }
+                    }
+
+                    if (!nextPart) break;
+                    logArea.innerHTML += `ステップ ${step}: ${reason} -> [${nextPart}] を計算<br>`;
+                    logArea.scrollTop = logArea.scrollHeight;
+
+                    let calcStr = nextPart.replace(/×/g, "*").replace(/÷/g, "/").replace(/－/g, "-").replace(/＋/g, "+");
+                    let subResult = new Function(`return ${calcStr}`)();
+                    
+                    // 置換処理
+                    if (currentExpr.includes(`( ${nextPart} )`)) {
+                        currentExpr = currentExpr.replace(`( ${nextPart} )`, subResult);
+                    } else if (currentExpr.includes(`(${nextPart})`)) {
+                        currentExpr = currentExpr.replace(`(${nextPart})`, subResult);
+                    } else {
+                        currentExpr = currentExpr.replace(nextPart, subResult);
+                    }
+                }
+            } catch (e) {
+                resEl.innerHTML = `⚠️ アルゴリズム失敗：${e.message}`;
+                resEl.style.color = "#e74c3c";
+            }
+            this.isRunning = false;
         }
     };
 
