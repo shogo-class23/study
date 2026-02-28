@@ -12444,6 +12444,50 @@ const studyData = {
                                                                                                                                                                                                                                                                                                                             ]
                                                                                                                                                                                                                                                                                                                         }
                                                                                                                                                                                             ]
+                            },
+                            {
+                                title: "2. アルゴリズムに 挑戦しよう",
+                                subUnits: [
+                                    {
+                                        title: "(ア) 数字当てゲーム（二分探索）",
+                                        content: `<h4>1〜100の 数字を 当てよう！</h4>
+                                        <p>コンピュータが決めた「正解の数」を、できるだけ少ない回数で見つけてね。「もっと大きい」「もっと小さい」というヒントを頼りに、範囲を半分ずつ絞っていくのがコツだよ。</p>
+                                        
+                                        <div class="point-box" style="background: #f8f9fa; border: 2px solid #3498db; padding: 20px; border-radius: 15px; text-align: center;">
+                                            <div id="guess-range-display" style="font-size: 1.2em; font-weight: bold; color: #2980b9; margin-bottom: 10px;">
+                                                範囲：1 〜 100
+                                            </div>
+                                            <div style="position: relative; height: 10px; background: #ddd; border-radius: 5px; margin: 20px 0;">
+                                                <div id="guess-range-bar" style="position: absolute; left: 0%; width: 100%; height: 100%; background: #3498db; border-radius: 5px; transition: all 0.3s;"></div>
+                                            </div>
+                                            
+                                            <div style="margin: 20px 0;">
+                                                <input type="number" id="guess-input" min="1" max="100" style="width: 80px; font-size: 1.5em; padding: 5px; text-align: center; border-radius: 5px; border: 2px solid #bdc3c7;">
+                                                <button class="game-btn" onclick="window.guessGame.check()" style="background: #3498db; color: white; padding: 10px 20px; font-size: 1.1em; font-weight: bold;">チェック！</button>
+                                            </div>
+                                            
+                                            <div id="guess-message" style="font-size: 1.3em; font-weight: bold; color: #e67e22; height: 1.5em; margin-bottom: 10px;">
+                                                数字を入れてね
+                                            </div>
+                                            <div id="guess-count" style="font-size: 0.9em; color: #7f8c8d;">
+                                                回数：0回
+                                            </div>
+                                            
+                                            <div style="margin-top: 20px;">
+                                                <button class="game-btn" onclick="window.guessGame.init()" style="background: #95a5a6; color: white; padding: 5px 15px;">新しく始める</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="point-box" style="margin-top: 15px; font-size: 0.85em; background: #fffbe6;">
+                                            <b>💡 アルゴリズムの ヒント：二分探索（にぶんたんさく）</b><br>
+                                            常に「残っている範囲の <b>真ん中の数</b>」を答え続けると、ハズレても範囲が半分になります。これを繰り返すと、100個の数字でも最大 <b>7回</b> で必ず当てられるよ！
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "1〜100の数字を当てる時、範囲を半分ずつ絞っていく探し方を何という？", display: "用語", answer: "二分探索", options: ["二分探索", "線形探索", "ランダム探索"] },
+                                            { question: "二分探索を使うと、100個の数字の中から正解を見つけるのに最大何回必要？", display: "知識", answer: "7回", options: ["7回", "50回", "100回"] }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -12696,6 +12740,8 @@ window.onload = () => {
             if (document.getElementById('maze-grid-hard')) window.initMazeGameHard();
             if (document.getElementById('maze-grid-advanced')) window.initMazeGameAdvanced();
             if (document.getElementById('maze-grid-key')) window.initMazeGameKey();
+            if (document.getElementById('maze-grid-custom')) window.mazeEditor.editMode();
+            if (document.getElementById('guess-input')) window.guessGame.init();
             if (document.getElementById('motion-sprite')) window.initMotionDemo();
             if (document.getElementById('looks-sprite')) window.initLooksDemo();
         }, 50);
@@ -14223,5 +14269,73 @@ window.onload = () => {
             const msg = document.getElementById("maze-message-custom");
             if(msg) msg.textContent = "準備完了！";
         }
+    };
+
+    // (ア) 数字当てゲーム（二分探索）用ロジック
+    window.guessGame = {
+        answer: 0,
+        min: 1,
+        max: 100,
+        count: 0,
+
+        init() {
+            this.answer = Math.floor(Math.random() * 100) + 1;
+            this.min = 1;
+            this.max = 100;
+            this.count = 0;
+            this.updateDisplay("数字を入れてね");
+            const input = document.getElementById("guess-input");
+            if(input) { input.value = ""; input.focus(); }
+        },
+
+        check() {
+            const input = document.getElementById("guess-input");
+            if (!input) return;
+            const val = parseInt(input.value);
+            if (isNaN(val) || val < 1 || val > 100) {
+                this.updateDisplay("1〜100をいれてね！"); return;
+            }
+
+            this.count++;
+            if (val === this.answer) {
+                this.updateDisplay(`🚩 正解！(${this.answer})`);
+                this.min = val; this.max = val;
+            } else if (val < this.answer) {
+                this.updateDisplay("もっと大きいよ");
+                if(val >= this.min) this.min = val + 1;
+            } else {
+                this.updateDisplay("もっと小さいよ");
+                if(val <= this.max) this.max = val - 1;
+            }
+            this.updateVisual();
+        },
+
+        updateDisplay(msg) {
+            const el = document.getElementById("guess-message");
+            const cnt = document.getElementById("guess-count");
+            if (el) el.textContent = msg;
+            if (cnt) cnt.textContent = `回数：${this.count}回`;
+        },
+
+        updateVisual() {
+            const range = document.getElementById("guess-range-display");
+            const bar = document.getElementById("guess-range-bar");
+            if (range) range.textContent = `範囲：${this.min} 〜 ${this.max}`;
+            if (bar) {
+                const left = (this.min - 1);
+                const width = (this.max - this.min + 1);
+                bar.style.left = `${left}%`;
+                bar.style.width = `${width}%`;
+            }
+        }
+    };
+
+    // ページロード時に初期化できるように window.onload にフックを追加
+    const oldOnload = window.onload;
+    window.onload = () => {
+        if(oldOnload) oldOnload();
+        // コンテンツが表示されたときに初期化したいので、
+        // 実際には content 表示時に window.guessGame.init() を呼ぶように
+        // script.js の既存ロジック (showSubUnitContent 等) に組み込む必要があります。
     };
 };
