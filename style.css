@@ -1875,13 +1875,53 @@ footer {
 }
 
 .maze-cell.hole::after { 
-    content: '穴'; 
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    font-size: 16px; 
-    color: #ecf0f1;
-    font-weight: bold;
-    z-index: 1;
-}
+    /* --------------------------------------------------
+       Binary Choice Quiz Styles (○×問題用)
+    -------------------------------------------------- */
+    .binary-choice-options {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .binary-btn {
+        font-size: 80px;
+        width: 160px !important;
+        height: 160px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+        border: 6px solid #eee;
+        background: #fff;
+        box-shadow: 0 8px 0 #ddd;
+        padding: 0 !important;
+        min-width: 0 !important;
+    }
+
+    .binary-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .binary-btn:active {
+        transform: translateY(4px);
+        box-shadow: 0 4px 0 #ddd;
+    }
+
+    /* --------------------------------------------------
+       Footer and other existing styles...
+    -------------------------------------------------- */
+    footer {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+        color: #ecf0f1;
+        font-weight: bold;
+        z-index: 1;
+    }
+

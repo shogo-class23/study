@@ -12942,6 +12942,25 @@ const studyData = {
                 name: "第２段階",
                 categories: [
                     {
+                        name: "【デモ】二択クイズ",
+                        units: [
+                            {
+                                title: "○×テストに挑戦！",
+                                subUnits: [
+                                    {
+                                        title: "デモテスト",
+                                        content: "<h4>学科試験の練習（デモ）</h4><p>正しいものには「○」、間違っているものには「×」を選んでください。</p>",
+                                        quizzes: [
+                                            { question: "車を運転中、歩行者のそばを通るときは、安全な間隔をあけるか徐行しなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "夜間、対向車と行き違うときは、前照灯をハイビーム（上向き）のままにし続けなければならない。", answer: "×", options: ["○", "×"] },
+                                            { question: "交差点付近で緊急自動車が近づいてきたときは、交差点を避けて、道路の左側に寄って一時停止しなければならない。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         name: "１ 駐車と停車",
                         units: [{ title: "駐車と停車のルール", subUnits: [] }]
                     },
@@ -13285,11 +13304,18 @@ window.onload = () => {
         if (!currentSubUnit || shuffledQuizzes.length === 0 || !shuffledQuizzes[index]) return;
         currentQuizIndex = index;
         if (index === 0) correctCount = 0; 
-        
+
         const q = shuffledQuizzes[currentQuizIndex];
+
+        // 二択（○×）問題の場合は専用の関数を呼び出す
+        if (q.options && q.options.length === 2 && q.options.includes("○") && q.options.includes("×")) {
+            startBinaryChoiceQuiz(index);
+            return;
+        }
+
         const quizViewBody = document.getElementById('quiz-view-body');
         currentInput = ""; 
-        
+
         quizViewBody.innerHTML = `
             <div class="quiz-container">
                 <div style="font-size: 18px; color: #666; margin-bottom: 10px;">
@@ -13297,7 +13323,7 @@ window.onload = () => {
                 </div>
                 <div class="quiz-question">${q.question}</div>
                 <div class="quiz-display">${q.display}</div>
-                
+
                 ${q.options ? `
                     <div class="quiz-options" style="margin-top: 20px;">
                         ${q.options.map(opt => `<button class="quiz-btn" style="width: auto; min-width: 80px; padding: 10px;">${opt}</button>`).join('')}
@@ -13313,7 +13339,7 @@ window.onload = () => {
                         <button class="quiz-btn" style="background:#fffbe6;">じ</button>
                         <button class="quiz-btn" style="background:#fffbe6;">はん</button>
                     </div>
-                    
+
                     <button class="answer-btn" id="quiz-submit-btn">こたえあわせ</button>
                 `}
                 <div class="quiz-feedback" id="quiz-feedback"></div>
@@ -13333,7 +13359,52 @@ window.onload = () => {
             quizViewBody.querySelector('#quiz-clear-btn').onclick = clearNumber;
             quizViewBody.querySelector('#quiz-submit-btn').onclick = submitAnswer;
         }
-        
+
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[currentCategoryIndex];
+        const unit = cat.units[currentUnitIndex];
+
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+            { label: unit.title, action: () => showUnits(currentCategoryIndex) }, // 修正: showUnits(currentCategoryIndex) が正しいか確認
+            { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+            { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
+            { label: `${currentQuizIndex + 1}もんめ` }
+        ]);
+
+        showView('quiz-view');
+    }
+
+    // 二択（○×）クイズ専用の表示関数
+    function startBinaryChoiceQuiz(index) {
+        currentQuizIndex = index;
+        const q = shuffledQuizzes[currentQuizIndex];
+        const quizViewBody = document.getElementById('quiz-view-body');
+
+        quizViewBody.innerHTML = `
+            <div class="quiz-container">
+                <div style="font-size: 18px; color: #666; margin-bottom: 20px;">
+                    ${currentQuizIndex + 1} / ${shuffledQuizzes.length} もんめ
+                </div>
+                <div class="quiz-question" style="font-size: 28px; margin-bottom: 40px;">${q.question}</div>
+
+                <div class="binary-choice-options">
+                    <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0;">○</button>
+                    <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec;">×</button>
+                </div>
+                <div class="quiz-feedback" id="quiz-feedback" style="margin-top: 40px;"></div>
+            </div>
+        `;
+
+        const btns = quizViewBody.querySelectorAll('.binary-btn');
+        btns.forEach(btn => {
+            btn.onclick = () => checkPictorialAnswer(btn, q.answer);
+        });
+
         const subjectName = studyData[currentSubject].name;
         const gradeData = studyData[currentSubject].grades[currentGrade];
         const cat = gradeData.categories[currentCategoryIndex];
@@ -13348,10 +13419,9 @@ window.onload = () => {
             { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
             { label: `${currentQuizIndex + 1}もんめ` }
         ]);
-        
+
         showView('quiz-view');
     }
-
     function typeNumber(n) {
         if (currentInput.length < 5) {
             currentInput += n.toString();
