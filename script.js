@@ -13270,7 +13270,15 @@ window.onload = () => {
         correctCount = 0;
         
         if (s.quizzes && s.quizzes.length > 0) {
-            shuffledQuizzes = shuffleArray(s.quizzes);
+            // グループ分け：完答形式（isCompleteSet）とそれ以外
+            const normalQuizzes = s.quizzes.filter(q => !q.isCompleteSet);
+            const completeSetQuizzes = s.quizzes.filter(q => q.isCompleteSet);
+
+            // それぞれを独立してシャッフルし、結合（通常 -> 完答 の順）
+            shuffledQuizzes = [
+                ...shuffleArray(normalQuizzes),
+                ...shuffleArray(completeSetQuizzes)
+            ];
         } else {
             shuffledQuizzes = [];
         }
