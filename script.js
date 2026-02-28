@@ -13437,6 +13437,7 @@ window.onload = () => {
         currentQuizIndex = index;
         const q = shuffledQuizzes[currentQuizIndex];
         const quizViewBody = document.getElementById('quiz-view-body');
+        const roundNumbers = ['①', '②', '③'];
 
         quizViewBody.innerHTML = `
             <div class="quiz-container" style="max-width: 800px; margin: 0 auto;">
@@ -13446,30 +13447,85 @@ window.onload = () => {
                 <div class="quiz-question" style="font-size: 28px; margin-bottom: 40px;">${q.question}</div>
 
                 <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 30px; gap: 20px;">
-                    <!-- 左（1つ目） -->
-                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
-                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
-                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
-                    </div>
-                    <!-- 中（2つ目） -->
-                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
-                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
-                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
-                    </div>
-                    <!-- 右（3つ目） -->
-                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
-                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
-                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
-                    </div>
+                    ${[0, 1, 2].map(i => `
+                        <div class="binary-choice-set" data-set-index="${i}" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                            <div style="font-size: 32px; font-weight: bold; color: #555;">${roundNumbers[i]}</div>
+                            <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
+                                <button class="quiz-btn binary-btn" data-val="○" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
+                                <button class="quiz-btn binary-btn" data-val="×" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
+                            </div>
+                        </div>
+                    `).join('')}
                 </div>
+                
                 <div class="quiz-feedback" id="quiz-feedback" style="margin-top: 40px;"></div>
+                <button id="quiz-submit-btn" class="answer-btn" style="margin-top: 20px; width: 240px; padding: 15px; font-size: 24px; border-radius: 40px; background: #2ecc71; color: white; border: none; box-shadow: 0 6px 0 #27ae60; cursor: pointer; opacity: 0.5;" disabled>こたえあわせ</button>
             </div>
         `;
 
-        const btns = quizViewBody.querySelectorAll('.binary-btn');
-        btns.forEach(btn => {
-            btn.onclick = () => checkPictorialAnswer(btn, q.answer);
+        const userAnswers = [null, null, null];
+        const submitBtn = document.getElementById('quiz-submit-btn');
+        const sets = quizViewBody.querySelectorAll('.binary-choice-set');
+
+        sets.forEach((set, setIndex) => {
+            const btns = set.querySelectorAll('.binary-btn');
+            btns.forEach(btn => {
+                btn.onclick = () => {
+                    // 同じセット内の他のボタンの選択を解除
+                    btns.forEach(b => {
+                        b.style.backgroundColor = 'white';
+                        b.style.transform = 'scale(1)';
+                    });
+                    // このボタンを選択状態にする
+                    btn.style.backgroundColor = '#fffbe6';
+                    btn.style.transform = 'scale(1.1)';
+                    userAnswers[setIndex] = btn.getAttribute('data-val');
+
+                    // 3つすべて回答済みならボタンを活性化
+                    if (userAnswers.every(ans => ans !== null)) {
+                        submitBtn.disabled = false;
+                        submitBtn.style.opacity = '1';
+                    }
+                };
+            });
         });
+
+        submitBtn.onclick = () => {
+            const feedback = document.getElementById('quiz-feedback');
+            // データ側に answers 配列がない場合は、answer を3つ並べたものとみなす（デモ用）
+            const correctAnswers = q.answers || [q.answer, q.answer, q.answer]; 
+            const isAllCorrect = userAnswers.every((ans, i) => ans === correctAnswers[i]);
+
+            submitBtn.style.display = 'none';
+            sets.forEach(s => s.style.pointerEvents = 'none');
+
+            if (isAllCorrect) {
+                correctCount++;
+                feedback.innerHTML = `<div style="color: #2ecc71; font-size: 32px; font-weight: bold; margin-bottom: 20px;">✨ ぜんぶせいかい！ ✨</div>`;
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'quiz-btn next-btn';
+                nextBtn.style.width = 'auto';
+                nextBtn.style.padding = '0 30px';
+                nextBtn.innerText = currentQuizIndex + 1 < shuffledQuizzes.length ? 'つぎの問題へ' : '結果を見る';
+                nextBtn.onclick = () => {
+                    if (currentQuizIndex + 1 < shuffledQuizzes.length) {
+                        startQuiz(currentQuizIndex + 1);
+                    } else {
+                        showQuizResult();
+                    }
+                };
+                feedback.appendChild(nextBtn);
+            } else {
+                feedback.innerHTML = `<div style="color: #e74c3c; font-size: 32px; font-weight: bold; margin-bottom: 20px;">❌ ざんねん！（完答ならず）</div>`;
+                const retryBtn = document.createElement('button');
+                retryBtn.className = 'quiz-btn next-btn';
+                retryBtn.style.width = 'auto';
+                retryBtn.style.padding = '0 30px';
+                retryBtn.innerText = 'もう一度とく';
+                retryBtn.onclick = () => startCompleteAnswerBinaryQuiz(currentQuizIndex);
+                feedback.appendChild(retryBtn);
+            }
+        };
 
         const subjectName = studyData[currentSubject].name;
         const gradeData = studyData[currentSubject].grades[currentGrade];
