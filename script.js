@@ -12836,8 +12836,8 @@ const studyData = {
     car: {
         name: "<ruby>車<rt>くるま</rt></ruby>",
         grades: {
-            basic: {
-                name: "くるまの 基礎",
+            step1: {
+                name: "第１段階",
                 categories: [
                     {
                         name: "運転の 責任と ルール",
@@ -12884,6 +12884,22 @@ const studyData = {
                                             { question: "車の後ろの席（後部座席）でもシートベルトをしなければならない？", display: "法律", answer: "必ずしなければならない", options: ["必ずしなければならない", "高速道路だけでよい", "しなくてもよい"] }
                                         ]
                                     }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            step2: {
+                name: "第２段階",
+                categories: [
+                    {
+                        name: "応用的な ルールと 知識",
+                        units: [
+                            {
+                                title: "1. 危険予測と 安全",
+                                subUnits: [
+                                    { title: "危険を 予測する", content: "事故を未然に防ぐための考え方を学ぼう。" }
                                 ]
                             }
                         ]
