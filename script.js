@@ -12948,12 +12948,15 @@ const studyData = {
                                 title: "○×テストに挑戦！",
                                 subUnits: [
                                     {
-                                        title: "デモテスト",
-                                        content: "<h4>学科試験の練習（デモ）</h4><p>正しいものには「○」、間違っているものには「×」を選んでください。</p>",
+                                        title: "3問完答デモ",
+                                        content: "<h4>3問セットの練習</h4><p>3つの問いすべてに正解すると、1問正解（完答）になります。左、中、右の順に答えてください。</p>",
                                         quizzes: [
-                                            { question: "車を運転中、歩行者のそばを通るときは、安全な間隔をあけるか徐行しなければならない。", answer: "○", options: ["○", "×"] },
-                                            { question: "夜間、対向車と行き違うときは、前照灯をハイビーム（上向き）のままにし続けなければならない。", answer: "×", options: ["○", "×"] },
-                                            { question: "交差点付近で緊急自動車が近づいてきたときは、交差点を避けて、道路の左側に寄って一時停止しなければならない。", answer: "○", options: ["○", "×"] }
+                                            { 
+                                                isCompleteSet: true,
+                                                question: "次の3つの問いにすべて正解しなさい。",
+                                                answer: "○", // 仮の正解（ロジック側で個別判定が必要になりますが、まずは表示確認用）
+                                                options: ["○", "×"]
+                                            }
                                         ]
                                     }
                                 ]
@@ -13307,6 +13310,12 @@ window.onload = () => {
 
         const q = shuffledQuizzes[currentQuizIndex];
 
+        // 3問セットの完答形式の場合は専用の関数を呼び出す
+        if (q.isCompleteSet) {
+            startCompleteAnswerBinaryQuiz(index);
+            return;
+        }
+
         // 二択（○×）問題の場合は専用の関数を呼び出す
         if (q.options && q.options.length === 2 && q.options.includes("○") && q.options.includes("×")) {
             startBinaryChoiceQuiz(index);
@@ -13422,6 +13431,64 @@ window.onload = () => {
 
         showView('quiz-view');
     }
+
+    // 完答形式（3問セット）クイズ専用の表示関数
+    function startCompleteAnswerBinaryQuiz(index) {
+        currentQuizIndex = index;
+        const q = shuffledQuizzes[currentQuizIndex];
+        const quizViewBody = document.getElementById('quiz-view-body');
+
+        quizViewBody.innerHTML = `
+            <div class="quiz-container" style="max-width: 800px; margin: 0 auto;">
+                <div style="font-size: 18px; color: #666; margin-bottom: 20px;">
+                    ${currentQuizIndex + 1} / ${shuffledQuizzes.length} もんめ
+                </div>
+                <div class="quiz-question" style="font-size: 28px; margin-bottom: 40px;">${q.question}</div>
+
+                <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 30px; gap: 20px;">
+                    <!-- 左（1つ目） -->
+                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
+                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
+                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
+                    </div>
+                    <!-- 中（2つ目） -->
+                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
+                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
+                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
+                    </div>
+                    <!-- 右（3つ目） -->
+                    <div class="binary-choice-options" style="margin-top: 0; gap: 10px;">
+                        <button class="quiz-btn binary-btn" style="color: #e74c3c; border-color: #fab1a0; width: 100px !important; height: 100px !important; font-size: 50px;">○</button>
+                        <button class="quiz-btn binary-btn" style="color: #3498db; border-color: #81ecec; width: 100px !important; height: 100px !important; font-size: 50px;">×</button>
+                    </div>
+                </div>
+                <div class="quiz-feedback" id="quiz-feedback" style="margin-top: 40px;"></div>
+            </div>
+        `;
+
+        const btns = quizViewBody.querySelectorAll('.binary-btn');
+        btns.forEach(btn => {
+            btn.onclick = () => checkPictorialAnswer(btn, q.answer);
+        });
+
+        const subjectName = studyData[currentSubject].name;
+        const gradeData = studyData[currentSubject].grades[currentGrade];
+        const cat = gradeData.categories[currentCategoryIndex];
+        const unit = cat.units[currentUnitIndex];
+
+        updateBreadcrumb([
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
+            { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+            { label: currentSubUnit.title, action: () => showContent(currentSubUnit) },
+            { label: `${currentQuizIndex + 1}もんめ` }
+        ]);
+
+        showView('quiz-view');
+    }
+
     function typeNumber(n) {
         if (currentInput.length < 5) {
             currentInput += n.toString();
