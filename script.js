@@ -13280,11 +13280,60 @@ const studyData = {
                                     ・<b>二重追い越しの禁止</b>：前の車が他の自動車を追い越そうとしているときは、追い越しを始めてはいけません。<br>
                                     ・<b>例外</b>：前の車が追い越そうとしている相手が<b>「原動機付自転車（原付）」</b>である場合は、二重追い越しにはならず、追い越すことができます。<br>
                                     ・<b>6m以上の道路</b>：道路の左側部分の幅が<b>6メートル以上</b>あるときは、道路の右側部分（対向車線側）にはみ出して追い越しをしてはいけません。<br>
-                                    ・<b>通行区分</b>：追い越すときは、確認を行い、原則として前車の<b>右側</b>を通行します。ただし、前車が右折するために中央に寄っているときは、その<b>左側</b>を通行します。`,
+                                    ・<b>通行区分</b>：追い越すときは、確認を行い、原則として前車の<b>右側</b>を通行します。ただし、前車が右折するために中央に寄っているときは、その<b>左側</b>を通行します。<br>
+                                    ・<b>最優先の確認</b>：追い越しをするときは、まず最初に<b>追い越し禁止ではないか</b>を確かめることが重要です。<br><br>
+
+                                    <h4>追い越し禁止場所などのまとめ</h4>
+                                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85em;">
+                                        <thead>
+                                            <tr style="background: #f8f9fa;">
+                                                <th style="border: 1px solid #dee2e6; padding: 8px;">場所</th>
+                                                <th style="border: 1px solid #dee2e6; padding: 8px;">徐行</th>
+                                                <th style="border: 1px solid #dee2e6; padding: 8px; background: #fffde7;">追い越し禁止</th>
+                                                <th style="border: 1px solid #dee2e6; padding: 8px;">駐停車禁止</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">標識</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">曲がり角</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">交差点</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">急な坂</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">頂上</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">トンネル</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">横断歩道</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">踏切</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">バス停（運行中）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">電車（軌道敷内）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            <tr><td style="border: 1px solid #dee2e6; padding: 8px;">安全地帯</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                        </tbody>
+                                    </table>
+                                    <div style="font-size: 0.8em; line-height: 1.6; background: #fafafa; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                                        ※●は禁止または義務がある場所を示します。<br>
+                                        ※<b>徐行の交差点</b>：優先道路を除く、左右の見通しのきかない交差点<br>
+                                        ※<b>徐行の急な坂</b>：下り坂<br>
+                                        ※<b>追い越し禁止の急な坂</b>：下り坂<br>
+                                        ※<b>追い越し禁止のトンネル</b>：車両通行帯がある場合を除く<br>
+                                        ※<b>追い越し禁止の交差点</b>：優先道路を除く、交差点とその手前30m以内の場所<br>
+                                        ※<b>追い越し禁止の踏切</b>：踏切とその手前から30m以内の場所<br>
+                                        ※<b>追い越し禁止の横断歩道</b>：横断歩道とその手前から30m以内の場所<br>
+                                        ※<b>駐停車禁止の急な坂</b>：上りも下りも<br>
+                                        ※<b>駐停車禁止のトンネル</b>：車両通行帯があってもなくても<br>
+                                        ※<b>駐停車禁止の交差点</b>：交差点とその端から5m以内の場所<br>
+                                        ※<b>駐停車禁止の曲がり角</b>：5m以内の場所<br>
+                                        ※<b>駐停車禁止の横断歩道</b>：横断歩道と前後10m以内の場所<br>
+                                        ※<b>駐停車禁止の踏切</b>：踏切とその端から前後10m以内の場所<br>
+                                        ※<b>駐停車禁止の安全地帯</b>：安全地帯の左側とその前後10m以内の場所<br>
+                                        ※<b>駐停車禁止のバス停</b>：バス停から10m以内の場所
+                                    </div>`,
                                 quizzes: [
                                     { question: "道路の左側部分の幅が6メートル以上ある場所で、道路の右側部分（対向車線側）にはみ出して追い越しをしてもよい。", display: "ルール", answer: "×", options: ["○", "×"] },
                                     { question: "前の車が「原動機付自転車」を追い越そうとしているときは、さらにその車を追い越しても二重追い越しにはならない。", display: "ルール", answer: "○", options: ["○", "×"] },
-                                    { question: "追い越しをするときは、必ず前の車の右側を通行しなければならない。", display: "ルール", answer: "×", options: ["○", "×"] }
+                                    { question: "追い越しをするときは、必ず前の車の右側を通行しなければならない。", display: "ルール", answer: "×", options: ["○", "×"] },
+                                    { question: "踏切とその手前30メートル以内の場所は、追い越しが禁止されている。", display: "場所", answer: "○", options: ["○", "×"] },
+                                    { question: "優先道路を通行している場合を除き、交差点とその手前30メートル以内の場所は、追い越しが禁止されている。", display: "場所", answer: "○", options: ["○", "×"] },
+                                    { question: "こう配の急な上り坂は、追い越しが禁止されている場所である。", display: "場所", answer: "×", options: ["○", "×"] },
+                                    { question: "車両通行帯があるトンネルでは、追い越しをすることができる。", display: "場所", answer: "○", options: ["○", "×"] },
+                                    { question: "追い越しをするときは、まず最初に方向指示器で合図を出さなければならない。", display: "合図", answer: "×", options: ["○", "×"] }
                                 ]
                             }
                         ]
@@ -13723,7 +13772,84 @@ const studyData = {
                     },
                     {
                         name: "１ 駐車と停車",
-                        units: [{ title: "駐車と停車のルール", subUnits: [] }]
+                        units: [{
+                            title: "駐車と停車のルール",
+                            subUnits: [
+                                {
+                                    title: "1 駐車と停車の意味",
+                                    content: "<h4>駐車とは</h4><p>車が継続的に停止（客待ち・荷待ちや故障、５分を超える荷物の積み下ろしのための停止）や、運転者が車から離れていてすぐに運転できない状態のことをいいます。</p><h4>停車とは</h4><p>人の乗り降りのための停止、５分以内の荷物の積み下ろしのための停止、運転者がすぐに運転できる状態の短時間の停止のことを言います。</p>"
+                                },
+                                {
+                                    title: "2 駐停車禁止の場所",
+                                    content: `<h4>駐停車禁止の場所</h4><p>標識や標示で禁止されている場所のほか、以下の場所では駐車も停車も禁止されています。</p>
+                                        
+                                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85em;">
+                                            <thead>
+                                                <tr style="background: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">場所</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">徐行</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">追い越し禁止</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px; background: #fffde7;">駐停車禁止</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">標識</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">曲がり角</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">交差点</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">急な坂</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">頂上</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">トンネル</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">横断歩道</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">踏切</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">バス停（運行中）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">電車（軌道敷内）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">安全地帯</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="font-size: 0.8em; line-height: 1.6; background: #fafafa; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                                            ※●は禁止または義務がある場所を示します。<br>
+                                            ※<b>駐停車禁止の急な坂</b>：上りも下りも<br>
+                                            ※<b>駐停車禁止のトンネル</b>：車両通行帯があってもなくても<br>
+                                            ※<b>駐停車禁止の交差点</b>：交差点とその端から5m以内の場所<br>
+                                            ※<b>駐停車禁止の曲がり角</b>：5m以内の場所<br>
+                                            ※<b>駐停車禁止の横断歩道</b>：横断歩道と前後10m以内の場所<br>
+                                            ※<b>駐停車禁止の踏切</b>：踏切とその端から前後10m以内の場所<br>
+                                            ※<b>駐停車禁止の安全地帯</b>：安全地帯の左側とその前後10m以内の場所<br>
+                                            ※<b>駐停車禁止のバス停</b>：バス停から10m以内の場所
+                                        </div>`
+                                },
+                                {
+                                    title: "3 駐車禁止の場所",
+                                    content: "<h4>駐車禁止の場所</h4><p>標識や標示で禁止されている場所のほか、以下の場所では駐車してはいけません（停車は可能です）。</p><ul><li><b>1m以内</b>：火災報知機</li><li><b>3m以内</b>：出入口</li><li><b>5m以内</b>：工事や消防関係</li></ul>"
+                                },
+                                {
+                                    title: "4 駐車と停車の方法",
+                                    content: `<h4>駐停車の方法（Yes/Noフロー）</h4>
+                                        <div style="background: #fdfdfd; padding: 15px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px;">
+                                            <p><b>Q: 歩道か路側帯がありますか？</b></p>
+                                            <ul>
+                                                <li><b>Noの場合</b>：道路の左端に沿って停める</li>
+                                                <li><b>Yesの場合</b>：
+                                                    <ul>
+                                                        <li><b>歩道がある場合</b>：車道の左端に沿って停める</li>
+                                                        <li><b>路側帯がある場合</b>：路側帯に入り、左側に0.75m以上の余地を空ける（※歩行者の通行のため）</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <p style="margin-top: 10px; color: #d32f2f;"><b>※路側帯の中に入ってはいけない場合（道路の左端に沿う）：</b><br>
+                                            ・二重線（実線2本）の路側帯<br>
+                                            ・点線と実線の組み合わせの路側帯</p>
+                                            <p style="background: #e3f2fd; padding: 5px; border-radius: 4px;"><b>高速道路の特例：</b>高速道路では、路側帯に入って停めます。</p>
+                                        </div>
+                                        <h4>二重駐停車の禁止</h4>
+                                        <p>道路に平行して駐停車している車の横に並んで、さらに駐停車（二重駐停車）してはいけません。</p>`
+                                },
+                                {
+                                    title: "5 長時間の停車（駐車）",
+                                    content: "<h4>長時間の駐車の禁止</h4><p>同じ場所に引き続き１２時間以上（夜間は８時間以上）駐車してはいけません。（特定の村の区域内の道路を除きます。）</p>"
+                                }
+                            ]
+                        }]
                     },
                     {
                         name: "２ 灯火及び合図（２）",
