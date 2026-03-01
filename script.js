@@ -13387,7 +13387,118 @@ const studyData = {
                     },
                     {
                         name: "９ 徐行及び一時停止",
-                        units: [{ title: "徐行と一時停止の場所", subUnits: [] }]
+                        units: [
+                            {
+                                title: "１ 通行する際の注意（歩行者の保護など）",
+                                subUnits: [
+                                    {
+                                        title: "歩行者のそばや路面電車の横を通るとき",
+                                        content: `<h4>歩行者の保護と一時停止・徐行</h4>
+                                        <p>状況に応じて「一時停止」か「徐行」かを正しく判断する必要があります。</p>
+                                        
+                                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85em;">
+                                            <thead>
+                                                <tr style="background: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">場所・状況</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">歩行者がいるとき</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">歩行者がいないとき</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>歩道を横切るとき</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px; color: #d32f2f; font-weight: bold;">一時停止</td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px; color: #d32f2f; font-weight: bold;">一時停止</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>横断歩道に近づいたとき</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px; color: #d32f2f; font-weight: bold;">一時停止</td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;">そのまま<br><small>（明らかにいない場合）</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>安全地帯の横を通るとき</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px; color: #1976d2; font-weight: bold;">徐行</td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;">そのまま</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="point-box" style="background: #fff3e0; border-left: 5px solid #ff9800; margin-bottom: 15px;">
+                                            <b>【特別な保護が必要な人】</b><br>
+                                            ・<b>子供</b>が一人で歩いている、<b>白や黄色の杖</b>を突いた人が歩いている：<b>一時停止 または 徐行</b>して、安全に通れるようにします。<br>
+                                            ・<b>通学通園バス</b>が止まっていて、子供が乗り降りしている：そばを通るときは<b>徐行</b>します。
+                                        </div>
+
+                                        <div class="point-box" style="background: #f3e5f5; border-left: 5px solid #9c27b0;">
+                                            <b>【停車中の路面電車の横を通るとき】</b><br>
+                                            原則は、乗り降りする人がいなくなるまで後ろで<b>一時停止</b>ですが、例外があります。<br>
+                                            ・<b>安全地帯がある</b>場合：乗り降りする人がいても<b>徐行</b>で通れます。<br>
+                                            ・安全地帯がなくても、<b>乗り降りする人がおらず</b>、かつ路面電車との間に<b>1.5m以上の間隔</b>があけられる場合：<b>徐行</b>で通れます。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "歩行者がいないことが明らかな場合でも、歩道を横切るときは直前で一時停止しなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "安全地帯に歩行者がいるときは、その横を通る際に徐行しなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "通学通園バスが停車している横を通るときは、必ず一時停止しなければならない。", answer: "×", options: ["○", "×"] },
+                                            { question: "路面電車に乗り降りする人がいても、安全地帯がある場合は徐行してその横を通ることができる。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "２ 徐行すべき場所",
+                                        content: `<h4>徐行場所のまとめ</h4>
+                                        <p>「徐行」とは、車がすぐに停止できるような速度（時速10km以下が目安）で走ることです。</p>
+                                        
+                                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.85em;">
+                                            <thead>
+                                                <tr style="background: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">場所</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px; background: #fffde7;">徐行</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">追い越し禁止</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">駐停車禁止</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">標識</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">曲がり角</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">交差点</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">急な坂</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">頂上</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">トンネル</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">横断歩道</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">踏切</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">バス停（運行中）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">電車（軌道敷内）</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                                <tr><td style="border: 1px solid #dee2e6; padding: 8px;">安全地帯</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center; background: #fffde7;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">-</td><td style="border: 1px solid #dee2e6; padding: 8px; text-align: center;">●</td></tr>
+                                            </tbody>
+                                        </table>
+                                        <div style="font-size: 0.8em; line-height: 1.6; background: #fafafa; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                                            ※●は禁止または義務がある場所を示します。<br>
+                                            ※<b>徐行の交差点</b>：優先道路を除く、左右の見通しのきかない交差点<br>
+                                            ※<b>徐行の急な坂</b>：下り坂<br>
+                                            ※<b>追い越し禁止の急な坂</b>：下り坂<br>
+                                            ※<b>追い越し禁止のトンネル</b>：車両通行帯がある場合を除く<br>
+                                            ※<b>追い越し禁止の交差点</b>：優先道路を除く、交差点とその手前30m以内の場所<br>
+                                            ※<b>追い越し禁止の踏切</b>：踏切とその手前から30m以内の場所<br>
+                                            ※<b>追い越し禁止の横断歩道</b>：横断歩道とその手前から30m以内の場所<br>
+                                            ※<b>駐停車禁止の急な坂</b>：上りも下りも<br>
+                                            ※<b>駐停車禁止のトンネル</b>：車両通行帯があってもなくても<br>
+                                            ※<b>駐停車禁止の交差点</b>：交差点とその端から5m以内の場所<br>
+                                            ※<b>駐停車禁止の曲がり角</b>：5m以内の場所<br>
+                                            ※<b>駐停車禁止の横断歩道</b>：横断歩道と前後10m以内の場所<br>
+                                            ※<b>駐停車禁止の踏切</b>：踏切とその端から前後10m以内の場所<br>
+                                            ※<b>駐停車禁止の安全地帯</b>：安全地帯の左側とその前後10m以内の場所<br>
+                                            ※<b>駐停車禁止のバス停</b>：バス停から10m以内の場所
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「歩行者専用」の標識がある道路を、許可を受けて通行する車は、歩行者に注意し、徐行して通行しなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "道路の曲がり角付近では、見通しが良ければ徐行しなくてもよい。", answer: "×", options: ["○", "×"] },
+                                            { question: "こう配の急な上り坂では、徐行しなければならない。", answer: "×", options: ["○", "×"] },
+                                            { question: "こう配の急な下り坂では、徐行しなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "左右の見通しがきかない交差点では、優先道路を通行している場合を除き、徐行しなければならない。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "１０ 灯火及び合図（１）",
