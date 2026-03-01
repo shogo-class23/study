@@ -12962,7 +12962,29 @@ const studyData = {
                                             },
                                             { 
                                                 title: "指示標識", 
-                                                content: "<b>指示標識（しじひょうしき）</b><br>特定の交通方法ができることや、決められた場所を示します。" 
+                                                content: `<b>指示標識（しじひょうしき）</b><br>
+                                                    特定の交通方法ができることや、決められた場所を示します。<br><br>
+                                                    1. <b>優先道路（ゆうせんどうろ）</b><br>
+                                                    <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                                                        <div style="width: 50px; height: 50px; background: #0055aa; display: flex; justify-content: center; align-items: center; border-radius: 4px; border: 2px solid #fff;">
+                                                            <!-- 十字の図 -->
+                                                            <div style="position: relative; width: 30px; height: 30px;">
+                                                                <!-- 縦の太い線 -->
+                                                                <div style="position: absolute; width: 10px; height: 30px; background: #fff; left: 10px; top: 0;"></div>
+                                                                <!-- 横の細い線 -->
+                                                                <div style="position: absolute; width: 30px; height: 4px; background: #fff; left: 0; top: 13px;"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            （記号：青地に十字）<br>
+                                                            優先道路です。交差する道路が優先ではありません。<br>
+                                                            <span style="font-size: 10px; color: #666;">※画像はイメージです</span>
+                                                        </div>
+                                                    </div>`,
+                                                quizzes: [
+                                                    { question: "優先道路の標識は「交差する道路が優先である」ことを表している。", display: "ルール", answer: "×", options: ["○", "×"] },
+                                                    { question: "優先道路の標識がある道路は、「優先道路」である。", display: "ルール", answer: "○", options: ["○", "×"] }
+                                                ]
                                             },
                                             { 
                                                 title: "警戒標識", 
