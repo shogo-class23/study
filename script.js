@@ -13279,8 +13279,10 @@ const studyData = {
                                     <b>進路を変えて</b>、進行中の前の車の前方に出ることを言います。<br><br>
                                     ・<b>二重追い越しの禁止</b>：前の車が他の自動車を追い越そうとしているときは、追い越しを始めてはいけません。<br>
                                     ・<b>例外</b>：前の車が追い越そうとしている相手が<b>「原動機付自転車（原付）」</b>である場合は、二重追い越しにはならず、追い越すことができます。<br>
+                                    ・<b>6m以上の道路</b>：道路の左側部分の幅が<b>6メートル以上</b>あるときは、道路の右側部分（対向車線側）にはみ出して追い越しをしてはいけません。<br>
                                     ・<b>通行区分</b>：追い越すときは、確認を行い、原則として前車の<b>右側</b>を通行します。ただし、前車が右折するために中央に寄っているときは、その<b>左側</b>を通行します。`,
                                 quizzes: [
+                                    { question: "道路の左側部分の幅が6メートル以上ある場所で、道路の右側部分（対向車線側）にはみ出して追い越しをしてもよい。", display: "ルール", answer: "×", options: ["○", "×"] },
                                     { question: "前の車が「原動機付自転車」を追い越そうとしているときは、さらにその車を追い越しても二重追い越しにはならない。", display: "ルール", answer: "○", options: ["○", "×"] },
                                     { question: "追い越しをするときは、必ず前の車の右側を通行しなければならない。", display: "ルール", answer: "×", options: ["○", "×"] }
                                 ]
@@ -13289,7 +13291,41 @@ const studyData = {
                     },
                     {
                         name: "７ 踏切の通過と交差点等における通行方法等",
-                        units: [{ title: "交差点や踏切でのルール", subUnits: [] }]
+                        units: [
+                            {
+                                title: "１ 交差点",
+                                content: `<b>１ 交差点（こうさてん）</b><br>
+                                    交差点を右左折するときの正しい通り方です。<br><br>
+                                    ・<b>左折</b>：あらかじめ道路の<b>左側</b>に寄り、交差点の側端（はじっこ）に沿って<b>徐行</b>しながら通行します。<br>
+                                    ・<b>右折</b>：あらかじめ道路の<b>中央</b>に寄り、交差点の中心のすぐ内側を<b>徐行</b>しながら通行します。<br>
+                                    （※一方通行の場合は、道路の<b>右側</b>にできるだけ寄ってから徐行します）<br><br>
+                                    <div class="point-box" style="background: #f0f7ff; border: 1px solid #cce5ff; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                                        <b>【原付の二段階右折ルール】</b><br>
+                                        ・<b>二段階右折</b>：車両通行帯が<b>3つ以上</b>ある交差点で行います。<br>
+                                        ・<b>小回り右折</b>：車両通行帯が<b>2つ以下</b>のとき、または環状交差点で行います。
+                                    </div>
+                                    ・<b>優先順位</b>：交通整理が行われていない交差点では、<b>優先道路</b>、<b>左方（左側）からくる車</b>、<b>路面電車</b>が優先されます。`,
+                                quizzes: [
+                                    { question: "一方通行の道路から右折するときは、あらかじめ道路の中央に寄らなければならない。", display: "ルール", answer: "×", options: ["○", "×"] },
+                                    { question: "車両通行帯が3つ以上ある交差点で、原動機付自転車は原則として二段階右折をしなければならない。", display: "ルール", answer: "○", options: ["○", "×"] },
+                                    { question: "交通整理が行われていない交差点では、左側から進行してくる車よりも、右側から進行してくる車が優先される。", display: "ルール", answer: "×", options: ["○", "×"] }
+                                ]
+                            },
+                            {
+                                title: "２ 踏切",
+                                content: `<b>２ 踏切（ふみきり）</b><br>
+                                    踏切を通過するときの絶対のルールです。<br><br>
+                                    ・<b>一時停止</b>：踏切の直前（停止線があるときはその直前）で<b>必ず一時停止</b>します。<br>
+                                    ・<b>安全確認</b>：窓を開けるなどして、自分の<b>目と耳</b>で左右の安全を確かめます。<br>
+                                    ・<b>信号がある場合</b>：踏切に信号機があるときは、信号が<b>青であれば一時停止せずに</b>通過することができます（ただし安全確認は必要です）。<br>
+                                    ・<b>通過方法</b>：変速（ギアチェンジ）せず、そのままの速度（低速ギア）で一気に通過します。`,
+                                quizzes: [
+                                    { question: "踏切に信号機があり、青色を表示しているときは、一時停止せずに通過することができる。", display: "ルール", answer: "○", options: ["○", "×"] },
+                                    { question: "踏切を通過するときは、窓を閉めたまま目視だけで安全を確認すればよい。", display: "ルール", answer: "×", options: ["○", "×"] },
+                                    { question: "踏切の直前で一時停止したあとは、安全であれば窓を開けなくてもよい。", display: "ルール", answer: "×", options: ["○", "×"] }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "８ 緊急自動車等",
@@ -13539,10 +13575,16 @@ window.onload = () => {
         pathItems.forEach((item, index) => {
             const span = document.createElement('span');
             span.innerHTML = item.label;
+            
+            // アクションがあり、かつ現在地（最後）でない場合はリンクにする
             if (item.action && index < pathItems.length - 1) {
-                span.classList.add('breadcrumb-link');
-                span.onclick = item.action;
+                span.className = 'breadcrumb-link';
+                span.addEventListener('click', item.action);
+            } else {
+                span.style.cursor = 'default';
+                span.style.textDecoration = 'none';
             }
+
             breadcrumb.appendChild(span);
             if (index < pathItems.length - 1) {
                 const separator = document.createElement('span');
@@ -13645,29 +13687,6 @@ window.onload = () => {
         showView('unit-view');
     }
 
-    let breadcrumbStack = [];
-
-    function updateStudyBreadcrumb(subjectName, gradeName, categoryName, unitTitle, path = []) {
-        const stack = [
-            { label: 'ホーム', action: showHome },
-            { label: subjectName, action: showGrades },
-            { label: gradeName, action: showCategories },
-            { label: categoryName, action: () => showUnits(currentCategoryIndex) }
-        ];
-        
-        // ユニットの履歴
-        if (unitTitle) {
-            stack.push({ label: unitTitle, action: () => showSubUnits(currentUnitIndex) });
-        }
-
-        // さらに深い階層（subUnits の連鎖）
-        path.forEach((p, idx) => {
-            stack.push({ label: p.title, action: () => showSubUnits(currentUnitIndex, path.slice(0, idx + 1)) });
-        });
-
-        updateBreadcrumb(stack);
-    }
-
     function showSubUnits(j, path = []) {
         currentUnitIndex = j;
         const subjectName = studyData[currentSubject].name;
@@ -13675,20 +13694,38 @@ window.onload = () => {
         const cat = gradeData.categories[currentCategoryIndex];
         const unit = cat.units[j];
 
-        // 現在表示すべき対象（階層を辿る）
         let target = unit;
-        path.forEach(p => {
-            target = p;
-        });
+        path.forEach(p => { target = p; });
 
-        // target 自体に subUnits がない場合は直接コンテンツを表示
+        // 子項目がない場合は直接コンテンツを表示
         if (!target.subUnits || target.subUnits.length === 0) {
             showContent(target, path);
             return;
         }
 
         selectedUnitName.innerHTML = target.title;
-        updateStudyBreadcrumb(subjectName, gradeData.name, cat.name, (path.length > 0 ? unit.title : null), path);
+
+        // パンくず生成
+        const stack = [
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeData.name, action: showCategories },
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) }
+        ];
+
+        // 階層がある場合のみ、ユニット名以降をスタックに追加
+        if (path.length > 0) {
+            stack.push({ label: unit.title, action: () => showSubUnits(j) });
+            path.slice(0, -1).forEach((p, idx) => {
+                const currentPath = path.slice(0, idx + 1);
+                stack.push({ label: p.title, action: () => showSubUnits(j, currentPath) });
+            });
+            stack.push({ label: path[path.length - 1].title });
+        } else {
+            stack.push({ label: unit.title });
+        }
+        
+        updateBreadcrumb(stack);
 
         subUnitList.innerHTML = '';
         target.subUnits.forEach(s => {
@@ -13728,23 +13765,28 @@ window.onload = () => {
         const cat = gradeData.categories[currentCategoryIndex];
         const unit = cat.units[currentUnitIndex];
 
-        // パンくずリストを更新（コンテンツ画面用）
-        updateStudyBreadcrumb(subjectName, gradeData.name, cat.name, unit.title, path.slice(0, -1));
-        // 最後の項目（現在表示しているコンテンツ）をラベルとして追加
-        const currentStack = [...breadcrumbStack]; 
-        // 実際には updateStudyBreadcrumb 内で完結させる
-        updateBreadcrumb([
+        // パンくず生成
+        const stack = [
             { label: 'ホーム', action: showHome },
             { label: subjectName, action: showGrades },
             { label: gradeData.name, action: showCategories },
-            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
-            { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
-            ...path.slice(0, -1).map((p, idx) => ({
-                label: p.title,
-                action: () => showSubUnits(currentUnitIndex, path.slice(0, idx + 1))
-            })),
-            { label: s.title }
-        ]);
+            { label: cat.name, action: () => showUnits(currentCategoryIndex) }
+        ];
+
+        if (path.length > 0) {
+            // 深い階層の場合
+            stack.push({ label: unit.title, action: () => showSubUnits(currentUnitIndex) });
+            path.slice(0, -1).forEach((p, idx) => {
+                const currentPath = path.slice(0, idx + 1);
+                stack.push({ label: p.title, action: () => showSubUnits(currentUnitIndex, currentPath) });
+            });
+            stack.push({ label: s.title });
+        } else {
+            // ユニット直下（子項目なし）の場合
+            stack.push({ label: unit.title });
+        }
+
+        updateBreadcrumb(stack);
 
         contentTitle.innerHTML = s.title;
         contentBody.innerHTML = s.content || '';
