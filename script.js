@@ -12890,7 +12890,52 @@ const studyData = {
                     },
                     {
                         name: "２ 標識と表示",
-                        units: [{ title: "標識と表示のきまり", subUnits: [] }]
+                        units: [
+                            {
+                                title: "１ 標識の分類",
+                                subUnits: [
+                                    {
+                                        title: "本標識",
+                                        subUnits: [
+                                            { 
+                                                title: "規制標識", 
+                                                content: "<b>規制標識（きせいひょうしき）</b><br>通行の禁止や制限などを示す標識です。",
+                                                quizzes: [{ question: "「通行止め」などはどの標識？", display: "標識", answer: "規制標識", options: ["規制標識", "指示標識"] }]
+                                            },
+                                            { 
+                                                title: "指示標識", 
+                                                content: "<b>指示標識（しじひょうしき）</b><br>特定の交通方法ができることや、決められた場所を示します。" 
+                                            },
+                                            { 
+                                                title: "警戒標識", 
+                                                content: "<b>警戒標識（けいかいひょうしき）</b><br>道路上の危険や注意すべき状況を知らせます。" 
+                                            },
+                                            { 
+                                                title: "案内標識", 
+                                                content: "<b>案内標識（あんないひょうしき）</b><br>地点、方向、距離などを知らせます。" 
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "補助標識",
+                                        content: "<b>補助標識（ほじょひょうしき）</b><br>本標識の意味を補うために、その下に取り付けられます。"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "２ 標示の分類",
+                                subUnits: [
+                                    {
+                                        title: "１ 規制標示",
+                                        content: "<b>規制標示（きせいひょうじ）</b><br>路面に描かれた、通行の禁止や制限を示すものです。"
+                                    },
+                                    {
+                                        title: "２ 指示標示",
+                                        content: "<b>指示標示（しじひょうじ）</b><br>路面に描かれた、特定の交通方法ができることなどを示すものです。"
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "３ 警察官等の交通規制と信号機の信号等に従う義務",
@@ -13266,51 +13311,76 @@ window.onload = () => {
         showView('unit-view');
     }
 
-    function showSubUnits(j) {
+    let breadcrumbStack = [];
+
+    function updateStudyBreadcrumb(subjectName, gradeName, categoryName, unitTitle, path = []) {
+        const stack = [
+            { label: 'ホーム', action: showHome },
+            { label: subjectName, action: showGrades },
+            { label: gradeName, action: showCategories },
+            { label: categoryName, action: () => showUnits(currentCategoryIndex) }
+        ];
+        
+        // ユニットの履歴
+        if (unitTitle) {
+            stack.push({ label: unitTitle, action: () => showSubUnits(currentUnitIndex) });
+        }
+
+        // さらに深い階層（subUnits の連鎖）
+        path.forEach((p, idx) => {
+            stack.push({ label: p.title, action: () => showSubUnits(currentUnitIndex, path.slice(0, idx + 1)) });
+        });
+
+        updateBreadcrumb(stack);
+    }
+
+    function showSubUnits(j, path = []) {
         currentUnitIndex = j;
         const subjectName = studyData[currentSubject].name;
         const gradeData = studyData[currentSubject].grades[currentGrade];
         const cat = gradeData.categories[currentCategoryIndex];
         const unit = cat.units[j];
 
-        // subUnits がない場合は直接コンテンツを表示
-        if (!unit.subUnits || unit.subUnits.length === 0) {
-            showContent(unit);
+        // 現在表示すべき対象（階層を辿る）
+        let target = unit;
+        path.forEach(p => {
+            target = p;
+        });
+
+        // target 自体に subUnits がない場合は直接コンテンツを表示
+        if (!target.subUnits || target.subUnits.length === 0) {
+            showContent(target, path);
             return;
         }
 
-        selectedUnitName.innerHTML = unit.title;
-
-        updateBreadcrumb([
-            { label: 'ホーム', action: showHome },
-            { label: subjectName, action: showGrades },
-            { label: gradeData.name, action: showCategories },
-            { label: cat.name, action: () => showUnits(currentCategoryIndex) },
-            { label: unit.title }
-        ]);
+        selectedUnitName.innerHTML = target.title;
+        updateStudyBreadcrumb(subjectName, gradeData.name, cat.name, (path.length > 0 ? unit.title : null), path);
 
         subUnitList.innerHTML = '';
-        unit.subUnits.forEach(s => {
+        target.subUnits.forEach(s => {
             const div = document.createElement('div');
             div.className = 'material-item';
             div.innerHTML = `<span>${s.title}</span>`;
-            div.onclick = () => showContent(s);
+            div.onclick = () => {
+                if (s.subUnits && s.subUnits.length > 0) {
+                    showSubUnits(j, [...path, s]);
+                } else {
+                    showContent(s, [...path, s]);
+                }
+            };
             subUnitList.appendChild(div);
         });
         showView('sub-unit-view');
     }
 
-    function showContent(s) {
+    function showContent(s, path = []) {
         currentSubUnit = s;
         currentQuizIndex = 0;
         correctCount = 0;
         
         if (s.quizzes && s.quizzes.length > 0) {
-            // グループ分け：完答形式（isCompleteSet）とそれ以外
             const normalQuizzes = s.quizzes.filter(q => !q.isCompleteSet);
             const completeSetQuizzes = s.quizzes.filter(q => q.isCompleteSet);
-
-            // それぞれを独立してシャッフルし、結合（通常 -> 完答 の順）
             shuffledQuizzes = [
                 ...shuffleArray(normalQuizzes),
                 ...shuffleArray(completeSetQuizzes)
@@ -13324,17 +13394,26 @@ window.onload = () => {
         const cat = gradeData.categories[currentCategoryIndex];
         const unit = cat.units[currentUnitIndex];
 
+        // パンくずリストを更新（コンテンツ画面用）
+        updateStudyBreadcrumb(subjectName, gradeData.name, cat.name, unit.title, path.slice(0, -1));
+        // 最後の項目（現在表示しているコンテンツ）をラベルとして追加
+        const currentStack = [...breadcrumbStack]; 
+        // 実際には updateStudyBreadcrumb 内で完結させる
         updateBreadcrumb([
             { label: 'ホーム', action: showHome },
             { label: subjectName, action: showGrades },
             { label: gradeData.name, action: showCategories },
             { label: cat.name, action: () => showUnits(currentCategoryIndex) },
             { label: unit.title, action: () => showSubUnits(currentUnitIndex) },
+            ...path.slice(0, -1).map((p, idx) => ({
+                label: p.title,
+                action: () => showSubUnits(currentUnitIndex, path.slice(0, idx + 1))
+            })),
             { label: s.title }
         ]);
 
         contentTitle.innerHTML = s.title;
-        contentBody.innerHTML = s.content;
+        contentBody.innerHTML = s.content || '';
 
         // 特殊コンテンツの初期化
         setTimeout(() => {
