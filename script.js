@@ -13391,7 +13391,79 @@ const studyData = {
                     },
                     {
                         name: "１０ 灯火及び合図（１）",
-                        units: [{ title: "ライトの点灯と合図", subUnits: [] }]
+                        units: [
+                            {
+                                title: "１ 合図の時期と方法",
+                                subUnits: [
+                                    {
+                                        title: "合図を出すタイミング",
+                                        content: `<h4>合図の種類と時期</h4>
+                                        <p>周りの車や歩行者に自分の行動を知らせるため、正しい時期に合図を出し、終わったらすぐにやめなければなりません。</p>
+                                        
+                                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 0.9em;">
+                                            <thead>
+                                                <tr style="background: #f8f9fa;">
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">行為</th>
+                                                    <th style="border: 1px solid #dee2e6; padding: 8px;">合図を出す時期</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>右左折・転回（Uターン）</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;">その行為をしようとする地点の<b>30メートル手前</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>進路変更</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;">その行為をしようとする<b>3秒前</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;"><b>徐行・停止・後退</b></td>
+                                                    <td style="border: 1px solid #dee2e6; padding: 8px;">その行為をしようと<b>するとき</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="point-box" style="background: #fff3e0; border-left: 5px solid #ff9800;">
+                                            <b>【合図の終了】</b><br>
+                                            合図は、その行為（右左折や進路変更など）が<b>終わったら、すぐにやめなければ</b>なりません。出しっぱなしにすると周りを混乱させます。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "右左折や転回をするときの合図は、その行為をしようとする3秒前に行う。", answer: "×", options: ["○", "×"] },
+                                            { question: "進路変更をするときの合図は、その行為をしようとする3秒前に行う。", answer: "○", options: ["○", "×"] },
+                                            { question: "徐行や停止をするときの合図は、その行為をしようとするときに行う。", answer: "○", options: ["○", "×"] },
+                                            { question: "右左折が終わった後も、周りに知らせるためにしばらく合図を出し続けた。", answer: "×", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                title: "２ 警音器（クラクション）の使用",
+                                subUnits: [
+                                    {
+                                        title: "警音器を鳴らす場所・鳴らしてはいけないとき",
+                                        content: `<h4>警音器の正しい使い方</h4>
+                                        <p>警音器は、安全のために必要な場合以外は、むやみに鳴らしてはいけません。</p>
+                                        
+                                        <div class="point-box" style="background: #e8f5e9; border-left: 5px solid #4caf50;">
+                                            <b>【必ず鳴らさなければならない場所】</b><br>
+                                            ・「<b>警笛鳴らせ</b>」の標識がある場所。<br>
+                                            ・「警笛区間」の標識がある区間内で、見通しのきかない交差点や曲がり角、上り坂の頂上を通るとき。
+                                        </div>
+
+                                        <div class="point-box" style="background: #ffebee; border-left: 5px solid #f44336; margin-top: 15px;">
+                                            <b>【鳴らしてはいけないとき】</b><br>
+                                            ・法令で定められた場所以外では、<b>みだりに鳴らしてはいけません</b>。<br>
+                                            ・ただし、危険を避けるためやむを得ない場合は鳴らすことができます。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "「警笛鳴らせ」の標識がある場所では、警音器を鳴らさなければならない。", answer: "○", options: ["○", "×"] },
+                                            { question: "前の車が遅いので、注意を促すために警音器を鳴らした。", answer: "×", options: ["○", "×"] },
+                                            { question: "危険を避けるためやむを得ない場合は、警音器を鳴らすことができる。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "１１ 運転者の遵守事項",
