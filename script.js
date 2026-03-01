@@ -13916,7 +13916,133 @@ const studyData = {
                     },
                     {
                         name: "３ 乗車、積載及び牽引",
-                        units: [{ title: "荷物の積み方と牽引", subUnits: [] }]
+                        units: [{
+                            title: "荷物の積み方と牽引",
+                            subUnits: [
+                                {
+                                    title: "1 乗車と積載の方法と特例",
+                                    content: `<h4>荷台に乗れる特例</h4>
+                                        <p>貨物自動車（トラック等）に荷物を積んだ際、その<b>荷物の見張りのため必要な最小限度の人</b>を荷台に乗せることができます。</p>
+                                        <p style="color: #d32f2f;"><b>注意：</b>荷物の積み下ろしのための人は乗ることはできません。（出発地の警察署長の許可を受けた場合を除きます）</p>`,
+                                    quizzes: [
+                                        { question: "貨物自動車に荷物を積んだとき、その荷物の積み下ろしのため、必要な最小限度の人を荷台に乗せた。", answer: "×", options: ["○", "×"] }
+                                    ]
+                                },
+                                {
+                                    title: "2 積載制限",
+                                    content: `<h4>積載制限と速度の比較</h4>
+                                        <div style="overflow-x: auto;">
+                                            <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; text-align: center;">
+                                                <thead>
+                                                    <tr style="background: #f8f9fa;">
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">区分</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">左右</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">高さ</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">長さ</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">重さ</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">速度</th>
+                                                        <th style="border: 1px solid #dee2e6; padding: 5px;">高速速度</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; font-weight: bold;">自動車</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">1.2m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">地上から3.8m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">1.2m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">検査証に記載</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">60</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; font-weight: bold;">二輪車</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">左右0.15m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">地上から2.0m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">後ろから0.3m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">60kg以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">60</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px; font-weight: bold;">原付</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">左右0.15m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">地上から2.0m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">後ろから0.3m以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">30kg以下</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">30</td>
+                                                        <td style="border: 1px solid #dee2e6; padding: 5px;">×</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p style="font-size: 0.8em; margin-top: 10px;">
+                                            ※左右・長さは、自動車は「車体の1.2倍まで」、二輪・原付は「積載装置から」の数値です。<br>
+                                            ※高速道路の最高速度には、車種により80km/hや90km/hの制限もあります。
+                                        </p>`,
+                                    quizzes: [
+                                        { question: "自動車の積載重量の制限は、その車の最大積載量の10分の1増しまで許可なく積んでよい。", answer: "×", options: ["○", "×"] },
+                                        { question: "普通貨物自動車の積み荷の幅・長さは、車体の幅・長さの1.2倍まで積むことができる。", answer: "○", options: ["○", "×"] },
+                                        { question: "普通自動二輪車（側車付きを除く）の高さ制限は地上から2メートル以下である。", answer: "○", options: ["○", "×"] },
+                                        { question: "普通自動二輪車の積載の長さは、積載装置から+30センチまでである。", answer: "○", options: ["○", "×"] },
+                                        { question: "バイクの荷物の高さ制限は「積載装置から」2メートル以下である。", answer: "×", options: ["○", "×"] },
+                                        { question: "普通自動車は、すべて地上から3.8メートルの高さまで荷物を積むことができる。", answer: "×", options: ["○", "×"], explanation: "普通自動車（三輪や660cc以下を除く）の高さ制限は、地上から3.8メートルまでですが、すべてではありません。" },
+                                        { question: "一般原動機付自転車や普通二輪車の積み荷の幅は、積載装置の左右0.15メートルまではみ出して良い。", answer: "○", options: ["○", "×"], explanation: "積載装置の左右から0.15メートルまではみ出して良い（合計で車幅+0.3メートル）。" },
+                                        { question: "一般原動機付自転車に荷物を積む場合は、積載装置から後方に0.3メートルまではみ出して良い。", answer: "○", options: ["○", "×"] },
+                                        { question: "二輪車に積める荷物の重さは、60kg以下である。", answer: "○", options: ["○", "×"] },
+                                        { question: "原動機付自転車に積める荷物の重さは、30kg以下である。", answer: "○", options: ["○", "×"] }
+                                    ]
+                                },
+                                {
+                                    title: "3 乗車定員の計算",
+                                    content: `<h4>乗車定員</h4>
+                                        <p>自動車の乗車定員は、車検証に記載されている人数です。</p>
+                                        <p><b>子供の計算：</b>12歳未満の子供は、<b>3人を大人2人</b>として計算します。</p>
+                                        <p style="background: #f8f9fa; padding: 10px; border-radius: 4px;">（大人の定員 － 乗車する大人の数） × 1.5 ＝ 乗車できる子供の数（端数切り捨て）</p>`,
+                                    quizzes: [
+                                        { question: "12歳未満の子供は、3人を大人2人として数えて乗車定員を計算する。", answer: "○", options: ["○", "×"] }
+                                    ]
+                                },
+                                {
+                                    title: "4 制限を超える荷物の表示",
+                                    content: `<h4>荷物の長さや幅が制限を超えるとき</h4>
+                                        <p>出発地の警察署長の許可を受けて、制限を超える荷物を積む場合は、以下の表示が必要です。</p>
+                                        <ul>
+                                            <li><b>昼間：</b>見やすい箇所に<b>0.3m²以上の赤色の布</b>をつける。</li>
+                                            <li><b>夜間：</b>赤色の灯火または反射器をつける。</li>
+                                        </ul>`,
+                                    quizzes: [
+                                        { question: "昼間に制限を超える荷物を積んで運転するときは、0.3m²以上の赤色の布をつけなければならない。", answer: "○", options: ["○", "×"] },
+                                        { question: "夜間に制限を超える荷物を積んで運転するときは、赤色の灯火または反射器をつけなければならない。", answer: "○", options: ["○", "×"] }
+                                    ]
+                                },
+                                {
+                                    title: "5 二輪車の二人乗り制限",
+                                    content: `<h4>二輪車の二人乗り禁止期間</h4>
+                                        <p>大型二輪免許または普通二輪免許を受けてから<b>1年を経過していない人</b>は、二人乗りをしてはいけません。</p>
+                                        <p>※側車付き（サイドカー）のものを除きます。</p>`,
+                                    quizzes: [
+                                        { question: "普通二輪免許を受けてから1年を経過していない人は、二人乗りをしてはいけない（側車付きを除く）。", answer: "○", options: ["○", "×"] },
+                                        { question: "大型二輪免許を受けてから1年未満であっても、側車付き（サイドカー）の二輪車であれば二人乗りができる。", answer: "○", options: ["○", "×"] }
+                                    ]
+                                },
+                                {
+                                    title: "6 故障車のけん引方法",
+                                    content: `<h4>ロープでのけん引</h4>
+                                        <ul>
+                                            <li>丈夫なロープを使い、車間を<b>5m以内</b>に保つ。</li>
+                                            <li>ロープに<b>白い布（0.3m²以上）</b>をつける。</li>
+                                            <li>故障車には、その車を運転できる免許を持った人が乗り、操作しなければならない。</li>
+                                            <li>けん引する車と故障車の前端から後端までの長さは<b>25m以内</b>でなければならない。</li>
+                                        </ul>`,
+                                    quizzes: [
+                                        { question: "故障車をロープでけん引するときは、車間を5m以内に保たなければならない。", answer: "○", options: ["○", "×"] },
+                                        { question: "故障車をロープでけん引するときは、ロープに0.3m²以上の白い布をつけなければならない。", answer: "○", options: ["○", "×"] },
+                                        { question: "故障車をけん引するとき、故障車を操作する人は免許を持っていなくてもよい。", answer: "×", options: ["○", "×"] },
+                                        { question: "故障車をけん引するとき、けん引する車と故障車の前端から後端までの長さは25m以内でなければならない。", answer: "○", options: ["○", "×"] }
+                                    ]
+                                }
+                            ]
+                        }]
                     },
                     {
                         name: "４ 死角と交通事故",
