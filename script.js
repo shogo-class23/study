@@ -13019,7 +13019,31 @@ const studyData = {
                                     },
                                     {
                                         title: "補助標識",
-                                        content: "<b>補助標識（ほじょひょうしき）</b><br>本標識の意味を補うために、その下に取り付けられます。"
+                                        content: `<b>補助標識（ほじょひょうしき）</b><br>
+                                            本標識の下に取り付けられ、本標識の意味を補う役割をします。<br><br>
+                                            ・<b>→（右向き）</b>：ここから<b>「始まり」</b><br>
+                                            ・<b>⇔（両向き）</b>：ここが<b>「区域内・区間内」</b><br>
+                                            ・<b>←（左向き）</b>：ここが<b>「終わり」</b><br><br>
+                                            <div class="point-box" style="background: #f0fff0; border: 1px solid #c3e6cb; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                                                <b>【ここが ポイント！】</b><br>
+                                                赤い矢印（←）以外にも、この<b>白地に青い斜線</b>の標識は、規制の<b>「終わり」</b>を意味します。
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+                                                <div style="width: 50px; height: 50px; display: flex; justify-content: center; align-items: center;">
+                                                    <!-- 白い丸（枠線を追加して見やすくします） -->
+                                                    <div style="width: 34px; height: 34px; background: #fff; border: 2px solid #ccc; border-radius: 50%; position: relative; display: flex; justify-content: center; align-items: center;">
+                                                        <!-- 青い斜線 -->
+                                                        <div style="width: 2px; height: 40px; background: #0055aa; transform: rotate(45deg); position: absolute;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    （記号：丸い白地に青い斜線）<br>
+                                                    この標識も「終わり」を表します。
+                                                </div>
+                                            </div>`,
+                                        quizzes: [
+                                            { question: "赤い矢印の「→」と、丸い白地に青い斜線の標識は、同じ意味を表している。", display: "ルール", answer: "×", options: ["○", "×"] }
+                                        ]
                                     }
                                 ]
                             },
