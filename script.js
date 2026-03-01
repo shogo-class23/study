@@ -13466,16 +13466,87 @@ const studyData = {
                         ]
                     },
                     {
-                        name: "１１ 運転者の遵守事項",
-                        units: [{ title: "ドライバーが守るべきこと", subUnits: [] }]
-                    },
-                    {
-                        name: "１２ 運転免許制度等",
-                        units: [{ title: "免許の種類と制度", subUnits: [] }]
-                    },
-                    {
-                        name: "１３ オートマチック二輪車の注意",
-                        units: [{ title: "AT車と二輪車の特性", subUnits: [] }]
+                        name: "１１ 運転免許制度等",
+                        units: [
+                            {
+                                title: "免許の制度とルール",
+                                subUnits: [
+                                    {
+                                        title: "１ 免許の携帯と分類",
+                                        content: `<h4>免許証の携帯と3つの分類</h4>
+                                        <p>車を運転するときは、その車を運転できる有効な免許証を必ず持ち歩かなければなりません。</p>
+                                        
+                                        <div class="point-box" style="background: #fff3e0; border-left: 5px solid #ff9800;">
+                                            <b>【免許不携帯】</b><br>
+                                            ・免許証を家に忘れたりして持たずに運転することを「<b>免許不携帯</b>」といいます。<br>
+                                            ・これは「無免許運転」とは別の違反名ですので、区別して覚えましょう。
+                                        </div>
+
+                                        <div class="point-box" style="background: #e3f2fd; border-left: 5px solid #2196f3; margin-top: 15px;">
+                                            <b>【免許の3つの分類】</b><br>
+                                            日本の運転免許は、大きく次の<b>3つ</b>に分類されます（2つではありません）。
+                                            <ol>
+                                                <li><b>第一種運転免許</b>：一般的な運転（通勤やレジャーなど）</li>
+                                                <li><b>第二種運転免許</b>：旅客輸送（タクシーやバスなど、仕事で人を運ぶ場合）</li>
+                                                <li><b>仮運転免許</b>：練習や試験のために運転する場合</li>
+                                            </ol>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "免許証を自宅に忘れて運転した場合、無免許運転になる。", answer: "×", options: ["○", "×"] },
+                                            { question: "運転免許は、第一種運転免許と第二種運転免許の2種類に分類される。", answer: "×", options: ["○", "×"] },
+                                            { question: "運転免許は、第一種、第二種、仮免許の3つに分類される。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "２ 免許で運転できる車の範囲",
+                                        content: `<h4>どの免許で何に乗れるか？</h4>
+                                        <p>免許の種類によって、運転できる車の範囲が決まっています。</p>
+                                        
+                                        <ul>
+                                            <li><b>大型特殊免許</b>：大型特殊自動車を運転するために必要です。</li>
+                                            <li><b>大型二輪免許</b>：大型自動二輪車を運転するために必要です。</li>
+                                            <li><b>普通免許</b>：普通自動車のほか、<b>小型特殊自動車</b>と<b>原付</b>（原動機付自転車）も運転できます。</li>
+                                        </ul>
+                                        
+                                        <div class="point-box" style="background: #f1f8e9; border-left: 5px solid #8bc34a;">
+                                            <b>【ポイント】</b><br>
+                                            普通免許を持っていれば、わざわざ小型特殊や原付の免許を別に取る必要はありません。
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "普通免許を持っていれば、原動機付自転車（原付）も運転することができる。", answer: "○", options: ["○", "×"] },
+                                            { question: "普通免許を持っていれば、小型特殊自動車も運転することができる。", answer: "○", options: ["○", "×"] },
+                                            { question: "大型自動二輪車を運転するには、大型二輪免許が必要である。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    },
+                                    {
+                                        title: "３ けん引免許と仮免許の表示",
+                                        content: `<h4>特別なルール（けん引・仮免許）</h4>
+                                        
+                                        <div class="point-box" style="background: #fffde7; border-left: 5px solid #fbc02d;">
+                                            <b>【けん引免許がいらない場合】</b><br>
+                                            他の車を引っ張る（けん引する）ときは原則として「けん引免許」が必要ですが、次のような場合は<b>不要</b>です。
+                                            <ul>
+                                                <li>故障車をロープやクレーンでけん引するとき</li>
+                                                <li>引っ張られる車の総重量が<b>750kg以下</b>のとき</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="point-box" style="background: #fce4ec; border-left: 5px solid #e91e63; margin-top: 15px;">
+                                            <b>【仮免許プレートの表示位置】</b><br>
+                                            練習などで仮免許で運転するときは、「仮免許練習中」の標識を前後の見やすい位置につけます。
+                                            <ul>
+                                                <li><b>高さ</b>：地上<b>0.4m以上 1.2m以下</b>の位置につける。</li>
+                                            </ul>
+                                        </div>`,
+                                        quizzes: [
+                                            { question: "故障した車をロープでけん引する場合は、けん引免許が必要である。", answer: "×", options: ["○", "×"] },
+                                            { question: "総重量が750kg以下の車をけん引する場合は、けん引免許はいらない。", answer: "○", options: ["○", "×"] },
+                                            { question: "仮免許の標識は、地上0.4m以上1.2m以下の見やすい位置に表示しなければならない。", answer: "○", options: ["○", "×"] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         name: "【対策】仮免学科試験",
